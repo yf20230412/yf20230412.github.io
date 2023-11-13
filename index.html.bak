@@ -38,7 +38,7 @@
           <p></p>
           <div class="type-js headline">
             <!--修改网站欢迎语-->
-          	<h1 class="text-js">Hi, Welcome to 风言锋语88 MiniNAS</h1>
+          	<h1 class="text-js">Hi, Welcome to fengyanfengyu MiniNAS</h1>
           </div>
           <div id="kg-btn" class="">
 			<input class='tgl tgl-flip' id='qieh' type='checkbox' />
@@ -64,7 +64,7 @@
             <li>
               <a href="https://www.lige.fit/" target="_blank">
                 <img class="shake" src="img/png/aria2dl.png" />
-                <strong>黎哥主页</strong></a>
+                <strong>黎哥TvBox加密解密</strong></a>
             </li>
             <li>
               <a href="https://mp.weixin.qq.com/s/g8RrY6m4D0WvWPGBY1ydPw" target="_blank">
