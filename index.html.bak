@@ -42,7 +42,7 @@
           </div>
           <div id="kg-btn" class="">
 			<input class='tgl tgl-flip' id='qieh' type='checkbox' />
-			<label class='tgl-btn' data-tg-off='外网访问' data-tg-on='局域网' for='qieh'></label>
+			<label class='tgl-btn' data-tg-off='远程访问' data-tg-on='局域网' for='qieh'></label>
           </div>
 		</div>
       </div>
