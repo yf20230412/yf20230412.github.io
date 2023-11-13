@@ -1,6 +1,6 @@
 {
   	
-"spider":"https://gh-proxy.com/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/Java/fan1106.jar;md5;d65490382102d8e7d3bdbde44ca602f5",
+"spider":"http://a.yf1688.top/jar/fan1106.jar;md5;d65490382102d8e7d3bdbde44ca602f5",
 
 "wallpaper": "http://www.kf666888.cn/api/tvbox/img" , 
 
@@ -11,7 +11,7 @@
     {
       "name": "live",
       "type": 0,
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/TV/612.txt",
+      "url": "http://a.yf1688.top/live/612.txt",
       "playerType": 1,
       "ua": "okhttp/3.15",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
@@ -21,13 +21,13 @@
 
   
 "sites":[  	
-{"key":"奇艺","name":"🧚┃少儿┃爱奇艺","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/douban/drpy1.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/iqiyi.js"},
+{"key":"奇艺","name":"🧚┃少儿┃爱奇艺","type":3,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/iqiyi.js"},
 	
-{"key":"芒果","name":"👼🏻┃少儿┃芒果","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/douban/drpy1.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/mgtv.js"},
+{"key":"芒果","name":"👼🏻┃少儿┃芒果","type":3,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/mgtv.js"},
 	
-{"key":"优酷","name":"🤾‍♀️‍┃少儿┃优酷","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/douban/drpy1.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/youku.js"},
+{"key":"优酷","name":"🤾‍♀️‍┃少儿┃优酷","type":3,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/youku.js"},
 
-{"key":"腾讯","name":"🏂┃少儿┃腾讯","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/douban/drpy1.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/qq.js"},
+{"key":"腾讯","name":"🏂┃少儿┃腾讯","type":3,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/qq.js"},
 
 {"key": "豆豆","name": "🔍┃豆瓣┃主页","type": 3,"api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 
@@ -39,57 +39,57 @@
 
 {"key": "新片热播","name":"⏳┃新片┃热播","type": 1,"api": "https://api.iku.cool/api.php/provide/vod/?ac=list","searchable": 1,"quickSearch": 1,"changeable": 0,"categories": ["连续剧","动漫"]},
 	
-{"key":"dr_兔小贝","name":"📚┃儿童┃启蒙","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/douban/drpy1.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/兔小贝.js","searchable":0,"quickSearch":0,"filterable":0},
+{"key":"dr_兔小贝","name":"📚┃儿童┃启蒙","type":3,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/兔小贝.js","searchable":0,"quickSearch":0,"filterable":0},
 
-{"key":"童趣","name":"🍭┃童趣┃","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/douban/drpy1.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/童趣.js" },
+{"key":"童趣","name":"🍭┃童趣┃","type":3,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/童趣.js" },
   
-{ "key":"幼儿启蒙","name":"🌏┃幼儿┃启蒙","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/幼儿启蒙.json" },       
+{ "key":"幼儿启蒙","name":"🌏┃幼儿┃启蒙","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/幼儿启蒙.json" },       
   
-{"key": "益智","name": "🌏┃益智┃动画","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 0,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/益智动画.json" }, 
+{"key": "益智","name": "🌏┃益智┃动画","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 0,"ext":"http://a.yf1688.top/api/益智动画.json" }, 
   
-{"key":"幼小衔接","name":"🌏┃幼小┃衔接","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/幼小衔接.json" }, 
+{"key":"幼小衔接","name":"🌏┃幼小┃衔接","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/幼小衔接.json" }, 
   
-{"key":"小灯塔","name":"🌏┃小灯塔┃百科","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/小灯塔百科.json"  },  
+{"key":"小灯塔","name":"🌏┃小灯塔┃百科","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/小灯塔百科.json"  },  
 
-{ "key":"小灯塔科学","name":"🌏┃小灯塔┃科学","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/小灯塔科学.json"  },  
+{ "key":"小灯塔科学","name":"🌏┃小灯塔┃科学","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/小灯塔科学.json"  },  
   
-{"key":"小灯塔地理","name":"🌏┃小灯塔┃地理","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/小灯塔地理.json"  },  
+{"key":"小灯塔地理","name":"🌏┃小灯塔┃地理","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/小灯塔地理.json"  },  
   
-{"key":"小灯塔国学","name":"🌏┃小灯塔┃国学","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/小灯塔国学.json"  },  
+{"key":"小灯塔国学","name":"🌏┃小灯塔┃国学","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/小灯塔国学.json"  },  
   
-{"key":"小灯塔人文","name":"🌏┃小灯塔┃人文","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/小灯塔人文.json"  },  
+{"key":"小灯塔人文","name":"🌏┃小灯塔┃人文","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/小灯塔人文.json"  },  
   
-{"key":"儿童拼音","name":"🌏┃儿童┃拼音","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童拼音.json"  },  
+{"key":"儿童拼音","name":"🌏┃儿童┃拼音","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童拼音.json"  },  
   
-{"key":"儿童识字","name":"🌏┃儿童┃识字","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童识字.json"  },  
+{"key":"儿童识字","name":"🌏┃儿童┃识字","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童识字.json"  },  
   
-{"key":"儿童英语","name":"🌏┃儿童┃英语","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童英语.json"  },  
+{"key":"儿童英语","name":"🌏┃儿童┃英语","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童英语.json"  },  
   
-{"key":"儿童硬笔","name":"🌏┃儿童┃硬笔","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童硬笔.json"  },  
+{"key":"儿童硬笔","name":"🌏┃儿童┃硬笔","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童硬笔.json"  },  
   
-{"key":"儿童思维","name":"🌏┃儿童┃思维","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童思维.json"  },  
+{"key":"儿童思维","name":"🌏┃儿童┃思维","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童思维.json"  },  
   
-{"key":"儿童口才","name":"🌏┃儿童┃口才","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童口才.json"  },  
+{"key":"儿童口才","name":"🌏┃儿童┃口才","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童口才.json"  },  
   
-{"key":"儿童编程","name":"🌏┃儿童┃编程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童编程.json"  },  
+{"key":"儿童编程","name":"🌏┃儿童┃编程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童编程.json"  },  
   
-{"key":"儿童武术","name":"🌏┃儿童┃武术","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/儿童武术.json"  },  
+{"key":"儿童武术","name":"🌏┃儿童┃武术","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/儿童武术.json"  },  
   
-{"key":"兴趣培养","name":"🌏┃兴趣┃培养","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/兴趣培养.json"  },  
+{"key":"兴趣培养","name":"🌏┃兴趣┃培养","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/兴趣培养.json"  },  
   
-{"key":"小学","name":"🌏┃小学┃教育","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/少儿教育.json"  },  
+{"key":"小学","name":"🌏┃小学┃教育","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/少儿教育.json"  },  
   
-{"key":"初中","name":"🌏┃初中┃教育","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/初中教育.json"  },
+{"key":"初中","name":"🌏┃初中┃教育","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/初中教育.json"  },
  
-{"key":"高中","name":"🌏┃高中┃教育","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/高中教育.json"  },  
+{"key":"高中","name":"🌏┃高中┃教育","type":3,"api":"csp_Bili","searchable":0,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/高中教育.json"  },  
   
-{"key":"py_youer","name":"🅱️┃幼儿┃教育","type":3,"api":"py_youer","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/幼儿.py"  },  
+{"key":"py_youer","name":"🅱️┃幼儿┃教育","type":3,"api":"py_youer","searchable":0,"quickSearch":0,"filterable":1,"ext":"http://a.yf1688.top/api/幼儿.py"  },  
   
-{"key":"py_xiaoxue","name":"🅱️┃小学┃教育","type":3,"api":"py_xiaoxue","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/小学.py"  },  
+{"key":"py_xiaoxue","name":"🅱️┃小学┃教育","type":3,"api":"py_xiaoxue","searchable":0,"quickSearch":0,"filterable":1,"ext":"http://a.yf1688.top/api/小学.py"  },  
   
-{"key":"py_czxx","name":"🅱️┃初中┃教育","type":3,"api":"py_czxx","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/初中.py"  },
+{"key":"py_czxx","name":"🅱️┃初中┃教育","type":3,"api":"py_czxx","searchable":0,"quickSearch":0,"filterable":1,"ext":"http://a.yf1688.top/api/初中.py"  },
 
-{"key": "MTV转点播","name": "🎸┃万首┃MTV","type": 3,"playerType": 2,"api": "https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/音乐转点播.js","ext": "https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/api/MTV2.txt"},
+{"key": "MTV转点播","name": "🎸┃万首┃MTV","type": 3,"playerType": 2,"api": "http://a.yf1688.top/api/音乐转点播.js","ext": "http://a.yf1688.top/api/MTV2.txt"},
    
 {"key": "MV_vod","name": "🎤┃字母┃点歌台","type": 1,"api": "https://tvbox-mv--leosam2048.repl.co/mv/vod"},
 
@@ -107,7 +107,7 @@
 
 {"key":"push_agent","name":"▶┃推送┃磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt"},
 
-{"key": "csp_Token","name":"📚┃阿里┃Token设置","type": 3,"api": "csp_KungFu404","searchable": 1,"filterable": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt","jar": "https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/Java/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},	
+{"key": "csp_Token","name":"📚┃阿里┃Token设置","type": 3,"api": "csp_KungFu404","searchable": 1,"filterable": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt","jar": "http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},	
 	
 {"key": "AD","name": "请勿相信任何广告","type": 3,"api": "csp_XBPQ","searchable": 0,"quickSearch": 0,"filterable": 0},
 

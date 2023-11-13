@@ -1,16 +1,16 @@
 {
 
-"spider": "https://gh-proxy.com/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/Java/fan1106.jar;md5;d65490382102d8e7d3bdbde44ca602f5",
+"spider": "http://a.yf1688.top/jar/fan1106.jar;md5;d65490382102d8e7d3bdbde44ca602f5",
 
 "wallpaper": "http://www.kf666888.cn/api/tvbox/img" , 
 
-"warningText": "风言锋语提示您：观看《玩偶哥哥》4K源请按提示扫描登录阿里token" , 
+"warningText": "风言锋语提示您：如遇解析错误，①请手动刷新②手动更换解析③手动换源" , 
 	
  "lives": [	
     {
       "name": "live",
       "type": 0,
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/TV/612.txt",
+      "url": "http://a.yf1688.top/live/612.txt",
       "playerType": 1,
       "ua": "okhttp/3.15",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
@@ -133,7 +133,7 @@
 	
 {"key":"七夜","name":"🔍┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},	
 
-{"key": "csp_Token","name":"📚┃阿里┃Token设置","type": 3,"api": "csp_KungFu404","searchable": 1,"filterable": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt", "jar": "https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/Java/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},	
+{"key": "csp_Token","name":"📚┃阿里┃Token设置","type": 3,"api": "csp_KungFu404","searchable": 1,"filterable": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt", "jar": "http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},	
 	
 {"key": "cc","name": "请勿相信任何广告","type": 3,"api": "csp_XPath","searchable": 0,"quickSearch": 0,"filterable": 0}
 
