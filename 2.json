@@ -1,0 +1,25 @@
+{
+
+"warningText": "关注微信公众号:《风言锋语88》，获取更多信息，以下排名不分先后",
+	
+"storeHouse":[
+
+{"sourceName":"❤️┃小鱼GH在线仓┃❤️","sourceUrl":"https://ghproxy.net/https://raw.githubusercontent.com/yf20230412/master/main/TvBox/JS/22.json"},
+
+{"sourceName":"❤️┃小鱼KS在线仓┃❤️","sourceUrl":"https://la.kstore.space/download/4645/Tvbox/myks/22.json"},
+
+{"sourceName":"❤️┃小鱼JH在线仓┃❤️","sourceUrl":"https://gh-proxy.com/raw.githubusercontent.com/yf20230412/master/main/TvBox/JS/JH22.json"},	
+
+	
+{"sourceName":"--👇以下是小鱼本地仓👇--","sourceUrl":""},
+	
+{"sourceName":"📺┃小鱼电视本地仓┃📺","sourceUrl":"clan://localhost/风言锋语88/22.json"},
+
+{"sourceName":"📱┃小鱼平板专用仓┃📱","sourceUrl":"clan://localhost/htdocs/风言锋语88/mod.json"},
+	
+{"sourceName":"🌐┃小鱼102虚拟仓┃🌐","sourceUrl":"http://fastnat.club:5567/风言锋语88/fn22.json"}
+
+]
+
+}
+

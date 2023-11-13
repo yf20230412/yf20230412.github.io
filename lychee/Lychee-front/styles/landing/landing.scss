@@ -1,0 +1,45 @@
+// Rest -------------------------------------------------------------------- //
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+@import '../reset';
+
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	transition: color .3s, opacity .3s ease-out, transform .3s ease-out, box-shadow .3s;
+}
+
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	background: #000000;
+	overflow: hidden;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+@import "../page/fonts";
+@import "../page/animate";
+@import "../page/social";
+@import "../page/footer";
+@import "menu";
+@import "logo";
+@import "intro";
+@import "slide";
+
+
+#footer {
+	position: absolute;
+	background: #000000;
+
+	p.home_copyright {
+		color: #FFFFFF;
+	}
+}
+

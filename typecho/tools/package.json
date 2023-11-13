@@ -1,0 +1,24 @@
+{
+  "name": "typecho-tools",
+  "version": "1.0.0",
+  "description": "Typecho build tools",
+  "main": "build.js",
+  "engines": {
+      "node": "16.x"
+  },
+  "scripts": {
+    "build_js": "node build.js js",
+    "build_css": "node build.js css"
+  },
+  "keywords": [
+    "typecho"
+  ],
+  "author": "joyqi",
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "node-sass": "^6.0.1",
+    "sprite-magic-importer": "^1.6.2",
+    "uglify-js": "^3.11.6"
+  }
+}
