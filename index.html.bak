@@ -84,7 +84,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>风言锋语空间</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -201,6 +201,24 @@
     </div>
   </div>
 </div>
+
+ <div id="main">
+        <!-- 外网网访问地址 -->
+        <div id="app" class="app animated fadeInLeft">
+       <ul>
+
+     <li>
+			  <a href="https://search.smzdm.com/?c=home&s=换个姿势玩手机&v=a&mx_v=b" target="_blank">
+				<img class="shake" src="img/png/routeros.png" />
+				<strong>玩机教程</strong></a>
+			</li>
+			  <li>
+              <a href="https://docs.kodcloud.com/setup/" target="_blank">
+                <img class="shake" src="img/png/kodcloud.png" />
+                <strong>可道云</strong></a>
+            </li>
+			</ul>
+        </div>
 
 </div>
 
