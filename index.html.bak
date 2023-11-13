@@ -17,8 +17,8 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="友链">
-<meta property="og:url" content="http://example.com/links/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
@@ -26,7 +26,7 @@
   
   
   
-  <title>友链 - Hexo</title>
+  <title>Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -80,11 +80,11 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 100vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>风言锋语空间</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -186,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="友情链接"></span>
+            <span id="subtitle" data-typed-text="欢迎来到《风言锋语88》MiniNAS"></span>
           
         </div>
 
@@ -194,11 +194,12 @@
       </div>
 
       
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
-</div>
-
-
 </div>
 
   </header>
@@ -207,70 +208,112 @@
     
       <div class="container nopadding-x-md">
         <div id="board"
-          >
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="row links">
-  
+
+  <div class="row mx-auto index-card">
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Fluid Blog"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Blog</div>
-            <div class="link-intro">主题博客</div>
-          </div>
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2023/11/13/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="/img/2.png" srcset="/img/loading.gif" lazyload alt="hexo常用命令">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/13/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          hexo常用命令
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2023/11/13/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+        <div>
+          hexo常用命令如下：1234567891011121314npm install hexo -g #安装Hexonpm update hexo -g #升级hexo init #初始化博客​hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章hexo g == hexo generate #生成hexo s == hexo serv
         </div>
       </a>
-    </div>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-13 23:03" pubdate>
+              2023-11-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
   
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/docs/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Fluid Docs"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Docs</div>
-            <div class="link-intro">主题使用指南</div>
-          </div>
-        </div>
-      </a>
-    </div>
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%88%86%E7%B1%BB/" class="category-chain-item">分类</a>
   
+  
+
+      </span>
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Fluid Repo"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Repo</div>
-            <div class="link-intro">主题 GitHub 仓库</div>
+  
+</span>
+
           </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2023/11/13/hexo%E6%95%99%E7%A8%8B/" target="_self">
+          <img src="/img/1.png" srcset="/img/loading.gif" lazyload alt="hexo教程">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/13/hexo%E6%95%99%E7%A8%8B/" target="_self">
+          hexo教程
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2023/11/13/hexo%E6%95%99%E7%A8%8B/" target="_self">
+        <div>
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
         </div>
       </a>
-    </div>
-  
-</div>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-13 21:40" pubdate>
+              2023-11-13
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
 
 
