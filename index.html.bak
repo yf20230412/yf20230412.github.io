@@ -92,42 +92,42 @@
 				<strong>路由器</strong></a>
 			</li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8080/kodcloud" target="_blank">
                 <img class="shake" src="img/png/kodcloud.png" />
                 <strong>可道云</strong></a>
             </li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8886" target="_blank">
                 <img class="shake" src="img/png/verysync.png" />
                 <strong>微力同步</strong></a>
             </li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8080/aria2" target="_blank">
                 <img class="shake" src="img/png/aria2dl.png" />
                 <strong>Aria2下载</strong></a>
             </li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8080/typecho/" target="_blank">
                 <img class="shake" src="img/png/typecho.png" />
                 <strong>个人博客</strong></a>
             </li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8080/lychee/" target="_blank">
                 <img class="shake" src="img/png/lychee.png" />
                 <strong>荔枝相册</strong></a>
             </li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8080/speedtest/" target="_blank">
                 <img class="shake" src="img/png/speedtest.png" />
                 <strong>网速测试</strong></a>
             </li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8002" target="_blank">
                 <img class="shake" src="img/png/ksweb.png" />
                 <strong>控制台</strong></a>
             </li>
             <li>
-              <a href="http://XXXXX" target="_blank">
+              <a href="http://192.168.1.5:8001" target="_blank">
                 <img class="shake" src="img/png/mysql.png" />
                 <strong>数据库</strong></a>
             </li>
