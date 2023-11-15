@@ -1,11 +1,11 @@
 简体中文 | [English](./README_EN.md)
 
 <p>
-<strong><h2>無名の主页</h2></strong>
+<strong><h2>小鱼の主页</h2></strong>
 简单的小主页，原来的看够了，重新弄了一个
 </p>
 
-![無名の主页](https://s2.loli.net/2022/07/14/K5JigfvDoNewtuS.webp)
+![小鱼の主页](https://a.yf1688.top/images/xy.png)
 
 >主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Other/Pacifico-Regular.ttf)，若无法下载，可将字体目录下的 `Pacifico-Regular-all.ttf` 进行替换
 
@@ -13,9 +13,8 @@
 
 >由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
 
-- [無名の主页](https://www.imsyy.top)
-- [無名の主页 - Dev](https://home-imsyy.vercel.app)
-- [無名の主页 - 备用线路](https://home-5iw.pages.dev)
+- [小鱼の主页](https://a.yf1688.top)
+
 
 ### 功能
 
@@ -30,7 +29,7 @@
 
 ### 部署
 
-* **安装** [node.js](https://nodejs.org/zh-cn/) **环境**
+* **安装** [node.js](https://nodejs.org/en/download/) **环境**
 
   > node > 16.16.0  
   > npm > 8.15.0
@@ -51,6 +50,16 @@ pnpm dev
 # 构建
 pnpm build
 ```
+# 查看源
+pnpm config list
+```
+# 查看安装位置
+which pnpm
+```
+# 下载 pnpm
+pnpm install
+```
+
 > 构建完成后，静态资源会在 **`dist` 目录** 中生成，可将 **`dist` 文件夹下的文件**上传至服务器，也可使用 `Vercel` 等托管平台一键导入并自动部署
 
 ### 网站链接
