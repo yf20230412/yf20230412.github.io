@@ -49,15 +49,16 @@ pnpm dev
 
 # 构建
 pnpm build
-```
+
 # 查看源
 pnpm config list
-```
+
 # 查看安装位置
 which pnpm
-```
+
 # 下载 pnpm
 pnpm install
+
 ```
 
 > 构建完成后，静态资源会在 **`dist` 目录** 中生成，可将 **`dist` 文件夹下的文件**上传至服务器，也可使用 `Vercel` 等托管平台一键导入并自动部署
