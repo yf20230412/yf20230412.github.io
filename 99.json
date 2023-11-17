@@ -139,7 +139,7 @@
 
 {"key":"XBPQ_葡萄","name":"🎦┃短剧┃葡萄","type":3,"api":"csp_XBPQ","jar":"http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext":"http://a.yf1688.top/api/葡萄短剧.json"},
 
-{"key":"csp_XYQHiker_VSYY","name":"🎦┃短剧┃VSY","type":3,"searchable":1,"quickSearch":1,"filterable":1,"api":"csp_XYQHiker","jar":"./lib/spider.jar;md5;A21EA6F5DD3B5F922B3A7F54D3BD0F16","ext":"http://a.yf1688.top/api/VS影院.json"},	
+{"key":"csp_XYQHiker_VSYY","name":"🎦┃短剧┃VSY","type":3,"searchable":1,"quickSearch":1,"filterable":1,"api":"csp_XYQHiker","jar":"http://a.yf1688.top/jar/spider.jar;md5;A21EA6F5DD3B5F922B3A7F54D3BD0F16","ext":"http://a.yf1688.top/api/VS影院.json"},	
 	
 {"key":"csp_短剧","name":"🎦┃短剧┃网网","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext":"http://a.yf1688.top/api/短剧网.json"},
 	
