@@ -1,7 +1,7 @@
 {
-	"作者": "空白",
+	"作者": "风言锋语88",
 	"站名": "厂长",
-	"主页url": "https://www.cz01.org/",
+	"主页url": "https://czz9.com/",
 	"数组": " <li>&&display: none",
 	"直接播放": "0",
 	"图片": "data-original=\"&&\"",
@@ -22,16 +22,16 @@
 	"影片状态": "状态：&&</li>",
 	"导演": "导演：&&</li>",
 	"主演": "主演：&&</li>",
-	"简介": "video-info-content vod_content&&</span>",
+	"简介": "公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗。🥇+&nbsp;&&</p>",
 	"嗅探词": ".m3u8#m3u8?#.mp4#mp4?#ixigua#.czspp#.flv#.mp3#.m4a#?item/video#is_play_url=1#play/?#qianpailive",
 	"线路数组": "mi_paly_box&&</a>",
-	"线路标题": "\">&&<span>",
+	"线路标题": "\">&&<span>[替换:在线播放>>🌺风言锋语88接口🌺]",
 	"播放数组": "ypxingq_t&&mi_cont cai_con",
 	"播放列表": "",
 	"播放标题": "\">&&</a>",
 	"播放链接": "href=\"&&\"",
-	"分类url": "https://www.cz01.org/{cateId}/page/{catePg}",
-	"分类": "最近更新$movie_bt#热门推荐$reyingzhong#电影$movie_bt/movie_bt_series/dyy#电视剧$dsj#国产剧$gcj#韩剧$hanjutv#美剧$meijutt#追番计划$movie_bt_view_cat/fjj#动漫$dm#剧场版$dongmanjuchangban#近期高清$movie_bt_series/dyy#豆瓣高分$gaofenyingshi#豆瓣排名$dbtop250#PV预告$movie_bt_view_cat/pvyugao",
+	"分类url": "https://czz9.com/{cateId}/page/{catePg}",
+	"分类": "豆瓣电影Top250$dbtop250#最新电影$zuixindianying#热映中$reyingzhong#电视剧$dsj#国产剧$gcj#剧场版$dongmanjuchangban#美剧$meijutt#韩剧$hanjutv#番剧$fanju",
 	"筛选": {
 		"movie_bt": [
 			{
@@ -42,6 +42,11 @@
 						"n": "全部",
 						"v": "movie_bt"
 					},
+					{
+						"n": "儿童",
+						"v": "movie_bt_tags/etet"
+					},	
+					
 					{
 						"n": "冒险",
 						"v": "movie_bt/movie_bt_tags/maoxian"
@@ -69,7 +74,7 @@
 					{
 						"n": "古装",
 						"v": "movie_bt/movie_bt_tags/guzhuang"
-					},
+					},					
 					{
 						"n": "喜剧",
 						"v": "movie_bt/movie_bt_tags/xiju"
@@ -89,7 +94,7 @@
 					{
 						"n": "悬疑",
 						"v": "movie_bt/movie_bt_tags/xuanyi"
-					},
+					},				
 					{
 						"n": "惊悚",
 						"v": "movie_bt/movie_bt_tags/kingsong"
@@ -98,6 +103,10 @@
 						"n": "战争",
 						"v": "movie_bt/movie_bt_tags/zhanzheng/"
 					},
+					{
+						"n": "歌舞",
+						"v": "movie_bt_tags/gw"
+					},					
 					{
 						"n": "武侠",
 						"v": "movie_bt/movie_bt_tags/wuxia"
@@ -123,12 +132,19 @@
 						"v": "movie_bt/movie_bt_tags/jlpp/"
 					},
 					{
+						"n": "运动",
+						"v": "movie_bt_tags/yd"
+					},					
+					{
 						"n": "音乐",
 						"v": "movie_bt/movie_bt_tags/yy/"
 					}
 
 				]
 			}
+
+			
 		]
+		
 	}
 }

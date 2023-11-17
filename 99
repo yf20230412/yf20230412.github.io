@@ -87,7 +87,7 @@
 	
 {"key":"apv2_瑞丰","name":"⛄┃瑞丰┃影视","type":3,"api":"csp_AppYsV2","ext":"http://www.miniku.cc/xgapp.php/v2/"},	
 
-{"key": "js_czsapp","name": "🏭️┃厂长┃资源","type": 3,"api": "http://a.yf1688.top/lib/drpy1.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/czspp.js"},
+{"key": "csp_厂长","name": "🏭️┃厂长┃资源","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext": "http://a.yf1688.top/api/cz.json"},
 	
 {"key":"555影视","name":"5️⃣️┃三五┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/555.json"},
 
@@ -136,10 +136,14 @@
 {"key":"csp_Nbys","name":"🛫┃泥巴┃飞机","type":3,"api":"csp_NiNi","searchable":1,"quickSearch":1,"changeable":1},
 	
 {"key":"csp_trj","name": "🛫┃唐人街┃飞机","type": 3,"api": "csp_Tangrenjie","searchable": 1,"quickSearch": 1,"changeable":1},
+
+{"key":"XBPQ_葡萄","name":"🎦┃短剧┃葡萄","type":3,"api":"csp_XBPQ","jar":"http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext":"http://a.yf1688.top/api/葡萄短剧.json"},
+
+{"key":"csp_XYQHiker_VSYY","name":"🎦┃短剧┃VSY","type":3,"searchable":1,"quickSearch":1,"filterable":1,"api":"csp_XYQHiker","jar":"./lib/spider.jar;md5;A21EA6F5DD3B5F922B3A7F54D3BD0F16","ext":"http://a.yf1688.top/api/VS影院.json"},	
 	
-{"key":"csp_短剧","name":"📱┃短剧┃网网","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext":"http://a.yf1688.top/api/短剧网.json"},
+{"key":"csp_短剧","name":"🎦┃短剧┃网网","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext":"http://a.yf1688.top/api/短剧网.json"},
 	
-{"key":"csp_123","name":"📱┃z123┃短剧","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"jar": "http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext":"http://a.yf1688.top/api/123短剧网.json"},
+{"key":"csp_123","name":"🎦┃z123┃短剧","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"jar": "http://a.yf1688.top/jar/HCCX_XBPQ.jar;md5;fc692ca5f9fa2dfa443f96c37edaa81a","ext":"http://a.yf1688.top/api/123短剧网.json"},
 	
 {"key": "MTV转点播","name": "🎸┃万首┃MTV","type": 3,"playerType": 2,"api": "http://a.yf1688.top/api/音乐转点播.js","ext": "http://a.yf1688.top/api/MTV2.txt"},
    
