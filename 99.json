@@ -59,7 +59,7 @@
 	
 {"key":"drpy_js_菜狗","name":"🐕┃搜狗┃官源","type":3,"playerType":2,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/老狗.js"},	
 
-{"key": "csp_SP360","name":"🌏┃360┃官源","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/360ys.js"},
+{"key": "csp_厂长","name": "🏭️┃厂长┃资源","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/cz.json"},
 
 {"key": "姐姐","name": "👩‍⚕️┃玩偶┃姐姐","type": 3,"api": "csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext": "http://dytt996.com/api.php/app/"},
   
@@ -87,7 +87,7 @@
 	
 {"key":"apv2_瑞丰","name":"⛄┃瑞丰┃影视","type":3,"api":"csp_AppYsV2","ext":"http://www.miniku.cc/xgapp.php/v2/"},	
 
-{"key": "csp_厂长","name": "🏭️┃厂长┃资源","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/cz.json"},
+{"key": "csp_TVB","name": "🌤TVB云播|T追剧","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/TVB云播.json"},
 	
 {"key":"555影视","name":"5️⃣️┃三五┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/555.json"},
 
