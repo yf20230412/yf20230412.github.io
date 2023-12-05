@@ -1,6 +1,6 @@
 {
 
-"spider": "http://a.yf1688.top/jar/nanf.jar;md5;29978B04B8AEAEDE94F91B23B35E3405",
+"spider": "http://a.yf1688.top/jar/nanf1205.jar;md5;7B7B0D16BF03311874A7B8791510F858",
 	
 "wallpaper": "http://www.kf666888.cn/api/tvbox/img" , 
 	
@@ -40,7 +40,9 @@
 		
 {"key":"csp_热播","name":"☀┃热播┃之家","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/热播之家.json"},	
 
-{	"key":"南瓜",	"name":"🎃┃南瓜┃App",	"type":3,	"api":"csp_NanGua",	"playerType":2,	"searchable":1,	"quickSearch":1,	"changeable":1},	
+{"key":"南瓜",	"name":"🎃┃南瓜┃App","type":3,"api":"csp_NanGua","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},	
+
+{"key": "csp_Kunyu77","name": "🌈┃七七┃影视","type": 3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
 	
 {"key": "一起看 ","name": "👭┃一起┃App","type": 3,"api": "csp_YQKan","searchable": 1,"quickSearch": 1,"changeable": 1},
 
@@ -65,8 +67,6 @@
   
 {"key": "cps_aliyunpan","name": "👩‍🔬┃玩偶┃妹妹", "type": 1,"api": "http://1.ahailove.cn:23456/cj/api.php/provide/vod/","categories": ["电影","电视剧","综艺","动漫"]},
 	
-{"key": "csp_Kunyu77","name": "🌈┃七七┃影视","type": 3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
-
 {"key":"csp_真不卡","name":" ⏰┃真不卡┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/真不卡影视.json"},
 
 {"key": "csp_SP33","name":"🐝┃三三┃解析","type": 3,"api": "csp_SP33","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},	
