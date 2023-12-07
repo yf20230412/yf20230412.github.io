@@ -24,7 +24,7 @@
 
 {"key":"csp_厂长","name":"🏭️┃厂长┃资源","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/cz.json"},
 
-{"key":"csp_WoGG","name":"💂┃玩偶┃哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$关"},
+{"key":"csp_WoGG","name":"💂┃玩偶┃哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$关"},
 
 {"key":"csp_Free","name":"🌻┃Free┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/Free影视.json"},
 
@@ -158,21 +158,21 @@
 
 {"key":"软件教程","name":"👨‍🏫┃软件┃教程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://a.yf1688.top/api/软件教程.json","jar":"http://a.yf1688.top/jar/Bili.jar;md5;c5c337bb2793598e9aa5953898fbb087"},
 
-{"key":"Zhaozy","name":"🔍┃找资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$fanty$$$qqq111"},
+{"key":"Zhaozy","name":"🔍┃找资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$fanty$$$qqq111"},
 
-{"key":"YiSo","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
+{"key":"YiSo","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 
-{"key":"PanSou","name":"🔍┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
+{"key":"PanSou","name":"🔍┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 
-{"key":"UpYun","name":"🔍┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
+{"key":"UpYun","name":"🔍┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 
-{"key":"PanSearch","name":"🔍┃盘Se┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
+{"key":"PanSearch","name":"🔍┃盘Se┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 
-{"key":"七夜","name":"🔍┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
+{"key":"七夜","name":"🔍┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 
-{"key":"push_agent","name":"📲┃手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
+{"key":"push_agent","name":"📲┃手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 
-{"key":"csp_KungFu404","name":"📚┃阿里┃Token设置","type":3,"api":"csp_KungFu404","searchable":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt","jar":"http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},
+{"key":"csp_KungFu404","name":"📚┃阿里┃Token设置","type":3,"api":"csp_KungFu404","searchable":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt","jar":"http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},
 
 {"key":"AD","name":"请勿相信任何广告","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"filterable":0},
 
