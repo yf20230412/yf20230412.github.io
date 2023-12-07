@@ -53,14 +53,18 @@
 {"key": "橘子","name": "🍊┃橘子┃App","type": 3,"api": "csp_AppMao","searchable": 1,"quickSearch": 1,"changeable": 1,
 "ext": "FbjDcUxPqpfNr0QF4QvE6sExbcJUCYdIVisPtbeywENfScyc6nTW0F+D7rX5HCm9c3SL03FsmGsmXS04XZMlbxEVW4/ZgwONbnobxj8KxeRpXqDxCWghfAf9JSR025yi92eOKqE9HokX9QQnl1WsU21CR4+dlEMDEsADd1xFGiiGtsh0vqJFAf41Z7sYL00hBBNM3xJsYyXCuX4BrzNYpZRwmcnwnXIHe2MtwbsJf0IAs6yM+y/ub+niyxOc2YuPbc/VUS4DGPqzelIi6plLWFvZ8+j2xcvAgopZxZFhBkIYCIIC5Uec/JW8RgW9WV1SKntGcmcd5yjIpagsmpXymH3a+FKzHKMB3LvXmR6onijWkP0VpivFgVVfjWrik4Yr0ZjZxKFA0uPQvy9l9EjPMNrQIj0sZjnpv7JmoMO+HfQ+lqKhJrQFq4MooyyGv6yhNv12IOHay3A="
 }, 
-	
-{"key":"csp_XYQHiker_影视工场","name":"📺┃影视┃工场","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/XYQ.jar;md5;ce364d69792a2663e62022e66eae39c9","ext":"http://a.yf1688.top/api/影视工场.json"},
-	
-{"key":"csp_XYQHiker_臭蛋蛋影视","name":"🐣┃臭蛋蛋┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/XYQ.jar;md5;ce364d69792a2663e62022e66eae39c9","ext":"http://a.yf1688.top/api/臭蛋蛋影视.json"},
 
 {"key":"觅视频","name":"🦜┃觅视频┃App","type":3,"api":"csp_AppSK","searchable":1,"quickSearch":1,"changeable":1,
 "ext": "FbjPcVZY48PN/RIZ5QqOrsp7KctTA8JSVjVJ8fb33R8KUNSIsT3IgxCP9qyzByO7Z2qR3Ggpjn8kS2NlCJx9KFpYWtqe0x/XKTtG3SAclaw3AOm0fT5yKRDkPGFi25mx+DXBMtV3UpEhsgBctFypT1hMdvW6txkGIdVcbXcULwu38vkbsKwSC/YwIKMAOQpRDkEq3wA4MUCwpidroBQbwc5j3aX/1xZdJGgHncNoUQ=="
 },
+
+{"key":"南坊","name":"☀南坊┃App","type":3,"api":"csp_AppMao","searchable":1,"quickSearch":1,"changeable":1,
+"ext":"FbjCcU1KqpC5pkRX4Q3D+NciPclIFs4EHzRV89m3pENRS6PivxPrlXvH/4efUSWwUCWwwk8srkIDSXN9RIJkSCZPJqnRikLRakBH0XBB6uNlX6XgMjhUKBTbBXopnsWdvXX6OowIBLQ78wghs3yRbgJxOYvrglBVIeI4cTcDGxixtMJ+yL0zE9g1d+N2RH4JERZh3CoYXSO1hH420ARbjt08lerroREmfGoT8JEGfTFW3MrK3hWueIyRsyOllsiwNM6dXSwTArm5em8Lv8ppXgro"
+},
+	
+{"key":"csp_XYQHiker_影视工场","name":"🏗┃影视┃工场","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/XYQ.jar;md5;ce364d69792a2663e62022e66eae39c9","ext":"http://a.yf1688.top/api/影视工场.json"},
+	
+{"key":"csp_XYQHiker_臭蛋蛋影视","name":"🐣┃臭蛋蛋┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/XYQ.jar;md5;ce364d69792a2663e62022e66eae39c9","ext":"http://a.yf1688.top/api/臭蛋蛋影视.json"},
 	
 {"key":"csp_真不卡","name":"⏰┃真不卡┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/真不卡影视.json"},
 
