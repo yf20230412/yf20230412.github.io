@@ -165,7 +165,10 @@
 {"name":"星星","hosts":["aws.ulivetv.net"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:8,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:9,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
 {"name":"量子廣告","hosts":["vip.lz","hd.lz","v.cdnlz1","v.cdnlz"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.433333,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]},
 {"name":"非凡廣告","hosts":["vip.ffzy","hd.ffzy"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]},
-{"name":"火山嗅探","hosts":["huoshan.com"],"regex":["item_id="]},
+{"name":"火山嗅探","hosts":["huoshan.com"],"regex":["item_id="]},	
+{"name":"yqk","hosts":["yqk88"],"regex":["18.4","15.1666"]},	
+{"name":"索尼","hosts":["suonizy"],"regex":["15.1666","15.2666"]},		
+{"name":"抖音","hosts":["douyin.com"],"regex":["is_play_url="]},
 {"name":"抖音嗅探","hosts":["douyin.com"],"regex":["is_play_url="]}	
 ],
 
@@ -177,9 +180,9 @@
 {"name":"Quad9","url":"https://dns.quad9.net/dns-quer","ips":["9.9.9.9","149.112.112.112"]}
 ],
 	
-
-"flags":["youku","qq","iqiyi","imgo","xueren","m1905","qiyi","letv","sohu","tudou","pptv","dbm3u8","mgtv","wasu","bilibili","le","duoduozy","renrenmi","xigua","优酷","西瓜","乐视","芒果","腾讯","爱奇艺","奇艺","ltnb","rx","CL4K","xfyun","wuduzy","哔哩哔哩","哔哩"],
-
+    
+"flags":["youku","qq","QQ","iqiyi","iqiyi","imgo","xueren","m1905","qiyi","letv","sohu","tudou","pptv","PPTV","dbm3u8","FY","fy", "FeiYun","feiyun","飞云","funshion","mgtv","wasu","bilibili","le","duoduozy","renrenmi","xmm","xigua","ltnb","rx","SLYS4k","CL4K","xfyun","wuduzy","BYGA","BYGB","luanzi","dxzy","QEYSS","aliyun","优酷","优 酷","优酷视频","西瓜","AliS","122","chuangying",
+	"乐视","芒果","腾讯", "腾 讯","腾讯视频","芒果TV","芒 果 T V","爱奇艺","奇艺","爱 奇 艺","奇艺视频","西瓜视频","乐视视频","搜狐","搜 狐","搜狐视频","哔哩哔哩","哔哩"],
 
 
 "ijk":[
