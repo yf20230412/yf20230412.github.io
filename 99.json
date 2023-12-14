@@ -24,8 +24,12 @@
 
 {"key":"csp_厂长","name":"🏭️┃厂长┃资源","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/cz.json"},
 
-{"key":"csp_WoGG","name":"💂┃玩偶┃哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$关"},
+{"key":"csp_WoGG","name":"💂┃玩偶┃哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$关"},
 
+{"key":"csp_天天开心","name":"🌻┃天天┃开心","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/天天开心.json"},	
+	
+{"key":"csp_黑狐影视","name":"🦊┃黑狐┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/黑狐影视.json"},
+	
 {"key":"csp_Free","name":"🌻┃Free┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/Free影视.json"},
 
 {"key":"csp_超前","name":"🥇┃超前┃点播","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/超前B站.json"},
@@ -62,15 +66,15 @@
 "ext":"FbjCcU1KqpC5pkRX4Q3D+NciPclIFs4EHzRV89m3pENRS6PivxPrlXvH/4efUSWwUCWwwk8srkIDSXN9RIJkSCZPJqnRikLRakBH0XBB6uNlX6XgMjhUKBTbBXopnsWdvXX6OowIBLQ78wghs3yRbgJxOYvrglBVIeI4cTcDGxixtMJ+yL0zE9g1d+N2RH4JERZh3CoYXSO1hH420ARbjt08lerroREmfGoT8JEGfTFW3MrK3hWueIyRsyOllsiwNM6dXSwTArm5em8Lv8ppXgro"
 },
 	
-{"key":"csp_XYQHiker_影视工场","name":"🏗┃影视┃工场","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/XYQ.jar;md5;ce364d69792a2663e62022e66eae39c9","ext":"http://a.yf1688.top/api/影视工场.json"},
+{"key":"csp_XYQHiker_影视工场","name":"🏗┃影视┃工场","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/ttkx.jar;md5;abbb96e6409112492430dd6521d66df","ext":"http://a.yf1688.top/api/影视工场.json"},
 	
-{"key":"csp_XYQHiker_臭蛋蛋影视","name":"🐣┃臭蛋蛋┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/XYQ.jar;md5;ce364d69792a2663e62022e66eae39c9","ext":"http://a.yf1688.top/api/臭蛋蛋影视.json"},
+{"key":"csp_XYQHiker_臭蛋蛋影视","name":"🐣┃臭蛋蛋┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/ttkx.jar;md5;abbb96e6409112492430dd6521d66df","ext":"http://a.yf1688.top/api/臭蛋蛋影视.json"},
 	
 {"key":"csp_真不卡","name":"⏰┃真不卡┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/真不卡影视.json"},
 
 {"key":"csp_SP33","name":"🐝┃三三┃解析","type":3,"api":"csp_SP33","searchable":1,"quickSearch":1,"filterable":1,"changeable":0},
 
-{"key":"csp_小鹿","name":"🦒┃小鹿┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/小鹿影视.json"},
+{"key":"csp_米爱影视","name":"🦒┃米爱┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/米爱影视.json"},
 
 {"key":"贱贱","name":"🐭┃贱贱┃p2p","type":3,"playerType":"1","api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/荐片.js"},
 
@@ -136,7 +140,7 @@
 	
 {"key":"XBPQ_葡萄","name":"🎦┃短剧┃葡萄","type":3,"api":"csp_XBPQ","ext":"http://a.yf1688.top/api/葡萄短剧.json"},
 
-{"key":"csp_XYQHiker_VSYY","name":"🎦┃短剧┃VSY","type":3,"searchable":1,"quickSearch":1,"filterable":1,"api":"csp_XYQHiker","jar":"http://a.yf1688.top/jar/spider.jar;md5;A21EA6F5DD3B5F922B3A7F54D3BD0F16","ext":"http://a.yf1688.top/api/VS影院.json"},
+{"key":"csp_XYQHiker_VSYY","name":"🎦┃短剧┃VSY","type":3,"searchable":1,"quickSearch":1,"filterable":1,"api":"csp_XYQHiker","jar":"http://a.yf1688.top/jar/ttkx.jar;md5;abbb96e6409112492430dd6521d66df","ext":"http://a.yf1688.top/api/VS影院.json"},
 
 {"key":"csp_短剧","name":"🎦┃短剧┃网网","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/短剧网.json"},
 
@@ -158,21 +162,21 @@
 
 {"key":"软件教程","name":"👨‍🏫┃软件┃教程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://a.yf1688.top/api/软件教程.json","jar":"http://a.yf1688.top/jar/Bili.jar;md5;c5c337bb2793598e9aa5953898fbb087"},
 
-{"key":"Zhaozy","name":"🔍┃找资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$fanty$$$qqq111"},
+{"key":"Zhaozy","name":"🔍┃找资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$fanty$$$qqq111"},
 
-{"key":"YiSo","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key":"YiSo","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
 
-{"key":"PanSou","name":"🔍┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key":"PanSou","name":"🔍┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
 
-{"key":"UpYun","name":"🔍┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key":"UpYun","name":"🔍┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
 
-{"key":"PanSearch","name":"🔍┃盘Se┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key":"PanSearch","name":"🔍┃盘Se┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
 
-{"key":"七夜","name":"🔍┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key":"七夜","name":"🔍┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
 
-{"key":"push_agent","name":"📲┃手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key":"push_agent","name":"📲┃手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
 
-{"key":"csp_KungFu404","name":"📚┃阿里┃Token设置","type":3,"api":"csp_KungFu404","searchable":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt","jar":"http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},
+{"key":"csp_KungFu404","name":"📚┃阿里┃Token设置","type":3,"api":"csp_KungFu404","searchable":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt","jar":"http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},
 
 {"key":"Qtv","name":"🐧┃腾讯┃官源","type":3,"playerType":2,"api":"http://a.yf1688.top/lib/drpy1.min.js","ext":"http://a.yf1688.top/api/腾云驾雾.js"},
 

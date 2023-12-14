@@ -31,7 +31,7 @@
 
 {"key": "豆豆","name": "🔍┃豆瓣┃主页","type": 3,"api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 
-{"key":"csp_WoGG","name":"💂┃玩偶┃哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$关"},
+{"key":"csp_WoGG","name":"💂┃玩偶┃哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$关"},
 
 {"key": "一起看 ","name": "👭一起┃App","type": 3,"api": "csp_YQKan","searchable": 1,"quickSearch": 1,"changeable": 1},	
 	
@@ -93,21 +93,21 @@
    
 {"key": "MV_vod","name": "🎤┃字母┃点歌台","type": 1,"api": "https://tvbox-mv--leosam2048.repl.co/mv/vod"},
 
-{"key":"Zhaozy","name":"🔍┃找资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$fanty$$$qqq111"},
+{"key":"Zhaozy","name":"🔍┃找资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$fanty$$$qqq111"},
 		
-{"key": "YiSo","name": "🔍┃易搜┃搜索","type": 3,"api": "csp_YiSo","searchable": 1,"quickSearch": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key": "YiSo","name": "🔍┃易搜┃搜索","type": 3,"api": "csp_YiSo","searchable": 1,"quickSearch": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd"},
 		
-{"key":"PanSou","name":"🔍┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto"},
+{"key":"PanSou","name":"🔍┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|fhd|auto"},
 	
-{"key":"UpYun","name":"🔍┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto"},
+{"key":"UpYun","name":"🔍┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|fhd|auto"},
 	
-{"key":"PanSearch","name":"🔍┃盘Se┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto"},
+{"key":"PanSearch","name":"🔍┃盘Se┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|fhd|auto"},
 	
-{"key":"七夜","name":"🔍┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto"},
+{"key":"七夜","name":"🔍┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|fhd|auto"},
 
-{"key":"push_agent","name":"▶┃手机┃推送","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
+{"key":"push_agent","name":"▶┃手机┃推送","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt"},
 
-{"key": "csp_Token","name":"📚┃阿里┃Token设置","type": 3,"api": "csp_KungFu404","searchable": 1,"filterable": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/tvfan/token.txt","jar": "http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},	
+{"key": "csp_Token","name":"📚┃阿里┃Token设置","type": 3,"api": "csp_KungFu404","searchable": 1,"filterable": 1,"changeable": 0,"ext": "http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt","jar": "http://a.yf1688.top/jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},	
 	
 {"key": "AD","name": "请勿相信任何广告","type": 3,"api": "csp_XBPQ","searchable": 0,"quickSearch": 0,"filterable": 0},
 
