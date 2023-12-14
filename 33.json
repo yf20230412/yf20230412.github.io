@@ -91,7 +91,7 @@
 
 {"key": "MTV转点播","name": "🎸┃万首┃MTV","type": 3,"playerType": 2,"api": "http://a.yf1688.top/api/音乐转点播.js","ext": "http://a.yf1688.top/api/MTV2.txt"},
    
-{"key": "MV_vod","name": "🎤┃字母┃点歌台","type": 1,"api": "https://tvbox-mv--leosam2048.repl.co/mv/vod"},
+{"key": "酷奇MV","name": "🎤┃酷奇┃MV", "type": 3,"api": "csp_XBPQ","searchable": 0,"quickSearch": 0,"filterable": 1,"ext":"http://a.yf1688.top/api/酷奇MV.json"},
 
 {"key":"Zhaozy","name":"🔍┃找资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$fanty$$$qqq111"},
 		
