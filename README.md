@@ -5,7 +5,7 @@
 简单的小主页，原来的看够了，重新弄了一个
 </p>
 
-![小鱼の主页](https://a.yf1688.top/images/xy.png)
+![小鱼の主页](/lib/main.jpg)
 
 >主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Other/Pacifico-Regular.ttf)，若无法下载，可将字体目录下的 `Pacifico-Regular-all.ttf` 进行替换
 
@@ -13,7 +13,7 @@
 
 >由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
 
-- [小鱼の主页](./lib/main.jpg)
+- [小鱼の主页](https://a.yf1688.top/)
 
 
 ### 功能
