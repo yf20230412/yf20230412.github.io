@@ -26,13 +26,21 @@
 
 {"key":"csp_WoGG","name":"💂┃玩偶┃哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/风言锋语88/风言锋语/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$关"},
 
-{"key":"csp_天天开心","name":"🌻┃天天┃开心","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/天天开心.json"},	
+{"key":"csp_天天开心","name":"🌻┃天天┃开心","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/天天开心.json"},
+
+{"key":"csp_新视觉","name":"🌸┃新视觉┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/新视觉.json"},
+	
+{"key":"csp_电影先生","name":"👨┃电影┃先生","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/电影先生.json"},
+	
+{"key":"csp_影视工场","name":"🏗┃影视┃工场","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/影视工场.json"},
+	
+{"key":"csp_臭蛋蛋","name":"🐣┃臭蛋蛋┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/臭蛋蛋.json"},
+	
+{"key":"csp_超前","name":"🥇┃超前┃点播","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/超前B站.json"},	
 	
 {"key":"csp_黑狐影视","name":"🦊┃黑狐┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/黑狐影视.json"},
 	
 {"key":"csp_Free","name":"🌻┃Free┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/Free影视.json"},
-
-{"key":"csp_超前","name":"🥇┃超前┃点播","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/超前B站.json"},
 
 {"key":"csp_骚火","name":"🔥┃骚火┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/骚火影视.json"},
 
@@ -66,10 +74,6 @@
 "ext":"FbjCcU1KqpC5pkRX4Q3D+NciPclIFs4EHzRV89m3pENRS6PivxPrlXvH/4efUSWwUCWwwk8srkIDSXN9RIJkSCZPJqnRikLRakBH0XBB6uNlX6XgMjhUKBTbBXopnsWdvXX6OowIBLQ78wghs3yRbgJxOYvrglBVIeI4cTcDGxixtMJ+yL0zE9g1d+N2RH4JERZh3CoYXSO1hH420ARbjt08lerroREmfGoT8JEGfTFW3MrK3hWueIyRsyOllsiwNM6dXSwTArm5em8Lv8ppXgro"
 },
 	
-{"key":"csp_XYQHiker_影视工场","name":"🏗┃影视┃工场","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/ttkx.jar;md5;abbb96e6409112492430dd6521d66df","ext":"http://a.yf1688.top/api/影视工场.json"},
-	
-{"key":"csp_XYQHiker_臭蛋蛋影视","name":"🐣┃臭蛋蛋┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar":"http://a.yf1688.top/jar/ttkx.jar;md5;abbb96e6409112492430dd6521d66df","ext":"http://a.yf1688.top/api/臭蛋蛋影视.json"},
-	
 {"key":"csp_真不卡","name":"⏰┃真不卡┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/真不卡影视.json"},
 
 {"key":"csp_SP33","name":"🐝┃三三┃解析","type":3,"api":"csp_SP33","searchable":1,"quickSearch":1,"filterable":1,"changeable":0},
@@ -93,6 +97,10 @@
 {"key":"apv2_瑞丰","name":"⛄┃瑞丰┃影视","type":3,"api":"csp_AppYsV2","ext":"http://www.miniku.cc/xgapp.php/v2/"},
 
 {"key":"csp_TVB","name":"🌤TVB云播|T追剧","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/TVB云播.json"},
+
+{"key": "csp_独播库","name": "🍧┃独播库┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/独播库.json"},	
+	
+{"key": "csp_dsxys","name": "👨‍🦲┃大师兄┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://a.yf1688.top/api/dsxys.json"},	
 
 {"key":"555影视","name":"5️⃣️┃三五┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.yf1688.top/api/555.json"},
 
