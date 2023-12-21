@@ -28,6 +28,10 @@
 
 {"key":"csp_天天开心","name":"🌻┃天天┃开心","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/天天开心.json"},
 
+{"key":"csp_可可影视","name":"🎩┃可可┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/可可影视.json"},
+	
+{"key":"csp_奇优","name":"👒┃奇优┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/奇优.json"},
+	
 {"key":"csp_新视觉","name":"🌸┃新视觉┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/新视觉.json"},
 	
 {"key":"csp_电影先生","name":"👨┃电影┃先生","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/电影先生.json"},
@@ -120,7 +124,7 @@
 	
 {"key":"熊掌资源","name":"☁┃熊掌┃云播","type":1,"api":"https://xzcjz.com/api.php/provide/vod/"},
 	
-{"key":"至圣云(官）","name":"☁┃圣云┃云播）","type":1,"api":"http://www.ttkx.site/api.php/provide/vod/"},
+{"key":"至圣云(官）","name":"☁┃圣云┃云播","type":1,"api":"http://www.ttkx.site/api.php/provide/vod/"},
 	
 {"key":"樱花资源","name":"☁┃樱花┃云播","type":1,"api":"https://m3u8.apiyhzy.com/api.php/provide/vod/?ac=list"},
 	
@@ -155,6 +159,8 @@
 {"key":"csp_Auete","name":"🦸‍♂️┃奥特┃直连","type":3,"api":"csp_Auete","searchable":1,"quickSearch":1,"filterable":1},
 
 {"key":"csp_zxzj","name":"🚦┃在线┃直连","type":3,"api":"csp_Zxzj","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.zxzj.pro/"},	
+
+{"key": "七新影视","name":"🎦七新┃直连","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar": "./lib/ttkx.jar;md5;abbb96e6409112492430dd6521d66df","ext":"./lib/七星影视"},	
 	
 {"key":"率率","name":"💥┃率率┃直连","type":1,"api":"https://suoniapi.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"changeable":1,"categories":["国产剧","韩剧","日剧","港剧","台剧","动作片","喜剧片","爱情片","科幻片","战争片","恐怖片","剧情片","国产动漫","日韩动漫","欧美动漫","大陆综艺","日韩综艺"]},
 
