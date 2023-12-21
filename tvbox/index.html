@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./js/bootstrap.min.css">
+    <link rel="stylesheet" href="./js/animate.min.css">
         <link rel="stylesheet" href="./static/editor.css">
         <title>猫影视TV配置编辑器</title>
 </head>
@@ -32,6 +32,18 @@
             <label class="btn btn-primary btn-sm">
                 配置转图片 <input type="file" onchange="toImg(event)" style="display: none;">
             </label>
+			
+             <label class="btn btn-primary btn-sm">
+                图片转代码 <input type="file" onchange="imgToStr(event)" style="display: none;">
+            </label>
+
+             <label class="btn btn-primary btn-sm">
+                上传加密文件进行解密 <input type="file" onchange="decrypt(event)" style="display: none;">
+            </label>			
+			
+            <label class="btn btn-primary btn-sm" style="background: white; border:0; padding:4; padding-top:10px;">
+				<iframe src="jm.html" frameborder="0" style="border:0;height:30px;width:250px"></iframe>
+            </label>			
         </div>
     </div>
     <h4></h4>
@@ -47,6 +59,7 @@
 <script src="./js/underscore-min.js"></script>
 <script src="./js/jquery-ui.min.js"></script>
 <script src="./js/core-min.js"></script>
+<script src="./js/enc-base64-min.js"></script>
 <script src="./js/cipher-core-min.js"></script>
 <script src="./js/aes-min.js"></script>
 <script src="./js/mode-ecb-min.js"></script>
@@ -55,4 +68,5 @@
 <script src="./static/jsv.js"></script>
 <script src="./static/editor.js"></script>
 <script src="./static/jsonlint.js"></script>
+<script src="./static/editor-ex.js"></script>
 </html>
