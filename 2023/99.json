@@ -126,8 +126,6 @@
 	
 {"key":"至圣云(官）","name":"☁┃圣云┃云播","type":1,"api":"http://www.ttkx.site/api.php/provide/vod/"},
 	
-{"key":"樱花资源","name":"☁┃樱花┃云播","type":1,"api":"https://m3u8.apiyhzy.com/api.php/provide/vod/?ac=list"},
-	
 {"key":"快云资源","name":"☁┃快云┃云播","type":1,"api":"https://kuaiyun-api.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"filterable":0,"categories":["国产剧","香港剧","韩国剧","欧美剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片"]},
 	
 {"key":"jszy","name":"☁┃极速┃云播","type":1,"api":"https://jszyapi.com/api.php/provide/vod/from/jsm3u8","searchable":1,"changeable":1,"quickSearch":1,"filterable":1,"categories":["动作片","爱情片","喜剧片","科幻片","恐怖片","剧情片","战争片","记录片","灾难片","悬疑片","犯罪片","奇幻片","动画片","中国动漫","日本动漫","欧美动漫","内地剧","欧美剧","香港剧","台湾剧","韩剧","日剧","马泰剧","伦理片","体育赛事","大陆综艺","港台综艺","日韩综艺","欧美综艺"]},
@@ -157,10 +155,6 @@
 {"key":"农民影视","name":"👩🏽‍🌾┃农民┃直连","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"changeable":1,"ext":"./lib/nongmin.json"},
 
 {"key":"csp_Auete","name":"🦸‍♂️┃奥特┃直连","type":3,"api":"csp_Auete","searchable":1,"quickSearch":1,"filterable":1},
-
-{"key":"csp_zxzj","name":"🚦┃在线┃直连","type":3,"api":"csp_Zxzj","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.zxzj.pro/"},	
-
-{"key": "七新影视","name":"🎦七新┃直连","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"jar": "./lib/ttkx.jar;md5;abbb96e6409112492430dd6521d66df","ext":"./lib/七星影视"},	
 	
 {"key":"率率","name":"💥┃率率┃直连","type":1,"api":"https://suoniapi.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"changeable":1,"categories":["国产剧","韩剧","日剧","港剧","台剧","动作片","喜剧片","爱情片","科幻片","战争片","恐怖片","剧情片","国产动漫","日韩动漫","欧美动漫","大陆综艺","日韩综艺"]},
 
