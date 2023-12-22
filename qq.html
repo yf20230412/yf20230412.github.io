@@ -1,40 +1,73 @@
-<html><head><title>个人网站</title></head><body></br>
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./cat/js/bootstrap.min.css">
+    <link rel="stylesheet" href="./cat/js/animate.min.css">
+        <link rel="stylesheet" href="./cat/static/editor.css">
+        <title>猫影视TV配置编辑器</title>
+</head>
+<body>
+<div id="loading"
+     style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: #000; opacity: 0.5; z-index:9999;">
+    <center style="position: absolute; top: 50%; left: 50%; color:#fff">请稍候...</center>
+</div>
+<div class="container">
+    <div class="page-header">
+        <h3>
+            配置编辑器&nbsp;<small>本地记录依赖浏览器缓存，清空缓存将丢失记录。</small>
+	</h3></br>    
+<h4>
+	<span style="color:#FF0000"><strong>获取更多资源请关注微信公众号:风言锋语88</strong></span>
+ <h4>
+        
+    </div>
+    <div class="row">
+        <div class="btn-group btn-group-sm col-md-5" role="group">
+            <button type="button" class="btn btn-success" onclick="show_visual('999999')">可视</button>
+            <button type="button" class="btn btn-info" onclick="show_code('999999')">源码</button>
+            <button type="button" class="btn btn-warning" onclick="empty_diy('999999')">清空</button>
+            <button type="button" class="btn btn-primary" onclick="save_diy('999999')">保存</button>
+        </div>
+        <div class="col-md-5">
+            <label class="btn btn-primary btn-sm">
+                配置转图片 <input type="file" onchange="toImg(event)" style="display: none;">
+            </label>
 			
+             <label class="btn btn-primary btn-sm">
+                图片转代码 <input type="file" onchange="imgToStr(event)" style="display: none;">
+            </label>
 
-
-<h2><span style="color:#FF00FF">个人主页</span><h2>
-
-<h3><a href="https://a.yf1688.top/"target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;"rel="nofollow">https://a.yf1688.top/</a></h3>
-<p>
-
-<h5><span  style="color:#808080"><strong> 🍒人的一生，既不是想象中的那么好，也不是想象中的那么坏。每个人的背后都会有心酸，都会有无法言说的艰难。每个人都会有自己的泪要擦，都会有自己的路要走。<br/><br/> 🍒人生不可能一帆风顺，有成功，也有失败；有开心，也有失落。如果我们把生活中的这些起起落落看得太重，那么生活对于我们来说永远都不会坦然，永远都没有欢笑。<br/><br/> 🍒这个世界不大不小，刚好遇到你......</strong></span></h5>
-
-
-
-</p>
-
-<strong><br/></strong>
-<p>
-    <span style="color:#0374d5"><strong>风言锋语88 - 微信公众号平台</strong></span><strong>&nbsp;</strong><strong><span style="color:#FF0000">主要分享苹果、安卓、TV端的影视软件以及一些手机常用软件...</span></strong><strong><span style="color:#008000">每天更新海量资源</span></strong>
-</p>
-<p>
-    <strong><span style="font-size:18px;color:#ff0000"><br/></span></strong>
-</p>
-<p>
-    <span style="font-size:18px"><span style="color: rgb(17, 17, 17); font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Ubuntu, Cantarell, Oxygen, Roboto, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">👇👇蓝奏云资源下载👇👇</span><span style="color:#ff0000"><strong><br/></strong></span></span>
-</p>
-<p>
-    <a target="_blank" href="https://yf2023.lanzoum.com/b058ockej" style="color: rgb(255, 0, 0); text-decoration-line: none;"><span style="font-size:18px">点我下载</span></a><br/>
-</p>
-<p>
-    <span style="color:#ff0000;font-size:18px"><strong><br/></strong></span>
-</p>
-<p>
-    <span style="background-color: rgb(255, 255, 255); color: rgb(17, 17, 17); font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Ubuntu, Cantarell, Oxygen, Roboto, Helvetica, Arial, sans-serif; font-size: x-large;">👇👇👇</span><span style="font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Ubuntu, Cantarell, Oxygen, Roboto, Helvetica, Arial, sans-serif;"><span style="font-size:24px"><span style="color:#0000ff;background-color: rgb(255, 255, 0);">或者扫描下方二维码关注微信公众号</span><span style="color:#111111;background-color: rgb(255, 255, 255);">👇👇👇</span></span></span><br/>
-</p>
-<p>
-    <img src="https://slink.ltd/raw.githubusercontent.com/yf20230412/master/main/公众号.png"/>
-</p>
-<p>
-    <br/>
-</p></body></html>
+             <label class="btn btn-primary btn-sm">
+                上传加密文件进行解密 <input type="file" onchange="decrypt(event)" style="display: none;">
+            </label>			
+					
+        </div>
+    </div>
+    <h4></h4>
+    <form id="diy_cfg_jf_999999" style="display: none;"></form>
+    <textarea rows="30" class="form-control" id="diy_cfg_code_999999" style="margin-top: 10px; display: none;"></textarea>    
+</div>
+</body>
+<script src="./cat/js/jquery.min.js"></script>
+<script src="./cat/js/bootstrap.min.js"></script>
+<script src="./cat/js/bootstrap-notify.min.js"></script>
+<script src="./cat/js/bootbox.min.js"></script>
+<script src="./cat/static/index.js"></script>
+<script src="./cat/js/underscore-min.js"></script>
+<script src="./cat/js/jquery-ui.min.js"></script>
+<script src="./cat/js/core-min.js"></script>
+<script src="./cat/js/enc-base64-min.js"></script>
+<script src="./cat/js/cipher-core-min.js"></script>
+<script src="./cat/js/aes-min.js"></script>
+<script src="./cat/js/mode-ecb-min.js"></script>
+<script src="./cat/js/clipboard.min.js"></script>
+<script src="./cat/static/jsonform.js"></script>
+<script src="./cat/static/jsv.js"></script>
+<script src="./cat/static/editor.js"></script>
+<script src="./cat/static/jsonlint.js"></script>
+<script src="./cat/static/editor-ex.js"></script>
+</html>
