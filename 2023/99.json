@@ -1,6 +1,6 @@
 {
 
-"spider": "http://a.yf1688.top/2023/jar/naf_xbpq.jar;md5;c26a298f52963c1925514ba0b134a5f8",
+"spider": "http://yf1688.top/2023/jar/naf_xbpq.jar;md5;c26a298f52963c1925514ba0b134a5f8",
 	
 "wallpaper": "http://www.kf666888.cn/api/tvbox/img" , 
 	
@@ -10,7 +10,7 @@
     {
       "name": "live",
       "type": 0,
-      "url": "http://a.yf1688.top/2023/txt/612.txt",
+      "url": "./txt/612.txt",
       "playerType": 1,
       "ua": "okhttp/3.15",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
