@@ -1,6 +1,6 @@
 {
   	
-"spider":"http://yf1688.top/2023/jar/naf_xbpq.jar;md5;c26a298f52963c1925514ba0b134a5f8",
+"spider":"http://yf1688.top/2023/jar/naf_xbpq.jar",
 
 "wallpaper": "http://www.kf666888.cn/api/tvbox/img" , 
 
@@ -122,7 +122,7 @@
 	
 {"name":"Web聚合","type":3,"url":"Web"},
 
-{"name":"风","type":1,"url":"http://110.42.2.247:880/analysis/json/?uid=2449&my=acfgikquvzFGJRW459&url=","ext":{"flag":["qiyi","爱奇艺","奇艺","youku","优酷","letv","乐视","pptv","PPTV","sohu","xigua","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
+{"name":"风","type":1,"url":"https://jx.777jiexi.com/player/?url="},
 	
 {"name":"言","type": 0,"url": "https://jx.xmflv.com/?url=","ext": {"flag": ["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","imgo","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header": {"User-Agent": "okhttp/4.1.0"}}},
 	
@@ -130,7 +130,7 @@
 	
 {"name":"语","type":0,"url":"https://jx.m3u8.tv/jiexi/?url=","ext":{"flag":["qq","腾讯","qiyi","iqiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"]}},
 	
-{"name":"祝","type": 0,"url": "https://www.yemu.xyz/?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
+{"name":"祝","type": 0,"url": "https://okjx.cc/?url="},
 	
 {"name":"您","type":0,"url":"https://chaxun.truechat365.com/?url=","ext":{"flag":["qq","腾讯","qiyi","iqiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"]}},
 	
@@ -144,11 +144,11 @@
 	
 {"name":"！🎀","type":0,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://www.xyflv.cc/"}}},
 	
-{"name":"阖家","type":0,"url":"https://jx.yparse.com/index.php?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
+{"name":"阖家","type":0,"url":"https://jx.m3u8.pw/?url="},
 
-{"name":"幸福","url":"http://api.wpsseo.cn/?v=","type":0,"ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"Mozilla/5.0"}},"header":{"User-Agent":"Mozilla/5.0"}},
+{"name":"幸福","type":0,"url":"http://vip.26db.cn/g/?url="},
 
-{"name":"安康","type":0,"url":"https://jx.777jiexi.com/player/?url="},
+{"name":"安康","type":0,"url":"https://jx.zhanlangbu.com/?url="},
 	
 {"name":"🎀","type":0,"url":"https://jx.aidouer.net/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://jiejie.uk/"}}}
 			

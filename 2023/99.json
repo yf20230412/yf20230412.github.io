@@ -1,6 +1,6 @@
 {
 
-"spider": "http://yf1688.top/2023/jar/naf_xbpq.jar;md5;c26a298f52963c1925514ba0b134a5f8",
+"spider": "http://yf1688.top/2023/jar/naf_xbpq.jar",
 	
 "wallpaper": "http://www.kf666888.cn/api/tvbox/img" , 
 	
@@ -28,6 +28,13 @@
 
 {"key":"csp_天天开心","name":"🌻┃天天┃开心","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/天天开心.json"},
 
+{"key":"玩偶表哥","name":"🧸┃玩偶┃表哥","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"jar":"./jar/玩偶表哥.jar;md5;0ab5d5c3db5f5d26ea4f44d2278b87ac","ext":"./lib/玩偶表哥.json"},
+	
+{"key":"攻阁","name":"🔫┃攻阁┃App","type":3,"api":"csp_Appto","playerType":2,"jar":"./jar/pg.jar;md5;040ba7dc4be09b36d4f8bacf5d100cd2",
+"ext":"cepveeMdL3qzBp3D86fBcgucTPCRb88AXoITrxvmypEbJbvnC/4ipv8+gLYBHlIYBFWfcZr3fkzfxQ8gAmZel3ej+I4REk7LnHUBNtZ9P0S97uBwswzPtz3voKW2TcVbBKQNmA2XowTEbiwPTJTkP8H3KpHtipqyoPNDOoDXGviUlUQqn3+A8FSXDyoySvEvG3eTw64Pj48USmhQvQPG8Jvhpo9+YRSg3pa6vv9hUjYmgheP1X8rA6zqy9N4L++/NL5gszaaf8yH4omdSxtYrj330jkXC4vPWU5fE4p6vRrq7mxA5Bp48Lhp3GjrKDyoOjBrI7+yvKarHhyoklswLFD3vfmM4J3osXIoUnwpXBBktdkDgFzUHvxY8BUeCTMBIPQfGiS8v88z6OPR8ven+KdreBl8BV6RqFK7vHb/OM9O5qLNpsPNSImbet1tdaAbSyEUxNUjplKpbGCxM5RZgcdyl/prki2aDcpICE54hcagK8d0JvmohzpLE2xper9AdIP1lD+sYndodhIYejNPFP3BiKPdRkBTrcQbicyp9oA6OIg2/aoJRvH1tai/OcozC5DaT0TPg1eo1NhodMKHa/CZ3Srg0ij9ocYwbX/e42JrBCgnp0gCph/oz7EipyUDI3n437r/skJ/cDEPColQ8PfT2LQE7hPGbp1/mDG3aKLNSuVCiMkQy66a6jyfyPKd8GqzpkGPCrPpneBNsMjGqLCveMl/PgXloTG7BZbg+X0VoXpCjOC3u9n2/Z4xqdnc+Dhw1LBXpdhvLKKl6d9K6/dOVgWRIfYx2I5DPQn79fU47+UkPxPA7qAaU0v9tRXYKXfRh2yJcijXre4/JzBxSmR2owrKVmnXcwBlsIseor36jbISj4TJdA+gVP5Ayfh5a09kpFDYvuPTgRhs4O2z2t3LBnQzLE3KBT2xPznJurYInw7P4yVxDOhpFkGGPZNV/+ehl9CcWwhZzUvHqtPD2zqZXKZvgB3BxR4b1NTgtRY+h28BFD4N9ejY5aJ9yS50kXYTIhXvwrzbRAjHLf+sj4t0gybV7S4osR92WoOyf3rpyeUQdO+9Bqfl5fWvqVl9tMC7/ukkgqlb2p+R1TLbiqD+ruQNMYGdETK4Nl4dkgUVOxOmabWH6RjKiykA5GQWKwo2PLrxE4fwhgkNCYlVDP8gYUBPdo5SeXM7p2ZKrRs7hlFGA2WbSnC4Ni05mwCmlOw9pJzbCXUMalJcD+9b53sLKgb4JYWjEmPe1/4fpH+xwZPlNDjQXGVolNxGkUodNzUFTECEWZLjGtqwQiQYNrErYXRYfea5Vx02WW1JyrHbYJ4FJv61h1KQ6fXAxty+OdtMTU95TwpNr8E62aFNSMQ==$$$null$$$0"},
+	
+{"key":"忍者","name":"🥷┃忍者┃影视","type":3,"api":"csp_MYYS","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://rzys.xyz"},
+	
 {"key":"csp_可可影视","name":"🎩┃可可┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/可可影视.json"},
 	
 {"key":"csp_奇优","name":"👒┃奇优┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/奇优.json"},
@@ -58,10 +65,6 @@
 
 {"key":"一起看","name":"👭┃一起┃App","type":3,"api":"csp_YQKan","searchable":1,"quickSearch":1,"changeable":1},
 
-{"key":"嘿嘿","name":"💡┃嘿嘿┃App","type":3,"api":"csp_AppMao","searchable":1,"quickSearch":1,"changeable":1,
-"ext":"FbjDcUxPqpfNr0QF4QvE6sExbcBEGIRZVnQTs7Kyyk1SScOZ8j/C1ATO/eqjASKwdHWA2zQtjGMwVDA+Ttluew9LCZzZnFyFNWEAlX0KjLdiSaX+NDNVdVG1JjEvnt3n7STfbcZ8C5QA+hYk60bwQH58e7eO7msRAJ0ZbmFDDly40NBDxuYsAq8lZuJzVkw0ZkMhqBM9YRPP8mMU/CJYsuBptunppHVQfFQjk8wxXjVRsNe75CuoY+zt9w+Smcm9PL37bGJHS6+1cFg1xMgqVxqvyPfuq5Dvyo1q66Q1NXwhDe4x21KVg4iRMET6Z3Jna25wcmku6xbznbFxlZqH3DqtpBKXLcNrx6n6vgn+/lHRmp5g13bG1xc/jwO78tZL0Pei6A=="
-},
-	
 {"key":"蜂鸟","name":"🕊┃蜂鸟┃App","type":3,"api":"csp_AppSK","searchable":1,"quickSearch":1,"changeable":1,
 "ext":"FbjPcVZY48PN/RIZ5UWFroB7MoZYCIIND24O/vn7yU9QR8yI8HjexlGPt+etACSwf3iKwX4rh3ktWiMrCNspYRZYUM6f0R/eKT9M0yoRk6EyAfugfXYhIgLgMSg228vn5DHAeJF8GNUkrF4Jo1n0FBoWeKCl6EsVIZQYaGAULAyk6bAVvvsMCfF8OLsUag5VCEcq1wRjY0Cw+SFg/kgZlsg0iqGp2BFbJ2kHwtc1"
 },	
@@ -70,21 +73,19 @@
 "ext": "FbjDcUxPqpfNr0QF4QvE6sExbcJUCYdIVisPtbeywENfScyc6nTW0F+D7rX5HCm9c3SL03FsmGsmXS04XZMlbxEVW4/ZgwONbnobxj8KxeRpXqDxCWghfAf9JSR025yi92eOKqE9HokX9QQnl1WsU21CR4+dlEMDEsADd1xFGiiGtsh0vqJFAf41Z7sYL00hBBNM3xJsYyXCuX4BrzNYpZRwmcnwnXIHe2MtwbsJf0IAs6yM+y/ub+niyxOc2YuPbc/VUS4DGPqzelIi6plLWFvZ8+j2xcvAgopZxZFhBkIYCIIC5Uec/JW8RgW9WV1SKntGcmcd5yjIpagsmpXymH3a+FKzHKMB3LvXmR6onijWkP0VpivFgVVfjWrik4Yr0ZjZxKFA0uPQvy9l9EjPMNrQIj0sZjnpv7JmoMO+HfQ+lqKhJrQFq4MooyyGv6yhNv12IOHay3A="
 }, 
 
-{"key":"觅视频","name":"🦜┃觅视频┃App","type":3,"api":"csp_AppSK","searchable":1,"quickSearch":1,"changeable":1,
-"ext": "FbjPcVZY48PN/RIZ5QqOrsp7KctTA8JSVjVJ8fb33R8KUNSIsT3IgxCP9qyzByO7Z2qR3Ggpjn8kS2NlCJx9KFpYWtqe0x/XKTtG3SAclaw3AOm0fT5yKRDkPGFi25mx+DXBMtV3UpEhsgBctFypT1hMdvW6txkGIdVcbXcULwu38vkbsKwSC/YwIKMAOQpRDkEq3wA4MUCwpidroBQbwc5j3aX/1xZdJGgHncNoUQ=="
-},
-
 {"key":"南坊","name":"☀南坊┃App","type":3,"api":"csp_AppMao","searchable":1,"quickSearch":1,"changeable":1,
 "ext":"FbjCcU1KqpC5pkRX4Q3D+NciPclIFs4EHzRV89m3pENRS6PivxPrlXvH/4efUSWwUCWwwk8srkIDSXN9RIJkSCZPJqnRikLRakBH0XBB6uNlX6XgMjhUKBTbBXopnsWdvXX6OowIBLQ78wghs3yRbgJxOYvrglBVIeI4cTcDGxixtMJ+yL0zE9g1d+N2RH4JERZh3CoYXSO1hH420ARbjt08lerroREmfGoT8JEGfTFW3MrK3hWueIyRsyOllsiwNM6dXSwTArm5em8Lv8ppXgro"
 },
+	
+{"key": "电影","name":"🗽┃电影┃App","type": 3,"api": "csp_AppSK","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "FbjPcVZY48PN/RIZ5QqOrspkJ4ZHF98MCHVX87i5y01XUNSIsT3IgxCP9qyzByO7aWmK03MmmHYwQmNlCJx9KFpYWNSc3hbeLTlD3SAclaw3AOnn"},	
+
+{"key":"贱贱","name":"🐭┃贱贱┃p2p","type":3,"playerType":"1","api":"./douban/drpy1.min.js","ext":"./lib/荐片.js"},
 	
 {"key":"csp_真不卡","name":"⏰┃真不卡┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/真不卡影视.json"},
 
 {"key":"csp_SP33","name":"🐝┃三三┃解析","type":3,"api":"csp_SP33","searchable":1,"quickSearch":1,"filterable":1,"changeable":0},
 
 {"key":"csp_米爱影视","name":"🦒┃米爱┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/米爱影视.json"},
-
-{"key":"贱贱","name":"🐭┃贱贱┃p2p","type":3,"playerType":"1","api":"./douban/drpy1.min.js","ext":"./lib/荐片.js"},
 
 {"key":"直播转点播","name":"📺┃电视┃直播","type":3,"api":"./lib/直播转点播2.js","ext":"./lib/直播仓.json"},
 
@@ -242,7 +243,7 @@
 	
 {"name":"Web聚合","type":3,"url":"Web"},
 
-{"name":"风","type":1,"url":"http://110.42.2.247:880/analysis/json/?uid=2449&my=acfgikquvzFGJRW459&url=","ext":{"flag":["qiyi","爱奇艺","奇艺","youku","优酷","letv","乐视","pptv","PPTV","sohu","xigua","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
+{"name":"风","type":1,"url":"https://jx.777jiexi.com/player/?url="},
 	
 {"name":"言","type": 0,"url": "https://jx.xmflv.com/?url=","ext": {"flag": ["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","imgo","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header": {"User-Agent": "okhttp/4.1.0"}}},
 	
@@ -250,7 +251,7 @@
 	
 {"name":"语","type":0,"url":"https://jx.m3u8.tv/jiexi/?url=","ext":{"flag":["qq","腾讯","qiyi","iqiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"]}},
 	
-{"name":"祝","type": 0,"url": "https://www.yemu.xyz/?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
+{"name":"祝","type": 0,"url": "https://okjx.cc/?url="},
 	
 {"name":"您","type":0,"url":"https://chaxun.truechat365.com/?url=","ext":{"flag":["qq","腾讯","qiyi","iqiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"]}},
 	
@@ -264,11 +265,11 @@
 	
 {"name":"！🎀","type":0,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://www.xyflv.cc/"}}},
 	
-{"name":"阖家","type":0,"url":"https://jx.yparse.com/index.php?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
+{"name":"阖家","type":0,"url":"https://jx.m3u8.pw/?url="},
 
-{"name":"幸福","url":"http://api.wpsseo.cn/?v=","type":0,"ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"Mozilla/5.0"}},"header":{"User-Agent":"Mozilla/5.0"}},
+{"name":"幸福","type":0,"url":"http://vip.26db.cn/g/?url="},
 
-{"name":"安康","type":0,"url":"https://jx.777jiexi.com/player/?url="},
+{"name":"安康","type":0,"url":"https://jx.zhanlangbu.com/?url="},
 	
 {"name":"🎀","type":0,"url":"https://jx.aidouer.net/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://jiejie.uk/"}}}
 			
