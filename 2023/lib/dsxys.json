@@ -8,25 +8,19 @@
     
     "简介":"公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇",
 		
-    "数组":"<a&&module-poster-item-info\">",
+    "数组":"<a&&class=\"module-poster-item-title",
 
 	"标题":"title=\"&&\"",	
 		
-    "副标题":"class=\"module-item-note\">&&</div>",
+    "副标题":"module-item-note\">&&</div>",
 		
     "图片":"data-original=\"&&\"",
 		
 	"链接":"href=\"&&\"",	
 
-    "线路数组":"class=\"module-tab-item&&</div>[不包含:海外]",
+    "线路数组":"module-tab-item tab-item&&</small>",
     
-    "线路标题":"🌺风言锋语88🌺+\"><span>&&</small>[替换</span><small>>>线路共]+集",
-
-	"播放数组":"class=\"module-play-list-content&&</div>",	
-
-    "播放列表":"<a&&</a>",	
-		
-	"播放标题":"<span>&&</span>",
+    "线路标题":"🌺风言锋语88🌺+<span>&&</span>",  
 
     "分类url":"https://dsxys.pro/vodshow/{cateId}-{area}-{by}-{calss}-{lang}-{letter}---{catepg}---{year}.html;;akx",
 		

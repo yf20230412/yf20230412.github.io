@@ -35,6 +35,10 @@
 	
 {"key":"忍者","name":"🥷┃忍者┃影视","type":3,"api":"csp_MYYS","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://rzys.xyz"},
 
+{"key": "996影视","name": "☯️┃996┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "./lib/996影视.json"}, 
+
+{"key": "圣城影视","name": "🌉┃圣城┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "./lib/圣城影视.json"}, 
+	
 {"key": "墨鸦影视","name":"🦜┃墨鸦┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "./lib/墨鸦影视.json"},
 	
 {"key": "爱看影视","name": "💞┃爱看┃影视","type": 3,"playerType": "2","api": "./douban/drpy1.min.js","ext": "./lib/爱看影视.json"}, 
