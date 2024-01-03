@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>小鱼IPTV直播源获取工具</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #input-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #input-field {
+      width: 200px;
+      height: 50px;
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #submit-button {
+      width: 100px;
+      height: 50px;
+      padding: 10px;
+      margin-left: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #337ab7;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    #output-container {
+      position: relative;
+      display: none;
+    }
+
+    #output {
+      width: calc(100% - 40px);
+      max-height: calc(100vh - 210px);
+      padding: 10px;
+      margin-top: 20px;
+      margin-left: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow-y: auto;
+      word-wrap: break-word;
+    }
+
+    #copy-button {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      width: 80px;
+      height: 30px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #337ab7;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+    }
+
+    #copy-button:hover {
+      background-color: #23527c;
+    }
+
+    #copy-success {
+      position: absolute;
+      top: 10px;
+      right: 100px;
+      color: green;
+      display: none;
+    }
+
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    #loading-text {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    #loading-image {
+      width: 200px;
+      height: 100px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #input-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 50px;
+        margin-right: 40px;
+      }
+
+      #input-field {
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+      }
+
+      #submit-button {
+        margin-top: 10px;
+      }
+
+      #output {
+        max-height: calc(100vh - 280px);
+      }
+    }
+</style>
+</head>
+<body>
+  <h1>IPTV直播源获取</h1>
+  <div id="input-container">
+    <input type="text" id="input-field" placeholder="请输入你要获取的直播源名！ 比如：cctv6" oninput="toggleInputBorder()">
+    <button id="submit-button" onclick="getIPTV()">开始获取</button>
+  </div>
+  <div id="loading">
+    <div id="loading-text">正在努力获取中...</div>
+    <img id="loading-image" src="https://img.soogif.com/74xHrCLAB7FMZJgDtAmnjN0NnqrR26lk.gif" alt="">
+  </div>
+  <div id="output-container">
+    <div id="output"></div>
+    <button id="copy-button" onclick="copyToClipboard()">复制</button>
+    <span id="copy-success">已复制</span>
+  </div>
+
+  <script>
+    function getIPTV() {
+      var input = document.getElementById("input-field").value;
+
+      if (input === "") {
+        document.getElementById("input-field").style.border = "none";
+        return;
+      }
+
+      toggleLoading(true);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "get_iptv.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send("url=" + input);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          toggleLoading(false);
+          var response = xhr.responseText;
+          document.getElementById("output").innerHTML = response;
+          document.getElementById("output-container").style.display = "block";
+          document.getElementById("copy-button").style.display = "inline";
+        }
+      };
+    }
+
+    function copyToClipboard() {
+      var output = document.getElementById("output").innerText;
+
+      var dummyTextarea = document.createElement("textarea");
+      document.body.appendChild(dummyTextarea);
+      dummyTextarea.value = output;
+      dummyTextarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummyTextarea);
+
+      var copyButton = document.getElementById("copy-button");
+      copyButton.innerText = "已复制";
+      copyButton.disabled = true;
+
+      setTimeout(function() {
+        copyButton.innerText = "复制";
+        copyButton.disabled = false;
+      }, 2000);
+    }
+
+    function toggleInputBorder() {
+      var inputField = document.getElementById("input-field");
+      if (inputField.value === "") {
+        inputField.style.border = "1px solid #ccc";
+      } else {
+        inputField.style.border = "1px solid #337ab7";
+      }
+    }
+
+    function toggleLoading(show) {
+      var loading = document.getElementById("loading");
+      if (show) {
+        loading.style.display = "block";
+      } else {
+        loading.style.display = "none";
+      }
+    }
+</script>
+</body>
+</html>
