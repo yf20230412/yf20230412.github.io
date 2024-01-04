@@ -1,0 +1,13 @@
+<?php
+$id=rand(1,9);
+$image[1]='static/images/1.jpg';
+$image[2]='static/images/2.jpg';
+$image[3]='static/images/3.jpg';
+$image[4]='static/images/4.jpg';
+$image[5]='static/images/5.jpg';
+$image[6]='static/images/6.jpg';
+$image[7]='static/images/7.jpg';
+$image[8]='static/images/8.jpg';
+$image[9]='static/images/9.jpg';
+header("location:$image[$id]");
+?>
