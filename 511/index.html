@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="static/css/style.css" type="text/css">
 	<link rel="stylesheet" href="static/css/fontawesome-free5.13.0.css" type="text/css">
 	<script src="static/js/he-simple-common.js"></script>
+	
 	<style>
 		.tcomcom img {
 			border-radius: 10px;
@@ -62,6 +63,7 @@
 			<div id="show_date">2024年1月4日 星期四</div>
 		</div>
 		<p <span style="color:#FF0000;font-size:1.5em" class="content">关注微信公众号：《风言锋语88》获取更多资源...</span></p>
+		<div align="center"><a href="mailto:yufeng1688778@163.com">反馈邮箱</a></div>
 		<!--搜索开始-->
 		<div id="search" class="s-search s-current">
 			<div id="search-list" class="hide-type-list">
@@ -384,10 +386,14 @@
 
 		<div class="mt-5 mb-3 footer text-muted text-center">
 
-			<p><br>风言锋语88导航大全</p>
+		<h3>	<p><br>版权所有&copy;《风言锋语88》导航大全&reg;</p></h3>
 		</div>
 
-
+	<div class="footer">
+		<div class="center-footer">
+		 <p align="center" class="banquan">鄂ICP备000000号 Copyright © 2022 - 2024 小鱼&《风言锋语88》</p> </div>
+</div>
+	
 	</div>
 
 	<div style="display: none">
@@ -401,8 +407,67 @@
 			})();
 		</script>
 	</div>
-	<embed  height="0" width="0" src="audio/C6.mp3"></embed>
+	
+	
+<!-- 1.使用HTML embed标签。其中，src属性指定音频文件的路径，autostart属性用于自动播放音频，loop属性用于循环播放音频，width和height属性用于设置embed标签的宽度和高度。 -->
 
+<!--<embed  height="126" width="53" src="https://download.kstore.space/download/4645/Tvbox/myks/audio/C6.mp3" autostart="true" loop="true"></embed> -->
+
+<!-- 2.使用HTML音频标签 <audio src=audio/music.mp3 autoplay loop></audio>  -->
+	
+<!--带有控制按钮的音乐播放器
+除了自动播放和循环播放外，我们还可以添加控制按钮，来控制音乐的播放和停止。下面是一个带有控制按钮的音乐播放器的示例代码：
+
+<audio id="musicPlayer" src="https://download.kstore.space/download/4645/Tvbox/myks/audio/C6.mp3"></audio>
+
+<button onclick="playMusic()">播放</button>
+<button onclick="pauseMusic()">暂停</button>
+
+
+
+<script>
+  var musicPlayer = document.getElementById('musicPlayer');
+
+  function playMusic() {
+    musicPlayer.play();
+  }
+
+  function pauseMusic() {
+    musicPlayer.pause();
+  }
+</script>
+
+
+在上面的代码中，我们首先创建了一个带有id属性的<audio>元素，然后使用JavaScript选择该元素，并定义了两个函数playMusic和pauseMusic来控制音乐的播放和暂停。最后，使用两个按钮来调用这两个函数，实现控制音乐播放的功能。
+
+// 永久循环播放音乐
+<audio height="0" width="0" src=https://download.kstore.space/download/4645/Tvbox/myks/audio/C6.mp3 autoplay loop></audio> -->
+
+
+<!--随机播放音乐-->
+<script Language="JavaScript">
+　　myok=new Array(15);
+　　myok[0]="https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'";
+　　myok[1]="https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3'";
+　　myok[2]="https://download.kstore.space/download/4645/Tvbox/myks/audio/离别开出花.mp3'";
+　　myok[3]="https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3'";
+　　myok[4]="https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3'";
+　　myok[5]="https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3'";
+　　myok[6]="https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3'";
+　　myok[7]="https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3'";
+　　myok[8]="https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3'";
+　　myok[9]="https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3'";
+　　myok[10]="https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3'";
+　　myok[11]="https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3'";
+　　myok[12]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3'";
+　　myok[13]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3'";
+　　myok[14]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3'";
+　　index = Math.floor(Math.random() * myok.length);
+　　document.write("<EMBED id=M src='"+myok[index]+" width=0 height=0 autostart=true loop=true type=audio/mpeg>");
+</Script> 
+<!--完--> 
+ 
+ 
 </body>
 
 </html>
