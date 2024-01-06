@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>风言锋语88——tvbox源</title>
+    <title>小鱼接口导航</title>
     <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
     <style>
         @media screen and (min-width:1200px){
@@ -43,17 +43,17 @@
 </head>
 <body>
   <center>
-    <h1><span style="color:#FF00FF">电视盒子源表</span></h1><br>
+    <h1><span style="color:#FF00FF">TvBox接口导航</span></h1><br>
 	
    <span style="color:#f91ab3;font-size:1.5em">点</span><span style="color:#e4261;font-size:2em">击</span><span style="color:#568efe;font-size:1em">复</span><span style="color:#d2332b;font-size:1.5em">制</span>
   </center>
-    
+  
     <ul id="ul"></ul>
   <center>
      
 	<a href="https://yf2023.lanzoum.com/b058ockej" target="_blank" <span style="color:#34cbf7;font-size:1.5em">盒</span><span style="color:#f2b3a1;font-size:3em">子</span><span style="color:#932723;font-size:2em">传</span><span style="color:#c1cc83;font-size:3.5em">送</span><span style="color:#9cb22;font-size:2.5em">门</span></a>
 	<br>
-	<h2><a href="mailto:yufeng1688778@163.com"target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;"rel="nofollow">如果您有更多好看的源，可以点击我投稿</a></h2>
+	<h2><a href="mailto:yufeng1688778@163.com"target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;"rel="nofollow">如果您有更多好看的源，可以点击我投稿</a></h2><br>
 	
 <!--版权-->
 
@@ -65,8 +65,9 @@
 <!-- 完-->		
   <strong><br></strong>
   </center>
+  <!--
 <!--随机播放音乐-->
-<script Language="JavaScript">
+<!--<script Language="JavaScript">
 　　myok=new Array(15);
 　　myok[0]="https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'";
 　　myok[1]="https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3'";
@@ -85,8 +86,20 @@
 　　myok[14]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3'";
 　　index = Math.floor(Math.random() * myok.length);
 　　document.write("<EMBED id=M src='"+myok[index]+" width=0 height=0 autostart=true loop=true type=audio/mpeg>");
-</Script> 
+</Script>
 <!--完--> 
+
+<!--在线播放器API-->
+<!--备用 
+肥猫的api
+<script src="https://myhkw.cn/api/player/167013822195" id="myhk" key="167013822195" m="1"></script>
+
+//自己的api,https://myhkw.cn/-->
+<script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script>
+
+<!--雪花API,https://api.vvhan.com/-->
+<script src='https://api.vvhan.com/api/yinghua'></script>
+ 
 </body>
 <script>
 function Toast(msg, duration) {
@@ -146,7 +159,7 @@ const list = [
   {color:"#808000",url:"",name:"以下是单仓"},
 
     {
-        "url": "http://饭太硬.ml/tv",
+        "url": "http://饭太硬.top/tv",
         "name": "🚀饭太硬线路",
         "color": "#91ad70"
     },
@@ -409,7 +422,7 @@ function copy(that){
   $(that).children("input").attr("type","text").select();
   document.execCommand("Copy"); // 执行浏览器复制命令
   $(that).children("input").attr("type","hidden");
-  Toast("复制成功",500);
+  Toast("小鱼提醒：复制成功，请前往tvbox接口粘贴食用",500);
 }
 </script>
 </html>

@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TVBox接口一键解密</title>
+    <!-- 引入Bootstrap样式库 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            margin-top: 40px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .loading {
+            display: none;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">TVBox在线接口一键解密</h1>
+        <div class="input-group mb-3">    
+
+       <input type="text" class="form-control" id="url" value="" placeholder="更多有趣网页，请访问大聪明的主页" list="yyds"/>
+	   
+	  <button onclick="document.getElementById('url').value=''">删除</button>
+	  
+        <datalist id="yyds">
+
+            <option value="https://download.kstore.space/download/4645/Tvbox/myks/99.png"/>小鱼</option>
+            <option value="http://饭太硬.top/tv"/>饭太硬</option>
+            <option value="http://肥猫.live"/>肥猫</option>
+            <option value="http://xhww.fun:63/小米/DEMO.json"/>小米</option>
+			
+        </datalist>
+
+ 
+
+	
+  <!--wan-->
+
+            <button class="btn btn-secondary" type="button" onclick="crawl()">一键解密</button>
+        </div>
+       
+        <div class="text-center loading" id="loading">
+          <div class="spinner-border" role="status">
+            卍<span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+       
+        <textarea class="form-control" id="result" cols="80" rows="20" readonly></textarea>
+        <div class="text-center mt-3">
+             <button class="btn btn-warning" onclick="copyText()">复制</button>
+            <button class="btn btn-danger" onclick="downloadJar()">下载Jar</button>
+            <a href="http://yf1688.top"  target="_blank"class="btn btn-primary">小鱼主页</a>
+            <a href="https://yf8899.github.io/" target="_blank"class="btn btn-success">小鱼导航</a>
+			<a href="https://yf9988.github.io/box" target="_blank"class="btn btn-info">TvBox接口</a>
+        </div>
+    </div>
+    <!-- 引入Bootstrap JS库 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/js/bootstrap.min.js"></script>
+    <script>
+        function crawl() {
+            var xhr = new XMLHttpRequest();
+            var url = document.getElementById('url').value;
+            var resultBox = document.getElementById('result');
+            xhr.open("GET", "crawler.php?url=" + encodeURIComponent(url), true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    resultBox.value = xhr.responseText;
+                    document.getElementById('loading').style.display = 'none';
+                }
+            };
+            resultBox.value = '';
+            document.getElementById('loading').style.display = 'block';
+            xhr.send();
+        }
+        function downloadJar() {
+            var resultBox = document.getElementById('result');
+            var url = resultBox.value.match(/"spider":"(.*?)"/)[1];
+            if (url.includes(';md5;')) {
+                url = url.split(';md5;')[0];
+            }
+            fetch(url, {headers: {'User-Agent': 'okhttp'}})
+            .then(function(response) {
+                return response.blob();
+            })
+            .then(function(blob) {
+                var downloadUrl = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = downloadUrl;
+                a.download = 'file.jar';
+                a.click();
+                URL.revokeObjectURL(downloadUrl);
+                document.getElementById('loading').style.display = 'none';
+            });
+            document.getElementById('loading').style.display = 'block';
+        }
+    
+        function copyText() {
+          var copyText = document.getElementById("result");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          alert("小鱼提醒：复制成功！");
+        }
+
+
+    </script>
+</body>
+</html>
