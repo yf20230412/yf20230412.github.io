@@ -7,55 +7,85 @@
     <title>TVBox接口一键解密</title>
     <!-- 引入Bootstrap样式库 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/css/bootstrap.min.css">
-    <style>
-        body {
-            margin-top: 40px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        .input-group {
-            margin-bottom: 20px;
-        }
-        .loading {
-            display: none;
-            margin-top: 20px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                max-width: 100%;
-            }
-        }
-    </style>
+
+<style>
+*:focus {outline: none; }
+body{margin-top:40px;}.container {max-width: 1000px;margin: 0 auto;padding: 0 15px;}.input-group {margin-bottom: 20px;}.loading {display: none;margin-top: 0px;}@media (max-width: 768px) {.container {max-width: 100%;}}
+#按钮{height: 45px;}
+#按钮 .input{border: 1px solid #990099;height: 100%;}
+#按钮 .input .clear{width: 50px;height: 85px;line-height: 30px;text-align: center;cursor: pointer;padding-right: 15px;visibility: hidden;opacity: 1;color: red;}
+#按钮 input[type=text]{height:86%;border:0px;width: 737px;}
+#按钮 div{float: left;}
+#按钮>button{width: 100px;height: 45px;background: #FF0000;color: #fff;border: none;}
+</style>	
+
+
+<style type="text/css">
+.tb960x90 {display:none!important;display:none}
+</style>
+
+
 </head>
+
+
 <body>
-    <div class="container">
-        <h1 class="text-center mb-5">TVBox在线接口一键解密</h1>
-        <div class="input-group mb-3">    
 
-       <input type="text" class="form-control" id="url" value="" placeholder="更多有趣网页，请访问大聪明的主页" list="yyds"/>
-	   
-	  <button onclick="document.getElementById('url').value=''">删除</button>
-	  
-        <datalist id="yyds">
-
-            <option value="https://download.kstore.space/download/4645/Tvbox/myks/99.png"/>🐟小鱼</option>
-            <option value="http://饭太硬.top/tv"/>🍚饭太硬</option>
-            <option value="http://肥猫.live"/>🐟肥猫</option>
-            <option value="http://xhww.fun:63/小米/DEMO.json"/>🌾小米</option>
-			
-        </datalist>
-
+    <div class="container" >
+        <h3 class="text-center mb-1"><b>TVBox接口解密</b></h3><br>	
  
+  <div id="按钮">
+             <div class="input">
+                 <input type="text" id="url" value="" placeholder="可下拉选择,也可点击下方‘TvBox按钮’跳转选取接口" list="myDataList"><span class="clear" id="delete">X</span>
+				 
+                   <script type="text/javascript">
+                            document.getElementById("url").addEventListener("keyup", function() {
+                            if (this.value.length > 0) {
+                            document.getElementById("delete").style.visibility = "visible";
+                            document.getElementById("delete").onclick = function() {
+                            document.getElementById("url").value = "";
+                            }
+                            } else {
+                            document.getElementById("delete").style.visibility = "hidden";
+                            }
+                            });
+                   </script>				 
+             </div>
+  <button onclick="copyInput()">复制接口</button><button style="width:100px;height:45px;background: #77c03a;color: #fff000;border: none;” class="btn btn-secondary"  onclick="crawl()">一键解密</button> 
+ 
+      <datalist  id="myDataList">
+  <option value="https://download.kstore.space/download/4645/Tvbox/myks/99.png"/>🐟小鱼</option>
+  <option value="http://饭太硬.top/tv"/>🚀饭太硬</option>
+  <option value="http://肥猫.live"/>🚀肥猫</option>
+  <option value="http://xhww.fun:63/小米/DEMO.json"/>🚀小米</option>	
+  <option value="https://fm.t4tv.hz.cz/json/config.json"/>🚀蜂蜜线路</option>	
+  <option value="http://rihou.cc:88/荷城茶秀"/>🚀荷城茶秀</option>	
+  <option value="http://rihou.cc:55/天天开心"/>🚀天天开心</option>	
+  <option value="https://mirror.ghproxy.com/https://raw.githubusercontent.com/okcaptain/okjar/rm/ok.json"/>🚀ok线路"</option>	
+  <option value="http://xiaohu.xzam.cn/xiaohu"/>🚀小胡线路</option>	
+  <option value="https://cloud.lxweb.cn/f/2X8QcG/xdcj.json"/>🚀心动采集</option>	
+  <option value="https://pastebin.com/raw/5NHaxyGR"/>🚀道长线路</option>	
+  <option value="https://tvbox.cainisi.cf"/>🚀菜妮丝线路</option>	
+  <option value="http://home.jundie.top:81/top98.json"/>🚀俊佬线路</option>	
+  <option value="https://weixine.net/ysc.json"/>🚀运输车</option>
+  <option value="https://download.kstore.space/download/2863/01.txt"/>🐹潇洒线路</option>
+  <option value="https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json"/>🐹南风线路</option>
+  <option value="http://tv.nxog.top/m/111.php?ou=%E6%AC%A7%E6%AD%8C&mz=index2&xl=&jar=index2"/>🐹欧歌线路</option>
+  <option value="http://52bsj.vip:98/wuai"/>🐹吾爱线路</option>
+  <option value="https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8"/>💎不良帅线路</option>
+  <option value="https://agit.ai/n/b/raw/branch/a/b/c.json"/>💎agit/abc线路</option>
+  <option value="https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json"/>💎zzz1线路</option>
+  <option value="https://yyds.lltv8.top/yyds.json"/>💎猎狼线路</option>
+  <option value="http://yydf.540734621.xyz/yydf/yydf/bd/yydf.json"/>🏄️业余线路</option>
+  <option value="https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"/>🏄️高天流云</option>
+  <option value="https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json"/>🏄️猫爪线路</option>
+  </datalist>   
+ 
+			 
 
-	
-  <!--wan-->
+</div><br>
 
-            <button class="btn btn-secondary" type="button" onclick="crawl()">一键解密</button>
-        </div>
-       
+
+	  <!--wan-->	
         <div class="text-center loading" id="loading">
           <div class="spinner-border" role="status">
             鱼<span class="visually-hidden">Loading...</span>
@@ -64,7 +94,7 @@
        
         <textarea class="form-control" id="result" cols="80" rows="20" readonly></textarea>
         <div class="text-center mt-3">
-             <button class="btn btn-warning" onclick="copyText()">复制</button>
+             <button class="btn btn-warning" onclick="copyText()">复制内容</button>
             <button class="btn btn-danger" onclick="downloadJar()">下载Jar</button>
             <a href="http://yf1688.top"  target="_blank"class="btn btn-primary">小鱼主页</a>
             <a href="https://yf8899.github.io/" target="_blank"class="btn btn-success">小鱼导航</a>
@@ -111,15 +141,47 @@
             document.getElementById('loading').style.display = 'block';
         }
     
-        function copyText() {
+        function copyInput(){
+            var input = document.getElementById("url");
+            
+            if (navigator.userAgent.match(/ipad|iphone/i)) {
+                window.getSelection().removeAllRanges();
+                var range = document.createRange();
+                range.selectNodeContents(input);
+                window.getSelection().addRange(range);
+                input.setSelectionRange(0, 999999); /* For mobile devices */
+            } else {
+                input.select();
+            }
+            
+            try{
+                var successful = document.execCommand('copy');
+                
+                if(!successful){
+                    alert('无法复制到剪贴板！');
+                }else{
+                    alert('接口复制成功！');
+                }
+            }catch(err){
+                console.error('发生错误', err);
+            }
+        }	
+		
+	        function copyText() {
           var copyText = document.getElementById("result");
           copyText.select();
           copyText.setSelectionRange(0, 99999);
           document.execCommand("copy");
-          alert("小鱼提醒：复制成功！");
+          alert("复制失败，请确认是否已成功解密！");
+        }	
+
+function downloadJar() {
+          var downloadJar = document.getElementById("result");
+          downloadJar.select();
+          downloadJar.setSelectionRange(0,0);
+          document.execCommand("download");
+          alert("请选择线路再下载！");
         }
-
-
     </script><br><br><br><br><br>
 	
 <!--版权-->
