@@ -3,54 +3,94 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.1, maximum-scale=2.0, user-scalable=yes\">
     <title>TVBox接口一键解密</title>
     <!-- 引入Bootstrap样式库 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/css/bootstrap.min.css">
 
 <style>
 *:focus {outline: none; }
-body{margin-top:40px;}.container {max-width: 1000px;margin: 0 auto;padding: 0 15px;}.input-group {margin-bottom: 20px;}.loading {display: none;margin-top: 0px;}@media (max-width: 768px) {.container {max-width: 100%;}}
-#按钮{height: 45px;}
-#按钮 .input{border: 1px solid #990099;height: 100%;}
-#按钮 .input .clear{width: 50px;height: 85px;line-height: 30px;text-align: center;cursor: pointer;padding-right: 15px;visibility: hidden;opacity: 1;color: red;}
-#按钮 input[type=text]{height:86%;border:0px;width: 737px;}
-#按钮 div{float: left;}
-#按钮>button{width: 100px;height: 45px;background: #FF0000;color: #fff;border: none;}
-</style>	
-
-
-<style type="text/css">
+body{
+   margin-top:40px;
+   }
+   .container {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 0 15px;
+   }
+   .input-group {
+   margin-bottom: 20px;
+   }
+   .loading {
+   display: none;
+   margin-top: 20px;
+   }
+   @media (max-width: 768px) {
+   .container {
+   max-width: 100%;
+      }
+   }
+ </style>
+ <style type="text/css">
 .tb960x90 {display:none!important;display:none}
 </style>
+
+ <!--wan	
+<style>	 
+#按钮{height: 45px;}
+#按钮 .input{border: 1px solid #990099;height: 100%;}
+#按钮 .input .clear{ margin-bottom: 25px;color: red;}
+#按钮 input[type=text]{height:86%;border:0px;width: 535px;}
+#按钮 div{float: left;}
+#按钮>button{margin-bottom: 160px;background: #FF0000;color: #fff000;border: none;}
+</style>	
+
+ <a class="clear" id="delete" title="清除" ><img src="https://d.kstore.space/download/4645/Tvbox/myks/jiemi/img/delete-black.png"/></a>
+-->
+
+ <!-- 删除按钮 	
+
+<a class="clear" id="delete" title="清除"><img src="https://d.kstore.space/download/4645/Tvbox/myks/jiemi/img/delete-black.png"/></a>
+				 
+<style>
+.按钮{text-align: center;}
+.clear{width: 30px;height: 30px;position: absolute;right: 27%; padding-top: 5px;opacity: 0.6;}
+.clear:hover{opacity: 1;}
+
+</style>
+
+ 
+                <script type="text/javascript">
+                            document.getElementById("url").addEventListener("keyup", function() {
+                            if (this.value.length > 0) {
+                            document.getElementById("delete").style.visibility = "visible";
+                            document.getElementById("delete").onclick = function() {
+                            document.getElementById("url").value = "";
+							alert("确定要删除");
+                            }
+                            } else {
+                            document.getElementById("delete").style.visibility = "hidden";
+                            }
+                            });
+                   </script> 
+-->	
 
 
 </head>
 
 
 <body>
-
     <div class="container" >
         <h3 class="text-center mb-1"><b>TVBox接口解密</b></h3><br>	
  
   <div id="按钮">
-             <div class="input">
-                 <input type="text" id="url" value="" placeholder="可下拉选择,也可点击下方‘TvBox按钮’跳转选取接口" list="myDataList"><span class="clear" id="delete">X</span>
+             <div class="input-group">
+                 <input type="search" class="form-control" id="url" value="" placeholder="可下拉选择,也可点击下方‘TvBox按钮’跳转选取接口" list="myDataList" autofocus>
 				 
-                   <script type="text/javascript">
-                            document.getElementById("url").addEventListener("keyup", function() {
-                            if (this.value.length > 0) {
-                            document.getElementById("delete").style.visibility = "visible";
-                            document.getElementById("delete").onclick = function() {
-                            document.getElementById("url").value = "";
-                            }
-                            } else {
-                            document.getElementById("delete").style.visibility = "hidden";
-                            }
-                            });
-                   </script>				 
+				   <button class="btn btn-success" type="button" onclick="copyInput()">复制接口</button>
+				   
+				   <button class="btn btn-primary" type="button" onclick="crawl()">一键解密</button> 	   
              </div>
-  <button onclick="copyInput()">复制接口</button><button style="width:100px;height:45px;background: #77c03a;color: #fff000;border: none;” class="btn btn-secondary"  onclick="crawl()">一键解密</button> 
  
       <datalist  id="myDataList">
   <option value="https://download.kstore.space/download/4645/Tvbox/myks/99.png"/>🐟小鱼</option>
@@ -93,12 +133,11 @@ body{margin-top:40px;}.container {max-width: 1000px;margin: 0 auto;padding: 0 15
         </div>
        
         <textarea class="form-control" id="result" cols="80" rows="20" readonly></textarea>
-        <div class="text-center mt-3">
+        <div class="text-center mt-2">
              <button class="btn btn-warning" onclick="copyText()">复制内容</button>
             <button class="btn btn-danger" onclick="downloadJar()">下载Jar</button>
             <a href="http://yf1688.top"  target="_blank"class="btn btn-primary">小鱼主页</a>
-            <a href="https://yf8899.github.io/" target="_blank"class="btn btn-success">小鱼导航</a>
-			<a href="https://yf9988.github.io/box" target="_blank"class="btn btn-info">TvBox接口</a>
+			<a href="https://yf9988.github.io/box" target="_blank"class="btn btn-success">TvBox接口</a>
         </div>
     </div>
     <!-- 引入Bootstrap JS库 -->
@@ -187,7 +226,7 @@ function downloadJar() {
 <!--版权-->
 	<div class="footer">
 		<div class="center-footer">
-		 <p align="center" class="banquan">鄂ICP备000000号 Copyright © 2022 - 2024 小鱼&《风言锋语88》</p> </div>
+		 <p align="center" class="banquan">鄂ICP备000000号 Copyright © 2023-至今《风言锋语88》</p> </div>
 		 <!--网站运行时间--> 
 
 <div align="center">
@@ -210,6 +249,9 @@ span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font sty
 }
 show_date_time();</script>
 </div> 
+<div align="center"">
+	      <a target="_blank" href="https://mp.weixin.qq.com/s/zFyqLSwj5FXkMiupb5XdDQ" title="微信公众号：" alt="微信公众号：">微信公众号：<mark>风言锋语88</mark></a>	
+	    </div>
 </div>
 
 <!--在线播放器API-->
@@ -218,8 +260,11 @@ show_date_time();</script>
 肥猫的api
 <script src="https://myhkw.cn/api/player/167013822195" id="myhk" key="167013822195" m="1"></script>
 
-//自己的api,https://myhkw.cn/-->  
+//自己的api,https://myhkw.cn/ --> 
+
 <script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script> 
+
+
 
 <!--雪花API,https://api.vvhan.com/-->
 
