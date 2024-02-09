@@ -4,13 +4,9 @@
 	
 "urls":[
 	
-{"url":"https://download.kstore.space/download/4645/Tvbox/myks/99.bmp","name":"🐟小鱼|KS影视🐟"},
+{"url":"https://download.kstore.space/download/4645/Tvbox/myks/99.png","name":"🐟小鱼|KS影视🐟"},
 	
-{"url":"https://download.kstore.space/download/4645/Tvbox/myks/88.bmp","name":"🔥小鱼|KS动漫🔥"},	
-	
-{"url":"","name":"--👇网络群友在线仓👇--"},
-
-{"url":"https://download.kstore.space/download/4645/Tvbox/myks/99.png","name":"🐟小鱼|KS影视🐟"},	
+{"url":"https://download.kstore.space/download/4645/Tvbox/myks/88.png","name":"🔥小鱼|KS动漫🔥"},	
 	
 {"url":"http://饭太硬.top/tv","name":"🍚小鱼|饭太坚硬🍚"},
 
@@ -34,7 +30,16 @@
 
 {"url":"https://jihulab.com/2088/box/raw/main/99.bmp","name":"🐟小鱼|风言锋语88🐟"},
 
-{"url":"http://itvbox.cc/tvbox/云星日记/1.m3u8","name":"🌤小鱼|云星日记🌤"}
+{"url":"http://itvbox.cc/tvbox/云星日记/1.m3u8","name":"🌤小鱼|云星日记🌤"},
+
+{"url":"","name":"--👇风言锋语本地仓👇--"},
+
+{"url":"file://风言锋语88/风言锋语/99.json","name":"🐟file专用|影视频道💚"},
+
+{"url":"clan://localhost/风言锋语88/风言锋语/99.json","name":"🐟clan专用|影视频道💚"},
+
+{"url":"http://127.0.0.1:9978/file//风言锋语88/风言锋语/99.json","name":"🐟小鱼本地|影视频道💚"}
+
 
 ]
 
