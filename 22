@@ -5,6 +5,8 @@
 "urls":[
 	
 {"url":"https://download.kstore.space/download/4645/99.json","name":"🐟小鱼在线┃KS影视🐟"},	
+
+{"url":"https://www.gitlink.org.cn/api/yf1688/box/raw/77.bmp?ref=master","name":"🍄小鱼在线┃gitlink影视🍄"},
 	
 {"url":"http://饭太硬.top/tv","name":"🍚小鱼在线┃饭太坚硬🍚"},
 
@@ -30,16 +32,18 @@
 	
 {"url":"https://gitee.com/kevinr/tvbox/raw/master/soeasy/config.json","name":"🍄小鱼在线┃SoEasy同学🍄"},
 
-{"url":"https://ghproxy.net/raw.githubusercontent.com/yf20230412/master/main/TvBox/99.json","name":"🧜小鱼在线┃GH影视🧜"}	
+{"url":"https://ghproxy.net/raw.githubusercontent.com/yf20230412/master/main/TvBox/99.json","name":"🧜小鱼在线┃GH影视🧜"}	,
 	
 
 {"url":"","name":"--👇风言锋语本地仓👇--"},
 
-{"url":"assets://box/99.json","name":"🛑assets内单线路🛑"},
+{"url":"clan://localhost/风言锋语88/风言锋语/99.json","name":"🟢clan本地┃99线路🟢"},	
 
-{"url":"clan://localhost/风言锋语88/风言锋语/99.json","name":"🟢clan本地单线路🟢"},
+{"url":"assets://box/99.json","name":"🛑OK影视┃assets单线🛑"},
 
-{"url":"file://风言锋语88/522.json","name":"🟣file本地多线路🟣"}
+{"url":"assets://a","name":"🛑OK影视┃assets多线🛑"},		
+
+{"url":"clan://localhost/风言锋语88/22.json","name":"🐟OK影视┃本地多线💚"}
 
 ]
 
