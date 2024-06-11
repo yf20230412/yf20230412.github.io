@@ -16,7 +16,7 @@
 
     "影片状态":"集数：&&</div>",
     
-    "数组":"<a&&module-item-pic\"",
+    "数组":"<a&&module-poster-item-title",
     
     "图片":"data-original=\"&&\"",
     
@@ -25,6 +25,20 @@
     "副标题":"module-item-note\">&&</div>",
     
     "链接":"href=\"&&\"",
+    
+    "搜索模式":"1",
+    
+    "搜索url":"/vodsearch/-------------.html?wd={wd}",
+    
+    "搜索数组":"<a&&<div class=\"module-card-item",
+    
+    "搜索标题":"alt=\"&&\"",
+    
+    "搜索图片":"data-original=\"&&\"",
+    
+    "搜索链接":"href=\"&&\"",
+    
+    "搜索副标题":"module-item-note\">&&</div>",
     
     "线路数组":"data-dropdown-value=&&</div>",
     
