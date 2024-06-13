@@ -11,27 +11,23 @@
 "lives":[
 	
 {
-"name":"xiaoyu_live",
-"type":0,
-"url":"./txt/612.txt",
-"playerType":1,
-"ua":"okhttp/3.15",
-"epg":"http://epg.112114.xyz/?ch={name}&date={date}",
-"logo":"https://epg.112114.xyz/logo/{name}.png"
+    "name":"xiaoyu_live",
+    "type":0,
+    "url":"./lib/612.m3u",
+    "playerType":1,
+    "timeout": 10
 },
 {
     "name":"FMM_IPV6",
     "type":0,
     "url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u",
     "playerType":1,
-    "ua":"okhttp/3.15",
-    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
-    "logo":"https://epg.112114.xyz/logo/{name}.png"
+    "timeout": 10
 },
 {
     "name":"818",
     "type":0,
-    "url":"./txt/818.txt",
+    "url":"https://yf1688.top/tv/txt/818.txt",
     "playerType":1,
     "ua":"okhttp/3.15",
     "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
