@@ -123,11 +123,12 @@
       "key": "农民影视",
       "name": "👩🏽‍🌾┃农民┃直连",
       "type": 3,
-      "api": "csp_XBPQ",
+      "api": "./douban/drpy3.min.js",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 1,
       "changeable": 1,
-      "ext": "./json/农民影视.json"
+      "ext": "./js/农民影视.js"
     },
     {
       "key": "爱看机器人",
