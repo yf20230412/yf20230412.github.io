@@ -7,7 +7,8 @@ var rule={
     detailUrl:'/voddetail/fyid.html',
 	class_name:'电视剧&电影&综艺&动漫&爽文短剧',
     class_url:'2&1&4&3&33',
-    tab_rename:{'主路线':'🌺风言锋语88🌺主路线'},
+    tab_rename:{'专享一':'🌺风言锋语88🌺一','专享二':'🌺风言锋语88🌺二','纯享':'🌺风言锋语88🌺纯享'},
+    tab_remove:['海外路线'],
     lazy:`js:
         var html = JSON.parse(request(input).match(/r player_.*?=(.*?)</)[1]);
         var url = html.url;

@@ -6,7 +6,7 @@
     
     "主页url":"http://www.xingchenju.com/",
 
-	"站名":"速映影视",	
+	"站名":"星辰影视",	
     
     "简介":"公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇┃+<span class=\"detail-sketch\">&&</span>",
     
@@ -48,4 +48,31 @@
     
     "分类url":"http://www.xingchenju.com/{cateId}/index{catePg}.html[http://www.xingchenju.com/{cateId}/index.html];;ak",
     
-    "分类":"电视剧$dianshiju#电影$dianying#综艺$zongyi#动漫$dongman"}
+    "分类":"电视剧$dianshiju#电影$dianying#综艺$zongyi#动漫$dongman",
+
+"筛选":{
+    "dianying":[  
+    {"key":"cateId","name":"分类","value":[
+	{"n":"全部分类","v":""},	
+    {"n":"动作片","v":"dongzuopian"},
+    {"n":"爱情片","v":"aiqingpian"},	
+    {"n":"科幻片","v":"kehuanpian"},	
+    {"n":"恐怖片","v":"kongbupian"},
+    {"n":"喜剧片","v":"xijupian"},	
+    {"n":"剧情片","v":"kongbupian"},
+    {"n":"在线直播","v":"zaixianzhibo"}   
+    ]
+    }
+    ],
+    "dianshiju":[  
+    {"key":"cateId","name":"分类","value":[
+	{"n":"全部分类","v":""},	
+    {"n":"国产剧","v":"guochanju"},
+    {"n":"港台剧","v":"tangtaiju"},	
+    {"n":"欧美剧","v":"oumeiju"},	
+    {"n":"日韩剧","v":"rihanju"}
+    ]
+    }
+    ]		
+	}
+	}		

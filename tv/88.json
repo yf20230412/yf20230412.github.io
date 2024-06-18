@@ -5,7 +5,7 @@
 	
     "wallpaper":"http://www.kf666888.cn/api/tvbox/img",
 	
-    "warningText":"《风言锋语88》提示您：观看带💖的阿里4K资源，请按提示扫描登录阿里token",
+    "warningText":"《风言锋语88》提示您：接口免费请勿付费购《风言锋语88》提示您：🚨线路利用网络爬虫技术获取，各线路的版本、清晰度、播放速度等存在差异请自行切换。建议避开晚上高峰时段🚨 Ps-接口免费，⚠️请勿相信视频中的任何广告，以免您上当受骗⏰",
 
 	"logo":"https://www.gitlink.org.cn/api/yf1688/box/raw/588.gif?ref=master",
 	
@@ -13,7 +13,7 @@
 {
     "name":"xiaoyu_live",
     "type":0,
-    "url":"./lib/612.m3u",
+    "url":"./txt/612.m3u",
     "playerType":1,
     "timeout": 10
 },
@@ -43,19 +43,20 @@
 	"name":"公众号🔥【风言锋语88】",
 	"type":3,
 	"api":"csp_DouDou",
-	"jar":"./custom_fyfy.jar",
+	"jar":"./jar/custom_fyfy.jar",
 	"searchable":0,
 	"quickSearch":0,
-	"filterable":0
+    "filterable": 0,
+    "ext":"./json/douban.json"
 },
 {
-      "key": "荐片",
-      "name": "🐭┃荐片┃慎用",
-      "type": 3,
-      "playerType": "2",
-      "api": "csp_Jianpian",
-	  "jar":"./custom_fyfy.jar",
-      "ext": "./lib/jp.json"
+    "key":"贱贱",
+    "name":"🐭┃贱贱┃p2p",
+    "type": 3,
+    "playerType": "2",
+    "api": "csp_Jianpian",
+    "jar":"./custom_fyfy.jar"
+    "ext": "./json/jp.json"	
 },
 {
     "key":"csp_WoGG",
@@ -1097,11 +1098,11 @@
 
 {"name":"您","type": 0,"url": "https://jx.xyflv.cc/?url=","ext": {"header": {"user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36","referer": "https://www.xyflv.cc/"}}},
 
-{"name":"观","type":1,"url":"http://43.136.176.188:91/api/?key=f99226916774bfa29c9af99b2c736fd9&url="},
+{"name":"观","type":1,"url":"http://122.228.84.103:7777/api/?key=4Dk5tdayvY6NZufEMG&url="},
 
-{"name":"影","type":1,"url":"http://119.91.123.253:2345/Api/yun.php?url="},
+{"name":"影","type":1,"url":"http://110.42.7.182:880/api/?key=7e84f07dc78fbb3406d64a1ab7d966b3&url="},
 
-{"name":"愉","type":1,"url":"http://xxjx.qqwx.ren/?url="},
+{"name":"愉","type":1,"url":"http://43.136.176.188:91/api/?key=4ef232e96172b0bda78d393c695fe7c4&url="},
 
 {"name":"快","type":1,"url":"http://pan.qiaoji8.com/tvbox/neibu.php?url="}
 ],
@@ -1151,7 +1152,8 @@
 ],
 
 
-
 "flags":["youku","qq","QQ","iqiyi","iqiyi","imgo","xueren","m1905","qiyi","letv","sohu","tudou","pptv","PPTV","dbm3u8","FY","fy","FeiYun","feiyun","飞云","funshion","mgtv","wasu","bilibili","le","duoduozy","renrenmi","xmm","xigua","ltnb","rx","SLYS4k","CL4K","xfyun","wuduzy","BYGA","BYGB","luanzi","dxzy","QEYSS","aliyun","优酷","优酷","优酷视频","西瓜","AliS","122","chuangying",
-"乐视","芒果","腾讯","腾讯","腾讯视频","芒果TV","芒果TV","爱奇艺","奇艺","爱奇艺","奇艺视频","西瓜视频","乐视视频","搜狐","搜狐","搜狐视频","哔哩哔哩","哔哩"]
+"乐视","芒果","腾讯","腾讯","腾讯视频","芒果TV","芒果TV","爱奇艺","奇艺","爱奇艺","奇艺视频","西瓜视频","乐视视频","搜狐","搜狐","搜狐视频","哔哩哔哩","哔哩"],
+
+"ads": ["mozai.4gtv.tv","pv.vipwm.cc"]
 }

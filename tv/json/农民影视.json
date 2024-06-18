@@ -4,7 +4,9 @@
     
     "站名":"农民影视",
     
-    "主页url":"https://m.emsdn.cn/",
+    "发布者":"https://m.emsdn.cn/",
+    
+    "主页url":"https://m.wwgz.cn/",
 
 	"首页": "电视剧$40",	
 
@@ -33,18 +35,18 @@
     "副标题":"<span>&&</span>",
     
     "搜索模式":"1",
+   
+    "搜索url":"/vod-search/-------------html?wd={wd}",
     
-    "搜索url":"https://m.xiangdao.me/index.php?m=vod-search;post;wd={wd}",
-    
-    "搜索二次截取":"data_list\">&&</ul>",
+    "搜索二次截取":" class=\"list_01>&&</ul>",
     
     "搜索数组":"<li>&&</li>",
     
-    "搜索图片":"data-src=\"&&\"",
+    "搜索图片":"src=\"&&\"",
     
-    "搜索标题":"sTit\">&&</span>",
+    "搜索标题":"title=\"&&\"",
     
-    "搜索副标题":"sStyle\">&&</span>",
+    "搜索副标题":"<span>&&</a>",
     
     "搜索链接":"href=\"&&\"",
     
@@ -56,8 +58,7 @@
     
     "分类":"连续剧$2#电影$1#综艺$3#动漫$4",
     
-    "分类url":"https://m.emsdn.cn/vod-list-id-{cateId}-pg-{catePg}-order--by-{by}-class-0-year-{year}-letter--area-{area}-lang-.html",
-
+    "分类url":"https://m.wwgz.cn/vod-list-id-{cateId}-pg-{catePg}-order--by-{by}-class-0-year-{year}-letter--area-{area}-lang-.html",
 
     "筛选":{
     "1":[

@@ -1,1 +1,122 @@
-//bbQ0FUT1C/ARp5cWt0dl9vcGVuLmpzGC4vbGliL2NhdC5qcxxfX2pzRXZhbFJldHVybgxDcnlwdG8KZGF5anMMamluamEyBlVyaQJfBmtleQZ1cmwMZGV2aWNlDnNpdGVLZXkQc2l0ZVR5cGUOcmVxdWVzdAhpbml0CGhvbWUOaG9tZVZvZBJuZXh0VmFsdWUMd29ya2VyEGNhdGVnb3J5DGRldGFpbAhwbGF5DHNlYXJjaA5jaGFyU3RyDnJhbmRTdHIQcmFuZFVVSUQOcmFuZE1BQxRyYW5kRGV2aWNlGmZvcm1hdFBsYXlVcmwSanNvblBhcnNlCnlxa3R2emFiYWNkZWZnaGprbG1ub3BxcnN0dXZ3eHl6QUJDREVGR0hKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkCZQJ0AnICYQJvAm4CaQZyZXEab2todHRwLzMuMTQuORR1c2VyLWFnZW50DmNvbnRlbnQkd3d3LmZ1d2VudHV0ZW5nLmNuEmJ1bmRsZXJJZA5yZWdDb2RlCGltc2kYMTAwMV9kZWZhdWx0DjEuMC4wLjEOdmVyc2lvbgptb2RlbBRkZXZpY2VJbmZvBm1hYxZ2ZXJzaW9uQ29kZQ5yZWxlYXNlDG9zSW5mbxZpc0xvd0RldmljZRJyZXF1ZXN0SWRAZDZkNTIwZWE5MDkwNGYxYmE2ODBlZDZjOWM5ZjkwMDcKYXBwSWQIaW1laQh1ZGlkDGFzc2lnbghrZXlzDHNvcnRCeQhwdXNoAj1OYXBwS2V5PTcwYWY2N2QyYjZjZjQ3Njc5YjM5N2VhNGMxODg2ODc3Bk1ENQImFnRvTG93ZXJDYXNlCHNpZ24OaGVhZGVycwhwb3N0DG1ldGhvZAhkYXRhCHNrZXkKc3R5cGUKbG9jYWwKcGFyc2UOaXNFbXB0eQRpZBJzdHJpbmdpZnlEaHR0cHM6Ly9jb24ubGJwY3J3LmNvbS9jb25maWcuanNvbjwvdjEvYXBpL3NlYXJjaC9nZXRTZWFyY2hGaWx0ZXIUZmlsdGVyTGlzdB5maWx0ZXJWYWx1ZUxpc3QOdHlwZV9pZBJ0eXBlX25hbWUQcGFyc2VJbnQEe30wL3YxL2FwaS92b2RXb3JrZXIvZGV0YWlsFnZvZFdvcmtlcklkDnZvZExpc3QMcmVtYXJrCHRyaW0Kc2NvcmUGMC4wCnZvZElkDHZvZF9pZA52b2ROYW1lEHZvZF9uYW1lEGNvdmVySW1nDnZvZF9waWMCIBZ2b2RfcmVtYXJrcwhwYWdlEnBhZ2Vjb3VudAhsaXN0AnMCZAJjAmwCdRRzdGFydHNXaXRoDnZfd29ya18Mc3Vic3RyEmNoYW5uZWxJZBRmaWx0ZXJOYW1lDGFyZWFJZAUwVzpTCHllYXIFdF79TiRjaGFubmVsQ2hpbGRUeXBlSWQFe3yLVwVoUeiQAnYQc29ydExpc3QQc29ydFR5cGUFkmOPXhBzb3J0TmFtZRJmaWxlck5hbWUUZmlsZXJWYWx1ZRxxdWVyeVZhbHVlSnNvbg5uZXh0VmFsLi92MS9hcGkvc2VhcmNoL3F1ZXJ5Tm93Dmhhc05leHQKaXRlbXMMZmlsdGVyLC92MS9hcGkvdm9kSW5mby9kZXRhaWwWY2hhbm5lbE5hbWUQdm9kX3llYXIQYXJlYU5hbWUQdm9kX2FyZWEKaW50cm8Wdm9kX2NvbnRlbnQSYWN0b3JMaXN0Bm1hcAQsIBJ2b2RfYWN0b3IYZGlyZWN0b3JMaXN0GHZvZF9kaXJlY3RvchRwbGF5ZXJMaXN0FHBsYXllck5hbWUMZXBMaXN0DGVwTmFtZQIkCGVwSWQCIwYkJCQadm9kX3BsYXlfZnJvbRh2b2RfcGxheV91cmwadm9kV29ya2VyTmFtZQxbYT1jcjoEL10IWy9hXTYvdjEvYXBpL3ZvZEluZm8vZ2V0RXBEZXRhaWwecmVzb2x1dGlvbkl0ZW1zInZvZFJlc29sdXRpb25OYW1lNC92MS9hcGkvdm9kSW5mby9nZXRQbGF5VXJsGnZvZFJlc29sdXRpb24Oa2V5d29yZAZzY18qL3YxL2FwaS9zZWFyY2gvc2VhcmNoDHJhbmRvbQItFnRvVXBwZXJDYXNlAjoMSHVhd2VpCmJyYW5kHEhVQVdFSStNYXRlKzIwDmJ1aWxkSWQUcmVwbGFjZUFsbA5yZXBsYWNlBC8vDGh0dHBzOghodHRwFFVzZXItQWdlbnQOcmVmZXJlcg5SZWZlcmVyDGhlYWRlcg+kAwGmAwEAG6gDAAUAqgMAAawDAAKuAwADsAMABLIDAA4ABgGgAQAAAAEcEHkAqgMADKwDAQyuAwIMsAMDDLIDBAy0AwAJtgMBCbgDAgm6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
+function verifyLogin(key) {
+    let cnt = 0;
+    let cookie = '';
+    let content = '';
+    let yzm_url = 'https://www.cpldq.com/include/vdimgck.php';
+    log(`验证码链接:${yzm_url}`);
+    let submit_url = 'https://www.cpldq.com/search.php?scheckAC=check&page=1&searchtype=&order=&tid=&area=&year=&letter=&yuyan=&state=&money=&ver=&jq=';
+    log(`post登录链接:${submit_url}`);
+    while (cnt < OCR_RETRY) {
+        try {
+            let {cookie, html} = reqCookie(yzm_url + '?t=' + new Date().getTime(), {toBase64: true});
+            let code = OcrApi.classification(html);
+            let code1 = eval(code.slice(0, -1));
+            log(`第${cnt + 1}次验证码识别结果:${code}->${code1}`);
+            html = post(submit_url, {
+                headers: {Cookie: cookie},
+                body: 'validate=' + code1 + '&searchword=' + key,
+            });
+            if (/相关搜索结果/.test(html)) {
+                content = html;
+                return {cookie, html: content} // 需要返回cookie
+            } else if (!/相关搜索结果/.test(html) && cnt + 1 >= OCR_RETRY) {
+                cookie = ''; // 需要清空返回cookie
+            }
+        } catch (e) {
+            log(`第${cnt + 1}次验证码提交失败:${e.message}`);
+            if (cnt + 1 >= OCR_RETRY) {
+                cookie = '';
+            }
+        }
+        cnt += 1
+    }
+    return {cookie, html: content}
+}
+
+globalThis.verifyLogin = verifyLogin;
+
+var rule = {
+    title: '一起看[优]',
+    host: 'http://www.cpldq.com',
+    url: '/cptype/fyclass-fypage.html',
+    searchUrl: '/search.php?page=fypage&searchword=**&searchtype=',
+    searchable: 0,
+    quickSearch: 0,
+    filterable: 1,
+    filter: '',
+    filter_url: '',
+    headers: {
+        'User-Agent': 'MOBILE_UA',
+    },
+    timeout: 5000,
+    //class_parse: '.sb_login_alert_box&&li;a&&Text;a&&href;/(\\d+)\.html',
+    class_name:'电视剧&电影&动漫&短剧&综艺',
+    class_url:'2&1&4&30&3',
+    cate_exclude: '',
+    play_parse: true,
+    lazy: $js.toString(() => {
+        input = {parse: 1, url: input, js: ''};
+    }),
+    double: true,
+	filter: {
+"1":[{"key":"class","name":"剧情","value":[{"n":"全部剧情","v":""},{"n":"乡村","v":"乡村"},{"n":"都市","v":"都市"},{"n":"少儿","v":"少儿"},{"n":"对话","v":"对话"},{"n":"搞笑","v":"搞笑"},{"n":"恐怖","v":"恐怖"},{"n":"宫廷","v":"宫廷"},{"n":"剧情","v":"剧情"},{"n":"言情","v":"言情"},{"n":"家庭","v":"家庭"},{"n":"励志","v":"励志"},{"n":"偶像","v":"偶像"},{"n":"时装","v":"时装"},{"n":"年代","v":"年代"},{"n":"悬疑","v":"悬疑"},{"n":"古装","v":"古装"},{"n":"热血","v":"热血"},{"n":"同人","v":"同人"},{"n":"耽美","v":"耽美"}]},{"key":"area","name":"地区","value":[{"n":"全部地区","v":""},{"n":"大陆","v":"大陆"},{"n":"香港","v":"香港"},{"n":"台湾","v":"台湾"},{"n":"日本","v":"日本"},{"n":"韩国","v":"韩国"},{"n":"欧美","v":"欧美"},{"n":"泰国","v":"泰国"},{"n":"其他","v":"其他"}]},{"key":"year","name":"时间","value":[{"n":"全部时间","v":""},{"n":"2024","v":"2024"},{"n":"2023","v":"2023"},{"n":"2022","v":"2022"},{"n":"2021","v":"2021"},{"n":"2020","v":"2020"},{"n":"2019","v":"2019"},{"n":"2018","v":"2018"},{"n":"2017","v":"2017"},{"n":"2016","v":"2016"},{"n":"2015","v":"2015"},{"n":"2014","v":"2014"},{"n":"2013","v":"2013"},{"n":"更早","v":"more"}]},{"key":"by","name":"排序","value":[{"n":"全部排序","v":""},{"n":"时间排序","v":"time"},{"n":"人气排序","v":"hits"},{"n":"评分排序","v":"score"}]}],
+"2":[{"key":"class","name":"剧情","value":[{"n":"全部剧情","v":""},{"n":"乡村","v":"乡村"},{"n":"都市","v":"都市"},{"n":"少儿","v":"少儿"},{"n":"对话","v":"对话"},{"n":"搞笑","v":"搞笑"},{"n":"恐怖","v":"恐怖"},{"n":"宫廷","v":"宫廷"},{"n":"剧情","v":"剧情"},{"n":"言情","v":"言情"},{"n":"家庭","v":"家庭"},{"n":"励志","v":"励志"},{"n":"偶像","v":"偶像"},{"n":"时装","v":"时装"},{"n":"年代","v":"年代"},{"n":"悬疑","v":"悬疑"},{"n":"古装","v":"古装"},{"n":"热血","v":"热血"},{"n":"同人","v":"同人"},{"n":"耽美","v":"耽美"}]},{"key":"area","name":"地区","value":[{"n":"全部地区","v":""},{"n":"大陆","v":"大陆"},{"n":"香港","v":"香港"},{"n":"台湾","v":"台湾"},{"n":"日本","v":"日本"},{"n":"韩国","v":"韩国"},{"n":"欧美","v":"欧美"},{"n":"泰国","v":"泰国"},{"n":"其他","v":"其他"}]},{"key":"year","name":"时间","value":[{"n":"全部时间","v":""},{"n":"2024","v":"2024"},{"n":"2023","v":"2023"},{"n":"2022","v":"2022"},{"n":"2021","v":"2021"},{"n":"2020","v":"2020"},{"n":"2019","v":"2019"},{"n":"2018","v":"2018"},{"n":"2017","v":"2017"},{"n":"2016","v":"2016"},{"n":"2015","v":"2015"},{"n":"2014","v":"2014"},{"n":"2013","v":"2013"},{"n":"更早","v":"more"}]},{"key":"by","name":"排序","value":[{"n":"全部排序","v":""},{"n":"时间排序","v":"time"},{"n":"人气排序","v":"hits"},{"n":"评分排序","v":"score"}]}],
+"3":[{"key":"class","name":"剧情","value":[{"n":"全部剧情","v":""},{"n":"乡村","v":"乡村"},{"n":"都市","v":"都市"},{"n":"少儿","v":"少儿"},{"n":"对话","v":"对话"},{"n":"搞笑","v":"搞笑"},{"n":"恐怖","v":"恐怖"},{"n":"宫廷","v":"宫廷"},{"n":"剧情","v":"剧情"},{"n":"言情","v":"言情"},{"n":"家庭","v":"家庭"},{"n":"励志","v":"励志"},{"n":"偶像","v":"偶像"},{"n":"时装","v":"时装"},{"n":"年代","v":"年代"},{"n":"悬疑","v":"悬疑"},{"n":"古装","v":"古装"},{"n":"热血","v":"热血"},{"n":"同人","v":"同人"},{"n":"耽美","v":"耽美"}]},{"key":"area","name":"地区","value":[{"n":"全部地区","v":""},{"n":"大陆","v":"大陆"},{"n":"香港","v":"香港"},{"n":"台湾","v":"台湾"},{"n":"日本","v":"日本"},{"n":"韩国","v":"韩国"},{"n":"欧美","v":"欧美"},{"n":"泰国","v":"泰国"},{"n":"其他","v":"其他"}]},{"key":"year","name":"时间","value":[{"n":"全部时间","v":""},{"n":"2024","v":"2024"},{"n":"2023","v":"2023"},{"n":"2022","v":"2022"},{"n":"2021","v":"2021"},{"n":"2020","v":"2020"},{"n":"2019","v":"2019"},{"n":"2018","v":"2018"},{"n":"2017","v":"2017"},{"n":"2016","v":"2016"},{"n":"2015","v":"2015"},{"n":"2014","v":"2014"},{"n":"2013","v":"2013"},{"n":"更早","v":"more"}]},{"key":"by","name":"排序","value":[{"n":"全部排序","v":""},{"n":"时间排序","v":"time"},{"n":"人气排序","v":"hits"},{"n":"评分排序","v":"score"}]}],
+"4":[{"key":"class","name":"剧情","value":[{"n":"全部剧情","v":""},{"n":"乡村","v":"乡村"},{"n":"都市","v":"都市"},{"n":"少儿","v":"少儿"},{"n":"对话","v":"对话"},{"n":"搞笑","v":"搞笑"},{"n":"恐怖","v":"恐怖"},{"n":"宫廷","v":"宫廷"},{"n":"剧情","v":"剧情"},{"n":"言情","v":"言情"},{"n":"家庭","v":"家庭"},{"n":"励志","v":"励志"},{"n":"偶像","v":"偶像"},{"n":"时装","v":"时装"},{"n":"年代","v":"年代"},{"n":"悬疑","v":"悬疑"},{"n":"古装","v":"古装"},{"n":"热血","v":"热血"},{"n":"同人","v":"同人"},{"n":"耽美","v":"耽美"}]},{"key":"area","name":"地区","value":[{"n":"全部地区","v":""},{"n":"大陆","v":"大陆"},{"n":"香港","v":"香港"},{"n":"台湾","v":"台湾"},{"n":"日本","v":"日本"},{"n":"韩国","v":"韩国"},{"n":"欧美","v":"欧美"},{"n":"泰国","v":"泰国"},{"n":"其他","v":"其他"}]},{"key":"year","name":"时间","value":[{"n":"全部时间","v":""},{"n":"2024","v":"2024"},{"n":"2023","v":"2023"},{"n":"2022","v":"2022"},{"n":"2021","v":"2021"},{"n":"2020","v":"2020"},{"n":"2019","v":"2019"},{"n":"2018","v":"2018"},{"n":"2017","v":"2017"},{"n":"2016","v":"2016"},{"n":"2015","v":"2015"},{"n":"2014","v":"2014"},{"n":"2013","v":"2013"},{"n":"更早","v":"more"}]},{"key":"by","name":"排序","value":[{"n":"全部排序","v":""},{"n":"时间排序","v":"time"},{"n":"人气排序","v":"hits"},{"n":"评分排序","v":"score"}]}],
+"30":[{"key":"class","name":"剧情","value":[{"n":"全部剧情","v":""},{"n":"乡村","v":"乡村"},{"n":"都市","v":"都市"},{"n":"少儿","v":"少儿"},{"n":"对话","v":"对话"},{"n":"搞笑","v":"搞笑"},{"n":"恐怖","v":"恐怖"},{"n":"宫廷","v":"宫廷"},{"n":"剧情","v":"剧情"},{"n":"言情","v":"言情"},{"n":"家庭","v":"家庭"},{"n":"励志","v":"励志"},{"n":"偶像","v":"偶像"},{"n":"时装","v":"时装"},{"n":"年代","v":"年代"},{"n":"悬疑","v":"悬疑"},{"n":"古装","v":"古装"},{"n":"热血","v":"热血"},{"n":"同人","v":"同人"},{"n":"耽美","v":"耽美"}]},{"key":"area","name":"地区","value":[{"n":"全部地区","v":""},{"n":"大陆","v":"大陆"},{"n":"香港","v":"香港"},{"n":"台湾","v":"台湾"},{"n":"日本","v":"日本"},{"n":"韩国","v":"韩国"},{"n":"欧美","v":"欧美"},{"n":"泰国","v":"泰国"},{"n":"其他","v":"其他"}]},{"key":"year","name":"时间","value":[{"n":"全部时间","v":""},{"n":"2024","v":"2024"},{"n":"2023","v":"2023"},{"n":"2022","v":"2022"},{"n":"2021","v":"2021"},{"n":"2020","v":"2020"},{"n":"2019","v":"2019"},{"n":"2018","v":"2018"},{"n":"2017","v":"2017"},{"n":"2016","v":"2016"},{"n":"2015","v":"2015"},{"n":"2014","v":"2014"},{"n":"2013","v":"2013"},{"n":"更早","v":"more"}]},{"key":"by","name":"排序","value":[{"n":"全部排序","v":""},{"n":"时间排序","v":"time"},{"n":"人气排序","v":"hits"},{"n":"评分排序","v":"score"}]}]},
+    推荐: '.main&&.bgte1130;ul&&.sb-film-one;*;*;*;*',
+    一级: '.sb-area-index&&ul&&.qcontainer;i&&Text;.lazy&&data-original;.other&&Text;a&&href',
+    二级: {
+        title: '.name&&Text;.ct&&dd&&Text',
+        img: '.lazy&&data-original',
+        desc: '.ct&&dd:eq(1)&&Text;.ct&&dd:eq(2)&&Text;.ct&&dt:eq(2)&&Text;.ct&&dt&&Text;',
+        content: 'div.ee&&Text',
+        tabs: '.playfrom&&li',
+        lists: '.playlist:eq(#id)&&ul&&li:not(:contains(滈凊))',
+        tab_text: 'body--sup&&Text',
+        list_text: 'body&&Text',
+        list_url: 'a&&href'
+    },
+    tab_rename:{'秒播资源':'🌺风言锋语88🌺+秒播','光速资源':'🌺风言锋语88🌺+光速'},
+    //搜索: '*',
+    搜索: $js.toString(() => {
+        let cookie = getItem(RULE_CK, '') + ';ssea2_search=ok';
+        log('储存的cookie:' + cookie);
+        let ret = request(MY_URL, {
+            headers: {
+                Cookie: cookie,
+            }
+        });
+        if (/系统安全验证/.test(ret)) {
+            let login = verifyLogin(KEY);
+            cookie = login.cookie;
+            if (cookie) {
+                log(`本次成功过验证,cookie:${cookie}`);
+                setItem(RULE_CK, cookie);
+            } else {
+                log(`本次自动过搜索验证失败,cookie:${cookie}`);
+            }
+            ret = login.html;
+            // ret = request(MY_URL, {
+            //     headers: {
+            //         Cookie: cookie,
+            //     }
+            // });
+        }
+        let d = [];
+        let p = rule.一级.split(';');
+        let arr = pdfa(ret, p[0]);
+        arr.forEach(it => {
+            d.push({
+                title: pdfh(it, p[1]),
+                pic_url: pdfh(it, p[2]),
+                desc: pdfh(it, p[3]),
+
+                url: pdfh(it, p[4]),
+                content: '',
+            });
+
+        });
+        setResult(d);
+    }),
+}
