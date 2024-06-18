@@ -205,16 +205,6 @@
       "ext": "./json/新视觉.json"
     },
     {
-      "key": "csp_电影先生",
-      "name": "👨┃电影┃先生",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./json/电影先生.json"
-    },	
-    {
       "key": "策驰影视",
       "name": "🚅┃策驰┃影视",
       "type": 3,
@@ -557,6 +547,16 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./js/4KHDR磁力.js"
+    },
+    {
+      "key": "csp_电影先生",
+      "name": "👨┃电影┃先生",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./json/电影先生.json"
     },
     {
       "key": "555影视",
