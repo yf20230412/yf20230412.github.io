@@ -1,6 +1,6 @@
 {
 "use_internal_storage":false,
-"token":"ec156b5f3d63468891771bf2a9b4c751",
+"token":"",
 "open_token":"",
 "open_api_url":"get|https://adrive.xdow.net/oauth/access_token",
 "oauth_client_id":"",
@@ -37,8 +37,8 @@
 "yd_thread_limit":4,
 "yd_flags":"auto|4kz",
 "yd_danmu":true,
-"pikpak_username":"yufeng1688778@gmail.com",
-"pikpak_password":"yy12345678.",
+"pikpak_username":"cewog83609@wenkuu.com",
+"pikpak_password":"QQQqqq666.",
 "pikpak_flags":"4k|auto",
 "pikpak_thread_limit":2,
 "pikpak_vip_thread_limit":2,
