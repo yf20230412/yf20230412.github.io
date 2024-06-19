@@ -45,7 +45,8 @@
       "api": "csp_Douban",
       "searchable": 0,
       "quickSearch": 0,
-      "filterable": 0
+      "filterable": 0,
+      "ext":"./json/douban.json"
     },
     {
       "key": "豆瓣预告",
@@ -66,16 +67,15 @@
       "api": "./js/路飞搜索.js"
     },	
     {
-      "key": "csp_KungFu404",
-      "name":"☁️┃阿里┃设置☁️",
+      "key": "网盘配置",
+      "name":"⚙️┃网盘┃配置⚙️",
       "type": 3,
-      "api": "csp_KungFu404",
-      "searchable":1,
-      "filterable": 0,
-      "changeable":0,
-      "jar":"./jar/aliyun.jar",
-      "ext":"http://127.0.0.1:9978/tvbox/token.txt+4k|fhd|auto"
-    },
+      "api": "csp_Config",
+      "jar":"./jar/pg.jar",
+      "searchable": 0,
+      "changeable": 0,
+      "ext":"./json/tokenm.json"
+    },	
     {
       "key": "玩偶哥哥",
       "name": "💖┃玩偶┃网盘💖",
@@ -108,16 +108,36 @@
       "api": "./douban/drpy3.min.js",
       "ext": "./js/南瓜.js"
     },
-	{
-      "key": "胖虎",
-      "name": "🐯┃胖虎┃影视",
+    {
+      "key": "追剧兔",
+      "name": "🐰┃追剧┃兔兔",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "./js/追剧兔.js"
+    },	
+    {
+      "key": "98影视",
+      "name": "🍷┃玖八┃影视",
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "playerType": 2,
-      "ext": "./json/胖虎影视.json"
+      "ext": "./json/98影视.json"
+    },	
+    {
+      "key": "csp_五五",
+      "name": "👋🏽┃五五┃秒播",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./json/五五影视.json"
     },
     {
       "key": "农民影视",
@@ -129,7 +149,7 @@
       "filterable": 1,
       "changeable": 1,
       "ext": "./js/农民影视.js"
-    },
+    },	
     {
       "key": "爱看机器人",
       "name": "🤖┃爱看┃机器",
@@ -163,17 +183,6 @@
       "ext": "./js/一起看.js"
     },
     {
-      "key": "drpy_js_网飞猫",
-      "name": "😻┃飞猫┃影视",
-      "api": "./douban/drpy3.min.js",
-      "type": 3,
-      "searchable": 1,
-	  "quickSearch": 1,
-	  "filterable": 1,
-      "timeout": 15,
-      "ext": "./js/网飞猫.js"
-    },
-    {
       "key": "drpy_js_素白白",
       "name": "💮┃素白┃影视",
       "api": "./douban/drpy3.min.js",
@@ -183,7 +192,17 @@
 	  "filterable": 1,
       "timeout": 15,
       "ext": "./js/素白白.js"
-    },		
+    },
+    {
+      "key": "PPTV",
+      "name": "⛵️┃皮皮┃影视",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./json/皮皮影视.json"
+    },	
     {
       "key": "七新影视",
       "name": "🎨┃七新┃影视",
@@ -213,7 +232,17 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "./json/策驰影视.json"
-    },    	
+    },  
+    {
+      "key": "骚火影视",
+      "name": "👙┃骚火┃影视",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./json/骚火影视.json"
+    },	
     {
       "key": "Movies",
       "name": "👽┃Movies┃影视",
@@ -225,6 +254,27 @@
       "filterable": 1,
       "ext": "./json/Movies.json"
     },
+    {
+      "key": "csp_文才",
+      "name": "🖍️┃文才┃影视",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./json/文才.json"
+    },	
+	{
+      "key": "胖虎",
+      "name": "🐯┃胖虎┃影视",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "playerType": 2,
+      "ext": "./json/胖虎影视.json"
+    },	
     {
       "key": "四个圈",
       "name": "🍩┃四圈┃影视",
@@ -259,16 +309,6 @@
       "ext": "./json/韩剧兔.json"
     },
     {
-      "key": "PPTV",
-      "name": "⛵️┃皮皮┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./json/皮皮影视.json"
-    },
-    {
       "key": "美柏",
       "name": "📷┃美柏┃影视",
       "type": 3,
@@ -278,6 +318,17 @@
       "filterable": 1,
       "ext": "./json/美柏.json"
     },
+    {
+      "key": "drpy_js_凌云影视",
+      "name": "🥚┃凌云┃影视",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,		
+      "ext": "./js/凌云影视.js"
+    },	
     {
       "key": "csp_快看影视",
       "name": "🚆┃快看┃影视",
@@ -388,16 +439,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./js/18哈.js"
-    },
-    {
-      "key": "骚火影视",
-      "name": "👙┃骚火┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./json/骚火影视.json"
     },	
     {
       "key": "星辰影视",
@@ -470,7 +511,7 @@
     },
     {
       "key": "csp_Bttoo",
-      "name": "🍄┃比特┃直连",
+      "name": "✌️┃比特┃直连",
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "searchable": 1,
@@ -489,6 +530,17 @@
       "filterable": 1,
       "ext": "./json/威士影视.json"
     },
+    {
+      "key": "猫视界",
+      "name": "😻┃猫咪┃视界",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "./js/猫视界.js"
+    },	
     {
       "key": "csp_臭蛋蛋",
       "name": "🐣┃臭蛋┃影视",
@@ -518,16 +570,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./json/黑狐影视.json"
-    },
-    {
-      "key": "98影视",
-      "name": "🍷┃玖八┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./json/98影视.json"
     },
     {
       "key": "6V新磁力",
@@ -1201,6 +1243,17 @@
       "api": "csp_Local"
     },
     {
+      "key": "csp_KungFu404",
+      "name":"☁️┃阿里┃设置☁️",
+      "type": 3,
+      "api": "csp_KungFu404",
+      "searchable":1,
+      "filterable": 0,
+      "changeable":0,
+      "jar":"./jar/aliyun.jar",
+      "ext":"http://127.0.0.1:9978/tvbox/token.txt+4k|fhd|auto"
+    },	
+    {
       "key": "米搜",
       "name": "🔍┃米搜┃搜索",
       "type": 3,
@@ -1295,7 +1348,7 @@
       "searchable": 1,
       "changeable": 0,
       "ext": "影視天下第一$$$test2$$$test2"
-    },
+    },	
     {
       "key": "小纸条",
       "name": "🔍┃纸条┃搜索",

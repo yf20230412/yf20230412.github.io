@@ -49,6 +49,8 @@
     "播放标题":"episode-item\">&&</a>",
     
     "播放列表":"<a&&</a>",
+    
+    "嗅探词": ".m3u8#video_mp4#tos-#.mp4#cdn.123pan.cn#huoshanvod.com",
 
     "分类url":"https://www.keke13.com:51111/show/{cateId}-{class}-{area}-{lang}-{year}-{by}-{catepg}.html[https://www.keke12.com:51111/show/{cateId}------.html][https://www.keke13.com:51111/show/{cateId}------.html];;ak",
  
