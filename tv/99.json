@@ -109,6 +109,26 @@
       "ext": "./js/南瓜.js"
     },
     {
+      "key": "策驰影视",
+      "name": "🚅┃策驰┃影视",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": "./json/策驰影视.json"
+    },
+    {
+      "key": "csp_可可影视",
+      "name": "🎩┃可可┃影视",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./json/可可影视.json"
+    },
+    {
       "key": "追剧兔",
       "name": "🐰┃追剧┃兔兔",
       "type": 3,
@@ -162,16 +182,6 @@
       "ext": "./js/ikanbot2.js"
     },
     {
-      "key": "csp_可可影视",
-      "name": "🎩┃可可┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./json/可可影视.json"
-    },	
-    {
       "key": "drpy_js_一起看",
       "name": "👭┃一起┃App",
       "api": "./douban/drpy3.min.js",
@@ -212,7 +222,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./json/七新影视.json"
-    },	
+    },
+    {
+      "key": "大师兄影视",
+      "name": "🧙🏻‍♂️┃大师┃兄ys",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": "./js/大师兄.js"
+    },
     {
       "key": "csp_新视觉",
       "name": "🌸┃视觉┃影视",
@@ -223,16 +243,6 @@
       "filterable": 1,
       "ext": "./json/新视觉.json"
     },
-    {
-      "key": "策驰影视",
-      "name": "🚅┃策驰┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "./json/策驰影视.json"
-    },  
     {
       "key": "骚火影视",
       "name": "👙┃骚火┃影视",
