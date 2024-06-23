@@ -39,14 +39,14 @@
 "sites":[
 
     {
-      "key": "豆豆",
+      "key": "路飞搜索",
       "name": "公众号🔥【风言锋语88】",
       "type": 3,
-      "api": "csp_Douban",
       "searchable": 0,
+      "changeable": 1,
       "quickSearch": 0,
       "filterable": 0,
-      "ext":"./json/douban.json"
+      "api": "./js/路飞搜索.js"
     },
     {
       "key": "豆瓣预告",
@@ -55,16 +55,6 @@
       "api": "csp_XBPQ",
       "playerType": 2,
       "ext": "./json/豆瓣预告.json"
-    },
-    {
-      "key": "路飞搜索",
-      "name": "🔍┃路飞┃搜索",
-      "type": 3,
-      "searchable": 0,
-      "changeable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "api": "./js/路飞搜索.js"
     },	
     {
       "key": "网盘配置",
@@ -351,16 +341,6 @@
       "ext": "./json/快看影视.json"
     },
     {
-      "key": "csp_速映影视",
-      "name": "🏄🏼‍┃速映┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./json/速映影视.json"
-    },
-    {
       "key": "csp_达达龟",
       "name": "🐢┃达龟┃影视",
       "type": 3,
@@ -641,6 +621,16 @@
       "ext": "./js/七喜影院.js"
     },
     {
+      "key": "hipy_js_采集之王",
+      "name": "🐝┃采集┃之王",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "ext": "./js/采集之王[合].js?type=url&params=./json/采集静态.json"
+    },
+	/*
+    {
       "key": "360",
       "name": "🐝┃360┃秒播",
       "type": 1,
@@ -851,6 +841,7 @@
       "type": 3,
       "ext": "http://ysjtv.yy365.vip/api.php/app/"
     },
+	*/
     {
       "key": "量子资源",
       "name": "🧮┃量子┃资源",
