@@ -1021,8 +1021,30 @@
       "ext": "./json/酷奇MV.json"
     },
     {
+      "key": "花子动漫.",
+      "name": "🌸┃花子┃动漫",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "./js/花子动漫.js"
+    },
+    {
+      "key": "NT动漫.js.",
+      "name": "🌸┃NT┃动漫",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "./js/NT动漫.js"
+    },    
+    {
       "key": "Dm84",
-      "name": "🕹️┃动漫┃巴士",
+      "name": "🌸┃动漫┃巴士",
       "type": 3,
       "api": "csp_Dm84",
       "searchable": 1,
@@ -1030,35 +1052,14 @@
       "filterable": 1
     },
     {
-      "key": "anfuns",
-      "name": "🌸┃AnFuns┃动漫",
+      "key": "csp_樱花",
+      "name": "🌸┃异界┃动漫",
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
-      "ext": "./js/anfuns.js"
-    },
-    {
-      "key": "csp_Ysj",
-      "name": "🔮┃异界┃动漫",
-      "type": 3,
-      "api": "csp_Ysj",
-      "jar": "./jar/fty.jar",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "csp_Anime1",
-      "name": "🐔┃日本┃动漫",
-      "type": 3,
-      "api": "csp_Anime1",
-      "jar": "./jar/fty.jar",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+      "ext": "./js/樱花动漫.js"
     },
     {
       "key": "drpy_js_虎牙直播",
