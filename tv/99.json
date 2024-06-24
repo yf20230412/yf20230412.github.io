@@ -1,6 +1,6 @@
 {
 
-"spider":"https://yf1688.top/tv/custom_zy.jar;md5;d992bf3c8e87af0ee90895f8df59cd9c",
+"spider":"https://yf1688.top/tv/custom_zy.jar;md5;dc9d04bce6ab77231f837df475f06ed6",
 
 "wallpaper":"http://www.kf666888.cn/api/tvbox/img",
 
@@ -903,8 +903,7 @@
       "key": "幼小衔接",
       "name": "📚┃幼小┃衔接",
       "type": 3,
-      "api": "csp_Bili",
-      "jar": "./jar/fty.jar",
+      "api": "csp_Bili",      
       "searchable": 0,
       "quickSearch": 1,
       "filterable": 1,
@@ -915,7 +914,6 @@
       "name": "📚┃小学┃教育",
       "type": 3,
       "api": "csp_Bili",
-      "jar": "./jar/fty.jar",
       "searchable": 0,
       "quickSearch": 1,
       "filterable": 1,
@@ -926,7 +924,6 @@
       "name": "📚┃初中┃教育",
       "type": 3,
       "api": "csp_Bili",
-      "jar": "./jar/fty.jar",
       "searchable": 0,
       "quickSearch": 1,
       "filterable": 1,
@@ -937,7 +934,6 @@
       "name": "📚┃高中┃教育",
       "type": 3,
       "api": "csp_Bili",
-      "jar": "./jar/fty.jar",
       "searchable": 0,
       "quickSearch": 1,
       "filterable": 1,
@@ -948,7 +944,6 @@
       "name": "📚┃兴趣┃培养",
       "type": 3,
       "api": "csp_Bili",
-      "jar": "./jar/fty.jar",
       "searchable": 0,
       "quickSearch": 1,
       "filterable": 1,
@@ -1136,7 +1131,6 @@
       "name": "🅱️┃哔哩┃哔哩",
       "type": 3,
       "api": "csp_Bili",
-      "jar": "./jar/fty.jar",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
@@ -1147,7 +1141,6 @@
       "name": "🅱️┃相声┃小品",
       "type": 3,
       "api": "csp_Bili",
-      "jar": "./jar/fty.jar",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
@@ -1165,13 +1158,6 @@
         "type": "rect",
         "ratio": 3.8
       }
-    },
-    {
-      "key": "直播转点播",
-      "name": "📺┃电视┃直播",
-      "type": 3,
-      "api": "./js/直播转点播2.js",
-      "ext": "./json/直播仓.json"
     },
     {
       "key": "JustLive",
@@ -1216,15 +1202,6 @@
       "api": "csp_Kugou",
       "searchable": 1,
       "changeable": 0
-    },
-    {
-      "key": "应用商店",
-      "name": "🏪┃应用┃商店",
-      "type": 3,
-      "api": "csp_Market",
-      "searchable": 0,
-      "changeable": 0,
-      "ext": "./json/market.json"
     },
     {
       "key": "alist",
@@ -1366,6 +1343,22 @@
       "searchable": 0,
       "changeable": 0,
       "timeout": 60
+    },
+    {
+      "key": "直播转点播",
+      "name": "📺┃电视┃直播",
+      "type": 3,
+      "api": "./js/直播转点播2.js",
+      "ext": "./json/直播仓.json"
+    },
+    {
+      "key": "应用商店",
+      "name": "🏪┃应用┃商店",
+      "type": 3,
+      "api": "csp_Market",
+      "searchable": 0,
+      "changeable": 0,
+      "ext": "./json/market.json"
     },
     {
       "key": "cc",
