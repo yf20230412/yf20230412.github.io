@@ -1,0 +1,79 @@
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.5s ease-in-out;
+    }
+
+	    .bookmark-container {
+        display: flex;
+        flex-wrap: wrap;/*允许换行*/
+        justify-content: center;/*横向居中*/
+        gap: 15px;/*按钮间的间隔*/
+		margin-top: 20%;/*上内边距，增加内容与顶部的距离*/
+    }
+    .button {
+        border: 1px solid #ccc;  /*实心边框 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+        border-radius: 10px; /* 更圆润的边角 */
+        text-align: center;
+        padding: 12px 20px;
+        width: calc(25% - 20px);/*使按钮宽度适应3分之一减去间隔的宽度*/
+        min-height: 50px; /* 增加高度以适应图标 */
+        text-decoration: none;
+        color: white;
+		font-size: 16px;
+        font-weight: bold;
+        position: relative; /* 为图标定位做准备 */
+        transition: transform 0.3s; /* 动画过渡 */
+		margin: 10px; /* 添加宽度以适应每排三个的布局 */
+    }
+    .button::before {
+        content: ""; /* 伪元素用于添加图标背景 */
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .button:hover {
+        transform: translateY(-3px) scale(1.05); /* 悬停时的3D抬起效果 */
+        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+    }
+    /* 为每个按钮添加颜色 */
+    .button1 { background-color: #DA70D6; } /* 红色 */
+    .button2 { background-color: #FF6A6A; } /* 粉色 */
+    .button3 { background-color: #9c27b0; } /* 紫色 */
+    .button4 { background-color: #2196f3; } /* 蓝色 */
+    .button5 { background-color: #4caf50; } /* 绿色 */
+    .button6 { background-color: #2F4F4F; } /* 深铅灰色 */
+    .button7 { background-color: #9370DB; }
+    .button8 { background-color: #8B0000; } 
+    .button9 { background-color: #CD950C; }
+    .button10 { background-color: #32CD32; }
+    .button11 { background-color: #006400; } 
+    .button12 { background-color: #008B8B; }
+	/* 为每个按钮添加图标*/
+    
+	.button1::before { background-image: url('../images/icon/103.svg');}
+    .button2::before { background-image: url('../images/icon/54.png');} 
+	.button3::before { background-image: url('../images/icon/39.svg'); } 
+    .button4::before { background-image: url('../images/icon/44.svg'); }
+	.button5::before { background-image: url('../images/icon/38.svg'); } 
+    .button6::before { background-image: url('../images/icon/19.svg'); } 
+	
+    .button7::before { background-image: url('../images/icon/58.svg');}
+    .button8::before { background-image: url('../images/icon/129.svg');} 
+	.button9::before { background-image: url('../images/icon/9.svg'); } 
+    .button10::before { background-image: url('../images/icon/8.svg'); }
+	.button11::before { background-image: url('../images/icon/60.svg'); } 
+    .button12::before { background-image: url('../images/icon/30.svg'); } 
