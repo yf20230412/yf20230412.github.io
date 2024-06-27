@@ -67,9 +67,29 @@
       "from": "4k|auto|fhd",
       "siteUrl": "https://www.wogg.link/",
       "danMu": "弹"
-    }
+  }
   },
 
+  {
+    "key": "hipy_js_草莓秒播[密]",
+    "name": "🔞┃草莓秒播[密]",
+    "type": 3,
+    "api": "./douban/drpy3.min.js",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "./js/草莓秒播[密].js"
+  },
+  {
+    "key": "hipy_js_29片库[密]",
+    "name": "🔞┃29片库[密]",
+    "type": 3,
+    "api": "./douban/drpy3.min.js",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "./js/29片库[密].js"
+  },
   {
     "key": "hipy_js_地瓜视频[密]",
     "name": "🔞┃地瓜视频",
