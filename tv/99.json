@@ -254,6 +254,37 @@
       "ext": "./json/Movies.json"
     },
     {
+      "key": "影视大全",
+      "name": "🐉┃影视┃大全",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "playerType": 2,
+      "ext": "./json/影视大全.json"
+    },
+    {
+      "key": "网飞啦.js",
+      "name": "🅱️┃网飞┃啦",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "./js/网飞啦.js"
+    },    
+    {
+      "key": "csp_刷剧网",
+      "name": "🅱️┃刷剧┃网",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./js/刷剧网.js"
+    },
+    {
       "key": "csp_文才",
       "name": "🖍️┃文才┃影视",
       "type": 3,
@@ -263,7 +294,7 @@
       "filterable": 1,
       "ext": "./json/文才.json"
     },	
-	{
+	   {
       "key": "胖虎",
       "name": "🐯┃胖虎┃影视",
       "type": 3,
