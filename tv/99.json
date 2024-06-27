@@ -1,6 +1,6 @@
 {
 
-"spider":"https://yf1688.top/tv/custom_zy.jar;md5;dc9d04bce6ab77231f837df475f06ed6",
+"spider":"https://yf1688.top/tv/custom_zy.jar;md5;308c6979d4d83a042c2066f7d76806fb",
 
 "wallpaper":"http://www.kf666888.cn/api/tvbox/img",
 
@@ -39,17 +39,17 @@
 "sites":[
 
    {
-      "key": "豆瓣预告",
-      "name": "🎬┃电影┃预告",
+      "key": "豆豆热播",
+      "name": "公众号🔥【风言锋语88】",
       "type": 3,
-      "api": "csp_XBPQ",
-      "playerType": 2,
-      "ext": "./json/豆瓣预告.json"
+      "api": "csp_Douban",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0
     },
-
     {
       "key": "路飞搜索",
-      "name": "公众号🔥【风言锋语88】",
+      "name": "🚦┃路飞┃搜索🚀",
       "type": 3,
       "searchable": 0,
       "quickSearch": 0,
