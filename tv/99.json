@@ -44,16 +44,14 @@
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0
+      "changeable": 1
     },
     {
       "key": "路飞搜索",
       "name": "🟣路飞♦️导航🟣",
       "type": 3,
       "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0,
+      "changeable": 1
       "api": "./js/路飞搜索.js"
     },
     {
@@ -74,7 +72,8 @@
       "jar": "./jar/fty.jar",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 0,
+      "changeable": 1,
+      "timeout": 25,
       "ext": {
         "aliToken": "TVBox/token.txt",
         "quarkCookie": "TVBox/cookie.txt",
@@ -88,6 +87,10 @@
       "name": "🏭️┃厂长┃资源",
       "type": 3,
       "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10,
       "ext": "./js/厂长资源.js"
     },
     {
@@ -96,6 +99,10 @@
       "type": 3,
       "playerType": 2,
       "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10,
       "ext": "./js/南瓜.js"
     },
     {
@@ -105,7 +112,8 @@
       "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1,
+      "filterable": 1,
+      "timeout": 10,
       "ext": "./json/策驰影视.json"
     },
     {
@@ -116,6 +124,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 10,
       "ext": "./json/可可影视.json"
     },
     {
@@ -126,6 +135,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 10,
       "ext": "./js/麻雀视频.js"
     },
     {
@@ -136,7 +146,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 10,
       "ext": "./js/追剧兔.js"
     },	
     {
@@ -147,6 +157,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 10,
       "ext": "./json/98影视.json"
     },	
     {
@@ -157,6 +168,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 10,
       "ext": "./json/五五影视.json"
     },
     {
@@ -167,7 +179,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 10,
       "ext": "./js/农民影视.js"
     },	
     {
@@ -178,7 +190,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 10,
       "ext": "./js/ikanbot2.js"
     },
     {
@@ -187,9 +199,9 @@
       "api": "./douban/drpy3.min.js",
       "type": 3,
       "searchable": 1,
-	  "quickSearch": 1,
-	  "filterable": 1,
-      "timeout": 15,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10,
       "ext": "./js/一起看.js"
     },
     {
@@ -198,9 +210,9 @@
       "api": "./douban/drpy3.min.js",
       "type": 3,
       "searchable": 1,
-	  "quickSearch": 1,
-	  "filterable": 1,
-      "timeout": 15,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10,
       "ext": "./js/素白白.js"
     },
     {
@@ -211,16 +223,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 10,
       "ext": "./json/皮皮影视.json"
     },	
     {
       "key": "七新影视",
       "name": "🎨┃七新┃影视",
       "type": 3,
-      "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 10,
       "ext": "./json/七新影视.json"
     },
     {
@@ -230,7 +243,8 @@
       "api": "./douban/drpy3.min.js",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1,
+      "filterable": 1,
+      "timeout": 10,
       "ext": "./js/大师兄.js"
     },
     {
@@ -241,6 +255,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 10,
       "ext": "./json/新视觉.json"
     },
     {
@@ -251,6 +266,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/骚火影视.json"
     },	
     {
@@ -262,6 +278,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/Movies.json"
     },
     {
@@ -269,9 +286,11 @@
       "name": "🐉┃影视┃大全",
       "type": 3,
       "api": "csp_XBPQ",
+      "playerType": 2,
       "searchable": 1,
       "quickSearch": 1,
-      "playerType": 2,
+      "filterable": 1,
+      "timeout": 15,
       "ext": "./json/影视大全.json"
     },
     {
@@ -282,7 +301,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 15,
       "ext": "./js/网飞啦.js"
     },    
     {
@@ -293,6 +312,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./js/刷剧网.js"
     },
     {
@@ -303,6 +323,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/文才.json"
     },	
 	   {
@@ -310,10 +331,11 @@
       "name": "🐯┃胖虎┃影视",
       "type": 3,
       "api": "csp_XBPQ",
+      "playerType": 2,
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "playerType": 2,
+      "timeout": 15,
       "ext": "./json/胖虎影视.json"
     },	
     {
@@ -324,7 +346,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 15,
       "ext": "./js/四个圈影视.js"
     }, 
     {
@@ -336,6 +358,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/河马影视.json"
     },
     {
@@ -347,6 +370,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/韩剧兔.json"
     },
     {
@@ -357,6 +381,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/美柏.json"
     },
     {
@@ -367,7 +392,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,		
+      "timeout": 15,
       "ext": "./js/凌云影视.js"
     },	
     {
@@ -375,10 +400,10 @@
       "name": "🚆┃快看┃影视",
       "type": 3,
       "timeout": 15,
-      "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/快看影视.json"
     },
     {
@@ -389,6 +414,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/达达龟.json"
     },
     {
@@ -399,6 +425,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/乐福影视.json"
     },
     {
@@ -409,6 +436,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/奇优.json"
     },
     {
@@ -419,6 +447,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/鸭奈飞.json"
     },
     {
@@ -429,6 +458,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/奈飞TV.json"
     },
     {
@@ -439,6 +469,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/Free影视.json"
     },
     {
@@ -449,6 +480,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/北川影视.json"
     },
    {
@@ -459,6 +491,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/热播之家.json"
     },
     {
@@ -469,6 +502,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./js/18哈.js"
     },	
     {
@@ -479,6 +513,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/星辰影视.json"
     },
     {
@@ -488,7 +523,8 @@
       "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1,
+      "filterable": 1,
+      "timeout": 15,
       "ext": "./json/兄弟影视.json"
     },
     {
@@ -499,6 +535,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/影视工场.json"
     },	
     {
@@ -509,6 +546,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/爱看影院.json"
     },
     {
@@ -519,6 +557,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/TVB云播.json"
     },
     {
@@ -529,7 +568,8 @@
       "playerType": "2",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1,
+      "filterable": 1,
+      "timeout": 15,
       "ext": "./js/ddys.js"
     },
     {
@@ -538,6 +578,10 @@
       "type": 3,
       "playerType": "2",
       "api": "csp_Jianpian",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10,
       "ext": "./json/jp.json"
     },
     {
@@ -547,9 +591,9 @@
       "api": "./douban/drpy3.min.js",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1,
-      "ext": "./js/两个BT.js",
-      "timeout": 10
+      "filterable": 1,
+      "timeout": 15,
+      "ext": "./js/两个BT.js"
     },	
     {
       "key": "威士影视",
@@ -559,6 +603,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/威士影视.json"
     },
     {
@@ -569,7 +614,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 15,
       "ext": "./js/猫视界.js"
     },	
     {
@@ -580,6 +625,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/臭蛋蛋.json"
     },
     {
@@ -590,6 +636,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/超前B站.json"
     },
     {
@@ -600,6 +647,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/黑狐影视.json"
     },
     {
@@ -609,7 +657,8 @@
       "api": "csp_Xb6v",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "timeout": 15
     },
     {
       "key": "drpy_js_4KHDR",
@@ -619,6 +668,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./js/4KHDR磁力.js"
     },
     {
@@ -629,6 +679,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/电影先生.json"
     },
     {
@@ -639,6 +690,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./json/555.json"
     },	
     {
@@ -649,6 +701,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./js/LIBVIO.js"
     },
     {
@@ -659,6 +712,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./js/七喜影院.js"
     },
     {
@@ -667,7 +721,8 @@
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "searchable": 1,
-      "quickSearch": 1,
+      "changeable": 1,
+      "timeout": 10,
       "ext": "./js/采集之王[合].js?type=url&params=./json/采集静态.json"
     },
 	/*
@@ -678,6 +733,7 @@
       "api": "https://360zy.com/api.php/provide/vod?",
       "searchable": 1,
       "changeable": 1,
+      "timeout": 10,
       "categories": [
         "国产剧",
         "动作片",
@@ -715,6 +771,7 @@
       "api": "https://ikunzyapi.com/api.php/provide/vod?",
       "searchable": 1,
       "changeable": 1,
+      "timeout": 10,
       "categories": [
         "国产剧",
         "动作片",
@@ -759,8 +816,7 @@
       "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8",
       "searchable": 1,
       "changeable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
+      "timeout": 10,
       "categories": [
         "动作片",
         "爱情片",
@@ -799,8 +855,7 @@
       "type": 1,
       "searchable": 1,
       "changeable": 1,
-      "filterable": 1,
-      "quickSearch": 1,
+      "timeout": 10,
       "api": "http://sdzyapi.com/api.php/provide/vod/"
     },
     {
@@ -809,7 +864,8 @@
       "type": 1,
       "api": "http://api.xinlangapi.com/xinlangapi.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 1
+      "changeable": 1,
+      "timeout": 10
     },
     {
       "key": "快车资源",
@@ -817,7 +873,8 @@
       "type": 1,
       "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 1
+      "changeable": 1,
+      "timeout": 10
     },
     {
       "key": "天空资源",
@@ -825,12 +882,16 @@
       "type": 1,
       "api": "https://api.tiankongapi.com/api.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 1
+      "changeable": 1,
+      "timeout": 10
     },
     {
       "key": "忆梦",
       "name": "🐝┃忆梦┃采集",
       "type": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "timeout": 10,
       "api": "https://gnpt.net/api.php/provide/vod/"
     },
     {
@@ -843,8 +904,8 @@
       },
       "api": "https://hhzyapi.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
+      "changeable": 1,
+      "timeout": 10,
       "categories": [
         "内地剧",
         "动作片",
@@ -880,6 +941,9 @@
       "name": "🐝┃异界┃采集",
       "api": "csp_AppYsV2",
       "type": 3,
+      "searchable": 1,
+      "changeable": 1,
+      "timeout": 10,
       "ext": "http://ysjtv.yy365.vip/api.php/app/"
     },
 	*/
@@ -889,8 +953,8 @@
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
+      "changeable": 1,
+      "timeout": 10,
       "ext": "./json/量子资源.json"
     },
     {
@@ -899,8 +963,8 @@
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
+      "changeable": 1,
+      "timeout": 10,
       "ext": "./json/非凡资源.json"
     },
     {
@@ -908,6 +972,10 @@
       "name": "🥭┃少儿┃百忙┃无果",
       "type": 3,
       "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15,
       "ext": "./js/mgtv.js"
     },
     {
@@ -915,6 +983,10 @@
       "name": "💗┃少儿┃奇珍┃异兽",
       "type": 3,
       "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15,
       "ext": "./js/iqiyi.js"
     },
     {
@@ -922,6 +994,10 @@
       "name": "👔‍┃少儿┃优秀┃酷酷",
       "type": 3,
       "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15,
       "ext": "./js/youku.js"
     },
     {
@@ -929,6 +1005,10 @@
       "name": "🐧┃少儿┃腾云┃驾雾",
       "type": 3,
       "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15,
       "ext": "./js/qq.js"
     },
     {
@@ -937,18 +1017,26 @@
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "ext": "./js/兔小贝.js",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      }
     },
     {
       "key": "幼小衔接",
       "name": "📚┃幼小┃衔接",
       "type": 3,
       "api": "csp_Bili",      
-      "searchable": 0,
+      "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
       "ext": "./json/幼小衔接.json"
     },
     {
@@ -956,9 +1044,13 @@
       "name": "📚┃小学┃教育",
       "type": 3,
       "api": "csp_Bili",
-      "searchable": 0,
+      "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
       "ext": "./json/小学教育.json"
     },
     {
@@ -966,9 +1058,13 @@
       "name": "📚┃初中┃教育",
       "type": 3,
       "api": "csp_Bili",
-      "searchable": 0,
+      "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
       "ext": "./json/初中教育.json"
     },
     {
@@ -976,9 +1072,13 @@
       "name": "📚┃高中┃教育",
       "type": 3,
       "api": "csp_Bili",
-      "searchable": 0,
+      "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
       "ext": "./json/高中教育.json"
     },
     {
@@ -986,9 +1086,13 @@
       "name": "📚┃兴趣┃培养",
       "type": 3,
       "api": "csp_Bili",
-      "searchable": 0,
+      "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
       "ext": "./json/兴趣培养.json"
     },
     {
@@ -1050,6 +1154,13 @@
       "type": 3,
       "playerType": 2,
       "api": "./js/音乐转点播.js",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
       "ext": "./txt/MTV2.txt"
     },
     {
@@ -1059,7 +1170,11 @@
       "api": "csp_XBPQ",
       "searchable": 0,
       "quickSearch": 0,
-      "filterable": 1,
+      "changeable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
       "ext": "./json/酷奇MV.json"
     },
     {
@@ -1070,7 +1185,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 15,
       "ext": "./js/花子动漫.js"
     },
     {
@@ -1081,7 +1196,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
+      "timeout": 15,
       "ext": "./js/NT动漫.js"
     },    
     {
@@ -1091,7 +1206,8 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "timeout": 15
     },
     {
       "key": "csp_樱花",
@@ -1101,6 +1217,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "timeout": 15,
       "ext": "./js/樱花动漫.js"
     },
     {
@@ -1110,7 +1227,8 @@
       "api": "./douban/drpy3.min.js",
       "searchable": 0,
       "quickSearch": 0,
-      "filterable": 0,
+      "filterable": 1,
+      "changeable": 0,
       "style": {
         "type": "rect",
         "ratio": 1.755
@@ -1124,7 +1242,8 @@
       "api": "./douban/drpy3.min.js",
       "searchable": 0,
       "quickSearch": 0,
-      "filterable": 0,
+      "filterable": 1,
+      "changeable": 0,
       "style": {
         "type": "rect",
         "ratio": 1.755
@@ -1136,9 +1255,14 @@
       "name": "📺┃JRKAN┃直播",
       "type": 3,
       "api": "./douban/drpy3.min.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1.755
+      },
       "searchable": 0,
       "quickSearch": 0,
-      "filterable": 0,
+      "changeable": 0,
+      "timeout": 10,
       "ext": "./js/JRKAN直播.js"
     },
     {
@@ -1174,9 +1298,13 @@
       "name": "🅱️┃哔哩┃哔哩",
       "type": 3,
       "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
+      "searchable": 1,
+      "quickSearch": 1,
       "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
       "ext": "./json/Bili.json"
     },
     {
@@ -1184,9 +1312,13 @@
       "name": "🅱️┃相声┃小品",
       "type": 3,
       "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
+      "searchable": 1,
+      "quickSearch": 1,
       "filterable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
       "ext": "./json/Blixs.json"
     },
     {
