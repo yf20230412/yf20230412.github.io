@@ -51,7 +51,7 @@
       "name": "🟣路飞♦️导航🟣",
       "type": 3,
       "searchable": 0,
-      "changeable": 1
+      "changeable": 1,
       "api": "./js/路飞搜索.js"
     },
     {
