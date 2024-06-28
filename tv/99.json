@@ -63,25 +63,7 @@
       "searchable": 0,
       "changeable": 0,
       "ext":"./json/tokenm.json"
-    },	
-    {
-      "key": "玩偶哥哥",
-      "name": "🟠玩偶♦哥哥🟠",
-      "type": 3,
-      "api": "csp_WoGG",
-      "jar": "./jar/fty.jar",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "timeout": 25,
-      "ext": {
-        "aliToken": "TVBox/token.txt",
-        "quarkCookie": "TVBox/cookie.txt",
-        "from": "4k|auto|fhd",
-        "siteUrl": "https://www.wogg.link/",
-        "danMu": "弹"
-      }
-    },
+    },	    
     {
       "key": "drpy_js_厂长资源",
       "name": "🏭️┃厂长┃资源",
@@ -126,6 +108,24 @@
       "filterable": 1,
       "timeout": 10,
       "ext": "./json/可可影视.json"
+    },
+    {
+      "key": "玩偶哥哥",
+      "name": "🟠玩偶♦哥哥🟠",
+      "type": 3,
+      "api": "csp_WoGG",
+      "jar": "./jar/fty.jar",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "timeout": 25,
+      "ext": {
+        "aliToken": "TVBox/token.txt",
+        "quarkCookie": "TVBox/cookie.txt",
+        "from": "4k|auto|fhd",
+        "siteUrl": "https://www.wogg.link/",
+        "danMu": "弹"
+      }
     },
     {
       "key": "csp_麻雀视频",
