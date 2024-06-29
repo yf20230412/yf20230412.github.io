@@ -115,7 +115,7 @@
       "type": 3,
       "api": "csp_WoGG",
       "jar": "./jar/fty.jar",
-      "searchable": 1,
+      "searchable": 0,
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 25,
