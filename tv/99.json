@@ -61,7 +61,7 @@
       "api": "csp_WoGG",
       "jar": "./jar/fty.jar",
       "searchable": 0,
-      "quickSearch": 0,
+      "quickSearch": 1,
       "changeable": 1,
       "timeout": 25,
       "ext": {
@@ -1478,7 +1478,7 @@
       "api": "csp_Zhaozy",
       "searchable": 1,
       "changeable": 0,
-      "ext": "影視天下第一$$$test2$$$test2"
+      "ext": "http://127.0.0.1:9978/file/TVBox/token.txt"
     },	
     {
       "key": "小纸条",
@@ -1496,6 +1496,7 @@
       "api": "csp_Push",
       "searchable": 0,
       "changeable": 0,
+	  "ext": "http://127.0.0.1:9978/file/TVBox/token.txt",
       "timeout": 60
     },
     {
@@ -1514,6 +1515,15 @@
       "changeable": 0,
       "ext": "./json/market.json"
     },
+	/*
+    {
+      "key": "豆瓣预告",
+      "name": "🎬┃电影┃预告",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "playerType": 2,
+      "ext": "./json/豆瓣预告.json"
+    },	
     {
       "key": "csp_KungFu404",
       "name":"👩🏻‍🍳┃阿里┃设置👩🏻‍🍳",
@@ -1534,7 +1544,8 @@
       "searchable": 0,
       "changeable": 0,
       "ext":"./json/tokenm.json"
-    },	
+    },
+	*/
     {
       "key": "cc",
       "name": "🚀导航-https://yf1688.top",
