@@ -35,14 +35,12 @@
   "sites": [
 
   {
-    "key": "豆豆",
-    "name": "公众号🔥【风言锋语88】",
-    "type": 3,
-    "api": "csp_Douban",
-    "searchable": 0,
-    "quickSearch": 0,
-    "filterable": 0,
-    "ext": "./json/douban.json"
+      "key": "豆豆热播",
+      "name": "🔥公众号《风言锋语88》",
+      "type": 3,
+      "api": "csp_Douban",
+      "searchable": 0,
+      "changeable": 1
   },
   {
     "key": "贱贱",
@@ -62,8 +60,8 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "TVBox/token.txt",
-      "quarkCookie": "TVBox/cookie.txt",
+      "aliToken": "tvfan/token.txt",
+      "quarkCookie": "tvfan/cookie.txt",
       "from": "4k|auto|fhd",
       "siteUrl": "https://www.wogg.link/",
       "danMu": "弹"
@@ -483,7 +481,7 @@
     "changeable": 0,
     "ext": {
       "pan": "quark",
-      "quarkCookie": "TVBox/cookie.txt",
+      "quarkCookie": "tvfan/cookie.txt",
       "from": "4k|auto|fhd"
     }
   },
@@ -498,7 +496,7 @@
     "jar": "./jar/fty.jar",
     "ext": {
       "pan": "quark",
-      "quarkCookie": "TVBox/cookie.txt",
+      "quarkCookie": "tvfan/cookie.txt",
       "from": "4k|auto|fhd"
     }
   },
@@ -512,7 +510,7 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "TVBox/token.txt",
+      "aliToken": "tvfan/token.txt",
       "from": "4k|auto|fhd"
     }
   },
@@ -527,7 +525,7 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "TVBox/token.txt",
+      "aliToken": "tvfan/token.txt",
       "from": "4k|auto|fhd"
     }
   },
@@ -542,7 +540,7 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "TVBox/token.txt",
+      "aliToken": "tvfan/token.txt",
       "from": "4k|auto|fhd"
     }
   },
@@ -556,7 +554,7 @@
     "filterable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "TVBox/token.txt",
+      "aliToken": "tvfan/token.txt",
       "from": "4k|auto|fhd"
     }
   },

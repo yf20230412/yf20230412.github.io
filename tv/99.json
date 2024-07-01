@@ -55,14 +55,22 @@
       "api": "./js/路飞搜索.js"
     },
     {
-      "key": "网盘配置",
-      "name":"🐬网盘♦️配置🐬",
+      "key": "玩偶哥哥",
+      "name": "💜玩偶🔸哥哥💜",
       "type": 3,
-      "api": "csp_Config",
-      "jar":"./jar/pg.jar",
+      "api": "csp_WoGG",
+      "jar": "./jar/fty.jar",
       "searchable": 0,
-      "changeable": 0,
-      "ext":"./json/tokenm.json"
+      "quickSearch": 0,
+      "changeable": 1,
+      "timeout": 25,
+      "ext": {
+        "aliToken": "tvfan/token.txt",
+        "quarkCookie": "tvfan/cookie.txt",
+        "from": "4k|auto|fhd",
+        "siteUrl": "https://www.wogg.link/",
+        "danMu": "弹"
+      }
     },	    
     {
       "key": "drpy_js_厂长资源",
@@ -108,24 +116,6 @@
       "filterable": 1,
       "timeout": 10,
       "ext": "./json/可可影视.json"
-    },
-    {
-      "key": "玩偶哥哥",
-      "name": "💜玩偶🔸哥哥💜",
-      "type": 3,
-      "api": "csp_WoGG",
-      "jar": "./jar/fty.jar",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "timeout": 25,
-      "ext": {
-        "aliToken": "tvfan/token.txt",
-        "quarkCookie": "tvfan/cookie.txt",
-        "from": "4k|auto|fhd",
-        "siteUrl": "https://www.wogg.link/",
-        "danMu": "弹"
-      }
     },
     {
       "key": "csp_麻雀视频",
@@ -1393,17 +1383,6 @@
       "name": "💻┃本地┃视频",
       "type": 3,
       "api": "csp_Local"
-    },
-    {
-      "key": "csp_KungFu404",
-      "name":"👩🏻‍🍳┃阿里┃设置👩🏻‍🍳",
-      "type": 3,
-      "api": "csp_KungFu404",
-      "searchable":1,
-      "filterable": 0,
-      "changeable":0,
-      "jar":"./jar/aliyun.jar",
-      "ext":"http://127.0.0.1:9978/tvbox/token.txt+4k|fhd|auto"
     },	
     {
       "key": "米搜",
@@ -1416,7 +1395,7 @@
       "changeable": 0,
       "ext": {
         "pan": "quark",
-        "quarkCookie": "TVBox/cookie.txt",
+        "quarkCookie": "tvfan/cookie.txt",
         "from": "4k|auto|fhd"
       }
     },
@@ -1430,7 +1409,7 @@
       "quickSearch": 1,
       "changeable": 0,
       "ext": {
-        "aliToken": "TVBox/cookie.txt",
+        "aliToken": "tvfan/cookie.txt",
         "from": "4k|auto|fhd"
       }
     },
@@ -1444,7 +1423,7 @@
       "quickSearch": 1,
       "changeable": 0,
       "ext": {
-        "aliToken": "TVBox/token.txt",
+        "aliToken": "tvfan/token.txt",
         "from": "4k|auto|fhd"
       }
     },
@@ -1459,7 +1438,7 @@
       "filterable": 0,
       "changeable": 0,
       "ext": {
-        "aliToken": "TVBox/token.txt",
+        "aliToken": "tvfan/token.txt",
         "from": "4k|auto|fhd"
       }
     },
@@ -1474,7 +1453,7 @@
       "filterable": 0,
       "changeable": 0,
       "ext": {
-        "aliToken": "TVBox/token.txt",
+        "aliToken": "tvfan/token.txt",
         "from": "4k|auto|fhd"
       }
     },
@@ -1488,7 +1467,7 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": {
-        "aliToken": "TVBox/token.txt",
+        "aliToken": "tvfan/token.txt",
         "from": "4k|auto|fhd"
       }
     },
@@ -1535,6 +1514,27 @@
       "changeable": 0,
       "ext": "./json/market.json"
     },
+    {
+      "key": "csp_KungFu404",
+      "name":"👩🏻‍🍳┃阿里┃设置👩🏻‍🍳",
+      "type": 3,
+      "api": "csp_KungFu404",
+      "searchable":1,
+      "filterable": 0,
+      "changeable":0,
+      "jar":"./jar/aliyun.jar",
+      "ext":"http://127.0.0.1:9978/tvbox/token.txt+4k|fhd|auto"
+    },
+    {
+      "key": "网盘配置",
+      "name":"🐬网盘♦️配置🐬",
+      "type": 3,
+      "api": "csp_Config",
+      "jar":"./jar/pg.jar",
+      "searchable": 0,
+      "changeable": 0,
+      "ext":"./json/tokenm.json"
+    },	
     {
       "key": "cc",
       "name": "🚀导航-https://yf1688.top",
