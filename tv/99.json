@@ -48,7 +48,7 @@
     },
     {
       "key": "路飞搜索",
-      "name": "🟣路飞♦️导航🟣",
+      "name": "🥇小鱼🔹搜索🥇",
       "type": 3,
       "searchable": 0,
       "changeable": 1,
@@ -111,7 +111,7 @@
     },
     {
       "key": "玩偶哥哥",
-      "name": "🟠玩偶♦哥哥🟠",
+      "name": "💜玩偶🔸哥哥💜",
       "type": 3,
       "api": "csp_WoGG",
       "jar": "./jar/fty.jar",
@@ -120,8 +120,8 @@
       "changeable": 1,
       "timeout": 25,
       "ext": {
-        "aliToken": "TVBox/token.txt",
-        "quarkCookie": "TVBox/cookie.txt",
+        "aliToken": "tvfan/token.txt",
+        "quarkCookie": "tvfan/cookie.txt",
         "from": "4k|auto|fhd",
         "siteUrl": "https://www.wogg.link/",
         "danMu": "弹"
