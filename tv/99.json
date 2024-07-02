@@ -727,7 +727,6 @@
       "timeout": 10,
       "ext": "./js/采集之王[合].js?type=url&params=./json/采集静态.json"
     },
-	/*
     {
       "key": "360",
       "name": "🐝┃360┃秒播",
@@ -948,7 +947,6 @@
       "timeout": 10,
       "ext": "http://ysjtv.yy365.vip/api.php/app/"
     },
-	*/
     {
       "key": "量子资源",
       "name": "🧮┃量子┃资源",
