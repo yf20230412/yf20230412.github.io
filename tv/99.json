@@ -126,7 +126,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/xm.jar?ref=master",
+      "jar": "./jar/xm.jar",
       "timeout": 10
     },
     {
