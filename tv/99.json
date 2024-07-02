@@ -118,6 +118,18 @@
       "ext": "./json/可可影视.json"
     },
     {
+      "key": "csp_LiteApple",
+      "name": "🍎┃苹果┃影视💯",
+      "type": 3,
+      "playerType": "2",
+      "api": "csp_LiteApple",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/xm.jar?ref=master",
+      "timeout": 10
+    },
+    {
       "key": "csp_麻雀视频",
       "name": "🦜┃麻雀┃视频💯",
       "type": 3,
