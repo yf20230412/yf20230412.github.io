@@ -1525,7 +1525,6 @@
       "changeable": 0,
       "ext": "./json/market.json"
     },
-	/*
     {
       "key": "豆瓣预告",
       "name": "🎬┃电影┃预告",
@@ -1555,7 +1554,6 @@
       "changeable": 0,
       "ext":"./json/tokenm.json"
     },
-	*/
     {
       "key": "cc",
       "name": "🚀导航-https://yf1688.top",
