@@ -727,6 +727,7 @@
       "timeout": 10,
       "ext": "./js/采集之王[合].js?type=url&params=./json/采集静态.json"
     },
+/*
     {
       "key": "360",
       "name": "🐝┃360┃秒播",
@@ -947,6 +948,7 @@
       "timeout": 10,
       "ext": "http://ysjtv.yy365.vip/api.php/app/"
     },
+*/
     {
       "key": "量子资源",
       "name": "🧮┃量子┃资源",
@@ -1105,6 +1107,7 @@
         "分类url": "https://m.pangdo.com/{cateId}/list_{catePg}.html"
       }
     },
+/*
     {
       "key": "js_博看听书",
       "name": "📚️┃听书┃博看",
@@ -1148,6 +1151,7 @@
       "api": "./douban/drpy3.min.js",
       "ext": "./js/喜马拉雅.js"
     },
+*/
     {
       "key": "MTV转点播",
       "name": "🎸┃万首┃MTV",
@@ -1525,6 +1529,7 @@
       "changeable": 0,
       "ext": "./json/market.json"
     },
+/*
     {
       "key": "豆瓣预告",
       "name": "🎬┃电影┃预告",
@@ -1554,6 +1559,7 @@
       "changeable": 0,
       "ext":"./json/tokenm.json"
     },
+*/
     {
       "key": "cc",
       "name": "🚀导航-https://yf1688.top",
