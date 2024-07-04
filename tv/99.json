@@ -110,12 +110,12 @@
       "key": "csp_可可影视",
       "name": "🎩┃可可┃影视",
       "type": 3,
-      "api": "csp_XBPQ",
+      "api": "./douban/drpy3.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 10,
-      "ext": "./json/可可影视.json"
+      "ext": "./js/可可影视.js"
     },
     {
       "key": "csp_LiteApple",
