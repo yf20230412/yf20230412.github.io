@@ -67,7 +67,16 @@
       "danMu": "弹"
   }
   },
-
+  {
+    "key": "hipy_js_采集之王",
+    "name": "🐝┃采集┃之王💯",
+    "type": 3,
+    "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+    "searchable": 1,
+    "changeable": 1,
+    "timeout": 10,
+    "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json"
+  },
   {
     "key": "hipy_js_草莓秒播[密]",
     "name": "🔞┃草莓秒播[密]",

@@ -96,6 +96,16 @@
       "ext": "./js/南瓜.js"
     },
     {
+      "key": "hipy_js_采集之王",
+      "name": "🐝┃采集┃之王💯",
+      "type": 3,
+      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+      "searchable": 1,
+      "changeable": 1,
+      "timeout": 10,
+      "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json"
+    },
+    {
       "key": "策驰影视",
       "name": "🚅┃策驰┃影视",
       "type": 3,
@@ -216,17 +226,6 @@
       "filterable": 1,
       "timeout": 10,
       "ext": "./js/素白白.js"
-    },
-    {
-      "key": "PPTV",
-      "name": "⛵️┃皮皮┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10,
-      "ext": "./json/皮皮影视.json"
     },	
     {
       "key": "七新影视",
