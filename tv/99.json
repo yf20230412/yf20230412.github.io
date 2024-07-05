@@ -95,7 +95,7 @@
       "searchable": 1,
       "changeable": 1,
       "timeout": 20,
-      "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json"
+      "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json$1"
     },
     {
       "key": "策驰影视",
