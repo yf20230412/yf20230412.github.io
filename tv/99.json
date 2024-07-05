@@ -320,7 +320,18 @@
       "timeout": 15,
       "ext": "./json/文才.json"
     },	
-	   {
+    {
+      "key": "csp_金牌影院",
+      "name": "🥇┃金牌┃影院💯",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15,
+      "ext": "./json/金牌影院.json"
+    },
+    {
       "key": "胖虎",
       "name": "🐯┃胖虎┃影视",
       "type": 3,
