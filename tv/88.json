@@ -74,7 +74,7 @@
     "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
     "searchable": 1,
     "changeable": 1,
-    "timeout": 10,
+    "timeout": 20,
     "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json"
   },
   {
