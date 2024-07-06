@@ -35,15 +35,11 @@
 },
 {
     "group": "redirect",
-      "channels": [
-        {
-          "name": "redirect",
-          "urls": [
-            "proxy://do=live&type=live&proxy=&url="
-          ]
-        }
-      ]    
-    }
+    "channels": [{
+        "name": "redirect",
+        "urls": ["proxy://do=live&type=live&proxy=&url="]
+    }]
+}
 ],
 
 
