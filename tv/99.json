@@ -95,6 +95,15 @@
       "ext": "./js/南瓜.js"
     },
     {
+      "key": "php_hmezy",
+      "name": "🍄┃黑木┃✰耳",
+      "type": 4,
+      "api": "https://demobe.serv00.net/heimuer.php",
+      "searchable": 1,
+      "quickSearch":0,
+      "filterable":1
+    },
+    {
       "key": "hipy_js_采集之王",
       "name": "🐝┃采集┃之王💯",
       "type": 3,
@@ -1359,15 +1368,6 @@
       "filterable": 1
     },
     {
-      "key": "csp_Nbys",
-      "name": "🪜┃泥巴┃墙外🪜",
-      "type": 3,
-      "api": "csp_NiNi",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },
-    {
       "key": "Jable",
       "name": "🚷┃Jable┃墙外🪜",
       "type": 3,
@@ -1377,12 +1377,12 @@
       "filterable": 1
     },
     {
-      "key": "Miss",
-      "name": "🔞┃Miss┃墙外🪜",
+      "key": "PTT",
+      "name": "🚷┃PPt┃墙外🪜",
       "type": 3,
-      "api": "csp_Miss",
+      "api": "csp_PTT",             
       "searchable": 1,
-      "quickSearch": 1,
+      "changeable": 1,
       "filterable": 1
     },
     {
