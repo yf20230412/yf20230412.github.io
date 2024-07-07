@@ -68,12 +68,12 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "tvfan/token.txt",
-      "quarkCookie": "tvfan/cookie.txt",
-      "from": "4k|auto|fhd",
-      "siteUrl": "https://www.wogg.link/",
-      "danMu": "弹"
-  }
+        "Cloud-drive":"tvfan/Cloud-drive.txt",
+        "from": "4k|auto|fhd",
+        "siteUrl": "https://www.wogg.link/",
+        "danMu": "关"
+      },
+      "timeout": 30
   },
   {
     "key": "hipy_js_采集之王",
@@ -85,6 +85,15 @@
     "timeout": 20,
     "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json$1"
   },
+  {
+    "key": "php_madou",
+    "name": "🔞┃麻豆",
+    "type": 4,
+    "api": "https://demobe.serv00.net/madou.php",
+    "searchable": 1,
+    "quickSearch":0,
+    "filterable":0
+  },		  
   {
     "key": "hipy_js_草莓秒播[密]",
     "name": "🔞┃草莓秒播[密]",
@@ -497,10 +506,9 @@
     "quickSearch": 1,
     "changeable": 0,
     "ext": {
-      "pan": "quark",
-      "quarkCookie": "tvfan/cookie.txt",
-      "from": "4k|auto|fhd"
-    }
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
   },
   {
     "key": "夸搜",
@@ -512,10 +520,9 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "pan": "quark",
-      "quarkCookie": "tvfan/cookie.txt",
-      "from": "4k|auto|fhd"
-    }
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
   },
   {
     "key": "YiSo",
@@ -527,9 +534,9 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "tvfan/token.txt",
-      "from": "4k|auto|fhd"
-    }
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
   },
   {
     "key": "PanSou",
@@ -542,9 +549,9 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "tvfan/token.txt",
-      "from": "4k|auto|fhd"
-    }
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
   },
   {
     "key": "UpYun",
@@ -557,9 +564,9 @@
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "tvfan/token.txt",
-      "from": "4k|auto|fhd"
-    }
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
   },
   {
     "key": "PanSearch",
@@ -571,9 +578,9 @@
     "filterable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
-      "aliToken": "tvfan/token.txt",
-      "from": "4k|auto|fhd"
-    }
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
   },
   {
     "key": "csp_Token",
@@ -583,7 +590,7 @@
     "searchable": 1,
     "filterable": 1,
     "changeable": 0,
-    "ext": "http://127.0.0.1:9978/file/TVBox/token.txt",
+    "ext": "http://127.0.0.1:9978/file/TVBox/tok.txt",
     "jar": "./jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"
   },
   {

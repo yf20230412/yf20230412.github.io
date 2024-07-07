@@ -1,6 +1,6 @@
 {
 
-"spider":"https://yf1688.top/tv/custom_zy.jar;md5;308c6979d4d83a042c2066f7d76806fb",
+"spider":"https://yf1688.top/tv/custom_zy.jar",
 
 "wallpaper":"http://www.kf666888.cn/api/tvbox/img",
 
@@ -62,15 +62,14 @@
       "searchable": 0,
       "quickSearch": 1,
       "changeable": 1,
-      "timeout": 25,
       "ext": {
-        "aliToken": "tvfan/token.txt",
-        "quarkCookie": "tvfan/cookie.txt",
+        "Cloud-drive":"tvfan/Cloud-drive.txt",
         "from": "4k|auto|fhd",
         "siteUrl": "https://www.wogg.link/",
-        "danMu": "弹"
-      }
-    },	    
+        "danMu": "关"
+      },
+      "timeout": 30
+    },     
     {
       "key": "drpy_js_厂长资源",
       "name": "🏭️┃厂长┃资源",
@@ -324,17 +323,6 @@
       "filterable": 1,
       "timeout": 15,
       "ext": "./js/刷剧网.js"
-    },
-    {
-      "key": "csp_文才",
-      "name": "🖍️┃文才┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/文才.json"
     },	
     {
       "key": "csp_金牌影院",
@@ -1419,11 +1407,10 @@
       "quickSearch": 1,
       "changeable": 0,
       "ext": {
-        "pan": "quark",
-        "quarkCookie": "tvfan/cookie.txt",
-        "from": "4k|auto|fhd"
-      }
-    },
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
+	},
     {
       "key": "夸搜",
       "name": "🔍┃夸搜┃搜索",
@@ -1434,10 +1421,10 @@
       "quickSearch": 1,
       "changeable": 0,
       "ext": {
-        "aliToken": "tvfan/cookie.txt",
-        "from": "4k|auto|fhd"
-      }
-    },
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
+	},
     {
       "key": "YiSo",
       "name": "🔍┃易搜┃搜索",
@@ -1448,10 +1435,10 @@
       "quickSearch": 1,
       "changeable": 0,
       "ext": {
-        "aliToken": "tvfan/token.txt",
-        "from": "4k|auto|fhd"
-      }
-    },
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
+	},
     {
       "key": "PanSou",
       "name": "🔍┃盘搜┃搜索",
@@ -1463,10 +1450,10 @@
       "filterable": 0,
       "changeable": 0,
       "ext": {
-        "aliToken": "tvfan/token.txt",
-        "from": "4k|auto|fhd"
-      }
-    },
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
+	},
     {
       "key": "UpYun",
       "name": "🔍┃Up搜┃搜索",
@@ -1478,10 +1465,10 @@
       "filterable": 0,
       "changeable": 0,
       "ext": {
-        "aliToken": "tvfan/token.txt",
-        "from": "4k|auto|fhd"
-      }
-    },
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
+	},
     {
       "key": "PanSearch",
       "name": "🔍┃盘Se┃搜索",
@@ -1492,10 +1479,12 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": {
-        "aliToken": "tvfan/token.txt",
-        "from": "4k|auto|fhd"
-      }
-    },
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
+	},
+
+	
     {
       "key": "找資源",
       "name": "🔍┃資源┃搜索",
