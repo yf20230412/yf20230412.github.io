@@ -663,7 +663,7 @@
 {"key":"JustLive","name":"⚔️┃竞技┃直播","type":3,"api":"csp_JustLive","searchable":1,"quickSearch":1,"filterable":1},
 	
 {"key":"Aid","name":"🚑┃急救┃教学","type":3,"api":"csp_FirstAid","searchable":0,"quickSearch":0,"changeable":0,"style":{"type":"rect","ratio":3.8}},
-{"key":"php_madou","name":"🔞┃麻豆","type":4,"api":"https://demobe.serv00.net/madou.php","searchable":1,"quickSearch":0,"filterable":0},
+{"key":"php_madou","name":"🔞┃麻豆┃墙外🪜","type":4,"api":"https://demobe.serv00.net/madou.php","searchable":1,"quickSearch":0,"filterable":0},
 {"key":"PTT","name":"🚷┃PPt┃墙外🪜","type":3,"api":"csp_PTT","searchable":1,"changeable":1,"filterable":1},
 {"key":"Jable","name":"🚷┃Jable┃墙外🪜","type":3,"api":"csp_Jable","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"酷狗","name":"🐶┃酷狗┃音乐","type":3,"api":"csp_Kugou","searchable":1,"changeable":0},
