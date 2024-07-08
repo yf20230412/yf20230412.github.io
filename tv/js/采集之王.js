@@ -235,10 +235,10 @@ var rule = {
                 vod_content: rule.update_info.trim(),
                 vod_name: '更新日志',
                 type_name: '更新日志',
-                vod_pic: 'https://resource-cdn.tuxiaobei.com/video/FtWhs2mewX_7nEuE51_k6zvg6awl.png',
+                vod_pic: 'https://download.kstore.space/download/9202/TVBox/img/怦然心动.png',
                 vod_remarks: `版本:${rule.version}`,
                 vod_play_from: '小鱼在线',
-                vod_play_url: '嗅探播放$https://download.kstore.space/download/4645/MP4/采集.mp4',
+                vod_play_url: '嗅探播放$https://download.kstore.space/download/9202/TVBox/videos/SNH48MV.mp4',
                 //vod_play_url: '随机小视频$http://api.yujn.cn/api/zzxjj.php',
             };
         } else {
