@@ -4,10 +4,10 @@
     "list": [
       {
 
-		"name": "接口导航",  
-        "url": "https://download.kstore.space/download/4645/img/zsm.jpg",
-        "icon": "https://download.kstore.space/download/4645/img/zsm.jpg",
-		"version": "https://yf1688.top"
+		"name": "微信公众号",  
+        "url": "",
+        "icon": "https://download.kstore.space/download/4645/img/227.png",
+		"version": "风言锋语88"
       }
     ]
   },
@@ -26,19 +26,19 @@
         "name": "《EasyBox》",
         "url": "https://download.kstore.space/download/4645/apk/EasyBox.apk",
         "icon": "https://download.kstore.space/download/4645/img/251.png",
-        "version": "手机_1.3.9版"
+        "version": "手机版"
       },	
  {
         "name": "《影迷》手机版",
         "url": "https://download.kstore.space/download/4645/apk/影迷.apk",
         "icon": "https://download.kstore.space/download/4645/img/250.png",
-        "version": "手机_2.5.2版"
+        "version": "手机版"
       },	
  {
         "name": "《MBox》",
         "url": "https://download.kstore.space/download/4645/apk/MBox.apk",
         "icon": "https://download.kstore.space/download/4645/img/235.png",
-        "version": "手机_1.1.0版"
+        "version": "手机版"
       },	
  {
         "name": "《影视仓》",
@@ -56,7 +56,7 @@
         "name": "《影视仓》",
         "url": "https://download.kstore.space/download/4645/apk/影视仓TV版.apk",
         "icon": "https://download.kstore.space/download/4645/img/258.png",
-        "version": "TV_5.0.30版"
+        "version": "TV内置版"
       },			
  {
         "name": "《ok影视》",
@@ -70,7 +70,7 @@
         "icon": "https://download.kstore.space/download/4645/img/242.png",
         "version": "TV_安卓4x版"
       }			
-	    ]
+	]
   },
 
 
@@ -178,13 +178,7 @@
 	
 	{
         "name": "本地包（默认在根目录Download文件夹内）",
-        "list": [
-            {
-                "name": "TVBox本地包",
-                "url": "https://cn.kstore.space/download/4645/zip/风言锋语88.zip",
-                "icon": "https://download.kstore.space/download/4645/img/227.png",
-				 "version": "v20240606更新"
-            },
+        "list": [            
             {
                 "name": "嗅探X5离线TV版",
                 "url": "https://cn.kstore.space/download/4645/apk/X5离线版.apk",
