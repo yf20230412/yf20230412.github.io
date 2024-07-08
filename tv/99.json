@@ -654,6 +654,7 @@
 {"key":"兴趣培养","name":"📚┃兴趣┃培养","type":3,"api":"csp_Bili","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/兴趣培养.json"},
 {"key":"csp_Bili","name":"🅱️┃哔哩┃哔哩","type":3,"api":"csp_Bili","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Bili.json"},
 {"key":"相声小品","name":"🅱️┃相声┃小品","type":3,"api":"csp_Bili","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Blixs.json"},
+{"key":"软件","name":"🅱️┃软件┃教程","type": 3,"api":"csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 1,"ext":"./json/软件教程.json"},
 	
 {"key":"csp_嘟嘟短剧","name":"📱┃嘟嘟┃短剧","type":3,"api":"csp_XBPQ","ext":{"分类":"全部$qb#言情$yq#古代$dg#都市$ds","分类url":"https://m.pangdo.com/{cateId}/list_{catePg}.html"}},
 {"key":"短视频","name":"📱┃聚短┃视频","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"filterable":1,"ext":"./json/短视频.json"},
