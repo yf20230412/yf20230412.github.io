@@ -137,6 +137,27 @@
       "timeout": 10
     },
     {
+      "key": "csp_毒蛇电影",
+      "name": "🐍┃毒蛇┃影视💯",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10,
+      "ext": "./js/毒蛇电影[优].js"
+    },
+    {
+      "key": "新感觉",
+      "name": "🐎┃感觉┃App💯",
+      "type": 3,
+      "api": "csp_AppYsV2",      
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext":"http://27.54.236.194:6821/api.php/app/"
+    },
+    {
       "key": "csp_麻雀视频",
       "name": "🦜┃麻雀┃视频💯",
       "type": 3,
