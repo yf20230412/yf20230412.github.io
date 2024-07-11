@@ -10,6 +10,7 @@
 		'images/background8.jpg',
 		'images/background9.jpg',
 		'images/background10.jpg',
+		'images/background11.jpg',
         // 添加更多图片路径...
     ];
 
