@@ -1131,7 +1131,7 @@ function forceOrder(lists, key, option) {
 
 let VODS = [];// 一级或者搜索需要的数据列表
 let VOD = {};// 二级的单个数据
-let TABS = [];// 二级的自定义线路列表 如: TABS=['道长在线','道长在线2']
+let TABS = [];// 二级的自定义线路列表 如: TABS=['🌺风言锋语88🌺1','🌺风言锋语88🌺2']
 let LISTS = [];// 二级的自定义选集播放列表 如: LISTS=[['第1集$http://1.mp4','第2集$http://2.mp4'],['第3集$http://1.mp4','第4集$http://2.mp4']]
 
 /**
@@ -2558,7 +2558,7 @@ function detailParse(detailObj) {
     // console.log(MY_URL);
     // setItem('MY_URL',MY_URL);
     if (p === '*') {
-        vod.vod_play_from = '道长在线';
+        vod.vod_play_from = '🌺风言锋语88🌺';
         vod.vod_remarks = detailUrl;
         vod.vod_actor = '没有二级,只有一级链接直接嗅探播放';
         vod.vod_content = MY_URL;
@@ -2676,7 +2676,7 @@ function detailParse(detailObj) {
             }
             console.log(JSON.stringify(playFrom));
         } else {
-            playFrom = ['道长在线']
+            playFrom = ['🌺风言锋语88🌺']
         }
         vod.vod_play_from = playFrom.join(vod_play_from);
 
