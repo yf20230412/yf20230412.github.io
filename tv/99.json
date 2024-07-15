@@ -69,7 +69,18 @@
         "danMu": "关"
       },
       "timeout": 30
-    },     
+    },
+    {
+      "key": "csp_LiteApple",
+      "name": "🍎┃苹果┃影视💯",
+      "type": 3,
+      "playerType": "2",
+      "api": "csp_LiteApple",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    },
     {
       "key": "drpy_js_厂长资源",
       "name": "🏭️┃厂长┃资源",
@@ -117,25 +128,12 @@
       "key": "csp_可可影视",
       "name": "🎩┃可可┃影视",
       "type": 3,
-      "api": "./douban/drpy3.min.js",
+      "api": "csp_Keke",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "timeout": 10,
-      "ext": "./js/可可影视.js"
-    },
-    {
-      "key": "csp_LiteApple",
-      "name": "🍎┃苹果┃影视💯",
-      "type": 3,
-      "playerType": "2",
-      "api": "csp_LiteApple",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "jar": "./jar/xm.jar",
       "timeout": 10
-    },
+    },    
     {
       "key": "csp_毒蛇电影",
       "name": "🐍┃毒蛇┃影视💯",
@@ -202,15 +200,15 @@
       "ext": "./js/LIBVIO.js"
     },
     {
-      "key": "csp_桃子影视",
-      "name": "🍑┃桃子┃影视💯",
+      "key": "忍者影视",
+      "name": "🥷🏻┃忍者┃影视",
       "type": 3,
-      "api": "./douban/drpy3.min.js",
+      "api": "csp_AppRZ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "timeout": 10,
-      "ext": "./js/桃子影视.js"
+      "ext": "http://rzys.xyz/",
+      "timeout": 15
     },	
     {
       "key": "hipy_js_采集之王",
@@ -441,12 +439,11 @@
       "key": "csp_Free",
       "name": "👌┃Free┃影视",
       "type": 3,
-      "api": "csp_XBPQ",
+      "api": "csp_FreeOK",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/Free影视.json"
+      "timeout": 15
     },
    {
       "key": "热播之家",
@@ -638,28 +635,41 @@
       "ext": "./js/ikanbot2.js"
     },
     {
-      "key": "奈飞影视",
-      "name": "🦤┃鸭奈┃✰飞",
+      "key": "剧圈影视",
+      "name": "⭕┃剧圈┃影视",
       "type": 3,
-      "api": "csp_XYQHiker",
+      "api": "csp_Juqq",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/鸭奈飞.json"
+      "filterable": 1
     },
     {
-      "key": "奈飞中文",
-      "name": "🛩️┃奈飞┃秒播",
+      "key": "毛驴影视",
+      "name": "🫏┃毛驴┃影视",
       "type": 3,
-      "api": "csp_XYQHiker",
+      "api": "csp_MaoLv",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/奈飞TV.json"
+      "filterable": 1
+    },
+    {
+      "key": "圣城影视",
+      "name": "🏘️┃圣城┃影视",
+      "type": 3,
+      "api": "csp_SC1080",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "疯狗影视",
+      "name": "🐕┃疯狗┃影视",
+      "type": 3,
+      "api": "csp_FengGo",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
     },	
-	
 {"key":"芒果","name":"🥭┃少儿┃百忙┃无果","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/mgtv.js"},
 {"key":"奇艺","name":"💗┃少儿┃奇珍┃异兽","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/iqiyi.js"},
 {"key":"优酷","name":"👔‍┃少儿┃优秀┃酷酷","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/youku.js"},
