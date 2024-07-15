@@ -105,15 +105,6 @@
       "ext": "./js/南瓜.js"
     },
     {
-      "key": "php_hmezy",
-      "name": "🍄┃黑木┃✰耳",
-      "type": 4,
-      "api": "https://demobe.serv00.net/heimuer.php",
-      "searchable": 1,
-      "quickSearch":0,
-      "filterable":1
-    },
-    {
       "key": "策驰影视",
       "name": "🚅┃策驰┃影视",
       "type": 3,
@@ -209,17 +200,7 @@
       "filterable": 1,
       "ext": "http://rzys.xyz/",
       "timeout": 15
-    },	
-    {
-      "key": "hipy_js_采集之王",
-      "name": "🐝┃采集┃之王💯",
-      "type": 3,
-      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
-      "searchable": 1,
-      "changeable": 1,
-      "timeout": 20,
-      "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json$1"
-    },	
+    },		
     {
       "key": "98影视",
       "name": "🍷┃玖八┃影视",
@@ -670,6 +651,26 @@
       "quickSearch": 1,
       "filterable": 1
     },	
+    {"key": "360zy",
+    "name":"🐝┃360┃采集",
+    "type": 1,
+  "api":"https://360zy.com/api.php/provide/vod?",
+    "searchable": 1,
+    "changeable": 1,
+    "categories": ["国产剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","古装片","悬疑片","犯罪片","灾难片","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日韩动漫","现代都市","脑洞悬疑","年代穿越","古装仙侠","女频恋爱","成长逆袭","反转爽剧"
+      ]
+    },
+    {
+      "key": "hipy_js_采集之王",
+      "name": "🐝┃采集┃之王💯",
+      "type": 3,
+      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+      "searchable": 1,
+      "changeable": 1,
+      "timeout": 20,
+      "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json$1"
+    },
+
 {"key":"芒果","name":"🥭┃少儿┃百忙┃无果","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/mgtv.js"},
 {"key":"奇艺","name":"💗┃少儿┃奇珍┃异兽","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/iqiyi.js"},
 {"key":"优酷","name":"👔‍┃少儿┃优秀┃酷酷","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/youku.js"},
