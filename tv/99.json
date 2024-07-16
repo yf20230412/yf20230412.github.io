@@ -158,17 +158,6 @@
       "ext": "./js/麻雀视频.js"
     },
     {
-      "key": "追剧兔",
-      "name": "🐰┃追剧┃兔兔",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10,
-      "ext": "./js/追剧兔.js"
-    },
-    {
       "key": "csp_Bttoo",
       "name": "✌️┃比特┃直连",
       "type": 3,
@@ -244,18 +233,7 @@
       "filterable": 1,
       "timeout": 10,
       "ext": "./js/素白白.js"
-    },	
-    {
-      "key": "七新影视",
-      "name": "🎨┃七新┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10,
-      "ext": "./json/七新影视.json"
-    },
+    },	 
     {
       "key": "大师兄影视",
       "name": "🧙🏻‍♂️┃大师┃✰兄",
@@ -280,7 +258,7 @@
     },
     {
       "key": "Movies",
-      "name": "👽┃Movies┃影视",
+      "name": "👽┃Mos┃影视",
       "type": 3,
       "api": "csp_XBPQ",
       "playerType": 2,
