@@ -301,18 +301,7 @@
       "filterable": 1,
       "timeout": 15,
       "ext": "./json/影视大全.json"
-    },
-    {
-      "key": "网飞啦.js",
-      "name": "🅱️┃网飞┃✰啦",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./js/网飞啦.js"
-    },    
+    },   
     {
       "key": "csp_刷剧网",
       "name": "🅱️┃刷剧┃✰网",
@@ -323,19 +312,7 @@
       "filterable": 1,
       "timeout": 15,
       "ext": "./js/刷剧网.js"
-    },	
-    {
-      "key": "胖虎",
-      "name": "🐯┃胖虎┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "playerType": 2,
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/胖虎影视.json"
-    },	
+    },
     {
       "key": "四个圈",
       "name": "🍩┃四圈┃影视",
@@ -372,51 +349,6 @@
       "ext": "./json/韩剧兔.json"
     },
     {
-      "key": "美柏",
-      "name": "📷┃美柏┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/美柏.json"
-    },
-    {
-      "key": "drpy_js_凌云影视",
-      "name": "🥚┃凌云┃影视",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./js/凌云影视.js"
-    },	
-    {
-      "key": "csp_快看影视",
-      "name": "🚆┃快看┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "timeout": 15,
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/快看影视.json"
-    },
-    {
-      "key": "csp_乐福影视",
-      "name": "🧧┃乐福┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/乐福影视.json"
-    },
-    {
       "key": "csp_Free",
       "name": "👌┃Free┃影视",
       "type": 3,
@@ -438,28 +370,6 @@
       "ext": "./json/热播之家.json"
     },
     {
-      "key": "星辰影视",
-      "name": "🌟┃星辰┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/星辰影视.json"
-    },
-    {
-      "key": "兄弟",
-      "name": "👬┃兄弟┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/兄弟影视.json"
-    },
-    {
       "key": "csp_影视工场",
       "name": "🏗┃影视┃工场",
       "type": 3,
@@ -470,28 +380,6 @@
       "timeout": 15,
       "ext": "./json/影视工场.json"
     },	
-    {
-      "key": "csp_爱看影院",
-      "name": "🔭┃爱看┃影院",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/爱看影院.json"
-    },
-    {
-      "key": "csp_TVB",
-      "name": "🌤┃TVB┃云播",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/TVB云播.json"
-    },
     {
       "key": "csp_DiDuan",
       "name": "🛸┃低端┃直连",
@@ -517,28 +405,6 @@
       "ext": "./json/jp.json"
     },
     {
-      "key": "猫视界",
-      "name": "😻┃猫咪┃视界",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./js/猫视界.js"
-    },	
-    {
-      "key": "csp_臭蛋蛋",
-      "name": "🐣┃臭蛋┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/臭蛋蛋.json"
-    },
-    {
       "key": "csp_超前",
       "name": "🥇┃超前┃点播",
       "type": 3,
@@ -548,17 +414,6 @@
       "filterable": 1,
       "timeout": 15,
       "ext": "./json/超前B站.json"
-    },
-    {
-      "key": "csp_黑狐影视",
-      "name": "🦊┃黑狐┃影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/黑狐影视.json"
     },
     {
       "key": "6V新磁力",
@@ -604,17 +459,6 @@
       "timeout": 10,
       "ext": "./js/农民影视.js"
     },	
-    {
-      "key": "爱看机器人",
-      "name": "🤖┃爱看┃机器",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10,
-      "ext": "./js/ikanbot2.js"
-    },
     {
       "key": "剧圈影视",
       "name": "⭕┃剧圈┃影视",
