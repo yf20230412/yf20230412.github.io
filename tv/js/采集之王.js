@@ -188,7 +188,7 @@ var rule = {
             vod_name: '更新日志',
             vod_id: 'update_info',
             vod_remarks: `版本:${rule.version}`,
-            vod_pic: 'https://download.kstore.space/download/4645/img/227.png'
+            vod_pic: 'https://download.kstore.space/download/4645/img/风言锋语.png'
         }];
         VODS = [];
         if (rule.classes) {
