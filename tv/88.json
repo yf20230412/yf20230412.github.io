@@ -84,16 +84,7 @@
     "changeable": 1,
     "timeout": 20,
     "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json$1"
-  },
-  {
-    "key": "php_madou",
-    "name": "🔞┃麻豆",
-    "type": 4,
-    "api": "https://demobe.serv00.net/madou.php",
-    "searchable": 1,
-    "quickSearch":0,
-    "filterable":0
-  },		  
+  },  
   {
     "key": "hipy_js_草莓秒播[密]",
     "name": "🔞┃草莓秒播[密]",
