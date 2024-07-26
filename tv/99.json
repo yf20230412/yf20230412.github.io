@@ -105,6 +105,29 @@
       "ext": "./js/南瓜.js"
     },
     {
+      "key": "哔嘀影视",
+      "name": "💦┃哔嘀┃影视💯",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10,
+      "ext": "./js/哔嘀影视[优].js"
+    },
+    {
+      "key": "蜥蜴影视",
+      "name": "🦎┃蜥蜴┃影视💯",
+      "type": 3,
+      "playerType": 2,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "timeout": 10,
+      "ext": "./js/蜥蜴影视[优].js"
+    },
+    {
       "key": "策驰影视",
       "name": "🚅┃策驰┃影视",
       "type": 3,
