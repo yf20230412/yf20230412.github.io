@@ -7,7 +7,7 @@
  * 传参 ?type=url&params=../json/采集[zy]静态.json$1
  * 传参 ?type=url&params=../json/采集[密]静态.json$1
  * hipy-server支持@改名比如:
- * 传参 ?type=url&params=../json/采集静态.json$1@采王道长[合]
+ * 传参 ?type=url&params=../json/采集静态.json$1@采集之王[合]
  * 传参 ?type=url&params=../json/采集[zy]静态.json$1@采王zy[密]
  * 传参 ?type=url&params=../json/采集[密]静态.json@采王成人[密]
  * [{"name":"暴风资源","url":"https://bfzyapi.com","parse_url":""},{"name":"飞刀资源","url":"http://www.feidaozy.com","parse_url":""},{"name":"黑木耳资源","url":"https://www.heimuer.tv","parse_url":""}]
@@ -18,8 +18,11 @@ globalThis.getRandomItem = function (items) {//从列表随机取出一个元素
 var rule = {
     title: '采集之王[合]',
     author: '🌺风言锋语88🌺',
-    version: '0705 beta16',
+    version: '20240706 beta17',
     update_info: `
+20240706:
+1.静态json数据支持cate_excludes分类名称列表过滤无数据分类
+2.更新采集分类生成器增加过滤筛选模式
 20240705:
 1.支持传参json后面增加$1 这样的额外标识，用于搜索结果精准匹配
 2.支持传参json后面增加$1$1 这样的额外标识，用于强制获取搜索图片。$1$不显示图片。默认是搜索强制有图片的[已实现详情页请求使用批量]
@@ -36,7 +39,7 @@ var rule = {
 资源站部分大分类下无数据很正常，可以自行编辑json里cate_exclude属性排除掉自己测试过无数据的分类(小程序无法自动识别，只能人工测好哪些分类无数据)
 `.trim(),
     host: '',
-    homeTid: 'https://json.heimuer.xyz/index.php/vod/type/id/13.html', // 首页推荐。一般填写第一个资源站的想要的推荐分类的id.可以空
+    homeTid: '', // 首页推荐。一般填写第一个资源站的想要的推荐分类的id.可以空
     homeUrl: '/api.php/provide/vod/?ac=detail&t={{rule.homeTid}}',
     detailUrl: '/api.php/provide/vod/?ac=detail&ids=fyid',
     searchUrl: '/api.php/provide/vod/?wd=**&pg=#TruePage##page=fypage',
@@ -114,6 +117,7 @@ var rule = {
                     searchable: it.searchable !== 0,
                     api: it.api || '',
                     cate_exclude: it.cate_exclude || '',
+                    cate_excludes: it.cate_excludes || [],
                     // class_name: it.class_name || '',
                     // class_url: it.class_url || '',
                 };
@@ -125,7 +129,9 @@ var rule = {
                     } else {
                         json1 = JSON.parse(request(urljoin(_obj.type_id, _obj.api || rule.classUrl))).class;
                     }
-                    if (_obj.cate_exclude) {
+                    if (_obj.cate_excludes && Array.isArray(_obj.cate_excludes) && _obj.cate_excludes.length > 0) {
+                        json1 = json1.filter(cl => !_obj.cate_excludes.includes(cl.type_name));
+                    } else if (_obj.cate_exclude) {
                         json1 = json1.filter(cl => !new RegExp(_obj.cate_exclude, 'i').test(cl.type_name));
                     }
                     rule.filter[_obj.type_id] = [{
@@ -239,7 +245,7 @@ var rule = {
                 vod_remarks: `版本:${rule.version}`,
                 vod_play_from: '小鱼在线',
                 vod_play_url: '嗅探播放$https://download.kstore.space/download/9202/TVBox/videos/SNH48MV.mp4',
-                //vod_play_url: '随机小视频$http://api.yujn.cn/api/zzxjj.php',
+              //  vod_play_url: '随机小视频$http://api.yujn.cn/api/zzxjj.php',
             };
         } else {
             if (rule.classes) {
