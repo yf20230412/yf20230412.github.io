@@ -102,7 +102,6 @@
       "type": 3,
       "api": "csp_YCyz",
       "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master",		
-      "timeout": 15,
       "playerType": 1,
       "searchable": 1,
       "quickSearch": 1,
@@ -110,15 +109,17 @@
       "timeout": 15		
     },	
     {
-      "key": "天天影视",
-      "name": "🌥️┃天天┃影视",
+      "key": "文采",
+      "name": "💮┃文采┃秒播",
       "type": 3,
-      "api": "csp_AppTT",
+      "api": "csp_Jpys",
+      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master",		
+      "playerType": 2,
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10
-    },
+      "changeable": 1,
+      "timeout": 15			
+    },	
     {
       "key": "明日影视",
       "name": "☀️┃明日┃影视",
@@ -171,19 +172,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 10
-    },    
-
-    {
-      "key": "忍者影视",
-      "name": "🥷🏻┃忍者┃影视",
-      "type": 3,
-      "api": "csp_AppRZ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "http://rzys.xyz/",
-      "timeout": 15
-    },		
+    },    	
     {
       "key": "drpy_js_一起看",
       "name": "👭┃一起┃App",
@@ -480,6 +469,20 @@
         "danmu": true
       },
       "jar": "./jar/danmu.jar"
+    },
+    {
+      "key": "配置中心",
+      "name": "🐬网盘♦️配置🐬",
+      "type": 3,
+      "api": "csp_Config",
+      "searchable": 0,
+      "changeable": 0,
+      "indexs": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./jar/danmu.jar"
     },		
     {
       "key": "疯狗影视",
@@ -489,6 +492,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
+    },	
+    {
+      "key": "csp_PTT",
+      "name": "🎁┃PTT┃合集💯",
+      "type": 3,
+      "playerType": "2",
+      "api": "csp_PTT",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15
     },	
     {
       "key": "hipy_js_采集之王",
@@ -543,8 +557,6 @@
 {"key":"PanSou","name":"🔍┃盘搜┃搜索","type":3,"api":"csp_PanSou","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"UpYun","name":"🔍┃Up搜┃搜索","type":3,"api":"csp_UpYun","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"PanSearch","name":"🔍┃盘Se┃搜索","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"filterable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"找資源","name":"🔍┃資源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt"},
-{"key":"小纸条","name":"🔍┃纸条┃搜索","type":3,"api":"csp_XiaoZhiTiao","searchable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt"},
 {"key":"push_agent","name":"📲┃手机┃推送","type":3,"api":"csp_Push","jar":"./jar/fty.jar","searchable":0,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"cc","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_XPath","searchable":0,"quickSearch":0,"filterable":0},
 {"key":"AD","name":"🚦请勿相信任何广告","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"filterable":0}
