@@ -1,66 +1,42 @@
 {
 	
-"warningText": "关注微信公众号:《风言锋语88》，获取更多信息，以下排名不分先后",
-	
-"urls":[	
-
-{"url":"https://download.kstore.space/download/4645/99.json","name":"🐟小鱼在线┃KS影视🐟"},
-
-{"url":"https://yf1688.top/tv/99.json","name":"🍄小鱼在线┃ZY影视🍄"},	
+"urls":[
+  
+{"url":"https://download.kstore.space/download/4645/99.json","name":"🐟小鱼|KS影视🐟"},	
+  
+{"url":"https://yf1688.top/tv/99.json","name":"🍄小鱼在线┃ZY影视🍄"},
 	
 {"url":"http://饭太硬.com/tv","name":"🍚小鱼在线┃饭太坚硬🍚"},
 
-{"url":"http://tvbox.王二小放牛娃.top","name":"🐮小鱼在线┃放牛线路🐮"},
-
-{"url":"http://肥猫.com","name":"🐼小鱼在线┃肥猫美妞🐼"},	
+{"url":"http://tvbox.王二小放牛娃.top","name":"🐮小鱼在线┃放牛线路🐮"},	
+  
+{"url":"http://肥猫.com","name":"🐼小鱼在线┃肥猫美妞🐼"},  
 	
-{"url":"http://rihou.cc:55/天天开心","name":"🥰小鱼在线┃天天开心🥰"},	
-	
-{"url":"http://www.mpanso.com/小米/DEMO.json","name":"🌾小鱼在线┃神秘小米🌾"},	
-
+{"url":"http://ttkx.live:55/天天开心","name":"🥰小鱼在线┃天天开心🥰"},	
+  
 {"url":"http://我不是.摸鱼儿.top","name":"🐋小鱼在线┃摸鱼线路🐋"},
 
+{"url":"http://ok321.top/tv","name":"🆗小鱼在线┃OK线路🆗"},
+	
+{"url":"http://www.mpanso.com/小米/DEMO.json","name":"🌾小鱼在线┃神秘小米🌾"},	
+  
 {"url":"https://tv.nxog.top/m/111.php?ou=公众号欧歌app&mz=index&jar=index&123&b=tv","name":"🍓小鱼在线┃讴歌线路🍓"},
+  
+{"url":"https://gitee.com/dongchenys/liu/raw/master/hb.json","name":"🌞小鱼在线┃东辰线路🌞"},
 
-
-{"url":"https://gitlab.com/duomv/dzhipy/raw/main/index.json","name":"🎎小鱼在线┃道长线路🎎"},	
-
-{"url":"https://gh.yf1688.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json","name":"🌤️小鱼在线┃高天流云🌤️"},	
+{"url":"https://gh.yf1688.top/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json","name":"🌤️小鱼在线┃高天流云🌤️"},	
 
 {"url":"https://github.moeyy.xyz/raw.githubusercontent.com/PizazzGY/TVBox/main/api.json","name":"🎩小鱼在线┃潇洒线路🎩"},
 	
-{"url": "https://gh.yf1688.top/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json","name": "🎲小鱼在线|南风线路🎲"},
+{"url": "https://gh.yf1688.top/raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json","name": "🎲小鱼在线|南风线路🎲"},
 
+{"url":"","name":"--👇以下是个人专用本地仓👇--"},	
 
-{"url":"http://ok321.top/tv","name":"🆗小鱼在线┃OK线路🆗"},
+{"url":"assets://box/99.json","name":"🛑OK影视┃assets单线🛑"},		
 
-{"url":"http://o.nxog.top/m/111.php?ou=公众号欧歌","name":"🍓小鱼在线┃讴歌线路🍓"},
+{"url": "clan://localhost/风言锋语88/风言锋语/99.json","name": "🐟小鱼本地┃影视频道💚"},
+
+{"url":"clan://localhost/风言锋语88/22.json","name":"🐟小鱼自用┃本地多线💚"}
 	
-{"url":"https://gitee.com/kevinr/tvbox/raw/master/soeasy/config.json","name":"🍄小鱼在线┃SoEasy同学🍄"},
-
-{"url":"https://gitee.com/dongchenys/liu/raw/master/hb.json","name":"🍭小鱼在线┃东辰线路🍭"},
-
-{"url":"http://rihou.cc:88/荷城茶秀","name":"☕小鱼在线┃荷城茶秀☕"},
-
-{"url": "https://codeberg.org/Xym/ymz/raw/branch/main/夜猫子","name":"😻小鱼在线|夜猫线路😻"},
-
-{"url": "https://bjq.n13.club/feimao.json","name":"🐼小鱼在线|肥猫T4🐼"},
-
-
-
-{"url": "https://download.kstore.space/download/4645/88.bmp","name": "🔥小鱼在线|ZY动漫🔥"},
-
-	
-{"url":"","name":"--👇风言锋语本地仓👇--"},
-
-{"url":"clan://localhost/风言锋语88/风言锋语/99.json","name":"🐟小鱼本地┃影视频道💚"},	
-
-{"url":"assets://box/99.json","name":"🛑OK影视┃assets单线🛑"},
-
-{"url":"assets://a","name":"🛑OK影视┃assets多线🛑"},		
-
-{"url":"clan://localhost/风言锋语88/22.json","name":"🐟OK影视┃本地多线💚"}
-
 ]
-
 }
