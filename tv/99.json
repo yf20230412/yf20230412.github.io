@@ -89,18 +89,29 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 10
-    }, 
+    },  
     {
-      "key": "厂长资源",
-      "name": "🏭️┃厂长┃资源🌺",
+      "key": "文采",
+      "name": "🧃┃文采┃秒播💯",
       "type": 3,
-      "api": "./douban/drpy3.min.js",
+      "api": "csp_Jpys",
+      "jar": "./jar/fty.jar",		
+      "playerType": 2,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "timeout": 10		
+    },
+    {
+      "key": "桃子影视",
+      "name": "🍑┃桃子┃影视💯",
+      "type": 3,
+      "api": "csp_Taozi",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "timeout": 20,
-      "ext": "./js/厂长资源.js"
-    },
+      "timeout": 10
+    },   
     {
       "key": "南瓜",
       "name": "🎃┃南瓜┃App🌺",
@@ -161,6 +172,17 @@
       "timeout": 10
     }, 
     {
+      "key": "厂长资源",
+      "name": "🏭️┃厂长┃资源🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 20,
+      "ext": "./js/厂长资源.js"
+    },
+    {
       "key": "原创",
       "name": "✨┃原创┃不卡💯",
       "type": 3,
@@ -171,19 +193,7 @@
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 10
-    },
-    {
-      "key": "文采",
-      "name": "🧃┃文采┃秒播💯",
-      "type": 3,
-      "api": "csp_Jpys",
-      "jar": "./jar/fty.jar",		
-      "playerType": 2,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "timeout": 10		
-    },
+    },    
     {
       "key": "在线之家",
       "name": "🏡┃在线┃之家💯",
@@ -195,17 +205,7 @@
       "changeable": 1,
       "ext": "https://www.zxzjhd.com/",
       "timeout": 10		
-    },
-    {
-      "key": "桃子影视",
-      "name": "🍑┃桃子┃影视💯",
-      "type": 3,
-      "api": "csp_Taozi",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10
-    },	
+    },    	
     {
       "key": "快看影视",
       "name": "👀┃快看┃影视💯",

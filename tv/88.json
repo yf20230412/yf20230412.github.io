@@ -106,16 +106,6 @@
     "ext": "./js/地瓜视频[密].js"
   },
   {
-    "key": "hipy_js_老司视频[密]",
-    "name": "🔞┃老司视频",
-    "type": 3,
-    "api": "./douban/drpy3.min.js",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 1,
-    "ext": "./js/老司视频[密].js"
-  },
-  {
     "key": "hipy_js_九妖仓库[密]",
     "name": "🔞┃九妖仓库",
     "type": 3,
@@ -134,16 +124,6 @@
     "quickSearch": 1,
     "filterable": 1,
     "ext": "./js/绿色仓库[密].js"
-  },
-  {
-    "key": "hipy_js_R18撸[密]",
-    "name": "🔞┃R18撸",
-    "type": 3,
-    "api": "./douban/drpy3.min.js",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 1,
-    "ext": "./js/R18撸[密].js"
   },	  
   {
     "key": "hipy_js_在线小片[密]",
