@@ -78,7 +78,25 @@
       "searchable": 1,
       "changeable": 0,
       "ext": "./js/短剧网.js"
-    },  
+    }, 
+    {
+      "key": "4K剧院",
+      "name": "🏆┃4K┃剧院🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "changeable": 0,
+      "ext": "./js/4K剧院.js"
+    },
+    {
+      "key": "4KAV",
+      "name": "🏆┃4KAV┃影视🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "changeable": 0,
+      "ext": "./js/4KAV.js"
+    }, 
     {
       "key": "csp_LiteApple",
       "name": "🍎┃苹果┃影视💯",
