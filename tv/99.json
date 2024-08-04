@@ -697,11 +697,11 @@
 
 {"key":"csp_KungFu404","name":"👩🏻‍🍳┃阿里┃设置💯","type":3,"api":"csp_KungFu404","searchable":0,"filterable":0,"changeable":0,"jar":"./jar/aliyun.jar","ext":"http://127.0.0.1:9978/TVBox/tok.txt"},
 {"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"夸搜","name":"🔍┃夸搜┃搜索📀","type":3,"api":"csp_QuarkPanso","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"YiSo","name":"🔍┃易搜┃搜索📀","type":3,"api":"csp_YiSo","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"PanSou","name":"🔍┃盘搜┃搜索📀","type":3,"api":"csp_PanSou","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"UpYun","name":"🔍┃Up搜┃搜索📀","type":3,"api":"csp_UpYun","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"PanSearch","name":"🔍┃盘Se┃搜索📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSou","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSou","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘Se","name":"🔍┃盘Se┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"./jar/fty.jar","searchable":0,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"cc","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"filterable":0},
 {"key":"AD","name":"🚦请勿相信任何广告","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"filterable":0}

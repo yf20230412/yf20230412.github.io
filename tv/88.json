@@ -472,12 +472,27 @@
 	  }
   },
   {
-    "key": "夸搜",
-    "name": "🔍┃夸搜┃搜索",
+    "key": "盘他",
+    "name": "🔍┃盘他┃U夸",
     "type": 3,
-    "api": "csp_QuarkPanso",
+    "api": "csp_PanTa",
     "searchable": 1,
     "quickSearch": 1,
+    "changeable": 0,
+    "jar": "./jar/fty.jar",
+    "ext": {
+		  "Cloud-drive":"tvfan/Cloud-drive.txt",
+		  "from":"4k|auto"
+	  }
+  },
+  {
+    "key": "夸搜",
+    "name": "🔍┃夸搜┃夸父",
+    "type": 3,
+    "api": "csp_PanSearch",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 0,
     "changeable": 0,
     "jar": "./jar/fty.jar",
     "ext": {
@@ -501,7 +516,7 @@
   },
   {
     "key": "PanSou",
-    "name": "🔍┃盘搜┃搜索",
+    "name": "🔍┃盘搜┃阿狸",
     "type": 3,
     "api": "csp_PanSou",
     "searchable": 1,
@@ -515,23 +530,8 @@
 	  }
   },
   {
-    "key": "UpYun",
-    "name": "🔍┃Up搜┃搜索",
-    "type": 3,
-    "api": "csp_UpYun",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0,
-    "jar": "./jar/fty.jar",
-    "ext": {
-		  "Cloud-drive":"tvfan/Cloud-drive.txt",
-		  "from":"4k|auto"
-	  }
-  },
-  {
     "key": "PanSearch",
-    "name": "🔍┃盘Se┃搜索",
+    "name": "🔍┃盘Se┃阿狸",
     "type": 3,
     "api": "csp_PanSearch",
     "searchable": 1,
