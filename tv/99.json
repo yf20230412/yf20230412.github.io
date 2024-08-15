@@ -156,7 +156,7 @@
       "name": "👠┃JOJO┃直连💯",
       "type": 3,
       "api": "csp_Jiohub",
-      "jar": "./jar/danmu.jar"
+      "jar": "./jar/danmu.jar",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -466,14 +466,14 @@
       "name": "👨‍🍳网盘♦️配置👨‍🍳",
       "type": 3,
       "api": "csp_Config",
+      "jar": "./jar/danmu.jar",
       "searchable": 0,
       "changeable": 0,
       "indexs": 0,
       "style": {
         "type": "rect",
         "ratio": 1.597
-      },
-      "jar": "./jar/danmu.jar"
+      }      
     },		
     {
       "key": "玩偶哥哥",
@@ -496,6 +496,7 @@
       "name": "🖍️┃弹幕┃蜡笔📀",
       "type": 3,
       "api": "csp_Wobg",
+      "jar": "./jar/danmu.jar",
       "quickSearch": 1,
       "changeable": 1,
       "filterable": 1,
@@ -504,14 +505,14 @@
         "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
         "site": "https://duopan.fun",
         "danmu": true
-      },
-      "jar": "./jar/danmu.jar"
+      }
     },	
     {
       "key": "夸克奥秘弹幕",
       "name": "🎁┃弹幕┃奥秘📀",
       "type": 3,
       "api": "csp_Wobg",
+      "jar": "./jar/danmu.jar",
       "quickSearch": 1,
       "changeable": 1,
       "filterable": 1,
@@ -521,14 +522,14 @@
         "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
         "site": "https://vip.omii.top",
         "danmu": true
-      },
-      "jar": "./jar/danmu.jar"
+      }
     },
        {
       "key": "我的阿里",
       "name": "🤹‍♂️┃我的┃阿里📀",
       "type": 3,
       "api": "csp_MyAli",
+      "jar": "./jar/danmu.jar",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -538,14 +539,14 @@
       },
       "style": {
         "type": "list"
-      },
-      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/danmu.jar?ref=master"
+      }
     },
     {
       "key": "我的夸克",
       "name": "🤹‍♂️┃我的┃夸克📀",
       "type": 3,
       "api": "csp_MyQuark",
+      "jar": "./jar/danmu.jar",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -555,14 +556,14 @@
       },
       "style": {
         "type": "list"
-      },
-      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/danmu.jar?ref=master"
+      }
     },
     {
       "key": "我的UC",
       "name": "🤹‍♂️┃我的┃UC📀",
       "type": 3,
       "api": "csp_MyUc",
+      "jar": "./jar/danmu.jar",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -572,8 +573,7 @@
       },
       "style": {
         "type": "list"
-      },
-      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/danmu.jar?ref=master"
+      }
     },	
     {
       "key": "csp_PTT",
