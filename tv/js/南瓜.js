@@ -39,7 +39,8 @@ var rule = {
 	timeout:5000,
 	class_name:'电视剧&电影&动漫&综艺&海外精选', // /api.php/provide/home_nav
 	class_url:'2&1&4&3&46',
-	tab_rename:{'NG快播-1':'🌺风言锋语88🌺快播','BF':'🌺风言锋语88🌺BF','SEVEN':'🌺风言锋语88🌺七七','NG速播A':'🌺风言锋语88🌺NG','FF源-勿信视频内广告':'🌺风言锋语88🌺FF','官网TX云':'🌺风言锋语88🌺TX','官网YK云':'🌺风言锋语88🌺YK','LZ源-勿信视频内广告':'🌺风言锋语88🌺LZ'},
+	tab_rename:{'BF':'🌺风言锋语88🌺BF','SEVEN':'🌺风言锋语88🌺七七','NG速播A':'🌺风言锋语88🌺NG','FF源-勿信视频内广告':'🌺风言锋语88🌺FF','官网TX云':'🌺风言锋语88🌺TX','官网YK云':'🌺风言锋语88🌺YK','LZ源-勿信视频内广告':'🌺风言锋语88🌺LZ'},
+	tab_remove:['NG快播-1'],
 	limit:20,
 	play_parse:true,
 	lazy:`js:
