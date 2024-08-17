@@ -81,7 +81,7 @@
     }, 
     {
       "key": "4K剧院",
-      "name": "🏆┃4K┃剧院🌺",
+      "name": "🏆┃4KK┃剧院🌺",
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "searchable": 1,
@@ -90,7 +90,7 @@
     },
     {
       "key": "4KAV",
-      "name": "🏆┃4KAV┃影视🌺",
+      "name": "🏆┃4KV┃影视🌺",
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "searchable": 1,
@@ -99,7 +99,7 @@
     }, 
     {
       "key": "酷酷",
-      "name": "🍍┃腾腾┃4K🎀",
+      "name": "🍍┃腾腾┃4KK🎀",
       "type": 3,
       "playerType": "2",
       "api":"csp_XBPQ",
@@ -164,7 +164,7 @@
     },
     {
       "key": "JOJO直连",
-      "name": "👠┃JOJO┃直连💯",
+      "name": "👠┃JOJ┃直连💯",
       "type": 3,
       "api": "csp_Jiohub",
       "jar": "./jar/danmu.jar",
@@ -443,7 +443,7 @@
     },
     {
       "key": "SeedHub",
-      "name": "🧲┃Seed┃磁力💯",
+      "name": "🧲┃SHB┃磁力💯",
       "type": 3,
       "api": "csp_SeedHub",
       "searchable": 1,
@@ -613,7 +613,7 @@
 {"key":"腾讯","name":"🐧┃少儿┃腾腾🌺","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/qq.js"},
 {"key":"搜狗","name":"🐶┃少儿┃狗狗🌺","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/sougou.js"},
 {"key":"360_spider","name":"🌏┃少儿┃360💯","type":3,"api":"csp_SP360","filterable":1,"quickSearch":1,"searchable":1},
-{"key":"NT动漫","name":"🌸┃NT┃动漫🌺","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/NT动漫.js"},
+{"key":"NT动漫","name":"🌸┃NTT┃动漫🌺","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/NT动漫.js"},
 {"key":"csp_樱花","name":"🌸┃樱花┃动漫🌺","type":3,"api":"./douban/drpy3.min.js","searchable":1,"quickSearch":1,"filterable":1,"timeout":15,"ext":"./js/樱花动漫.js"},
 {"key":"Dm84","name":"🌸┃巴士┃动漫💯","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"changeable":1},
 	
@@ -704,7 +704,7 @@
 
 {"name":"快","type":1,"url":"http://pan.qiaoji8.com/tvbox/neibu.php?url="},
 
-{"name":"🎖","type":1,"url":"http://www.mpanso.com/woaini.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}}
+{"name":"🎖","type":1,"url":"http://xn--ihqu10cn4c.xn--z7x900a.live/jx.php?id=2&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"]}}
 
 ],
 
