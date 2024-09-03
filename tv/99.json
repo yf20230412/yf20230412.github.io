@@ -67,7 +67,7 @@
       "searchable": 0,
       "changeable": 1,
       "api": "./js/路飞搜索.js"
-    },     
+    },    
     {
       "key": "短剧天堂",
       "name": "📱┃短剧┃天堂🌺",
@@ -86,6 +86,17 @@
       "changeable": 0,
       "ext": "./js/短剧网.js"
     }, 
+    {
+      "key": "六六六",
+      "name": "🥨┃三六┃APP🍂",
+      "playerType": 1,
+      "type": 3,
+      "api": "csp_AppYsV2",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext":"http://122.228.85.203:1000/api.php/app/"
+    },
     {
       "key": "4K剧院",
       "name": "🏆┃4KK┃剧院🌺",
@@ -127,6 +138,16 @@
       "timeout": 10
     },  
     {
+      "key": "csp_瓜子",
+      "name": "🌰┃瓜子┃App💯",
+      "api": "csp_Gz360",
+      "jar": "./jar/xm.jar",
+      "type": 3,
+      "searchable": 1,     
+      "changeable": 0,
+      "timeout": 10
+    },
+    {
       "key": "文采",
       "name": "🧃┃文采┃秒播💯",
       "type": 3,
@@ -138,15 +159,16 @@
       "timeout": 10		
     },
     {
-      "key": "桃子影视",
-      "name": "🍑┃桃子┃影视💯",
+      "key": "厂长资源",
+      "name": "🏭️┃厂长┃资源🌺",
       "type": 3,
-      "api": "csp_Taozi",
+      "api": "./douban/drpy3.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "timeout": 10
-    },   
+      "timeout": 20,
+      "ext": "./js/厂长资源.js"
+    },       
     {
       "key": "南瓜",
       "name": "🎃┃南瓜┃App🌺",
@@ -190,28 +212,7 @@
       "filterable": 1,
       "timeout": 10,
       "ext": "./json/策驰影视.json"
-    },
-    {
-      "key": "csp_可可影视",
-      "name": "🎩┃可可┃影视💯",
-      "type": 3,
-      "api": "csp_Keke",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10
-    }, 
-    {
-      "key": "厂长资源",
-      "name": "🏭️┃厂长┃资源🌺",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 20,
-      "ext": "./js/厂长资源.js"
-    },
+    },    
     {
       "key": "原创",
       "name": "✨┃原创┃不卡💯",
@@ -235,7 +236,27 @@
       "changeable": 1,
       "ext": "https://www.zxzjhd.com/",
       "timeout": 10		
-    },    	
+    },   
+    {
+      "key": "桃子影视",
+      "name": "🍑┃桃子┃影视💯",
+      "type": 3,
+      "api": "csp_Taozi",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    },
+    {
+      "key": "csp_可可影视",
+      "name": "🎩┃可可┃影视💯",
+      "type": 3,
+      "api": "csp_Keke",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    }, 	
     {
       "key": "快看影视",
       "name": "👀┃快看┃影视💯",
@@ -245,6 +266,36 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 10
+    },{
+      "key": "机器人",
+      "name": "🤖┃爱看┃机器💯",
+      "type": 3,
+      "api": "csp_Ikanbot",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": "https://v.aikanbot.com",
+      "timeout": 10
+    },
+    {
+      "key": "csp_Free",
+      "name": "👌┃Free┃影视💯",
+      "type": 3,
+      "api": "csp_FreeOK",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15
+    },
+    {
+      "key": "csp_DiDuan",
+      "name": "🛸┃低端┃直连💯",
+      "type": 3,
+      "api": "csp_Ddys",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15
     },		 
     {
       "key": "一起看",
@@ -256,28 +307,7 @@
       "filterable": 1,
       "timeout": 10,
       "ext": "./js/一起看.js"
-    },
-    {
-      "key": "爱看影视",
-      "name": "🧐┃爱看┃影视💯",
-      "type": 3,
-      "api": "csp_Ikan",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10
-    },
-    {
-      "key": "机器人",
-      "name": "🤖┃爱看┃机器💯",
-      "type": 3,
-      "api": "csp_Ikanbot",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "https://v.aikanbot.com",
-      "timeout": 10
-    },		
+    },    		
     {
       "key": "韩小圈",
       "name": "🍩┃韩✰┃小圈💯",
@@ -321,37 +351,6 @@
       "filterable": 1,
       "timeout": 15,
       "ext": "./json/河马影视.json"
-    },
-    {
-      "key": "韩剧兔",
-      "name": "🐇┃韩剧┃兔兔🎀",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": "./json/韩剧兔.json"
-    },
-    {
-      "key": "csp_Free",
-      "name": "👌┃Free┃影视💯",
-      "type": 3,
-      "api": "csp_FreeOK",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15
-    },
-    {
-      "key": "csp_DiDuan",
-      "name": "🛸┃低端┃直连💯",
-      "type": 3,
-      "api": "csp_Ddys",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15
     },
     {
       "key": "Lib",
@@ -689,6 +688,8 @@
 
 
 {"name":"解析聚合","type":3,"url":"Demo"},	
+
+{"name":"666专线","type":"1","url":"http://122.228.85.203:7979/api/?key=e5ef7605633990b8d99ee1bfae196786&url="},
 
 {"name":"风","type":"1","url":"http://llyh.xn--yi7aa.top/api/?key=5b317c16d457b31a3150d87c0a362a9e&url=","flag":["LXTX","qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"Dalvik/2.1.0"}},
 
