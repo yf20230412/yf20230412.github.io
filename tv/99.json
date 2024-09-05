@@ -159,13 +159,13 @@
     },
     {
       "key": "文采",
-      "name": "🧃┃文采┃秒播💯",
+      "name": "📝┃文采┃秒播💯",
       "type": 3,
-      "api": "csp_Jpys",
-      "jar": "./jar/fty.jar",		
+      "api": "csp_XBPQ",     		
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1,
+      "filterable": 1,
+      "ext":"./json/文才.json",
       "timeout": 10		
     },
     {
