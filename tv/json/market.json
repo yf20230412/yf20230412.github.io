@@ -14,19 +14,19 @@
     "name": "观影神器",
     "list": [
       {
-        "name": "《ok影视》",
+        "name": "《小鱼影视》",
         "url": "https://download.kstore.space/download/4645/Release/apk/release/mobile-python-arm64_v8a.apk",
         "icon": "https://download.kstore.space/download/4645/img/小鱼.png",
         "version": "手机64位py版"
       },
       {
-        "name": "《ok影视》",
+        "name": "《小鱼影视》",
         "url": "https://download.kstore.space/download/4645/Release/apk/release/leanback-python-armeabi_v7a.apk",
         "icon": "https://download.kstore.space/download/4645/img/小鱼.png",
         "version": "TV32位py版"
       },	
       {
-        "name": "《ok影视》",
+        "name": "《小鱼影视》",
         "url": "https://download.kstore.space/download/4645/Release/apk/kitkat/leanback.apk",
         "icon": "https://download.kstore.space/download/4645/img/小鱼.png",
         "version": "TV安卓4x版"
