@@ -149,13 +149,13 @@
     },  
     {
       "key": "csp_瓜子",
-      "name": "🌰┃瓜子┃App💯",
-      "api": "csp_Gz360",
-      "jar": "./jar/xm.jar",
+      "name": "🌰┃瓜子┃App🌺",
+      "api": "./douban/drpy3.min.js",
       "type": 3,
       "searchable": 1,     
       "changeable": 0,
-      "timeout": 10
+      "timeout": 10,
+      "ext": "./js/瓜子影视.js"
     },
     {
       "key": "文采",
@@ -190,28 +190,6 @@
       "timeout": 10,
       "ext": "./js/南瓜.js"
     },  	
-    {
-      "key": "酷看弹幕",
-      "name": "😎┃酷看┃弹幕💯",
-      "type": 3,
-      "api": "csp_Kkys",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10      
-    },
-    {
-      "key": "JOJO直连",
-      "name": "👠┃JOJ┃直连💯",
-      "type": 3,
-      "api": "csp_Jiohub",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10     
-    },
     {
       "key": "策驰影视",
       "name": "🚅┃策驰┃影视🎀",
