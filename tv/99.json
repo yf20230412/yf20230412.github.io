@@ -87,6 +87,16 @@
       "ext": "./js/短剧网.js"
     }, 
     {
+      "key": "星芽短剧",
+      "name": "📱┃星芽┃短剧💯",
+      "type": 3,
+      "api": "csp_AppXY",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 0
+    },
+    {
       "key": "六六六",
       "name": "🥨┃三六┃APP🍂",
       "playerType": 1,
@@ -126,22 +136,11 @@
       "ext": "./js/4KAV.js"
     }, 
     {
-      "key": "酷酷",
-      "name": "🍍┃腾腾┃4KK🎀",
-      "type": 3,
-      "playerType": "2",
-      "api":"csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "./json/腾腾4k.json"
-    },
-    {
       "key": "csp_Xpg",
       "name": "🍎┃苹果┃影视💯",
       "type": 3,
       "api": "csp_Xpg", 
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",     
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",     
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -268,7 +267,7 @@
       "name": "🍩┃韩✰┃小圈💯",
       "type": 3,
       "api": "csp_HanXiaoQuan",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -447,7 +446,7 @@
       "name": "👨‍🍳网盘♦️配置👨‍🍳",
       "type": 3,
       "api": "csp_Config",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
       "searchable": 0,
       "changeable": 0,
       "indexs": 0,
@@ -467,17 +466,34 @@
       "jar": "./jar/fty.jar",
       "ext": {
         "Cloud-drive":"tvfan/Cloud-drive.txt",
-        "from": "4k|auto|fhd",
+        "from": "4k|auto",
         "siteUrl": "https://wogg.xxooo.cf/",
         "danMu": "关"
       }
     },	
     {
+      "key": "玩偶弹幕",
+      "name": "🤹‍♂️┃玩偶┃备用📀",
+      "type": 3,
+      "api": "csp_Wogg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "wogg": true,
+        "danmu": false
+      }
+    },
+    {
       "key": "夸克蜡笔弹幕",
       "name": "🖍️┃弹幕┃蜡笔📀",
       "type": 3,
       "api": "csp_Wobg",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
       "quickSearch": 1,
       "changeable": 1,
       "filterable": 1,
@@ -493,7 +509,7 @@
       "name": "🎁┃弹幕┃奥秘📀",
       "type": 3,
       "api": "csp_Wobg",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
       "quickSearch": 1,
       "changeable": 1,
       "filterable": 1,
@@ -505,12 +521,63 @@
         "danmu": false
       }
     },
-       {
+    {
+      "key": "夸克玩偶弹幕",
+      "name": "👨‍🦰┃表哥┃弹幕📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "site": "http://wobgg.run-us-west2.goorm.io",
+        "danmu": false
+      }
+    },
+    {
+      "key": "夸克至臻弹幕",
+      "name": "💄┃至臻┃弹幕📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "site": "https://mihdr.top",
+        "danmu": false
+      }
+    },
+    {
+      "key": "夸克云星弹幕",
+      "name": "⛅️┃云星┃弹幕📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "site": "https://4k.4u4.cn",
+        "danmu": false
+      }
+    },
+    {
       "key": "我的阿里",
       "name": "🤹‍♂️┃我的┃阿里📀",
       "type": 3,
       "api": "csp_MyAli",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -527,7 +594,7 @@
       "name": "🤹‍♂️┃我的┃夸克📀",
       "type": 3,
       "api": "csp_MyQuark",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -544,7 +611,7 @@
       "name": "🤹‍♂️┃我的┃UC📀",
       "type": 3,
       "api": "csp_MyUc",
-      "jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -591,7 +658,7 @@
 	
 {"key":"虎牙直播","name":"🐯┃虎牙┃直播🌺","type":3,"api":"./douban/drpy3.min.js","searchable":0,"quickSearch":0,"filterable":1,"changeable":0,"style":{"type":"rect","ratio":1.755},"ext":"./js/虎牙直播.js"},
 {"key":"斗鱼直播","name":"🐠┃斗鱼┃直播🌺","type":3,"api":"./douban/drpy3.min.js","style":{"type":"rect","ratio":1.755},"searchable":0,"quickSearch":0,"changeable":0,"timeout":10,"ext":"./js/斗鱼直播.js"},
-{"key":"快手直播","name":"🎦┃快手┃直播💯","type":3,"api":"csp_KsLive","jar": "./jar/danmu.jar;md5;79f4aaa5e0117750d0b141bbd90a260d","searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"rect","ratio":1.433},"timeout":10},
+{"key":"快手直播","name":"🎦┃快手┃直播💯","type":3,"api":"csp_KsLive","jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a","searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"rect","ratio":1.433},"timeout":10},
 {"key":"JRKAN直播","name":"🏀┃JRK┃直播🌺","type":3,"api":"./douban/drpy3.min.js","style":{"type":"rect","ratio":1.755},"searchable":0,"quickSearch":0,"changeable":0,"timeout":10,"ext":"./js/JRKAN直播.js"},
 {"key":"JustLive","name":"⚔️┃竞技┃直播💯","type":3,"api":"csp_JustLive","searchable":0,"quickSearch":0,"filterable":1},
 	
