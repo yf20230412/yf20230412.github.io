@@ -1,6 +1,6 @@
 var rule = {
     title: '可可影视[优]',
-    host: 'https://www.keke8.app',
+    host: 'https://www.kkys01.com',
     //host: 'https://keke5.app',
     // url: '/show/fyclass-----2-fypage.html',
     url: '/show/fyclass-fyfilter-fypage.html',

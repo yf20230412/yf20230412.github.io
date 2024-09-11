@@ -202,49 +202,16 @@
       "ext": "./json/策驰影视.json"
     },    
     {
-      "key": "原创",
-      "name": "✨┃原创┃不卡💯",
-      "type": 3,
-      "api": "csp_YCyz",
-      "jar": "./jar/fty.jar",		
-      "playerType": 1,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "timeout": 10
-    },    
-    {
-      "key": "在线之家",
-      "name": "🏡┃在线┃之家💯",
-      "type": 3,
-      "api": "csp_Zxzj",
-      "jar": "./jar/fty.jar",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "https://www.zxzjhd.com/",
-      "timeout": 10		
-    },   
-    {
-      "key": "桃子影视",
-      "name": "🍑┃桃子┃影视💯",
-      "type": 3,
-      "api": "csp_Taozi",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10
-    },
-    {
       "key": "csp_可可影视",
-      "name": "🎩┃可可┃影视💯",
+      "name": "🎩┃可可┃影视🌺",
       "type": 3,
-      "api": "csp_Keke",
+      "api": "./douban/drpy3.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "ext":"./js/可可影视.js",
       "timeout": 10
-    }, 	
+    },	
     {
       "key": "快看影视",
       "name": "👀┃快看┃影视💯",
