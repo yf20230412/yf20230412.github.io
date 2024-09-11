@@ -33,12 +33,21 @@ http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/
 http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225765/index.m3u8
 #EXTINF:-1 tvg-name="CCTV4K" tvg-logo="https://live.fanmingming.com/tv/CCTV4K.png" group-title="🐲｜央视频道",CCTV-4K 超高清
 http://liveop.cctv.cn/hls/4KHD/playlist.m3u8
+
+
+
+
+
+
 #EXTINF:-1 tvg-name="CCTV5" tvg-logo="https://live.fanmingming.com/tv/CCTV5.png" group-title="🏂｜体育频道",CCTV-5 体育
-http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000001000004794/1.m3u8
+http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226019/index.m3u8
 #EXTINF:-1 tvg-name="CCTV5+" tvg-logo="https://live.fanmingming.com/tv/CCTV5+.png" group-title="🏂｜体育频道",CCTV-5+ 体育赛事
-http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000001000020505/1.m3u8
+http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225603/index.m3u8
 #EXTINF:-1 tvg-name="CCTV16" tvg-logo="https://live.fanmingming.com/tv/CCTV16.png" group-title="🏂｜体育频道",CCTV-16 奥林匹克
-http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000006000233001/1.m3u8
+http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226100/index.m3u8
+
+
+
 
 
 ##
@@ -126,6 +135,52 @@ http://[2409:8087:1a0b:df::4020]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/
 http://[2409:8087:1a0b:df::4013]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226425/index.m3u8
 #EXTINF:-1 tvg-name="中国教育4台" tvg-logo="https://live.fanmingming.com/tv/CETV4.png" group-title="🦜｜卫视频道",CETV-4
 http://[2409:8087:1a0b:df::4020]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225783/index.m3u8
+
+
+
+
+
+#EXTINF:-1,tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.v1.mk/logo/翡翠台.png" group-title="🛳｜港澳频道",翡翠台
+http://php.jdshipin.com:8880/smt.php?id=jade_twn$1920x1080
+#EXTINF:-1,tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.v1.mk/logo/翡翠台.png" group-title="🛳｜港澳频道",翡翠台
+http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct$1920x1080
+#EXTINF:-1,tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://epg.v1.mk/logo/凤凰中文.png" group-title="🛳｜港澳频道",凤凰中文
+http://ayolee.com:5253/udp/239.93.0.162:2192$1920x1080
+#EXTINF:-1,tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://epg.v1.mk/logo/凤凰中文.png" group-title="🛳｜港澳频道",凤凰中文
+http://pi.0472.org/tv/cbn.php?id=xfjcHD$1280x720
+#EXTINF:-1,tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://epg.v1.mk/logo/凤凰中文.png" group-title="🛳｜港澳频道",凤凰中文
+http://117.27.190.42:9998/tsfile/live/23280_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1,tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://epg.v1.mk/logo/凤凰资讯.png" group-title="🛳｜港澳频道",凤凰资讯
+http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzx$1920x1080
+#EXTINF:-1,tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://epg.v1.mk/logo/凤凰资讯.png" group-title="🛳｜港澳频道",凤凰资讯
+http://61.221.215.25:8800/hls/47/index.m3u8
+#EXTINF:-1,tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://epg.v1.mk/logo/凤凰资讯.png" group-title="🛳｜港澳频道",凤凰资讯
+http://117.27.190.42:9998/tsfile/live/23279_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1,tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://epg.v1.mk/logo/凤凰香港.png" group-title="🛳｜港澳频道",凤凰香港
+http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhhk$1280x720
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148/hls/modn/list/4005/chunklist0.m3u8
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148:80/hls/modn/list/4005/chunklist1.m3u8
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148:80/hls/modn/list/4005/playlist.m3u8
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148/hls/modn/list/4005/chunklist1.m3u8
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148:80/hls/modn/list/4005/chunklist0.m3u8
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148/hls/modn/list/4005/chunklist1.m3u8?
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://38.64.72.148:80/hls/modn/list/4005/playlist.m3u8?
+#EXTINF:-1,tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://epg.v1.mk/logo/TVBS亚洲.png" group-title="🛳｜港澳频道",TVBS亚洲
+http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8?zshijd
+#EXTINF:-1,tvg-id="TVBS新闻" tvg-name="TVBS新闻" tvg-logo="https://epg.v1.mk/logo/TVBS新闻.png" group-title="🛳｜港澳频道",TVBS新闻
+http://4gtv.mumi.rip:9877/291/4gtv-4gtv072/index.m3u8
+#EXTINF:-1,tvg-id="TVBS欢乐" tvg-name="TVBS欢乐" tvg-logo="https://epg.v1.mk/logo/TVBS欢乐.png" group-title="🛳｜港澳频道",TVBS欢乐
+http://4gtv.mumi.rip:9877/184/4gtv-4gtv068/index.m3u8
+
 
 
 
@@ -2960,4 +3015,3 @@ https://vd2.bdstatic.com/mda-kkdf3jba9fsp4hr2/v1-cae/sc/mda-kkdf3jba9fsp4hr2.mp4
 https://vd4.bdstatic.com/mda-ncn8353qdj4250ga/sc/cae_h264_delogo/1648019138180108259/mda-ncn8353qdj4250ga.mp4?v_from_s=hkapp-haokan-nanjing&auth_key=1660565393-0-0-3aba7cd19b150ed7cf2598254312daf0&bcevod_channel=searchbox_feed&cd=0&pd=1&pt=3&logid=2392920723&vid=12398024234293028218&abtest=103742_2-103890_2-103579_2&klogid=2392920723
 #EXTINF:-1 tvg-name="DJ打碟Oz Green" tvg-logo="https://live.fanmingming.com/radio/中广音乐网.png" group-title="🎙｜DJ★音乐",DJ打碟Oz Green
 https://vd4.bdstatic.com/mda-nbc8e7p8yim7q4kw/sc/cae_h264_delogo/1644734834302724788/mda-nbc8e7p8yim7q4kw.mp4?v_from_s=hkapp-haokan-nanjing&auth_key=1660565409-0-0-934b58e48f6e9b4cdf45b5c8c1f01ad3&bcevod_channel=searchbox_feed&cd=0&pd=1&pt=3&logid=2409235034&vid=16458997361411576188&abtest=103742_2-103890_2-103579_2&klogid=2409235034
-
