@@ -77,7 +77,7 @@
     "ext": {
         "Cloud-drive":"tvfan/Cloud-drive.txt",
         "from": "4k|auto|fhd",
-        "siteUrl": "https://wogg.888484.xyz/",
+        "siteUrl": "https://www.wogg.net/",
         "danMu": "关"
       },
       "timeout": 30
@@ -443,133 +443,20 @@
       "ratio": 1.33
     }
   },
-  {
-    "key": "MissAV",
-    "name": "💋┃MissAV(vpn)",
-    "type": 3,
-    "api": "csp_Miss",
-    "searchable": 1,
-    "style": {
-      "type": "rect",
-      "ratio": 1.777
-    }
-  },
-  {
-    "key": "csp_JavBus",
-    "name": "🧲┃JavBus(vpn)",
-    "type": 3,
-    "api": "csp_JavBus",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 1,
-    "changeable": 0
-  },
-  {
-    "key": "米搜",
-    "name": "🔍┃米搜┃搜索",
-    "type": 3,
-    "api": "csp_MIPanSo",
-    "jar": "./jar/fty.jar",
-    "searchable": 1,
-    "quickSearch": 1,
-    "changeable": 0,
-    "ext": {
-		  "Cloud-drive":"tvfan/Cloud-drive.txt",
-		  "from":"4k|auto"
-	  }
-  },
-  {
-    "key": "盘他",
-    "name": "🔍┃盘他┃U夸",
-    "type": 3,
-    "api": "csp_PanTa",
-    "searchable": 1,
-    "quickSearch": 1,
-    "changeable": 0,
-    "jar": "./jar/fty.jar",
-    "ext": {
-		  "Cloud-drive":"tvfan/Cloud-drive.txt",
-		  "from":"4k|auto"
-	  }
-  },
-  {
-    "key": "夸搜",
-    "name": "🔍┃夸搜┃夸父",
-    "type": 3,
-    "api": "csp_PanSearch",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0,
-    "jar": "./jar/fty.jar",
-    "ext": {
-		  "Cloud-drive":"tvfan/Cloud-drive.txt",
-		  "from":"4k|auto"
-	  }
-  },
-  {
-    "key": "YiSo",
-    "name": "🔍┃易搜┃搜索",
-    "type": 3,
-    "api": "csp_YiSo",
-    "searchable": 1,
-    "quickSearch": 1,
-    "changeable": 0,
-    "jar": "./jar/fty.jar",
-    "ext": {
-		  "Cloud-drive":"tvfan/Cloud-drive.txt",
-		  "from":"4k|auto"
-	  }
-  },
-  {
-    "key": "PanSou",
-    "name": "🔍┃盘搜┃阿狸",
-    "type": 3,
-    "api": "csp_PanSou",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0,
-    "jar": "./jar/fty.jar",
-    "ext": {
-		  "Cloud-drive":"tvfan/Cloud-drive.txt",
-		  "from":"4k|auto"
-	  }
-  },
-  {
-    "key": "PanSearch",
-    "name": "🔍┃盘Se┃阿狸",
-    "type": 3,
-    "api": "csp_PanSearch",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "jar": "./jar/fty.jar",
-    "ext": {
-		  "Cloud-drive":"tvfan/Cloud-drive.txt",
-		  "from":"4k|auto"
-	  }
-  },
-  {
-    "key": "csp_Token",
-    "name": "📚┃阿里┃Token设置",
-    "type": 3,
-    "api": "csp_KungFu404",
-    "searchable": 1,
-    "filterable": 1,
-    "changeable": 0,
-    "ext": "http://127.0.0.1:9978/file/TVBox/tok.txt",
-    "jar": "./jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"
-  },
-  {
-    "key": "cc",
-    "name": "请勿相信任何广告",
-    "type": 3,
-    "api": "csp_XPath",
-    "searchable": 0,
-    "quickSearch": 0,
-    "filterable": 0
-  }],
+  
+{"key":"csp_Token","name":"📚┃阿里┃Token设置","type":3,"api":"csp_KungFu404","searchable":1,"filterable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/TVBox/tok.txt","jar":"./jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},
+{"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSs","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSou","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSou","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘Se","name":"🔍┃盘Se┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"./jar/fty.jar","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"cc","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1},
+{"key":"AD","name":"🚦请勿相信任何广告","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1}
+  
+],
 
 
 "parses":[
@@ -577,7 +464,9 @@
 
 {"name":"解析聚合","type":3,"url":"Demo"},	
 
-{"name":"Web聚合","type":3,"url":"Web"},	
+{"name":"666专线","type":"1","url":"http://www.mpanso.com/%E6%88%91%E7%88%B1%E4%BD%A0.php?url="},
+
+{"name":"YY专线","type":"1","url":"http://122.228.85.203:6789/api/?key=de7ed0ead4328fe74ade88bd922e3f4f&url="},
 
 {"name":"风","type":"1","url":"http://llyh.xn--yi7aa.top/api/?key=5b317c16d457b31a3150d87c0a362a9e&url=","flag":["LXTX","qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"Dalvik/2.1.0"}},
 
