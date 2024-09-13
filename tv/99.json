@@ -71,41 +71,8 @@
       "api": "./js/路飞搜索.js"
     },    
     {
-      "key": "短剧天堂",
-      "name": "📱┃短剧┃天堂🌺",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": "./js/短剧天堂.js"
-    },
-    {
-      "key": "短剧网",
-      "name": "📱┃短剧┃TV网🌺",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/短剧网.js",
-      "timeout":15
-    }, 
-    {
-      "key": "星芽短剧",
-      "name": "📱┃星芽┃短剧💯",
-      "type": 3,
-      "api": "csp_AppXY",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "timeout":15
-    },
-    {
       "key": "六六六",
-      "name": "🥨┃三六┃APP🍂",
+      "name": "🥨┃三六┃4K🍂",
       "type": 3,
       "api": "csp_AppYsV2",
       "quickSearch":1,
@@ -117,7 +84,7 @@
     },
     {
       "key": "丘丘影视",
-      "name": "💡┃丘丘┃App🍂",
+      "name": "💡┃丘丘┃4K🍂",
       "type": 3,
       "api": "csp_AppYsV2",
       "quickSearch":1,
@@ -129,7 +96,7 @@
     },
     {
       "key": "4K剧院",
-      "name": "🏆┃4KK┃剧院🌺",
+      "name": "🏆┃剧院┃4K🌺",
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "quickSearch":1,
@@ -141,7 +108,7 @@
     },
     {
       "key": "4KAV",
-      "name": "🏆┃4KV┃影视🌺",
+      "name": "🏆┃KAV┃4K🌺",
       "type": 3,
       "api": "./douban/drpy3.min.js",
       "quickSearch":1,
@@ -151,6 +118,159 @@
       "ext": "./js/4KAV.js",
       "timeout":15
     }, 
+    {
+      "key": "玩偶哥哥",
+      "name": "🤵🏻┃玩偶┃哥哥📀",
+      "type": 3,
+      "api": "csp_WoGG",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 0,
+      "filterable": 1,
+      "jar": "./jar/fty.jar",
+      "ext": {
+        "Cloud-drive":"tvfan/Cloud-drive.txt",
+        "from": "4k|auto",
+        "siteUrl": "https://wogg.xxooo.cf/",
+        "danMu": "关"
+      }
+    },	
+    {
+      "key": "玩偶弹幕",
+      "name": "🧸┃玩偶┃4K📀",
+      "type": 3,
+      "api": "csp_Wogg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "wogg": true,
+        "danmu": false
+      }
+    },
+    {
+      "key": "抠搜",
+      "name": "🔍┃抠抠┃搜搜📀",
+      "type": 3,
+      "api": "csp_KkSs",
+      "jar": "./jar/fty.jar",
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+          "Cloud-drive": "tvfan/Cloud-drive.txt",
+          "from": "4k|auto"
+      }
+    },
+    {
+      "key": "夸克蜡笔弹幕",
+      "name": "🖍️┃蜡笔┃4K📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "site": "https://duopan.fun",
+        "danmu": false
+      }
+    },	
+    {
+      "key": "夸克奥秘弹幕",
+      "name": "🎁┃奥秘┃4K📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "site": "https://vip.omii.top",
+        "danmu": false
+      }
+    },
+    {
+      "key": "夸克玩偶弹幕",
+      "name": "👨‍🦰┃表哥┃4K📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "site": "http://wobgg.run-us-west2.goorm.io",
+        "danmu": false
+      }
+    },
+    {
+      "key": "夸克至臻弹幕",
+      "name": "💄┃至臻┃4K📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "site": "https://mihdr.top",
+        "danmu": false
+      }
+    },
+    {
+      "key": "夸克云星弹幕",
+      "name": "⛅️┃云星┃4K📀",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "site": "https://4k.4u4.cn",
+        "danmu": false
+      }
+    },
+    {
+      "key": "Lib",
+      "name": "🔷┃立播┃秒播📀",
+      "type": 3,
+      "api": "csp_Libvio",
+      "jar": "./jar/fty.jar",		
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "Cloud-drive": "tvfan/Cloud-drive.txt",
+        "from": "4k|auto"
+      }
+    },
     {
       "key": "csp_Xpg",
       "name": "🍎┃苹果┃影视💯",
@@ -212,18 +332,6 @@
       "timeout":10
     },  	
     {
-      "key": "策驰影视",
-      "name": "🚅┃策驰┃影视🎀",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./json/策驰影视.json",
-      "timeout":15
-    },    
-    {
       "key": "csp_可可影视",
       "name": "🎩┃可可┃影视🌺",
       "type": 3,
@@ -234,6 +342,65 @@
       "filterable": 1,
       "ext":"./js/可可影视.js",
       "timeout": 10
+    },
+    {
+      "key": "韩小圈",
+      "name": "🍩┃韩✰┃小圈💯",
+      "type": 3,
+      "api": "csp_HanXiaoQuan",
+      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 10
+    },		
+    {
+      "key": "大师兄影视",
+      "name": "🧙🏻‍♂️┃大师┃✰兄🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/大师兄.js",
+      "timeout":15
+    },
+    {
+      "key": "爱上电影",
+      "name": "💞┃爱上┃电影💯",
+      "type": 3,
+      "api": "csp_XBPQ",     		
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext":"./json/爱上电影.json",
+      "timeout": 15
+    }, 	
+    {
+      "key": "河马影视",
+      "name": "🦄┃河马┃影视🎀",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./json/河马影视.json",
+      "timeout":15
+    },    	
+    {
+      "key": "hipy_js_采集之王",
+      "name": "🐝┃采集┃之王🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/采集之王.js?type=url&params=../json/采集精选.json$1"
     },	
     {
       "key": "快看影视",
@@ -279,93 +446,7 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 15
-    },		 
-    {
-      "key": "一起看",
-      "name": "👭┃一起┃App🌺",
-      "api": "./douban/drpy3.min.js",
-      "type": 3,
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/一起看.js",
-      "timeout":10
-    },    		
-    {
-      "key": "韩小圈",
-      "name": "🍩┃韩✰┃小圈💯",
-      "type": 3,
-      "api": "csp_HanXiaoQuan",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "timeout": 10
-    },		
-    {
-      "key": "大师兄影视",
-      "name": "🧙🏻‍♂️┃大师┃✰兄🌺",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/大师兄.js",
-      "timeout":15
-    },
-    {
-      "key": "csp_新视觉",
-      "name": "🌸┃视觉┃影视🎀",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./json/新视觉.json",
-      "timeout":15
-    }, 	
-    {
-      "key": "河马影视",
-      "name": "🦄┃河马┃影视🎀",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./json/河马影视.json",
-      "timeout":15
-    },
-    {
-      "key": "Lib",
-      "name": "🔷┃立播┃秒播📀",
-      "type": 3,
-      "api": "csp_Libvio",
-      "jar": "./jar/fty.jar",		
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },	
-    {
-      "key": "hipy_js_采集之王",
-      "name": "🐝┃采集┃之王🌺",
-      "type": 3,
-      "api": "./douban/drpy3.min.js",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/采集之王.js?type=url&params=../json/采集精选.json$1"
-    },
+    },		 		    
     {
       "key": "荐片",
       "name": "🧲┃荐片┃磁力💯",
@@ -506,130 +587,7 @@
         "type": "rect",
         "ratio": 1.597
       }      
-    },		
-    {
-      "key": "玩偶哥哥",
-      "name": "🤵🏻┃玩偶┃哥哥📀",
-      "type": 3,
-      "api": "csp_WoGG",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 0,
-      "filterable": 1,
-      "jar": "./jar/fty.jar",
-      "ext": {
-        "Cloud-drive":"tvfan/Cloud-drive.txt",
-        "from": "4k|auto",
-        "siteUrl": "https://wogg.xxooo.cf/",
-        "danMu": "关"
-      }
-    },	
-    {
-      "key": "玩偶弹幕",
-      "name": "🧸┃玩偶┃备用📀",
-      "type": 3,
-      "api": "csp_Wogg",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-        "wogg": true,
-        "danmu": false
-      }
-    },
-    {
-      "key": "夸克蜡笔弹幕",
-      "name": "🖍️┃蜡笔┃弹幕📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "site": "https://duopan.fun",
-        "danmu": false
-      }
-    },	
-    {
-      "key": "夸克奥秘弹幕",
-      "name": "🎁┃奥秘┃弹幕📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-        "site": "https://vip.omii.top",
-        "danmu": false
-      }
-    },
-    {
-      "key": "夸克玩偶弹幕",
-      "name": "👨‍🦰┃表哥┃弹幕📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "site": "http://wobgg.run-us-west2.goorm.io",
-        "danmu": false
-      }
-    },
-    {
-      "key": "夸克至臻弹幕",
-      "name": "💄┃至臻┃弹幕📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-        "site": "https://mihdr.top",
-        "danmu": false
-      }
-    },
-    {
-      "key": "夸克云星弹幕",
-      "name": "⛅️┃云星┃弹幕📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "./jar/dan.jar;md5;4adf1d5aa5fe3706001804de9c74600a",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-        "site": "https://4k.4u4.cn",
-        "danmu": false
-      }
-    },
+    },		    
     {
       "key": "我的阿里",
       "name": "🤹‍♂️┃我的┃阿里📀",
@@ -683,19 +641,7 @@
       "style": {
         "type": "list"
       }
-    },	
-    {
-      "key": "555影视",
-      "name": "5️⃣️┃三五┃影视🎀",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./json/555.json",
-      "timeout":15
-    },	
+    },		
     
 {"key":"芒果","name":"🥭┃少儿┃果果🌺","type":3,"api":"./douban/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/mgtv.js","timeout":15},
 {"key":"奇艺","name":"💕┃少儿┃奇异🌺","type":3,"api":"./douban/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/iqiyi.js","timeout":15},
@@ -733,7 +679,6 @@
 
 {"key":"csp_KungFu404","name":"👩🏻‍🍳┃阿里┃设置💯","type":3,"api":"csp_KungFu404","jar":"./jar/aliyun.jar","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext":"http://127.0.0.1:9978/TVBox/tok.txt"},
 {"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSs","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"./jar/fty.jar","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
