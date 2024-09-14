@@ -258,7 +258,7 @@
     },  
     {
       "key": "csp_瓜子",
-      "name": "🌰┃瓜子┃App🌺",
+      "name": "🍉┃瓜子┃App🌺",
       "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
       "type": 3,
       "quickSearch":1,
@@ -315,6 +315,18 @@
       "filterable": 1,
       "ext":"./js/可可影视.js",
       "timeout": 10
+    },
+    {
+      "key": "素白白",
+      "name": "👻┃白白┃影视🌺",
+      "type": 3,
+      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/素白白.js",
+      "timeout":15
     },
     {
       "key": "韩小圈",
@@ -616,13 +628,12 @@
     },		
     
 {"key":"芒果","name":"🥭┃少儿┃果果🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/mgtv.js","timeout":15},
-{"key":"奇艺","name":"💕┃少儿┃奇异🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/iqiyi.js","timeout":15},
+{"key":"奇艺","name":"💖┃少儿┃奇异🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/iqiyi.js","timeout":15},
 {"key":"优酷","name":"👔‍┃少儿┃酷酷🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/youku.js","timeout":15},
 {"key":"腾讯","name":"🐧┃少儿┃腾腾🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/qq.js","timeout":15},
 {"key":"搜狗","name":"🐶┃少儿┃狗狗🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/sougou.js","timeout":15},
-{"key":"360_spider","name":"🌏┃少儿┃360💯","type":3,"api":"csp_SP360","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":15},
+{"key":"360_spider","name":"⚽️┃少儿┃360💯","type":3,"api":"csp_SP360","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":15},
 {"key":"NT动漫","name":"🌸┃NTT┃动漫🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/NT动漫.js","timeout":15},
-{"key":"csp_樱花","name":"🌸┃樱花┃动漫🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/樱花动漫.js","timeout":15},
 {"key":"Dm84","name":"🌸┃巴士┃动漫💯","type":3,"api":"csp_Dm84","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":15},
 	
 {"key":"dr_兔小贝","name":"📚┃儿童┃启蒙🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./js/兔小贝.js"},
@@ -631,10 +642,9 @@
 {"key":"初中","name":"📚┃初中┃教育💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/初中教育.json"},
 {"key":"高中","name":"📚┃高中┃教育💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/高中教育.json"},
 {"key":"兴趣培养","name":"📚┃兴趣┃培养💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/兴趣培养.json"},
-{"key":"csp_Bili","name":"🅱️┃哔哩┃哔哩💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Bili.json"},
-{"key":"相声小品","name":"🅱️┃相声┃小品💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Blixs.json"},
-{"key":"软件","name":"🅱️┃软件┃教程💯","type": 3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext":"./json/软件教程.json"},			
-{"key":"短视频","name":"📱┃聚短┃视频🎀","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext":"./json/短视频.json"},	
+{"key":"csp_Bili","name":"🅱️┃哔哩┃合集💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Bili.json"},
+{"key":"演唱会","name":"🅱️┃哔哩┃音乐💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Biliych.json"},
+{"key":"bilimd","name":"🅱️┃哔哩┃影视💯","type":3,"api":"csp_Bilimd","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/dan.jar?ref=master;md5;4adf1d5aa5fe3706001804de9c74600a","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"style":{"type":"rect","ratio":1.433}},
 	
 {"key":"虎牙直播","name":"🐯┃虎牙┃直播🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.755},"ext":"./js/虎牙直播.js"},
 {"key":"斗鱼直播","name":"🐠┃斗鱼┃直播🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","style":{"type":"rect","ratio":1.755},"quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext":"./js/斗鱼直播.js"},
