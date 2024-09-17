@@ -700,7 +700,9 @@
 "parses":[
 
 
-{"name":"解析聚合","type":3,"url":"Demo"},	
+{"name":"Json聚合","type":3,"url":"Demo"},	
+
+{"name":"Web聚合","type":3,"url":"Web"},	
 
 {"name":"666专线","type":"1","url":"http://1.xiaomi666.work.gd/aini10.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
@@ -710,7 +712,7 @@
 
 {"name":"言","type":"1","url":"http://zy.uiovo.com/api/?key=951b4ca48d0f8c77cd8ebbc2e784c441&ud=105&url=","flag":["yhdm","qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"Dalvik/2.1.0"}},
 
-{"name":"锋","type":1,"url":"http://pan.qiaoji8.com/tvbox/neibu.php?url="},
+{"name":"锋","type":1,"url":"https://jx.777jiexi.com/player/?url="},
 
 {"name":"语","type":"1","url":"http://zy.uiovo.com/api/?key=951b4ca48d0f8c77cd8ebbc2e784c441&ud=105&url=","flag":["nmys","qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"Dalvik/2.1.0"}},
 
@@ -728,7 +730,7 @@
 
 {"name":"快","type":"1","url":"http://llyh.xn--yi7aa.top/api/?key=5b317c16d457b31a3150d87c0a362a9e&url=","flag":["youku","qq","qiyi","bilibili","mgtv","pptv","xigua"],"header":{"User-Agent":"Dalvik/2.1.0"}},
 
-{"name":"❗️","type":1,"url":"http://pan.qiaoji8.com/tvbox/gouzi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905","NetFilx"],"header":{"User-Agent":"okhttp/4.9.1"}}},
+{"name":"❗️","type":0,"url":"https://jx.quankan.app/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"}}},
 
 {"name":"🎖","type":1,"url":"https://cdn.suxun.site/api/?key=7QeqS18ZCrJgj0BSOn&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}}
 
