@@ -281,6 +281,18 @@
       "timeout": 15	
     },
     {
+      "key": "金牌影院",
+      "name": "🥇┃金牌┃影院🌺",
+      "type": 3,
+      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,      
+      "ext": "./js/金牌影院.js",
+      "timeout":15
+    },
+    {
       "key": "厂长资源",
       "name": "🏭️┃厂长┃资源🌺",
       "type": 3,
@@ -375,6 +387,28 @@
       "filterable": 1,
       "ext": "./json/河马影视.json",
       "timeout":10
+    },
+    {
+      "key": "php_heimuer",
+      "name": "🐝┃木耳┃影视🦋",
+      "type": 4,
+      "api": "https://json.doube.eu.org/app/index.php?site=webheimuer",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout":15
+    },
+    {
+      "key": "php_huaweiba",
+      "name": "🐝┃华为┃影视🦋",
+      "type": 4,
+      "api": "https://json.doube.eu.org/app/index.php?site=webhuaweiba",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout":15      
     },    	
     {
       "key": "hipy_js_采集之王",
@@ -642,6 +676,18 @@
 {"key":"初中","name":"📚┃初中┃教育💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/初中教育.json"},
 {"key":"高中","name":"📚┃高中┃教育💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/高中教育.json"},
 {"key":"兴趣培养","name":"📚┃兴趣┃培养💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/兴趣培养.json"},
+{"key":"小灯塔科学","name":"🌏┃科学┃灯塔💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/小灯塔科学.json"},
+{"key":"小灯塔地理","name":"🌏┃地理┃灯塔💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/小灯塔地理.json"},
+{"key":"小灯塔百科","name":"🌏┃百科┃灯塔💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/小灯塔百科.json"},
+{"key":"小灯塔国学","name":"🌏┃国学┃灯塔💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/小灯塔国学.json"},
+{"key":"儿童口才","name":" 🧒┃口才┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童口才.json"},
+{"key":"儿童拼音","name":" 🧒┃拼音┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童拼音.json"},
+{"key":"儿童识字","name":" 🧒┃识字┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童识字.json"},
+{"key":"儿童思维","name":" 🧒┃思维┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童思维.json"},
+{"key":"儿童英语","name":" 🧒┃英语┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童英语.json"},
+{"key":"儿童硬笔","name":" 🧒┃硬笔┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童硬笔.json"},
+{"key":"儿童编程","name":" 🧒┃编程┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童编程.json"},
+{"key":"儿童武术","name":" 🧒┃武术┃儿童💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/儿童武术.json"},
 {"key":"csp_Bili","name":"🅱️┃哔哩┃合集💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Bili.json"},
 {"key":"演唱会","name":"🅱️┃哔哩┃音乐💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/Biliych.json"},
 {"key":"bilimd","name":"🅱️┃哔哩┃影视💯","type":3,"api":"csp_Bilimd","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/dan.jar?ref=master;md5;7de46c7534b68d446aa91e6ecfb267cd","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"style":{"type":"rect","ratio":1.433}},
