@@ -2,8 +2,8 @@ var rule = {
     title: '快手直播',
    host: 'https://live.kuaishou.com',
     url: '/live_api/non-gameboard/list?pageSize=30&page=fypage&filterType=0&gameId=fyfilter',
-    class_name: '热门&网游&手游&单机&棋牌&娱乐&综合&文化',
-    class_url: '热门&网游&手游&单机&棋牌&娱乐&综合&文化',
+    class_name: '网游&手游&单机&棋牌&娱乐&综合&文化',
+    class_url: '网游&手游&单机&棋牌&娱乐&综合&文化',
     filterable: 1,
     filter_url: '{{fl.area}}',
     filter: {  
@@ -86,7 +86,6 @@ input = {
     一级 : $js.toString(() => {
     let d = [];
     
-    let hpjy = MY_FL.area || '22008'; //和平精英
     let tkx = MY_FL.area || '1000005'; //脱口秀
     let yxlm = MY_FL.area || '1'; //英雄联盟
     let jddj = MY_FL.area || '22088'; //经典单机
@@ -96,9 +95,7 @@ input = {
     let kp = MY_FL.area || '1000023'; //科普
 
 let list;
-if (hpjy && MY_CATE === '热门') {
-  list = JSON.parse(request('https://live.kuaishou.com/live_api/gameboard/list?pageSize=20&page=' + MY_PAGE + '&filterType=0&gameId=' + hpjy)).data.list;
-} else if (tkx && MY_CATE === '娱乐' ) {
+if (tkx && MY_CATE === '娱乐' ) {
   list = JSON.parse(request('https://live.kuaishou.com/live_api/non-gameboard/list?pageSize=20&page=' + MY_PAGE + '&filterType=0&gameId=' + tkx)).data.list;
 }else if (yxlm && MY_CATE === '网游') {
   list = JSON.parse(request('https://live.kuaishou.com/live_api/gameboard/list?pageSize=20&page=' + MY_PAGE + '&filterType=0&gameId=' + yxlm)).data.list;
