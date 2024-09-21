@@ -1,65 +1,91 @@
 var rule = {
-    title: '金牌影院',
-    host: 'https://www.cfkj86.com',
-    url: '/vod/show/id/fyclass/page/fypage',
-    searchUrl: '/api/mw-movie/anonymous/video/searchByWordPageable?keyword=**&pageNum=fypage&pageSize=12&type=false',
-    headers: {
-        'User-Agent': 'PC_UA',
-        'Referer': 'https://www.cfkj86.com/'
-    },
+  title: '金牌影院',
+  host: 'https://m.cfkj86.com',
+  url: '/api/mw-movie/anonymous/video/list?pageNum=fypage&pageSize=30&sort=1&sortBy=1&type1=fyclass',
+  searchUrl: '/api/mw-movie/anonymous/video/searchByWordPageable?keyword=**&pageNum=fypage&pageSize=12&type=false',
+  headers: {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'Referer': 'https://www.cfkj86.com/'
+  },
     searchable: 2,
     quickSearch: 0,
     filterable: 0,
     class_name: '电视剧&电影&综艺&动漫',
     class_url: '2&1&3&4',
-    tab_rename:{'金牌影院播放器':'🌺风言锋语88🌺金牌'},
+    tab_rename:{'立即播放':'🌺风言锋语88🌺金牌'},
     limit: 6,
     double: false,
     play_parse: true,
-    lazy: $js.toString(() => {
-        let url_id = input.split('/')[5];
-        let jishu_id = input.split('/')[7];
-        let t = new Date().getTime();
-        eval(getCryptoJS);
-        let signkey = 'id=' + url_id + '&nid=' + jishu_id + '&key=cb808529bae6b6be45ecfab29a4889bc&t=' + t;
-        let key = CryptoJS.SHA1(CryptoJS.MD5(signkey).toString()).toString();
-        let json_data = JSON.parse(request('https://www.chrqj.com/api/mw-movie/anonymous/v1/video/episode/url?id=' + url_id + '&nid=' + jishu_id, {
-            headers: {
-                'User-Agent': 'PC_UA',
-                'sign': key,
-                't': t
-            }
-        }));
-        let url = json_data.data;
-        log(url);
-        
-        if (typeof(html) === 'Object') playUrl = html.data.playUrl;
-    else if(typeof(html) === 'string') playUrl = JSON.parse(html).data.playUrl;
-    /*
-        if (url) {
-        
-            input = {parse: 0, url: url, header: rule.headers};
-        }
-*/
-    }),
-    图片替换: $js.toString(() => {
-        // log(MY_URL);
-        let src = decodeURIComponent(input).split(',')[0].split(' ')[0];
-        input = urljoin(MY_URL, src) + '@Referer=https://www.cfkj86.com/';
-    }),
-     double: false,
-    推荐: '*',
-   一级: '.movie-ul&&a;.title&&Text;.card-img&&img&&srcset;.info-tag&&Text;a&&href',
-    //一级: '.movie-ul&&a;.title&&Text;.card-img&&img&&srcset;.bottom&&Text;a&&href',
-   
-   二级: {
-                "title": "h1&&Text;.tag&&Text",
-                "img": "img&&src",
-                "desc": ";;;.director:eq(1)&&Text;.director:eq(0)&&a&&Text",
-                "content": ".wrapper_more_text&&Text",
-                "tabs": ".player_name",
-                "lists": ".listitem a"
-            },
-    
-    搜索: '*',
+    lazy:$js.toString(()=>{
+     let pid = input.split('/')[5]
+     let nid = input.split('/')[7]
+     const t = new Date().getTime()
+     eval(getCryptoJS)
+     let signkey = 'id='+pid+'&nid='+nid+'&key=cb808529bae6b6be45ecfab29a4889bc&t='+t
+     const key = CryptoJS.SHA1(CryptoJS.MD5(signkey).toString()).toString()
+     let json_data = JSON.parse(request('https://www.cfkj86.com/api/mw-movie/anonymous/v1/video/episode/url?id='+pid+'&nid='+nid,{headers: {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'deviceid': 'c6bce57d-bb62-4db7-96cd-265dfb2a79cf',
+    'sign': key,
+    't': t
+    }}))
+    log(json_data)
+     let link = json_data.data.playUrl
+     input={url:link,header:rule.headers}
+
+  }),
+  一级: $js.toString(()=>{
+        let d = []
+        let url = ''
+        const t = new Date().getTime()
+        const signkey = 'pageNum='+MY_PAGE+'&pageSize=30&sort=1&sortBy=1&type1='+MY_CATE+'&key=cb808529bae6b6be45ecfab29a4889bc&t='+t
+        const key = CryptoJS.SHA1(CryptoJS.MD5(signkey).toString()).toString()
+        const list = JSON.parse(request(input,{headers:{
+           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*',
+            'deviceId': 'c6bce57d-bb62-4db7-96cd-265dfb2a79cf',
+            'sign': key,
+            't': t 
+        }})).data.list
+        list.forEach((it)=>{
+            url = 'https://www.cfkj86.com/detail/'+it.vodId
+            d.push({
+              title: it.vodName,
+              desc:it.vodRemarks,
+              img:it.vodPic,
+              url:url
+            })
+        })
+        setResult(d)
+  }),
+  二级: {
+    title: 'h1&&Text',
+    tabs: '.top a',
+    lists: '.main-list-sections__BodyArea-sc-8bb7334b-2 .listitem a',
+  },
+  搜索: $js.toString(()=>{
+    const t = new Date().getTime()
+     eval(getCryptoJS)
+     let pg = MY_PAGE
+     let signkey = 'keyword='+KEY+'&pageNum='+pg+'&pageSize=12&type=false&key=cb808529bae6b6be45ecfab29a4889bc&t='+t
+     const key = CryptoJS.SHA1(CryptoJS.MD5(signkey).toString()).toString()
+      let html = JSON.parse(request(input,{headers: {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'deviceid': '58a80c52-138c-48fd-8edb-138fd74d12c8',
+    'sign': key,
+    't': t
+    }}))
+      let data = html.data.list
+      let d = []
+      data.forEach(it=>{
+        let reurl = 'https://www.cfkj86.com/detail/'+it.vodId
+        d.push({
+          title: it.vodName,
+          desc:it.vodVersion,
+          img:it.vodPic,
+          url:reurl
+        })
+      })
+    setResult(d)
+  }),
 }
