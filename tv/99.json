@@ -115,7 +115,7 @@
       "searchable": 1,
       "changeable": 0,
       "filterable": 1,
-      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master",
+      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master",
       "ext": {
         "Cloud-drive":"tvfan/Cloud-drive.txt",
         "from": "4k|auto",
@@ -234,7 +234,7 @@
       "name": "🔷┃立播┃秒播📀",
       "type": 3,
       "api": "csp_Libvio",
-      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master",		
+      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master",		
       "quickSearch":1,
       "searchable": 1,
       "changeable": 1,
@@ -279,6 +279,18 @@
       "filterable": 1,
       "ext":"./json/文才.json",
       "timeout": 15	
+    },
+    {
+      "key": "csp_摘星",
+      "name": "🌟┃摘星┃App🌺",
+      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+      "type": 3,
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/摘星.js",
+      "timeout":15
     },
     {
       "key": "金牌影院",
@@ -706,14 +718,14 @@
 {"key":"Local","name":"💻┃本地┃视频💯","type":3,"api":"csp_Local","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1},
 
 {"key":"csp_KungFu404","name":"👩🏻‍🍳┃阿里┃设置💯","type":3,"api":"csp_KungFu404","jar":"./jar/aliyun.jar","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext":"http://127.0.0.1:9978/TVBox/tok.txt"},
-{"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSs","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"PanSou","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSou","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"盘Se","name":"🔍┃盘Se┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fty.jar?ref=master","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSs","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSou","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSou","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘Se","name":"🔍┃盘Se┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"https://www.gitlink.org.cn/api/yf1688/box/raw/fan.txt?ref=master","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"cc","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1},
 {"key":"AD","name":"🚦请勿相信任何广告","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1}
 ],
@@ -750,13 +762,13 @@
 
 {"name":"Web聚合","type":3,"url":"Web"},	
 
-{"name":"666专线","type":"1","url":"http://1.xiaomi666.work.gd/aini10.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
+{"name":"666专线","type":"1","url":"https://xcoo.vip/xiaojun/xiaojunjiexi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
+
+{"name":"zhuimi","type":1,"url":"http://103.117.123.51:6523/zhuimi666.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 
 {"name":"1080解析","type":1,"url":"https://jf.lemiaoyun.cn/api/?key=86950663b3198d25885fdf61501a3366&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
 {"name":"1080解析1","type":1,"url":"https://jxjson.icu/neibu.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
-
-{"name":"zhuimi","type":1,"url":"http://103.117.123.51:6523/zhuimi666.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 
 {"name":"YY专线","type":"1","url":"http://122.228.85.203:6789/api/?key=de7ed0ead4328fe74ade88bd922e3f4f&url="},
 
