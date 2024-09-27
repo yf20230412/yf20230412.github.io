@@ -71,41 +71,23 @@
       "api": "./js/路飞搜索.js"
     },    
     {
-      "key": "六六六",
-      "name": "🥨┃三六┃4K🍂",
+      "key": "君君影视",
+      "name": "💡┃君君┃1080🩸",
       "type": 3,
-      "api": "csp_AppYsV2",
+      "api": "https://download.kstore.space/download/4645/douban/appys.js",
       "quickSearch":1,
       "searchable": 1,
-      "changeable": 1,
+      "changeable": 0,
       "filterable": 1,
-      "ext":"http://122.228.85.203:1000/api.php/app/",
+      "ext": {
+        "host": "http://122.228.85.203:1000/api.php/app/",
+        "*": [
+          "http://122.228.85.203:7979/api/?key=7cb64e30a4ba635990e54b59adf172aa&url=",
+          "https://xcoo.vip/xiaojun/xiaojunjiexi.php?url="
+        ]
+      },
       "timeout":20
     },
-    {
-      "key": "丘丘影视",
-      "name": "💡┃丘丘┃4K🍂",
-      "type": 3,
-      "api": "csp_AppYsV2",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "http://111.173.115.204:2211/api.php/app/",
-      "timeout":20
-    },
-    {
-      "key": "4KAV",
-      "name": "🏆┃KAV┃4K🌺",
-      "type": 3,
-      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/4KAV.js",
-      "timeout":20
-    }, 
     {
       "key": "玩偶哥哥",
       "name": "🤵🏻┃玩偶┃哥哥📀",
@@ -159,26 +141,8 @@
       }
     },	
     {
-      "key": "夸克奥秘弹幕",
-      "name": "🎁┃奥秘┃4K📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/dan.jar?ref=master;md5;34c7c3e4a322bcb666145dd87fa68e9f",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-        "site": "https://vip.omii.top",
-        "danmu": false
-      }
-    },
-    {
       "key": "夸克玩偶弹幕",
-      "name": "👨‍🦰┃表哥┃4K📀",
+      "name": "👨‍🦰┃讴歌┃4K📀",
       "type": 3,
       "api": "csp_Wobg",
       "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/dan.jar?ref=master;md5;34c7c3e4a322bcb666145dd87fa68e9f",
@@ -247,7 +211,7 @@
     },
     {
       "key": "csp_Xpg",
-      "name": "🍎┃苹果┃影视💯",
+      "name": "🍎┃苹果┃1080💯",
       "type": 3,
       "api": "csp_Xpg", 
       "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/dan.jar?ref=master;md5;34c7c3e4a322bcb666145dd87fa68e9f",     
@@ -259,7 +223,7 @@
     },  
     {
       "key": "csp_瓜子",
-      "name": "🍉┃瓜子┃App🌺",
+      "name": "🍉┃瓜子┃1080🌺",
       "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
       "type": 3,
       "quickSearch":1,
@@ -271,7 +235,7 @@
     },
     {
       "key": "文采",
-      "name": "📝┃文采┃秒播💯",
+      "name": "📝┃文采┃1080💯",
       "type": 3,
       "api": "csp_XBPQ",     		
       "quickSearch":1,
@@ -295,7 +259,7 @@
     },
     {
       "key": "金牌影院",
-      "name": "🥇┃金牌┃影院🌺",
+      "name": "🥇┃金牌┃1080🌺",
       "type": 3,
       "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
       "quickSearch":1,
@@ -307,7 +271,7 @@
     },
     {
       "key": "厂长资源",
-      "name": "🏭️┃厂长┃资源🌺",
+      "name": "🏭️┃厂长┃1080🌺",
       "type": 3,
       "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
       "quickSearch":1,
@@ -316,7 +280,19 @@
       "filterable": 1,
       "ext": "./js/厂长资源.js",
       "timeout":15
-    },       
+    },   
+    {
+      "key": "素白白",
+      "name": "👻┃白白┃1080🌺",
+      "type": 3,
+      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/素白白.js",
+      "timeout":15
+    },    
     {
       "key": "南瓜",
       "name": "🎃┃南瓜┃App🌺",
@@ -340,18 +316,6 @@
       "filterable": 1,
       "ext":"./js/可可影视.js",
       "timeout": 10
-    },
-    {
-      "key": "素白白",
-      "name": "👻┃白白┃影视🌺",
-      "type": 3,
-      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/素白白.js",
-      "timeout":15
     },
     {
       "key": "韩小圈",
