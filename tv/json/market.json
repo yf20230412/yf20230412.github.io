@@ -38,10 +38,10 @@
         "version": "TV安卓4x版"
       },		
       {
-        "name": "《影视仓》",
-        "url": "https://download.kstore.space/download/4645/apk/影视仓_游戏版.apk",
-        "icon": "https://download.kstore.space/download/4645/img/258.png",
-        "version": "手机游戏版"
+        "name": "《宝盒影视》",
+        "url": "https://download.kstore.space/download/4645/apk/宝盒手机版.apk",
+        "icon": "https://download.kstore.space/download/4645/img/260.png",
+        "version": "手机64位版"
       },	
       {
         "name": "《影视仓》",
@@ -50,7 +50,7 @@
         "version": "手机短视频版"
       },	
       {
-        "name": "《影视仓》",
+        "name": "《小鱼影视仓》",
         "url": "https://download.kstore.space/download/4645/apk/影视仓TV版.apk",
         "icon": "https://download.kstore.space/download/4645/img/258.png",
         "version": "TV内置版"
