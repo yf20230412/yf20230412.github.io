@@ -2,7 +2,7 @@ var rule = {
 author: '风言锋语88/2408/第一版',
 title: '厂长资源',
 类型: '影视',
-//host: 'https://www.czys.pro',
+//host: 'https://czzy.top/',
 host: 'https://www.cz01.vip',
 hostJs: 'HOST = pdfh(request(HOST), "h2:eq(1)&&a&&href")',
 headers: {'User-Agent': 'MOBILE_UA'},
