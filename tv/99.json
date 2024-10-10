@@ -14,22 +14,19 @@
     "name":"xiaoyu_live",
     "type":0,
     "url":"./txt/612.m3u",
-    "playerType":1,
-    "timeout": 10
+    "playerType":1
 },
 {
     "name":"FMM_IPV6",
     "type":0,
     "url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u",
-    "playerType":1,
-    "timeout": 10
+    "playerType":1
 },
 {
     "name":"Gather",
     "type":0,
     "url":"https://tv.iill.top/m3u/Gather",
-    "playerType":1,
-    "timeout": 10
+    "playerType":1
 },
 {
     "name":"818",
@@ -82,11 +79,10 @@
       "ext": {
         "host": "http://122.228.85.203:1000/api.php/app/",
         "*": [
-          "http://122.228.85.203:7979/api/?key=7cb64e30a4ba635990e54b59adf172aa&url=",
           "https://xcoo.vip/xiaojun/xiaojunjiexi.php?url="
         ]
       },
-      "timeout":20
+      "timeout":25
     },
     {
       "key": "玩偶哥哥",
@@ -219,7 +215,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout": 10
+      "timeout":25
     },  
     {
       "key": "csp_瓜子",
@@ -231,7 +227,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "./js/瓜子影视.js",
-      "timeout":15
+      "timeout":25
     },
     {
       "key": "文采",
@@ -243,7 +239,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext":"./json/文才.json",
-      "timeout": 15	
+      "timeout":25	
     },
     {
       "key": "csp_摘星",
@@ -255,7 +251,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "./js/摘星.js",
-      "timeout":15
+      "timeout":25
     },
     {
       "key": "金牌影院",
@@ -267,7 +263,7 @@
       "changeable": 1,
       "filterable": 1,      
       "ext": "./js/金牌影院.js",
-      "timeout":15
+      "timeout":25
     },
     {
       "key": "厂长资源",
@@ -279,7 +275,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "./js/厂长资源.js",
-      "timeout":15
+      "timeout":25
     },   
     {
       "key": "素白白",
@@ -291,7 +287,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "./js/素白白.js",
-      "timeout":15
+      "timeout":25
     },    
     {
       "key": "南瓜",
@@ -303,7 +299,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "./js/南瓜.js",
-      "timeout":10
+      "timeout":25
     },  	
     {
       "key": "csp_可可影视",
@@ -315,7 +311,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext":"./js/可可影视.js",
-      "timeout": 10
+      "timeout":25
     },
     {
       "key": "韩小圈",
@@ -327,7 +323,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout": 10
+      "timeout":25
     },		
     {
       "key": "大师兄影视",
@@ -339,7 +335,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "./js/大师兄.js",
-      "timeout":15
+      "timeout":25
     },
     {
       "key": "爱上电影",
@@ -351,7 +347,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext":"./json/爱上电影.json",
-      "timeout": 15
+      "timeout":25
     }, 	
     {
       "key": "河马影视",
@@ -363,7 +359,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "./json/河马影视.json",
-      "timeout":10
+      "timeout":25
     },
     {
       "key": "php_heimuer",
@@ -374,7 +370,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout":15
+      "timeout":25
     },
     {
       "key": "php_huaweiba",
@@ -385,7 +381,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout":15      
+      "timeout":25      
     },    	
     {
       "key": "hipy_js_采集之王",
@@ -407,7 +403,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout": 10
+      "timeout":25
     },
     {
       "key": "机器人",
@@ -419,7 +415,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "https://v.aikanbot.com",
-      "timeout": 10
+      "timeout":25
     },
     {
       "key": "csp_Free",
@@ -430,7 +426,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout": 10
+      "timeout":25
     },
     {
       "key": "csp_DiDuan",
@@ -441,7 +437,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout": 10
+      "timeout":25
     },
     {
       "key": "荐片",
@@ -453,7 +449,7 @@
       "changeable": 0,
       "filterable": 1,
       "ext": "./json/jp.json",
-      "timeout":10
+      "timeout":25
     },	
     {
       "key": "哔嘀影视",
@@ -464,7 +460,7 @@
       "searchable": 0,
       "changeable": 0,
       "ext": "./js/哔嘀影视[优].js",
-      "timeout":10
+      "timeout":25
     },	
     {
       "key": "csp_Bttoo",
@@ -476,7 +472,7 @@
       "changeable": 0,
       "filterable": 1,
       "ext": "./js/两个BT.js",
-      "timeout":15
+      "timeout":25
     },	    
     {
       "key": "酷吧电影",
@@ -487,7 +483,7 @@
       "searchable": 0,
       "changeable": 0,
       "filterable": 1,
-      "timeout":15
+      "timeout":25
     },	
     {
       "key": "美剧天堂",
@@ -498,7 +494,7 @@
       "searchable": 0,
       "changeable": 0,
       "filterable": 1,
-      "timeout": 15		
+      "timeout":25		
     },		
     {
       "key": "6V新磁力",
@@ -509,7 +505,7 @@
       "searchable": 0,
       "changeable": 0,
       "filterable": 1,
-      "timeout":15
+      "timeout":25
     },
     {
       "key": "4KHDR",
@@ -521,7 +517,7 @@
       "changeable": 0,
       "filterable": 1,
       "ext": "./js/4KHDR磁力.js",
-      "timeout":15
+      "timeout":25
     },
     {
       "key": "SeedHub",
@@ -532,7 +528,7 @@
       "searchable": 0,
       "changeable": 0,
       "filterable": 1,
-      "timeout":15		
+      "timeout":25		
     },
     {
       "key": "美剧迷",
@@ -543,7 +539,7 @@
       "searchable": 0,
       "changeable": 0,
       "filterable": 1,
-      "timeout":15			
+      "timeout":25			
     },
     {
       "key": "迅雷吧",
@@ -554,7 +550,7 @@
       "searchable": 0,
       "changeable": 0,
       "filterable": 1,
-      "timeout":15			
+      "timeout":25			
     },
     {
       "key": "Mp4电影",
@@ -565,7 +561,7 @@
       "searchable": 0,
       "changeable": 0,
       "filterable": 1,
-      "timeout":15			
+      "timeout":25			
     },	
     {
       "key": "磁力_lf_p2p2",
@@ -649,14 +645,14 @@
       }
     },		
     
-{"key":"芒果","name":"🥭┃少儿┃果果🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/mgtv.js","timeout":15},
-{"key":"奇艺","name":"💖┃少儿┃奇异🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/iqiyi.js","timeout":15},
-{"key":"优酷","name":"👔‍┃少儿┃酷酷🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/youku.js","timeout":15},
-{"key":"腾讯","name":"🐧┃少儿┃腾腾🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/qq.js","timeout":15},
-{"key":"搜狗","name":"🐶┃少儿┃狗狗🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/sougou.js","timeout":15},
-{"key":"360_spider","name":"⚽️┃少儿┃360💯","type":3,"api":"csp_SP360","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":15},
-{"key":"NT动漫","name":"🌸┃NTT┃动漫🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/NT动漫.js","timeout":15},
-{"key":"Dm84","name":"🌸┃巴士┃动漫💯","type":3,"api":"csp_Dm84","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":15},
+{"key":"芒果","name":"🥭┃少儿┃果果🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/mgtv.js","timeout":25},
+{"key":"奇艺","name":"💖┃少儿┃奇异🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/iqiyi.js","timeout":25},
+{"key":"优酷","name":"👔‍┃少儿┃酷酷🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/youku.js","timeout":25},
+{"key":"腾讯","name":"🐧┃少儿┃腾腾🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/qq.js","timeout":25},
+{"key":"搜狗","name":"🐶┃少儿┃狗狗🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/sougou.js","timeout":25},
+{"key":"360_spider","name":"⚽️┃少儿┃360💯","type":3,"api":"csp_SP360","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":25},
+{"key":"NT动漫","name":"🌸┃NTT┃动漫🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/NT动漫.js","timeout":25},
+{"key":"Dm84","name":"🌸┃巴士┃动漫💯","type":3,"api":"csp_Dm84","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":25},
 	
 {"key":"dr_兔小贝","name":"📚┃儿童┃启蒙🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./js/兔小贝.js"},
 {"key":"幼小衔接","name":"📚┃幼小┃衔接💯","type":3,"api":"csp_Bili","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./json/幼小衔接.json"},
@@ -709,16 +705,16 @@
 
 
 /*
-{"key":"360","name":"🐝┃360┃秒播","type":1,"api":"https://360zy.com/api.php/provide/vod?","searchable":1,"changeable":1,"timeout":10,"categories":["国产剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日韩动漫","爽文短剧","体育","NBA","足球","篮球"]},
-{"key":"爱坤","name":"🐝┃爱坤┃秒播","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod?","searchable":1,"changeable":1,"timeout":10,"categories":["国产剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日韩动漫","爽文短剧","体育","足球","NBA","CBA","德甲","意甲","英超","西甲","法甲","WCBA","LPL"]},
-{"key":"jszy","name":"🐝┃极速┃采集","type":1,"api":"https://jszyapi.com/api.php/provide/vod/from/jsm3u8","searchable":1,"changeable":1,"timeout":10,"categories":["动作片","爱情片","喜剧片","科幻片","恐怖片","剧情片","战争片","记录片","灾难片","悬疑片","犯罪片","奇幻片","动画片","中国动漫","日本动漫","欧美动漫","内地剧","欧美剧","香港剧","台湾剧","韩剧","日剧","马泰剧","伦理片","体育赛事","大陆综艺","港台综艺","日韩综艺","欧美综艺"]},
-{"key":"闪电资源","name":"🐝┃闪电┃采集","type":1,"searchable":1,"changeable":1,"timeout":10,"api":"http://sdzyapi.com/api.php/provide/vod/"},
-{"key":"新浪资源","name":"🐝┃新浪┃采集","type":1,"api":"http://api.xinlangapi.com/xinlangapi.php/provide/vod/","searchable":1,"changeable":1,"timeout":10},
-{"key":"快车资源","name":"🐝┃快车┃采集","type":1,"api":"https://caiji.kczyapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"timeout":10},
-{"key":"天空资源","name":"🐝┃天空┃采集","type":1,"api":"https://api.tiankongapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"timeout":10},
-{"key":"忆梦","name":"🐝┃忆梦┃采集","type":1,"searchable":1,"changeable":1,"timeout":10,"api":"https://gnpt.net/api.php/provide/vod/"},
-{"key":"火狐","name":"🐝┃火狐┃采集","type":1,"style":{"type":"rect","ratio":0.8},"api":"https://hhzyapi.com/api.php/provide/vod/?ac=list","searchable":1,"changeable":1,"timeout":10,"categories":["内地剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","悬疑片","犯罪片","奇幻片","记录片","动画片","伦理片","香港剧","台湾剧","日剧","韩剧","欧美剧","马泰剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","中国动漫","日本动漫","欧美动漫"]},
-{"key":"异世界","name":"🐝┃异界┃采集","api":"csp_AppYsV2","type":3,"searchable":1,"changeable":1,"timeout":10,"ext":"http://ysjtv.yy365.vip/api.php/app/"},	
+{"key":"360","name":"🐝┃360┃秒播","type":1,"api":"https://360zy.com/api.php/provide/vod?","searchable":1,"changeable":1,"timeout":25,"categories":["国产剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日韩动漫","爽文短剧","体育","NBA","足球","篮球"]},
+{"key":"爱坤","name":"🐝┃爱坤┃秒播","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod?","searchable":1,"changeable":1,"timeout":25,"categories":["国产剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日韩动漫","爽文短剧","体育","足球","NBA","CBA","德甲","意甲","英超","西甲","法甲","WCBA","LPL"]},
+{"key":"jszy","name":"🐝┃极速┃采集","type":1,"api":"https://jszyapi.com/api.php/provide/vod/from/jsm3u8","searchable":1,"changeable":1,"timeout":25,"categories":["动作片","爱情片","喜剧片","科幻片","恐怖片","剧情片","战争片","记录片","灾难片","悬疑片","犯罪片","奇幻片","动画片","中国动漫","日本动漫","欧美动漫","内地剧","欧美剧","香港剧","台湾剧","韩剧","日剧","马泰剧","伦理片","体育赛事","大陆综艺","港台综艺","日韩综艺","欧美综艺"]},
+{"key":"闪电资源","name":"🐝┃闪电┃采集","type":1,"searchable":1,"changeable":1,"timeout":25,"api":"http://sdzyapi.com/api.php/provide/vod/"},
+{"key":"新浪资源","name":"🐝┃新浪┃采集","type":1,"api":"http://api.xinlangapi.com/xinlangapi.php/provide/vod/","searchable":1,"changeable":1,"timeout":25},
+{"key":"快车资源","name":"🐝┃快车┃采集","type":1,"api":"https://caiji.kczyapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"timeout":25},
+{"key":"天空资源","name":"🐝┃天空┃采集","type":1,"api":"https://api.tiankongapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"timeout":25},
+{"key":"忆梦","name":"🐝┃忆梦┃采集","type":1,"searchable":1,"changeable":1,"timeout":25,"api":"https://gnpt.net/api.php/provide/vod/"},
+{"key":"火狐","name":"🐝┃火狐┃采集","type":1,"style":{"type":"rect","ratio":0.8},"api":"https://hhzyapi.com/api.php/provide/vod/?ac=list","searchable":1,"changeable":1,"timeout":25,"categories":["内地剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","悬疑片","犯罪片","奇幻片","记录片","动画片","伦理片","香港剧","台湾剧","日剧","韩剧","欧美剧","马泰剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","中国动漫","日本动漫","欧美动漫"]},
+{"key":"异世界","name":"🐝┃异界┃采集","api":"csp_AppYsV2","type":3,"searchable":1,"changeable":1,"timeout":25,"ext":"http://ysjtv.yy365.vip/api.php/app/"},	
 
 {"key":"豆瓣预告","name":"🎬┃电影┃预告🎀","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"playerType":2,"ext":"./json/豆瓣预告.json"},
 {"key":"js_博看听书","name":"📚️┃听书┃博看🌺","type":3,"api":"https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/博看.js"},
