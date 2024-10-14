@@ -52,6 +52,57 @@
 				line-height: 30px;
 				text-align: center;
 			}
+	    YourName {
+			background: linear-gradient(135deg,
+					#0eaf6d,
+					#ff6ac6 25%,
+					#147b96 50%,
+					#e6d205 55%,
+					#2cc4e0 60%,
+					#8b2ce0 80%,
+					#ff6384 95%,
+					#08dfb4);
+			/* 文字颜色填充设置为透明 */
+			-webkit-text-fill-color: transparent;
+			/* 背景裁剪，即让文字使用背景色 */
+			-webkit-background-clip: text;
+			background-clip: text;
+			/* 背景图放大一下，看着柔和一些 */
+			-webkit-background-size: 200% 100%;
+			background-size: 200% 100%;
+			/* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
+			-webkit-animation: flowCss 12s infinite linear;
+			animation: flowCss 12s infinite linear;
+			font-size: 14px;
+			/* 设置字体大小 */
+			font-weight: bold;
+			/* 设置字体粗细 */
+			letter-spacing: 2px;
+			/* 设置字符间距 */
+			animation-name: flowCss;
+			/* 定义动画名称 */
+			animation-duration: 5s;
+			/* 定义动画持续时间 */
+			animation-iteration-count: infinite;
+			/* 定义动画重复次数 */
+			animation-timing-function: linear;
+			/* 定义动画速度曲线 */
+			animation-fill-mode: forwards;
+			/* 定义动画结束后状态 */
+		}
+
+		/* 定义动画 */
+		@keyframes flowCss {
+			0% {
+				/* 设置背景图像的位置 */
+				background-position: 0% 50%;
+			}
+
+			100% {
+				/* 设置背景图片的位置 */
+				background-position: 100% 50%;
+			}
+		}
 		</style>
 	</head>
 <body>
@@ -62,7 +113,7 @@
 				<ul>
 					<li>
 						<span>🐬小鱼影视🐬</span><br/>
-						<span>微信公众号：风言锋语88</span><br/>
+						<span><YourName>微信公众号：风言锋语88</YourName></span><br/>
 						<span>邮箱📧：<a rel="nofollow" href="mailto:yufeng1688778@163.com">yufeng1688778@163.com</a></span><br/>
 					</li>
 					<li>

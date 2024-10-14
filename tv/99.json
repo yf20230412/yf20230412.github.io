@@ -14,19 +14,28 @@
     "name":"xiaoyu_live",
     "type":0,
     "url":"./txt/612.m3u",
-    "playerType":1
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://live.fanmingming.com/tv/{name}.png"
 },
 {
     "name":"FMM_IPV6",
     "type":0,
     "url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u",
-    "playerType":1
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://live.fanmingming.com/tv/{name}.png"
 },
 {
     "name":"Gather",
     "type":0,
     "url":"https://tv.iill.top/m3u/Gather",
-    "playerType":1
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://live.fanmingming.com/tv/{name}.png"
 },
 {
     "name":"818",

@@ -12,22 +12,28 @@
     "name": "xiaoyu_live",
     "type": 0,
     "url": "./txt/612.m3u",
-    "playerType": 1,
-    "timeout": 10
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://live.fanmingming.com/tv/{name}.png"
   },
   {
     "name": "FMM_IPV6",
     "type": 0,
     "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
-    "playerType": 1,
-    "timeout": 10
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://live.fanmingming.com/tv/{name}.png"
   },
   {
     "name":"Gather",
     "type":0,
     "url":"https://tv.iill.top/m3u/Gather",
     "playerType":1,
-    "timeout": 10
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://live.fanmingming.com/tv/{name}.png"
   },
   {
     "name": "818",
@@ -92,6 +98,34 @@
     "timeout": 20,
     "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json$1"
   }, 
+  {
+      "key": "php_madou",
+      "name": "麻豆(T4)",
+      "type": 4,
+      "api": "https://json.doube.eu.org/app/index.php?site=dbmadou",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 0,
+      "changeable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.5
+      }
+    },
+    {
+      "key": "py_aidouchuanmei",
+      "name": "爱豆传媒(T4)",
+      "type": 4,
+      "api": "https://py.doube.eu.org/api?site=aidouchuanmei",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 0,
+      "changeable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.5
+      }
+    },
   {
     "key": "hipy_js_29片库[密]",
     "name": "🔞┃29片库[密]",
