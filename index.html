@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
+    <!-- 控制缓存 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <link rel="icon" href="/images/icon/favicon.ico" />
     <link rel="apple-touch-icon" href="/images/logo/apple-touch-icon.png" />
     <link rel="bookmark" href="/images/logo/apple-touch-icon.png" />
@@ -39,6 +40,12 @@
       <div style="text-align: center">请开启 JavaScript</div>
     </noscript>
     
+  <script>
+    // 检查查询参数或Cookie来决定是否强制刷新
+    if (window.location.search.includes('refresh') || document.cookie.includes('forceRefresh=true')) {
+      window.location.reload(true); // 强制刷新页面
+    }
+  </script>
     
     <!--随机播放音乐-->
 <script Language="JavaScript">
