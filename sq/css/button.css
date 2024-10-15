@@ -106,6 +106,9 @@ h1 {
     .button16 { background-color: #00FF00; }
     .button17 { background-color: #FF1493; } 
     .button18 { background-color: #FF0000; }
+    .button19 { background-color: #cc3399; }
+    .button20 { background-color: #66CDAA; }
+    .button21 { background-color: #4169E1; }
 	/* 为每个按钮添加图标*/
     
 	.button1::before { background-image: url('../images/icon/01.png');}
@@ -125,4 +128,7 @@ h1 {
     .button15::before { background-image: url('../images/icon/12.png'); } 	
     .button16::before { background-image: url('../images/icon/13.png'); }
 	.button17::before { background-image: url('../images/icon/14.svg'); } 
-    .button18::before { background-image: url('../images/icon/15.png'); } 
+    .button18::before { background-image: url('../images/icon/15.png'); }
+    .button19::before { background-image: url('../images/icon/27.svg'); } 
+    .button20::before { background-image: url('../images/icon/10.svg'); }
+    .button21::before { background-image: url('../images/icon/17.png'); }

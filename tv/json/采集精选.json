@@ -1,14 +1,4 @@
 [
-
-  {
-    "name": "🔥360",
-    "url": "https://360zy.com/",
-    "parse_url": "",
-    "cate_exclude": "",
-    "api": "/api.php/provide/vod/",
-    "class_name": "H4sIAAAAAAAAAzWRa3aCMBCFd5N9tAvomhRaFHoqcKpYrUd7VEQtCD6rYGAzee6iyYC/8k0ek3vv0G9M8ojaEeL9M8V7JKopLxLYKO7CzhF11uz+i8h9xT2L2x29QfAEKJioi5p4d8/MN6DIp7dCE2t7rBXAPTtqTln3i+S2JrkasWuq/5GzDf3Gmlgc8bKnieBPYRzQy/MTYqbDjDG02V1onvBUkbsUC2hIexZ1D9DaiHnggwQn5XgL1C7luATKtxQPgGZJ44L3QSd1M3Yr4f9hyCYx0PmPLgOgY9aoo8tIjqwmFa3dzR7FMFQmHgWYeIRXx1tH2NhrCnjTFOJy5J6JeLrTC5tsadfi+wKJsJLmug4Ys6CjtMNkehkpFtLE9Gog8eqz07R2j+jtpE74phIXp0mJFCNS/qjiQ+BYtQEr4VHOfdZ+V3NTM/HkoJItS8yTf7nlAcIPAgAA",
-    "class_url": "13&1&2&3&4&5&6&7&8&9&10&11&12&14&15&16&17&18&20&21&22&23&24&25&26&27&28&29&30&31&32&33&34&35&36&37&38&39&40&41&42&43&45&46&47&48&49&50&51&52&53"
-  },
   {
     "name": "🔥光速.云播",
     "url": "https://api.guangsuapi.com",
