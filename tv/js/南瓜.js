@@ -40,23 +40,25 @@ var rule = {
 	class_name:'电视剧&电影&动漫&综艺&海外精选', // /api.php/provide/home_nav
 	class_url:'2&1&4&3&46',
 	tab_rename:{'BF':'🌺风言锋语88🌺BF','SEVEN':'🌺风言锋语88🌺七七','NG速播A':'🌺风言锋语88🌺NG','FF源-勿信视频内广告':'🌺风言锋语88🌺FF','官网TX云':'🌺风言锋语88🌺TX','官网YK云':'🌺风言锋语88🌺YK','LZ源-勿信视频内广告':'🌺风言锋语88🌺LZ'},
-	tab_remove:['NG快播-1'],
 	limit:20,
 	play_parse:true,
-	lazy:`js:
+tab_remove:['NG快播-1'],
+    
+lazy: $js.toString(() => {
         try {
             function getvideo(url) {
                 let jData = JSON.parse(request(url, {
                     headers: getHeaders(url)
                 }));
                 if (jData.code == 1) {
+                    
                     return jData.data.url
                 } else {
                     return 'http://43.154.104.152:1234/jhapi/cs.php?url=' + url.split('=')[1]
                 }
             }
             if (/,/.test(input)) {
-                let mjurl = input.split(',')[1]
+                let mjurl = input.split(',')[0]
                 let videoUrl = getvideo(mjurl);
                 input = {
                     jx: 0,
@@ -68,6 +70,7 @@ var rule = {
                 }
             } else {
                 let videoUrl = getvideo(input);
+                
                 if (/jhapi/.test(videoUrl)) {
                     videoUrl = getvideo(videoUrl);
                     input = {
@@ -79,6 +82,7 @@ var rule = {
                         })
                     }
                 } else {
+                    
                     input = {
                         jx: 0,
                         url: videoUrl,
@@ -89,8 +93,8 @@ var rule = {
         } catch (e) {
             log(e.toString())
         }
-	`,
-	推荐:`js:
+	}),
+	推荐:$js.toString(() => {
         var d = [];
         let html = request(input, {
             headers: getHeaders(input)
@@ -105,8 +109,8 @@ var rule = {
             })
         });
         setResult(d);
-    `,
-	一级:`js:
+    }),
+	一级:$js.toString(() => {
 		var d = [];
 		let html = request(input, {
 			headers: getHeaders(input)
@@ -121,8 +125,8 @@ var rule = {
 			})
 		});
 		setResult(d);
-	`,
-	二级:`js:
+	}),
+	二级:$js.toString(() => {
         var d = [];
         VOD = {
             vod_id: input.split('id=')[1]
@@ -153,8 +157,10 @@ var rule = {
                     if (!playMap.hasOwnProperty(source)) {
                         playMap[source] = []
                     }
-                    playMap[source].append(playurl['name'].strip() + '$' + play_url + urlencode(playurl['url']))
-                })
+                    playMap[source].append(playurl['name'].strip() + '$' +  
+                     //play_url + urlencode(playurl['url'][0])
+                     play_url + playurl['url'][0]
+                     )})
             });
             let playFrom = [];
             let playList = [];
@@ -170,8 +176,8 @@ var rule = {
         } catch (e) {
             log('获取二级详情页发生错误:' + e.message)
         }
-	`,
-	搜索:`js:
+	}),
+	搜索:$js.toString(() => {
         var d = [];
         let html = request(input, {
             headers: getHeaders(input)
@@ -187,5 +193,5 @@ var rule = {
             })
         });
         setResult(d);
-    `,
+    }),
 }
