@@ -2,16 +2,17 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 控制缓存 -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
     <link rel="icon" href="/images/icon/favicon.ico" />
     <link rel="apple-touch-icon" href="/images/logo/apple-touch-icon.png" />
     <link rel="bookmark" href="/images/logo/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" sizes="200x200" href="/images/logo/apple-touch-icon.png" />
+    <!-- 控制缓存 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="description" content="一个默默无闻的主页" />
     <meta name="keywords" content="小鱼,个人主页" />
     <meta name="author" content="小鱼" />
@@ -28,7 +29,7 @@
           'https://support.dmeng.net/upgrade-your-browser.html?referrer=' +
           encodeURIComponent(window.location.href);
     </script>
-    <script type="module" crossorigin src="/assets/index-084494de.js"></script>
+    <script type="module" crossorigin src="/assets/index-8563787c.js"></script>
     <link rel="stylesheet" href="/assets/index-f357e52c.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
 
@@ -40,7 +41,7 @@
       <div style="text-align: center">请开启 JavaScript</div>
     </noscript>
     
-  <script>
+	<script>
     // 检查查询参数或Cookie来决定是否强制刷新
     if (window.location.search.includes('refresh') || document.cookie.includes('forceRefresh=true')) {
       window.location.reload(true); // 强制刷新页面
