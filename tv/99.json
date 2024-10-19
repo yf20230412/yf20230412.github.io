@@ -275,14 +275,14 @@
     },    
     {
       "key": "南瓜",
-      "name": "🎃┃南瓜┃App🌺",
+      "name": "🎃┃南瓜┃App💯",
       "type": 3,
-      "api": "https://www.gitlink.org.cn/api/yf1688/box/raw/drpy3.min.js?ref=master",
+      "api": "csp_Nangua",
+      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/dan.txt?ref=master",
       "quickSearch":1,
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "ext": "./js/南瓜.js",
       "timeout":25
     },  	
     {
@@ -295,6 +295,18 @@
       "changeable": 1,
       "filterable": 1,
       "ext":"./js/可可影视.js",
+      "timeout":25
+    },
+    {
+      "key": "热播",
+      "name": "🔥┃热播┃App💯",
+      "type": 3,
+      "api": "csp_AppRB",
+      "jar": "https://www.gitlink.org.cn/api/yf1688/box/raw/dan.txt?ref=master",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
       "timeout":25
     },
     {
@@ -406,6 +418,7 @@
       "name": "👌┃Free┃影视💯",
       "type": 3,
       "api": "csp_FreeOK",
+      "ext": "https://www.freeok.lol",
       "quickSearch":1,
       "searchable": 1,
       "changeable": 1,
