@@ -30,7 +30,7 @@ var rule = {
         tabs: 'body&&#detail-source-swiper&&span:not(:matches(可可影视提供))',
         lists: '.episode-list:eq(#id) a',
     },
-    搜索: '.search-result-list&&a;.title&&Text;*;.search-result-item-header&&Text;a&&href;.desc&&Text',
+    搜索: '.search-result-list&&a;.title:eq(1)&&Text;*;.search-result-item-header&&Text;a&&href;.desc&&Text',
     // 图片替换:$js.toString(()=>{
     //     log(input);
     //    input = input.replace(rule.host,'https://vres.a357899.cn');

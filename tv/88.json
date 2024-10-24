@@ -1,12 +1,12 @@
 {
 
-  "spider": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/custom_zy.jar?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+  "spider": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/custom_zy.jar",
 
   "wallpaper": "http://www.kf666888.cn/api/tvbox/img",
 
   "warningText": "【风言锋语88·温馨提示您】：🔴线路利用网络爬虫技术获取，各线路的版本、清晰度、播放速度等存在差异请自行切换。建议避开晚上高峰时段。🔵软件和接口都是免费分享使用。💢请勿相信视频中的任何广告，以免您上当受骗……💯",
 
-  "logo": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/588.gif?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+  "logo": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/588.gif",
 
   "lives": [{
     "name": "xiaoyu_live",
@@ -79,7 +79,7 @@
     "searchable": 1,
     "quickSearch": 1,
     "changeable": 0,
-    "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+    "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt",
     "ext": {
         "Cloud-drive":"tvfan/Cloud-drive.txt",
         "from": "4k|auto|fhd",
@@ -92,7 +92,7 @@
     "key": "hipy_js_采集之王",
     "name": "🐝┃采集┃之王💯",
     "type": 3,
-    "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/drpy3.min.js?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+    "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
     "searchable": 1,
     "changeable": 1,
     "timeout": 20,
@@ -130,7 +130,7 @@
     "key": "hipy_js_29片库[密]",
     "name": "🔞┃29片库[密]",
     "type": 3,
-    "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/drpy3.min.js?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+    "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
     "searchable": 1,
     "quickSearch": 1,
     "filterable": 1,
@@ -140,7 +140,7 @@
     "key": "hipy_js_地瓜视频[密]",
     "name": "🔞┃地瓜视频",
     "type": 3,
-    "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/drpy3.min.js?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+    "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
     "searchable": 1,
     "quickSearch": 1,
     "filterable": 1,
@@ -150,7 +150,7 @@
     "key": "hipy_js_九妖仓库[密]",
     "name": "🔞┃九妖仓库",
     "type": 3,
-    "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/drpy3.min.js?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+    "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
     "searchable": 1,
     "quickSearch": 1,
     "filterable": 1,
@@ -160,7 +160,7 @@
     "key": "hipy_js_绿色仓库[密]",
     "name": "🔞┃绿色仓库",
     "type": 3,
-    "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/drpy3.min.js?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+    "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
     "searchable": 1,
     "quickSearch": 1,
     "filterable": 1,
@@ -170,7 +170,7 @@
     "key": "hipy_js_在线小片[密]",
     "name": "🔞┃在线小片",
     "type": 3,
-    "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/drpy3.min.js?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f",
+    "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
     "searchable": 1,
     "quickSearch": 1,
     "filterable": 1,
@@ -479,14 +479,14 @@
   },
   
 {"key":"csp_Token","name":"📚┃阿里┃Token设置","type":3,"api":"csp_KungFu404","searchable":1,"filterable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/TVBox/tok.txt","jar":"./jar/aliyun.jar;md5;332d0e5a28640ee88589390ad4a23a39"},
-{"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSs","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"Sso","name":"🔍┃盘他┃三盘📀","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/盘他.js"},
-{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"盘Se","name":"🔍┃盘Se┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/fan.txt?ref=master&access_token=18bc91251d16b58243fdbb5cc77da5f58d41555f","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSs","jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"Sso","name":"🔍┃盘他┃三盘📀","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/盘他.js"},
+{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘Se","name":"🔍┃盘Se┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/fan.txt","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"cc","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1},
 {"key":"AD","name":"🚦请勿相信任何广告","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1}
   
