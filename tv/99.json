@@ -216,6 +216,17 @@
       "timeout":25
     },  
     {
+      "key": "naerxun",
+      "name": "🍓┃糯米┃影视🦅",
+      "type": 3,
+      "api": "./js/naerxun.js",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": ""
+    },
+    {
       "key": "csp_瓜子",
       "name": "🍉┃瓜子┃1080🌺",
       "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",

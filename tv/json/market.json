@@ -251,10 +251,10 @@
     "name": "腾讯X5离线版",
     "list": [
       {
-        "name": "嗅探X5离线TV版",
-        "url": "https://cn.kstore.space/download/4645/apk/X5离线版.apk",
+        "name": "嗅探X5电视版",
+        "url": "https://download.kstore.space/download/4645/apk/[x5.tbs.apk].txt",
         "icon": "https://download.kstore.space/download/4645/img/555.jpg",
-        "version": "安卓4专用"
+        "version": "Android9专用"
       }
     ]
   }
