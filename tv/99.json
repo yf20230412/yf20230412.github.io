@@ -241,19 +241,7 @@
       "filterable": 1,
       "ext":"./json/文才.json",
       "timeout":25	
-    },
-    {
-      "key": "csp_摘星",
-      "name": "🌟┃摘星┃App🌺",
-      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
-      "type": 3,
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/摘星.js",
-      "timeout":25
-    },
+    },    
     {
       "key": "金牌影院",
       "name": "🥇┃金牌┃1080🌺",
@@ -277,7 +265,31 @@
       "filterable": 1,
       "ext": "./js/厂长资源.js",
       "timeout":25
-    },          
+    },  
+    {
+      "key": "凡人影视",
+      "name": "🦸‍♂️┃凡人┃APP💯",
+      "type": 3,
+      "api": "csp_AppFr",
+      "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout":25
+    },
+    {
+      "key": "耐看影视",
+      "name": "➿┃耐看┃影视💯",
+      "type": 3,
+      "api": "csp_WebNK",
+      "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout":25
+    },        
     {
       "key": "csp_可可影视",
       "name": "🎩┃可可┃影视🌺",
@@ -314,18 +326,6 @@
       "filterable": 1,
       "timeout":25
     },		
-    {
-      "key": "大师兄影视",
-      "name": "🧙🏻‍♂️┃大师┃✰兄🌺",
-      "type": 3,
-      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/大师兄.js",
-      "timeout":25
-    },
     {
       "key": "php_heimuer",
       "name": "🐝┃木耳┃影视🦋",
@@ -393,6 +393,18 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
+      "timeout":25
+    },
+    {
+      "key": "csp_摘星",
+      "name": "🌟┃摘星┃App🌺",
+      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
+      "type": 3,
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/摘星.js",
       "timeout":25
     },
     {
@@ -705,7 +717,18 @@
 {"key":"喜马拉雅","name":"📚️┃听书┃拉雅🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","changeable":0,"ext":"./js/喜马拉雅.js"},
 {"key":"MTV转点播","name":"🎸┃万首┃MTV🌺","type":3,"playerType":2,"quickSearch":0,"searchable":0,"changeable":0,"style":{"type":"rect","ratio":1.597},"api":"./js/音乐转点播.js","ext":"./txt/MTV2.txt"},
 {"key":"酷奇MV","name":"🎤┃酷奇┃MV🎀","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"changeable":0,"style":{"type":"rect","ratio":1.597},"ext":"./json/酷奇MV.json"},
-    
+    {
+      "key": "大师兄影视",
+      "name": "🧙🏻‍♂️┃大师┃✰兄🌺",
+      "type": 3,
+      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/大师兄.js",
+      "timeout":25
+    },  
 */
 
 	
@@ -728,7 +751,7 @@
 
 {"name":"1080解析","type":1,"url":"http://117.50.183.202:8036/?ip=111.55.12.236&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"zhuimi解析","type":1,"url":"http://moyu.zhuimi.top/zhuimi666.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}}
+{"name":"zhuimi解析","type":1,"url":"http://103.38.82.59:9527/zhuimi666.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}}
 
 ],
 
