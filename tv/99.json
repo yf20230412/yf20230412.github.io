@@ -260,7 +260,7 @@
       "type": 3,
       "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
       "quickSearch":1,
-      "searchable": 1,
+      "searchable": 0,
       "changeable": 1,
       "filterable": 1,
       "ext": "./js/厂长资源.js",
