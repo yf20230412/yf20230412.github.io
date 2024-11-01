@@ -289,7 +289,20 @@
       "changeable": 1,
       "filterable": 1,
       "timeout":25
-    },        
+    },    
+    {
+      "key": "兄弟影视",
+      "name": "👬┃兄弟┃APP",
+      "type": 3,
+      "api": "csp_AppGetApp",
+      "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "KhYl01Kekjo9vLs09V+rOtv/6QaOFwdQp2ne4h22GLkT99eCXh9SJ/lGZNM8zgk1OnFWx0zBQ9Y/9mAjQB67LaEp7Yj7w9SYBEjFbdPjKy3EHp7uBIHXVI7/dZ4r/dJapz6ihlWwqY2KlGuarL/+9suxO4ZJFOg1OxN+dTrTbi2Muff1CmBkNfrY+s4eQhuLBs4vVhslYH/yyPXePZ1AgNT8ZuBCcfE2LpJ19OKKPIvs+pt4Z/yzVA==",
+      "timeout":25
+    },    
     {
       "key": "csp_可可影视",
       "name": "🎩┃可可┃影视🌺",
