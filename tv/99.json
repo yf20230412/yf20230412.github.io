@@ -78,18 +78,8 @@
       "changeable": 1,
       "api": "./js/路飞搜索.js"
     },  
-    {
-      "key": "素白白",
-      "name": "👻┃白白┃1080🌺",
-      "type": 3,
-      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "./js/素白白.js",
-      "timeout":25
-    },  
+    {"key":"腾讯","name":"🐧┃腾腾┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/qq.js","timeout":25},    
+{"key":"芒果","name":"🥭┃果果┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/mgtv.js","timeout":25},      
     {
       "key": "玩偶哥哥",
       "name": "🤵🏻┃玩偶┃哥哥📀",
@@ -259,7 +249,7 @@
       "name": "🏭️┃厂长┃1080🌺",
       "type": 3,
       "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
-      "quickSearch":1,
+      "quickSearch":0,
       "searchable": 0,
       "changeable": 1,
       "filterable": 1,
@@ -268,7 +258,7 @@
     },  
     {
       "key": "凡人影视",
-      "name": "🦸‍♂️┃凡人┃APP💯",
+      "name": "🦸‍♂️┃凡人┃影视💯",
       "type": 3,
       "api": "csp_AppFr",
       "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
@@ -292,7 +282,7 @@
     },    
     {
       "key": "兄弟影视",
-      "name": "👬┃兄弟┃APP",
+      "name": "👬┃兄弟┃影视💯",
       "type": 3,
       "api": "csp_AppGetApp",
       "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
@@ -627,8 +617,6 @@
       }
     },		
     
-{"key":"腾讯","name":"🐧┃腾腾┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/qq.js","timeout":25},    
-{"key":"芒果","name":"🥭┃果果┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/mgtv.js","timeout":25},
 {"key":"奇艺","name":"💖┃奇奇┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/iqiyi.js","timeout":25},
 {"key":"优酷","name":"👔‍┃酷酷┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/youku.js","timeout":25},
 {"key":"搜狗","name":"🐶┃狗狗┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/sougou.js","timeout":25},
@@ -742,6 +730,18 @@
       "ext": "./js/大师兄.js",
       "timeout":25
     },  
+    {
+      "key": "素白白",
+      "name": "👻┃白白┃1080🌺",
+      "type": 3,
+      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "./js/素白白.js",
+      "timeout":25
+    },
 */
 
 	
