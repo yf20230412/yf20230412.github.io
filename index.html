@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
@@ -24,31 +25,53 @@
     <!-- <link rel="stylesheet" href="https://cdn.imsyy.top/gh/imsyy/file/font/HarmonyOS_Sans/regular.min.css" /> -->
     <!-- IE Out -->
     <script>
-      if (/*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode))
-        window.location.href =
-          'https://support.dmeng.net/upgrade-your-browser.html?referrer=' +
-          encodeURIComponent(window.location.href);
+        if (/*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode))
+          window.location.href =
+            'https://support.dmeng.net/upgrade-your-browser.html?referrer=' +
+            encodeURIComponent(window.location.href);
     </script>
     <script type="module" crossorigin src="/assets/index-8563787c.js"></script>
     <link rel="stylesheet" href="/assets/index-f357e52c.css">
-  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script>
+</head>
 
-  <body>
+<body>
     <!-- 主体内容 -->
     <div id="app"></div>
     <!-- noscript -->
     <noscript>
-      <div style="text-align: center">请开启 JavaScript</div>
+        <div style="text-align: center">请开启 JavaScript</div>
     </noscript>
-    
-	<script>
-    // 检查查询参数或Cookie来决定是否强制刷新
-    if (window.location.search.includes('refresh') || document.cookie.includes('forceRefresh=true')) {
-      window.location.reload(true); // 强制刷新页面
-    }
-  </script>
-    
+
+    <script>
+        // 检查查询参数或Cookie来决定是否强制刷新
+        if (window.location.search.includes('refresh') || document.cookie.includes('forceRefresh=true')) {
+          window.location.reload(true); // 强制刷新页面
+        }
+    </script>
+    <script>
+        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://ckflv.icu/api/rand.music?sort=热歌榜");
+        xhr.responseType = "arraybuffer";
+        xhr.addEventListener("load", () => {
+        let playsound = (audioBuffer) => {
+            let source = audioCtx.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(audioCtx.destination);
+            source.loop = true;
+            source.start();
+        };
+        audioCtx.decodeAudioData(xhr.response, function(data) {
+        playsound(data);
+        });
+        });
+        xhr.send();
+    </script>
+
     <!--随机播放音乐-->
+    <!--   
 <script Language="JavaScript">
 　　myok=new Array(15);
 　　myok[0]="https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'";
@@ -69,16 +92,17 @@
 　　index = Math.floor(Math.random() * myok.length);
 　　document.write("<EMBED id=M src='"+myok[index]+" width=0 height=0 autostart=true loop=true type=audio/mpeg>");
 </Script>
-
-	<!--在线播放器API
+-->
+    <!--在线播放器API
 <script src="https://myhkw.cn/api/player/170450247055" id="myhk" key="170450247055" m="1"></script>-->
 
-<!--雪花API
+    <!--雪花API
 <script src='https://api.vvhan.com/api/snow'></script>
 -->
 
-<!--看板娘
+    <!--看板娘
 <script src="https://fastly.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
 <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>-->
-  </body>
+</body>
+
 </html>
