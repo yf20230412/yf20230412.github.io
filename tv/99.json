@@ -294,6 +294,18 @@
       "timeout":25
     },    
     {
+      "key": "真心影视",
+      "name": "💜┃真心┃影视💯",
+      "type": 3,
+      "api": "csp_WebGZ", 
+      "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",     
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout":25
+    },
+    {
       "key": "csp_可可影视",
       "name": "🎩┃可可┃影视🌺",
       "type": 3,
