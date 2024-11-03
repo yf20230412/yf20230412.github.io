@@ -56,6 +56,7 @@
         <!-- 歌曲选项将通过JavaScript动态生成 -->
     </select>
     <button id="playButton">播放</button>
+    <script>
     let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let songSelect = document.getElementById('songSelect');
 let playButton = document.getElementById('playButton');
@@ -120,7 +121,7 @@ window.onload = function() {
         console.error('没有可用的歌曲');
     }
 };
-    
+ </script>   
    <!-- <script>
         let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         let xhr = new XMLHttpRequest();
