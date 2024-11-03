@@ -50,10 +50,81 @@
           window.location.reload(true); // 强制刷新页面
         }
     </script>
-    <script>
+    
+    
+    <select id="songSelect">
+        <!-- 歌曲选项将通过JavaScript动态生成 -->
+    </select>
+    <button id="playButton">播放</button>
+    let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let songSelect = document.getElementById('songSelect');
+let playButton = document.getElementById('playButton');
+
+// 定义音乐文件的链接和名称
+const songs = [
+    { name: '歌曲1', artist: '歌手1', url: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3' },
+    { name: '歌曲2', artist: '歌手2', url: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3' },
+    { name: '歌曲3', artist: '歌手3', url: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/离别开出花.mp3' }
+];
+
+// 动态生成下拉菜单选项
+songs.forEach(song => {
+    let option = document.createElement('option');
+    option.value = song.url;
+    option.text = `${song.name} - ${song.artist}`;
+    songSelect.appendChild(option);
+});
+
+function loadAndPlayMusic(url) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function() {
+        audioCtx.decodeAudioData(xhr.response, function(buffer) {
+            playSound(buffer);
+        }, function(error) {
+            console.error('解码失败:', error);
+        });
+    };
+
+    xhr.send();
+}
+
+function playSound(buffer) {
+    let source = audioCtx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(audioCtx.destination);
+    source.start();
+}
+
+playButton.addEventListener('click', function() {
+    let selectedSongUrl = songSelect.value;
+    if (selectedSongUrl) {
+        loadAndPlayMusic(selectedSongUrl);
+    } else {
+        alert('请选择一首歌曲');
+    }
+});
+
+// 页面加载完成后随机播放一首歌曲
+window.onload = function() {
+    if (songs.length > 0) {
+        let randomIndex = Math.floor(Math.random() * songs.length);
+        let randomSongUrl = songs[randomIndex].url;
+        loadAndPlayMusic(randomSongUrl);
+        
+        // 设置下拉菜单的默认值为随机选择的歌曲
+        songSelect.value = randomSongUrl;
+    } else {
+        console.error('没有可用的歌曲');
+    }
+};
+    
+   <!-- <script>
         let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.vvhan.com/api/wyMusic/飙升榜");
+        xhr.open("GET", "https://ckflv.icu/api/rand.music?sort=热歌榜");
         xhr.responseType = "arraybuffer";
         xhr.addEventListener("load", () => {
         let playsound = (audioBuffer) => {
@@ -68,7 +139,7 @@
         });
         });
         xhr.send();
-    </script>
+    </script>-->
 
     <!--随机播放音乐-->
     <!--   
