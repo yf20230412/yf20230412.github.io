@@ -116,28 +116,10 @@
       }
     },    
     {
-      "key": "夸克蜡笔弹幕",
-      "name": "🖍️┃蜡笔┃4K📀",
+      "key": "木偶弹幕",
+      "name": "🤡┃木偶｜4K📀",
       "type": 3,
       "api": "csp_Wobg",
-      "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 0,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "site": "http://labipan.com",
-        "danmu": false
-      }
-    },	
-    {
-      "key": "夸克至臻弹幕",
-      "name": "💄┃至臻┃4K📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
       "quickSearch":1,
       "searchable": 1,
       "changeable": 0,
@@ -146,28 +128,10 @@
         "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
         "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
         "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-        "site": "https://mihdr.top",
+        "site": "http://mogg.top",
         "danmu": false
       }
-    },
-    {
-      "key": "夸克云星弹幕",
-      "name": "⛅️┃云星┃4K📀",
-      "type": 3,
-      "api": "csp_Wobg",
-      "jar": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/dan.txt",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 0,
-      "filterable": 1,
-      "ext": {
-        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-        "site": "https://4k.4u4.cn",
-        "danmu": false
-      }
-    },
+    },	    
     {
       "key": "Lib",
       "name": "🔷┃立播┃秒播📀",
