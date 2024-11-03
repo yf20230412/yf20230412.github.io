@@ -50,79 +50,94 @@
           window.location.reload(true); // 强制刷新页面
         }
     </script>
-    
-    
+
+
     <select id="songSelect">
         <!-- 歌曲选项将通过JavaScript动态生成 -->
     </select>
-    <button id="playButton">播放</button>
+    <button id="stopButton">停止播放</button>
     <script>
-    let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-let songSelect = document.getElementById('songSelect');
-let playButton = document.getElementById('playButton');
-
-// 定义音乐文件的链接和名称
-const songs = [
-    { name: '歌曲1', artist: '歌手1', url: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3' },
-    { name: '歌曲2', artist: '歌手2', url: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3' },
-    { name: '歌曲3', artist: '歌手3', url: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/离别开出花.mp3' }
-];
-
-// 动态生成下拉菜单选项
-songs.forEach(song => {
-    let option = document.createElement('option');
-    option.value = song.url;
-    option.text = `${song.name} - ${song.artist}`;
-    songSelect.appendChild(option);
-});
-
-function loadAndPlayMusic(url) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'arraybuffer';
-
-    xhr.onload = function() {
-        audioCtx.decodeAudioData(xhr.response, function(buffer) {
-            playSound(buffer);
-        }, function(error) {
-            console.error('解码失败:', error);
-        });
-    };
-
-    xhr.send();
-}
-
-function playSound(buffer) {
-    let source = audioCtx.createBufferSource();
-    source.buffer = buffer;
-    source.connect(audioCtx.destination);
-    source.start();
-}
-
-playButton.addEventListener('click', function() {
-    let selectedSongUrl = songSelect.value;
-    if (selectedSongUrl) {
-        loadAndPlayMusic(selectedSongUrl);
-    } else {
-        alert('请选择一首歌曲');
-    }
-});
-
-// 页面加载完成后随机播放一首歌曲
-window.onload = function() {
-    if (songs.length > 0) {
-        let randomIndex = Math.floor(Math.random() * songs.length);
-        let randomSongUrl = songs[randomIndex].url;
-        loadAndPlayMusic(randomSongUrl);
+        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let currentSource = null;
+        let currentSongIndex = -1;
         
-        // 设置下拉菜单的默认值为随机选择的歌曲
-        songSelect.value = randomSongUrl;
-    } else {
-        console.error('没有可用的歌曲');
-    }
-};
- </script>   
-   <!-- <script>
+        // 定义音乐文件的链接
+        const songs = [
+        'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/离别开出花.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3',
+          'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'
+        ];
+        
+        function loadAndPlayMusic(url) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'arraybuffer';
+        
+        xhr.onload = function() {
+            audioCtx.decodeAudioData(xhr.response, function(buffer) {
+                playSound(buffer);
+            }, function(error) {
+                console.error('解码失败:', error);
+            });
+        };
+        
+        xhr.send();
+        }
+        
+        function playSound(buffer) {
+        if (currentSource) {
+            currentSource.stop();
+        }
+        
+        currentSource = audioCtx.createBufferSource();
+        currentSource.buffer = buffer;
+        currentSource.connect(audioCtx.destination);
+        currentSource.start();
+        
+        // 监听音频结束事件
+        currentSource.onended = playNextSong;
+        }
+        
+        function playNextSong() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        let nextSongUrl = songs[currentSongIndex];
+        loadAndPlayMusic(nextSongUrl);
+        }
+        
+        function stopSound() {
+        if (currentSource) {
+            currentSource.stop();
+            currentSource = null;
+        }
+        }
+        
+        // 页面加载完成后随机播放一首歌曲
+        window.onload = function() {
+        if (songs.length > 0) {
+            currentSongIndex = Math.floor(Math.random() * songs.length);
+            let randomSongUrl = songs[currentSongIndex];
+            loadAndPlayMusic(randomSongUrl);
+        } else {
+            console.error('没有可用的歌曲');
+        }
+        
+        // 添加停止播放按钮的点击事件
+        document.getElementById('stopButton').addEventListener('click', stopSound);
+        };
+    </script>
+    <!-- <script>
         let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         let xhr = new XMLHttpRequest();
         xhr.open("GET", "https://ckflv.icu/api/rand.music?sort=热歌榜");
