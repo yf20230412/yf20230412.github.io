@@ -55,7 +55,6 @@
     <select id="songSelect">
         <!-- 歌曲选项将通过JavaScript动态生成 -->
     </select>
-    <button id="stopButton">停止播放</button>
     <script>
         let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         let currentSource = null;
@@ -79,63 +78,70 @@
           'https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3',
           'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'
         ];
-        
-        function loadAndPlayMusic(url) {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.responseType = 'arraybuffer';
-        
-        xhr.onload = function() {
-            audioCtx.decodeAudioData(xhr.response, function(buffer) {
-                playSound(buffer);
-            }, function(error) {
-                console.error('解码失败:', error);
-            });
-        };
-        
-        xhr.send();
-        }
-        
-        function playSound(buffer) {
-        if (currentSource) {
-            currentSource.stop();
-        }
-        
-        currentSource = audioCtx.createBufferSource();
-        currentSource.buffer = buffer;
-        currentSource.connect(audioCtx.destination);
-        currentSource.start();
-        
-        // 监听音频结束事件
-        currentSource.onended = playNextSong;
-        }
-        
-        function playNextSong() {
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
-        let nextSongUrl = songs[currentSongIndex];
-        loadAndPlayMusic(nextSongUrl);
-        }
-        
-        function stopSound() {
-        if (currentSource) {
-            currentSource.stop();
-            currentSource = null;
-        }
-        }
-        
-        // 页面加载完成后随机播放一首歌曲
-        window.onload = function() {
-        if (songs.length > 0) {
-            currentSongIndex = Math.floor(Math.random() * songs.length);
-            let randomSongUrl = songs[currentSongIndex];
-            loadAndPlayMusic(randomSongUrl);
-        } else {
-            console.error('没有可用的歌曲');
-        }
-        
-        // 添加停止播放按钮的点击事件
-        document.getElementById('stopButton').addEventListener('click', stopSound);
-        };
+
+function loadAndPlayMusic(url) {
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'arraybuffer';
+
+  xhr.onload = function() {
+    audioCtx.decodeAudioData(xhr.response, function(buffer) {
+      playSound(buffer);
+    }, function(error) {
+      console.error('解码失败:', error);
+    });
+  };
+
+  xhr.send();
+}
+
+function playSound(buffer) {
+  if (currentSource) {
+    currentSource.stop();
+  }
+
+  currentSource = audioCtx.createBufferSource();
+  currentSource.buffer = buffer;
+  currentSource.connect(audioCtx.destination);
+  currentSource.start();
+
+  // 监听音频结束事件
+  currentSource.onended = playNextSong;
+}
+
+function playNextSong() {
+  currentSongIndex = (currentSongIndex + 1) % songs.length;
+  let nextSongUrl = songs[currentSongIndex];
+  loadAndPlayMusic(nextSongUrl);
+}
+
+function stopSound() {
+  if (currentSource) {
+    currentSource.stop();
+    currentSource = null;
+  }
+}
+
+// 页面加载完成后随机播放一首歌曲
+window.onload = function() {
+  if (songs.length > 0) {
+    currentSongIndex = Math.floor(Math.random() * songs.length);
+    let randomSongUrl = songs[currentSongIndex];
+    loadAndPlayMusic(randomSongUrl);
+  } else {
+    console.error('没有可用的歌曲');
+  }
+
+  // 监听页面可见性变化
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      stopSound();
+    } else {
+      // 如果需要，可以在这里恢复播放
+      // loadAndPlayMusic(songs[currentSongIndex]);
+    }
+  });
+};
     </script>
     <!-- <script>
         let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
