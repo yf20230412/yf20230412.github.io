@@ -67,17 +67,20 @@
       "api": "csp_Douban",
       "quickSearch":0,
       "searchable": 0,
-      "changeable": 1
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/douban.json"
     },   
     {
       "key": "路飞搜索",
       "name": "🐬小鱼🔹搜索🐬",
       "type": 3,
+      "api": "./js/路飞搜索.js",
       "quickSearch":0,
       "searchable": 0,
       "changeable": 1,
-      "api": "./js/路飞搜索.js"
-    },  
+      "filterable": 1   
+    },
     {"key":"腾讯","name":"🐧┃腾腾┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/qq.js","timeout":25},    
 {"key":"芒果","name":"🥭┃果果┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/mgtv.js","timeout":25},      
     {
@@ -209,12 +212,11 @@
       "key": "厂长资源",
       "name": "🏭️┃厂长┃1080🌺",
       "type": 3,
-      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
-      "quickSearch":0,
-      "searchable": 0,
+      "api": "csp_Czzy",
+      "quickSearch":1,
+      "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "ext": "./js/厂长资源.js",
       "timeout":25
     },  
     {
@@ -256,6 +258,28 @@
       "name": "💜┃真心┃影视💯",
       "type": 3,
       "api": "csp_WebGZ",    
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout":25
+    },
+    {
+      "key": "洽洽影视",
+      "name": "🍻┃洽洽┃影视💯",
+      "type": 3,
+      "api": "csp_AppGZ", 
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout":25
+    },
+    {
+      "key": "追剧影视",
+      "name": "🏃‍♂️┃追剧┃影视💯",
+      "type": 3,
+      "api": "csp_AppZJ", 
       "quickSearch":1,
       "searchable": 1,
       "changeable": 1,
