@@ -1,118 +1,116 @@
+// 地址发布页 https://www.czzy.site
+// 地址发布页 https://cz01.vip
 var rule = {
-author: '风言锋语88/2408/第一版',
-title: '厂长资源',
-类型: '影视',
-//host: 'https://czzy.top/',
-host: 'https://www.cz01.vip',
-hostJs: 'HOST = pdfh(request(HOST), "h2:eq(1)&&a&&href")',
-headers: {'User-Agent': 'MOBILE_UA'},
-编码: 'utf-8',
-timeout: 5000,
+    title: '厂长资源',
+    //host: 'https://www.czzy88.com',
+    host:'https://www.czzy.site',
+    //hostJs:'print(HOST);let html=request(HOST,{headers:{"User-Agent":PC_UA}});HOST = html.match(/推荐访问<a href="(.*)"/)[1];print("厂长跳转地址 =====> " + HOST)',
+	hostJs:'print(HOST);let html=request(HOST,{headers:{"User-Agent":PC_UA}});let src=jsp.pdfh(html,"li:eq(3)&&a&&href");print(src);HOST=src',
+    url: '/fyclassfyfilter',
+    filterable: 1,//是否启用分类筛选,
+    filter_url: '{{fl.cateId}}{{fl.class}}{{fl.area}}{{fl.year}}/page/fypage',
+    filter: 'H4sIAAAAAAAAA42W2VLiQBSG3yXXVkFwXF9lyrIaiRCERIGowXLKDQRUxBnFtdQqRXBBZRydkfVlsnHlK0y3GLppE7C4Sv/fOaf779OnWGCC4izPjbsjzOj3BWaKk5lRBoQ4wPQxAghy8EtNxPVSBX7PgoDEvWOzcBkBSI0VmqsFZrGvteow042HuRDPhR0eWf4g9d1ntVbqQvJACPt4v4R5Ix9Xk/kuIaJPAuZGUgV9t2LPeiVxwgeEdnr1uKaU813TB/3mVurprmDIBLX9XFfQZ4LNs+vu4Fw75fNf9TIL4bdqQo29KJXsWzXZJVACsoSslHnBax51K208FHv5H+R46BEVqt3l4eF7hYZ4NyfQkfs57eSuVyS8kc9FkTnHtV6hKOBzrLFR+kLsJLA46tPe16p6Pvv7qJavekVyAUkM81So0ljTa/ta9qFXtB/GAQ+gK6fOtY2GepnvFR6FRqP290YkHqUyG/v2sLnX0NIFYyvTrad4WQJCFPaWMGO+H6V6pO4cKP9+qZtlZnEMBbemx0QAhMN4fMDZoZ5udIwPYm70tWYJim4lPTfuHz9W8T4iwBt2TKDyfr7NqmsN/TZnzXIRLoLB+M/m4bU1GATiPLKjzSbz2mrMmvVLM8j5NpoqKLUTa9QjRiWRJLXqrR0ZJMu3hpg16fNhLh1Xt39bcwEeTlFMbl8aFzYH8krvV0ocKbOpLeWt4YgoeOc7zp89QSPMEp5HY7wN5tbVV5tDzfBoBxi9f1HLRRv7eRAh62vLGW0pa81OSW5cX1u507M7NhuV0HvC6GrMSNr4ii4/zBFoSls5simPUJHca+JAKSetYfQ0oz4Om6AVN43Eqc2VzRHYlVI/t8bmJNjVbVJfrjeP6jbVAS8QF6AnSrb9D/iO/tdTD3rtxhqdhEeSsK36WVFPrtu09TTG8ju2jTKFm18v36i1PduE/sA0TmnkGnjM0HfvxlgjA5+eNSZ72ljz7El5zdhgcscUlDkQIv5Dvf5RKhdfHIIup+ubWQOlcbwvEGo/rfaTqotWXaTK0ipLqk5adRIqO0KpcIFQh2l1mFSHaHWIVAdpdZBUB2h1gFRpr1jSK5b2iiW9YmmvWNIrlvaKZQUPoTvZH3DNie+WQGEmKBE4O+J0QtxphSMNSQgfg7//UTJ+MJULAAA=',
+    searchUrl: '/daoyongjiekoshibushiyoubing?q=**&f=_all&p=fypage',
+    
+    searchable: 2,
+    filterable: 0,
+    headers: {
+        'User-Agent': 'PC_UA',
+        // 'Cookie': 'esc_search_captcha=1'
+    },
+    class_name: '全部&豆瓣电影Top250&国产剧&最新电影&电视剧&美剧&韩剧&日剧&华语电影&欧美电影&韩国电影&日本电影&番剧',
+    class_url: 'movie_bt&/dbtop250&/gcj&/zuixindianying&/dongmanjuchangban&/meijutt&/hanjutv&/movie_bt_series/rj&/movie_bt_series/huayudianying&/movie_bt_series/meiguodianying&/movie_bt_series/hanguodianying&/movie_bt_series/ribendianying&/fanju',
+    tab_rename:{'在线观看':'🌺风言锋语88🌺'},
+    play_parse: true,
+    lazy: `js:
+        pdfh = jsp.pdfh;
+        var html = request(input);
+        var ohtml = pdfh(html, '.videoplay&&Html');
+        var url = pdfh(ohtml, "body&&iframe&&src");
+        if (url) {
+            var _obj={};
+            eval(pdfh(request(url),'body&&script&&Html')+'\\n_obj.player=player;_obj.rand=rand');
+            function js_decrypt(str, tokenkey, tokeniv) {
+                eval(getCryptoJS());
+                var key = CryptoJS.enc.Utf8.parse(tokenkey);
+                var iv = CryptoJS.enc.Utf8.parse(tokeniv);
+                return CryptoJS.AES.decrypt(str, key, {iv: iv,padding: CryptoJS.pad.Pkcs7}).toString(CryptoJS.enc.Utf8);
+            };
+            let config = JSON.parse(js_decrypt(_obj.player,'VFBTzdujpR9FWBhe', _obj.rand));
+            input = {
+                 jx: 0,
+                 url: config.url,
+                 parse: 0
+            };
+        }else if (/decrypted/.test(ohtml)) {
+            var phtml = pdfh(ohtml, "body&&script:not([src])&&Html");
+            eval(getCryptoJS());
+            var script = phtml.match(/var.*?\\)\\);/g)[0];
+            var data = [];
+            eval(script.replace(/md5/g, 'CryptoJS').replace('eval', 'data = '));
+            input = {
+                jx: 0,
+                url: data.match(/url:.*?['"](.*?)['"]/)[1],
+                parse: 0
+            }
 
-homeUrl: '/',
-url: '/fyfilter/page/fypage',
-filter_url: '{{fl.cateId}}{{fl.year}}{{fl.class}}{{fl.zilei}}',
-detailUrl: '/movie/fyid.html',
-searchUrl: 'http://czzy.210985.xyz/czzy_search8.php?wd=**&page=fypage',
-searchable: 1, 
-quickSearch: 1, 
-filterable: 1, 
 
-class_name: '全部&国产剧&最新电影&番剧',
-class_url: 'movie_bt&gcj&zuixindianying&fanju',
-filter_def: {
-movie_bt: {cateId: 'movie_bt'},
-zuixindianying: {cateId: 'zuixindianying'},
-gcj: {cateId: 'gcj'},
-fanju: {cateId: 'fanju'}
-},
+        } 
+    `,
+    推荐: '.bt_img;ul&&li;*;*;*;*',
+    double: true,
+    一级: '.bt_img&&ul&&li;h3.dytit&&Text;img.lazy&&data-original;.jidi&&Text;a&&href',
+    二级: {
+        "title": "h1&&Text;.moviedteail_list li&&a&&Text",
+        "img": "div.dyimg img&&src",
+        "desc": ".moviedteail_list li:eq(3) a&&Text;.moviedteail_list li:eq(2) a&&Text;.moviedteail_list li:eq(1) a&&Text;.moviedteail_list li:eq(7)&&Text;.moviedteail_list li:eq(5)&&Text",
+        "content": ".yp_context&&Text",
+        "tabs": ".mi_paly_box span",
+        "lists": ".paly_list_btn:eq(#id) a"
+    },
+    搜索: `js:
+    let cookie = getItem(RULE_CK,'');
+    // let cookie = '';
+    log('储存的cookie:'+cookie);
+    let hhtml=request(input,{withHeaders:true,headers:{Cookie:cookie}});
+    let json = JSON.parse(hhtml);
+    let html = json.body;
+    let setCk = Object.keys(json).find(it=>it.toLowerCase()==='set-cookie');
+    cookie = setCk ? json[setCk] : cookie;
+    // 3个set-Cookie
+    if (Array.isArray(cookie)) {
+        cookie = cookie.join(';');
+    }
+    cookie = cookie.split(';')[0];
+    log('set-cookie:'+cookie);
+    let code='';
+    if(/erphp-search-captcha/.test(html)){
+        code = jsp.pdfh(html,'.erphp-search-captcha--button&&Text');
+        if(code.includes('=')){
+            let a = code.replace('=','').replace(/ /g,'');
+            code = eval(a);
+            log('回答验证码:'+a+' 答案:'+code);
+        }
+        let key = jsp.pdfh(html,'.erphp-search-captcha&&input&&name');
+        let body = key+'='+code;
+        post(input,{body:body,headers:{Cookie:cookie}});
+        setItem(RULE_CK,cookie);
+        html = getHtml(input);
+    }
+    // log(html);
+    VODS = [];
+    let lis=pdfa(html,'.search_list&&ul&&li');
+    log(lis.length);
+    lis.forEach(function(it){
+        VODS.push({
+            vod_id: pd(it,'a&&href',input),
+			vod_name: pdfh(it,'h3.dytit&&Text'),
+			vod_pic: pd(it,'img.lazy&&data-original',input),
+			vod_remarks: pdfh(html,'.jidi&&Text')
+        });
+    
+    });
+    
+    `,
 
-play_parse: true,
-lazy: `js:
-pdfh = jsp.pdfh;
-var html = request(input);
-var ohtml = pdfh(html, '.videoplay&&Html');
-var url = pdfh(ohtml, "body&&iframe&&src");
-if (url) {
-    var _obj={};
-    eval(pdfh(request(url),'body&&script&&Html')+'\\n_obj.player=player;_obj.rand=rand');
-    function js_decrypt(str, tokenkey, tokeniv) {
-        eval(getCryptoJS());
-        var key = CryptoJS.enc.Utf8.parse(tokenkey);
-        var iv = CryptoJS.enc.Utf8.parse(tokeniv);
-        return CryptoJS.AES.decrypt(str, key, {iv: iv,padding: CryptoJS.pad.Pkcs7}).toString(CryptoJS.enc.Utf8)
-    };
-    let config = JSON.parse(js_decrypt(_obj.player,'VFBTzdujpR9FWBhe', _obj.rand));
-    input = {jx: 0, url: config.url, parse: 0}
-} else if (/decrypted/.test(ohtml)) {
-    var phtml = pdfh(ohtml, "body&&script:not([src])&&Html");
-    eval(getCryptoJS());
-    var script = phtml.match(/var.*?\\)\\);/g)[0];
-    var data = [];
-    eval(script.replace(/md5/g, 'CryptoJS').replace('eval', 'data = '));
-    input = {jx: 0, url: data.match(/url:.*?['"](.*?)['"]/)[1], parse: 0}
-} 
-`,
-
-limit: 9,
-double: false,
-推荐: '*',
-一级: `js:
-VODS = [];
-let klists = pdfa(request(input),'li:has(img)');
-klists.forEach((it) => {
-    VODS.push({
-        vod_name: pdfh(it,'img&&alt'),
-        vod_pic: pdfh(it,'img&&data-original'),
-        vod_remarks: pdfh(it,'.jidi&&Text')||pdfh(it,'.qb&&Text')||pdfh(it,'.furk&&Text'),
-        vod_id: pdfh(it,'a:eq(0)&&href')    
-    })
-})
-`,
-二级: `js:
-let khtml = request(input);
-let kdetail = pdfh(khtml, '.dytext');
-VOD = {};
-VOD.vod_id = input;
-VOD.vod_name = pdfh(kdetail, 'h1&&Text');
-VOD.vod_pic = pdfh(khtml, '.dyimg&&img&&src');
-VOD.type_name = pdfh(kdetail, 'li:eq(0)&&Text').replace('类型：','');
-VOD.vod_remarks =/上映/.test(kdetail) ? kdetail.match(/上映：<span>(.*?)<\\/span>/)[1] : '未知';
-VOD.vod_year = pdfh(kdetail, 'li:eq(2)&&Text').replace('年份：','');
-VOD.vod_area = pdfh(kdetail, 'li:eq(1)&&Text').replace('地区：','');
-VOD.vod_director =/导演/.test(kdetail) ? kdetail.match(/导演：(.*?)<\\/li>/)[1] : '未知';
-VOD.vod_actor =/主演/.test(kdetail) ? kdetail.match(/主演：(.*?)<\\/li>/)[1] : '未知';
-VOD.vod_content = pdfh(khtml, '.yp_context&&Text');
-
-let ktabs = [];
-let i = 1;
-pdfa(khtml, '.paly_list_btn').map((it) => { 
-    ktabs.push('🌺风言锋语88🌺' + i);
-    i++
-});
-VOD.vod_play_from = ktabs.join('$$$');
-
-let kplists = [];
-pdfa(khtml, '.paly_list_btn').forEach((pl) => {
-    let plist = pdfa(pl, 'body&&a').map((it) => { return pdfh(it, 'a&&Text') + '$' + pdfh(it, 'a&&href') });
-    plist = plist.join('#');
-    kplists.push(plist)
-});
-VOD.vod_play_url = kplists.join('$$$')
-`,
-搜索: `js:
-VODS = [];
-let klists = request(input).split('$$$');
-klists.forEach((it) => {
-    let p = it.split('|');
-    VODS.push({
-        vod_name: p[1],
-        vod_pic: p[2],
-        vod_remarks: p[3],
-        vod_id: p[0]
-    })
-})
-`,
-
-filter: 'H4sIAAAAAAAAA6WXX1PaTBTG7/kYuXZGSGtb+w1637tOpxMgwkZIFBIVHN+htVKgarGt1FqmOqMWqlK1ffvHCPJlkixc9St0F4Fdwm609EJnss/v7Mme3fNsWPQJcW0OyE+CunD/kW9RmJZTwn0hJUsJYUxQpbiMnuzz/62LBnqek2IGGni0KKh4eKXaXq7iYfQgLI1djQYm/f7/RL/f34na68rjeMZxrGFJDfdx9BhAeICFYw1LA3gg4GICgUFddOsird5yq7do9bZbvU2rE251glbvuNU7tHrXrd6l1Xtu9R6tTrrVSUoV/S4VDVCqu1pogFLdtRLpWonuWol0rUR3rdDA0uOlsf4ZCsWkZJI6RI0zmH8Bzy7sjy9veJSs+m7ry2kvTe+cPtGlSHI8FDUkVQF91n7ehEcHbFbWZZ2A2dft95/ZYFzSFoCkEjZfcZZX2KxizAI1QtBC1WqU2WhYSxsaTTr1Ix4Zp9MXqvDtBYeMRgm3nrVffWVzMZCMUlV6td/a4ywoYqRxTaklFVedTIUN65oaWRhYf6mMqsWGF4BiEPDghX3OWdQswG9A0C8/bLPGKT+QdDq/87ToZEpsdtoIkvzOs2NY2uC8KMqeItVCe9/Kc+qKNz8pU2jBebbNSY9RjX7X3JZl5tlwOiqp6ahM07XVVu4jZ8/mKeyTdbnLxuYNdKz7JHx62d6+5KSXgErtAMydcRtAAgMNAAsnsHHIRqfQmgxSV1jesUwTVjKcd0gsEHSnhlyD0wIzBKtscA/VNGkUaB7ajU3uhEpshkzZOmgSS3KfkyDBmkXUpmwsRe6l9s4367zIwVIEO647GU4Ru9qAx6ZBTAaUx9aKyGBv7K7b9saW9euNvWoOZUzKCSAnx6MGSBn4QKJ/s6SH4NH79mbTWa+21obX1A3FBzmE/iK6ARTaVOHb7+gu4IWFqWrYa+utk5o3j94sZYQB7lu6Z44r8HLdOzIug4ihDYW2dz7bHxrXJEXLYoQ67w6c8rF3aAIEZXUo0l47tc1P3pEoIDy8Uqv5HDbeOaUT72A5ZmhJMJy3sOu8bNr7Fe9ovH9SWBoKR1GtSpbl+73dRBHo/qHt/0PDMiseIaiw+NhQIWgnPfi4MrB1fDCq0BvlASYo8PtPe7+E2N/1nL3yw7oo/a4PG3cvwbxCFZZ5dffKoqFjizvZ93jMJyBrRFdpv7jUZ3hI0uUHYdLfnK8np5xxSqcDW+ias+9WZ1n4Zu+KfKjNiBO9j8dwUL967NfyaMvOZRGGNrjLRCRtSu7MR39SwOWas7Vr/erd0wkZE+kofeExrGZ0pxnNaP7SZ0a2mdFdZnSTGdlj/sVi/slhrjWYbmtEQsoI/eD2GDwL00zQ5iiGrrMNpGNC+hzX7K73ugGbuYnL8E4CNpZuRaY61vj3NYGbhyTB1IC/onG7bMJ8rucFqHXjmOh0VZD3g8TD1HxLfwAggnVNWBAAAA=='
 }
