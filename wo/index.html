@@ -105,42 +105,57 @@
         }
         		}
     </style>
- <!--播放音乐按钮样式 -->
-<style>
+    <!--播放音乐按钮样式 -->
+    <style>
         /* 样式化按钮 */
         .circle-btn {
-    width: 40px;
-    height: 40px;
-    background-color: #4a9feb; /* 蓝色背景 */
-    border-radius: 50%; /* 圆形 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s;
-    position: fixed; /* 固定定位 */
-    right: 20px; /* 距离右边20px */
-    bottom: center; /* 距离底部中心 */
-}
-
-/* 播放图标（三角形）样式 */
-.play-icon {
-    width: 0;
-    height: 0;
-    border-left: 10px solid white; /* 调整大小 */
-    border-top: 5px solid transparent;
-    border-bottom: 8px solid transparent;
-    margin-top: 1px; /* 调整以居中 */
-}
-
-/* 停止图标（正方形）样式 */
-.stop-icon {
-    width: 10px; /* 调整大小 */
-    height: 10px; /* 调整大小 */
-    background-color: white; /* 白色正方形 */
-}
+            width: 50px;
+            height: 50px;
+            background-color: #4a9feb; /* 蓝色背景 */
+            border-radius: 50%; /* 圆形 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+            position: fixed; /* 固定定位 */
+            right: 20px; /* 距离右边20px */
+            bottom: calc(30% - 25px); /* 距离底部三分一处，减去按钮半径 */
+        }
+        
+        /* 播放图标（三角形）样式 */
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 15px solid white; /* 调整大小 */
+            border-top: 8px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-top: 1px; /* 调整以居中 */
+        }
+        
+        /* 停止图标（正方形）样式 */
+        .stop-icon {
+            width: 15px; /* 调整大小 */
+            height: 15px; /* 调整大小 */
+            background-color: white; /* 白色正方形 */
+        }
+        
+        /* 状态消息提示框样式 */
+        #status-message {
+            position: fixed; /* 固定定位 */
+            left: 5px; /* 距离左边5px */
+            bottom: calc(30% - 25px); /* 与按钮在同一水平线上 */
+            z-index: 1000; /* 确保在页面最上层 */
+            padding: 10px; /* 内边距 */
+            border-radius: 5px; /* 边框圆角 */
+            color: green; /* 文字颜色 */
+            font-size: 16px; /* 字体大小 */
+            display: none; /* 默认不显示 */
+            max-width: 300px; /* 最大宽度 */
+            word-wrap: break-word; /* 允许换行 */
+        }
     </style>
 </head>
 
@@ -178,7 +193,7 @@
             </div>
         </div>
     </div>
-   <!-- <script>
+    <!-- <script>
         const musicList = [
           'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3',
           'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3',
@@ -217,86 +232,85 @@
     </script>
     <button onclick="playRandomMusic()">播放随机音乐</button>
     <audio id="backgroundMusic" controls></audio>-->
-<audio id="bg-music" loop>
-    您的浏览器不支持 audio 标签。
-</audio>
-<div id="toggle-btn" class="circle-btn">
-    <div class="play-icon"></div>
-</div>
-<div id="status-message" style="display: none; margin-top: 10px; font-size: 16px; color: green;"></div>
-
-<script>
-    var musicFiles = [
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3', ogg: 'music1.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3', ogg: 'music2.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3', ogg: 'music3.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3', ogg: 'music4.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3', ogg: 'music5.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3', ogg: 'music6.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3', ogg: 'music7.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3', ogg: 'music8.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3', ogg: 'music9.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3', ogg: 'music10.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3', ogg: 'music11.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3', ogg: 'music12.ogg' },
-        { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3', ogg: 'music13.ogg' },
-    ];
-
-    var bgMusic = document.getElementById('bg-music');
-    var toggleBtn = document.getElementById('toggle-btn');
-    var statusMessage = document.getElementById('status-message');
-    var musicPlaying = false;
-
-    function getRandomMusic() {
-        var randomIndex = Math.floor(Math.random() * musicFiles.length);
-        return musicFiles[randomIndex];
-    }
-
-    function loadRandomMusic() {
-        var randomMusic = getRandomMusic();
-        bgMusic.src = randomMusic.mp3;
-        // 预加载音乐
-        bgMusic.load();
-    }
-
-    function showStatus(message) {
-        statusMessage.innerText = message;
-        statusMessage.style.display = 'block';
-        setTimeout(() => {
-            statusMessage.style.display = 'none';
-        }, 1000); // 1秒后隐藏提示
-    }
-
-    function toggleMusic() {
-        if (musicPlaying) {
-            bgMusic.pause();
-            toggleBtn.innerHTML = '<div class="play-icon"></div>';
-            showStatus('音乐已暂停');
-            musicPlaying = false;
-        } else {
-            bgMusic.play().then(() => {
-                toggleBtn.innerHTML = '<div class="stop-icon"></div>';
-                showStatus('正在为你播放音乐');
-                musicPlaying = true;
-            }).catch((error) => {
-                console.error('自动播放失败：', error);
-                showStatus('播放失败，请重试');
-            });
+    <audio id="bg-music" loop>
+        您的浏览器不支持 audio 标签。
+    </audio>
+    <div id="toggle-btn" class="circle-btn">
+        <div class="play-icon"></div>
+    </div>
+    <div id="status-message"></div>
+    <script>
+        var musicFiles = [
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3', ogg: 'music1.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3', ogg: 'music2.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3', ogg: 'music3.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3', ogg: 'music4.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3', ogg: 'music5.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3', ogg: 'music6.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3', ogg: 'music7.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3', ogg: 'music8.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3', ogg: 'music9.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3', ogg: 'music10.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3', ogg: 'music11.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3', ogg: 'music12.ogg' },
+            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3', ogg: 'music13.ogg' },
+        ];
+        
+        var bgMusic = document.getElementById('bg-music');
+        var toggleBtn = document.getElementById('toggle-btn');
+        var statusMessage = document.getElementById('status-message');
+        var musicPlaying = false;
+        
+        function getRandomMusic() {
+            var randomIndex = Math.floor(Math.random() * musicFiles.length);
+            return musicFiles[randomIndex];
         }
-    }
-
-    // 预加载音乐
-    loadRandomMusic();
-
-    toggleBtn.addEventListener('click', toggleMusic);
-
-    window.onload = function() {
-        // 直接在页面加载时开始播放
-        setTimeout(() => {
-            toggleMusic(); // 触发播放
-        }, 5000);
-    };
-</script>
+        
+        function loadRandomMusic() {
+            var randomMusic = getRandomMusic();
+            bgMusic.src = randomMusic.mp3;
+            // 预加载音乐
+            bgMusic.load();
+        }
+        
+        function showStatus(message) {
+            statusMessage.innerText = message;
+            statusMessage.style.display = 'block';
+            setTimeout(() => {
+                statusMessage.style.display = 'none';
+            }, 1000); // 1秒后隐藏提示
+        }
+        
+        function toggleMusic() {
+            if (musicPlaying) {
+                bgMusic.pause();
+                toggleBtn.innerHTML = '<div class="play-icon"></div>';
+                showStatus('音乐已暂停');
+                musicPlaying = false;
+            } else {
+                bgMusic.play().then(() => {
+                    toggleBtn.innerHTML = '<div class="stop-icon"></div>';
+                    showStatus('正在为你播放音乐');
+                    musicPlaying = true;
+                }).catch((error) => {
+                    console.error('自动播放失败：', error);
+                    showStatus('播放失败，请重试');
+                });
+            }
+        }
+        
+        // 预加载音乐
+        loadRandomMusic();
+        
+        toggleBtn.addEventListener('click', toggleMusic);
+        
+        window.onload = function() {
+            // 直接在页面加载时开始播放
+            setTimeout(() => {
+                toggleMusic(); // 触发播放
+            }, 5000);
+        };
+    </script>
 </body>
 
 </html>
