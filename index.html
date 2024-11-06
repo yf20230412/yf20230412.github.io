@@ -6,11 +6,6 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 控制缓存 -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
     <link rel="icon" href="/images/icon/favicon.ico" />
     <link rel="apple-touch-icon" href="/images/logo/apple-touch-icon.png" />
     <link rel="bookmark" href="/images/logo/apple-touch-icon.png" />
@@ -129,19 +124,19 @@
     <div id="status-message"></div>
     <script>
         var musicFiles = [
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3', ogg: 'music1.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3', ogg: 'music2.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3', ogg: 'music3.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3', ogg: 'music4.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3', ogg: 'music5.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3', ogg: 'music6.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3', ogg: 'music7.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3', ogg: 'music8.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3', ogg: 'music9.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3', ogg: 'music10.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3', ogg: 'music11.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3', ogg: 'music12.ogg' },
-            { mp3: 'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3', ogg: 'music13.ogg' },
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3'
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'
         ];
         
         var bgMusic = document.getElementById('bg-music');
@@ -191,29 +186,6 @@
         loadRandomMusic();
         
         toggleBtn.addEventListener('click', toggleMusic);
-        
-        // 移除自动播放的代码
-        // window.onload = function() {
-        //     // 直接在页面加载时开始播放
-        //     setTimeout(() => {
-        //         toggleMusic(); // 触发播放
-        //     }, 5000);
-        
-        function initialize() {
-            loadRandomMusic();
-            initBtn.style.display = 'none'; // 隐藏初始化按钮
-            setTimeout(() => {
-                toggleMusic(); // 自动播放音乐
-            }, 5000);
-        }
-    </script>
-
-
-    <script>
-        // 检查查询参数或Cookie来决定是否强制刷新
-        if (window.location.search.includes('refresh') || document.cookie.includes('forceRefresh=true')) {
-          window.location.reload(true); // 强制刷新页面
-        }
     </script>
 
 </body>
