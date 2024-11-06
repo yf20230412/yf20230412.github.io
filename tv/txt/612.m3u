@@ -12,13 +12,13 @@ https://download.kstore.space/download/9202/TVBox/videos/海边日落晚霞.mp4
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="🐲｜央视频道",CCTV-1 综合
 http://[2409:8087:74d9:21::6]:80/270000001128/9900000001/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV2.png" group-title="🐲｜央视频道",CCTV-2 财经
-http://[2409:8087:74d9:21::6]:80/000000001000PLTV/88888888/224/3221226146/index.m3u8
+http://[2409:8087:74f0:22::4]:6410/270000001128/9900000502/index.m3u8?
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV3.png" group-title="🐲｜央视频道",CCTV-3 综艺
 http://[2409:8087:74d9:21::6]:80/270000001128/9900000003/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV4.png" group-title="🐲｜央视频道",CCTV-4 中文国际
 http://[2409:8087:74d9:21::6]:80/000000001000PLTV/88888888/224/3221226539/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV6.png" group-title="🐲｜央视频道",CCTV-6 电影
-http://[2409:8087:74d9:21::6]:80/000000001000PLTV/88888888/224/3221226148/index.m3u8
+http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226010/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV7.png" group-title="🐲｜央视频道",CCTV-7 国防军事
 http://[2409:8087:74d9:21::6]:80/270000001322/69900158041111100000002141/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV8.png" group-title="🐲｜央视频道",CCTV-8 电视剧
