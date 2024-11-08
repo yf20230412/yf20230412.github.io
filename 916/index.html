@@ -157,8 +157,8 @@
 			}
 			100% {
 				/* 设置背景图片的位置 */
-				background-position: 0% 50%;
-			}
+				background-position: 0% 100%;
+			}			
 		}
 
 		/* ---代码分割线--- */
@@ -454,10 +454,7 @@
 							<li><a href="https://yf1688.top" target="_blank" class="hover-zoom"
 									style="color: #000000;">个人主页</a>
 							</li>
-							<!-- 链接到个人主页 -->							
-							<li><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMTUyMTgwMA==&action=getalbum&album_id=3215428467836715013#wechat_redirect" target="_blank" class="hover-zoom"
-									style="color: #000000;">微信公众号</a></li>
-							<!-- 链接到Telegram -->							
+							<!-- 链接到个人主页 -->
 							<li><a href="mailto:1010164222@qq.com" target="_blank" class="hover-zoom"
 									style="color: #000000;">Email</a></li>
 							<!-- 链接到电子邮件联系 -->
@@ -467,6 +464,9 @@
 							<li><a href="https://docs.qq.com/doc/DRGpucklwY1dMQ3Nj" target="_blank" class="hover-zoom"
 									style="color: #000000;">使用教程</a></li>
 							<!-- 链接到小鱼影视说明 -->
+							<li><a href="https://docs.qq.com/doc/DRE1hUUFPQ29zWkxw" target="_blank" class="hover-zoom"
+									style="color: #000000;">必看技巧</a></li>
+							<!-- 链接到腾讯文档 -->
 							<li><a href="https://4645.kstore.space/Tvbox/myks/box/index.html" target="_blank" class="hover-zoom"
 									style="color: #000000;">影视接口</a></li>
 							<!-- 链接到影视接口 -->
@@ -480,8 +480,27 @@
 		<!--代码分割线-->
 	</div>
 	<div align="center"">
-	       <a target="_blank" href="https://mp.weixin.qq.com/s/zFyqLSwj5FXkMiupb5XdDQ" title="微信公众号：" alt="微信公众号：">微信公众号：<mark class="gradient-text">风言锋语88</mark></a>	
+	       <a target="_blank" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMTUyMTgwMA==&action=getalbum&album_id=3215428467836715013#wechat_redirect" title="微信公众号：" alt="微信公众号：">微信公众号：<mark class="gradient-text">风言锋语88</mark></a>	
 	</div>
+	<script>
+        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://ckflv.icu/api/rand.music?sort=热歌榜");
+        xhr.responseType = "arraybuffer";
+        xhr.addEventListener("load", () => {
+        let playsound = (audioBuffer) => {
+            let source = audioCtx.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(audioCtx.destination);
+            source.loop = true;
+            source.start();
+        };
+        audioCtx.decodeAudioData(xhr.response, function(data) {
+        playsound(data);
+        });
+        });
+        xhr.send();
+    </script>
 </body>
 <!--  该HTML+CSS代码为弹窗提示框，可根据需要修改样式 ，如字体、颜色、背景等 ，代码中使用了CSS3动画效果，请确保浏览器支持CSS3动画效果。 -->
 </html>
