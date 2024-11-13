@@ -641,7 +641,7 @@
 {"key":"奇艺","name":"💖┃奇奇┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/iqiyi.js","timeout":25},
 {"key":"优酷","name":"👔‍┃酷酷┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/youku.js","timeout":25},
 {"key":"搜狗","name":"🐶┃狗狗┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext":"./js/sougou.js","timeout":25},
-{"key":"360_spider","name":"⚽️┃360┃解析💯","type":3,"api":"csp_SP360","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"timeout":25},
+{"key":"360_spider","name":"⚽️┃360┃解析💯","type":3,"api":"csp_Sp360","quickSearch":1,"searchable": 1,"changeable": 1,"filterable":1,"ext": {"danmu": false},"timeout":25},
 
     {
       "key": "快看影视",
