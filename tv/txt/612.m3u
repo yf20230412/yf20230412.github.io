@@ -3,9 +3,9 @@
 #EXTINF:-1  tvg-logo="https://epg.iill.top/logo/温馨提示.png" group-title="🕺｜温馨提示‍" ,🥇精选电视直播源
 https://download.kstore.space/download/9202/TVBox/videos/美女舞蹈.mp4
 #EXTINF:-1  tvg-logo="https://epg.iill.top/logo/温馨提示.png" group-title="🕺｜温馨提示‍" ,🌺公众号:风言锋语88
-https://download.kstore.space/download/9202/TVBox/videos/测试.mp4
-#EXTINF:-1  tvg-logo="https://epg.iill.top/logo/温馨提示.png" group-title="🕺｜温馨提示‍" ,🔥免费订阅
 https://download.kstore.space/download/9202/TVBox/videos/海边日落晚霞.mp4
+#EXTINF:-1  tvg-logo="https://epg.iill.top/logo/温馨提示.png" group-title="🕺｜温馨提示‍" ,🔥免费订阅
+https://download.kstore.space/download/9202/TVBox/videos/刘婉儿.mp4
 
 
 
@@ -18,9 +18,9 @@ http://[2409:8087:74d9:21::6]:80/270000001128/9900000003/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV4.png" group-title="🐲｜央视频道",CCTV-4 中文国际
 http://[2409:8087:74d9:21::6]:80/000000001000PLTV/88888888/224/3221226539/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV6.png" group-title="🐲｜央视频道",CCTV-6 电影
-http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226010/index.m3u8
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000006/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV7.png" group-title="🐲｜央视频道",CCTV-7 国防军事
-http://[2409:8087:74d9:21::6]:80/270000001322/69900158041111100000002141/index.m3u8
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000504/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV8.png" group-title="🐲｜央视频道",CCTV-8 电视剧
 http://[2409:8087:74d9:21::6]:80/270000001128/9900000008/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV9.png" group-title="🐲｜央视频道",CCTV-9 纪录
@@ -39,12 +39,6 @@ http://[2409:8087:74d9:21::6]:80/270000001322/69900158041111100000002148/index.m
 http://[2409:8087:74d9:21::6]:80/000000001000PLTV/88888888/224/3221226616/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV17.png" group-title="🐲｜央视频道",CCTV-17 农业农村
 http://[2409:8087:74d9:21::9]:80/270000001128/index.m3u8?cmcc_cid=9900000513
-#EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CHC影迷电影.png" group-title="🐲｜央视频道",CHC影迷电影
-http://cg14.hunancatv.cn:9090/live/CHCGQ_8000.m3u8?deviceid=866265039837531&sid=Yp6brv0MWYukAl4oJr9yrw%3D%3D&nonce=Ri1TgJg9dlAK&acl=0111&hlsSessionID=11082234455604315487&srchost=172.16.22.158:8060&gid=QTVto%2BZu6pkkcNYy4OxcMg%3D%3D
-#EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CHC动作电影.png" group-title="🐲｜央视频道",CHC动作电影
-http://cg0.hunancatv.cn:9090/live/CHCDZDY_8000.m3u8?deviceid=866265039837531&sid=Yp6brv0MWYukAl4oJr9yrw%3D%3D&nonce=Ri1TgJg9dlAK&acl=0111&hlsSessionID=11082234455604316076&srchost=172.16.22.158:8060&gid=ZF3q5L%2FmYWch1qWqTIPAjw%3D%3D
-#EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CHC家庭影院.png" group-title="🐲｜央视频道",CHC家庭影院
-http://cg11.hunancatv.cn:9090/live/CHCJTYY_8000.m3u8?deviceid=866265039837531&sid=Yp6brv0MWYukAl4oJr9yrw%3D%3D&nonce=Ri1TgJg9dlAK&acl=0111&hlsSessionID=11082234455604316833&srchost=172.16.22.158:8060&gid=c%2BNqgq8pR1ZQ7ZzcmkS8%2BQ%3D%3D
 
 
 
@@ -136,21 +130,19 @@ http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000002000011619/index.m3u8
 
 
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV5.png" group-title="🏂｜体育频道",CCTV-5 体育
-http://[2409:8087:74d9:21::6]:80/000000001000PLTV/88888888/224/3221226146/index.m3u8
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000005/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV5+.png" group-title="🏂｜体育频道",CCTV-5+ 体育赛事
-http://[2409:8087:74d9:21::6]:80/270000001322/69900158041111100000002139/index.m3u8
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000507/index.m3u8
 #EXTINF:-1  tvg-logo="https://live.fanmingming.com/tv/CCTV16.png" group-title="🏂｜体育频道",CCTV-16 奥林匹克
-http://[2409:8087:74d9:21::6]:80/000000001000PLTV/88888888/224/3221226413/index.m3u8
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000016/index.m3u8
 
 
-#EXTINF:-1 tvg-id="全民热练"   tvg-logo="https://live.fanmingming.com/tv/睛彩青少.png" group-title="🏂｜体育频道",晴彩青少
-http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226508/index.m3u8
-#EXTINF:-1 tvg-id=""   tvg-logo="https://live.fanmingming.com/tv/睛彩竞技.png" group-title="🏂｜体育频道",晴彩竞技
-http://[2409:8087:1a01:df::404d]/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226124/index.m3u8
-#EXTINF:-1 tvg-id=""   tvg-logo="https://live.fanmingming.com/tv/睛彩篮球.png" group-title="🏂｜体育频道",晴彩篮球
-http://[2409:8087:1a01:df::403b]/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226147/index.m3u8
-#EXTINF:-1 tvg-id=""   tvg-logo="https://live.fanmingming.com/tv/睛彩广场舞.png" group-title="🏂｜体育频道",晴彩广场舞
-http://[2409:8087:1a01:df::4046]/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226472/index.m3u8
+#EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/睛彩青少.png" group-title="🏂｜体育频道",晴彩青少
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000120/index.m3u8
+#EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/睛彩竞技.png" group-title="🏂｜体育频道",晴彩竞技
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000119/index.m3u8
+#EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/睛彩篮球.png" group-title="🏂｜体育频道",晴彩篮球
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000118/index.m3u8
 
 
 #EXTINF:-1,  tvg-logo="https://epg.iill.top/logo/咪咕.png" group-title="🏂｜体育频道",咪咕直播1
