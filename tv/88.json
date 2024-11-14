@@ -115,20 +115,6 @@
         "ratio": 1.5
       }
     },
-    {
-      "key": "py_aidouchuanmei",
-      "name": "爱豆传媒(T4)",
-      "type": 4,
-      "api": "https://py.doube.eu.org/api?site=aidouchuanmei",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.5
-      }
-    },
   {
     "key": "hipy_js_29片库[密]",
     "name": "🔞┃29片库[密]",
@@ -138,16 +124,6 @@
     "quickSearch": 1,
     "filterable": 1,
     "ext": "./js/29片库[密].js"
-  },
-  {
-    "key": "hipy_js_地瓜视频[密]",
-    "name": "🔞┃地瓜视频",
-    "type": 3,
-    "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 1,
-    "ext": "./js/地瓜视频[密].js"
   },
   {
     "key": "hipy_js_九妖仓库[密]",

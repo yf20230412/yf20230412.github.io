@@ -195,6 +195,19 @@
       "ext": ""
     },
     {
+      "key": "农民影视",
+      "name": "👩🏻‍🌾┃农民┃影视💯",
+      "type": 3,
+      "api": "csp_Nmys",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "danmu": false
+      },
+      "timeout":25
+    },
+    {
       "key": "csp_瓜子",
       "name": "🍉┃瓜子┃1080🌺",
       "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
@@ -342,6 +355,71 @@
       "changeable": 1,
       "filterable": 1,
       "timeout":25
+    },
+    {
+      "key": "凯旋",
+      "name": "🎯┃凯旋┃影视💯",
+      "type": 3,
+      "api": "csp_Xdai",
+      "playerType": 1,
+      "jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/lh.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "caHR0cDovLzE1NC4zNy4yMjAuMTc6NjYyMnw1ODliMTkwNmI5NWY3MTljfDU4OWIxOTA2Yjk1ZjcxOWM"
+    },
+    {
+      "key": "看看",
+      "name": "👁‍🗨┃看看┃影视💯",
+      "type": 3,
+      "api": "csp_Xdai",
+      "playerType": 2,
+      "jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/lh.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "caHR0cDovLzExMS4xNzMuMTA2LjIxOTo4ODUwfDlhOTI0Y2JmMzk2Y2Y1ZTd8OWE5MjRjYmYzOTZjZjVlNw"
+    },
+    {
+      "key": "优质",
+      "name": "🥇┃优质┃影视💯",
+      "type": 3,
+      "api": "csp_Xdai",
+      "playerType": 1,
+      "jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/lh.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "jaHR0cHM6Ly9hcGlhcHBkeXl6dHZ5eWRzcXdkeS42OC5neTo1Njg5fGR5eXp0dmFwaWFwcHl5ZHN8ZHl5enR2YXBpYXBweXlkcw"
+    },
+    {
+      "key": "太平",
+      "name": "🌐┃太平┃影视💯",
+      "type": 3,
+      "api": "csp_Xdai",
+      "playerType": 1,
+      "jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/lh.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "caHR0cDovLzExMS4xODAuMTk4LjQwOjExMTB8NTU5MmViZWNmY2U3ODFiMXw1NTkyZWJlY2ZjZTc4MWIx"
+    },
+    {
+      "key": "雷电",
+      "name": "⚡️┃雷电┃影视💯",
+      "type": 3,
+      "api": "csp_Slys",
+      "playerType": 1,
+      "jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/lh.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "caHR0cDovLzEyMC4yMjQuNy45MDo4MDg="
     },
     {
       "key": "韩小圈",
@@ -767,7 +845,7 @@
 
 {"name":"龙龙","type":"1","url":"http://llyh.xn--yi7aa.top/api/?key=5b317c16d457b31a3150d87c0a362a9e&url=","flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","bilibili","pptv","xigua","西瓜"],"header":{"User-Agent":"Dalvik/2.1.0"}},
 
-{"name":"臻享","type":"1","url":"http://43.248.100.147:6068/KEY/XGJ/root/key/70.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","bilibili","pptv","xigua","西瓜","NBY","ETH-","BBA","TX","MXTV","mytv","nmys","yhdm","BNNB","letu","DJWB","DJWX","DJWT","短剧","duanju"],"header":{"User-Agent":"Dalvik/2.1.0"}}},
+{"name":"钩子解析","type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
 {"name":"100次","type":1,"url":"https://jxjson.icu/neibu.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
