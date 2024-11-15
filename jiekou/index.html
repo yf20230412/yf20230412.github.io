@@ -30,39 +30,21 @@
                 </p>
             </div>
             <div class="popup-footer">
-                <div class="popup-btn close-pop" data-link="https://yf1688.top/22">复制</div>
+                <div class="popup-btn close-pop" onclick="copyToClipboard('https://yf1688.top/22')">复制</div>
             </div>
-
         </div>
         <div class="shortcuts-mobile-overlay"></div>
     </div>
 </body>
 <script>
-    function copyToClipboard() {
-    // 获取当前点击的按钮元素
-    var button = document.querySelector('.close-pop');
-    // 从按钮元素的data-link属性中获取要复制的链接
-    var linkToCopy = button.getAttribute('data-link');
-    
-    // 创建一个新的ClipboardJS实例，传入要绑定复制功能的元素选择器
-    let clipboard = new ClipboardJS('.close-pop', {
-        text: function() {
-            return linkToCopy;
-        }
-    });
-    
-    clipboard.on('success', function(e) {
-        console.log('复制成功', e);
-        alert('已成功复制链接，请前往粘贴处粘贴。');
-        clipboard.destroy();
-    });
-    
-    clipboard.on('error', function(e) {
-        console.log('复制失败', e);
-        alert('复制操作出现问题，请重新尝试。');
-        clipboard.destroy();
-    });
-    }
+    function copyToClipboard(content) {
+    var tempInput = document.createElement('input');
+    tempInput.value = content;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert('复制成功，请前往软件粘贴接口')}
 </script>
 <script>
     //屏蔽右键菜单 

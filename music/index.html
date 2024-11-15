@@ -45,7 +45,7 @@
 
                 <p class="popup-domain" style="">
 
-                    <span>2024/9/4</span>
+                    <span>2024/11/15</span>
 
                     <strong style="">
 
@@ -62,77 +62,58 @@
             </div>
 
             <div class="popup-footer">
-                <div class="popup-btn close-pop" data-link="https://raw.gitmirror.com/yf9988/yf9988.github.io/main/maotoumao.json">复制</div>
+                <div class="popup-btn close-pop" onclick="copyToClipboard('https://raw.gitmirror.com/yf9988/yf9988.github.io/main/maotoumao.json')">复制</div>
             </div>
         </div>
-
         <div class="shortcuts-mobile-overlay"></div>
     </div>
+</body>
+<script>
+    function copyToClipboard(content) {
+    var tempInput = document.createElement('input');
+    tempInput.value = content;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert('复制成功，请前往软件粘贴接口')}
+</script>
 
-
-    <script>
-        function copyToClipboard() {
-            // 获取当前点击的按钮元素
-            var button = document.querySelector('.close-pop');
-            // 从按钮元素的data-link属性中获取要复制的链接
-            var linkToCopy = button.getAttribute('data-link');
-        
-            // 创建一个新的ClipboardJS实例，传入要绑定复制功能的元素选择器
-            let clipboard = new ClipboardJS('.close-pop', {
-                text: function() {
-        return linkToCopy;
-                }
-            });
-        
-            clipboard.on('success', function(e) {
-                console.log('复制成功', e);
-                alert('已成功复制链接，请前往粘贴处粘贴。');
-                clipboard.destroy();
-            });
-        
-            clipboard.on('error', function(e) {
-                console.log('复制失败', e);
-                alert('复制操作出现问题，请重新尝试。');
-                clipboard.destroy();
-            });
-        }
-    </script>
-
-    <script>
-        //屏蔽右键菜单 
-        document.oncontextmenu = function(event) {if (window.event) {event = window.event;}
-        try {var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-        {return false;}return true;} catch (e) {return false;}}
-        //屏蔽粘贴 
-        document.onpaste = function(event) { if (window.event) {event = window.event;}
-        try {var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-        {return false;}return true; } catch (e) {return false;}}
-        //屏蔽复制
-        document.oncopy = function(event) {if (window.event) {event = window.event;}
-        try {var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA"))
-        {return false;}return true;} catch (e) {return false;}}
-        //屏蔽剪切
-        document.oncut = function(event) {if (window.event) { event = window.event;}
-        try {var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-        {return false;}return true;} catch (e) {return false;}}
-        //屏蔽选中
-        document.onselectstart = function(event) {if (window.event) {event = window.event;}
-        try {var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-        {return false;}return true;} catch (e) {return false;}}
-        //屏蔽F12和右键
-        function click(e) {if (document.all) {
-         		if (event.button == 2 || event.button == 3) {alert("你想干什么？");oncontextmenu = 'return false';}}
-         		if (document.layers) {if (e.which == 3) {oncontextmenu = 'return false';}}}
-        if (document.layers) {document.captureEvents(Event.MOUSEDOWN);}document.onmousedown = click;
-            document.oncontextmenu = new Function("return false;")
-            document.onkeydown = document.onkeyup = document.onkeypress = function () {
-         		if (window.event.keyCode == 123) {window.event.returnValue = false;return (false);}}
-    </script>
+<script>
+    //屏蔽右键菜单 
+    document.oncontextmenu = function(event) {if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽粘贴 
+    document.onpaste = function(event) { if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true; } catch (e) {return false;}}
+    //屏蔽复制
+    document.oncopy = function(event) {if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA"))
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽剪切
+    document.oncut = function(event) {if (window.event) { event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽选中
+    document.onselectstart = function(event) {if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽F12和右键
+    function click(e) {if (document.all) {
+     		if (event.button == 2 || event.button == 3) {alert("你想干什么？");oncontextmenu = 'return false';}}
+     		if (document.layers) {if (e.which == 3) {oncontextmenu = 'return false';}}}
+    if (document.layers) {document.captureEvents(Event.MOUSEDOWN);}document.onmousedown = click;
+        document.oncontextmenu = new Function("return false;")
+        document.onkeydown = document.onkeyup = document.onkeypress = function () {
+     		if (window.event.keyCode == 123) {window.event.returnValue = false;return (false);}}
+</script>
 
 </body>
 <style id="A_T_S">
