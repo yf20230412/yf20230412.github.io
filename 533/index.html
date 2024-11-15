@@ -138,6 +138,7 @@
                         <div class="progress">
                             <div style="width:80%;"></div>
                             <span>似撼天狮子下云端 如摇地貔貅临座上</span>
+                        </div>
                     </li>
                     <li>
                         <p>三观</p>
@@ -181,8 +182,8 @@
                             <span>时而清醒 时而迷茫</span>
                         </div>
                     </li>
+                </ul>
             </div>
-            </ul>
         </div>
     </div>
 
@@ -288,8 +289,6 @@
         <div class="container links">
             <h2 class="chtitle">Tvbox相关<span>推荐</span></h2>
             <div class="clear col-3">
-
-
 
                 <a href="https://yf1688.top" target="_blank">
                     <div class="item">
@@ -549,45 +548,45 @@
                 </div>
             </div>
         </div>
-
-
-
-        <script src="js/page.3a0791a3.js"></script>
-        <!--以下为点击复制调用js-->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
-        <script>
-            $('.copy-btn').click(function () {
-                let id = $(this).attr('id')
-                copy('#' + id)
-            })
-            function copy(id) {
-                let clipboard = new ClipboardJS(id);
-                clipboard.on('success', function (e) {
-                    console.log(e);
-                    alert('小鱼提醒：复制成功，请前往tvbox接口粘贴食用')
-                    clipboard.destroy();//解决多次弹窗问题
-                });
-                clipboard.on('error', function (e) {
-                    console.log(e);
-                    alert('请重新复制')
-                    clipboard.destroy();//解决多次弹窗问题
-                });
-            }
-        </script>
-
-        <!--在线播放器API-->
-        <script src="https://myhkw.cn/api/player/170450247055" id="myhk" key="170450247055" m="1"></script>
-        <!--雪花API-->
-        <script src='https://api.vvhan.com/api/script/snow'></script>
-        <!--看板娘-->
-        <script src="https://fastly.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
-        <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
-        <!--底部波浪-->
-        <div id="hans-bolang"></div>
-        <script src="https://api.vvhan.com/api/bolang"></script>
     </div>
+</div>
 
-    </body>
+
+
+<script src="js/page.3a0791a3.js"></script>
+<!--以下为点击复制调用js-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+<script>
+    $('.copy-btn').click(function () {
+        let id = $(this).attr('id')
+        copy('#' + id)
+    })
+    function copy(id) {
+        let clipboard = new ClipboardJS(id);
+        clipboard.on('success', function (e) {
+            console.log(e);
+            alert('小鱼提醒：复制成功，请前往tvbox接口粘贴食用')
+            clipboard.destroy();//解决多次弹窗问题
+        });
+        clipboard.on('error', function (e) {
+            console.log(e);
+            alert('请重新复制')
+            clipboard.destroy();//解决多次弹窗问题
+        });
+    }
+</script>
+
+<!--在线播放器API-->
+<script src="https://myhkw.cn/api/player/170450247055" id="myhk" key="170450247055" m="1"></script>
+<!--雪花API-->
+<script src='https://api.vvhan.com/api/script/snow'></script>
+<!--看板娘-->
+<!--<script src="https://fastly.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
+<script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>-->
+<!--底部波浪-->
+<div id="hans-bolang"></div>
+<script src="https://api.vvhan.com/api/bolang"></script>
+</body>
 
 </html>
