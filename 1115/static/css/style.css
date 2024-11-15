@@ -304,7 +304,7 @@ body {
 
 .welcome {
 
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 800;
     margin: 20px 0;
 }
@@ -332,7 +332,7 @@ body {
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 100%;
+    background-size: 200%;
     background-position: 0%;
     font-family: "title";
     animation: backgroundSizeAnimation 10s ease-in-out infinite;
