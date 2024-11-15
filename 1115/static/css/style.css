@@ -99,7 +99,7 @@ body {
 
 }
 
-#fyfy-loading {
+#zyyo-loading {
     background: radial-gradient(white, #d8eaff);
     background-size: 100%;
     background-position: center;
@@ -119,7 +119,7 @@ body {
 
 
 
-#fyfy-loading-center {
+#zyyo-loading-center {
     height: 150px;
     width: 150px;
     position: relative;
@@ -148,7 +148,7 @@ body {
 
 
 
-.fyfy-filter {
+.zyyo-filter {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -159,7 +159,7 @@ body {
    
 }
 
-.fyfy-main {
+.zyyo-main {
 
     width: 100%;
     transition: transform 0.5s ease;
@@ -168,7 +168,7 @@ body {
     flex-direction: row;
 }
 
-.fyfy-left {
+.zyyo-left {
     overflow-y: scroll;
     width: 230px;
     height: 100vh;
@@ -180,7 +180,7 @@ body {
 }
 
 
-.fyfy-left::-webkit-scrollbar {
+.zyyo-left::-webkit-scrollbar {
     display: none;
 }
 
@@ -292,7 +292,7 @@ body {
 
 
 
-.fyfy-right {
+.zyyo-right {
     width: calc(100% - 230px);
     display: flex;
     padding: 20px;
@@ -637,7 +637,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .fyfy-left {
+    .zyyo-left {
         display: none;
     }
 
@@ -670,7 +670,7 @@ footer {
 
 
 
-    .fyfy-right {
+    .zyyo-right {
         width: 100%;
     }
 
