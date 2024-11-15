@@ -493,7 +493,7 @@
 
 {"name":"1080解析","type":1,"url":"http://117.50.183.202:8036/?ip=111.55.12.236&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"zhuimi解析","type":1,"url":"http://103.38.82.59:9527/zhuimi666.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}}
+{"name":"zhuimi解析","type":1,"url":"http://110.40.61.139:4655/zhuimi666.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}}
 
 ],
 
