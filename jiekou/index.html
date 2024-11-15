@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XiaoYu TV接口</title>
+    <link rel="stylesheet" href="https://yf1688.top/jiekou/xyjz.css">
+</head>
+<style>
+    .bj { background-image: url("https://yf1688.top/jiekou/xyjz.svg"); background-size: cover; }
+</style>
+
+<body class="bj">
+    <div>
+        <div class="popup popup-tips none popupShow" id="popup">
+            <div class="popup-header">
+                <h3 class="popup-title">XiaoYu TV接口</h3>
+            </div>
+            <div class="popup-main">
+                <p align="center">收录<strong> 100+ </strong>优质线路，<strong>免费且定期维护</strong></p>
+                <p class="popup-domain">
+                    <span>2024/11/15</span>
+                    <strong>
+                        <a target="_blank">https://yf1688.top/22</a>
+                    </strong>
+                </p>
+                <p align="center">点击
+                    <strong>复制</strong> 后粘贴到
+                    <strong>TVBox</strong> 中配置
+                </p>
+            </div>
+            <div class="popup-footer">
+                <div class="popup-btn close-pop" onclick="copyToClipboard('https://yf1688.top/22')">复制</div>
+            </div>
+        </div>
+        <div class="shortcuts-mobile-overlay"></div>
+    </div>
+</body>
+<script>
+    function copyToClipboard(content) {
+    var tempInput = document.createElement('input');
+    tempInput.value = content;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert('复制成功，请前往软件粘贴接口')}
+</script>
+<script>
+    //屏蔽右键菜单 
+    document.oncontextmenu = function(event) {if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽粘贴 
+    document.onpaste = function(event) { if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true; } catch (e) {return false;}}
+    //屏蔽复制
+    document.oncopy = function(event) {if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA"))
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽剪切
+    document.oncut = function(event) {if (window.event) { event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽选中
+    document.onselectstart = function(event) {if (window.event) {event = window.event;}
+    try {var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
+    {return false;}return true;} catch (e) {return false;}}
+    //屏蔽F12和右键
+    function click(e) {if (document.all) {
+     		if (event.button == 2 || event.button == 3) {alert("你想干什么？");oncontextmenu = 'return false';}}
+     		if (document.layers) {if (e.which == 3) {oncontextmenu = 'return false';}}}
+    if (document.layers) {document.captureEvents(Event.MOUSEDOWN);}document.onmousedown = click;
+        document.oncontextmenu = new Function("return false;")
+        document.onkeydown = document.onkeyup = document.onkeypress = function () {
+     		if (window.event.keyCode == 123) {window.event.returnValue = false;return (false);}}
+</script>
+
+</html>
