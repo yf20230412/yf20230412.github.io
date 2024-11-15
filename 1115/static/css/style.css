@@ -9,14 +9,14 @@
 @font-face {
     font-family: "b";
 
-    src: url(../fonts/Ubuntu-Regular.ttf);
+    src: url(https://yf1688.top/1115/static/fonts/Ubuntu-Regular.ttf);
     font-display: swap;
 }
 
 @font-face {
     font-family: "title";
     /*英文字体*/
-    src: url(../fonts/Pacifico-Regular.ttf);
+    src: url(https://yf1688.top/1115/static/fonts/Pacifico-Regular.ttf);
     font-display: swap;
 }
 
@@ -305,7 +305,7 @@ body {
 .welcome {
 
     font-size: 45px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 20px 0;
 }
 
