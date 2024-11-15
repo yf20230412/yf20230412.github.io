@@ -332,19 +332,7 @@
       "changeable": 1,
       "filterable": 1,
       "timeout":25
-    },
-    {
-      "key": "csp_可可影视",
-      "name": "🥤┃可可┃影视🌺",
-      "type": 3,
-      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext":"./js/可可影视.js",
-      "timeout":25
-    },
+    },    
     {
       "key": "热播",
       "name": "🔥┃热播┃App💯",
@@ -381,6 +369,19 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "caHR0cDovLzExMS4xNzMuMTA2LjIxOTo4ODUwfDlhOTI0Y2JmMzk2Y2Y1ZTd8OWE5MjRjYmYzOTZjZjVlNw"
+    },    
+    {
+      "key": "雷电",
+      "name": "⚡️┃雷电┃影视💯",
+      "type": 3,
+      "api": "csp_Slys",
+      "playerType": 1,
+      "jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/lh.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "caHR0cDovLzEyMC4yMjQuNy45MDo4MDg="
     },
     {
       "key": "优质",
@@ -409,17 +410,16 @@
       "ext": "caHR0cDovLzExMS4xODAuMTk4LjQwOjExMTB8NTU5MmViZWNmY2U3ODFiMXw1NTkyZWJlY2ZjZTc4MWIx"
     },
     {
-      "key": "雷电",
-      "name": "⚡️┃雷电┃影视💯",
+      "key": "csp_可可影视",
+      "name": "🥤┃可可┃影视🌺",
       "type": 3,
-      "api": "csp_Slys",
-      "playerType": 1,
-      "jar":"https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/lh.txt",
+      "api": "https://cdn09022024.gitlink.org.cn/yf1688/box/raw/branch/master/drpy3.min.js",
       "quickSearch":1,
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "ext": "caHR0cDovLzEyMC4yMjQuNy45MDo4MDg="
+      "ext":"./js/可可影视.js",
+      "timeout":25
     },
     {
       "key": "韩小圈",
