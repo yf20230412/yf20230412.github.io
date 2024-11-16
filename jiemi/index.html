@@ -1,42 +1,47 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.1, maximum-scale=2.0, user-scalable=yes\">
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <!--禁用缓存-->
+    <meta http-equiv="Cache - Control" content="no - cache, no - store, must - revalidate">
+    <meta http-equiv="Pragma" content="no - cache">
+    <meta http-equiv="Expires" content="0">
+    <!--完-->
     <title>TVBox接口一键解密</title>
     <!-- 引入Bootstrap样式库 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/css/bootstrap.min.css">
 
-<style>
-*:focus {outline: none; }
-body{
-   margin-top:40px;
-   }
-   .container {
-   max-width: 1000px;
-   margin: 0 auto;
-   padding: 0 15px;
-   }
-   .input-group {
-   margin-bottom: 20px;
-   }
-   .loading {
-   display: none;
-   margin-top: 20px;
-   }
-   @media (max-width: 768px) {
-   .container {
-   max-width: 100%;
-      }
-   }
- </style>
- <style type="text/css">
-.tb960x90 {display:none!important;display:none}
-</style>
+    <style>
+        *:focus {outline: none; }
+        body{
+           margin-top:40px;
+           }
+           .container {
+           max-width: 1000px;
+           margin: 0 auto;
+           padding: 0 15px;
+           }
+           .input-group {
+           margin-bottom: 20px;
+           }
+           .loading {
+           display: none;
+           margin-top: 20px;
+           }
+           @media (max-width: 768px) {
+           .container {
+           max-width: 100%;
+              }
+           }
+    </style>
+    <style type="text/css">
+        .tb960x90 {display:none!important;display:none}
+    </style>
 
- <!--wan	
+    <!--wan	
 <style>	 
 #按钮{height: 45px;}
 #按钮 .input{border: 1px solid #990099;height: 100%;}
@@ -49,7 +54,7 @@ body{
  <a class="clear" id="delete" title="清除" ><img src="https://d.kstore.space/download/4645/Tvbox/myks/jiemi/img/delete-black.png"/></a>
 -->
 
- <!-- 删除按钮 	
+    <!-- 删除按钮 	
 
 <a class="clear" id="delete" title="清除"><img src="https://d.kstore.space/download/4645/Tvbox/myks/jiemi/img/delete-black.png"/></a>
 				 
@@ -74,71 +79,71 @@ body{
                             }
                             });
                    </script> 
--->	
+-->
 
 
 </head>
 
 
 <body>
-    <div class="container" >
-        <h3 class="text-center mb-1"><b>TVBox接口解密</b></h3><br>	
- 
-  <div id="按钮">
-             <div class="input-group">
-                 <input type="search" class="form-control" id="url" value="" placeholder="可下拉选择,也可点击下方‘TvBox按钮’跳转选取接口" list="myDataList" autofocus>
-				 
-				   <button class="btn btn-success" type="button" onclick="copyInput()">复制接口</button>
-				   
-				   <button class="btn btn-primary" type="button" onclick="crawl()">一键解密</button> 	   
-             </div>
- 
-      <datalist  id="myDataList">
-  <option value="https://download.kstore.space/download/4645/Tvbox/myks/99.png"/>🐟小鱼</option>
-  <option value="http://饭太硬.top/tv"/>🚀饭太硬</option>
-  <option value="http://肥猫.live"/>🚀肥猫</option>
-  <option value="http://xhww.fun:63/小米/DEMO.json"/>🚀小米</option>	
-  <option value="https://fm.t4tv.hz.cz/json/config.json"/>🚀蜂蜜线路</option>	
-  <option value="http://rihou.cc:88/荷城茶秀"/>🚀荷城茶秀</option>	
-  <option value="http://rihou.cc:55/天天开心"/>🚀天天开心</option>	
-  <option value="https://mirror.ghproxy.com/https://raw.githubusercontent.com/okcaptain/okjar/rm/ok.json"/>🚀ok线路"</option>	
-  <option value="http://xiaohu.xzam.cn/xiaohu"/>🚀小胡线路</option>	
-  <option value="https://cloud.lxweb.cn/f/2X8QcG/xdcj.json"/>🚀心动采集</option>	
-  <option value="https://pastebin.com/raw/5NHaxyGR"/>🚀道长线路</option>	
-  <option value="https://tvbox.cainisi.cf"/>🚀菜妮丝线路</option>	
-  <option value="http://home.jundie.top:81/top98.json"/>🚀俊佬线路</option>	
-  <option value="https://weixine.net/ysc.json"/>🚀运输车</option>
-  <option value="https://download.kstore.space/download/2863/01.txt"/>🐹潇洒线路</option>
-  <option value="https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json"/>🐹南风线路</option>
-  <option value="http://tv.nxog.top/m/111.php?ou=%E6%AC%A7%E6%AD%8C&mz=index2&xl=&jar=index2"/>🐹欧歌线路</option>
-  <option value="http://52bsj.vip:98/wuai"/>🐹吾爱线路</option>
-  <option value="https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8"/>💎不良帅线路</option>
-  <option value="https://agit.ai/n/b/raw/branch/a/b/c.json"/>💎agit/abc线路</option>
-  <option value="https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json"/>💎zzz1线路</option>
-  <option value="https://yyds.lltv8.top/yyds.json"/>💎猎狼线路</option>
-  <option value="http://yydf.540734621.xyz/yydf/yydf/bd/yydf.json"/>🏄️业余线路</option>
-  <option value="https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"/>🏄️高天流云</option>
-  <option value="https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json"/>🏄️猫爪线路</option>
-  </datalist>   
- 
-			 
+    <div class="container">
+        <h3 class="text-center mb-1"><b>TVBox接口解密</b></h3><br>
 
-</div><br>
+        <div id="按钮">
+            <div class="input-group">
+                <input type="search" class="form-control" id="url" value="" placeholder="可下拉选择,也可点击下方‘TvBox按钮’跳转选取接口" list="myDataList" autofocus>
+
+                <button class="btn btn-success" type="button" onclick="copyInput()">复制接口</button>
+
+                <button class="btn btn-primary" type="button" onclick="crawl()">一键解密</button>
+            </div>
+
+            <datalist id="myDataList">
+                <option value="https://download.kstore.space/download/4645/Tvbox/myks/99.png" />🐟小鱼</option>
+                <option value="http://饭太硬.top/tv" />🚀饭太硬</option>
+                <option value="http://肥猫.live" />🚀肥猫</option>
+                <option value="http://xhww.fun:63/小米/DEMO.json" />🚀小米</option>
+                <option value="https://fm.t4tv.hz.cz/json/config.json" />🚀蜂蜜线路</option>
+                <option value="http://rihou.cc:88/荷城茶秀" />🚀荷城茶秀</option>
+                <option value="http://rihou.cc:55/天天开心" />🚀天天开心</option>
+                <option value="https://mirror.ghproxy.com/https://raw.githubusercontent.com/okcaptain/okjar/rm/ok.json" />🚀ok线路"</option>
+                <option value="http://xiaohu.xzam.cn/xiaohu" />🚀小胡线路</option>
+                <option value="https://cloud.lxweb.cn/f/2X8QcG/xdcj.json" />🚀心动采集</option>
+                <option value="https://pastebin.com/raw/5NHaxyGR" />🚀道长线路</option>
+                <option value="https://tvbox.cainisi.cf" />🚀菜妮丝线路</option>
+                <option value="http://home.jundie.top:81/top98.json" />🚀俊佬线路</option>
+                <option value="https://weixine.net/ysc.json" />🚀运输车</option>
+                <option value="https://download.kstore.space/download/2863/01.txt" />🐹潇洒线路</option>
+                <option value="https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json" />🐹南风线路</option>
+                <option value="http://tv.nxog.top/m/111.php?ou=%E6%AC%A7%E6%AD%8C&mz=index2&xl=&jar=index2" />🐹欧歌线路</option>
+                <option value="http://52bsj.vip:98/wuai" />🐹吾爱线路</option>
+                <option value="https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8" />💎不良帅线路</option>
+                <option value="https://agit.ai/n/b/raw/branch/a/b/c.json" />💎agit/abc线路</option>
+                <option value="https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json" />💎zzz1线路</option>
+                <option value="https://yyds.lltv8.top/yyds.json" />💎猎狼线路</option>
+                <option value="http://yydf.540734621.xyz/yydf/yydf/bd/yydf.json" />🏄️业余线路</option>
+                <option value="https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json" />🏄️高天流云</option>
+                <option value="https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json" />🏄️猫爪线路</option>
+            </datalist>
 
 
-	  <!--wan-->	
+
+        </div><br>
+
+
+        <!--wan-->
         <div class="text-center loading" id="loading">
-          <div class="spinner-border" role="status">
-            鱼<span class="visually-hidden">Loading...</span>
-          </div>
+            <div class="spinner-border" role="status">
+                鱼<span class="visually-hidden">Loading...</span>
+            </div>
         </div>
-       
+
         <textarea class="form-control" id="result" cols="80" rows="20" readonly></textarea>
         <div class="text-center mt-2">
-             <button class="btn btn-warning" onclick="copyText()">复制内容</button>
+            <button class="btn btn-warning" onclick="copyText()">复制内容</button>
             <button class="btn btn-danger" onclick="downloadJar()">下载Jar</button>
-            <a href="http://yf1688.top"  target="_blank"class="btn btn-primary">小鱼主页</a>
-			<a href="https://yf9988.github.io/box" target="_blank"class="btn btn-success">TvBox接口</a>
+            <a href="http://yf1688.top" target="_blank" class="btn btn-primary">小鱼主页</a>
+            <a href="https://yf9988.github.io/box" target="_blank" class="btn btn-success">TvBox接口</a>
         </div>
     </div>
     <!-- 引入Bootstrap JS库 -->
@@ -180,7 +185,7 @@ body{
             });
             document.getElementById('loading').style.display = 'block';
         }
-    
+            
         function copyInput(){
             var input = document.getElementById("url");
             
@@ -206,16 +211,16 @@ body{
                 console.error('发生错误', err);
             }
         }	
-		
-	        function copyText() {
+        		
+        	        function copyText() {
           var copyText = document.getElementById("result");
           copyText.select();
           copyText.setSelectionRange(0, 99999);
           document.execCommand("copy");
           alert("复制失败，请确认是否已成功解密！");
         }	
-
-function downloadJar() {
+        
+        function downloadJar() {
           var downloadJar = document.getElementById("result");
           downloadJar.select();
           downloadJar.setSelectionRange(0,0);
@@ -223,74 +228,79 @@ function downloadJar() {
           alert("请选择线路再下载！");
         }
     </script><br><br><br><br><br>
-	
-<!--版权-->
-	<div class="footer">
-		<div class="center-footer">
-		 <p align="center" class="banquan">鄂ICP备000000号 Copyright © 2023-至今《风言锋语88》</p> </div>
-		 <!--网站运行时间--> 
 
-<div align="center">
- 本站已安全运行：<SPAN id=span_dt_dt style="color: #2F889A;"></SPAN> <SCRIPT language=javascript>function show_date_time(){
-window.setTimeout("show_date_time()", 1000);
-BirthDay=new Date("11/11/2023 8:0:0");
-today=new Date();
-timeold=(today.getTime()-BirthDay.getTime());
-sectimeold=timeold/1000
-secondsold=Math.floor(sectimeold);
-msPerDay=24*60*60*1000
-e_daysold=timeold/msPerDay
-daysold=Math.floor(e_daysold);
-e_hrsold=(e_daysold-daysold)*24;
-hrsold=Math.floor(e_hrsold);
-e_minsold=(e_hrsold-hrsold)*60;
-minsold=Math.floor((e_hrsold-hrsold)*60);
-seconds=Math.floor((e_minsold-minsold)*60);
-span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
-}
-show_date_time();</script>
-</div> 
-<div align="center"">
-	      <a target="_blank" href="https://mp.weixin.qq.com/s/zFyqLSwj5FXkMiupb5XdDQ" title="微信公众号：" alt="微信公众号：">微信公众号：<mark>风言锋语88</mark></a>	
-	    </div>
-</div>
+    <!--版权-->
+    <div class="footer">
+        <div class="center-footer">
+            <p align="center" class="banquan">鄂ICP备000000号 Copyright © 2023-至今《风言锋语88》</p>
+        </div>
+        <!--网站运行时间-->
 
-<!--在线播放器API-->
+        <div align="center">
+            本站已安全运行：<SPAN id=span_dt_dt style="color: #2F889A;"></SPAN>
+            <SCRIPT language=javascript>
+                function show_date_time(){
+                window.setTimeout("show_date_time()", 1000);
+                BirthDay=new Date("11/11/2023 8:0:0");
+                today=new Date();
+                timeold=(today.getTime()-BirthDay.getTime());
+                sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                msPerDay=24*60*60*1000
+                e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+                e_hrsold=(e_daysold-daysold)*24;
+                hrsold=Math.floor(e_hrsold);
+                e_minsold=(e_hrsold-hrsold)*60;
+                minsold=Math.floor((e_hrsold-hrsold)*60);
+                seconds=Math.floor((e_minsold-minsold)*60);
+                span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
+                }
+                show_date_time();
+            </script>
+        </div>
+        <div align="center"">
+	      <a target=" _blank" href="https://mp.weixin.qq.com/s/zFyqLSwj5FXkMiupb5XdDQ" title="微信公众号：" alt="微信公众号：">微信公众号：<mark>风言锋语88</mark></a>
+        </div>
+    </div>
 
-<!--备用 
+    <!--在线播放器API-->
+
+    <!--备用 
 肥猫的api
 <script src="https://myhkw.cn/api/player/167013822195" id="myhk" key="167013822195" m="1"></script>
 
 //自己的api,https://myhkw.cn/ 
 
-<script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script> --> 
+<script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script> -->
 
-<!--随机播放音乐-->
-<script Language="JavaScript">
-　　myok=new Array(15);
-　　myok[0]="https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'";
-　　myok[1]="https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3'";
-　　myok[2]="https://download.kstore.space/download/4645/Tvbox/myks/audio/离别开出花.mp3'";
-　　myok[3]="https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3'";
-　　myok[4]="https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3'";
-　　myok[5]="https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3'";
-　　myok[6]="https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3'";
-　　myok[7]="https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3'";
-　　myok[8]="https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3'";
-　　myok[9]="https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3'";
-　　myok[10]="https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3'";
-　　myok[11]="https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3'";
-　　myok[12]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3'";
-　　myok[13]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3'";
-　　myok[14]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3'";
-　　index = Math.floor(Math.random() * myok.length);
-　　document.write("<EMBED id=M src='"+myok[index]+" width=0 height=0 autostart=true loop=true type=audio/mpeg>");
-</Script> 
+    <!--随机播放音乐-->
+    <script Language="JavaScript">
+        　　myok=new Array(15);
+        　　myok[0]="https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'";
+        　　myok[1]="https://download.kstore.space/download/4645/Tvbox/myks/audio/落地生花.mp3'";
+        　　myok[2]="https://download.kstore.space/download/4645/Tvbox/myks/audio/离别开出花.mp3'";
+        　　myok[3]="https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3'";
+        　　myok[4]="https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3'";
+        　　myok[5]="https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3'";
+        　　myok[6]="https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3'";
+        　　myok[7]="https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3'";
+        　　myok[8]="https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3'";
+        　　myok[9]="https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3'";
+        　　myok[10]="https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3'";
+        　　myok[11]="https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3'";
+        　　myok[12]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3'";
+        　　myok[13]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3'";
+        　　myok[14]="https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3'";
+        　　index = Math.floor(Math.random() * myok.length);
+        　　document.write("<EMBED id=M src='"+myok[index]+" width=0 height=0 autostart=true loop=true type=audio/mpeg>");
+    </Script>
 
-<!--雪花API,https://api.vvhan.com/-->
+    <!--雪花API,https://api.vvhan.com/-->
 
-<script src='https://api.vvhan.com/api/script/meihua'></script>	
-	
-	
+    <script src='https://api.vvhan.com/api/script/meihua'></script>
+
+
 </body>
+
 </html>

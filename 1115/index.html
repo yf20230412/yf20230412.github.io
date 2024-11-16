@@ -10,6 +10,11 @@
     <link rel="apple-touch-icon" href="https://yf1688.top/1115/static/img/favicon.ico">
     <link rel="shortcut icon" href="https://yf1688.top/images/icon/favicon.ico">
     <link rel="Bookmark" href="https://yf1688.top/1115/static/img/favicon.ico">
+    <!--禁用缓存-->
+    <meta http-equiv="Cache - Control" content="no - cache, no - store, must - revalidate">
+    <meta http-equiv="Pragma" content="no - cache">
+    <meta http-equiv="Expires" content="0">
+    <!--完-->
     <meta name="description" content="小鱼影视TV是一款永久免费的安卓、电视、盒子应用">
     <meta name="keywords" content="XiaoYuTV,小鱼影视TV,电视,盒子,TVBox,接口">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -37,6 +42,81 @@
     <style>
         .fyfy-main{
             max-width:1100px;
+        }
+    </style>
+    <!--播放音乐按钮样式 -->
+    <style>
+        /* 样式化按钮 */
+        .circle-btn {
+        width: 50px;
+        height: 50px;
+        background-color: #4a9feb; /* 蓝色背景 */
+        border-radius: 50%; /* 圆形 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s;
+        position: fixed; /* 固定定位 */
+        right: 20px; /* 距离右边20px */
+        bottom: calc(10% - 25px); /* 距离底部1/10处，减去按钮半径 */
+        }
+        
+        /* 播放图标（三角形）样式 */
+        .play-icon {
+        width: 0;
+        height: 0;
+        border-left: 15px solid white; /* 调整大小 */
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        position: absolute; /* 绝对定位 */
+        top: 50%; /* 从顶部50%开始 */
+        transform: translateY(-50%); /* 向上移动自身高度的一半 */
+        right: 15px; /* 向右移动15px */
+        }
+        
+        /* 停止图标（两条竖线）样式 */
+        .stop-icon {
+            width: 20px; /* 总宽度 */
+            height: 15px; /* 高度 */
+            position: relative;
+        }
+        
+        .stop-icon::before,
+        .stop-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px; /* 单条竖线的宽度 */
+            height: 15px; /* 单条竖线的高度 */
+            background-color: white;
+        }
+        
+        .stop-icon::before {
+            left: 0;
+        }
+        
+        .stop-icon::after {
+            right: 0;
+        }
+        
+        /* 状态消息提示框样式 */
+        #status-message {
+        position: fixed; /* 固定定位 */
+        left: 5px; /* 距离左边5px */
+        bottom: calc(10% - 25px); /* 与按钮在同一水平线上 */
+        z-index: 1000; /* 确保在页面最上层 */
+        padding: 10px; /* 内边距 */
+        border-radius: 5px; /* 边框圆角 */
+        color: white; /* 文字颜色 */
+        font-size: 16px; /* 字体大小 */
+        background-color: #333; /* 深灰色背景 */
+        display: none; /* 默认不显示 */
+        max-width: 300px; /* 最大宽度 */
+        word-wrap: break-word; /* 允许换行 */
         }
     </style>
 </head>
@@ -172,122 +252,123 @@
                         <path d="M629.333333 202.666667v213.333333h277.333334v448h-512v-213.333333h-277.333334v-448h512z m213.333334 277.333333h-213.333334v170.666667h-170.666666v149.333333h384v-320z m-277.333334-213.333333h-384v320h213.333334v-170.666667h170.666666v-149.333333z m0 213.333333h-106.666666v106.666667h106.666666v-106.666667z" p-id="1892"></path>
                     </svg>App+TV </div>
                 <div class="projectList"><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-FF73v.html>
-                        <div class="projectItemLeft">
-                            <h1>手机版</h1>
-                            <p>支持Android系统,内置接口,支持直播与点播</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i1.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-YF73v.html">
-                        <div class="projectItemLeft">
-                            <h1>TV版</h1>
-                            <p>支持TV盒子高系统,内置接口,支持直播与点播</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i2.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-GF73v.html">
-                        <div class="projectItemLeft">
-                            <h1>普通版</h1>
-                            <p>兼容TV盒子4.1系统</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i4.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-PF73v.html">
-                        <div class="projectItemLeft">
-                            <h1>天光云影</h1>
-                            <p>最强电视直播盒子,内置线路。可搭载肥羊allinone</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i3.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-Kg73v.html">
-                        <div class="projectItemLeft">
-                            <h1>1DM＋手机版</h1>
-                            <p>原名为IDM+,号称是目前 Android 平台最快、最先进的下载管理器应用</p>
-                        </div>
-                    </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-0g73v.html">
-                        <div class="projectItemLeft">
-                            <h1>甲壳虫ADB助手</h1>
-                            <p>adb调试工具,可对应用软件进行安装,卸载,绕过权限进行调试</p>
-                        </div>
-                    </a></div>
-                <div class="title"><svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1891">
-                        <path d="M629.333333 202.666667v213.333333h277.333334v448h-512v-213.333333h-277.333334v-448h512z m213.333334 277.333333h-213.333334v170.666667h-170.666666v149.333333h384v-320z m-277.333334-213.333333h-384v320h213.333334v-170.666667h170.666666v-149.333333z m0 213.333333h-106.666666v106.666667h106.666666v-106.666667z" p-id="1892"></path>
-                    </svg>Project </div>
-                <div class="projectList"><a class="projectItem b" target="_blank" href="http://pan.teyonds.com">
-                        <div class="projectItemLeft">
-                            <h1>太阳云盘</h1>
-                            <p>更多实用软件资源</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i5.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem b" target="_blank" href="https://yf1688.top/jiekou/index.html">
-                        <div class="projectItemLeft">
-                            <h1>小鱼接口</h1>
-                            <p>XiaoYu官方接口</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i6.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem b" target="_blank" href="https://yf1688.top/box/index.html">
-                        <div class="projectItemLeft">
-                            <h1>TVBox接口</h1>
-                            <p>聚合全网影视接口</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i8.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem b" target="_blank" href="https://a.yf1688.top/jm/">
-                        <div class="projectItemLeft">
-                            <h1>加密</h1>
-                            <p>TVBox接口加密</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i10.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem b" target="_blank" href="https://lige.chat/ua">
-                        <div class="projectItemLeft">
-                            <h1>解密</h1>
-                            <p>TVBox接口解密</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i9.png" alt="">
-                        </div>
-
-                    </a><a class="projectItem b" target="_blank" href="https://yf1688.top/music/index.html">
-                        <div class="projectItemLeft">
-                            <h1>音乐接口</h1>
-                            <p>MusicFree聚合接口</p>
-                        </div>
-                        <div class="projectItemRight">
-                            <img src="https://yf1688.top/1115/static/img/i7.png" alt="">
-                        </div>
-
-                    </a></div>
-                <div id="skill" class="title">
-                    <svg t="1705257823317" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7833">
-                        <path d="M395.765333 586.570667h-171.733333c-22.421333 0-37.888-22.442667-29.909333-43.381334L364.768 95.274667A32 32 0 0 1 394.666667 74.666667h287.957333c22.72 0 38.208 23.018667 29.632 44.064l-99.36 243.882666h187.050667c27.509333 0 42.186667 32.426667 24.042666 53.098667l-458.602666 522.56c-22.293333 25.408-63.626667 3.392-54.976-29.28l85.354666-322.421333zM416.714667 138.666667L270.453333 522.581333h166.869334a32 32 0 0 1 30.933333 40.181334l-61.130667 230.954666 322.176-367.114666H565.312c-22.72 0-38.208-23.018667-29.632-44.064l99.36-243.882667H416.714667z" p-id="7834"></path>
-                    </svg>
-                    skills
+                        <div class=" projectItemLeft">
+                        <h1>手机版</h1>
+                        <p>支持Android系统,内置接口,支持直播与点播</p>
                 </div>
-                <div id="skill" class="skill">
-                    <img id="skillPc" src="https://yf1688.top/1115/static/svg/skillPc.svg" alt="" srcset="">
-                    <img id="skillWap" src="https://yf1688.top/1115/static/svg/skillWap.svg" alt="" srcset="">
+                <div class="projectItemRight">
+                    <img src="https://yf1688.top/1115/static/img/i1.png" alt="">
                 </div>
-            </content>
+
+                </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-YF73v.html">
+                    <div class="projectItemLeft">
+                        <h1>TV版</h1>
+                        <p>支持TV盒子高系统,内置接口,支持直播与点播</p>
+                    </div>
+                    <div class="projectItemRight">
+                        <img src="https://yf1688.top/1115/static/img/i2.png" alt="">
+                    </div>
+
+                </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-GF73v.html">
+                    <div class="projectItemLeft">
+                        <h1>普通版</h1>
+                        <p>兼容TV盒子4.1系统</p>
+                    </div>
+                    <div class="projectItemRight">
+                        <img src="https://yf1688.top/1115/static/img/i4.png" alt="">
+                    </div>
+
+                </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-PF73v.html">
+                    <div class="projectItemLeft">
+                        <h1>天光云影</h1>
+                        <p>最强电视直播盒子,内置线路。可搭载肥羊allinone</p>
+                    </div>
+                    <div class="projectItemRight">
+                        <img src="https://yf1688.top/1115/static/img/i3.png" alt="">
+                    </div>
+
+                </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-Kg73v.html">
+                    <div class="projectItemLeft">
+                        <h1>1DM＋手机版</h1>
+                        <p>原名为IDM+,号称是目前 Android 平台最快、最先进的下载管理器应用</p>
+                    </div>
+                </a><a class="projectItem a" target="_blank" href="https://www.123pan.com/s/uGUzVv-0g73v.html">
+                    <div class="projectItemLeft">
+                        <h1>甲壳虫ADB助手</h1>
+                        <p>adb调试工具,可对应用软件进行安装,卸载,绕过权限进行调试</p>
+                    </div>
+                </a>
         </div>
+        <div class="title"><svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1891">
+                <path d="M629.333333 202.666667v213.333333h277.333334v448h-512v-213.333333h-277.333334v-448h512z m213.333334 277.333333h-213.333334v170.666667h-170.666666v149.333333h384v-320z m-277.333334-213.333333h-384v320h213.333334v-170.666667h170.666666v-149.333333z m0 213.333333h-106.666666v106.666667h106.666666v-106.666667z" p-id="1892"></path>
+            </svg>Project </div>
+        <div class="projectList"><a class="projectItem b" target="_blank" href="http://pan.teyonds.com">
+                <div class="projectItemLeft">
+                    <h1>太阳云盘</h1>
+                    <p>更多实用软件资源</p>
+                </div>
+                <div class="projectItemRight">
+                    <img src="https://yf1688.top/1115/static/img/i5.png" alt="">
+                </div>
+
+            </a><a class="projectItem b" target="_blank" href="https://yf1688.top/jiekou/index.html">
+                <div class="projectItemLeft">
+                    <h1>小鱼接口</h1>
+                    <p>XiaoYu官方接口</p>
+                </div>
+                <div class="projectItemRight">
+                    <img src="https://yf1688.top/1115/static/img/i6.png" alt="">
+                </div>
+
+            </a><a class="projectItem b" target="_blank" href="https://yf1688.top/box/index.html">
+                <div class="projectItemLeft">
+                    <h1>TVBox接口</h1>
+                    <p>聚合全网影视接口</p>
+                </div>
+                <div class="projectItemRight">
+                    <img src="https://yf1688.top/1115/static/img/i8.png" alt="">
+                </div>
+
+            </a><a class="projectItem b" target="_blank" href="https://a.yf1688.top/jm/">
+                <div class="projectItemLeft">
+                    <h1>加密</h1>
+                    <p>TVBox接口加密</p>
+                </div>
+                <div class="projectItemRight">
+                    <img src="https://yf1688.top/1115/static/img/i10.png" alt="">
+                </div>
+
+            </a><a class="projectItem b" target="_blank" href="https://lige.chat/ua">
+                <div class="projectItemLeft">
+                    <h1>解密</h1>
+                    <p>TVBox接口解密</p>
+                </div>
+                <div class="projectItemRight">
+                    <img src="https://yf1688.top/1115/static/img/i9.png" alt="">
+                </div>
+
+            </a><a class="projectItem b" target="_blank" href="https://yf1688.top/music/index.html">
+                <div class="projectItemLeft">
+                    <h1>音乐接口</h1>
+                    <p>MusicFree聚合接口</p>
+                </div>
+                <div class="projectItemRight">
+                    <img src="https://yf1688.top/1115/static/img/i7.png" alt="">
+                </div>
+
+            </a></div>
+        <div id="skill" class="title">
+            <svg t="1705257823317" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7833">
+                <path d="M395.765333 586.570667h-171.733333c-22.421333 0-37.888-22.442667-29.909333-43.381334L364.768 95.274667A32 32 0 0 1 394.666667 74.666667h287.957333c22.72 0 38.208 23.018667 29.632 44.064l-99.36 243.882666h187.050667c27.509333 0 42.186667 32.426667 24.042666 53.098667l-458.602666 522.56c-22.293333 25.408-63.626667 3.392-54.976-29.28l85.354666-322.421333zM416.714667 138.666667L270.453333 522.581333h166.869334a32 32 0 0 1 30.933333 40.181334l-61.130667 230.954666 322.176-367.114666H565.312c-22.72 0-38.208-23.018667-29.632-44.064l99.36-243.882667H416.714667z" p-id="7834"></path>
+            </svg>
+            skills
+        </div>
+        <div id="skill" class="skill">
+            <img id="skillPc" src="https://yf1688.top/1115/static/svg/skillPc.svg" alt="" srcset="">
+            <img id="skillWap" src="https://yf1688.top/1115/static/svg/skillWap.svg" alt="" srcset="">
+        </div>
+        </content>
+    </div>
     </div>
     <footer>
         <a href="https://yf1688.top">小鱼影视官网 © 2024
@@ -297,8 +378,80 @@
         <div onclick="" class="tc-main">
             <img class="tc-img" src="" alt="" srcset="">
         </div>
-
     </div>
+    <!--音乐🎶播放按钮-->
+    <audio id="bg-music" loop>
+        您的浏览器不支持 audio 标签。
+    </audio>
+    <div id="toggle-btn" class="circle-btn">
+        <div class="play-icon"></div>
+    </div>
+    <div id="status-message"></div>
+    <script>
+        var musicFiles = [
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3',
+            'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'
+        ];
+        
+        var bgMusic = document.getElementById('bg-music');
+        var toggleBtn = document.getElementById('toggle-btn');
+        var statusMessage = document.getElementById('status-message');
+        var musicPlaying = false;
+        
+        function getRandomMusic() {
+            var randomIndex = Math.floor(Math.random() * musicFiles.length);
+            return musicFiles[randomIndex];
+        }
+        
+        function loadRandomMusic() {
+            var randomMusic = getRandomMusic();
+            bgMusic.src = randomMusic;
+            // 预加载音乐
+            bgMusic.load();
+        }
+        
+        function showStatus(message) {
+            statusMessage.innerText = message;
+            statusMessage.style.display = 'block';
+            setTimeout(() => {
+                statusMessage.style.display = 'none';
+            }, 2000); // 2秒后隐藏提示
+        }
+        
+        function toggleMusic() {
+            if (musicPlaying) {
+                bgMusic.pause();
+                toggleBtn.innerHTML = '<div class="play-icon"></div>';
+                showStatus('音乐已暂停');
+                musicPlaying = false;
+            } else {
+                bgMusic.play().then(() => {
+                    toggleBtn.innerHTML = '<div class="stop-icon"></div>';
+                    showStatus('正在为你播放音乐');
+                    musicPlaying = true;
+                }).catch((error) => {
+                    console.error('自动播放失败：', error);
+                    showStatus('播放失败，请重试');
+                });
+            }
+        }
+        
+        // 预加载音乐
+        loadRandomMusic();
+        
+        toggleBtn.addEventListener('click', toggleMusic);
+    </script>
 </body>
 <script src="https://yf1688.top/1115/static/js/script.js"> </script>
 <script charset="UTF-8" id="LA_COLLECT" src="https://yf1688.top/1115/static/js-sdk-pro.min.js"></script>
