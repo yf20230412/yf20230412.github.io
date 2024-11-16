@@ -496,7 +496,7 @@ body {
     background-color: var(--item_bg_color);
     border-radius: 8px;
     padding: 15px;
-    height: 95px;
+    height: 125px;
     width: calc(25% - 15px);
     backdrop-filter: blur(var(--card_filter));-webkit-backdrop-filter: blur(var(--card_filter));
     -webkit-backdrop-filter: blur(var(--card_filter));-webkit-backdrop-filter: blur(var(--card_filter));
@@ -510,7 +510,7 @@ body {
     background-color: var(--item_bg_color);
     border-radius: 8px;
     padding: 15px;
-    height: 100px;
+    height: 125px;
     width: calc(25% - 15px);
     backdrop-filter: blur(var(--card_filter));-webkit-backdrop-filter: blur(var(--card_filter));
     transition: opacity 0.5s ease, background-color 0.2s ease, border 0.2s ease, transform 0.3s ease;
@@ -549,6 +549,7 @@ body {
 .projectItemLeft p {
     font-size: 12px;
     margin-top: 15px;
+    margin-bottom: 10px;
     color: var(--item_left_text_color);
 }
 
@@ -626,7 +627,7 @@ footer {
         width: calc(50% - 20px);
     }
 .projectItem{
-    margin: 10px;
+    margin: 7px;
 }
     .b {
 
@@ -693,10 +694,10 @@ footer {
 
 }
 .projectItem{
-    padding: 10px;
+    padding: 15px;
 }
     .projectItemLeft p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .projectItemLeft h1 {
