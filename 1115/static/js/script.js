@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function changeTheme(theme) {
-        tanChiShe.src = "https://yf1688.top/1115/static/svg/snake-" + theme + ".svg";
+        tanChiShe.src = "./static/svg/snake-" + theme + ".svg";
         html.dataset.theme = theme;
         setCookie("themeState", theme, 365);
         themeState = theme;
