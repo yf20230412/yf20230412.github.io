@@ -44,81 +44,6 @@
             max-width:1100px;
         }
     </style>
-    <!--播放音乐按钮样式 -->
-    <style>
-        /* 样式化按钮 */
-        .circle-btn {
-        width: 50px;
-        height: 50px;
-        background-color: #4a9feb; /* 蓝色背景 */
-        border-radius: 50%; /* 圆形 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        transition: background-color 0.3s;
-        position: fixed; /* 固定定位 */
-        right: 20px; /* 距离右边20px */
-        bottom: calc(10% - 25px); /* 距离底部1/10处，减去按钮半径 */
-        }
-        
-        /* 播放图标（三角形）样式 */
-        .play-icon {
-        width: 0;
-        height: 0;
-        border-left: 15px solid white; /* 调整大小 */
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        position: absolute; /* 绝对定位 */
-        top: 50%; /* 从顶部50%开始 */
-        transform: translateY(-50%); /* 向上移动自身高度的一半 */
-        right: 15px; /* 向右移动15px */
-        }
-        
-        /* 停止图标（两条竖线）样式 */
-        .stop-icon {
-            width: 20px; /* 总宽度 */
-            height: 15px; /* 高度 */
-            position: relative;
-        }
-        
-        .stop-icon::before,
-        .stop-icon::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px; /* 单条竖线的宽度 */
-            height: 15px; /* 单条竖线的高度 */
-            background-color: white;
-        }
-        
-        .stop-icon::before {
-            left: 0;
-        }
-        
-        .stop-icon::after {
-            right: 0;
-        }
-        
-        /* 状态消息提示框样式 */
-        #status-message {
-        position: fixed; /* 固定定位 */
-        left: 5px; /* 距离左边5px */
-        bottom: calc(10% - 25px); /* 与按钮在同一水平线上 */
-        z-index: 1000; /* 确保在页面最上层 */
-        padding: 10px; /* 内边距 */
-        border-radius: 5px; /* 边框圆角 */
-        color: white; /* 文字颜色 */
-        font-size: 16px; /* 字体大小 */
-        background-color: #333; /* 深灰色背景 */
-        display: none; /* 默认不显示 */
-        max-width: 300px; /* 最大宽度 */
-        word-wrap: break-word; /* 允许换行 */
-        }
-    </style>
 </head>
 
 <body>
@@ -379,85 +304,10 @@
             <img class="tc-img" src="" alt="" srcset="">
         </div>
     </div>    
-    
-    
-    <!--音乐🎶播放按钮-->
-    <audio id="bg-music" loop>
-        您的浏览器不支持 audio 标签。
-    </audio>
-    <div id="toggle-btn" class="circle-btn">
-        <div class="play-icon"></div>
-    </div>
-    <div id="status-message"></div>
-    <!--完-->
 </body>
 <script src="https://yf1688.top/1115/static/js/script.js"> </script>
 <script charset="UTF-8" id="LA_COLLECT" src="https://yf1688.top/1115/static/js-sdk-pro.min.js"></script>
-<script>
-        var musicFiles = [
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/你总要学会往前走.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/待我.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/九十九朵泪花.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C42.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C41.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/C40.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/云山.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/后来遇到的人.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/大风吹倒梧桐树.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/就算悲伤结局.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/很任性.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/我真的会哭.mp3',
-            'https://download.kstore.space/download/4645/Tvbox/myks/audio/车窗外飘着雪.mp3'
-        ];
-        
-        var bgMusic = document.getElementById('bg-music');
-        var toggleBtn = document.getElementById('toggle-btn');
-        var statusMessage = document.getElementById('status-message');
-        var musicPlaying = false;
-        
-        function getRandomMusic() {
-            var randomIndex = Math.floor(Math.random() * musicFiles.length);
-            return musicFiles[randomIndex];
-        }
-        
-        function loadRandomMusic() {
-            var randomMusic = getRandomMusic();
-            bgMusic.src = randomMusic;
-            // 预加载音乐
-            bgMusic.load();
-        }
-        
-        function showStatus(message) {
-            statusMessage.innerText = message;
-            statusMessage.style.display = 'block';
-            setTimeout(() => {
-                statusMessage.style.display = 'none';
-            }, 2000); // 2秒后隐藏提示
-        }
-        
-        function toggleMusic() {
-            if (musicPlaying) {
-                bgMusic.pause();
-                toggleBtn.innerHTML = '<div class="play-icon"></div>';
-                showStatus('音乐已暂停');
-                musicPlaying = false;
-            } else {
-                bgMusic.play().then(() => {
-                    toggleBtn.innerHTML = '<div class="stop-icon"></div>';
-                    showStatus('正在为你播放音乐');
-                    musicPlaying = true;
-                }).catch((error) => {
-                    console.error('自动播放失败：', error);
-                    showStatus('播放失败，请重试');
-                });
-            }
-        }
-        
-        // 预加载音乐
-        loadRandomMusic();
-        
-        toggleBtn.addEventListener('click', toggleMusic);
-    </script>
+
 <script>
     LA.init({ id: "JfNYke3PYdazOc6Q", ck: "JfNYke3PYdazOc6Q" })
 </script>
