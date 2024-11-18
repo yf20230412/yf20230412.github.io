@@ -65,7 +65,7 @@
             <div class="left-div left-tag">
                 <div class="left-tag-item">影视
                 </div>
-                <div class="left-tag-item">小鱼
+                <div class="left-tag-item">玩机
                 </div>
                 <div class="left-tag-item">直播
                 </div>
@@ -85,26 +85,26 @@
                 <ul id="line">
                     <li>
                         <div class="focus"></div>
-                        <div>暂时关闭手机和至尊版，恢复时间等待通知
+                        <div>凯速接口由于官方系统升级，恢复时间等待通知
                         </div>
-                        <div>2024.11.13</div>
+                        <div>2024.11.17</div>
                     </li>
                     <li>
                         <div class="focus"></div>
-                        <div>修复接口域名
+                        <div>接口增加多条优质线路
                         </div>
-                        <div>2024.08.21</div>
+                        <div>2024.11.01</div>
                     </li>
                     <li>
                         <div class="focus"></div>
-                        <div>内置多条线路
+                        <div>接口线路公开使用
                         </div>
                         <div>2024.01.16</div>
                     </li>
                     <li>
                         <div class="focus"></div>
                         <div>发布小鱼影视TV</div>
-                        <div>2023.06.03</div>
+                        <div>2023.11.11</div>
                     </li>
                 </ul>
             </div>
@@ -117,6 +117,10 @@
                 <div class="welcome">
                     Hello I' m <span class="gradientText">
                         小鱼影视</span>
+                </div>
+                <div class="description">
+                    <h3>自我认知</h3>
+                    📚&nbsp;学习是一个永无止境的过程，你知道的越多，你不知道的也会越多，在有限的时间内坚持每天多学一点，你一定能成为你想要成为的那个人。不积跬步无以至千里，不积小流无以成江海！
                 </div>
                 <div class="description"> 🔥 <span class="purpleText">XiaoYuTV Box</span>
                 </div>
@@ -288,6 +292,25 @@
 <script charset="UTF-8" id="LA_COLLECT" src="./static/js-sdk-pro.min.js"></script>
 <script>
     LA.init({ id: "JfNYke3PYdazOc6Q", ck: "JfNYke3PYdazOc6Q" })
+</script>
+<script>
+    let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://ckflv.icu/api/rand.music?sort=热歌榜");
+    xhr.responseType = "arraybuffer";
+    xhr.addEventListener("load", () => {
+    let playsound = (audioBuffer) => {
+        let source = audioCtx.createBufferSource();
+        source.buffer = audioBuffer;
+        source.connect(audioCtx.destination);
+        source.loop = true;
+        source.start();
+    };
+    audioCtx.decodeAudioData(xhr.response, function(data) {
+    playsound(data);
+    });
+    });
+    xhr.send();
 </script>
 
 </html>
