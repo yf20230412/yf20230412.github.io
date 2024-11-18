@@ -336,6 +336,7 @@ body {
     background-size: 200%;
     background-position: 0%;
     font-family: "title";
+    font-size: 35px;
     animation: backgroundSizeAnimation 10s ease-in-out infinite;
       background-image:  var(--gradient);
 }
@@ -690,7 +691,7 @@ footer {
     }
 
     .welcome {
-        font-size: 10vw;
+        font-size: 8vw;
         margin: 2vw 0;
 
     }
