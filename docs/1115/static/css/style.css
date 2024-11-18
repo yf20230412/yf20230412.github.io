@@ -63,7 +63,7 @@ html[data-theme="Dark"] {
     --main_text_color: #fff;
     --gradient:linear-gradient(120deg, rgb(133, 62, 255), #f76cc6 30%, rgb(255, 255, 255) 60%);
     --purple_text_color: #747bff;
-    --xiaoyu_text_color: #ff0000;
+    --fyfy_text_color: #ff0000;
     --text_bg_color: rgb(26, 4, 48);
     --item_bg_color: rgb(19, 20, 24);
     --item_hover_color: rgb(19, 23, 27);
@@ -368,8 +368,8 @@ body {
     font-weight: 800;
 }
 
-.xiaoyuText {
-    color: var(--xiaoyu_text_color);
+.fyfyText {
+    color: var(--fyfy_text_color);
     font-weight: 800;
 }
 
