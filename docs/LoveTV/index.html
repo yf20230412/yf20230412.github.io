@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>📺 IPTV研究所…</title>
+    <style>
+        :root {
+            --primary-color: #4F46E5;
+            --secondary-color: #818CF8;
+            --background-color: #F3F4F6;
+            --card-color: #FFFFFF;
+            --text-color: #1F2937;
+            --hover-color: #6366F1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background-color);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--card-color);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+        }
+
+        .subscription-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .subscription-link {
+            background-color: var(--card-color);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid #E5E7EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
+
+        .subscription-link:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+        }
+
+        .subscription-link .emoji {
+            margin-right: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .small-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .small-links a {
+            text-decoration: none;
+            color: #6B7280;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .small-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background-color: var(--card-color);
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .update-content {
+            overflow-y: auto;
+            padding-right: 1rem;
+            margin-right: -1rem;
+            /* 自定义滚动条样式 */
+            scrollbar-width: thin;
+            scrollbar-color: #CBD5E1 transparent;
+        }
+
+        .update-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .update-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .update-content::-webkit-scrollbar-thumb {
+            background-color: #CBD5E1;
+            border-radius: 3px;
+        }
+
+        .update-content::-webkit-scrollbar-thumb:hover {
+            background-color: #94A3B8;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6B7280;
+            transition: color 0.2s ease;
+            z-index: 1;
+        }
+
+        .close-btn:hover {
+            color: var(--text-color);
+        }
+
+        .update-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            background-color: var(--card-color);
+            padding: 0.5rem 0;
+        }
+
+        .update-section {
+            border-left: 2px solid #E5E7EB;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .update-date {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .update-item {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .update-item::before {
+            content: "◦";
+            position: absolute;
+            left: 0;
+            color: #6B7280;
+        }
+
+        .notice-text {
+            color: #EF4444;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #FCA5A5;
+            border-radius: 0.5rem;
+            background-color: #FEF2F2;
+        }
+
+        @media (min-width: 640px) {
+            .subscription-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">佛系收集，免费分享 😊</h1>
+        <p class="subtitle">实时直播集萃 🌟| 尽享精彩瞬间</p>
+        
+        <div class="subscription-grid">
+            <div class="subscription-link" onclick="copySubscriptionLink('https://www.mytvsuper.xyz/m3u/DLHD.m3u')">
+                <span class="emoji">📺</span>DLHD直播
+            </div>
+
+
+            <div class="subscription-link" onclick="copyAstroLink()">
+                <span class="emoji">🚴‍♂️</span>Astor直播
+            </div>
+
+
+
+
+            <div class="subscription-link" onclick="copySportLink()">
+                <span class="emoji">🚴‍♂️</span>体育直播
+            </div>
+
+            <div class="subscription-link" onclick="copyMytvLink()">
+                <span class="emoji">📡</span>MyTV直播
+            </div>
+            
+            
+              <div class="subscription-link" onclick="copySubscriptionLink('https://www.mytvsuper.xyz/m3u/4GTV.m3u')">
+                <span class="emoji">🎥</span>4GTV直播
+            </div>
+            
+            
+            <div class="subscription-link" onclick="copy999Link()">
+                <span class="emoji">📡</span>包含全部
+            </div>
+            
+           
+            
+            
+        </div>
+
+        <div class="small-links">
+            <a href="https://t.me/VIP_IPTV" target="_blank">Telegram</a>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function showUpdateNotice() {
+            const modal = document.getElementById('updateModal');
+            modal.style.display = 'block';
+        }
+
+        function closeUpdateNotice() {
+            const modal = document.getElementById('updateModal');
+            modal.style.display = 'none';
+        }
+
+        function copySubscriptionLink(link) {
+            navigator.clipboard.writeText(link).then(function() {
+                alert("订阅链接已复制到剪贴板,请粘贴到播放器中使用.");
+            }, function(err) {
+                console.error('无法复制文本: ', err);
+            });
+        }
+
+        function copyMytvLink() {
+            if (confirm("这是一个使用 DRM 媒体流的内容。请准备兼容的播放器，目前 iOS 不支持此媒体。")) {
+                copySubscriptionLink("https://www.mytvsuper.xyz/m3u/MyTV.m3u");
+            } else {
+                alert("请使用兼容 DRM 的播放器，如影视TV、天光云影、TiviMate 和 OTT 等。");
+            }
+        }
+        
+        
+         function copyAstroLink() {
+            if (confirm("这是一个使用 DRM 媒体流的内容。请准备兼容的播放器，目前 iOS 不支持此媒体。")) {
+                copySubscriptionLink("https://www.mytvsuper.xyz/m3u/Astro.m3u");
+            } else {
+                alert("请使用兼容 DRM 的播放器，如影视TV、天光云影、TiviMate 和 OTT 等。");
+            }
+        }
+        
+         function copy999Link() {
+            if (confirm("这是一个使用 DRM 媒体流的内容。请准备兼容的播放器，目前 iOS 不支持此媒体。")) {
+                copySubscriptionLink("https://www.mytvsuper.xyz/m3u/Live.m3u");
+            } else {
+                alert("请使用兼容 DRM 的播放器，如影视TV、天光云影、TiviMate 和 OTT 等。");
+            }
+        }
+        
+        
+        
+        function copySportLink() {
+            if (confirm("这是一个使用 DRM 媒体流的内容。请准备兼容的播放器，目前 iOS 不支持此媒体。")) {
+                copySubscriptionLink("https://www.mytvsuper.xyz/m3u/Sport.m3u");
+            } else {
+                alert("请使用兼容 DRM 的播放器，如影视TV、天光云影、TiviMate 和 OTT 等。");
+            }
+        }
+
+        window.onload = showUpdateNotice;
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8e38263e3caf769b',t:'MTczMTc2NzExNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+
+
+
+
+
+
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <title>Netdata TV Dashboard</title>-->
+<!--    <meta name="application-name" content="netdata">-->
+
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <meta name="apple-mobile-web-app-capable" content="yes">-->
+<!--    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">-->
+
+<!--    <meta property="og:locale" content="en_US" />-->
+<!--    <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2662304/22945737/e98cd0c6-f2fd-11e6-96f1-5501934b0955.png"/>-->
+<!--    <meta property="og:url" content="http://my-netdata.io/"/>-->
+<!--    <meta property="og:type" content="website"/>-->
+<!--    <meta property="og:site_name" content="netdata"/>-->
+<!--    <meta property="og:title" content="netdata - real-time performance monitoring, done right!"/>-->
+<!--    <meta property="og:description" content="Stunning real-time dashboards, blazingly fast and extremely interactive. Zero configuration, zero dependencies, zero maintenance." />-->
+    
+<!--</head>-->
+
+<!--<style>-->
+<!--body,.netdata-legend-toolbox-button,.netdata-legend-value {-->
+<!--    background-color: #17171a!important;-->
+<!--}-->
+<!--.netdata-legend-resize-handler{-->
+<!--        display: none!important;-->
+<!--}-->
+
+
+<!--</style>-->
+<!--<script>-->
+
+
+<!--
+<!--    Load dashboard.js-->
+
+<!--    to host this HTML file on your web server,-->
+<!--    you have to load dashboard.js from the netdata server.-->
+
+<!--    So, pick one the two below-->
+<!--    If you pick the first, set the server name/IP.-->
+
+<!--    The second assumes you host this file on /usr/share/netdata/web-->
+<!--    and that you have chown it to be owned by netdata:netdata-->
+<!---->
+<!-- <script type="text/javascript" src="http://my.server:19999/dashboard.js"></script> -->
+<!--<script type="text/javascript" src="dashboard.js?v20190902-0"></script>-->
+<!--<script type="text/javascript" src="https://netdata.pendy.us.kg/dashboard.js"></script>-->
+
+<!--<script>-->
+
+<!--NETDATA.options.current.destroy_on_hide = true;-->
+
+<!--NETDATA.options.current.eliminate_zero_dimensions = true;-->
+
+<!--NETDATA.options.current.concurrent_refreshes = false;-->
+
+<!--NETDATA.options.current.parallel_refresher = true;-->
+
+
+<!--var RELOAD_EVERY = 5;-->
+<!--setTimeout(function(){-->
+<!--    location.reload();-->
+<!--}, RELOAD_EVERY * 60 * 1000);-->
+
+<!--</script>-->
+<!--<body>-->
+
+<!--<div style="width: 100%; text-align: center; display: inline-block;">-->
+
+<!--    <div style="width: 100%; height: 24vh; text-align: center; display: inline-block;">-->
+<!--        <div style="width: 100%; height: calc(100% - 15px); text-align: center; display: inline-block;">-->
+<!--            <br/>-->
+<!--            <div data-netdata="system.cpu"-->
+<!--                    data-title="CPU usage of your netdata server"-->
+<!--                    data-chart-library="dygraph"-->
+<!--                    data-width="100%"-->
+<!--                    data-height="100%"-->
+<!--                    data-after="-300"-->
+<!--                    data-dygraph-valuerange="[0, 100]"-->
+<!--                    ></div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+<!--    <div style="width: 100%; height: 24vh; text-align: center; display: inline-block;">-->
+        <!--<div style="width: 100%; height: 15px; text-align: center; display: inline-block;">-->
+            <!--<b>IPv4 traffic on both servers</b>-->
+        <!--</div>-->
+<!--        <div style="width: 100%; height: calc(100% - 15px); text-align: center; display: inline-block;">-->
+           
+<!--            <div data-netdata="system.net"-->
+<!--                    data-title="Network traffic on your netdata server"-->
+<!--                    data-common-max="traffic"-->
+<!--                    data-common-min="traffic"-->
+<!--                    data-chart-library="dygraph"-->
+<!--                    data-width="100%"-->
+<!--                    data-height="100%"-->
+<!--                    data-after="-300"-->
+<!--                    ></div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div style="width: 100%; height: 23vh; text-align: center; display: inline-block;">-->
+        <!--<div style="width: 100%; height: 15px; text-align: center; display: inline-block;">-->
+            <!--<b>Netdata statistics on both servers</b>-->
+        <!--</div>-->
+<!--        <div style="width: 100%; max-height: calc(100% - 15px); text-align: center; display: inline-block;">-->
+           
+<!--            <div style="width: 100%; height:100%; align: center; display: inline-block;">-->
+<!--                <br/>-->
+<!--                <div data-netdata="netdata.requests"-->
+<!--                        data-title="Chart Refreshes/s"-->
+<!--                        data-common-max="netdata-requests"-->
+<!--                        data-decimal-digits="0"-->
+<!--                        data-chart-library="gauge"-->
+<!--                        data-width="20%"-->
+<!--                        data-height="100%"-->
+<!--                        data-after="-300"-->
+<!--                        data-points="300"-->
+<!--                        ></div>-->
+<!--                <div data-netdata="netdata.clients"-->
+<!--                        data-common-max="netdata-clients"-->
+<!--                        data-decimal-digits="0"-->
+<!--                        data-title="Sockets"-->
+<!--                        data-chart-library="gauge"-->
+<!--                        data-width="20%"-->
+<!--                        data-height="100%"-->
+<!--                        data-after="-300"-->
+<!--                        data-points="300"-->
+<!--                        data-colors="#AA5500"-->
+<!--                        ></div>-->
+<!--                <div data-netdata="netdata.net"-->
+<!--                        data-dimensions="in"-->
+<!--                        data-common-max="netdata-net-in"-->
+<!--                        data-decimal-digits="0"-->
+<!--                        data-title="Requests Traffic"-->
+<!--                        data-chart-library="easypiechart"-->
+<!--                        data-width="15%"-->
+<!--                        data-height="100%"-->
+<!--                        data-after="-300"-->
+<!--                        data-points="300"-->
+<!--                        ></div>-->
+<!--                <div data-netdata="netdata.net"-->
+<!--                        data-dimensions="out"-->
+<!--                        data-common-max="netdata-net-out"-->
+<!--                        data-decimal-digits="0"-->
+<!--                        data-title="Chart Data Traffic"-->
+<!--                        data-chart-library="easypiechart"-->
+<!--                        data-width="15%"-->
+<!--                        data-height="100%"-->
+<!--                        data-after="-300"-->
+<!--                        data-points="300"-->
+<!--                        ></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+</html>
