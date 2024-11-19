@@ -363,6 +363,29 @@
         </div>
     </div>
     <footer>
+        <div align="center">
+            本站已安全运行：<SPAN id=span_dt_dt style="color: #2F889A;"></SPAN>
+            <SCRIPT language=javascript>
+                function show_date_time(){
+                window.setTimeout("show_date_time()", 1000);
+                BirthDay=new Date("11/11/2024 8:0:0");
+                today=new Date();
+                timeold=(today.getTime()-BirthDay.getTime());
+                sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                msPerDay=24*60*60*1000
+                e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+                e_hrsold=(e_daysold-daysold)*24;
+                hrsold=Math.floor(e_hrsold);
+                e_minsold=(e_hrsold-hrsold)*60;
+                minsold=Math.floor((e_hrsold-hrsold)*60);
+                seconds=Math.floor((e_minsold-minsold)*60);
+                span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
+                }
+                show_date_time();
+            </script>
+        </div>
         <a href="https://yf1688.top">小鱼影视官网 © 2024
         </a>
     </footer>
@@ -380,15 +403,15 @@
 </script>
 <script>
     var musicFiles = [
-	    'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3'
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',            
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
+    	    'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3',
+    		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3',
+        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',
+        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3',
+    		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3',
+    		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3',
+    		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3',
+    		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3',
+    		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
     ];
     
     var bgMusic = document.getElementById('bg-music');
