@@ -22,25 +22,25 @@
       {
         "name": "《小鱼影视》",
         "url": "http://a.yf1688.top/Release/apk/release/mobile-python-arm64_v8a.apk",
-        "icon": "http://a.yf1688.top/img/888.png",
+        "icon": "http://a.yf1688.top/img/小鱼.png",
         "version": "手机64位py版"
       },
       {
         "name": "《小鱼影视》",
         "url": "http://a.yf1688.top/Release/apk/release/leanback-python-armeabi_v7a.apk",
-        "icon": "http://a.yf1688.top/img/888.png",
+        "icon": "http://a.yf1688.top/img/小鱼.png",
         "version": "TV32位py版"
       },	
       {
         "name": "《小鱼影视》",
         "url": "http://a.yf1688.top/Release/apk/kitkat/leanback.apk",
-        "icon": "http://a.yf1688.top/img/888.png",
+        "icon": "http://a.yf1688.top/img/小鱼.png",
         "version": "TV安卓4x版"
       },		
       {
         "name": "《宝盒影视》",
         "url": "http://a.yf1688.top/apk/宝盒手机版.apk",
-        "icon": "http://a.yf1688.top/img/999.jpg",
+        "icon": "http://a.yf1688.top/img/260.png",
         "version": "手机64位版"
       },	
       {
@@ -56,18 +56,6 @@
         "version": "TV内置版"
       },			
       {
-        "name": "《影迷》手机版",
-        "url": "https://download.kstore.space/download/4645/apk/影迷.apk",
-        "icon": "http://a.yf1688.top/img/250.png",
-        "version": "手机版"
-      },			
-      {
-        "name": "《MBox》",
-        "url": "https://download.kstore.space/download/4645/apk/MBox.apk",
-        "icon": "http://a.yf1688.top/img/235.png",
-        "version": "手机版"
-      },		
-      {
         "name": "《EasyBox》",
         "url": "http://a.yf1688.top/apk/EasyBox.apk",
         "icon": "http://a.yf1688.top/img/251.png",
@@ -77,66 +65,42 @@
   },
   {
     "name": "装机必备",
-    "list": [
-      {
-        "name": "算法助手",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/算法助手.apk",
-        "icon": "http://a.yf1688.top/img/555.jpg",
-        "version": "手机版"
-      },
-      {
-        "name": "televizo",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/televizo.apk",
-        "icon": "http://a.yf1688.top/img/555.jpg",
-        "version": "手机版"
-      },
-      {
-        "name": "fastnat内网穿透",
-        "url": "https://download.kstore.space/download/4645/apk/fastnat.apk",
-        "icon": "http://a.yf1688.top/img/666.jpg",
-        "version": "手机版"
-      },		
+    "list": [      
       {
         "name": "ATVTools",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/atvTools苹果版ADB.ipa",
+        "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/atvTools苹果版ADB.ipa",
         "icon": "http://a.yf1688.top/img/555.jpg",
         "version": "苹果版ADB"
       },
       {
         "name": "Pydroid3",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/Pydroid_3.6.2汉化.apk",
+        "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/Pydroid_3.6.2汉化.apk",
         "icon": "http://a.yf1688.top/img/555.jpg",
         "version": "手机汉化版"
       },
       {
         "name": "Pydroid3插件",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/Pydroid3权限插件v2.0.apk",
+        "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/Pydroid3权限插件v2.0.apk",
         "icon": "http://a.yf1688.top/img/555.jpg",
         "version": "权限插件v2.0版"
       },
       {
         "name": "WiFi钥匙",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/WiFi钥匙显示密码.apk",
+        "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/WiFi钥匙显示密码.apk",
         "icon": "http://a.yf1688.top/img/555.jpg",
         "version": "v1.0.10版"
       },	
       {
         "name": "百度输入法",
-        "url": "http://a.yf1688.top/apk/百度输入法破解剪切板条数.apk",
+        "url": "http://a.yf1688.top/apk/百度输入法.apk",
         "icon": "http://a.yf1688.top/img/555.jpg",
         "version": "破解字数限制"
       },		
       {
         "name": "GKD去广告",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/GKD去广告内置.apk",
+        "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/GKD去广告内置.apk",
         "icon": "http://a.yf1688.top/img/555.jpg",
         "version": "内置手机版"
-      },
-      {
-        "name": "MiXplorer",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/MiXplorer.apk",
-        "icon": "http://a.yf1688.top/img/555.jpg",
-        "version": "v6.66.2手机版"
       },
       {
         "name": "TiviMate",
@@ -149,43 +113,7 @@
         "url": "http://a.yf1688.top/apk/应用管家.apk",
         "icon": "http://a.yf1688.top/img/666.jpg",
         "version": "TV版"
-      },		
-      {
-        "name": "野草助手",
-        "url": "https://download.kstore.space/download/4645/apk/野草助手.apk",
-        "icon": "http://a.yf1688.top/img/666.jpg",
-        "version": "TV版"
-      },
-      {
-        "name": "欢视助手",
-        "url": "https://download.kstore.space/download/4645/apk/欢视助手tv版.apk",
-        "icon": "http://a.yf1688.top/img/666.jpg",
-        "version": "TV版"
-      },		
-      {
-        "name": "当贝桌面",
-        "url": "https://download.kstore.space/download/4645/apk/当贝桌面.apk",
-        "icon": "http://a.yf1688.top/img/666.jpg",
-        "version": "TV版_4.1.7"
-      },
-      {
-        "name": "开机启动",
-        "url": "https://download.kstore.space/download/4645/apk/开机启动.apk",
-        "icon": "http://a.yf1688.top/img/666.jpg",
-        "version": "TV版"
-      },	
-      {
-        "name": "微力同步",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/微力同步.apk",
-        "icon": "http://a.yf1688.top/img/777.jpg",
-        "version": "手机TV兼容版"
-      },		
-      {
-        "name": "FolderSyncPro",
-        "url": "https://download.kstore.space/download/9202/TVBox/Myapp/FolderSyncPro.apk",
-        "icon": "http://a.yf1688.top/img/777.jpg",
-        "version": "手机TV兼容版"
-      }	
+      }
     ]
   },	
   {
@@ -193,37 +121,37 @@
     "list": [
       {
         "name": "LocalSend文件传输",
-        "url": "https://download.kstore.space/download/4645/apk/LocalSend.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/LocalSend.apk",
         "icon": "http://a.yf1688.top/img/239.png",
         "version": "手机版"
       },
       {
         "name": "小鱼影视助手",
-        "url": "https://download.kstore.space/download/4645/apk/小鱼影视助手.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/小鱼影视助手.apk",
         "icon": "http://a.yf1688.top/img/240.png",
         "version": "手机版"
       },
       {
         "name": "APK.1安装器",
-        "url": "https://download.kstore.space/download/4645/apk/APK.1安装器.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/APK.1安装器.apk",
         "icon": "http://a.yf1688.top/img/255.png",
         "version": "手机版"
       },
       {
         "name": "MT管理器",
-        "url": "https://download.kstore.space/download/4645/apk/MT管理器.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/MT管理器.apk",
         "icon": "http://a.yf1688.top/img/243.png",
         "version": "手机版"
       },
       {
         "name": "NP管理器",
-        "url": "https://download.kstore.space/download/4645/apk/NP管理器.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/NP管理器.apk",
         "icon": "http://a.yf1688.top/img/245.png",
         "version": "手机版"
       },
       {
         "name": "apktoolm反编译",
-        "url": "https://download.kstore.space/download/4645/apk/apktoolm.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/apktoolm.apk",
         "icon": "http://a.yf1688.top/img/257.png",
         "version": "手机版"
       },
@@ -235,13 +163,13 @@
       },
       {
         "name": "ES文件浏览器",
-        "url": "https://download.kstore.space/download/4645/apk/ES文件浏览器.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/ES文件浏览器.apk",
         "icon": "http://a.yf1688.top/img/233.png",
         "version": "TV版"
       },
       {
         "name": "小白文件管理器",
-        "url": "https://download.kstore.space/download/4645/apk/小白文件管理器.apk",
+        "url": "https://d.kstore.dev/download/4645/apk/小白文件管理器.apk",
         "icon": "http://a.yf1688.top/img/234.png",
         "version": "TV版"
       }
@@ -252,7 +180,7 @@
     "list": [
       {
         "name": "嗅探X5电视版",
-        "url": "https://download.kstore.space/download/4645/apk/[x5.tbs.apk].txt",
+        "url": "https://d.kstore.dev/download/4645/apk/[x5.tbs.apk].txt",
         "icon": "http://a.yf1688.top/img/555.jpg",
         "version": "Android9专用"
       }
