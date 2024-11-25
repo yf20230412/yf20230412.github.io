@@ -1,538 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <!--禁用缓存-->
-    <meta http-equiv="Cache - Control" content="no - cache, no - store, must - revalidate">
-    <meta http-equiv="Pragma" content="no - cache">
-    <meta http-equiv="Expires" content="0">
-    <!--完-->
-    <title>小鱼接口导航</title>
-    <link rel="apple-touch-icon" sizes="72x72" href="https://yf1688.top/images/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="72x72" href="https://yf1688.top/images/icon/72.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://yf1688.top/images/icon/32.png">
-    <link rel="shortcut icon" href="https://yf1688.top/images/icon/favicon.ico" />
-    <link rel="Bookmark" href="https://yf1688.top/images/icon/favicon.ico" />
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<!--禁用缓存-->
+		<meta http-equiv="Cache - Control" content="no - cache, no - store, must - revalidate">
+		<meta http-equiv="Pragma" content="no - cache">
+		<meta http-equiv="Expires" content="0">
+		<!--完-->
+		<title>小鱼接口导航</title>
+		<link rel="apple-touch-icon" sizes="72x72" href="https://yf1688.top/images/icon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="72x72" href="https://yf1688.top/images/icon/72.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://yf1688.top/images/icon/32.png">
+		<link rel="shortcut icon" href="https://yf1688.top/images/icon/favicon.ico" />
+		<link rel="Bookmark" href="https://yf1688.top/images/icon/favicon.ico" />
 
-    <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
-    <style>
-        @media screen and (min-width:1200px){
-            /*li{width:calc(20% - 5px)}*/
-        }
-        @media screen and (min-width:90px) and (max-width:1200px){
-            li{width:calc(20% - 5px) !important;}
-        }
-        @media screen and (min-width:600px) and (max-width:900px){
-            li{width:calc(33% - 5px) !important;}
-        }
-        @media screen and (max-width:600px){
-            li{width:100% !important;}
-        }
-        *{padding: 0;margin: 0;}
-        ul:after{content:"";display:block;clear:both;}
-        ul{zoom:1;max-width: 1200px;margin: 0 auto;}
-        li{
-            width:calc(20% - 5px);height:auto;
-            padding:50px 0;text-align:center;
-            margin:0 5px 10px 0;font-size:28px;
-            float:left;color:#fff;font-weight:bold;
-            list-style-type:none;
-            cursor: pointer;
-            height: 80px;
-        }
-        li span{
-          font-size: 12px;
-          width: 80%;
-          margin: auto;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          display: block;
-          overflow-wrap: break-word;
-          margin-top: 8px;
-        }
-        
-          /* ---代码分割线--- */      
-          
-        YourName {
-        			background: linear-gradient(135deg,
-        					#0eaf6d,
-        					#ff6ac6 25%,
-        					#147b96 50%,
-        					#e6d205 55%,
-        					#2cc4e0 60%,
-        					#8b2ce0 80%,
-        					#ff6384 95%,
-        					#08dfb4);
-        			/* 文字颜色填充设置为透明 */
-        			-webkit-text-fill-color: transparent;
-        			/* 背景裁剪，即让文字使用背景色 */
-        			-webkit-background-clip: text;
-        			background-clip: text;
-        			/* 背景图放大一下，看着柔和一些 */
-        			-webkit-background-size: 200% 200%;
-        			background-size: 200% 200%;
-        			/* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
-        			-webkit-animation: flowCss 12s infinite linear;
-        			animation: flowCss 12s infinite linear;
-        			font-size: 48px;
-        			/* 设置字体大小 */
-        			font-weight: bold;
-        			/* 设置字体粗细 */
-        			letter-spacing: 2px;
-        			/* 设置字符间距 */
-        			animation-name: flowCss;
-        			/* 定义动画名称 */
-        			animation-duration: 5s;
-        			/* 定义动画持续时间 */
-        			animation-iteration-count: infinite;
-        			/* 定义动画重复次数 */
-        			animation-timing-function: linear;
-        			/* 定义动画速度曲线 */
-        			animation-fill-mode: forwards;
-        			/* 定义动画结束后状态 */
-        		}
-        		/* 定义动画 */
-        		@keyframes flowCss {
-        			0% {
-        				/* 设置背景图像的位置 */
-        				background-position: 0% 50%;
-        			}
-        
-        			100% {
-        				/* 设置背景图片的位置 */
-        				background-position: 100% 50%;
-        			}
-        		}
-        		
-        /* ---代码分割线--- */		
-        
-        @keyframes gradientAnimation {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        
-        a {
-          background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          text-decoration-line: none;
-          transition: background 0.5s ease;
-          animation: gradientAnimation 3s infinite alternate;
-        }
-    </style>
-    <!--播放音乐按钮样式 -->
-    <style>
-        /* 样式化按钮 */
-        .circle-btn {
-        width: 50px;
-        height: 50px;
-        background-color: #4a9feb; /* 蓝色背景 */
-        border-radius: 50%; /* 圆形 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        transition: background-color 0.3s;
-        position: fixed; /* 固定定位 */
-        right: 20px; /* 距离右边20px */
-        bottom: calc(10% - 25px); /* 距离底部1/10处，减去按钮半径 */
-        }
-        
-        /* 播放图标（三角形）样式 */
-        .play-icon {
-        width: 0;
-        height: 0;
-        border-left: 15px solid white; /* 调整大小 */
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        position: absolute; /* 绝对定位 */
-        top: 50%; /* 从顶部50%开始 */
-        transform: translateY(-50%); /* 向上移动自身高度的一半 */
-        right: 15px; /* 向右移动15px */
-        }
-        
-        /* 停止图标（两条竖线）样式 */
-        .stop-icon {
-            width: 20px; /* 总宽度 */
-            height: 15px; /* 高度 */
-            position: relative;
-        }
-        
-        .stop-icon::before,
-        .stop-icon::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px; /* 单条竖线的宽度 */
-            height: 15px; /* 单条竖线的高度 */
-            background-color: white;
-        }
-        
-        .stop-icon::before {
-            left: 0;
-        }
-        
-        .stop-icon::after {
-            right: 0;
-        }
-        
-        /* 状态消息提示框样式 */
-        #status-message {
-        position: fixed; /* 固定定位 */
-        left: 5px; /* 距离左边5px */
-        bottom: calc(10% - 25px); /* 与按钮在同一水平线上 */
-        z-index: 1000; /* 确保在页面最上层 */
-        padding: 10px; /* 内边距 */
-        border-radius: 5px; /* 边框圆角 */
-        color: white; /* 文字颜色 */
-        font-size: 16px; /* 字体大小 */
-        background-color: #333; /* 深灰色背景 */
-        display: none; /* 默认不显示 */
-        max-width: 300px; /* 最大宽度 */
-        word-wrap: break-word; /* 允许换行 */
-        }
-    </style>
-</head>
+		<script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
+		<style>
+			@media screen and (min-width:1200px){
+			            /*li{width:calc(20% - 5px)}*/
+			        }
+			        @media screen and (min-width:90px) and (max-width:1200px){
+			            li{width:calc(20% - 5px) !important;}
+			        }
+			        @media screen and (min-width:600px) and (max-width:900px){
+			            li{width:calc(33% - 5px) !important;}
+			        }
+			        @media screen and (max-width:600px){
+			            li{width:100% !important;}
+			        }
+			        *{padding: 0;margin: 0;}
+			        ul:after{content:"";display:block;clear:both;}
+			        ul{zoom:1;max-width: 1200px;margin: 0 auto;}
+			        li{
+			            width:calc(20% - 5px);height:auto;
+			            padding:50px 0;text-align:center;
+			            margin:0 5px 10px 0;font-size:28px;
+			            float:left;color:#fff;font-weight:bold;
+			            list-style-type:none;
+			            cursor: pointer;
+			            height: 80px;
+			        }
+			        li span{
+			          font-size: 12px;
+			          width: 80%;
+			          margin: auto;
+			          text-overflow: ellipsis;
+			          overflow: hidden;
+			          display: block;
+			          overflow-wrap: break-word;
+			          margin-top: 8px;
+			        }
+			        
+			          /* ---代码分割线--- */      
+			          
+			        YourName {
+			        			background: linear-gradient(135deg,
+			        					#0eaf6d,
+			        					#ff6ac6 25%,
+			        					#147b96 50%,
+			        					#e6d205 55%,
+			        					#2cc4e0 60%,
+			        					#8b2ce0 80%,
+			        					#ff6384 95%,
+			        					#08dfb4);
+			        			/* 文字颜色填充设置为透明 */
+			        			-webkit-text-fill-color: transparent;
+			        			/* 背景裁剪，即让文字使用背景色 */
+			        			-webkit-background-clip: text;
+			        			background-clip: text;
+			        			/* 背景图放大一下，看着柔和一些 */
+			        			-webkit-background-size: 200% 200%;
+			        			background-size: 200% 200%;
+			        			/* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
+			        			-webkit-animation: flowCss 12s infinite linear;
+			        			animation: flowCss 12s infinite linear;
+			        			font-size: 48px;
+			        			/* 设置字体大小 */
+			        			font-weight: bold;
+			        			/* 设置字体粗细 */
+			        			letter-spacing: 2px;
+			        			/* 设置字符间距 */
+			        			animation-name: flowCss;
+			        			/* 定义动画名称 */
+			        			animation-duration: 5s;
+			        			/* 定义动画持续时间 */
+			        			animation-iteration-count: infinite;
+			        			/* 定义动画重复次数 */
+			        			animation-timing-function: linear;
+			        			/* 定义动画速度曲线 */
+			        			animation-fill-mode: forwards;
+			        			/* 定义动画结束后状态 */
+			        		}
+			        		/* 定义动画 */
+			        		@keyframes flowCss {
+			        			0% {
+			        				/* 设置背景图像的位置 */
+			        				background-position: 0% 50%;
+			        			}
+			        
+			        			100% {
+			        				/* 设置背景图片的位置 */
+			        				background-position: 100% 50%;
+			        			}
+			        		}
+			        		
+			        /* ---代码分割线--- */		
+			        
+			        @keyframes gradientAnimation {
+			          0% { background-position: 0% 50%; }
+			          50% { background-position: 100% 50%; }
+			          100% { background-position: 0% 50%; }
+			        }
+			        
+			        a {
+			          background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
+			          background-size: 200% 200%;
+			          -webkit-background-clip: text;
+			          background-clip: text;
+			          color: transparent;
+			          text-decoration-line: none;
+			          transition: background 0.5s ease;
+			          animation: gradientAnimation 3s infinite alternate;
+			        }
+		</style>
+		<!--播放音乐按钮样式 -->
+		<style>
+			/* 样式化按钮 */
+			        .circle-btn {
+			        width: 50px;
+			        height: 50px;
+			        background-color: #4a9feb; /* 蓝色背景 */
+			        border-radius: 50%; /* 圆形 */
+			        display: flex;
+			        justify-content: center;
+			        align-items: center;
+			        cursor: pointer;
+			        border: none;
+			        outline: none;
+			        transition: background-color 0.3s;
+			        position: fixed; /* 固定定位 */
+			        right: 20px; /* 距离右边20px */
+			        bottom: calc(10% - 25px); /* 距离底部1/10处，减去按钮半径 */
+			        }
+			        
+			        /* 播放图标（三角形）样式 */
+			        .play-icon {
+			        width: 0;
+			        height: 0;
+			        border-left: 15px solid white; /* 调整大小 */
+			        border-top: 10px solid transparent;
+			        border-bottom: 10px solid transparent;
+			        position: absolute; /* 绝对定位 */
+			        top: 50%; /* 从顶部50%开始 */
+			        transform: translateY(-50%); /* 向上移动自身高度的一半 */
+			        right: 15px; /* 向右移动15px */
+			        }
+			        
+			        /* 停止图标（两条竖线）样式 */
+			        .stop-icon {
+			            width: 20px; /* 总宽度 */
+			            height: 15px; /* 高度 */
+			            position: relative;
+			        }
+			        
+			        .stop-icon::before,
+			        .stop-icon::after {
+			            content: '';
+			            position: absolute;
+			            top: 50%;
+			            transform: translateY(-50%);
+			            width: 5px; /* 单条竖线的宽度 */
+			            height: 15px; /* 单条竖线的高度 */
+			            background-color: white;
+			        }
+			        
+			        .stop-icon::before {
+			            left: 0;
+			        }
+			        
+			        .stop-icon::after {
+			            right: 0;
+			        }
+			        
+			        /* 状态消息提示框样式 */
+			        #status-message {
+			        position: fixed; /* 固定定位 */
+			        left: 5px; /* 距离左边5px */
+			        bottom: calc(10% - 25px); /* 与按钮在同一水平线上 */
+			        z-index: 1000; /* 确保在页面最上层 */
+			        padding: 10px; /* 内边距 */
+			        border-radius: 5px; /* 边框圆角 */
+			        color: white; /* 文字颜色 */
+			        font-size: 16px; /* 字体大小 */
+			        background-color: #333; /* 深灰色背景 */
+			        display: none; /* 默认不显示 */
+			        max-width: 300px; /* 最大宽度 */
+			        word-wrap: break-word; /* 允许换行 */
+			        }
+		</style>
+	</head>
 
-<body>
-    <center>
-        <div class="title">
-            <YourName>TvBox接口导航</YourName><br>
-        </div>
+	<body>
+		<center>
+			<div class="title">
+				<YourName>TvBox接口导航</YourName>
+				<br>
+			</div>
 
-        <!--补充-->
-        <br />
-        <h3><a href="https://yf1688.top/" target="_blank" rel="nofollow">❤️https://yf1688.top❤️</a></h3> <br>
-        <p>
-            <strong><span style="color:#000000">主要分享苹果、安卓、TV端的影视软件以及一些手机常用软件...</span><span style="color:#008000">每天更新海量资源</span></strong>
-        </p>
-        <br />
-        <!--wan-->
+			<!--补充-->
+			<br />
+			<h3>
+				<a href="https://yf1688.top/" target="_blank" rel="nofollow">❤️https://yf1688.top❤️</a>
+			</h3>
+			<br>
+			<p>
+				<strong>
+					<span style="color:#000000">主要分享苹果、安卓、TV端的影视软件以及一些手机常用软件...</span>
+					<span style="color:#008000">每天更新海量资源</span>
+				</strong>
+			</p>
+			<br />
+			<!--wan-->
 
 
 
 
-        <span style="color:#f91ab3;font-size:1.5em">点</span><span style="color:#e4261;font-size:1em">击</span>&nbsp;👇<span style="color:#568efe;font-size:1em">复</span><span style="color:#d2332b;font-size:1.5em">制</span>
-    </center>
+			<span style="color:#f91ab3;font-size:1.5em">点</span>
+			<span style="color:#e4261;font-size:1em">击</span>&nbsp;👇<span style="color:#568efe;font-size:1em">复</span>
+			<span style="color:#d2332b;font-size:1.5em">制</span>
+		</center>
 
-    <ul id="ul"></ul>
-    <center>
+		<ul id="ul"></ul>
+		<center>
 
-        <a href="https://yf2023.lanzouv.com/b00oc2zpch#520" target="_blank" <span style="color:#34cbf7;font-size:1.5em">👉盒</span><span style="color:#f2b3a1;font-size:3em">子</span><span style="color:#932723;font-size:2em">传</span><span style="color:#c1cc83;font-size:3.5em">送</span><span style="color:#9cb22;font-size:2.5em">门</span>&nbsp;👈</a>
-        <br>
-        <h2>
-            <p href="mailto:yufeng1688778@163.com" target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;" rel="nofollow">如果您有更多好看的源，可以点击我投稿&nbsp;📧</p>
-            <p href="mailto:yufeng1688778@163.com" target="_blank" style="color: #9900ff;">资源来源于网络,如有侵权请联系我们删除</p>
-        </h2><br>
+			<a href="https://yf2023.lanzouv.com/b00oc2zpch#520" target="_blank" <span style="color:#34cbf7;font-size:1.5em">👉盒</span>
+				<span style="color:#f2b3a1;font-size:3em">子</span>
+				<span style="color:#932723;font-size:2em">传</span>
+				<span style="color:#c1cc83;font-size:3.5em">送</span>
+				<span style="color:#9cb22;font-size:2.5em">门</span>&nbsp;👈
+			</a>
+			<br>
+			<h2>
+				<p href="mailto:yufeng1688778@163.com" target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;" rel="nofollow">如果您有更多好看的源，可以点击我投稿&nbsp;📧</p>
+				<p href="mailto:yufeng1688778@163.com" target="_blank" style="color: #9900ff;">资源来源于网络,如有侵权请联系我们删除</p>
+			</h2>
+			<br>
+			<!--音乐🎶-->
+			<audio id="bg-music" loop>
+				您的浏览器不支持 audio 标签。
+			</audio>
+			<div id="toggle-btn" class="circle-btn">
+				<div class="play-icon"></div>
+			</div>
+			<div id="status-message"></div>
+			<!--完-->
+			<div id="toggle-btn" class="circle-btn">
+				<div class="play-icon"></div>
+			</div>
+			<div id="status-message"></div>
 
-        <!--版权-->
 
-        <div class="footer">
-            <div class="center-footer">
-                <p align="center" class="banquan">鄂ICP备000000号 Copyright © 2022-至今 《风言锋语88》</p>
-            </div>
+			<!--版权-->
 
-            <div align="center">
-                本站已安全运行：<SPAN id=span_dt_dt style="color: #2F889A;"></SPAN>
-                <SCRIPT language=javascript>
-                    function show_date_time(){
-                    window.setTimeout("show_date_time()", 1000);
-                    BirthDay=new Date("11/11/2023 8:0:0");
-                    today=new Date();
-                    timeold=(today.getTime()-BirthDay.getTime());
-                    sectimeold=timeold/1000
-                    secondsold=Math.floor(sectimeold);
-                    msPerDay=24*60*60*1000
-                    e_daysold=timeold/msPerDay
-                    daysold=Math.floor(e_daysold);
-                    e_hrsold=(e_daysold-daysold)*24;
-                    hrsold=Math.floor(e_hrsold);
-                    e_minsold=(e_hrsold-hrsold)*60;
-                    minsold=Math.floor((e_hrsold-hrsold)*60);
-                    seconds=Math.floor((e_minsold-minsold)*60);
-                    span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
-                    }
-                    show_date_time();
-                </script>
-            </div>
-            <div align="center"">
-	       <a target=" _blank" href="https://mp.weixin.qq.com/s/zFyqLSwj5FXkMiupb5XdDQ" title="微信公众号：" alt="微信公众号：">微信公众号：<mark>风言锋语88</mark></a>
-            </div>
-        </div>
+			<div class="footer">
+				<div class="center-footer">
+					<p align="center" class="banquan">鄂ICP备000000号 Copyright © 2022-至今 《风言锋语88》</p>
+				</div>
 
-        <!-- 完-->
-        <strong><br></strong>
-    </center>
-    <!--音乐🎶-->
-    <audio id="bg-music" loop>
-        您的浏览器不支持 audio 标签。
-    </audio>
-    <div id="toggle-btn" class="circle-btn">
-        <div class="play-icon"></div>
-    </div>
-    <div id="status-message"></div>
-    <!--完-->
-    <div id="toggle-btn" class="circle-btn">
-        <div class="play-icon"></div>
-    </div>
-    <div id="status-message"></div>
-    <script>
-        var musicFiles = [
-        	    'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3',
-        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3',
-        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3',
-        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3',
-        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3',
-        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3',
-        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
-        ];
-        
-        var bgMusic = document.getElementById('bg-music');
-        var toggleBtn = document.getElementById('toggle-btn');
-        var statusMessage = document.getElementById('status-message');
-        var musicPlaying = false;
-        
-        function getRandomMusic() {
-            var randomIndex = Math.floor(Math.random() * musicFiles.length);
-            return musicFiles[randomIndex];
-        }
-        
-        function loadRandomMusic() {
-            var randomMusic = getRandomMusic();
-            bgMusic.src = randomMusic;
-            // 预加载音乐
-            bgMusic.load();
-        }
-        
-        function showStatus(message) {
-            statusMessage.innerText = message;
-            statusMessage.style.display = 'block';
-            setTimeout(() => {
-                statusMessage.style.display = 'none';
-            }, 2000); // 2秒后隐藏提示
-        }
-        
-        function toggleMusic() {
-            if (musicPlaying) {
-                bgMusic.pause();
-                toggleBtn.innerHTML = '<div class="play-icon"></div>';
-                showStatus('音乐已暂停');
-                musicPlaying = false;
-            } else {
-                bgMusic.play().then(() => {
-                    toggleBtn.innerHTML = '<div class="stop-icon"></div>';
-                    showStatus('正在为你播放音乐');
-                    musicPlaying = true;
-                }).catch((error) => {
-                    console.error('自动播放失败：', error);
-                    showStatus('播放失败，请重试');
-                });
-            }
-        }
-        
-        // 预加载音乐
-        loadRandomMusic();
-        
-        toggleBtn.addEventListener('click', toggleMusic);        
-    </script>
+				<div align="center">
+					本站已安全运行：<SPAN id=span_dt_dt style="color: #2F889A;"></SPAN>
+					<SCRIPT language=javascript>
+						function show_date_time(){
+						                    window.setTimeout("show_date_time()", 1000);
+						                    BirthDay=new Date("11/11/2023 8:0:0");
+						                    today=new Date();
+						                    timeold=(today.getTime()-BirthDay.getTime());
+						                    sectimeold=timeold/1000
+						                    secondsold=Math.floor(sectimeold);
+						                    msPerDay=24*60*60*1000
+						                    e_daysold=timeold/msPerDay
+						                    daysold=Math.floor(e_daysold);
+						                    e_hrsold=(e_daysold-daysold)*24;
+						                    hrsold=Math.floor(e_hrsold);
+						                    e_minsold=(e_hrsold-hrsold)*60;
+						                    minsold=Math.floor((e_hrsold-hrsold)*60);
+						                    seconds=Math.floor((e_minsold-minsold)*60);
+						                    span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
+						                    }
+						                    show_date_time();
+					</script>
+				</div>
+				<div align="center"">
+	       <a target=" _blank" href="https://mp.weixin.qq.com/s/zFyqLSwj5FXkMiupb5XdDQ" title="微信公众号：" alt="微信公众号：">微信公众号：<mark>风言锋语88</mark>
+					</a>
+				</div>
+			</div>
+			<!-- 完-->
+			<strong>
+				<br>
+			</strong>
+		</center>
 
-    <!--完-->
 
-    <!--在线播放器API-->
-    <!--备用 
+
+
+		<!--在线播放器API-->
+		<!--备用 
 肥猫的api
 <script src="https://myhkw.cn/api/player/167013822195" id="myhk" key="167013822195" m="1"></script>
 
 //自己的api,https://myhkw.cn/
 <script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script>  -->
 
-    <!--雪花API,https://api.vvhan.com/-->
-    <script src='https://api.vvhan.com/api/script/yinghua'></script>
-</body>
-<script>
-    function Toast(msg, duration) {
-      duration = isNaN(duration) ? 3000 : duration;
-      var m = document.createElement('div');
-      m.innerHTML = msg;
-      m.style.cssText = "font-family:siyuan;max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 2%;left: 50%;transform: translate(-50%, -50%);z-index: 999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
-      document.body.appendChild(m);
-      setTimeout(function() {
-          var d = 0.5;
-          m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
-          m.style.opacity = '0';
-          setTimeout(function() {
-              document.body.removeChild(m)
-          }, d * 1000);
-      }, duration);
-    }
-    const list = [
-    
-    
-        {
-            "url": "https://a.yf1688.top/22",
-            "name": "🏰小鱼多仓",
-            "color": "#48c0a4"
-        },	
-        {
-            "url": "http://tv.nxog.top/api.php?mz=xb&id=1&b=欧歌",
-            "name": "🏰欧歌多仓",
-            "color": "#48c0a4"
-        },	
-    	
-      {color:"#48c0a4",url:"https://www.gitlink.org.cn/api/leevi0321/apps/raw/room.json?ref=main",name:"🏰多多多仓"},
-     
-      {color:"#48c0a4",url:"http://小鱼干.摸鱼儿.top",name:"🏰摸鱼多仓"},
-      
-      {color:"#48c0a4",url:"http://xhztv.top/tvbox.txt",name:"🏰小蚂蚁多仓"},
-      
-      
-      
-      
-      {color:"#808000",url:"",name:"🌸以下是单仓"},
-    
-        {
-            "url": "https://yf1688.top/tv/99.json",
-            "name": "🚀小鱼线路",
-            "color": "#91ad70"
-        },
-        {
-            "url": "http://www.饭太硬.com/tv",
-            "name": "🚀饭太硬线路",
-            "color": "#91ad70"
-        },
-        {
-            "url": "http://肥猫.com",
-            "name": "🚀肥猫线路",
-            "color": "#91ad70"
-        },		
-        {
-            "url": "http://我不是.摸鱼儿.com",
-            "name": "🚀摸鱼线路",
-            "color": "#91ad70"
-        },
-        
-        
-        
-        {
-            "url": "http://www.mpanso.com/小米/DEMO.json",
-            "name": "🛳小米线路",
-            "color": "#91ad70"
-        },      
-        {
-            "url": "http://tvbox.王二小放牛娃.top",
-            "name": "🛳放牛线路",
-            "color": "#91ad70"
-        },    
-        {
-            "url": "https://tv.nxog.top/m/",
-            "name": "🛳欧歌线路",
-            "color": "#91ad70"
-        },
-        {
-            "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
-            "name": "🛳潇洒线路",
-            "color": "#91ad70"
-        },
-        {
-            "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
-            "name": "🛳南风线路",
-            "color": "#91ad70"
-        },
-      
-          
-        
-    	{
-            "url": "http://ttkx.cc:55/天天开心",
-            "name": "🚗天天开心",
-            "color": "#91ad70"
-        },        
-        {
-            "url": "http://rihou.cc:88/荷城茶秀",
-            "name": "🚗荷城茶秀",
-            "color": "#91ad70"
-        },    
-        {
-            "url": "http://ok321.top/tv",
-            "name": "🚗OK线路",
-            "color": "#91ad70"
-        },        
-        {
-            "url": "https://gh.yf1688.top/raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
-            "name": "🚗香雅情线路",
-            "color": "#91ad70"
-        },  
-        {
-            "url": "http://52pan.top:81/api/v3/file/get/174964/吾爱评测.m3u?sign=rPssLoffquDXszCARt6UNF8MobSa1FA27XomzOluJBY=:0",
-            "name": "🚗吾爱线路",
-            "color": "#91ad70"
-        },
-        
-        
-        
-        {
-            "url": "https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-            "name": "🛵高天流云",
-            "color": "#91ad70"
-        },
-        {
-            "url": "https://gitee.com/kevinr/tvbox/raw/master/soeasy/config.json",
-            "name": "🛵SoEasy线路",
-            "color": "#91ad70"
-        },
-        {
-            "url": "https://yydf.540734621.xyz/QQ/yydf2024.json",
-            "name": "🛵业余线路",
-            "color": "#91ad70"
-        },
-        {
-            "url": "http://cdn.qiaoji8.com/tvbox.json",
-            "name": "🛵巧计线路",
-            "color": "#91ad70"
-        },
-        {
-            "url": "https://cdn05042023.gitlink.org.cn/wykj/ys/raw/branch/master/ya.json",
-            "name": "🛵无意线路",
-            "color": "#91ad70"
-        },	
-    
-        
-      
-      {color:"#7398Ab",url:"https://gitlab.com/duomv/dzhipy/-/raw/main/index.json",name:"🌹ZY-Player源"},  
-      
-      {color:"#7398Ab",url:"",name:"🌺以下是uz影视源"},
-      
-      {color:"#7398Ab",url:"https://gh.yf1688.top/raw.githubusercontents.com/Yswag/uzVideo/main/js/spider_sources.json",name:"🐯大佬扩展源"},
-      
-      {color:"#7398Ab",url:"https://raw.githubusercontents.com/YYDS678/uzVideo/refs/heads/main/video_sources_default.json",name:"🐝采集源"},
-      
-      {color:"#7398Ab",url:"https://raw.gitmirror.com/YYDS678/uzVideo/refs/heads/main/video_sources_sese.json",name:"🐝sese源"}
-      
-    ];
-    $("#ul").html(()=>{
-      let html = "";
-      list.forEach(function (v) {
-        // html+="<li style='background:"+v.color+"'>"+v.name+"<br/>"+v.color+"</li>";
-        html+="<li style='background:"+v.color+"' onclick='copy(this)'><input type=\"hidden\" value='"+v.url+"'>"+v.name+"<br/>"+"<span>"+v.url+"</span>"+"</li>";
-      });
-      return html;
-    });
-    //复制到剪切板 函数
-    function copy(that){
-      $(that).children("input").attr("type","text").select();
-      document.execCommand("Copy"); // 执行浏览器复制命令
-      $(that).children("input").attr("type","hidden");
-      Toast("小鱼提醒：复制成功，请前往tvbox接口粘贴食用",500);
-    }
-</script>
+		<!--雪花API,https://api.vvhan.com/-->
+		<script src='https://api.vvhan.com/api/script/yinghua'></script>
+	</body>
+	<script>
+		function Toast(msg, duration) {
+		      duration = isNaN(duration) ? 3000 : duration;
+		      var m = document.createElement('div');
+		      m.innerHTML = msg;
+		      m.style.cssText = "font-family:siyuan;max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 2%;left: 50%;transform: translate(-50%, -50%);z-index: 999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+		      document.body.appendChild(m);
+		      setTimeout(function() {
+		          var d = 0.5;
+		          m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+		          m.style.opacity = '0';
+		          setTimeout(function() {
+		              document.body.removeChild(m)
+		          }, d * 1000);
+		      }, duration);
+		    }
+		    const list = [
+		    
+		    
+		        {
+		            "url": "https://a.yf1688.top/22",
+		            "name": "🏰小鱼多仓",
+		            "color": "#48c0a4"
+		        },	
+		        {
+		            "url": "http://tv.nxog.top/api.php?mz=xb&id=1&b=欧歌",
+		            "name": "🏰欧歌多仓",
+		            "color": "#48c0a4"
+		        },	
+		    	
+		      {color:"#48c0a4",url:"https://www.gitlink.org.cn/api/leevi0321/apps/raw/room.json?ref=main",name:"🏰多多多仓"},
+		     
+		      {color:"#48c0a4",url:"http://小鱼干.摸鱼儿.top",name:"🏰摸鱼多仓"},
+		      
+		      {color:"#48c0a4",url:"http://xhztv.top/tvbox.txt",name:"🏰小蚂蚁多仓"},
+		      
+		      
+		      
+		      
+		      {color:"#808000",url:"",name:"🌸以下是单仓"},
+		    
+		        {
+		            "url": "https://yf1688.top/tv/99.json",
+		            "name": "🚀小鱼线路",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "http://www.饭太硬.com/tv",
+		            "name": "🚀饭太硬线路",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "http://肥猫.com",
+		            "name": "🚀肥猫线路",
+		            "color": "#91ad70"
+		        },		
+		        {
+		            "url": "http://我不是.摸鱼儿.com",
+		            "name": "🚀摸鱼线路",
+		            "color": "#91ad70"
+		        },
+		        
+		        
+		        
+		        {
+		            "url": "http://www.mpanso.com/小米/DEMO.json",
+		            "name": "🛳小米线路",
+		            "color": "#91ad70"
+		        },      
+		        {
+		            "url": "http://tvbox.王二小放牛娃.top",
+		            "name": "🛳放牛线路",
+		            "color": "#91ad70"
+		        },    
+		        {
+		            "url": "https://tv.nxog.top/m/",
+		            "name": "🛳欧歌线路",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
+		            "name": "🛳潇洒线路",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+		            "name": "🛳南风线路",
+		            "color": "#91ad70"
+		        },
+		      
+		          
+		        
+		    	{
+		            "url": "http://ttkx.cc:55/天天开心",
+		            "name": "🚗天天开心",
+		            "color": "#91ad70"
+		        },        
+		        {
+		            "url": "http://rihou.cc:88/荷城茶秀",
+		            "name": "🚗荷城茶秀",
+		            "color": "#91ad70"
+		        },    
+		        {
+		            "url": "http://ok321.top/tv",
+		            "name": "🚗OK线路",
+		            "color": "#91ad70"
+		        },        
+		        {
+		            "url": "https://gh.yf1688.top/raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+		            "name": "🚗香雅情线路",
+		            "color": "#91ad70"
+		        },  
+		        {
+		            "url": "http://52pan.top:81/api/v3/file/get/174964/吾爱评测.m3u?sign=rPssLoffquDXszCARt6UNF8MobSa1FA27XomzOluJBY=:0",
+		            "name": "🚗吾爱线路",
+		            "color": "#91ad70"
+		        },
+		        
+		        
+		        
+		        {
+		            "url": "https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+		            "name": "🛵高天流云",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "https://gitee.com/kevinr/tvbox/raw/master/soeasy/config.json",
+		            "name": "🛵SoEasy线路",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "https://yydf.540734621.xyz/QQ/yydf2024.json",
+		            "name": "🛵业余线路",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "http://cdn.qiaoji8.com/tvbox.json",
+		            "name": "🛵巧计线路",
+		            "color": "#91ad70"
+		        },
+		        {
+		            "url": "https://cdn05042023.gitlink.org.cn/wykj/ys/raw/branch/master/ya.json",
+		            "name": "🛵无意线路",
+		            "color": "#91ad70"
+		        },	
+		    
+		        
+		      
+		      {color:"#7398Ab",url:"https://gitlab.com/duomv/dzhipy/-/raw/main/index.json",name:"🌹ZY-Player源"},  
+		      
+		      {color:"#7398Ab",url:"",name:"🌺以下是uz影视源"},
+		      
+		      {color:"#7398Ab",url:"https://gh.yf1688.top/raw.githubusercontents.com/Yswag/uzVideo/main/js/spider_sources.json",name:"🐯大佬扩展源"},
+		      
+		      {color:"#7398Ab",url:"https://raw.githubusercontents.com/YYDS678/uzVideo/refs/heads/main/video_sources_default.json",name:"🐝采集源"},
+		      
+		      {color:"#7398Ab",url:"https://raw.gitmirror.com/YYDS678/uzVideo/refs/heads/main/video_sources_sese.json",name:"🐝sese源"}
+		      
+		    ];
+		    $("#ul").html(()=>{
+		      let html = "";
+		      list.forEach(function (v) {
+		        // html+="<li style='background:"+v.color+"'>"+v.name+"<br/>"+v.color+"</li>";
+		        html+="<li style='background:"+v.color+"' onclick='copy(this)'><input type=\"hidden\" value='"+v.url+"'>"+v.name+"<br/>"+"<span>"+v.url+"</span>"+"</li>";
+		      });
+		      return html;
+		    });
+		    //复制到剪切板 函数
+		    function copy(that){
+		      $(that).children("input").attr("type","text").select();
+		      document.execCommand("Copy"); // 执行浏览器复制命令
+		      $(that).children("input").attr("type","hidden");
+		      Toast("小鱼提醒：复制成功，请前往tvbox接口粘贴食用",500);
+		    }
+	</script>
+	<script>
+		var musicFiles = [
+		        	    'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3',
+		        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3',
+		            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',
+		            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3',
+		        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3',
+		        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3',
+		        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3',
+		        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3',
+		        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
+		        ];
+		        
+		        var bgMusic = document.getElementById('bg-music');
+		        var toggleBtn = document.getElementById('toggle-btn');
+		        var statusMessage = document.getElementById('status-message');
+		        var musicPlaying = false;
+		        
+		        function getRandomMusic() {
+		            var randomIndex = Math.floor(Math.random() * musicFiles.length);
+		            return musicFiles[randomIndex];
+		        }
+		        
+		        function loadRandomMusic() {
+		            var randomMusic = getRandomMusic();
+		            bgMusic.src = randomMusic;
+		            // 预加载音乐
+		            bgMusic.load();
+		        }
+		        
+		        function showStatus(message) {
+		            statusMessage.innerText = message;
+		            statusMessage.style.display = 'block';
+		            setTimeout(() => {
+		                statusMessage.style.display = 'none';
+		            }, 2000); // 2秒后隐藏提示
+		        }
+		        
+		        function toggleMusic() {
+		            if (musicPlaying) {
+		                bgMusic.pause();
+		                toggleBtn.innerHTML = '<div class="play-icon"></div>';
+		                showStatus('音乐已暂停');
+		                musicPlaying = false;
+		            } else {
+		                bgMusic.play().then(() => {
+		                    toggleBtn.innerHTML = '<div class="stop-icon"></div>';
+		                    showStatus('正在为你播放音乐');
+		                    musicPlaying = true;
+		                }).catch((error) => {
+		                    console.error('自动播放失败：', error);
+		                    showStatus('播放失败，请重试');
+		                });
+		            }
+		        }
+		        
+		        // 预加载音乐
+		        loadRandomMusic();
+		        
+		        toggleBtn.addEventListener('click', toggleMusic);
+	</script>
 
 </html>
