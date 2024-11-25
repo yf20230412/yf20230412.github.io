@@ -125,7 +125,6 @@
           animation: gradientAnimation 3s infinite alternate;
         }
     </style>
-
     <!--播放音乐按钮样式 -->
     <style>
         /* 样式化按钮 */
@@ -272,6 +271,7 @@
         <!-- 完-->
         <strong><br></strong>
     </center>
+    <!--音乐🎶-->
     <audio id="bg-music" loop>
         您的浏览器不支持 audio 标签。
     </audio>
@@ -279,18 +279,23 @@
         <div class="play-icon"></div>
     </div>
     <div id="status-message"></div>
+    <!--完-->
+    <div id="toggle-btn" class="circle-btn">
+        <div class="play-icon"></div>
+    </div>
+    <div id="status-message"></div>
     <script>
         var musicFiles = [
-	    'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3'
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',            
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3'
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
-    ];
+        	    'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3',
+        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3',
+            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',
+            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3',
+        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3',
+        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3',
+        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3',
+        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3',
+        		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
+        ];
         
         var bgMusic = document.getElementById('bg-music');
         var toggleBtn = document.getElementById('toggle-btn');
@@ -338,7 +343,7 @@
         // 预加载音乐
         loadRandomMusic();
         
-        toggleBtn.addEventListener('click', toggleMusic);
+        toggleBtn.addEventListener('click', toggleMusic);        
     </script>
 
     <!--完-->
