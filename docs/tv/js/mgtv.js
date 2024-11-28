@@ -23,23 +23,21 @@ var rule = {
     play_parse:true,
     // 手动调用解析请求json的url,此lazy不方便
     // lazy:'js:print(input);fetch_params.headers["user-agent"]=MOBILE_UA;let html=request(input);let rurl=html.match(/window\\.open\\(\'(.*?)\',/)[1];rurl=urlDeal(rurl);input={parse:1,url:rurl};',
+     /*
+    //指定解析
+    lazy: 'js:input="https://jxjson.icu/neibu.php?url="+input.split("?")[0];log(input);let html=JSON.parse(request(input));log(html);input=html.url||input',
+    */
     // 推荐:'.list_item;img&&alt;img&&src;a&&Text;a&&data-float',
+   
+    //调用url链接解析
     lazy: `js:
-    let Fyjx = JSON.parse(request('http://www.mpanso.com/ceshi/titi.json')).parses[0].url;
-
-    // 定义需要屏蔽的字段
-    const blockedField = 'http://154.12.28.5:5244';
+    let Fyjx = JSON.parse(request('https://raw.gitcode.com/yf1688/api/raw/main/titi.json')).parses[0].url;
 
     let response = JSON.parse(request(Fyjx + input, {
         headers: {
             'User-Agent': 'Dalvik/2.1.0(Linux;U;Android10;PDHM00Build/QKQ1.191222.002)'
         }
     }));
-
-    // 检查返回的 URL 是否包含屏蔽字段
-    if (response.url.includes(blockedField)) {
-        throw new Error('该链接已被屏蔽');
-    }
 
     input = {
         jx: 0,

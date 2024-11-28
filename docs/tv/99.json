@@ -267,17 +267,6 @@
       "timeout":25	
     },
     {
-      "key": "凡人影视",
-      "name": "🦸‍♂️┃凡人┃影视💯",
-      "type": 3,
-      "api": "csp_AppFr",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "timeout":25
-    },
-    {
       "key": "耐看影视",
       "name": "🦚┃耐看┃影视💯",
       "type": 3,
@@ -357,19 +346,6 @@
       "filterable": 1,
       "ext": "caHR0cDovLzE1NC4zNy4yMjAuMTc6NjYyMnw1ODliMTkwNmI5NWY3MTljfDU4OWIxOTA2Yjk1ZjcxOWM"
     },
-    {
-      "key": "看看",
-      "name": "👁‍🗨┃看看┃影视💯",
-      "type": 3,
-      "api": "csp_Xdai",
-      "playerType": 2,
-      "jar":"https://raw.gitcode.com/yf1688/api/raw/main/jar/lh.txt",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "caHR0cDovLzExMS4xNzMuMTA2LjIxOTo4ODUwfDlhOTI0Y2JmMzk2Y2Y1ZTd8OWE5MjRjYmYzOTZjZjVlNw"
-    },    
     {
       "key": "雷电",
       "name": "⚡️┃雷电┃影视💯",
@@ -852,7 +828,7 @@
 
 {"name":"1080解析","type":1,"url":"http://117.50.183.202:8036/?ip=111.55.12.236&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"zhuimi解析","type":1,"url":"http://110.40.61.139:4655/zhuimi666.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}}
+{"name":"zhuimi解析","type":1,"url":"https://jx.xiaofengtv.com/jx.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}}
 
 ],
 
