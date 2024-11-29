@@ -278,18 +278,6 @@
       "timeout":25
     },    
     {
-      "key": "兄弟影视",
-      "name": "👬┃兄弟┃影视💯",
-      "type": 3,
-      "api": "csp_AppGetApp",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "KhYl01Kekjo9vLs09V+rOtv/6QaOFwdQp2ne4h22GLkT99eCXh9SJ/lGZNM8zgk1OnFWx0zBQ9Y/9mAjQB67LaEp7Yj7w9SYBEjFbdPjKy3EHp7uBIHXVI7/dZ4r/dJapz6ihlWwqY2KlGuarL/+9suxO4ZJFOg1OxN+dTrTbi2Muff1CmBkNfrY+s4eQhuLBs4vVhslYH/yyPXePZ1AgNT8ZuBCcfE2LpJ19OKKPIvs+pt4Z/yzVA==",
-      "timeout":25
-    },    
-    {
       "key": "真心影视",
       "name": "❤️‍🔥┃真心┃影视💯",
       "type": 3,
@@ -332,58 +320,6 @@
       "changeable": 1,
       "filterable": 1,
       "timeout":25
-    },
-    {
-      "key": "凯旋",
-      "name": "🎯┃凯旋┃影视💯",
-      "type": 3,
-      "api": "csp_Xdai",
-      "playerType": 1,
-      "jar":"https://raw.gitcode.com/yf1688/api/raw/main/jar/lh.txt",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "caHR0cDovLzE1NC4zNy4yMjAuMTc6NjYyMnw1ODliMTkwNmI5NWY3MTljfDU4OWIxOTA2Yjk1ZjcxOWM"
-    },
-    {
-      "key": "雷电",
-      "name": "⚡️┃雷电┃影视💯",
-      "type": 3,
-      "api": "csp_Slys",
-      "playerType": 1,
-      "jar":"https://raw.gitcode.com/yf1688/api/raw/main/jar/lh.txt",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "caHR0cDovLzEyMC4yMjQuNy45MDo4MDg="
-    },
-    {
-      "key": "优质",
-      "name": "🥇┃优质┃影视💯",
-      "type": 3,
-      "api": "csp_Xdai",
-      "playerType": 1,
-      "jar":"https://raw.gitcode.com/yf1688/api/raw/main/jar/lh.txt",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "jaHR0cHM6Ly9hcGlhcHBkeXl6dHZ5eWRzcXdkeS42OC5neTo1Njg5fGR5eXp0dmFwaWFwcHl5ZHN8ZHl5enR2YXBpYXBweXlkcw"
-    },
-    {
-      "key": "太平",
-      "name": "🌐┃太平┃影视💯",
-      "type": 3,
-      "api": "csp_Xdai",
-      "playerType": 1,
-      "jar":"https://raw.gitcode.com/yf1688/api/raw/main/jar/lh.txt",
-      "quickSearch":1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "caHR0cDovLzExMS4xODAuMTk4LjQwOjExMTB8NTU5MmViZWNmY2U3ODFiMXw1NTkyZWJlY2ZjZTc4MWIx"
     },
     {
       "key": "csp_可可影视",
