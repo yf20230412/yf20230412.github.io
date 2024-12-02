@@ -244,7 +244,7 @@ var rule = {
                 vod_pic: 'https://a.yf1688.top/img/怦然心动.jpg',
                 vod_remarks: `版本:${rule.version}`,
                 vod_play_from: '小鱼在线',
-                vod_play_url: '嗅探播放$https://a.yf1688.top/videos/SNH48MV.mp4',
+                vod_play_url: '嗅探播放$https://raw.gitcode.com/yf1688/api/raw/main/videos/SNH48MV.mp4',
               //  vod_play_url: '随机小视频$http://api.yujn.cn/api/zzxjj.php',
             };
         } else {

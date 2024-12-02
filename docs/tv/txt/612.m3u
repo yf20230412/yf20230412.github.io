@@ -1,11 +1,11 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
 
 #EXTINF:-1  tvg-logo="https://epg.iill.top/logo/温馨提示.png" group-title="🕺｜温馨提示‍" ,🥇精选电视直播源
-https://a.yf1688.top/videos/美女舞蹈.mp4
+https://raw.gitcode.com/yf1688/api/raw/main/videos/美女舞蹈.mp4
 #EXTINF:-1  tvg-logo="https://epg.iill.top/logo/温馨提示.png" group-title="🕺｜温馨提示‍" ,🌺公众号:风言锋语88
-https://a.yf1688.top/videos/海边日落晚霞.mp4
+https://raw.gitcode.com/yf1688/api/raw/main/videos/海边日落晚霞.mp4
 #EXTINF:-1  tvg-logo="https://epg.iill.top/logo/温馨提示.png" group-title="🕺｜温馨提示‍" ,🔥免费订阅
-https://a.yf1688.top/videos/刘婉儿.mp4
+https://raw.gitcode.com/yf1688/api/raw/main/videos/刘婉儿.mp4
 
 
 
