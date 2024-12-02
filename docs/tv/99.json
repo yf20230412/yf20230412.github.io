@@ -106,6 +106,22 @@
       "timeout": 25
     },	
     {
+      "key": "csp_WoGG",
+      "name": "🤵‍♂️┃玩偶┃哥哥",
+      "type": 3,
+      "api": "csp_WoGG",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0,
+      "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
+      "ext": {
+          "Cloud-drive":"tvfan/Cloud-drive.txt",
+          "from": "4k|auto|fhd",
+          "siteUrl": "https://www.wogg.net/",
+          "danMu": "关"
+        }
+    },
+    {
       "key": "玩偶弹幕",
       "name": "🧸┃玩偶┃4K📀",
       "type": 3,
@@ -269,6 +285,19 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
+      "timeout":25
+    },
+    {
+      "key": "木星",
+      "name": "🎄┃木星┃多线",
+      "type": 3,
+      "api": "csp_AppSx",
+      "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
+      "quickSearch":1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "FbjDcUxPqpfNr0QF4QvE6sExbctTGI9OTT9b/fj1hQEfFo3ZpT7IjxyVo6ytU3boJSbS02op2WA9SGNlCJpscUJASIjSk1eTbWgFj3BY0O58XL66c3hoMFG1cCcjgoux+ibEY4c2WZ85pgVQ9BW3RV1NZ7a2+xJHJdcafyUM",
       "timeout":25
     },
     {

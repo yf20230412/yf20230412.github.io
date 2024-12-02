@@ -194,7 +194,7 @@ var rule = {
             vod_name: '更新日志',
             vod_id: 'update_info',
             vod_remarks: `版本:${rule.version}`,
-            vod_pic: 'https://a.yf1688.top/img/wxgzh2.png'
+            vod_pic: 'https://a.2015888.xyz/img/wxgzh2.png'
         }];
         VODS = [];
         if (rule.classes) {
@@ -241,7 +241,7 @@ var rule = {
                 vod_content: rule.update_info.trim(),
                 vod_name: '更新日志',
                 type_name: '更新日志',
-                vod_pic: 'https://a.yf1688.top/img/怦然心动.jpg',
+                vod_pic: 'https://a.2015888.xyz/img/怦然心动.jpg',
                 vod_remarks: `版本:${rule.version}`,
                 vod_play_from: '小鱼在线',
                 vod_play_url: '嗅探播放$https://raw.gitcode.com/yf1688/api/raw/main/videos/SNH48MV.mp4',
