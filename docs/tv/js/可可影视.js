@@ -1,7 +1,7 @@
 var rule = {
     title: '可可影视[优]',
-    // host: 'https://www.kkys02.com',
-    host: 'https://www.keke1.app',
+     host: 'https://www.kkys02.com',
+   // host: 'https://www.keke8.app',
     // url: '/show/fyclass-----2-fypage.html',
     url: '/show/fyclass-fyfilter-fypage.html',
     filter_url: '{{fl.类型}}-{{fl.地区}}-{{fl.语言}}-{{fl.年份}}-{{fl.排序}}',
@@ -22,10 +22,10 @@ var rule = {
     limit: 20,
     推荐: '.section-box:eq(2)&&.module-box-inner&&.module-item;*;*;*;*',
     double: false,
-    一级: '.module-box-inner&&.module-item;.v-item-title:eq(1)&&Text;img:eq(1)&&data-original;.v-item-bottom&&span:eq(1)&&Text;a&&href',
+    一级: '.module-box-inner&&.module-item;.v-item-title:eq(1)&&Text;img:last-of-type&&data-original;.v-item-bottom&&span:eq(1)&&Text;a&&href',
     二级: {
-        title: '.detail-title&&strong:eq(1)&&Text;.detail-tags&&a:eq(-2)&&Text',
-        img: '.detail-pic&&img:eq(1)&&data-original',
+        title: '.detail-pic&&img&&alt;.detail-tags&&a&&Text',
+        img: '.detail-pic&&img&&data-original',
         desc: '.detail-info-row-main:eq(-2)&&Text;.detail-tags&&a&&Text;.detail-tags&&a:eq(1)&&Text;.detail-info-row-main:eq(1)&&Text;.detail-info-row-main&&Text',
         content: '.detail-desc&&Text',
         tabs: 'body&&#detail-source-swiper&&span:not(:matches(可可影视提供))',
