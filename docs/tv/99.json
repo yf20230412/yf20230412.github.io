@@ -266,16 +266,62 @@
       "timeout":25	
     },
     {
-      "key": "耐看影视",
-      "name": "🦚┃耐看┃影视💯",
+      "key": "皮皮虾",
+      "name": "🦐┃皮皮┃吃虾💯",
       "type": 3,
-      "api": "csp_WebNK",
-      "quickSearch":1,
+      "api": "csp_AppYsV2",
+      "quickSearch": 1,
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "timeout":25
-    },    
+      "ext": "http://38.55.250.149:1314/api.php/app/"
+    },
+    {
+      "key": "HG影视",
+      "name": "🤠┃HG｜APP💯",
+      "type": 3,
+      "api": "csp_AppYsV2",
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "https://cs.hgyx.vip/api2/api.php/app/"
+    },
+    {
+      "key": "酷影视",
+      "name": "🤹‍♂️┃酷影｜APP💯",
+      "type": 3,
+      "api": "csp_AppYsV2",
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "https://www.tvkuys.xyz/api.php/app/"
+    },
+    {
+      "key": "雨滴",
+      "name": "💦┃雨滴｜App💯",
+      "type": 3,
+      "api": "csp_Xdai",
+      "playerType": 1,
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "jaHR0cDovL2M4dzJvdjd1NXdnMnoxbzhwMjFjLmFsaXl1bmNzLmNsaWNrfGs5bzNwMmM4YjdtM3owbzh8azlvM3AyYzhiN20zejBvOHwxMDA="
+    },
+    {
+      "key": "优质",
+      "name": "🎖┃优质｜App💯",
+      "type": 3,
+      "api": "csp_Xdai",
+      "playerType": 1,
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "jaHR0cHM6Ly9hcGlhcHBkeXl6dHZ5eWRzcXdkeS42OC5neTo1Njg5fGR5eXp0dmFwaWFwcHl5ZHN8ZHl5enR2YXBpYXBweXlkc3wxMDA="
+    },
     {
       "key": "真心影视",
       "name": "❤️‍🔥┃真心┃影视💯",
@@ -297,7 +343,7 @@
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "ext": "FbjDcUxPqpfNr0QF4QvE6sExbctTGI9OTT9b/fj1hQEfFo3ZpT7IjxyVo6ytU3boJSbS02op2WA9SGNlCJpscUJASIjSk1eTbWgFj3BY0O58XL66c3hoMFG1cCcjgoux+ibEY4c2WZ85pgVQ9BW3RV1NZ7a2+xJHJdcafyUM",
+      "ext": "FbjPcVZY48PN/RIZ5QqOrspjLMNAA5xaRiBa8vT6iB4RAYHOp3SFmQTE9v/hX3nlPzHB3X051Sp3XDoyUIN9aRARCZzZk1aDbikK",
       "timeout":25
     },
     {
@@ -743,7 +789,7 @@
 
 {"name":"1080解析","type":1,"url":"https://www.mpanso.com/muou/qilin.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"zhuimi解析","type":1,"url":"https://jx.xiaofengtv.com/jx.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}}
+{"name":"皮皮虾","type":"1","url":"http://45.207.215.101:5423/index.php?url=","ext":{"flag":["PPXLG","皮皮虾4K"]}}
 
 ],
 
