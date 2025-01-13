@@ -1,5 +1,5 @@
 {
-	"classes": [{
+	"class": [{
 		"type_name": "7年级语文",
 		"type_id": "7年级语文"
 	}, {
@@ -57,7 +57,7 @@
 		"type_name": "9年级化学",
 		"type_id": "9年级化学"
 	} ],
-	"filter": {
+	"filters": {
 		"7年级语文": [{
 			"key": "tid",
 			"name": "分类",

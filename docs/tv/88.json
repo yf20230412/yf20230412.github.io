@@ -787,8 +787,10 @@
 {"key":"Aliso","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable": 1,"changeable": 0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable": 1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"cc","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1},
-{"key":"AD","name":"🚦请勿相信任何广告","type":3,"api":"csp_XBPQ","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1}
+
+{"key":"浪酷弹幕","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_TianTian","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":{"danmu":true,"site":"aHR0cDovL3YubGt1eXMuY24="}},
+
+{"key":"韩小圈","name":"🚦请勿相信任何广告","type":3,"api":"csp_HanXiaoQuan","quickSearch":0,"searchable": 0,"changeable": 0,"filterable":1}
   
 ],
 

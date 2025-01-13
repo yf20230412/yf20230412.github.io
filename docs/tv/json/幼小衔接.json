@@ -1,5 +1,5 @@
 ﻿{
-	"classes":[
+	"class":[
 		{"type_name":"拼音启蒙","type_id":"幼儿拼音全套学习课程"},
 		{"type_name":"识字启蒙","type_id":"识字启蒙"},
 		{"type_name":"英语启蒙","type_id":"英语启蒙"},
@@ -11,7 +11,7 @@
 		{"type_name":"看图说话","type_id":"看图说话"}
 		],
 
-	"filter":{
+	"filters":{
 		"识字启蒙":[
 			{"key":"tid","name":"分类","value":[
 				{"n":"全部","v":"识字启蒙"},

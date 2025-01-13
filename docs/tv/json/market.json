@@ -21,19 +21,19 @@
     "list": [
       {
         "name": "《小鱼影视》",
-        "url": "https://a.2015888.xyz/Release/apk/release/mobile-python-arm64_v8a.apk",
+        "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/mobile-python-arm64_v8a.apk",
         "icon": "https://a.2015888.xyz/img/小鱼.png",
         "version": "手机64位py版"
       },
       {
         "name": "《小鱼影视》",
-        "url": "https://a.2015888.xyz/Release/apk/release/leanback-python-armeabi_v7a.apk",
+        "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/leanback-python-armeabi_v7a.apk",
         "icon": "https://a.2015888.xyz/img/小鱼.png",
         "version": "TV32位py版"
       },	
       {
         "name": "《小鱼影视》",
-        "url": "https://a.2015888.xyz/Release/apk/kitkat/leanback.apk",
+        "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/kitkat/leanback.apk",
         "icon": "https://a.2015888.xyz/img/小鱼.png",
         "version": "TV安卓4x版"
       },		
