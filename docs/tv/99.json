@@ -140,7 +140,7 @@
     },    
     {
       "key": "木偶弹幕",
-      "name": "🤡┃木偶｜4K📀",
+      "name": "🤡┃木偶┃4K📀",
       "type": 3,
       "api": "csp_Wobg",
       "quickSearch":1,
@@ -273,7 +273,7 @@
     },
     {
       "key": "人人",
-      "name": "👬┃人人｜APP💯",
+      "name": "👬┃人人┃App💯",
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 1,
@@ -286,7 +286,7 @@
     },
     {
       "key": "HG影视",
-      "name": "🤠┃HG｜APP💯",
+      "name": "🤠┃HG┃App💯",
       "type": 3,
       "api": "csp_AppYsV2",
       "quickSearch": 1,
@@ -298,7 +298,7 @@
     },
     {
       "key": "酷影视",
-      "name": "🤹‍♂️┃酷影｜APP💯",
+      "name": "🤹‍♂️┃酷影┃App💯",
       "type": 3,
       "api": "csp_AppYsV2",
       "quickSearch": 1,
@@ -310,7 +310,7 @@
     },
     {
       "key": "雨滴",
-      "name": "💦┃雨滴｜App💯",
+      "name": "💦┃雨滴┃App💯",
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 1,
@@ -323,7 +323,7 @@
     },
     {
       "key": "优质",
-      "name": "🎖┃优质｜App💯",
+      "name": "🎖┃优质┃App💯",
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 1,
@@ -336,7 +336,7 @@
     },  
     {
       "key": "木头",
-      "name": "🪵┃木头｜App💯",
+      "name": "🪵┃木头┃App💯",
       "type": 3,
       "api": "csp_Shark",
       "playerType": 1,
@@ -349,7 +349,7 @@
     },
     {
       "key": "现代",
-      "name": "🏩┃现代｜App💯",
+      "name": "🏩┃现代┃App💯",
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 1,
@@ -359,6 +359,17 @@
       "filterable": 1,
       "ext": "caHR0cHM6Ly9hcHAuYnJvdm9kLmNvbXxzemRqd2RhcHB3Y25tZGhifHN6ZGp3ZGFwcHdjbm1kaGJ8MTE0",
       "timeout": 25
+    },
+    {
+      "key": "猫猫影视",
+      "name": "🐈┃猫猫┃App💯",
+      "type": 3,
+      "api": "csp_AppGetApp",
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": "w7TClcK8w5rDrcKYwoPCmcKkw57ClcK0wpvDosKnwqTCoGrCqMKiwqzCqsKrYWFgYcKnwqXCrcKwwqhlYmBqwrDCqsKywrHCqcKswp3CqcKjwqfDp8Oyw63CnF9SecKew6LDp8ORw6jDrMKXUmpSwpvCn8Kcw63Do8KjUmpSw5Tlh7jphaLmkJ7lkZ1f5Yac5L2H5ZCnwrPlv6ToqYDotr3mvIrnrIzCjVJcwpvCtMOfw6zDhcKYwqlSasKbwqTDsMOfw6DCpsKUwpHCo8Odw5TDrcOdw5vCpsKUYlLCpcKVwrvDnsOtfMKmUmrCm8Kkw7DDn8OgwqbClMKRwqPDncOUw63DncObwqbClGJSwqXClcONw6LDrsKYwoXCosKcwpvCrcKcwpvDtw=="
     },
     {
       "key": "真心影视",
@@ -484,7 +495,7 @@
       "type": 3,
       "api": "csp_Jianpian",
       "quickSearch":1,
-      "searchable": 1,
+      "searchable": 0,
       "changeable": 1,
       "filterable": 1,
       "ext": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/json/jp.json",
@@ -509,7 +520,7 @@
       "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
       "quickSearch":1,
       "searchable": 1,
-      "changeable": 0,
+      "changeable": 1,
       "filterable": 1,
       "ext": "./js/两个BT.js",
       "timeout":25
@@ -521,7 +532,7 @@
       "api": "csp_KubaCL",
       "quickSearch":1,
       "searchable": 1,
-      "changeable": 0,
+      "changeable": 1,
       "filterable": 1,
       "timeout":25
     },	
@@ -531,7 +542,7 @@
       "type": 3,
       "api": "csp_MeijuTT",
       "quickSearch":1,
-      "searchable": 0,
+      "searchable": 1,
       "changeable": 1,
       "filterable": 1,
       "timeout":25		
