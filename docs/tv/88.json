@@ -8,42 +8,77 @@
 
   "logo": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/img/588.gif",
 
-  "lives": [{
-    "name": "xiaoyu_live",
-    "type": 0,
-    "url": "./txt/612.m3u",
+"lives":[    
+{
+    "name": "肥羊_live",
+    "type": 3,
+    "api": "csp_Feiyang",
+    "url": "tv.m3u",
+    "timeout": 10,
+    "ua": "okhttp/3.15"
+},
+{
+    "name":"IPV4",
+    "type":0,
+    "url":"https://ghfast.top/raw.githubusercontent.com/MemoryCollection/IPTV/refs/heads/main/multicast.txt",
+    "playerType": 1,
+    "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+    "logo": "https://epg.iill.top/logo/{name}.png"
+},
+{
+    "name":"自建更新_live",
+    "type":0,
+    "url":"https://mirror.ghproxy.com/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u",
     "playerType":1,
     "ua":"okhttp/3.15",
     "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
-    "logo":"https://live.fanmingming.com/tv/{name}.png"
-  },
-  {
-    "name": "FMM_IPV6",
-    "type": 0,
-    "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+    "logo":"https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+},
+{
+    "name":"xiaoyu_live",
+    "type":0,
+    "url":"./txt/612.m3u",
     "playerType":1,
     "ua":"okhttp/3.15",
     "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
-    "logo":"https://live.fanmingming.com/tv/{name}.png"
-  },
-  {
-    "name":"Gather",
+    "logo":"https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+},
+{
+    "name":"范明明_IPV6",
+    "type":0,
+    "url":"https://gh.2015888.xyz/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+},
+{
+    "name":"Gather_live",
     "type":0,
     "url":"https://tv.iill.top/m3u/Gather",
     "playerType":1,
     "ua":"okhttp/3.15",
     "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
-    "logo":"https://live.fanmingming.com/tv/{name}.png"
-  },
-  {
-    "name": "818",
-    "type": 0,
-    "url": "https://yf1688.top/tv/txt/818.txt",
-    "playerType": 1,
-    "ua": "okhttp/3.15",
-    "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-    "logo": "https://epg.112114.xyz/logo/{name}.png"
-  },
+    "logo":"https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+},
+{
+    "name":"IPTV私人订制",
+    "type":0,
+    "url":"https://video.mytvsuper.xyz/playlist/zong-he-ding-yue.m3u?token=280035329847951",
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+},
+{
+    "name":"818",
+    "type":0,
+    "url":"https://yf1688.top/tv/txt/818.txt",
+    "playerType":1,
+    "ua":"okhttp/3.15",
+    "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+    "logo":"https://epg.112114.xyz/logo/{name}.png"
+},
 {
     "group": "redirect",
     "channels": [{
@@ -810,7 +845,7 @@
 
 {"name":"cool解析","type":1,"url":"https://jk.123zy.cool/jx/jx.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"钩子解析","type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
+{"name":"臻享解析","type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
 {"name":"100次解析","type":1,"url":"https://jxjson.icu/neibu.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
