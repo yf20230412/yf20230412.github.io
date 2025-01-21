@@ -179,10 +179,16 @@
     "name": "腾讯X5离线版",
     "list": [
       {
-        "name": "嗅探X5电视版",
-        "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/[x5.tbs.apk].txt",
+        "name": "X5电视版",
+        "url": "https://yf1688.top/X5离线版/32w/[x5.tbs.apk].txt",
         "icon": "https://a.2015888.xyz/img/555.jpg",
         "version": "Android9专用"
+      },
+      {
+        "name": "X5电视版",
+        "url": "https://yf1688.top/X5离线版/4x/[x5.tbs.apk].txt",
+        "icon": "https://a.2015888.xyz/img/555.jpg",
+        "version": "Android4.0专用"
       }
     ]
   }
