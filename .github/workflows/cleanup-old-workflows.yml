@@ -1,0 +1,14 @@
+name: Cleanup Old Workflow Runs
+   on:
+     schedule:
+       - cron: '0 0 * * *'  # 每天午夜执行
+     workflow_dispatch:  # 手动触发器
+   jobs:
+     cleanup:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Delete old workflow runs
+           uses: actions/delete-workflow-runs@v2
+           with:
+             retain-days: 3
+             token: ${{ secrets.GITHUB_TOKEN }}
