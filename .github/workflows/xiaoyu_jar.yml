@@ -1,15 +1,10 @@
 name: Update xiaoyu and fan jar
 
 on:
-       push:
-         branches:
-           - main
-       pull_request:
-         branches:
-           - main
-       issues:
-         types: [opened, closed]  # 直接监听GitLink发送的具体事件类型
-       workflow_dispatch:  # 手动触发器
+  repository_dispatch:
+    types:
+      - gitlink_push_event  # 自定义事件类型
+  workflow_dispatch:  # 手动触发器（可选）
 
 jobs:
   update-spider:
