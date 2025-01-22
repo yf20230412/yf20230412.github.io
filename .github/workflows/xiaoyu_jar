@@ -1,0 +1,44 @@
+name: Update xiaoyu_jar
+
+on:
+  #schedule:
+    #- cron: '0 0 * * *'
+  workflow_dispatch:  # 添加手动触发器
+
+jobs:
+  update-spider:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      # Step 3: Install necessary dependencies
+      - name: Install Dependencies
+        run: python -m pip install requests
+
+      # Step 4: Update Spider Field
+      - name: Update Spider Field
+        run: |
+          # Fetch existing data from the new URL
+          response=$(curl -s "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/xiaoyu.txt")
+          
+          # Ensure the 'jar' directory exists
+          mkdir -p ${{ github.workspace }}/jar
+          
+          # Save fetched data to a file
+          file="${{ github.workspace }}/jar/xiaoyu.txt"
+          echo "$response" > "$file"
+          
+          # 文件夹ID
+          id=396663
+          
+          # Use KSTORE_TOKEN from GitHub Secrets
+          curl -X POST "https://upload.kstore.space/upload/$id?access_token=${{ secrets.KSTORE_TOKEN }}" -F "file=@$file"
