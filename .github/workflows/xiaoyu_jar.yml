@@ -2,7 +2,7 @@ name: Update xiaoyu and fan jar
 
 on:
   repository_dispatch:
-    types: [gitlink_push_event]  # 自定义事件类型
+    types: [gitlink_all_event]  # 自定义事件类型
   workflow_dispatch:  # 手动触发器
 
 jobs:
