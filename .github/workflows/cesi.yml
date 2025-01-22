@@ -41,13 +41,4 @@ jobs:
           curl -X POST "https://upload.kstore.space/upload/$id?access_token=${{ secrets.KSTORE_TOKEN }}" -F "file=@$file"
 
       # 第 5 步：更新 fan spider 字段
-      - name: Update Fan Spider Field
-        run: |
-          # 从 GitLink 获取现有数据
-          response=$(curl -s "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt")
-          file="${{ github.workspace }}/jar/fan.txt"
-          echo "$response" > "$file"
-          
-          # 上传到 KStore
-          id=396663
-          curl -X POST "https://upload.kstore.space/upload/$id?access_token=${{ secrets.KSTORE_TOKEN }}" -F "file=@$file"
+      
