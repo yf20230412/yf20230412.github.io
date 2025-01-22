@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON格式化缩进</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 200px;
+            font-family: monospace;
+        }
+        #inputText {
+            background-color: #f9f9f9; /* 输入框背景颜色 */
+        }
+        #outputText {
+            background-color: #e9e9e9; /* 输出框背景颜色 */
+            color: green; /* 输入框文字颜色 */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .controls {
+            margin-bottom: 10px;
+        }
+        .controls button {
+            background-color: green; /* 按钮背景颜色 */
+            color: white; /* 按钮文字颜色 */
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .controls button:hover {
+            background-color: darkgreen; /* 按钮悬停颜色 */
+        }
+        .output {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .highlight-error {
+            background-color: #ffcccc; /* 错误位置标红 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JSON格式化缩进</h1>
+        <div class="controls">
+            <label for="indent">选择缩进空格数：</label>
+            <select id="indent">
+                <option value="2">2个空格</option>
+                <option value="4">4个空格</option>
+                <option value="6">6个空格</option>
+                <option value="8">8个空格</option>
+            </select>
+            <button onclick="formatText()">格式化</button>
+            <button onclick="compressText()">普通压缩</button>
+            <button onclick="copyOutput()">复制</button>
+            <button onclick="clearInput()">清空</button>
+        </div>
+        <textarea id="inputText" placeholder="在此输入要格式化 或 需要压缩的JSON代码..."></textarea>
+        <div class="output">
+            <h2>格式化结果：</h2>
+            <textarea id="outputText" readonly placeholder="格式化 或 压缩后的内容将显示在这里..."></textarea>
+        </div>
+        <div id="errorMessage" class="error"></div>
+    </div>
+
+    <script>
+        function formatText() {
+            const inputText = document.getElementById('inputText').value;
+            const indentSize = parseInt(document.getElementById('indent').value, 10);
+            const errorMessage = document.getElementById('errorMessage');
+
+            try {
+                // 解析输入的 JSON 字符串
+                const parsedJson = JSON.parse(inputText);
+                // 格式化 JSON 字符串
+                const formattedJson = JSON.stringify(parsedJson, null, indentSize);
+                // 将格式化后的 JSON 显示在输出框中
+                document.getElementById('outputText').value = formattedJson;
+                errorMessage.textContent = ''; // 清空错误信息
+                clearErrorHighlight(); // 清除错误标红
+            } catch (error) {
+                showError(error, inputText); // 显示错误信息并标红
+            }
+        }
+
+        function compressText() {
+            const inputText = document.getElementById('inputText').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            try {
+                // 解析输入的 JSON 字符串
+                const parsedJson = JSON.parse(inputText);
+                // 压缩 JSON 字符串
+                const compressedJson = JSON.stringify(parsedJson);
+                // 将压缩后的 JSON 显示在输出框中
+                document.getElementById('outputText').value = compressedJson;
+                errorMessage.textContent = ''; // 清空错误信息
+                clearErrorHighlight(); // 清除错误标红
+            } catch (error) {
+                showError(error, inputText); // 显示错误信息并标红
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            document.getElementById('errorMessage').textContent = '';
+            clearErrorHighlight(); // 清除错误标红
+        }
+
+        function copyOutput() {
+            const outputText = document.getElementById('outputText');
+            outputText.select();
+            document.execCommand('copy');
+            alert('已复制到剪切板！');
+        }
+
+        function showError(error, inputText) {
+            const errorMessage = document.getElementById('errorMessage');
+            const inputElement = document.getElementById('inputText');
+
+            // 显示错误信息
+            errorMessage.textContent = `错误：${error.message}`;
+
+            // 标红错误位置
+            const errorPosition = extractErrorPosition(error.message);
+            if (errorPosition !== null) {
+                highlightError(inputElement, errorPosition);
+            } else {
+                clearErrorHighlight();
+            }
+
+            // 清空输出框
+            document.getElementById('outputText').value = '';
+        }
+
+        function extractErrorPosition(errorMessage) {
+            // 从错误信息中提取位置
+            const match = errorMessage.match(/position (\d+)/);
+            if (match && match[1]) {
+                return parseInt(match[1], 10);
+            }
+            return null;
+        }
+
+        function highlightError(inputElement, position) {
+            const text = inputElement.value;
+            const beforeError = text.slice(0, position);
+            const errorChar = text.slice(position, position + 1);
+            const afterError = text.slice(position + 1);
+
+            // 在错误字符前后插入高亮标记
+            inputElement.innerHTML = `${beforeError}<span class="highlight-error">${errorChar}</span>${afterError}`;
+        }
+
+        function clearErrorHighlight() {
+            const inputElement = document.getElementById('inputText');
+            inputElement.innerHTML = inputElement.value; // 清除高亮标记
+        }
+    </script>
+</body>
+</html>
