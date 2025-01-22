@@ -1,18 +1,21 @@
 name: Update xiaoyu and fan jar
 
 on:
-  repository_dispatch:
-    types: [gitlink_all_event]  # 自定义事件类型
-  workflow_dispatch:  # 手动触发器
+       push:
+         branches:
+           - main
+       pull_request:
+         branches:
+           - main
+       issues:
+         types: [opened, closed]
+       workflow_dispatch:  # 手动触发器
 
 jobs:
   update-spider:
     runs-on: ubuntu-latest
 
     steps:
-
-      - name: Print Event Payload
-        run: echo "${{ toJson(github.event) }}"
         
       # 第 1 步：检查仓库
       - name: Checkout repository
