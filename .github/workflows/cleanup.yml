@@ -23,28 +23,18 @@ jobs:
       - name: Install dependencies
         run: npm install @octokit/rest
 
-      - name: Delete old workflow runs
+      - name: Delete all workflow runs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           #!/bin/bash
           set -e
 
-          # 定义保留天数，超过这个天数的记录将会被删除
-          RETENTION_DAYS=2
-
-          # 获取当前时间戳
-          NOW=$(date +%s)
-
-          # 计算需要删除的时间戳界限
-          CUTOFF=$((NOW - RETENTION_DAYS * 86400))
-
-          # 使用Octokit库与GitHub API交互
           node <<EOF
             const { Octokit } = require("@octokit/rest");
             const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
-            async function deleteOldRuns() {
+            async function deleteAllRuns() {
               try {
                 let page = 1;
                 while (true) {
@@ -58,22 +48,18 @@ jobs:
                   if (response.data.workflow_runs.length === 0) break;
 
                   for (const run of response.data.workflow_runs) {
-                    // 将run.created_at从ISO 8601格式转换为Unix时间戳
-                    const created = Date.parse(run.created_at) / 1000;
-                    if (created < ${CUTOFF}) {
-                      console.log(`Deleting run ID ${run.id} created at ${new Date(created * 1000).toISOString()}`);
-                      await octokit.actions.deleteWorkflowRun({
-                        owner: context.repo.owner,
-                        repo: context.repo.repo,
-                        run_id: run.id
-                      });
-                    }
+                    console.log(`Deleting run ID ${run.id}`);
+                    await octokit.actions.deleteWorkflowRun({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      run_id: run.id
+                    });
                   }
                 }
               } catch (error) {
-                console.error(error);
+                console.error("Error deleting workflow runs:", error);
               }
             }
 
-            deleteOldRuns();
+            deleteAllRuns();
           EOF
