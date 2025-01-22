@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - main
+  issues:
+    types: [opened, closed]  # 直接监听GitLink发送的具体事件类型
+  workflow_dispatch:  # 手动触发器
 
 jobs:
   update-spider:
