@@ -9,10 +9,22 @@
         "version": ""
       },
       {
-        "name": "网盘配置文件",
+        "name": "网盘本地配置",
         "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/tvfan.zip",
         "icon": "https://a.2015888.xyz/img/555.jpg",
         "version": "阿里_夸克_uc"
+      },
+      {
+        "name": "Allinone_32",
+        "url": "http://www.2015888.xyz/allinone/allinone_32.zip",
+        "icon": "",
+        "version": "TV专用"
+      },
+      {
+        "name": "Allinone_64",
+        "url": "http://www.2015888.xyz/allinone/allinone_64.zip",
+        "icon": "",
+        "version": "手机专用"
       }
     ]
   },
@@ -50,10 +62,10 @@
         "version": "手机短视频版"
       },	
       {
-        "name": "《小鱼影视仓》",
+        "name": "《影视仓》",
         "url": "https://a.2015888.xyz/apk/影视仓TV版.apk",
         "icon": "https://a.2015888.xyz/img/258.png",
-        "version": "TV内置版"
+        "version": "TV版"
       },			
       {
         "name": "《EasyBox》",
