@@ -300,48 +300,6 @@
         "timeout": 25
     },
     {
-        "key": "皮皮虾",
-        "name": "🦐┃皮皮┃吃虾💯",
-        "type": 3,
-        "api": "csp_XBPQ",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": {
-            "首页": "0",
-            "线路标题": "module-tab-value\">&&</span>",
-            "分类url": "http://www.ppxys.vip/s/{cateId}/area/{area}/by/{by}/class/{class}/lang/{lang}/letter/{letter}/page/{catePg}/year/{year}.html",
-            "分类": "剧集$1#电影$2#动漫番剧$3"
-        },
-        "timeout": 25
-    },
-    {
-        "key": "人人",
-        "name": "👬┃人人┃App💯",
-        "type": 3,
-        "api": "csp_Xdai",
-        "playerType": 1,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "caHR0cHM6Ly9qaWVrb3UtMTMxNDA1NDY5OS5jb3MuYXAtY2hvbmdxaW5nLm15cWNsb3VkLmNvbS9qaWVrb3UudHh0fEY1MUY1RDUyRDIzQ0JGMjd8RjUxRjVENTJEMjNDQkYyN3wxOTE=",
-        "timeout": 25
-    },
-    {
-        "key": "HG影视",
-        "name": "🤠┃HG┃App💯",
-        "type": 3,
-        "api": "csp_AppYsV2",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "https://cs.hgyx.vip/api2/api.php/app/",
-        "timeout": 25
-    },
-    {
         "key": "酷影视",
         "name": "🤹‍♂️┃酷影┃App💯",
         "type": 3,
@@ -438,28 +396,6 @@
         "changeable": 1,
         "filterable": 1,
         "ext": "FbjPcVZY48PN/RIZ5QqOrspjLMNAA5xaRiBa8vT6iB4RAYHOp3SFmQTE9v/hX3nlPzHB3X051Sp3XDoyUIN9aRARCZzZk1aDbikK",
-        "timeout": 25
-    },
-    {
-        "key": "洽洽影视",
-        "name": "🍻┃洽洽┃影视💯",
-        "type": 3,
-        "api": "csp_AppGZ",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "热播",
-        "name": "🔥┃热播┃App💯",
-        "type": 3,
-        "api": "csp_AppRB",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
         "timeout": 25
     },
     {
@@ -950,9 +886,7 @@
 
 {"name":"100次解析","type":1,"url":"https://jxjson.icu/neibu.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"1080解析","type":1,"url":"https://www.mpanso.com/muou/qilin.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
-
-{"name":"皮皮虾","type":"1","url":"http://jiexi.52ppx.top/index.php?url=","ext":{"flag":["PPXLG","皮皮虾4K"]}}
+{"name":"1080解析","type":1,"url":"https://www.mpanso.com/muou/qilin.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}}
 
 ],
 

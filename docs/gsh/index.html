@@ -8,19 +8,29 @@
     <link rel="apple-touch-icon" href="./static/img/favicon.ico">
     <link rel="shortcut icon" href="./static/img/favicon.ico">
     <link rel="Bookmark" href="./static/img/favicon.ico">
-    <title>JSON工具集</title>
+    <title>小鱼专用工具箱</title>
     <link rel="stylesheet" href="./static/css/style.css">
+    
 </head>
 
 <body>
     <div class="container">
-        <h1>JSON工具集</h1>
+        <h1>小鱼专用工具箱</h1>
+        <!-- 功能栏 -->
+        <ol class="breadcrumb">
+            <li><a id="jsonFormatLink" title="JSON格式化" href="#" onclick="activateJsonFormat(); return false;">JSON格式化</a></li>
+            <li><a id="urlLink" title="Url编码解码" href="#" onclick="activateUrl(); return false;">Url编码解码</a></li>
+            <li><a id="base64Link" title="Base64编码解码" href="#" onclick="activateBase64(); return false;">Base64编码解码</a></li>
+            <li><a title="Gzip加密解密" href="#" onclick="alert('暂未开通~');return false;">Gzip加密解密</a></li>
+            <li><a title="Unix 时间戳转换工具" href="javascript:void(0);" onclick="alert('暂未开通~');">时间戳转换</a></li>
+        </ol>
 
-        <div class="controls-row">
+        <!-- 缩进设置和格式化按钮 -->
+        <div class="controls-row" id="jsonControls">
             <label>缩进设置：</label>
             <select id="indent">
-                <option value="2" selected>2空格</option>
-                <option value="4">4空格</option>
+                <option value="2">2空格</option>
+                <option value="4" selected>4空格</option>
                 <option value="6">6空格</option>
                 <option value="8">8空格</option>
             </select>
@@ -28,26 +38,41 @@
             <button class="compress-btn" onclick="compressText()">压缩</button>
         </div>
 
-        <div class="controls-row">
-            <button class="encode-btn" onclick="encodeString()">URL编码</button>
-            <button class="decode-btn" onclick="decodeString()">URL解码</button>
+        <!-- Url编码解码按钮 -->
+        <div class="controls-row" id="urlControls" style="display: none;">            
+         <button class="urlencode-btn" onclick="encodeUrl()">Url编码</button>
+   <button class="urldecode-btn" onclick="decodeUrl()">Url解码</button>
         </div>
 
-        <textarea id="inputText" placeholder="输入JSON或需要编码的内容..."></textarea>
+        <!-- Base64编码解码按钮 -->
+        <div class="controls-row" id="base64Controls" style="display: none;">
+            <button class="encode-btn" onclick="encodeBase64()">Base64编码</button>
+            <button class="decode-btn" onclick="decodeBase64()">Base64解码</button>
+        </div>
 
+        <!-- 输入框 -->
+        <textarea id="inputText" placeholder="输入JSON内容..."></textarea>
+
+        <!-- 复制、清空和交换按钮 -->
         <div class="controls-row">
             <button class="copy-btn" onclick="copyOutput()">复制结果</button>
             <button class="clear-btn" onclick="clearInput()">清空所有</button>
+            <button class="swap-btn" id="swapButton" style="display: none;" onclick="swapContent()">↕ 交换</button>
         </div>
 
-        <textarea id="outputText" readonly placeholder="处理结果..."></textarea>
+        <!-- 输出框 -->
+        <textarea id="outputText" readonly placeholder="格式化或压缩后的JSON..."></textarea>
+
+        <!-- 错误提示 -->
         <div id="errorMessage" class="error"></div>
     </div>
-
+    <script src="./static/js/active.js"></script>
+    <script src="./static/js/encoding.js"></script>
     <script src="./static/js/formatting.js"></script>
     <script src="./static/js/compression.js"></script>
-    <script src="./static/js/encoding.js"></script>
     <script src="./static/js/copyemptying.js"></script>
+    <script src="./static/js/Base64.js"></script>
+
 </body>
 
 </html>
