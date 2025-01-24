@@ -17,7 +17,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('outputText').placeholder = placeholderOutput;
 
     // 显示相关按钮，隐藏其他按钮
-    const allControls = ['jsonControls', 'urlControls', 'base64Controls'];
+    const allControls = ['jsonControls', 'urlControls', 'base64Controls', 'gzipControls'];
     allControls.forEach(id => {
         document.getElementById(id).style.display = id === controlsId ? 'flex' : 'none';
     });
@@ -26,7 +26,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('swapButton').style.display = showSwapButton ? 'inline-block' : 'none';
 
     // 设置菜单项的激活状态
-    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link'];
+    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link', 'gzipLink'];
     allLinks.forEach(id => {
         document.getElementById(id).classList.toggle('active', id === activeLinkId);
     });
@@ -62,6 +62,17 @@ function activateBase64() {
         "Base64处理结果...",
         "base64Controls",
         "base64Link",
+        true // 显示交换按钮
+    );
+}
+
+// 激活 Gzip 加密解密功能
+function activateGzip() {
+    activateFunction(
+        "输入需要 Gzip 加密或解密的内容...",
+        "Gzip 处理结果...",
+        "gzipControls",
+        "gzipLink",
         true // 显示交换按钮
     );
 }

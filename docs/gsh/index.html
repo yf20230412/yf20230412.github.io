@@ -10,7 +10,7 @@
     <link rel="Bookmark" href="./static/img/favicon.ico">
     <title>小鱼专用工具箱</title>
     <link rel="stylesheet" href="./static/css/style.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
 </head>
 
 <body>
@@ -21,8 +21,8 @@
             <li><a id="jsonFormatLink" title="JSON格式化" href="#" onclick="activateJsonFormat(); return false;">JSON格式化</a></li>
             <li><a id="urlLink" title="Url编码解码" href="#" onclick="activateUrl(); return false;">Url编码解码</a></li>
             <li><a id="base64Link" title="Base64编码解码" href="#" onclick="activateBase64(); return false;">Base64编码解码</a></li>
-            <li><a title="Gzip加密解密" href="#" onclick="alert('暂未开通~');return false;">Gzip加密解密</a></li>
-            <li><a title="Unix 时间戳转换工具" href="javascript:void(0);" onclick="alert('暂未开通~');">时间戳转换</a></li>
+            <li><a id="gzipLink" title="Gzip加密解密" href="#" onclick="activateGzip(); return false;">Gzip加密解密</a></li>
+            <li><a id="UnixLink" title="MD5、MD4、SHA* 等 Hash 在线计算工具" href="#" onclick="alert('😂暂未开通,敬请期待~');">MD5</a></li>
         </ol>
 
         <!-- 缩进设置和格式化按钮 -->
@@ -49,6 +49,12 @@
             <button class="encode-btn" onclick="encodeBase64()">Base64编码</button>
             <button class="decode-btn" onclick="decodeBase64()">Base64解码</button>
         </div>
+        
+        <!-- Gzip加密解密按钮 -->
+        <div class="controls-row" id="gzipControls" style="display: none;">
+            <button class="encode-btn" onclick="encodeGzip()">Gzip加密</button>
+            <button class="decode-btn" onclick="decodeGzip()">Gzip解密</button>
+        </div>
 
         <!-- 输入框 -->
         <textarea id="inputText" placeholder="输入JSON内容..."></textarea>
@@ -72,7 +78,37 @@
     <script src="./static/js/compression.js"></script>
     <script src="./static/js/copyemptying.js"></script>
     <script src="./static/js/Base64.js"></script>
-
+    <script src="./static/js/gzip.js"></script>
+    
+    
+    <!--页脚-->    
+<footer>
+        <div align="center">
+            本站已安全运行：<SPAN id=span_dt_dt style="color: #4b5cc4;"></SPAN>
+            <SCRIPT language=javascript>
+                function show_date_time(){
+                window.setTimeout("show_date_time()", 1000);
+                BirthDay=new Date("11/11/2024 8:0:0");
+                today=new Date();
+                timeold=(today.getTime()-BirthDay.getTime());
+                sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                msPerDay=24*60*60*1000
+                e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+                e_hrsold=(e_daysold-daysold)*24;
+                hrsold=Math.floor(e_hrsold);
+                e_minsold=(e_hrsold-hrsold)*60;
+                minsold=Math.floor((e_hrsold-hrsold)*60);
+                seconds=Math.floor((e_minsold-minsold)*60);
+                span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
+                }
+                show_date_time();
+            </script>
+        </div>
+        <a href="https://yf1688.top">小鱼官网 © 2024
+        </a>
+    </footer>
 </body>
 
 </html>
