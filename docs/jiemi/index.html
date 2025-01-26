@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="http://www.2015888.xyz/jiami/static/img/favicon.ico">
-    <link rel="apple-touch-icon" href="http://www.2015888.xyz/jiami/static/img/favicon.ico">
-    <link rel="shortcut icon" href="http://www.2015888.xyz/jiami/static/img/favicon.ico">
-    <link rel="Bookmark" href="http://www.2015888.xyz/jiami/static/img/favicon.ico">
-    <link rel="stylesheet" href="http://www.2015888.xyz/jiami/static/css/style.css">
+    <link rel="icon" href="http://www.2015888.xyz/jiemi/static/img/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.2015888.xyz/jiemi/static/img/favicon.ico">
+    <link rel="shortcut icon" href="http://www.2015888.xyz/jiemi/static/img/favicon.ico">
+    <link rel="Bookmark" href="http://www.2015888.xyz/jiemi/static/img/favicon.ico">
+    <link rel="stylesheet" href="http://www.2015888.xyz/jiemi/static/css/style.css">
     <title>TVBox接口解密</title>
     <style>
         body {
@@ -390,7 +390,7 @@
             if (optionsList.style.display === 'block') {
                 optionsList.style.display = 'none'; // 隐藏选项列表
             } else {
-                fetch('http://www.2015888.xyz/jiami/M.php')
+                fetch('http://www.2015888.xyz/jiemi/M.php')
                     .then(response => response.json())
                     .then(data => {
                         optionsList.innerHTML = ''; // 清空选项列表
@@ -452,7 +452,7 @@
           document.getElementById("error-message").style.display = "none";
         
           var xhr = new XMLHttpRequest();
-          xhr.open("POST", "http://www.2015888.xyz/jiami/get_jiemi.php", true);
+          xhr.open("POST", "http://www.2015888.xyz/jiemi/get_jiemi.php", true);
           xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
           xhr.send("url=" + input);
         
@@ -556,7 +556,7 @@
         
             // 判断链接后缀是否为.php，是则调用 get_real_link.php
             if (fileLink && fileLink.slice(-4) === '.php') {
-        fetch('http://www.2015888.xyz/jiami/get_real_link.php', {
+        fetch('http://www.2015888.xyz/jiemi/get_real_link.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
