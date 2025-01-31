@@ -2,8 +2,8 @@
 name: wen json
 
 on:
-  schedule:
-    - cron: '0 0 */10 * *'  # 每10天午夜执行
+  #schedule:
+    #- cron: '0 0 */10 * *'  # 每10天午夜执行
   workflow_dispatch:  # 手动触发器
 
 jobs:
