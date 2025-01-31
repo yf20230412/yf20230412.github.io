@@ -470,7 +470,6 @@
         "searchable": 0,
         "changeable": 1,
         "filterable": 1,
-        "ext": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/json/jp.json",
         "timeout": 25
     },
     {
