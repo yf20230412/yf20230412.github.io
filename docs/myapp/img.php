@@ -1,5 +1,5 @@
 <?php
-$id=rand(1,9);
+$id=rand(1,8);
 $image[1]='https://yf1688.top/myapp/static/images/1.jpg';
 $image[2]='https://yf1688.top/myapp/static/images/2.jpg';
 $image[3]='https://yf1688.top/myapp/static/images/3.jpg';
@@ -8,6 +8,5 @@ $image[5]='https://yf1688.top/myapp/static/images/5.jpg';
 $image[6]='https://yf1688.top/myapp/static/images/6.jpg';
 $image[7]='https://yf1688.top/myapp/static/images/7.jpg';
 $image[8]='https://yf1688.top/myapp/static/images/8.jpg';
-$image[9]='https://yf1688.top/myapp/static/images/9.jpg';
 header("location:$image[$id]");
 ?>
