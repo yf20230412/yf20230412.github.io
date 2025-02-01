@@ -824,8 +824,6 @@
 
 {"key":"直播转点播","name":"📺┃电视┃直播🌺","type":3,"api":"./js/直播转点播2.js","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/直播仓.json"},
 
-{"key":"alist","name":"💾┃小鱼┃网盘💯","type":3,"api":"csp_AList","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/alist.json"},
-
 {"key":"Local","name":"💻┃本地┃视频💯","type":3,"api":"csp_Local","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
 
     

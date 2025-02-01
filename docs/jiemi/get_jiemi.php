@@ -1,4 +1,8 @@
 <?php
+
+//允许跨域请求
+header("Access-Control-Allow-Origin: *");
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url = isset($_POST['url']) ? $_POST['url'] : '';
     if (!empty($url)) {
@@ -54,37 +58,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         // 将解码后的字节数据转换为 UTF-8 字符串
                         $decoded_text = mb_convert_encoding($decoded_bytes, 'UTF-8', 'UTF-8');
 
-                        // 去除注释行（以 // 开头，以 }, 结尾的行）
-                        $decoded_text = preg_replace('/^\s*\/\/.*?\},\s*$/m', '', $decoded_text);
+                        // 去除注释行（以 // 开头，以 }, 或 ", 结尾的行）
+                        $decoded_text = preg_replace('/^\s*\/\/.*?[\},"]\s*$/m', '', $decoded_text);
 
                         // 尝试解析为 JSON
                         $json_data = json_decode($decoded_text);
-if (json_last_error() === JSON_ERROR_NONE) {
-  // 如果是有效的 JSON，按 2 个缩进格式化输出
-  $formatted_json = json_encode($json_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-  echo $formatted_json;
-} else {
-  // 如果不是有效的 JSON，按 2 个缩进格式化输出原始文本
-  $formatted_text = json_encode($decoded_text, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-  echo $formatted_text;
-}
-} else {
-  // 直接输出原始内容（Base64 解码失败）
-  echo $response;
-}
-} else {
-  // 直接输出原始内容（未找到 '**' 符号）
-  echo $response;
-}
-} else {
-  // 直接输出原始内容（HTTP 请求失败）
-  echo $response;
-}
-}
-curl_close($ch);
-} else {
-  // 直接输出错误信息（URL 为空）
-  echo "URL is empty.";
-}
+                        if (json_last_error() === JSON_ERROR_NONE) {
+                            // 如果是有效的 JSON，格式化输出
+                            $formatted_json = json_encode($json_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+                            echo $formatted_json;
+                        } else {
+                            // 如果不是有效的 JSON，直接输出原始文本内容
+                            echo $decoded_text;
+                        }
+                    } else {
+                        // 直接输出原始内容（Base64 解码失败）
+                        echo $response;
+                    }
+                } else {
+                    // 直接输出原始内容（未找到 '**' 符号）
+                    echo $response;
+                }
+            } else {
+                // 直接输出原始内容（HTTP 请求失败）
+                echo $response;
+            }
+        }
+        curl_close($ch);
+    } else {
+        // 直接输出错误信息（URL 为空）
+        echo "URL is empty.";
+    }
 }
 ?>

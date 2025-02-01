@@ -1,4 +1,8 @@
 <?php
+
+//允许跨域请求
+header("Access-Control-Allow-Origin: *");
+
 // 获取前端传递的链接
 $link = isset($_POST['link']) &&!empty($_POST['link'])? urldecode($_POST['link']) : '';
 // 注释掉下面这行打印语句
