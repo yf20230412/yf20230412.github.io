@@ -17,28 +17,19 @@
         "ua": "okhttp/3.15"
     },
     {
-        "name": "IPV4",
+        "name": "咪咕咕",
         "type": 0,
-        "url": "https://ghfast.top/raw.githubusercontent.com/MemoryCollection/IPTV/refs/heads/main/multicast.txt",
+        "url": "https://www.freetv.top/migu.m3u",
         "playerType": 1,
-        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-        "logo": "https://epg.iill.top/logo/{name}.png"
-    },
+        "timeout": 10
+    },    
     {
         "name": "自建更新_live",
         "type": 0,
         "url": "https://mirror.ghproxy.com/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u",
         "playerType": 1,
         "ua": "okhttp/3.15",
-        "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-        "logo": "https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
-    },
-    {
-        "name": "xiaoyu_live",
-        "type": 0,
-        "url": "https://yf1688.top/tv/txt/612.m3u",
-        "playerType": 1,
-        "ua": "okhttp/3.15",
+        "timeout": 10,
         "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
         "logo": "https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
     },
@@ -851,7 +842,7 @@
 
 {"key":"韩小圈","name":"🚦请勿相信任何广告","type":3,"api":"csp_HanXiaoQuan","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
 
-{"key":"应用商店","name":"🏪┃应用┃商店💯","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/market.json"},
+{"key":"应用商店","name":"🏪┃应用┃商店💯","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"http://www.2015888.xyz/tv/json/market.json"},
 
 {"key":"版本信息","name":"👿┃版本┃信息⏰","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"ext":"https://9877.kstore.space/Market/market.json"}],    
 
