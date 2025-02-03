@@ -17,7 +17,7 @@
         ]
     },
     {
-        "name": "Allinone",
+        "name": "Allinone直播专用",
         "list": [
             {
                 "name": "当前版本",
@@ -29,13 +29,13 @@
                 "name": "Allinone_32",
                 "url": "https://jihulab.com/fourd/FourD/-/raw/main/formal/32/allinone.zip",
                 "icon": "",
-                "version": "TV稳定版"
+                "version": "TV专用"
             },
             {
                 "name": "Allinone_64",
                 "url": "https://jihulab.com/fourd/FourD/-/raw/main/formal/64/allinone.zip",
                 "icon": "",
-                "version": "手机稳定版"
+                "version": "手机专用"
             }
         ]
     },
