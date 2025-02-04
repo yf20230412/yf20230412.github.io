@@ -13,9 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/3.');  // 设置 User-Agent
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);    // 自动跟随重定向
         curl_setopt($ch, CURLOPT_MAXREDIRS, 10);           // 最大重定向次数
+        
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'User-Agent: okhttp/3.'
-        ));
+       'User-Agent: okhttp/3.',
+       'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+   ));
 
         // 忽略 SSL 证书验证
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
