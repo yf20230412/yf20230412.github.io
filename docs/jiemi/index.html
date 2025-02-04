@@ -518,7 +518,7 @@
             }
         
             if (inputContent.trim() === "") {
-        alert("输入框为空，无法提取基础链接！");
+        alert("输入框为空，无法获取链接！");
         return;
             }
         
@@ -533,14 +533,14 @@
         if (spiderLink.startsWith("http://") || spiderLink.startsWith("https://")) {
             fileLink = spiderLink; // 直接使用该链接
         }
-        // 检查是否是以./ 开头
+        // 检查是否是以 ./ 开头
         else if (spiderLink.startsWith("./")) {
             // 提取相对路径
             var relativePath = spiderLink.substring(2); // 去掉 './'
         
             // 从输入框中提取基础链接（使用正则）
             var baseLinkMatch = inputContent.match(/(http[s]?:\/\/[^\/]+\/[^\/]*)\//);
-            if (!baseLinkMatch ||!baseLinkMatch[1]) {
+            if (!baseLinkMatch || !baseLinkMatch[1]) {
                 alert("未找到基础链接，无法构建完整链接！");
                 return;
             }
@@ -554,36 +554,64 @@
         return;
             }
         
-            // 判断链接后缀是否为.php，是则调用 get_real_link.php
-            if (fileLink && fileLink.slice(-4) === '.php') {
-        fetch('http://www.2015888.xyz/jiemi/get_real_link.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: `link=${encodeURIComponent(fileLink)}`
-        })
-               .then(response => response.json())
-               .then(data => {
-            if (data.success) {
-                const realLink = data.realLink;
-                const downloadLink = document.createElement('a');
-                downloadLink.href = realLink;
-                downloadLink.download = 'downloaded_file.jar';
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
+            // 先提示用户获取到的链接
+            alert(`获取到的jar链接是：${fileLink}`);
+        
+            // 定义允许的后缀列表（统一小写）
+            const allowedExtensions = ['.txt', '.json', '.jar', '.js', '.zip', '.bmp', '.jpg', '.webp', '.png'];
+        
+            // 将链接转换为小写，以便不区分大小写
+            const lowerCaseFileLink = fileLink.toLowerCase();
+        
+            // 判断链接后缀是否为允许的后缀之一
+            if (fileLink && !allowedExtensions.some(ext => lowerCaseFileLink.endsWith(ext))) {
+        // 提示用户正在解密链接
+        alert("正在解密jar链接，请点击确定后，耐心等待5秒左右即可...");
+        // 如果链接后缀不在允许的列表中，则调用 get_real_link.php
+        fetch('get_real_link.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `link=${encodeURIComponent(fileLink)}`
+            })
+            .then(response => {
+                console.log('Response:', response); // 打印响应对象
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data:', data); // 打印返回的数据
+                if (data.success) {
+                    const realLink = data.realLink;
+                    alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
+        
+                    // 提取文件名
+                    const fileName = realLink.substring(realLink.lastIndexOf('/') + 1);
+        
+                    // 创建下载链接
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = realLink;
+                    downloadLink.download = fileName || 'downloaded_file.jar'; // 使用提取的文件名，如果没有则使用默认名
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                } else {
+                    alert(`获取真实链接失败：${data.message}，原始链接: ${fileLink}，后端处理中的链接: ${data.originalLink}`);
+                }
+            })
+            .catch(error => {
+                alert(`请求失败：${error.message}，原始链接: ${fileLink}`);
+            });
             } else {
-                alert(`获取真实链接失败：${data.message}，原始链接: ${fileLink}，后端处理中的链接: ${data.originalLink}`);
-            }
-        })
-               .catch(error => {
-            alert(`请求失败：${error.message}，原始链接: ${fileLink}`);
-        });
-            } else {
+        // 如果链接后缀在允许的列表中，则直接下载
+        alert(`jar下载链接：${fileLink}`); // 调试信息
+        // 提取文件名
+        const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
+        
+        // 创建下载链接
         const downloadLink = document.createElement('a');
         downloadLink.href = fileLink;
-        downloadLink.download = 'downloaded_file.jar';
+        downloadLink.download = fileName || 'downloaded_file.jar'; // 使用提取的文件名，如果没有则使用默认名
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);

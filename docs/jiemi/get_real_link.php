@@ -1,8 +1,6 @@
 <?php
-
-//允许跨域请求
+// 允许跨域请求
 header("Access-Control-Allow-Origin: *");
-
 // 获取前端传递的链接
 $link = isset($_POST['link']) &&!empty($_POST['link'])? urldecode($_POST['link']) : '';
 // 注释掉下面这行打印语句
@@ -21,7 +19,7 @@ curl_setopt($ch, CURLOPT_URL, $link);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // 自动跟随重定向
 curl_setopt($ch, CURLOPT_MAXREDIRS, 5); // 最大重定向次数
-curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/3');
+curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/3.');
 curl_setopt($ch, CURLOPT_HEADER, false);
 // 忽略 SSL 证书验证
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
