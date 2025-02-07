@@ -1,11 +1,10 @@
 <?php
 header('Content-Type: application/json');
-
-//允许跨域请求
+// 允许跨域请求
 header("Access-Control-Allow-Origin: *");
 
 // 指定要获取的JSON数据的URL
-$jsonUrl = 'https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/M.json'; // 替换为您的实际URL
+$jsonUrl = 'http://www.2015888.xyz/M.json'; // 替换为您的实际URL
 
 // 获取JSON数据
 $jsonData = file_get_contents($jsonUrl);

@@ -555,7 +555,7 @@
             }
         
             // 先提示用户获取到的链接
-            alert(`获取到的jar链接是：${fileLink}`);
+            //😍alert(`获取到的jar链接是：${fileLink}`);
         
             // 定义允许的后缀列表（统一小写）
             const allowedExtensions = ['.txt', '.json', '.jar', '.js', '.zip', '.bmp', '.jpg', '.webp', '.png'];
@@ -583,7 +583,7 @@
                 console.log('Data:', data); // 打印返回的数据
                 if (data.success) {
                     const realLink = data.realLink;
-                    alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
+                    //😍alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
         
                     // 提取文件名
                     const fileName = realLink.substring(realLink.lastIndexOf('/') + 1);
@@ -604,7 +604,7 @@
             });
             } else {
         // 如果链接后缀在允许的列表中，则直接下载
-        alert(`jar下载链接：${fileLink}`); // 调试信息
+        //😍alert(`jar下载链接：${fileLink}`); // 调试信息
         // 提取文件名
         const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
         
