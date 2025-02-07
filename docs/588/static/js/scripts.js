@@ -5,15 +5,15 @@
             const rewardText = document.getElementById('reward-text');
 
             wechat.addEventListener('click', function() {
-                updateActive(wechat, '1.jpg', '请使用微信扫一扫进行打赏：');
+                updateActive(wechat, '/static/img/weixi.jpg', '请使用微信扫一扫进行打赏：');
             });
 
             alipay.addEventListener('click', function() {
-                updateActive(alipay, '支付宝.jpg', '请使用支付宝扫一扫进行打赏：');
+                updateActive(alipay, '/static/img/Alipay.jpg', '请使用支付宝扫一扫进行打赏：');
             });
 
             paypal.addEventListener('click', function() {
-                updateActive(paypal, '支付宝1.jpg');
+                updateActive(paypal, '/static/img/AlipayRedpacket.jpg');
             });
 
             function updateActive(activeElement, qrSrc, text) {
