@@ -35,9 +35,10 @@
          /* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
          -webkit-animation: flowCss 12s infinite linear;
          animation: flowCss 12s infinite linear;
-         font-size: 20px;
+         font-size: 24px;
          /* 设置字体大小 */
          margin-bottom: 20px;
+         /* 设置字体距离下面的距离 */
          font-weight: bold;
          /* 设置字体粗细 */
          letter-spacing: 2px;
