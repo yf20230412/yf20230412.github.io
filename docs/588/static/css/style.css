@@ -43,16 +43,6 @@
          /* 设置字体粗细 */
          letter-spacing: 2px;
          /* 设置字符间距 */
-         animation-name: flowCss;
-         /* 定义动画名称 */
-         animation-duration: 5s;
-         /* 定义动画持续时间 */
-         animation-iteration-count: infinite;
-         /* 定义动画重复次数 */
-         animation-timing-function: linear;
-         /* 定义动画速度曲线 */
-         animation-fill-mode: forwards;
-         /* 定义动画结束后状态 */
      }
 
      /* 定义动画 */

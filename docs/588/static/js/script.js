@@ -1,6 +1,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const wechat = document.getElementById('wechat');
             const alipay = document.getElementById('alipay');
+            const paypal = document.getElementById('paypal');
             const qrCode = document.querySelector('.qr-code');
             const rewardText = document.getElementById('reward-text');
 
@@ -13,7 +14,7 @@
             });
 
             paypal.addEventListener('click', function() {
-                updateActive(paypal, 'https://yf1688.top/588/static/img/AlipayRedpacket.jpg');
+                updateActive(paypal, 'https://yf1688.top/588/static/img/AlipayRedpacket.jpg', '请使用支付宝扫一扫领取红包🧧：');
             });
 
             function updateActive(activeElement, qrSrc, text) {
