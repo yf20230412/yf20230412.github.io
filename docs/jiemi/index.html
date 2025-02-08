@@ -555,7 +555,7 @@
             }
         
             // 先提示用户获取到的链接
-            //😍alert(`获取到的jar链接是：${fileLink}`);
+            //😀alert(`获取到的jar链接是：${fileLink}`);
         
             // 定义允许的后缀列表（统一小写）
             const allowedExtensions = ['.txt', '.json', '.jar', '.js', '.zip', '.bmp', '.jpg', '.webp', '.png'];
@@ -605,17 +605,29 @@
             } else {
         // 如果链接后缀在允许的列表中，则直接下载
         //😍alert(`jar下载链接：${fileLink}`); // 调试信息
-        // 提取文件名
-        const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
+        function downloadFile(fileLink, customFileName = 'downloaded_file.jar') {
+            // 提取文件名
+            const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
         
-        // 创建下载链接
-        const downloadLink = document.createElement('a');
-        downloadLink.href = fileLink;
-        downloadLink.download = fileName || 'downloaded_file.jar'; // 使用提取的文件名，如果没有则使用默认名
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
+            // 创建下载链接
+            const downloadLink = document.createElement('a');
+            downloadLink.href = fileLink;
+            downloadLink.download = fileName || customFileName;
+        
+            // 执行下载
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+        
+        // 使用函数
+        if (fileLink === 'http://bobohome.ignorelist.com:20247/潇洒/spider.jar') {
+            alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/3. 然后再重新点击下载`);
+        }
+        downloadFile(fileLink);
+        
             }
+        
         }
         
         

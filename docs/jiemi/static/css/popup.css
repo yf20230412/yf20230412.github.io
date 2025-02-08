@@ -1,0 +1,87 @@
+/* 遮罩样式 */
+.overlay {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center; /* 保持水平居中 */
+    align-items: flex-start; /* 垂直方向从顶部开始 */
+    padding-top: 20px; /* 垂直方向距离顶部20px */
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+
+/* 弹窗样式 */
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* 初始设置，适用于小屏幕 */
+    height: 800px;
+    max-height: 70%; /* 防止在小屏幕上弹窗过高 */
+    width: 400px;
+    max-width: 80%; /* 防止在小屏幕上弹窗过宽 */
+    position: relative; /* 确保弹窗可以被移动 */
+}
+
+/* 当屏幕宽度大于等于768px时（通常认为是平板或桌面设备） */
+@media (min-width: 768px) {
+  .popup {
+        height: 600px;
+        max-height: 70%;
+        width: 1200px;
+        max-width: 80%;
+    }
+}
+
+.popup h2 {
+    margin-bottom: 5px;
+}
+
+.popup input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    max-width: 80%; 
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+/* 微信公众号图片和文字样式 */
+.wechat-qr {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.wechat-qr img {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.wechat-qr p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
