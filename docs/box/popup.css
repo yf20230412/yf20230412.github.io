@@ -10,7 +10,7 @@
     z-index: 1000;
     justify-content: center; /* 保持水平居中 */
     align-items: flex-start; /* 垂直方向从顶部开始 */
-    padding-top: 80px; /* 垂直方向距离顶部20px */
+    padding-top: 70px; /* 垂直方向距离顶部20px */
     transition: transform 0.3s ease; /* 添加过渡效果 */
     
 }
@@ -32,13 +32,13 @@
 /* 当屏幕宽度大于等于768px时（通常认为是平板或桌面设备） */
 @media (min-width: 768px) {
   .popup {
-        height: 80%;
+        height: 75%;
         width: 80%;
     }
 }
 
 .popup h1 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .popup input {
