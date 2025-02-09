@@ -183,8 +183,8 @@ li span {
     /* 从顶部50%开始 */
     -webkit-transform: translateY(-50%);
     /* 向上移动自身高度的一半 */
-    right: 35px;
-    /* 向右移动35px */
+    right: 30px;
+    /* 向右移动30px */
 }
 
 /* 停止图标（两条竖线）样式 */
@@ -202,9 +202,9 @@ li span {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    width: 10px;
+    width: 12px;
     /* 单条竖线的宽度 */
-    height: 30px;
+    height: 40px;
     /* 单条竖线的高度 */
     background-color: white;
 }
