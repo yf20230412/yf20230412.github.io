@@ -236,7 +236,7 @@ function toggleMusic() {
     if (musicPlaying) {
         bgMusic.pause();
         const stopIcon = document.createElement('div');
-        stopIcon.classList.add('stop - icon');
+        stopIcon.classList.add('stop-icon');
         toggleBtn.innerHTML = '';
         toggleBtn.appendChild(stopIcon);
 

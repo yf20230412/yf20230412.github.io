@@ -146,8 +146,8 @@
 
         /* 样式化按钮 */
         .circle-btn {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background-color: #4a9feb;
             /* 蓝色背景 */
             -webkit-border-radius: 50%;
@@ -163,7 +163,7 @@
             /* 固定定位 */
             right: 20px;
             /* 距离右边20px */
-            bottom: calc(10% - 50px);
+            bottom: calc(10% - 40px);
             /* 距离底部1/10处，减去按钮半径 */
         }
 
@@ -181,15 +181,15 @@
             /* 从顶部50%开始 */
             -webkit-transform: translateY(-50%);
             /* 向上移动自身高度的一半 */
-            right: 30px;
-            /* 向右移动30px */
+            right: 25px;
+            /* 向右移动25px */
         }
 
         /* 停止图标（两条竖线）样式 */
         .stop-icon {
-            width: 40px;
+            width: 30px;
             /* 总宽度 */
-            height: 30px;
+            height: 22px;
             /* 高度 */
             position: relative;
         }
@@ -200,9 +200,9 @@
             position: absolute;
             top: 50%;
             -webkit-transform: translateY(-50%);
-            width: 12px;
+            width: 8px;
             /* 单条竖线的宽度 */
-            height: 40px;
+            height: 22px;
             /* 单条竖线的高度 */
             background-color: white;
         }
@@ -221,7 +221,7 @@
             /* 固定定位 */
             left: 5px;
             /* 距离左边5px */
-            bottom: calc(10% - 50px);
+            bottom: calc(10% - 40px);
             /* 与按钮在同一水平线上 */
             z-index: 1000;
             /* 确保在页面最上层 */
