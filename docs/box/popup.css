@@ -24,24 +24,16 @@
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /* 初始设置，适用于小屏幕 */
-    height: 600px;
-    min-height: 70%;
-    max-height: 70%; /* 防止在小屏幕上弹窗过高 */
-    width: 400px;
-    min-width: 80%;
-    max-width: 80%; /* 防止在小屏幕上弹窗过宽 */
+    height: 70%; /* 防止在小屏幕上弹窗过高 */    
+    width: 80%;/* 防止在小屏幕上弹窗过宽 */
     position: relative; /* 确保弹窗可以被移动 */
 }
 
 /* 当屏幕宽度大于等于768px时（通常认为是平板或桌面设备） */
 @media (min-width: 768px) {
   .popup {
-        height: 600px;
-        max-height: 60%;
-        min-height: 60%;
-        width: 1200px;
-        min-width: 80%;
-        max-width: 80%;
+        height: 80%;
+        width: 70%;
     }
 }
 
