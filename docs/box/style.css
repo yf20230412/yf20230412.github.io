@@ -152,7 +152,7 @@ li span {
     height: 100px;
     background-color: #4a9feb;
     /* 蓝色背景 */
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
     /* 圆形 */
     display: flex;
     justify-content: center;
@@ -160,7 +160,7 @@ li span {
     cursor: pointer;
     border: none;
     outline: none;
-    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
     position: fixed;
     /* 固定定位 */
     right: 20px;
@@ -181,7 +181,7 @@ li span {
     /* 绝对定位 */
     top: 50%;
     /* 从顶部50%开始 */
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     /* 向上移动自身高度的一半 */
     right: 35px;
     /* 向右移动35px */
@@ -201,7 +201,7 @@ li span {
     content: '';
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     width: 10px;
     /* 单条竖线的宽度 */
     height: 30px;
@@ -229,7 +229,7 @@ li span {
     /* 确保在页面最上层 */
     padding: 10px;
     /* 内边距 */
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
     /* 边框圆角 */
     color: white;
     /* 文字颜色 */
