@@ -258,10 +258,3 @@ function toggleMusic() {
 loadRandomMusic();
 
 toggleBtn.addEventListener('click', toggleMusic);
-
-// <!--在线播放器API-->
-//肥猫的api
-//<script src="https://myhkw.cn/api/player/167013822195" id="myhk" key="167013822195" m="1"></script>
-
-//自己的api,https://myhkw.cn/
-//<script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script>
