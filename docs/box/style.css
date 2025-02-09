@@ -158,7 +158,7 @@
             cursor: pointer;
             border: none;
             outline: none;
-            -webkit-transition: background-color 0.3s;
+            transition: background-color 0.3s;
             position: fixed;
             /* 固定定位 */
             right: 20px;
@@ -179,7 +179,7 @@
             /* 绝对定位 */
             top: 50%;
             /* 从顶部50%开始 */
-            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
             /* 向上移动自身高度的一半 */
             right: 25px;
             /* 向右移动30px */
@@ -187,9 +187,9 @@
 
         /* 停止图标（两条竖线）样式 */
         .stop-icon {
-            width: 30px;
+            width: 35px;
             /* 总宽度 */
-            height: 20px;
+            height: 25px;
             /* 高度 */
             position: relative;
         }
@@ -199,10 +199,10 @@
             content: '';
             position: absolute;
             top: 50%;
-            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
             width: 8px;
             /* 单条竖线的宽度 */
-            height: 20px;
+            height: 25px;
             /* 单条竖线的高度 */
             background-color: white;
         }
@@ -227,7 +227,7 @@
             /* 确保在页面最上层 */
             padding: 10px;
             /* 内边距 */
-            -webkit-border-radius: 5px;
+            border-radius: 5px;
             /* 边框圆角 */
             color: white;
             /* 文字颜色 */
