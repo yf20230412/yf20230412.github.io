@@ -146,8 +146,8 @@
 
         /* 样式化按钮 */
         .circle-btn {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             background-color: #4a9feb;
             /* 蓝色背景 */
             -webkit-border-radius: 50%;
@@ -158,12 +158,12 @@
             cursor: pointer;
             border: none;
             outline: none;
-            transition: background-color 0.3s;
+            -webkit-transition: background-color 0.3s;
             position: fixed;
             /* 固定定位 */
             right: 20px;
             /* 距离右边20px */
-            bottom: calc(10% - 40px);
+            bottom: calc(10% - 50px);
             /* 距离底部1/10处，减去按钮半径 */
         }
 
@@ -171,25 +171,25 @@
         .play-icon {
             width: 0;
             height: 0;
-            border-left: 24px solid white;
+            border-left: 30px solid white;
             /* 调整三角形宽度大小 白色边框*/
-            border-top: 18px solid transparent;
-            border-bottom: 18px solid transparent;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
             position: absolute;
             /* 绝对定位 */
             top: 50%;
             /* 从顶部50%开始 */
-            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
             /* 向上移动自身高度的一半 */
-            right: 25px;
+            right: 30px;
             /* 向右移动30px */
         }
 
         /* 停止图标（两条竖线）样式 */
         .stop-icon {
-            width: 35px;
+            width: 40px;
             /* 总宽度 */
-            height: 25px;
+            height: 30px;
             /* 高度 */
             position: relative;
         }
@@ -199,10 +199,10 @@
             content: '';
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
+            -webkit-transform: translateY(-50%);
+            width: 12px;
             /* 单条竖线的宽度 */
-            height: 25px;
+            height: 40px;
             /* 单条竖线的高度 */
             background-color: white;
         }
@@ -221,13 +221,13 @@
             /* 固定定位 */
             left: 5px;
             /* 距离左边5px */
-            bottom: calc(10% - 40px);
+            bottom: calc(10% - 50px);
             /* 与按钮在同一水平线上 */
             z-index: 1000;
             /* 确保在页面最上层 */
             padding: 10px;
             /* 内边距 */
-            border-radius: 5px;
+            -webkit-border-radius: 5px;
             /* 边框圆角 */
             color: white;
             /* 文字颜色 */
