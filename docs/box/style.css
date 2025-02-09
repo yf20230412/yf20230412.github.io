@@ -198,7 +198,7 @@ li span {
 
 .stop-icon::before,
 .stop-icon::after {
-    content: ' ';
+    content: '';
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
