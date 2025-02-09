@@ -235,7 +235,11 @@ function showStatus(message) {
 function toggleMusic() {
     if (musicPlaying) {
         bgMusic.pause();
-        toggleBtn.innerHTML = '<div class="play-icon"></div>';
+        const stopIcon = document.createElement('div');
+        stopIcon.classList.add('stop - icon');
+        toggleBtn.innerHTML = '';
+        toggleBtn.appendChild(stopIcon);
+
         showStatus('音乐已暂停');
         musicPlaying = false;
     } else {
