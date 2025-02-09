@@ -16,7 +16,8 @@
     <link rel="shortcut icon" href="https://a.2015888.xyz/images/icon/favicon.ico" />
     <link rel="Bookmark" href="https://a.2015888.xyz/images/icon/favicon.ico" />
     <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://yf1688.top/box/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
 
 </head>
 
@@ -118,8 +119,28 @@
             <br>
         </strong>
     </center>
+    <div id="overlay" class="overlay">
+        <div class="popup">
+            <!-- 添加微信公众号图片 -->
+            <div class="wechat-qr">
+                <img src="/jiemi/static/img/wechat-qr.jpg" alt="微信公众号二维码">
+                <p style="font-size: 26px; color: #00ccff;margin: 0;">关注公众号</p>
+                <p id="textToCopy" style="font - size: 18px; color: #9900ff;">风言锋语88</p>
+                <p style="font-size: 20px; color: #00F5FF; margin: 0;">
+                    <span style="font-size: 24px; color: orange; font-weight: bold;">后台</span>
+                    <span style="font-weight: bold;"> 回复</span>
+                    <span style="color: red; font-size: 24px; font-weight: bold;">验证码</span>
+                </p>
+            </div>
+            <h2>获取密码</h2>
+            <input type=" text" id="captcha-input" placeholder="关注公众号，将获取到的密码填入此处...">
+            <button onclick="checkCaptcha(event)">提交</button>
+            <p id="captcha-error" style="color: red; display: none;">验证码错误，请重试！</p>
+        </div>
+    </div>
 
-    <script src="https://yf1688.top/box/script.js"></script>
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
 
 </body>
 
