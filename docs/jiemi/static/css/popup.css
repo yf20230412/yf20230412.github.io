@@ -23,7 +23,7 @@
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /* 初始设置，适用于小屏幕 */
-    height: 800px;
+    height: 600px;
     max-height: 70%; /* 防止在小屏幕上弹窗过高 */
     width: 400px;
     max-width: 80%; /* 防止在小屏幕上弹窗过宽 */

@@ -62,7 +62,7 @@
             </div>
             <h2>获取密码</h2>
             <input type=" text" id="captcha-input" placeholder="关注公众号，将获取到的密码填入此处...">
-            <button onclick="checkCaptcha()">提交</button>
+            <button onclick="checkCaptcha(event)">提交</button>
             <p id="captcha-error" style="color: red; display: none;">验证码错误，请重试！</p>
         </div>
     </div>
