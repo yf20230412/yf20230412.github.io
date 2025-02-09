@@ -10,7 +10,7 @@
     z-index: 1000;
     justify-content: center; /* 保持水平居中 */
     align-items: flex-start; /* 垂直方向从顶部开始 */
-    padding-top: 20px; /* 垂直方向距离顶部20px */
+    padding-top: 80px; /* 垂直方向距离顶部20px */
     transition: transform 0.3s ease; /* 添加过渡效果 */
     
 }
@@ -37,8 +37,8 @@
     }
 }
 
-.popup h2 {
-    margin-bottom: 5px;
+.popup h1 {
+    margin-bottom: 10px;
 }
 
 .popup input {
