@@ -148,8 +148,8 @@ li span {
 
 /* 样式化按钮 */
 .circle-btn {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-color: #4a9feb;
     /* 蓝色背景 */
     border-radius: 50%;
@@ -165,7 +165,7 @@ li span {
     /* 固定定位 */
     right: 20px;
     /* 距离右边20px */
-    bottom: calc(10% - 25px);
+    bottom: calc(10% - 50px);
     /* 距离底部1/10处，减去按钮半径 */
 }
 
@@ -173,25 +173,25 @@ li span {
 .play-icon {
     width: 0;
     height: 0;
-    border-left: 15px solid white;
-    /* 调整大小 */
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-left: 30px solid white;
+    /* 调整三角形宽度大小 白色边框*/
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
     position: absolute;
     /* 绝对定位 */
     top: 50%;
     /* 从顶部50%开始 */
     transform: translateY(-50%);
     /* 向上移动自身高度的一半 */
-    right: 15px;
-    /* 向右移动15px */
+    right: 35px;
+    /* 向右移动35px */
 }
 
 /* 停止图标（两条竖线）样式 */
 .stop-icon {
-    width: 20px;
+    width: 40px;
     /* 总宽度 */
-    height: 15px;
+    height: 30px;
     /* 高度 */
     position: relative;
 }
@@ -202,9 +202,9 @@ li span {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 5px;
+    width: 10px;
     /* 单条竖线的宽度 */
-    height: 15px;
+    height: 30px;
     /* 单条竖线的高度 */
     background-color: white;
 }
@@ -223,7 +223,7 @@ li span {
     /* 固定定位 */
     left: 5px;
     /* 距离左边5px */
-    bottom: calc(10% - 25px);
+    bottom: calc(10% - 50px);
     /* 与按钮在同一水平线上 */
     z-index: 1000;
     /* 确保在页面最上层 */
