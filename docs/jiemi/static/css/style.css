@@ -41,7 +41,7 @@
             width: 100%;
             padding: 11px 30px 11px 11px;
             /* 右侧留出更多空间 */
-            padding-right: 30px;
+            padding-right: 35px;
             /* 以确保文本不会与清除按钮重叠 */
             border: none;
             font-size: 14px;
@@ -51,19 +51,19 @@
 
         #input-wrapper #clear-input-button {
             position: absolute;
-            right: 8px;
+            right: 5px;
             /* 调整距离右侧的距离 */
             top: 50%;
             transform: translateY(-50%);
             background: transparent;
             border: 1px solid #ccc;
             cursor: pointer;
-            font-size: 10px;
+            font-size: 16px;
             /* 调整字体大小 */
             color: red;
-            width: 12px;
+            width: 20px;
             /* 调整按钮宽度 */
-            height: 12px;
+            height: 20px;
             /* 调整按钮高度 */
             border-radius: 50%;
             /* 确保按钮为圆形 */
@@ -94,9 +94,9 @@
         /* 电脑模式 */
         @media (min-width: 768px) {
             #input-wrapper #clear-input-button {
-                width: 28px;
+                width: 22px;
                 /* 桌面模式下稍大一些 */
-                height: 28px;
+                height: 22px;
                 font-size: 18px;
                 /* 桌面模式下字体稍大 */
             }
@@ -203,8 +203,7 @@
             /* 选项列表宽度与输入框和按钮总宽度一致 */
             left: 0;
             /* 确保左侧对齐 */
-            max-width: 1000px;
-            /* 设置下拉框的最大宽度 */
+            
         }
        
 
@@ -284,7 +283,6 @@
                 width: calc(100% - 2px);
                 /* 确保选择框宽度与输入框一致 */
                 left: 0;
-                /* 确保左侧对齐 */
             }
         }
 
@@ -293,7 +291,7 @@
 
             #input-container,
             #output-container {
-                width: calc(100% - 250px);
+                width: calc(80% - 10px);
                 /* 统一宽度，确保对齐 */
                 margin-left: auto;
                 margin-right: auto;
@@ -317,9 +315,10 @@
             }
 
             .options {
-                width: calc(100% - 250px);
+                width: calc(80% - 10px);
                 /* 确保选择框宽度与输入框和按钮总宽度一致 */
                 left: 0;
+                right: 0;
                 /* 确保左侧对齐 */
             }
 
