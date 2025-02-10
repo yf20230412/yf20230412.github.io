@@ -199,7 +199,7 @@ function downloadJar() {
     // 判断链接后缀是否为允许的后缀之一
     if (fileLink && !allowedExtensions.some(ext => lowerCaseFileLink.endsWith(ext))) {
         // 提示用户正在解密链接
-        alert("正在解密jar链接，请点击确定后，耐心等待5秒左右即可...");
+        alert("正在解密jar链接，请点击确定后，耐心等待5秒左右，如不能触发浏览器自动下载,请手动复制浏览器上面的链接，手动下载...");
         // 如果链接后缀不在允许的列表中，则调用 get_real_link.php
         fetch('get_real_link.php', {
                 method: 'POST',
@@ -253,9 +253,12 @@ function downloadJar() {
             document.body.removeChild(downloadLink);
         }
 
-        // 使用函数
-        if (fileLink === 'http://bobohome.ignorelist.com:20247/潇洒/spider.jar') {
-            alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/3. 然后再重新点击下载`);
+        // 判断fileLink是否以http://bobohome.ignorelist.com或https://bobohome.ignorelist.com开头
+        if (fileLink && (
+                fileLink.startsWith('http://bobohome.ignorelist.com') ||
+                fileLink.startsWith('https://bobohome.ignorelist.com')
+            )) {
+            alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/3 然后再重新点击下载`);
         }
         downloadFile(fileLink);
 
