@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./static/img/favicon.ico">
     <link rel="Bookmark" href="./static/img/favicon.ico">
     <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="./static/css/popup.css">
+    <link rel="stylesheet" href="/static/popup.css">
     <title>TVBox接口解密</title>
 </head>
 
@@ -51,7 +51,7 @@
         <div class="popup">
             <!-- 添加微信公众号图片 -->
             <div class="wechat-qr">
-                <img src="./static/img/wechat-qr.jpg" alt="微信公众号二维码">
+                <img src="/static/wechat-qr.jpg" alt="微信公众号二维码">
                 <p style="font-size: 26px; color: #00ccff;margin: 0;">关注公众号</p>
                 <p id="textToCopy" style="font - size: 18px; color: #9900ff;">风言锋语88</p>
                 <p style="font-size: 20px; color: #00F5FF; margin: 0;">
@@ -70,7 +70,7 @@
 
 
     <script src="./static/js/jm.js"></script>
-    <script src="./static/js/popup.js"></script>
+    <script src="/static/popup.js"></script>
 
 </body>
 

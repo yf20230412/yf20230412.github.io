@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.header .menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: #495057;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Grid Layout for Desktop */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 cards per row on desktop */
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+
+    /* Stack the cards vertically on mobile */
+    .grid {
+        grid-template-columns: 1fr;
+        /* 1 card per row on mobile */
+    }
+}
+
+.card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.card .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.card .input-group {
+    display: flex;
+    flex-direction: row;
+    /* Ensures horizontal alignment */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.card .url {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    color: #495057;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    /* Ensures the input field stretches to fit available space */
+    min-width: 0;
+    /* Prevents input from overflowing */
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .copy-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.card .copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+}

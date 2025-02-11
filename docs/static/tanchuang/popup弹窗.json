@@ -1,0 +1,20 @@
+<!-- 弹窗遮罩 -->
+    <div id="overlay" class="overlay">
+        <div class="popup">
+            <!-- 添加微信公众号图片 -->
+            <div class="wechat-qr">
+                <img src="/static/wechat-qr.jpg" alt="微信公众号二维码">
+                <p style="font-size: 26px; color: #00ccff;margin: 0;">关注公众号</p>
+                <p id="textToCopy" style="font - size: 18px; color: #9900ff;">风言锋语88</p>
+                <p style="font-size: 20px; color: #00F5FF; margin: 0;">
+                    <span style="font-size: 24px; color: orange; font-weight: bold;">后台</span>
+                    <span style="font-weight: bold;"> 回复</span>
+                    <span style="color: red; font-size: 24px; font-weight: bold;">验证码</span>
+                </p>
+            </div>
+            <h2>获取密码</h2>
+            <input type=" text" id="captcha-input" placeholder="关注公众号，将获取到的密码填入此处...">
+            <button onclick="checkCaptcha(event)">提交</button>
+            <p id="captcha-error" style="color: red; display: none;">验证码错误，请重试！</p>
+        </div>
+    </div>
