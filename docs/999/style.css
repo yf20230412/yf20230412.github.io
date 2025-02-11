@@ -15,18 +15,18 @@ body {
 }
 
 .header .title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #343a40;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
     color: red;
     /* 设置链接文本颜色为红色 */
     font-weight: bold;
     /* 加粗 */
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     text-align: center;
 }
 
@@ -34,6 +34,7 @@ p a {
     font-size: 16px;
     text-decoration: none;
     /* 去掉下划线 */
+    text-align: right;
 }
 
 
