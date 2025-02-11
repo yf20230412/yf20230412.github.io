@@ -22,12 +22,18 @@ body {
 
 p {
     font-size: 20px;
-    color: red; /* 设置链接文本颜色为红色 */
-    font-weight: bold; /* 加粗 */
+    color: red;
+    /* 设置链接文本颜色为红色 */
+    font-weight: bold;
+    /* 加粗 */
+    margin-bottom: 18px;
+    text-align: center;
 }
+
 p a {
-    font-size: 16px;    
-    text-decoration: none; /* 去掉下划线 */
+    font-size: 16px;
+    text-decoration: none;
+    /* 去掉下划线 */
 }
 
 
@@ -100,7 +106,22 @@ p a {
     /* 防止输入溢出*/
     word-wrap: break-word;
     overflow: hidden;
+    /* 隐藏滚动条 */
+    white-space: nowrap;
+    /* 防止内容自动换行 */
     text-overflow: ellipsis;
+    /* 如果内容溢出，显示省略号 */
+    width: 100%;
+    /* 确保输入框宽度占满整个父容器 */
+    box-sizing: border-box;
+    /* 包含内边距和边框 */
+    cursor: pointer;
+    /* 鼠标指针变为可拖动样式 */
+}
+
+.url-container:hover {
+    overflow-x: auto;
+    /* 鼠标悬停时显示滚动条 */
 }
 
 .card .copy-btn {
