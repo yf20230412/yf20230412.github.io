@@ -24,7 +24,6 @@ h2 {
     /* 设置为透明，以消除背景 */
 }
 
-#url-table th,
 #url-table td {
     padding: 12px;
     text-align: left;
@@ -43,6 +42,11 @@ h2 {
     /* 调整表头字体大小 */
     border-bottom: 2px solid #ddd;
     /* 表头底部加粗边框 */
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #ddd;
+    /* 添加实线边框 */
 }
 
 #url-table td:nth-child(2) {
