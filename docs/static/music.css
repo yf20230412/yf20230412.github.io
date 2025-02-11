@@ -1,0 +1,98 @@
+/* 样式化按钮 */
+.circle-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #4a9feb;
+    /* 蓝色背景 */
+    border-radius: 50%;
+    /* 圆形 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    position: fixed;
+    /* 固定定位 */
+    right: 20px;
+    /* 距离右边20px */
+    bottom: calc(10% - 25px);
+    /* 距离底部1/10处，减去按钮半径 */
+}
+
+/* 播放图标（三角形）样式 */
+.play-icon {
+    width: 0;
+    height: 0;
+    border-left: 15px solid white;
+    /* 调整大小 */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    /* 绝对定位 */
+    top: 50%;
+    /* 从顶部50%开始 */
+    transform: translateY(-50%);
+    /* 向上移动自身高度的一半 */
+    right: 15px;
+    /* 向右移动15px */
+}
+
+/* 停止图标（两条竖线）样式 */
+.stop-icon {
+    width: 20px;
+    /* 总宽度 */
+    height: 15px;
+    /* 高度 */
+    position: relative;
+}
+
+.stop-icon::before,
+.stop-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    /* 单条竖线的宽度 */
+    height: 15px;
+    /* 单条竖线的高度 */
+    background-color: white;
+}
+
+.stop-icon::before {
+    left: 0;
+}
+
+.stop-icon::after {
+    right: 0;
+}
+
+/* 状态消息提示框样式 */
+#status-message {
+    position: fixed;
+    /* 固定定位 */
+    left: 5px;
+    /* 距离左边5px */
+    bottom: calc(10% - 25px);
+    /* 与按钮在同一水平线上 */
+    z-index: 1000;
+    /* 确保在页面最上层 */
+    padding: 10px;
+    /* 内边距 */
+    border-radius: 5px;
+    /* 边框圆角 */
+    color: white;
+    /* 文字颜色 */
+    font-size: 16px;
+    /* 字体大小 */
+    background-color: #333;
+    /* 深灰色背景 */
+    display: none;
+    /* 默认不显示 */
+    max-width: 300px;
+    /* 最大宽度 */
+    word-wrap: break-word;
+    /* 允许换行 */
+}
