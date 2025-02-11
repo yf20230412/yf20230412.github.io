@@ -1,4 +1,18 @@
-<!-- 弹窗遮罩 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <!--弹窗引用-->
+    <link rel="stylesheet" href="/static/tanchuang/sweetalert.min.css">
+    
+    
+</head>
+<!--
+🔸引用弹窗,body不需要只需要应用一个sweetalert.min.css文件外加 sweetalert.min.js  和  密码设置文件tcmm.js 就可以了
+🔹下面的是引用popup弹窗才用的-->
+<body>
+    <!-- 弹窗遮罩 -->
     <div id="overlay" class="overlay">
         <div class="popup">
             <!-- 添加微信公众号图片 -->
@@ -18,3 +32,13 @@
             <p id="captcha-error" style="color: red; display: none;">验证码错误，请重试！</p>
         </div>
     </div>
+
+    <!-- 弹窗引用   -->
+
+    <script src="/static/tanchuang/sweetalert.min.js"></script>
+    <script src="/static/tanchuang/tcmm.js"></script>
+
+</body>
+
+
+</html>

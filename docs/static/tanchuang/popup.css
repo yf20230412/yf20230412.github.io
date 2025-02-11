@@ -10,7 +10,7 @@
     z-index: 1000;
     justify-content: center; /* 保持水平居中 */
     align-items: flex-start; /* 垂直方向从顶部开始 */
-    padding-top: 20px; /* 垂直方向距离顶部20px */
+    padding-top: 80px; /* 垂直方向距离顶部20px */
     transition: transform 0.3s ease; /* 添加过渡效果 */
 }
 
@@ -24,7 +24,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /* 初始设置，适用于小屏幕 */
     height: 600px;
-    max-height: 70%; /* 防止在小屏幕上弹窗过高 */
+    max-height: 80%; /* 防止在小屏幕上弹窗过高 */
     width: 400px;
     max-width: 80%; /* 防止在小屏幕上弹窗过宽 */
     position: relative; /* 确保弹窗可以被移动 */
@@ -34,7 +34,7 @@
 @media (min-width: 768px) {
   .popup {
         height: 600px;
-        max-height: 70%;
+        max-height: 80%;
         width: 1200px;
         max-width: 80%;
     }
@@ -68,7 +68,7 @@
 /* 微信公众号图片和文字样式 */
 .wechat-qr {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* 图片距离边框顶部 */
     margin-bottom: 5px;
 }
 
