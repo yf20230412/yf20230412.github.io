@@ -46,20 +46,20 @@ p a {
     padding: 20px;
 }
 
-/* Grid Layout for Desktop */
+/* 桌面的网格布局 */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 cards per row on desktop */
+    /*  桌面上的每排4卡片 */
     gap: 15px;
 }
 
 @media (max-width: 768px) {
 
-    /* Stack the cards vertically on mobile */
+    /* 垂直将卡片堆放在手机上 */
     .grid {
         grid-template-columns: 1fr;
-        /* 1 card per row on mobile */
+        /* 手机上的每行1卡片 */
     }
 }
 
@@ -82,7 +82,7 @@ p a {
 .card .input-group {
     display: flex;
     flex-direction: row;
-    /* Ensures horizontal alignment */
+    /* 确保水平对齐 */
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -95,9 +95,9 @@ p a {
     padding: 10px;
     border-radius: 5px;
     flex: 1;
-    /* Ensures the input field stretches to fit available space */
+    /* 确保输入字段伸展以适合可用空间 */
     min-width: 0;
-    /* Prevents input from overflowing */
+    /* 防止输入溢出*/
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
