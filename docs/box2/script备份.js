@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
             const urlList = document.getElementById('url-list');
-            const jsonUrl = 'M.json'; // JSON 文件链接
+            const jsonUrl = 'https://yf1688.top/static/M.json'; // JSON 文件链接
         
             fetch(jsonUrl)
                 .then(response => {
