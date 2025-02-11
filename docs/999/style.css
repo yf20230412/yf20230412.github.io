@@ -15,13 +15,13 @@ body {
 }
 
 .header .title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #343a40;
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
     color: red;
     /* 设置链接文本颜色为红色 */
     font-weight: bold;
@@ -109,7 +109,7 @@ p a {
     /* 隐藏滚动条 */
     white-space: nowrap;
     /* 防止内容自动换行 */
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
     /* 如果内容溢出，显示省略号 */
     width: 100%;
     /* 确保输入框宽度占满整个父容器 */

@@ -5,7 +5,7 @@ swal({
             closeOnConfirm: false,
             closeOnCancel: false,
             confirmButtonText: "确 认",
-            imageUrl: 'https://yf1688.top/static/wechat-qr.jpg', imageSize: '200x200',
+            imageUrl: 'https://yf1688.top/static/tanchuang/wechat-qr.jpg', imageSize: '200x200',
             inputPlaceholder: "关注微信公众号后台回复∶验证码",
             showLoaderOnConfirm: true,
         }, function(inputValue) {
