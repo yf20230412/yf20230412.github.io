@@ -28,12 +28,8 @@ p {
     /* 加粗 */
     margin-bottom: 12px;
     text-align: center;
-}
-
-p a {
     text-decoration: none;
     /* 去掉下划线 */
-    text-align: right!important;
 }
 
 
