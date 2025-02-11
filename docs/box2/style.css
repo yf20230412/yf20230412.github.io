@@ -40,6 +40,9 @@ h2 {
     color: #ff0000;
     font-size: 28px;
     /* 调整表头字体大小 */
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     border-bottom: 2px solid #ddd;
     /* 表头底部加粗边框 */
     padding: 12px;
