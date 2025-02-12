@@ -43,7 +43,7 @@
 .stop-icon {
     width: 30px;
     /* 总宽度 */
-    height: 20px;
+    height: 25px;
     /* 高度 */
     position: relative;
 }
@@ -56,7 +56,7 @@
     transform: translateY(-50%);
     width: 10px;
     /* 单条竖线的宽度 */
-    height: 20px;
+    height: 25px;
     /* 单条竖线的高度 */
     background-color: white;
 }
