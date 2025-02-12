@@ -21,13 +21,13 @@ body {
 }
 
 p {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
     font-size: 16px;
     margin-bottom: 10px;
-    font-weight: bold;
-    /* 加粗 */
+    font-weight: bold; /* 加粗 */
+    
 }
 
 p span {
@@ -36,24 +36,27 @@ p span {
     /* 设置链接文本颜色为红色 */
     display: block;
     margin: 0 auto;
-    text-decoration: none;
-    /* 去掉下划线 */
+    text-decoration: none; /* 去掉下划线 */
+    width: 100%;
+    text-align: center;
 }
 
 p a {
-    text-align: right;
-    margin-top: -1em; 
-    margin-left: auto;
-    display: inline-block; /* 更灵活的布局 */
-    overflow: hidden;
+    margin-top: 1em;
+    position: absolute;
+    left: 50%; /* 元素左边界定位到父容器中心 */   
+    transform: translateX(120px); /* 再向左偏移 50px */
     text-decoration: none;
     background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
-    background-size: 100% 100%; /* 调整背景尺寸 */
+    background-size: 100% 100%;
+    /* 调整背景尺寸 */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
- text-decoration-line: none;
-    animation: gradientAnimation 3s infinite ease-in-out; /* 调整动画效果 */
+    text-decoration-line: none;
+    transition: background 0.5s ease;
+    animation: gradientAnimation 3s infinite alternate;
+    /* 调整动画效果 */
 }
 
 
