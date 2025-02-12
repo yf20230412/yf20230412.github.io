@@ -47,15 +47,23 @@ p a {
     left: 50%; /* 元素左边界定位到父容器中心 */   
     transform: translateX(115px); /* 再向右偏移 50px */
     text-decoration: none;
-    background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
-    background-size: 100% 100%;
+    background: linear-gradient(135deg,
+                    #0eaf6d,
+                    #ff6ac6 25%,
+                    #147b96 50%,
+                    #e6d205 55%,
+                    #2cc4e0 60%,
+                    #8b2ce0 80%,
+                    #ff6384 95%,
+                    #08dfb4);
+    background-size: 200% 200%;
     /* 调整背景尺寸 */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-decoration-line: none;
-    transition: background 0.5s ease;
-    animation: gradientAnimation 3s infinite alternate;
+    transition: background 3s ease;
+    animation: gradientAnimation 6s infinite alternate;
     /* 调整动画效果 */
 }
 

@@ -32,14 +32,6 @@
         color: #FF0000; /* 保持您指定的颜色 */
     }
 
-    .corner-image {
-        position: absolute;
-        top: 10px; /* 距离顶部的距离，可以根据需要调整 */
-        right: 10px; /* 距离右侧的距离，这里修改了百分比以直接使用像素值 */
-        width: 220px;
-        height: auto;
-    }
-
 
     .footer-备案 {
         background-color: #000;
