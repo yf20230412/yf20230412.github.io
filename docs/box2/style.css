@@ -45,7 +45,7 @@ p a {
     margin-top: 1em;
     position: absolute;
     left: 50%; /* 元素左边界定位到父容器中心 */   
-    transform: translateX(120px); /* 再向右偏移 50px */
+    transform: translateX(115px); /* 再向右偏移 50px */
     text-decoration: none;
     background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
     background-size: 100% 100%;
