@@ -44,16 +44,18 @@ p a {
     text-align: right;
     margin-top: -1em; 
     margin-left: auto;
-    display: inline;
+    display: inline-block; /* 更灵活的布局 */
+    overflow: hidden;
     text-decoration: none;
     background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
-    background-size: 200% 200%;
+    background-size: 100% 100%; /* 调整背景尺寸 */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-decoration-line: none;
-    animation: gradientAnimation 3s infinite alternate;
+ text-decoration-line: none;
+    animation: gradientAnimation 3s infinite ease-in-out; /* 调整动画效果 */
 }
+
 
 @keyframes gradientAnimation {
     0% {
