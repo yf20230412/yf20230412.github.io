@@ -111,80 +111,7 @@
         		}
     </style>
     <!--播放音乐按钮样式 -->
-    <style>
-        /* 样式化按钮 */
-        .circle-btn {
-        width: 50px;
-        height: 50px;
-        background-color: #4a9feb; /* 蓝色背景 */
-        border-radius: 50%; /* 圆形 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        transition: background-color 0.3s;
-        position: fixed; /* 固定定位 */
-        right: 20px; /* 距离右边20px */
-        bottom: calc(10% - 25px); /* 距离底部1/10处，减去按钮半径 */
-        }
-        
-        /* 播放图标（三角形）样式 */
-        .play-icon {
-        width: 0;
-        height: 0;
-        border-left: 15px solid white; /* 调整大小 */
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        position: absolute; /* 绝对定位 */
-        top: 50%; /* 从顶部50%开始 */
-        transform: translateY(-50%); /* 向上移动自身高度的一半 */
-        right: 15px; /* 向右移动15px */
-        }
-        
-        /* 停止图标（两条竖线）样式 */
-        .stop-icon {
-            width: 20px; /* 总宽度 */
-            height: 15px; /* 高度 */
-            position: relative;
-        }
-        
-        .stop-icon::before,
-        .stop-icon::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px; /* 单条竖线的宽度 */
-            height: 15px; /* 单条竖线的高度 */
-            background-color: white;
-        }
-        
-        .stop-icon::before {
-            left: 0;
-        }
-        
-        .stop-icon::after {
-            right: 0;
-        }
-        
-        /* 状态消息提示框样式 */
-        #status-message {
-        position: fixed; /* 固定定位 */
-        left: 5px; /* 距离左边5px */
-        bottom: calc(10% - 25px); /* 与按钮在同一水平线上 */
-        z-index: 1000; /* 确保在页面最上层 */
-        padding: 10px; /* 内边距 */
-        border-radius: 5px; /* 边框圆角 */
-        color: white; /* 文字颜色 */
-        font-size: 16px; /* 字体大小 */
-        background-color: #333; /* 深灰色背景 */
-        display: none; /* 默认不显示 */
-        max-width: 300px; /* 最大宽度 */
-        word-wrap: break-word; /* 允许换行 */
-        }
-    </style>
+    <link rel="stylesheet" href="https://yf1688.top/static/music/music.css" />
 
 </head>
 
@@ -218,8 +145,8 @@
                     </li>
                 </ul>
                 <div class="wechat">
-       <img src="http://www.2015888.xyz/img/wxgzh.png" alt="公众号 QR Code" style="width: 100%; height: auto;">
-   </div>
+                    <img src="http://www.2015888.xyz/img/wxgzh.png" alt="公众号 QR Code" style="width: 100%; height: auto;">
+                </div>
             </div>
         </div>
     </div>
@@ -230,67 +157,7 @@
         <div class="play-icon"></div>
     </div>
     <div id="status-message"></div>
-    <script>
-        var musicFiles = [
-	    'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3',
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3',
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3',
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3',
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3',
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3',
-		'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
-    ];
-        
-        var bgMusic = document.getElementById('bg-music');
-        var toggleBtn = document.getElementById('toggle-btn');
-        var statusMessage = document.getElementById('status-message');
-        var musicPlaying = false;
-        
-        function getRandomMusic() {
-            var randomIndex = Math.floor(Math.random() * musicFiles.length);
-            return musicFiles[randomIndex];
-        }
-        
-        function loadRandomMusic() {
-            var randomMusic = getRandomMusic();
-            bgMusic.src = randomMusic;
-            // 预加载音乐
-            bgMusic.load();
-        }
-        
-        function showStatus(message) {
-            statusMessage.innerText = message;
-            statusMessage.style.display = 'block';
-            setTimeout(() => {
-                statusMessage.style.display = 'none';
-            }, 2000); // 2秒后隐藏提示
-        }
-        
-        function toggleMusic() {
-            if (musicPlaying) {
-                bgMusic.pause();
-                toggleBtn.innerHTML = '<div class="play-icon"></div>';
-                showStatus('音乐已暂停');
-                musicPlaying = false;
-            } else {
-                bgMusic.play().then(() => {
-                    toggleBtn.innerHTML = '<div class="stop-icon"></div>';
-                    showStatus('正在为你播放音乐');
-                    musicPlaying = true;
-                }).catch((error) => {
-                    console.error('自动播放失败：', error);
-                    showStatus('播放失败，请重试');
-                });
-            }
-        }
-        
-        // 预加载音乐
-        loadRandomMusic();
-        
-        toggleBtn.addEventListener('click', toggleMusic);
-    </script>
+    <script src='/static/music/music.js'></script>
 </body>
 
 </html>

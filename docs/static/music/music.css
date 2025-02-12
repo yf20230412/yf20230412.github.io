@@ -1,7 +1,7 @@
 /* 样式化按钮 */
 .circle-btn {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: #4a9feb;
     /* 蓝色背景 */
     border-radius: 50%;
@@ -17,7 +17,7 @@
     /* 固定定位 */
     right: 20px;
     /* 距离右边20px */
-    bottom: calc(10% - 25px);
+    bottom: calc(10% - 30px);
     /* 距离底部1/10处，减去按钮半径 */
 }
 
@@ -25,10 +25,10 @@
 .play-icon {
     width: 0;
     height: 0;
-    border-left: 15px solid white;
+    border-left: 25px solid white;
     /* 调整大小 */
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
     position: absolute;
     /* 绝对定位 */
     top: 50%;
@@ -41,9 +41,9 @@
 
 /* 停止图标（两条竖线）样式 */
 .stop-icon {
-    width: 20px;
+    width: 30px;
     /* 总宽度 */
-    height: 15px;
+    height: 20px;
     /* 高度 */
     position: relative;
 }
@@ -54,9 +54,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 5px;
+    width: 10px;
     /* 单条竖线的宽度 */
-    height: 15px;
+    height: 20px;
     /* 单条竖线的高度 */
     background-color: white;
 }
@@ -75,7 +75,7 @@
     /* 固定定位 */
     left: 5px;
     /* 距离左边5px */
-    bottom: calc(10% - 25px);
+    bottom: calc(10%-30px);
     /* 与按钮在同一水平线上 */
     z-index: 1000;
     /* 确保在页面最上层 */
