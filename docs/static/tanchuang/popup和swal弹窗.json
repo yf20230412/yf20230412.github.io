@@ -32,6 +32,18 @@
             <p id="captcha-error" style="color: red; display: none;">验证码错误，请重试！</p>
         </div>
     </div>
+    
+    
+    
+    <!--音乐🎶-->
+                <audio id="bg-music" loop>
+                    您的浏览器不支持 audio 标签。
+                </audio>
+                <div id="toggle-btn" class="circle-btn">
+                    <div class="play-icon"></div>
+                </div>
+                <div id="status-message"></div>
+                <!--完-->
 
     <!-- 弹窗引用   -->
 
