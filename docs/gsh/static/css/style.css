@@ -54,6 +54,7 @@
             background-color: #000;
             color: #00ff00;
             border: 1px solid #444;
+            margin - bottom: 15px;
         }
 
         .container {
@@ -137,6 +138,17 @@
             margin-top: 10px;
             font-weight: bold;
         }
+        
+        /* 下拉菜单样式 */
+        .dropdown-menu {
+            width: 100%; /* 确保下拉菜单宽度与按钮一致 */
+        }
+        .dropdown-menu a {
+            text-align: left; /* 左对齐 */
+            display: block; /* 单列显示 */
+        }
+        
+        
         /* 页脚样式 */
 footer {
     position: fixed;

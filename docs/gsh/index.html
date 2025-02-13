@@ -23,13 +23,15 @@
             <li><a id="base64Link" title="Base64编解码" href="#" onclick="activateBase64(); return false;">Base64编解码</a></li>
             <li><a id="gzipLink" title="Gzip加密解密" href="#" onclick="activateGzip(); return false;">Gzip加解密</a></li>
             <li><a id="tvboxLink" title="tvbox接口解密" href="http://www.2015888.xyz/jiemi/" onclick="activatetvbox(); return false;">tvbox接口解密</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多工具 ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a id="JSONLink" title="json格式校验" href="https://www.bejson.com/explore/index_new/" onclick="activatejson(); return false;">JSON格式校验</a></li>
-                    <li><a id="m3uLink" title="TXT、M3U互转" href="https://yf1688.top/m3u/" onclick="activatem3u(); return false;">TXT、M3U互转</a></li>
-                    <li><a id="UnixLink" title="MD5、MD4、SHA* 等 Hash 在线计算工具" href="#" onclick="alert('😂暂未开通,敬请期待~');">MD5</a></li>
-                </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    更多工具 ▼
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" id="JSONLink" title="json格式校验" href="https://www.bejson.com/explore/index_new/" onclick="activatejson(); return false;">JSON格式校验</a>
+                    <a class="dropdown-item" id="m3uLink" title="TXT、M3U互转" href="https://yf1688.top/m3u/" onclick="activatem3u(); return false;">TXT、M3U互转</a>
+                    <a class="dropdown-item" id="UnixLink" title="MD5、MD4、SHA* 等 Hash 在线计算工具" href="#" onclick="alert('😂暂未开通,敬请期待~');">MD5</a>
+                </div>
             </li>
         </ol>
 
@@ -88,6 +90,10 @@
     <script src="./static/js/Base64.js"></script>
     <script src="./static/js/gzip.js"></script>
     <script src="/static/F12.js"></script>
+    <!-- 下拉菜单 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <!--页脚-->
