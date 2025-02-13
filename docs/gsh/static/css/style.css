@@ -141,11 +141,23 @@
         
         /* 下拉菜单样式 */
         .dropdown-menu {
-            width: 100%; /* 确保下拉菜单宽度与按钮一致 */
+            display: none; /* 默认隐藏下拉菜单 */
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
-        .dropdown-menu a {
-            text-align: left; /* 左对齐 */
-            display: block; /* 单列显示 */
+        .dropdown:hover .dropdown-menu {
+            display: block; /* 鼠标悬停时显示下拉菜单 */
+        }
+        .dropdown-item {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown-item:hover {
+            background-color: #f1f1f1;
         }
         
         

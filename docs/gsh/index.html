@@ -23,8 +23,8 @@
             <li><a id="base64Link" title="Base64编解码" href="#" onclick="activateBase64(); return false;">Base64编解码</a></li>
             <li><a id="gzipLink" title="Gzip加密解密" href="#" onclick="activateGzip(); return false;">Gzip加解密</a></li>
             <li><a id="tvboxLink" title="tvbox接口解密" href="http://www.2015888.xyz/jiemi/" onclick="activatetvbox(); return false;">tvbox接口解密</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button">
                     更多工具 ▼
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -95,7 +95,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+    <script>
+        // JavaScript代码控制下拉菜单的显示和隐藏
+        document.querySelector('.dropdown').addEventListener('mouseover', function() {
+            this.querySelector('.dropdown-menu').style.display = 'block'; // 鼠标悬停时显示
+        });
+        
+        document.querySelector('.dropdown').addEventListener('mouseout', function() {
+            this.querySelector('.dropdown-menu').style.display = 'none'; // 鼠标移出时隐藏
+        });
+    </script>
+    
+    
+    
     <!--页脚-->
     <footer>
         <div align="center">
