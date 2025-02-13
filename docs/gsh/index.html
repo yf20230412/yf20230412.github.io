@@ -23,9 +23,14 @@
             <li><a id="base64Link" title="Base64编解码" href="#" onclick="activateBase64(); return false;">Base64编解码</a></li>
             <li><a id="gzipLink" title="Gzip加密解密" href="#" onclick="activateGzip(); return false;">Gzip加解密</a></li>
             <li><a id="tvboxLink" title="tvbox接口解密" href="http://www.2015888.xyz/jiemi/" onclick="activatetvbox(); return false;">tvbox接口解密</a></li>
-            <li><a id="JSONLink" title="json格式校验" href="https://www.bejson.com/explore/index_new/" onclick="activatejson(); return false;">JSON格式校验</a></li>
-            <li><a id="m3uLink" title="TXT、M3U互转" href="https://yf1688.top/m3u/" onclick="activatem3u(); return false;">TXT、M3U互转</a></li>           
-            <li><a id="UnixLink" title="MD5、MD4、SHA* 等 Hash 在线计算工具" href="#" onclick="alert('😂暂未开通,敬请期待~');">MD5</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多工具 ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a id="JSONLink" title="json格式校验" href="https://www.bejson.com/explore/index_new/" onclick="activatejson(); return false;">JSON格式校验</a></li>
+                    <li><a id="m3uLink" title="TXT、M3U互转" href="https://yf1688.top/m3u/" onclick="activatem3u(); return false;">TXT、M3U互转</a></li>
+                    <li><a id="UnixLink" title="MD5、MD4、SHA* 等 Hash 在线计算工具" href="#" onclick="alert('😂暂未开通,敬请期待~');">MD5</a></li>
+                </ul>
+            </li>
         </ol>
 
         <!-- 缩进设置和格式化按钮 -->
@@ -42,9 +47,9 @@
         </div>
 
         <!-- Url编码解码按钮 -->
-        <div class="controls-row" id="urlControls" style="display: none;">            
-         <button class="urlencode-btn" onclick="encodeUrl()">Url编码</button>
-   <button class="urldecode-btn" onclick="decodeUrl()">Url解码</button>
+        <div class="controls-row" id="urlControls" style="display: none;">
+            <button class="urlencode-btn" onclick="encodeUrl()">Url编码</button>
+            <button class="urldecode-btn" onclick="decodeUrl()">Url解码</button>
         </div>
 
         <!-- Base64编码解码按钮 -->
@@ -52,7 +57,7 @@
             <button class="encode-btn" onclick="encodeBase64()">Base64编码</button>
             <button class="decode-btn" onclick="decodeBase64()">Base64解码</button>
         </div>
-        
+
         <!-- Gzip加密解密按钮 -->
         <div class="controls-row" id="gzipControls" style="display: none;">
             <button class="encode-btn" onclick="encodeGzip()">Gzip加密</button>
@@ -83,10 +88,10 @@
     <script src="./static/js/Base64.js"></script>
     <script src="./static/js/gzip.js"></script>
     <script src="/static/F12.js"></script>
-    
-    
-    <!--页脚-->    
-<footer>
+
+
+    <!--页脚-->
+    <footer>
         <div align="center">
             本站已安全运行：<SPAN id=span_dt_dt style="color: #4b5cc4;"></SPAN>
             <SCRIPT language=javascript>
