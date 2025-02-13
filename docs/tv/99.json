@@ -8,13 +8,18 @@
 
     "logo": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/img/588.gif",
 
-    "lives": [{
-        "name": "肥羊_live",
+    "lives": [
+    {
+        "name": "肥羊直播",
         "type": 3,
         "api": "csp_Feiyang",
-        "url": "tv.m3u",
+        "url": "https://9877.kstore.space/Live/live.m3u",
         "timeout": 10,
-        "ua": "okhttp/3.15"
+        "ua": "okhttp/3.15",
+        "catchup": {
+            "type": "append",
+            "source": "?livemode=4&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"
+        }
     },
     {
         "name": "自建更新_live",
@@ -84,6 +89,16 @@
         "changeable": 1,
         "filterable": 1
     },   
+    {
+        "key": "预告",
+        "name": "🔍新片🔸预告🔍",
+        "type": 3,
+        "api": "csp_YGP",
+        "quickSearch": 0,
+        "searchable": 0,
+        "changeable": 1,
+        "filterable": 1
+    },     
     {
         "key": "腾讯",
         "name": "🐧┃腾腾┃解析🌺",
@@ -253,26 +268,57 @@
     },
     {
         "key": "厂长资源",
-        "name": "🏭️┃厂长┃1080🌺",
+        "name": "🏭️┃厂长┃1080💯",
         "type": 3,
         "api": "csp_Czzy",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
+        "ext": {
+            "danmu": false
+        },
         "timeout": 25
     },
     {
         "key": "素白白",
-        "name": "👻┃素白┃1080💯",
+        "name": "👻┃素白┃1080🌺",
         "type": 3,
-        "api": "csp_XBPQ",
+        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "ext": "./json/素白白.json",
+        "ext": "./js/素白白.js",
         "timeout": 25
+    },
+    {
+        "key": "热播弹幕",
+        "name": "🔆┃热播┃弹幕💯",
+        "type": 3,
+        "api": "csp_TianTian",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+                "danmu": true,
+                "site": "aHR0cDovL3YucmJvdHYuY24="
+        }
+    },
+    {
+        "key": "浪酷弹幕",
+        "name": "🌊┃浪酷┃弹幕💯",
+        "type": 3,
+        "api": "csp_TianTian",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+                "danmu": true,
+                "site": "aHR0cDovL3YubGt1eXMuY24="
+        }
     },
     {
         "key": "荣荣影视",
@@ -361,6 +407,52 @@
         "filterable": 1,
         "ext": "w7TClcK8w5rDrcKYwoPCmcKkw57ClcK0wpvCnF9SwoPCmcOtw5jDj8Orw6ZValLCmMOtw6fDqsOswrRiX8KdacOcw57CrMKxw6DCqmbCnmPDpsKow6XCsMKywpRhYMKUwqfDl8Ozw7LDtGVewpPCn8Omwq3Cr8KvwrJsX8KRwqDDosKhw6rDocOqVVxSecOnw5zDrsOQw6nCpcKUUmrCm8KVwqbCm8OuwpzCoFJqwpvDjuWHv+mFoeaQn+WQllzlhpzkvYflkbDCreW/q+iov+i2vua7g+esicKNUsKlwpXCu8Oew61+wpXCqVLCs8KVw57DssOzwq3CpMKmwpHDqcOcw5vDqcOqwqzCqcKUwqPCm8KfwpzCusOfwqZ5wqZSwrPClcOew7LDs8KtwqTCpsKRw6nDnMObw6nDqsKswqnClMKjwpvDsA==",
         "timeout": 15
+    },
+    {
+        "key": "云播影视",
+        "name": "☁️┃云播┃APP💯",
+        "type": 3,
+        "api": "csp_AppGetApp",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": "w7TCmsK8w5rDrcKYwoPCmcKkw57CmsK0wpnCoVpcUFfDjMOcw67DnsOPwqXCnFdqwpnCmsOiw63DrsKjal9fw6DDmMOuw5rDqsKjXsKkwqbDssOVw5vDqcOqYcKTwp/CncKow5TDqsOiwqjCo8KYwqBXwqXCk8Khw4LDqMKcwqTCh8Kfw6vDl8KhwrPCmlrCmcKewpnDrcOJwqvCqsKzWlxQV8Otw5zDqsKgwrRTV8KL5Ya16YWh5pCY5ZGdwqXlh6bkvYrlkKdq5b6h6Ki/6La35ryK562Sw5daXFBXwrrDmMOtw4TDn8KsV2pQwqDDoMOjw5zDpWVkZWjDpsOcw53DpMKsZ2VoV8KlwpPCocK6w5/CpnnCplfCs8KTwqHDpsOjwpbCm2Jkwq7Cq8Onw6LDncKeYmRlwrHCmsKmwpnCocKbwpXCkcKUw57DpcOtwqDCtFPCq1fCpcOsw5jDrMKmw5vCmsKVwp7CpMKgwq3CmsKgw4fCosKqwpnCnMOlw5TCqcKuwqhjUFjCh8Oiw6HDnsOow7HCplB+woTCmcKkwqrCp8KqblDCh8KZw6fCqcKuwrTCmsKrZmRZwpnCtMOqw6nDpsKYwofClcKSw4TDnMOuwqjCr2ZnXmPCr8KTwqLDhMOCwod9fFzCmcOfw6PDpMOfU3fClcKTw6TDosKjwpnCvcKbwqLCn8Kdw57CosKrwqrCrGFgXmDCp8KjwprDjMObwpnCkcKiwpnCqMKowq3CsMKoZmZXXMKZwprDm8Olw6bCosKnc8Kiw6jDpsOtw4nDrMKiwqTCn8KTw6jDn8OMw57DnsKcwqLClcKTw63DpsKhwrPCmsKHwqLCpcKVw7bCn8KawqDDnsKYwpPCosKpw6nDp8OFw57Ds1pqUFfDssOUw6nDsMObwqHCl2BhwqvCqcKhw7Y=",
+        "timeout": 10
+    },  
+    {
+        "key": "小米虎虎",
+        "name": "🐯┃虎虎┃APP💯",
+        "type": 3,
+        "api": "csp_AppHuhu",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        
+        "timeout": 10
+    },  
+    {
+        "key": "小米多多",
+        "name": "👭┃多多┃APP💯",
+        "type": 3,
+        "api": "csp_DuoDuoApp",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
+        "key": "小米良人",
+        "name": "🧍‍♂️┃良人┃APP💯",
+        "type": 3,
+        "api": "csp_LiangRenApp",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
     },
     {
         "key": "真心影视",

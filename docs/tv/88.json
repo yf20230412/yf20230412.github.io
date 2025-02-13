@@ -8,13 +8,18 @@
 
     "logo": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/img/588.gif",
 
-    "lives": [{
-        "name": "肥羊_live",
+    "lives": [
+    {
+        "name": "肥羊直播",
         "type": 3,
         "api": "csp_Feiyang",
-        "url": "tv.m3u",
+        "url": "https://9877.kstore.space/Live/live.m3u",
         "timeout": 10,
-        "ua": "okhttp/3.15"
+        "ua": "okhttp/3.15",
+        "catchup": {
+            "type": "append",
+            "source": "?livemode=4&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"
+        }
     },
     {
         "name": "自建更新_live",
