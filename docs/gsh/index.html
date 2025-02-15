@@ -10,6 +10,7 @@
     <link rel="Bookmark" href="/1115/static/img/favicon.ico">
     <title>小鱼专用工具箱</title>
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/jiemi.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
 </head>
 
@@ -22,7 +23,7 @@
             <li><a id="urlLink" title="Url编解码" href="#" onclick="activateUrl(); return false;">Url编码解码</a></li>
             <li><a id="base64Link" title="Base64编解码" href="#" onclick="activateBase64(); return false;">Base64编码解码</a></li>
             <li><a id="gzipLink" title="Gzip加密解密" href="#" onclick="activateGzip(); return false;">Gzip加密解密</a></li>
-            <li><a id="tvboxLink" title="tvbox接口解密" href="http://www.2015888.xyz/jiemi/" onclick="activatetvbox(); return false;">TVBox接口解密</a></li>
+            <li><a id="tvboxLink" title="tvbox接口解密" href="#" onclick="activatetvbox(); return false;">TVBox接口解密</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" onclick="toggleDropdown(event);">
                     更多工具 ▼
@@ -35,6 +36,29 @@
                 </div>
             </li>
         </ol>
+        <!-- TVBox接口解密 -->
+        <h1>TVBox接口解密</h1>
+    <div id="input-container">
+        <div id="input-wrapper">
+            <input type="text" id="input-field" placeholder="点击等待,下拉选择..." onclick="toggleOptions()" autocomplete="off">
+            <button id="clear-input-button" onclick="clearInput()">×</button>
+            <div id="optionsList" class="options"></div>
+        </div>
+        <button onclick="copyInput()">复制接口</button>
+        <button onclick="getIPTV()">一键解码</button>
+    </div>
+
+    <div id="error-message"></div>
+    <div id="loading-message">接口正在解密，请稍候～</div>
+    <div id="output-container">
+        <textarea id="output" rows="30" cols="100" readonly></textarea>
+        <div id="button-container">
+            <button id="copy-output-button" onclick="copyOutput()">复制内容</button>
+            <button id="download-jar-button" onclick="downloadJar()">下载Jar</button>
+            <button id="home-button" onclick="goToHome()">主页</button>
+            <button id="clear-button" onclick="clearOutput()">一键清空</button>
+        </div>
+    </div>
 
         <!-- 缩进设置和格式化按钮 -->
         <div class="controls-row" id="jsonControls">
@@ -90,6 +114,7 @@
     <script src="./static/js/copyemptying.js"></script>
     <script src="./static/js/Base64.js"></script>
     <script src="./static/js/gzip.js"></script>
+    <script src="./static/js/jiemi.js"></script>
     <script src="/static/F12.js"></script>
     <!-- 下拉菜单 -->
 
