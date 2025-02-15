@@ -1,3 +1,7 @@
+function activatetvbox() {
+    // 调用 getIPTV 函数来解密 TVBox 接口
+    getIPTV();
+}
 var inputField = document.getElementById("input-field");
 var clearInputButton = document.getElementById("clear-input-button");
 var optionsList = document.getElementById("optionsList");
