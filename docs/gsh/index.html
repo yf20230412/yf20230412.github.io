@@ -36,29 +36,6 @@
                 </div>
             </li>
         </ol>
-        <!-- TVBox接口解密 -->
-        <h1>TVBox接口解密</h1>
-    <div id="input-container">
-        <div id="input-wrapper">
-            <input type="text" id="input-field" placeholder="点击等待,下拉选择..." onclick="toggleOptions()" autocomplete="off">
-            <button id="clear-input-button" onclick="clearInput()">×</button>
-            <div id="optionsList" class="options"></div>
-        </div>
-        <button onclick="copyInput()">复制接口</button>
-        <button onclick="getIPTV()">一键解码</button>
-    </div>
-
-    <div id="error-message"></div>
-    <div id="loading-message">接口正在解密，请稍候～</div>
-    <div id="output-container">
-        <textarea id="output" rows="30" cols="100" readonly></textarea>
-        <div id="button-container">
-            <button id="copy-output-button" onclick="copyOutput()">复制内容</button>
-            <button id="download-jar-button" onclick="downloadJar()">下载Jar</button>
-            <button id="home-button" onclick="goToHome()">主页</button>
-            <button id="clear-button" onclick="clearOutput()">一键清空</button>
-        </div>
-    </div>
 
         <!-- 缩进设置和格式化按钮 -->
         <div class="controls-row" id="jsonControls">
@@ -91,6 +68,31 @@
             <button class="decode-btn" onclick="decodeGzip()">Gzip解密</button>
         </div>
 
+        <!-- TVBox接口解密 -->
+        <div class="controls-row" id="tvboxControls" style="display: none;">
+            <h1>TVBox接口解密</h1>
+            <div id="input-container">
+                <div id="input-wrapper">
+                    <input type="text" id="input-field" placeholder="点击等待,下拉选择..." onclick="toggleOptions()" autocomplete="off">
+                    <button id="clear-input-button" onclick="clearInput()">×</button>
+                    <div id="optionsList" class="options"></div>
+                </div>
+                <button onclick="copyInput()">复制接口</button>
+                <button onclick="getIPTV()">一键解码</button>
+            </div>
+
+            <div id="error-message"></div>
+            <div id="loading-message">接口正在解密，请稍候～</div>
+            <div id="output-container">
+                <textarea id="output" rows="30" cols="100" readonly></textarea>
+                <div id="button-container">
+                    <button id="copy-output-button" onclick="copyOutput()">复制内容</button>
+                    <button id="download-jar-button" onclick="downloadJar()">下载Jar</button>
+                    <button id="home-button" onclick="goToHome()">主页</button>
+                    <button id="clear-button" onclick="clearOutput()">一键清空</button>
+                </div>
+            </div>
+        </div>
         <!-- 输入框 -->
         <textarea id="inputText" placeholder="输入JSON内容..."></textarea>
 
