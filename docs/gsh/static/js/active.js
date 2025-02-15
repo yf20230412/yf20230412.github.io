@@ -79,6 +79,8 @@ function activateGzip() {
 
 function activatetvbox() {
     activateFunction(
+        "输入TVBox接口链接...",
+        "解密后的TVBox接口内容...",
         "tvboxControls",
         "tvboxFormatLink"
     );
