@@ -23,7 +23,7 @@ function toggleOptions() {
     if (optionsList.style.display === 'block') {
         optionsList.style.display = 'none'; // 隐藏选项列表
     } else {
-        fetch('M.php')
+        fetch('http://www.2015888.xyz/jiemi/M.php')
             .then(response => response.json())
             .then(data => {
                 optionsList.innerHTML = ''; // 清空选项列表
@@ -85,7 +85,7 @@ function getIPTV() {
     document.getElementById("error-message").style.display = "none";
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "get_jiemi.php", true);
+    xhr.open("POST", "http://www.2015888.xyz/jiemi/get_jiemi.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("url=" + input);
 
