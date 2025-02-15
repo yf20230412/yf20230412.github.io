@@ -17,7 +17,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('outputText').placeholder = placeholderOutput;
 
     // 显示相关按钮，隐藏其他按钮
-    const allControls = ['jsonControls', 'urlControls', 'base64Controls', 'gzipControls', 'tvboxControls'];
+    const allControls = ['jsonControls', 'urlControls', 'base64Controls', 'gzipControls'];
     allControls.forEach(id => {
         document.getElementById(id).style.display = id === controlsId ? 'flex' : 'none';
     });
@@ -26,7 +26,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('swapButton').style.display = showSwapButton ? 'inline-block' : 'none';
 
     // 设置菜单项的激活状态
-    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link', 'gzipLink', 'tvboxLink'];
+    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link', 'gzipLink'];
     allLinks.forEach(id => {
         document.getElementById(id).classList.toggle('active', id === activeLinkId);
     });
@@ -76,16 +76,6 @@ function activateGzip() {
         true // 显示交换按钮
     );
 }
-
-function activatetvbox() {
-    activateFunction(
-        "输入TVBox接口链接...",
-        "解密后的TVBox接口内容...",
-        "tvboxControls",
-        "tvboxFormatLink"
-    );
-}
-
 
 // 交换输入框和输出框的内容
 function swapContent() {
