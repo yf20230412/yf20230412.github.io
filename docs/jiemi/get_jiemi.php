@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     curl_setopt($ch, CURLOPT_MAXREDIRS, 10);           // 最大重定向次数
     
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'User-Agent: okhttp/3',
         'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
     ));
 

@@ -7,7 +7,7 @@ console.log(' %c  > ^ <', 'color: #8B4513; font-size: 20px;');
 console.log('  %c /  ~ \\', 'color: #8B4513; font-size: 20px;');
 console.log('  %c/______\\', 'color: #8B4513; font-size: 20px;');
 
-document.addEventListener('contextmenu', function (event) {
+document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
 
@@ -24,7 +24,7 @@ function handleCancel(event) {
 }
 
 var buttons = document.querySelectorAll('.projectItem');
-buttons.forEach(function (button) {
+buttons.forEach(function(button) {
     button.addEventListener('mousedown', handlePress);
     button.addEventListener('mouseup', handleRelease);
     button.addEventListener('mouseleave', handleCancel);
@@ -35,7 +35,7 @@ buttons.forEach(function (button) {
 
 function toggleClass(selector, className) {
     var elements = document.querySelectorAll(selector);
-    elements.forEach(function (element) {
+    elements.forEach(function(element) {
         element.classList.toggle(className);
     });
 }
@@ -51,13 +51,12 @@ function pop(imageURL) {
 
 var tc = document.getElementsByClassName('tc');
 var tc_main = document.getElementsByClassName('tc-main');
-tc[0].addEventListener('click', function (event) {
+tc[0].addEventListener('click', function(event) {
     pop();
 });
-tc_main[0].addEventListener('click', function (event) {
+tc_main[0].addEventListener('click', function(event) {
     event.stopPropagation();
 });
-
 
 
 function setCookie(name, value, days) {
@@ -85,34 +84,11 @@ function getCookie(name) {
     return null;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-
-
-
-
-
+document.addEventListener('DOMContentLoaded', function() {
 
     var html = document.querySelector('html');
     var themeState = getCookie("themeState") || "Light";
     var tanChiShe = document.getElementById("tanChiShe");
-
-
-
-
 
 
     function changeTheme(theme) {
@@ -122,14 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
         themeState = theme;
     }
 
-
-
-
-
-
-
     var Checkbox = document.getElementById('myonoffswitch')
-    Checkbox.addEventListener('change', function () {
+    Checkbox.addEventListener('change', function() {
         if (themeState == "Dark") {
             changeTheme("Light");
         } else if (themeState == "Light") {
@@ -139,31 +109,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
-
     if (themeState == "Dark") {
         Checkbox.checked = false;
     }
 
     changeTheme(themeState);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
 
     var fpsElement = document.createElement('div');
     fpsElement.id = 'fps';
@@ -172,13 +122,13 @@ document.addEventListener('DOMContentLoaded', function () {
     fpsElement.style.left = '0';
     document.body.insertBefore(fpsElement, document.body.firstChild);
 
-    var showFPS = (function () {
+    var showFPS = (function() {
         var requestAnimationFrame = window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
             window.mozRequestAnimationFrame ||
             window.oRequestAnimationFrame ||
             window.msRequestAnimationFrame ||
-            function (callback) {
+            function(callback) {
                 window.setTimeout(callback, 1000 / 60);
             };
 
@@ -186,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
             last = Date.now(),
             offset, step, appendFps;
 
-        step = function () {
+        step = function() {
             offset = Date.now() - last;
             fps += 1;
 
@@ -199,26 +149,16 @@ document.addEventListener('DOMContentLoaded', function () {
             requestAnimationFrame(step);
         };
 
-        appendFps = function (fpsValue) {
+        appendFps = function(fpsValue) {
             fpsElement.textContent = 'FPS: ' + fpsValue;
         };
-
         step();
     })();
-    
-    
-   
-    
-    
 });
-
-
-
 
 var pageLoading = document.querySelector("#fyfy-loading");
 window.addEventListener('load', function() {
-    setTimeout(function () {
+    setTimeout(function() {
         pageLoading.style.opacity = '0';
     }, 100);
 });
-

@@ -115,19 +115,14 @@
             border-left: none;
         }
 
-        #error-message {
-            color: red;
-            display: none;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
+        #error-message,
         #loading-message {
             color: red;
             display: none;
             margin-top: 10px;
             margin-bottom: 10px;
         }
+
 
         #output-container {
             margin-top: 20px;
@@ -203,9 +198,9 @@
             /* 选项列表宽度与输入框和按钮总宽度一致 */
             left: 0;
             /* 确保左侧对齐 */
-            
+
         }
-       
+
 
         .option {
             padding: 10px;
@@ -298,7 +293,7 @@
             }
 
             #output {
-                width: 100%;
+                width: calc(100% - 2px);
                 /* 输出框宽度与输入框和按钮对齐 */
             }
 
@@ -344,51 +339,83 @@
                 /* 调整内边距 */
             }
         }
-        
-        
-/* 定义渐变动画 */
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
-/* 设置 footer 样式 */
-footer {
-    position: fixed; /* 固定在页面底部 */
-    bottom: 0; /* 距离底部 0 */
-    left: 0; /* 左侧对齐 */
-    width: 100%; /* 宽度占满屏幕 */
-    background-color: #000000; /* 背景颜色 */
-    padding: 20px 0 10px 0; /* 上内边距增加为 20px，下内边距保持 10px 左右内边距为0*/
-    text-align: center; /* 文字居中 */
-    border-top: 1px solid #00ff00; /* 顶部边框 */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-    z-index: 1000; /* 确保 footer 在最上层 */
-}
 
-/* 设置链接样式 */
-footer a {
-    background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta); /* 渐变背景 */
-    background-size: 200% 200%; /* 背景大小 */
-    -webkit-background-clip: text; /* 兼容 WebKit 浏览器 */
-    background-clip: text; /* 文字裁剪背景 */
-    color: transparent; /* 文字颜色透明 */
-    text-decoration: none; /* 去掉下划线 */
-    transition: background 0.5s ease; /* 背景过渡效果 */
-    animation: gradientAnimation 3s infinite alternate; /* 应用动画 */
-    font-size: 16px; /* 字体大小 */
-}
+        /* 定义渐变动画 */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
 
-/* 鼠标悬停时停止动画 */
-footer a:hover {
-    animation-play-state: paused; /* 暂停动画 */
-}
+            50% {
+                background-position: 100% 50%;
+            }
 
-/* 设置 mark 标签样式 */
-footer mark {
-    background-color: #ffff00; /* 背景颜色 */
-    color: #ff0033; /* 文字颜色 */
-    padding: 2px 5px; /* 内边距 */
-    border-radius: 3px; /* 圆角 */
-}
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 设置 footer 样式 */
+        footer {
+            position: fixed;
+            /* 固定在页面底部 */
+            bottom: 0;
+            /* 距离底部 0 */
+            left: 0;
+            /* 左侧对齐 */
+            width: 100%;
+            /* 宽度占满屏幕 */
+            background-color: #000000;
+            /* 背景颜色 */
+            padding: 20px 0 10px 0;
+            /* 上内边距增加为 20px，下内边距保持 10px 左右内边距为0*/
+            text-align: center;
+            /* 文字居中 */
+            border-top: 1px solid #00ff00;
+            /* 顶部边框 */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            /* 添加阴影 */
+            z-index: 1000;
+            /* 确保 footer 在最上层 */
+        }
+
+        /* 设置链接样式 */
+        footer a {
+            background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
+            /* 渐变背景 */
+            background-size: 200% 200%;
+            /* 背景大小 */
+            -webkit-background-clip: text;
+            /* 兼容 WebKit 浏览器 */
+            background-clip: text;
+            /* 文字裁剪背景 */
+            color: transparent;
+            /* 文字颜色透明 */
+            text-decoration: none;
+            /* 去掉下划线 */
+            transition: background 0.5s ease;
+            /* 背景过渡效果 */
+            animation: gradientAnimation 3s infinite alternate;
+            /* 应用动画 */
+            font-size: 16px;
+            /* 字体大小 */
+        }
+
+        /* 鼠标悬停时停止动画 */
+        footer a:hover {
+            animation-play-state: paused;
+            /* 暂停动画 */
+        }
+
+        /* 设置 mark 标签样式 */
+        footer mark {
+            background-color: #ffff00;
+            /* 背景颜色 */
+            color: #ff0033;
+            /* 文字颜色 */
+            padding: 2px 5px;
+            /* 内边距 */
+            border-radius: 3px;
+            /* 圆角 */
+        }

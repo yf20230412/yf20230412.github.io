@@ -566,7 +566,7 @@
             // 判断链接后缀是否为允许的后缀之一
             if (fileLink && !allowedExtensions.some(ext => lowerCaseFileLink.endsWith(ext))) {
         // 提示用户正在解密链接
-        alert("正在解密jar链接，请点击确定后，耐心等待5秒左右即可...");
+        alert("正在解密jar链接，请点击确定后，耐心等待5秒左右，如不能触发浏览器自动下载,请手动复制浏览器上面的链接，手动下载...");
         // 如果链接后缀不在允许的列表中，则调用 get_real_link.php
         fetch('http://www.2015888.xyz/jiemi/get_real_link.php', {
                 method: 'POST',
@@ -584,6 +584,14 @@
                 if (data.success) {
                     const realLink = data.realLink;
                     //😍alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
+                    // 复制真实链接到剪切板
+                    navigator.clipboard.writeText(realLink)
+                        .then(() => {
+                            alert(`密解后jar下载地址已复制到剪切板！`);
+                        })
+                        .catch(err => {
+                            alert(`复制到剪切板失败：${err}`);
+                        });
         
                     // 提取文件名
                     const fileName = realLink.substring(realLink.lastIndexOf('/') + 1);
@@ -605,6 +613,15 @@
             } else {
         // 如果链接后缀在允许的列表中，则直接下载
         //😍alert(`jar下载链接：${fileLink}`); // 调试信息
+        // 复制真实链接到剪切板
+        navigator.clipboard.writeText(fileLink)
+            .then(() => {
+                alert(`密解后jar下载地址已复制到剪切板！`);
+            })
+            .catch(err => {
+                alert(`复制到剪切板失败：${err}`);
+            });
+        
         function downloadFile(fileLink, customFileName = 'downloaded_file.jar') {
             // 提取文件名
             const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
@@ -620,8 +637,11 @@
             document.body.removeChild(downloadLink);
         }
         
-        // 使用函数
-        if (fileLink === 'http://bobohome.ignorelist.com:20247/潇洒/spider.jar') {
+        // 判断fileLink是否以http://bobohome.ignorelist.com或https://bobohome.ignorelist.com开头
+        if (fileLink && (
+                fileLink.startsWith('http://bobohome.ignorelist.com') ||
+                fileLink.startsWith('https://bobohome.ignorelist.com')
+            )) {
             alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/3. 然后再重新点击下载`);
         }
         downloadFile(fileLink);
