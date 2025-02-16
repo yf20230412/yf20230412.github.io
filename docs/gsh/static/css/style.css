@@ -57,7 +57,7 @@ textarea {
     background-color: #000;
     color: #00ff00;
     border: 1px solid #444;
-    margin - bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -191,7 +191,6 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    margin-top: 50px;
     width: 100%;
     text-align: center;
     background-color: #000000;
