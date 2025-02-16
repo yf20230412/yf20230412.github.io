@@ -17,7 +17,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('outputText').placeholder = placeholderOutput;
 
     // 显示相关按钮，隐藏其他按钮
-    const allControls = ['jsonControls', 'urlControls', 'base64Controls', 'gzipControls'];
+    const allControls = ['jsonControls', 'urlControls', 'base64Controls', 'gzipControls','HexControls'];
     allControls.forEach(id => {
         document.getElementById(id).style.display = id === controlsId ? 'flex' : 'none';
     });
@@ -26,7 +26,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('swapButton').style.display = showSwapButton ? 'inline-block' : 'none';
 
     // 设置菜单项的激活状态
-    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link', 'gzipLink'];
+    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link', 'gzipLink', 'HexLink'];
     allLinks.forEach(id => {
         document.getElementById(id).classList.toggle('active', id === activeLinkId);
     });
@@ -73,6 +73,17 @@ function activateGzip() {
         "Gzip 处理结果...",
         "gzipControls",
         "gzipLink",
+        true // 显示交换按钮
+    );
+}
+
+// 激活 16进制转字符串功能
+function activateGzip() {
+    activateFunction(
+        "输入需要转化内容...",
+        "Hex 处理结果...",
+        "HexControls",
+        "HexLink",
         true // 显示交换按钮
     );
 }

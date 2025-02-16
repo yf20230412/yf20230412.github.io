@@ -11,6 +11,7 @@
     <title>小鱼专用工具箱</title>
     <link rel="stylesheet" href="./static/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
+    
 </head>
 
 <body>
@@ -22,13 +23,14 @@
             <li><a id="urlLink" title="Url编解码" href="#" onclick="activateUrl(); return false;">Url编码解码</a></li>
             <li><a id="base64Link" title="Base64编解码" href="#" onclick="activateBase64(); return false;">Base64编码解码</a></li>
             <li><a id="gzipLink" title="Gzip加密解密" href="#" onclick="activateGzip(); return false;">Gzip加密解密</a></li>
-            <li><a id="tvboxLink" title="tvbox接口解密" href="/jiemi/" onclick="activatetvbox(); return false;">TVBox接口解密</a></li>
+            <li><a id="HexLink" title="16进制转字符串" href="#" onclick="activatehex(); return false;">16进制转字符串</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" onclick="toggleDropdown(event);">
                     更多工具 ▼
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/jm/">TVBox加密</a>
+                    <a class="dropdown-item" href="/jm/">TVBox接口加密</a>
+                    <a class="dropdown-item" href="/jiemi/">TVBox接口解密</a>
                     <a class="dropdown-item" href="https://lige.chat/aes">TVBox-aes加密</a>
                     <a class="dropdown-item" href="https://tool.lu/ip/">IP地址查询</a>
                     <a class="dropdown-item" href="https://jiagu.360.cn/#/app/android/list">360加固</a>
@@ -74,6 +76,11 @@
         <div class="controls-row" id="gzipControls" style="display: none;">
             <button class="encode-btn" onclick="encodeGzip()">Gzip加密</button>
             <button class="decode-btn" onclick="decodeGzip()">Gzip解密</button>
+        </div>
+        <!-- 16进制转字符串按钮 -->
+        <div class="controls-row" id="HexControls" style="display: none;">
+            <button class="encode-btn" onclick="encodehex()">16进制转字符串</button>
+            <button class="decode-btn" onclick="decodehex()">字符串转16进制</button>
         </div>
 
         <!-- 输入框 -->
