@@ -122,6 +122,26 @@ button:hover {
     color: white;
 }
 
+.gzipencode-btn {
+    background: #449149;
+    color: white;
+}
+
+.gzipdecode-btn {
+    background: #C431B4;
+    color: white;
+}
+
+.hexencode-btn {
+    background: #2688F7;
+    color: white;
+}
+
+.hexdecode-btn {
+    background: #D7C007;
+    color: white;
+}
+
 .copy-btn {
     background: #009688;
     color: white;
@@ -140,6 +160,7 @@ button:hover {
 .error {
     color: #ff4444;
     margin-top: 10px;
+    font-size: 14px; /* 确保字体大小合适 */
     font-weight: bold;
 }
 
