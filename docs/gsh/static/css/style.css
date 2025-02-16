@@ -62,7 +62,7 @@ textarea {
 
 .container {
     max-width: 800px;
-    max-height: calc(100vh - 500px); /* 减去页脚高度和其他间距 */
+    max-height: calc(100vh - 1000px); /* 减去页脚高度和其他间距 */
     margin: 20px auto;
     padding: 20px;
     overflow-y: auto; /* 启用垂直滚动条 */
@@ -70,7 +70,7 @@ textarea {
 
 @media (max-width: 768px) {
     .container {
-        max-height: calc(100vh - 500px); /* 为小屏幕设备调整容器高度 */
+        max-height: calc(100vh - 1000px); /* 为小屏幕设备调整容器高度 */
         overflow-y: auto;
     }
     
