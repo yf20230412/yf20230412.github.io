@@ -82,6 +82,8 @@
             <button class="hexencode-btn" onclick="encodehex()">16进制转字符串</button>
             <button class="hexdecode-btn" onclick="decodehex()">字符串转16进制</button>
         </div>
+        <!-- 错误提示 -->
+        <div id="errorMessage" class="error"></div>
 
         <!-- 输入框 -->
         <textarea id="inputText" placeholder="输入JSON内容..."></textarea>
@@ -96,8 +98,6 @@
         <!-- 输出框 -->
         <textarea id="outputText" readonly placeholder="格式化或压缩后的JSON..."></textarea>
 
-        <!-- 错误提示 -->
-        <div id="errorMessage" class="error"></div>
     </div>
     <script src="./static/js/active.js"></script>
     <script src="./static/js/encoding.js"></script>
