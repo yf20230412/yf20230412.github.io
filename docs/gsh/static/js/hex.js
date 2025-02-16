@@ -1,5 +1,6 @@
-//16进制转字符串
+// 16进制转字符串
 function encodehex() {
+    console.log("调用了 encodehex() 函数"); // 调试信息
     const input = document.getElementById('inputText').value.trim();
     const outputText = document.getElementById('outputText');
     const errorMessage = document.getElementById('errorMessage');
@@ -22,14 +23,16 @@ function encodehex() {
         }
 
         outputText.value = result;
+        console.log("转换结果：", result); // 调试信息
     } catch (error) {
         errorMessage.textContent = error.message;
+        console.error("发生错误：", error.message); // 调试信息
     }
 }
 
-
-//字符串转16进制
+// 字符串转16进制
 function decodehex() {
+    console.log("调用了 decodehex() 函数"); // 调试信息
     const input = document.getElementById('inputText').value.trim();
     const outputText = document.getElementById('outputText');
     const errorMessage = document.getElementById('errorMessage');
@@ -47,7 +50,9 @@ function decodehex() {
         }
 
         outputText.value = result.toUpperCase(); // 输出为大写的16进制形式
+        console.log("转换结果：", result.toUpperCase()); // 调试信息
     } catch (error) {
         errorMessage.textContent = error.message;
+        console.error("发生错误：", error.message); // 调试信息
     }
 }
