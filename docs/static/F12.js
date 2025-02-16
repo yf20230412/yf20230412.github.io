@@ -24,7 +24,7 @@ document.onkeydown = document.onkeyup = document.onkeypress = function() {
     }
 }
 
-
+/*
 // 检测开发者工具
 setInterval(function() {
     const devToolsOpened = /./.test.toString().length !== 33;
@@ -33,3 +33,4 @@ setInterval(function() {
         window.location.reload();
     }
 }, 1000);
+*/
