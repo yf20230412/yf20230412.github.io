@@ -78,7 +78,7 @@ function activateGzip() {
 }
 
 // 激活 16进制转字符串功能
-function activateGzip() {
+function activatehex() {
     activateFunction(
         "输入需要转化内容...",
         "Hex 处理结果...",
