@@ -80,8 +80,8 @@ function activateGzip() {
 // 激活 16进制转字符串功能
 function activatehex() {
     activateFunction(
-        "输入需要转化内容...",
-        "Hex 处理结果...",
+        "输入16进制内容或字符串...",
+        "处理结果...",
         "HexControls",
         "HexLink",
         true // 显示交换按钮
