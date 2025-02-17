@@ -242,7 +242,7 @@
             #output {
                 width: calc(100% - 2px);
                 /* 确保输出框宽度与输入框一致 */
-                height: calc(100vh - 300px);
+                height: calc(100vh - 350px);
                 /* 输出框高度 */
             }
 
@@ -307,6 +307,14 @@
                 /* 按钮宽度根据内容自适应 */
                 padding: 15px 20px;
                 /* 桌面模式下增加按钮高度 */
+            }
+            #error-message,
+            #loading-message {
+                color: red;
+                display: none;
+                margin-left: 11%;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
 
             .options {
