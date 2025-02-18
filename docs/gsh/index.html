@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="/1115/static/img/favicon.ico">
     <link rel="shortcut icon" href="/1115/static/img/favicon.ico">
     <link rel="Bookmark" href="/1115/static/img/favicon.ico">
-    <title>小鱼专用工具箱</title>
+    <title>风言锋语88-工具箱</title>
     <link rel="stylesheet" href="./static/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
 
@@ -16,10 +16,14 @@
 
 <body>
     <div class="container">
-        <h2>小鱼专用工具箱 <span id="toggleLinksIcon" class="toggle-icon" onclick="toggleLinks(event)">☰</span></h2>
+        <h2>小鱼专用工具箱
+            <span id="toggleLinksIcon" class="toggle-icon" onclick="toggleLinks(event)">☰</span>
+        </h2>
         <div id="hiddenLinks" style="display: none;">
-            <a href="https://tool.lu/timestamp/">时间戳转换</a>
-            <a href="https://theme.sugarat.top/">VitePress主题</a>
+            <a class="dropdown-item" href="/jm/">TVBox接口加密</a>
+            <a class="dropdown-item" href="/jiemi/">TVBox接口解密</a>
+            <a class="dropdown-item" href="/128/">AES-128-CBC加密</a>
+
         </div>
         <!-- 功能栏 -->
         <ol class="breadcrumb">
@@ -33,9 +37,8 @@
                     更多工具 ▼
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/jm/">TVBox接口加密</a>
-                    <a class="dropdown-item" href="/jiemi/">TVBox接口解密</a>
-                    <a class="dropdown-item" href="/128/">AES-128-CBC加密</a>
+                    <a href="https://tool.lu/timestamp/">时间戳转换</a>
+                    <a href="https://theme.sugarat.top/">VitePress主题</a>
                     <a class="dropdown-item" href="https://www.jyshare.com/front-end/3602/">unicode编码转换工具</a>
                     <a class="dropdown-item" href="https://tool.lu/ip/">IP地址查询</a>
                     <a class="dropdown-item" href="https://jiagu.360.cn/#/app/android/list">360加固</a>
@@ -135,14 +138,20 @@
         });
         //点击"三"图标后会显示或隐藏
         function toggleLinks(event) {
-    var hiddenLinks = document.getElementById("hiddenLinks");
-    if (hiddenLinks.style.display === "none") {
-        hiddenLinks.style.display = "block";
-    } else {
-        hiddenLinks.style.display = "none";
-    }
-}
-
+            const hiddenLinks = document.getElementById("hiddenLinks");
+            hiddenLinks.style.display = hiddenLinks.style.display === "block" ? "none" : "block";
+        }
+        
+        // 点击空白处隐藏菜单
+        document.addEventListener('click', function(event) {
+            const toggleIcon = document.getElementById("toggleLinksIcon");
+            const hiddenLinks = document.getElementById("hiddenLinks");
+            if (!toggleIcon.contains(event.target) && !hiddenLinks.contains(event.target)) {
+                hiddenLinks.style.display = "none";
+            }
+        });
+        
+        
     </script>
 
 

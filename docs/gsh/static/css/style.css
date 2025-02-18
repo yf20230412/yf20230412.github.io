@@ -1,4 +1,11 @@
 /* 功能栏样式 */
+
+h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +22,7 @@
 
 .breadcrumb li {
     display: inline;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .breadcrumb li a {
@@ -57,13 +64,14 @@ textarea {
     background-color: #000;
     color: #00ff00;
     border: 1px solid #444;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 10px;
+    position: relative; /* 确保弹出菜单相对于容器定位 */
 }
 
     
@@ -189,32 +197,34 @@ button:hover {
 #toggleLinksIcon {
     cursor: pointer;
     font-size: 24px;
-    margin-left: 10px;
 }
 
-.hidden-links {
-    position: absolute;
-    top: 30px; /* 根据标题位置调整 */
-    right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100px; /* 根据需要调整宽度 */
+#hiddenLinks {
+    display: none; /* 初始状态为隐藏 */
+    /* position: absolute;*/
+    background: #E4AF26;
+    font-weight: bold; 
+    left: 0; /* 与标题右对齐 */
     z-index: 1000;
+    
 }
 
-.hidden-links a {
-    display: block;
-    margin: 5px 0;
+#hiddenLinks a {
+   /* display: block; 每个链接纵向排列 */   
+    display: inline-block;  /*修改为横向排列 */
+    padding: 10px 8px;
     text-decoration: none;
     color: #333;
+    font-size: 13px;
+    background: transparent; /* 设置透明背景 */
+    border-radius: 2px;
+    white-space: nowrap; /* 不换行，确保每个链接占一行 */
 }
 
-.hidden-links a:hover {
-    color: #007bff;
+#hiddenLinks a:hover {
+    background-color: #f1f1f1;
 }
+
 
 
 /* 页脚样式 */
