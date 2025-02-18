@@ -87,7 +87,7 @@ function hexToText($hexString) {
         if ($text === false) {
             throw new Exception("无法解码为文本");
         }
-        return mb_convert_encoding($text, "UTF-8", "UTF-8");
+        return $text;
     } catch (Exception $e) {
         return $hexString; // 如果无法解码为文本，则保留原16进制字符串
     }
@@ -95,12 +95,10 @@ function hexToText($hexString) {
 
 // AES解密函数
 function aesDecrypt($ciphertextHex, $key, $iv) {
-    $keyBytes = mb_convert_encoding($key, "UTF-8", "UTF-8");
-    $ivBytes = mb_convert_encoding($iv, "UTF-8", "UTF-8");
     $ciphertext = hex2bin($ciphertextHex);
 
     try {
-        $decryptedText = openssl_decrypt($ciphertext, "aes-128-cbc", $keyBytes, OPENSSL_RAW_DATA, $ivBytes);
+        $decryptedText = openssl_decrypt($ciphertext, "aes-128-cbc", $key, OPENSSL_RAW_DATA, $iv);
         if ($decryptedText === false) {
             throw new Exception(openssl_error_string());
         }
@@ -113,8 +111,8 @@ function aesDecrypt($ciphertextHex, $key, $iv) {
 // AES解密逻辑
 function aesDecryptLogic($encryptedText) {
     // 1. 从文本开头2423开始查找，直到第一次遇到2324，取中间的数字作为key
-    // 限制范围为文本开头的30个字符
-    $range = substr($encryptedText, 0, 30); // 提取开头30个字符
+    // 限制范围为文本开头的50个字符
+    $range = substr($encryptedText, 0, 50); // 提取开头50个字符
     if (preg_match('/2423([0-9a-fA-F]+)2324/', $range, $matches)) {
         $keyHex = $matches[1]; // 提取2423和2324之间的内容
         $keyText = hexToText($keyHex);
@@ -126,27 +124,29 @@ function aesDecryptLogic($encryptedText) {
     }
     
 
-    // 2. 从文本末尾开始向前查找，找到倒数第26个字符开始的3137
-    // 截取3137之后的所有内容作为IV
-    $ivStartIndex = strlen($encryptedText) - 26;
-    if (preg_match('/3137([0-9a-fA-F]+)/', substr($encryptedText, $ivStartIndex), $matches)) {
-        $ivHex = $matches[1];
-        $ivText = hexToText($ivHex);
-        $ivText = str_pad($ivText, 16, '0', STR_PAD_RIGHT);
-        //😍echo "提取到的IV偏移量（文本字符串）: " . $ivText . "\n";
-    } else {
-        echo "未找到IV偏移量！\n";
+    // 2. 从文本末尾开始向前查找，截取最后26个字符
+        $ivHex = substr($encryptedText, -26); // 从末尾开始向前取26个字符
+        $ivText = hexToText($ivHex); // 将16进制转换为字符串
+        $ivText = str_pad($ivText, 16, '0', STR_PAD_RIGHT);  // 不足16位用0补足
+        //😍echo "提取到的IV偏移量（文本字符串）: " . $ivText . "\n";    
+
+    // 3. 提取2324到倒数第26位之间的内容作为要解密的文本
+    // 找到2324的起始位置
+    $startPos = strpos($encryptedText, '2324');
+    if ($startPos === false) {
+        echo "未找到2324标记！\n";
         return;
     }
 
-    // 3. 提取2324到3137之间的内容作为要解密的文本
-    if (preg_match('/2324([0-9a-fA-F]+)3137/', $encryptedText, $matches)) {
-        $ciphertextHex = $matches[1];
-        //😍echo "提取到的加密内容: " . $ciphertextHex . "\n";
-    } else {
-        echo "未找到加密文本！\n";
-        return;
-    }
+    // 计算倒数第26位的位置
+    $endPos = strlen($encryptedText) - 26;
+
+    // 提取从2324开始到倒数第26位之前的内容
+    $ciphertextHex = substr($encryptedText, $startPos + 4, $endPos - ($startPos + 4));
+
+    //输出提取到的加密内容
+    //😍echo "提取到的加密内容: " . $ciphertextHex . "\n";
+
 
     // 4. 解密并输出结果
     $decryptedText = aesDecrypt($ciphertextHex, $keyText, $ivText);

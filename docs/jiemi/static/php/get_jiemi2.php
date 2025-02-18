@@ -1,5 +1,5 @@
 <?php
-
+//直接根据响应体解锁
 // 允许跨域请求
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: text/html; charset=utf-8"); // 设置默认输出编码为UTF-8
