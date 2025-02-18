@@ -16,7 +16,11 @@
 
 <body>
     <div class="container">
-        <h1>小鱼专用工具箱</h1>
+        <h2>小鱼专用工具箱 <span id="toggleLinksIcon" class="toggle-icon" onclick="toggleLinks(event)">☰</span></h2>
+        <div id="hiddenLinks" style="display: none;">
+            <a href="https://tool.lu/timestamp/">时间戳转换</a>
+            <a href="https://theme.sugarat.top/">VitePress主题</a>
+        </div>
         <!-- 功能栏 -->
         <ol class="breadcrumb">
             <li><a id="jsonFormatLink" title="JSON格式化" href="#" onclick="activateJsonFormat(); return false;">JSON格式化</a></li>
@@ -32,6 +36,7 @@
                     <a class="dropdown-item" href="/jm/">TVBox接口加密</a>
                     <a class="dropdown-item" href="/jiemi/">TVBox接口解密</a>
                     <a class="dropdown-item" href="/128/">AES-128-CBC加密</a>
+                    <a class="dropdown-item" href="https://www.jyshare.com/front-end/3602/">unicode编码转换工具</a>
                     <a class="dropdown-item" href="https://tool.lu/ip/">IP地址查询</a>
                     <a class="dropdown-item" href="https://jiagu.360.cn/#/app/android/list">360加固</a>
                     <a class="dropdown-item" href="https://www.bejson.com/explore/index_new/">JSON格式校验</a>
@@ -43,7 +48,7 @@
                     <a class="dropdown-item" href="https://www.jshaman.com/">JavaScript混淆加密</a>
                     <a class="dropdown-item" href="https://www.jsjiami.com/">JavaScript最牛加密</a>
                     <a class="dropdown-item" href="https://icons.getbootstrap.com/">SVG图标免费下载</a>
-                    <a class="dropdown-item" href="https://www.svgrepo.com/?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im">SVG彩色图标下载</a>                    
+                    <a class="dropdown-item" href="https://www.svgrepo.com/?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im">SVG彩色图标下载</a>
                     <a class="dropdown-item" id="PunycodeLink" title="Punycode编码/解码" href="https://33tool.com/punycode" onclick="activatePunycode(); return false;">Punycode编码/解码</a>
                 </div>
             </li>
@@ -128,6 +133,16 @@
         dropdownMenu.style.display = 'none'; // 隐藏下拉菜单
             }
         });
+        //点击"三"图标后会显示或隐藏
+        function toggleLinks(event) {
+    var hiddenLinks = document.getElementById("hiddenLinks");
+    if (hiddenLinks.style.display === "none") {
+        hiddenLinks.style.display = "block";
+    } else {
+        hiddenLinks.style.display = "none";
+    }
+}
+
     </script>
 
 
