@@ -276,16 +276,6 @@ function downloadJar() {
 }
 
 
-
-
-
-//主页
-
-function goToHome() {
-    window.location.href = "https://yf1688.top/1115/";
-}
-
-
 //一键清空
 function clearOutput() {
     var inputField = document.getElementById("input-field");
