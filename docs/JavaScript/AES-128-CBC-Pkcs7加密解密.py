@@ -11,9 +11,12 @@ def hex_to_text(hex_string):
     """将16进制字符串转换为文本字符串"""
     try:
         text = bytes.fromhex(hex_string).decode('utf-8')
+        return text
     except UnicodeDecodeError:
-        text = hex_string
-    return text
+        return hex_string  # 如果无法解码为文本，则保留原十六进制字符串
+    except ValueError as e:
+        print(f"十六进制字符串无效: {e}")
+        return ""
 
 def convert_timestamp_to_beijing_time(timestamp):
     """将时间戳转换为北京时间"""
@@ -28,7 +31,7 @@ def convert_timestamp_to_beijing_time(timestamp):
 def save_to_file(content, save_path="/storage/emulated/0/风言锋语88/凯速/", prefix="解密"):
     """保存内容到指定路径"""
     current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-    file_name = f"{prefix}_{current_time}.json"
+    file_name = f"{prefix}.json"
     file_path = os.path.join(save_path, file_name)
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(content)
@@ -56,17 +59,17 @@ def get_user_key():
 def get_plaintext():
     """获取明文内容"""
     while True:
-        choice = input("请输入要加密的内容（1）或输入加密文件路径（2）或指定加密文件 /凯速/99.json（3）：")
+        choice = input("请选择加密内容输入方式：\n1. 直接输入要加密的内容 \n2. 输入加密文件路径 \n3. 指定加密文件 /凯速/9988.json \n>")
         if choice == "1":
-            return input("请输入要加密的文本内容：")
+            return input("直接输入要加密的内容：")
         elif choice == "2":
-            file_path = input("请输入文本文件路径：")
+            file_path = input("输入加密文件路径：")
             if os.path.exists(file_path):
                 with open(file_path, "r", encoding="utf-8") as file:
                     return file.read()
             print("文件不存在，请重新输入！")
         elif choice == "3":
-            file_path = "/storage/emulated/0/风言锋语88/凯速/99.json"
+            file_path = "/storage/emulated/0/风言锋语88/凯速/9988.json"
             if os.path.exists(file_path):
                 with open(file_path, "r", encoding="utf-8") as file:
                     return file.read()
@@ -84,17 +87,17 @@ def encrypt(plaintext, key, iv):
 def get_encrypted_text():
     """获取加密文本"""
     while True:
-        choice = input("请输入要解密的内容（1）或输入解密文件路径（2）或指定解密文件 /凯速/77.jso（3）：")
+        choice = input("请选择解密内容输入方式：\n1. 直接输入要解密的内容 \n2. 输入解密文件路径 \n3. 指定解密文件 /凯速/99.json \n>：")
         if choice == "1":
-            return input("请输入要解密的内容：").strip()
+            return input("直接输入要解密的内容：").strip()
         elif choice == "2":
-            file_path = input("请输入文本文件路径：").strip()
+            file_path = input("输入解密文件路径：").strip()
             if os.path.exists(file_path):
                 with open(file_path, "r", encoding="utf-8") as file:
                     return file.read().strip()
             print("文件不存在，请重新输入！")
         elif choice == "3":
-            file_path = "/storage/emulated/0/风言锋语88/凯速/77.json"
+            file_path = "/storage/emulated/0/风言锋语88/凯速/99.json"
             if os.path.exists(file_path):
                 with open(file_path, "r", encoding="utf-8") as file:
                     return file.read().strip()
@@ -125,18 +128,23 @@ def encryption_flow():
     print(f"北京时间: {convert_timestamp_to_beijing_time(timestamp)}")
     
     if input("加密成功!是否保存加密结果？(y/n): ").lower() == 'y':
-        save_to_file(output_content, prefix="加密")
+        save_to_file(output_content, prefix="99")
 
 def decryption_flow():
     """解密流程"""
     encrypted_text = get_encrypted_text()
-    
-    # 提取密钥
-    key_match = re.search(r"2423([0-9a-fA-F]+)2324", encrypted_text)
-    if not key_match:
-        print("未找到密钥！")
+    #😍print(f"原始加密文本: {encrypted_text}\n")
+    # 从文本开头50个字符内查找,提取密钥
+    key_match = re.search(r"2423([0-9a-fA-F]+)2324", encrypted_text[:50])
+    if key_match:
+        key_hex = key_match.group(1)
+        #😍print(f"提取到的Key（十六进制）: {key_hex}")
+        key_text = hex_to_text(key_hex)
+        key_text = key_text.ljust(16, '0')
+        print(f"提取到的Key密码（文本字符串）: {key_text}\n")
+    else:
+        print("未找到Key密码！")
         return
-    key_text = hex_to_text(key_match.group(1)).ljust(16, '0')
     
     # 提取IV和时间戳
     if len(encrypted_text) < 26:
@@ -161,7 +169,7 @@ def decryption_flow():
     print(f"密钥: {key_text}\n偏移量: {iv_text}")
     print(f"时间戳: {timestamp_str} -> {convert_timestamp_to_beijing_time(timestamp_str)}")
     if input("解密成功!是否保存解密结果？(y/n): ").lower() == 'y':
-        save_to_file(decrypted, prefix="解密")
+        save_to_file(decrypted, prefix="99解密")
 
 def main():
     """主菜单"""
