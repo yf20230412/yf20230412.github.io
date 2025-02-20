@@ -126,6 +126,7 @@
 
         #output-container {
             margin-top: 20px;
+            margin-bottom: 30px;
         }
 
         #button-container {
@@ -367,7 +368,7 @@
         /* 设置 footer 样式 */
         footer {
             position: fixed;
-            /* 固定在页面底部 */
+            /* 固定在页面底部fixed 一起移动absolute*/
             bottom: 0;
             /* 距离底部 0 */
             left: 0;
