@@ -24,7 +24,7 @@
             <div class="popup-main">
                 <p align="center">收录<strong> 100+ </strong>优质线路，<strong>免费且定期维护</strong></p>
                 <p class="popup-domain">
-                    <span>2024/11/15</span>
+                    <span>2025/02/21</span>
                     <strong>
                         <a target="_blank">www.∗∗∗∗∗.com</a>
                     </strong>
@@ -35,56 +35,12 @@
                 </p>
             </div>
             <div class="popup-footer">
-                <div class="popup-btn close-pop" onclick="copyToClipboard('https://a.2015888.xyz/22')">复制</div>
+                <div class="popup-btn close-pop" onclick="copyToClipboard('http://www.2015888.xyz/22')">复制</div>
             </div>
         </div>
         <div class="shortcuts-mobile-overlay"></div>
     </div>
 </body>
-<script>
-    function copyToClipboard(content) {
-    var tempInput = document.createElement('input');
-    tempInput.value = content;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
-    alert('复制成功，请前往软件粘贴接口')}
-</script>
-<script>
-    //屏蔽右键菜单 
-    document.oncontextmenu = function(event) {if (window.event) {event = window.event;}
-    try {var the = event.srcElement;
-    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-    {return false;}return true;} catch (e) {return false;}}
-    //屏蔽粘贴 
-    document.onpaste = function(event) { if (window.event) {event = window.event;}
-    try {var the = event.srcElement;
-    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-    {return false;}return true; } catch (e) {return false;}}
-    //屏蔽复制
-    document.oncopy = function(event) {if (window.event) {event = window.event;}
-    try {var the = event.srcElement;
-    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA"))
-    {return false;}return true;} catch (e) {return false;}}
-    //屏蔽剪切
-    document.oncut = function(event) {if (window.event) { event = window.event;}
-    try {var the = event.srcElement;
-    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-    {return false;}return true;} catch (e) {return false;}}
-    //屏蔽选中
-    document.onselectstart = function(event) {if (window.event) {event = window.event;}
-    try {var the = event.srcElement;
-    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) 
-    {return false;}return true;} catch (e) {return false;}}
-    //屏蔽F12和右键
-    function click(e) {if (document.all) {
-     		if (event.button == 2 || event.button == 3) {alert("你想干什么？");oncontextmenu = 'return false';}}
-     		if (document.layers) {if (e.which == 3) {oncontextmenu = 'return false';}}}
-    if (document.layers) {document.captureEvents(Event.MOUSEDOWN);}document.onmousedown = click;
-        document.oncontextmenu = new Function("return false;")
-        document.onkeydown = document.onkeyup = document.onkeypress = function () {
-     		if (window.event.keyCode == 123) {window.event.returnValue = false;return (false);}}
-</script>
+<script type="text/javascript" src="./copy.js"></script>
 
 </html>
