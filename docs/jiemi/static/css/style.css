@@ -309,6 +309,7 @@
                 padding: 15px 20px;
                 /* 桌面模式下增加按钮高度 */
             }
+
             #error-message,
             #loading-message {
                 color: red;
