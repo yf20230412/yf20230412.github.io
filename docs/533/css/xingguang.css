@@ -1,0 +1,100 @@
+.toast-bottom-center {
+    position: absolute;
+    left: 30px;
+    right: 10px;
+    top: 20px;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg,
+            #0eaf6d,
+            #ff6ac6 25%,
+            #147b96 50%,
+            #e6d205 55%,
+            #2cc4e0 60%,
+            #8b2ce0 80%,
+            #ff6384 95%,
+            #08dfb4);
+    /* 文字颜色填充设置为透明 */
+    -webkit-text-fill-color: transparent;
+    /* 背景裁剪，即让文字使用背景色 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* 背景图放大一下，看着柔和一些 */
+    -webkit-background-size: 200% 100%;
+    background-size: 200% 100%;
+    /* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
+    -webkit-animation: flowCss 12s infinite linear;
+    animation: flowCss 12s infinite linear;
+    display: inline-block;
+    /* 确保h4作为块级元素内联显示 */
+    font-size: 14px;
+    /* 设置字体大小 */
+    font-weight: bold;
+    /* 设置字体粗细 */
+    letter-spacing: 2px;
+    /* 设置字符间距 */
+    animation-name: flowCss;
+    /* 定义动画名称 */
+    animation-duration: 5s;
+    /* 定义动画持续时间 */
+    animation-iteration-count: infinite;
+    /* 定义动画重复次数 */
+    animation-timing-function: linear;
+    /* 定义动画速度曲线 */
+    animation-fill-mode: forwards;
+    /* 定义动画结束后状态 */
+}
+
+/* 定义动画 */
+@keyframes flowCss {
+    0% {
+        /* 设置背景图像的位置 */
+        background-position: 0% 50%;
+    }
+
+    50% {
+        /* 设置背景图片的位置 */
+        background-position: 100% 50%;
+    }
+
+    100% {
+        /* 设置背景图片的位置 */
+        background-position: 0% 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+    /* 去除下划线 */
+    color: inherit;
+    /* 继承父元素的颜色，保持一致 */
+}
+
+/* 运行时间美化 */
+#momk {
+    animation: change 10s infinite;
+    font-weight: 800;
+}
+
+@keyframes change {
+    0% {
+        color: #5cb85c;
+    }
+
+    25% {
+        color: #556bd8;
+    }
+
+    50% {
+        color: #e40707;
+    }
+
+    75% {
+        color: #66e616;
+    }
+
+    100% {
+        color: #67bd31;
+    }
+}
