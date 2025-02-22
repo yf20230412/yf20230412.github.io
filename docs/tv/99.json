@@ -18,11 +18,11 @@
         "ua": "okhttp/3.15",
         "catchup": {
             "type": "append",
-            "source": "?livemode=4&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"
+            "source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"
         }
     },
     {
-        "name": "自建更新_live",
+        "name": "小鱼AI直播+",
         "type": 0,
         "url": "https://ghfast.top/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u ",
         "playerType": 2,
@@ -580,7 +580,7 @@
             "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
             "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
             "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-            "site": "http://1.95.79.193",
+            "site": "https://shandian.banye.tech:7086",
             "danmu": false
         }
     },
@@ -614,7 +614,7 @@
                 "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
                 "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
                 "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "http://103.45.162.207:20720",
+                "site": "https://huban.banye.tech:7086",
                 "danmu": false
         }
     },
@@ -631,7 +631,7 @@
             "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
             "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
             "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-            "site": "https://mogg1.banye.tech:7777",
+            "site": "http://muou.6qu.top",
             "danmu": false
         }
     },
@@ -873,21 +873,25 @@
 {"key":"版本信息","name":"👿┃版本┃信息⏰","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"ext":"https://9877.kstore.space/Market/market.json"}],    
 
 
-"parses":[
+"parses": [
 
-{"name":"Json聚合","type":3,"url":"Demo"},
+{"name":"Json聚合","type":3,"url":"Demo"},	
 
-{"name":"解析失败自己换","type":0,"url":"https://jx.xmflv.com/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/110.0.0.0Safari/537.36Edg/110.0.1587.57"}}},
+{"name":"Web聚合","type":3,"url":"Web"},
 
-{"name":"虾米解析","type":0,"url":"https://jx.xmflv.cc/?url=","ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","qq预告及花絮","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"okhttp/4.9.1"}}},
+{"name":"臻享","type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"臻享解析","type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
+{"name":"虾米","type":0,"url":"https://jx.xmflv.cc/?url=","ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","qq预告及花絮","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
-{"name":"10万次解析","type":1,"url":"https://jxjson.icu/neibu.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
+{"name":"A6","type":0,"url":"https://pl.a6club.com/player/analysis.php?v="},
 
-{"name":"线路1","type":0,"url":"https://bd.jx.cn/?url="},
+{"name":"8090","type":0,"url":"https://www.8090g.cn/?url="},
 
-{"name":"线路2","type":0,"url":"https://pl.a6club.com/player/analysis.php?v="}
+{"name":"M3u8TV","type":0,"url":"https://jx.m3u8.tv/jiexi/?url="},
+
+{"name":"CK","type":0,"url":"https://www.ckplayer.vip/jiexi/?url="},
+
+{"name":"冰豆","type":0,"url":"https://bd.jx.cn/?url="}
 
 ],
 
