@@ -11,24 +11,28 @@
     <link rel="shortcut icon" href="/static/icon/favicon.ico">
     <link rel="Bookmark" href="/static/icon/favicon.ico">
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/scroll-button.css">
     <title>公众号《风言锋语88》- TVBox接口解密</title>
 </head>
 
 <body>
     <h2>TVBox接口解密</h2>
-
-    <div id="input-container">
-        <div id="input-wrapper">
-            <input type="text" id="input-field" placeholder="点击等待下拉选择..." onclick="toggleOptions()" autocomplete="off">
-            <button id="clear-input-button" onclick="clearInput()">×</button>
-            <div id="optionsList" class="options"></div>
+    <div id="container">
+        <div id="input-container">
+            <div id="input-wrapper">
+                <input type="text" id="input-field" placeholder="点击等待下拉选择..." onclick="toggleOptions()" autocomplete="off">
+                <button id="clear-input-button" onclick="clearInput()">×</button>
+                <div id="optionsList" class="options"></div>
+            </div>
+            <button onclick="copyInput()">复制接口</button>
+            <button onclick="getIPTV()">一键解码</button>
         </div>
-        <button onclick="copyInput()">复制接口</button>
-        <button onclick="getIPTV()">一键解码</button>
+        <!--注释-->
+        <button class="scroll-button " id="scrollButton" onclick="toggleScroll()">跳转底部</button>
+        <div id="progressBar" class="progress-bar"></div>
+        <div id="error-message"></div>
+        <div id="loading-message">接口正在解密，请稍候～</div>
     </div>
-    <div id="error-message"></div>
-    <div id="loading-message">接口正在解密，请稍候～</div>
-
     <div id="output-container">
         <textarea id="output" rows="30" cols="100" readonly></textarea>
         <div id="button-container">
@@ -48,6 +52,8 @@
 
     <script src="./static/js/jm.js"></script>
     <script src="./static/js/link.js"></script>
+    <script src="./static/js/scroll-button.js"></script>
+    
     <!--<script src="/static/F12.js"></script>-->
 </body>
 
