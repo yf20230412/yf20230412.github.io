@@ -20,6 +20,7 @@
     <link rel="apple-touch-icon" href="/static/icon/favicon.ico">
     <link rel="shortcut icon" href="/static/icon/favicon.ico">
     <link rel="Bookmark" href="/static/icon/favicon.ico">
+    <link rel="stylesheet" href="/static/music/yybfq.css" />
     <title>🪪@Xiaoyu_𝑀𝑜𝑑</title> <!-- 设置页面标题 -->
     <!--  该HTML+CSS代码为弹窗提示框，可根据需要修改样式 ，如字体、颜色、背景等 ，代码中使用了CSS3动画效果，请确保浏览器支持CSS3动画效果。 -->
     <style>
@@ -478,6 +479,44 @@
         </div>
         <!--代码分割线-->
     </div>
+    <!--音乐🎶-->
+    <audio id="bg-music" loop></audio>
+
+    <!-- 音乐播放器 -->
+    <div class="music-player">
+        <!-- 隐藏时的左侧边框 -->
+        <div class="toggle-border" onclick="togglePlayer()"></div>
+        <!-- 播放器内容 -->
+        <div class="controls-container">
+            <div class="controls-row">
+                <button id="prev-btn" class="circle-btn">
+                    <div class="prev-icon"></div>
+                </button>
+                <button id="toggle-btn" class="circle-btn">
+                    <div class="play-icon"></div>
+                </button>
+                <button id="next-btn" class="circle-btn">
+                    <div class="next-icon"></div>
+                </button>
+                <button id="list-btn" class="circle-btn">
+                    <div class="list-icon">
+                        <div>
+                        </div> <!-- 这里的div元素不能遗漏 -->
+                    </div>
+                </button>
+            </div>
+            <!-- 音量控制滑块 -->
+            <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
+            <p class="fengyanfengyu">公众号：风言锋语88</p>
+        </div>
+    </div>
+
+    <!-- 音乐列表 -->
+    <ul id="music-list"></ul>
+
+    <!-- 状态消息 -->
+    <div id="status-message"></div>
+    <!--完-->
     <div align="center"">
 	       <a target=" _blank" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMTUyMTgwMA==&action=getalbum&album_id=3215428467836715013#wechat_redirect" title="微信公众号：" alt="微信公众号：">微信公众号：<mark class="gradient-text">风言锋语88</mark></a>
     </div>
@@ -500,6 +539,7 @@
         });
         xhr.send();
     </script>
+    <script src='/static/music/yybfq.js'></script>
     <script src="/static/F12.js"></script>
 </body>
 <!--  该HTML+CSS代码为弹窗提示框，可根据需要修改样式 ，如字体、颜色、背景等 ，代码中使用了CSS3动画效果，请确保浏览器支持CSS3动画效果。 -->
