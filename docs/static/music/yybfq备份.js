@@ -16,7 +16,7 @@
     // 加载音乐列表
     function loadMusicList() {
         // 从 JSON 文件加载音乐列表
-        fetch('music-list.json')
+        fetch('./music-list.json')
             .then(response => response.json())
             .then(data => {
                 musicFiles = data.musicFiles; // 更新 musicFiles
