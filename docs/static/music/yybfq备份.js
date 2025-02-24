@@ -68,7 +68,7 @@
         statusMessage.style.display = 'block';
         setTimeout(() => {
             statusMessage.style.display = 'none';
-        }, 5000);  //消息停留时间
+        }, 5000); //消息停留时间
     }
 
     function toggleMusic() {
@@ -100,10 +100,10 @@
     }
 
     volumeControl.addEventListener('input', () => {
-        const volume = parseFloat(volumeControl.value);
-        bgMusic.volume = volume;
+                const volume = parseFloat(volumeControl.value);
+                bgMusic.volume = volume;
 
-        document.querySelectorAll('.fengyanfengyu').forEach(text => {
+                document.querySelectorAll('.fengyanfengyu').forEach(text => {
             if (volume >= 0.6) {
                 text.style.color = '#ff69b4';
             } else {
@@ -112,68 +112,68 @@
         });
     });
 
-    function togglePlayer() {
-        var player = document.querySelector('.music-player');
-        player.classList.toggle('expanded');
-        if (!player.classList.contains('expanded')) {
-            closeMusicList();
-        }
-    }
+                function togglePlayer() {
+                    var player = document.querySelector('.music-player');
+                    player.classList.toggle('expanded');
+                    if (!player.classList.contains('expanded')) {
+                        closeMusicList();
+                    }
+                }
 
-    function closeMusicList() {
-        if (musicList.style.display === 'block') {
-            musicList.style.display = 'none';
-        }
-    }
+                function closeMusicList() {
+                    if (musicList.style.display === 'block') {
+                        musicList.style.display = 'none';
+                    }
+                }
 
-    let hideTimer;
+                let hideTimer;
 
-    function hidePlayer() {
-        const player = document.querySelector('.music-player');
-        if (player.classList.contains('expanded')) {
-            player.classList.remove('expanded');
-            closeMusicList();
-        }
-        clearTimeout(hideTimer);
-    }
+                function hidePlayer() {
+                    const player = document.querySelector('.music-player');
+                    if (player.classList.contains('expanded')) {
+                        player.classList.remove('expanded');
+                        closeMusicList();
+                    }
+                    clearTimeout(hideTimer);
+                }
 
-    function resetTimer() {
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(hidePlayer, 5000);  //表示5秒后自动隐藏播放器
-    }
+                function resetTimer() {
+                    clearTimeout(hideTimer);
+                    hideTimer = setTimeout(hidePlayer, 5000); //表示5秒后自动隐藏播放器
+                }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        loadMusicList();
-        playSelectedMusic(currentIndex);
-        
-        
-        const player = document.querySelector('.music-player');
-        player.addEventListener('mouseover', resetTimer);
-        player.addEventListener('mouseout', resetTimer);
-        player.addEventListener('click', resetTimer);
-        
-        setTimeout(() => {
-            togglePlayer();
-            resetTimer();
-        }, 3000);  //设置网页加载3秒后弹出播放器
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadMusicList();
+                    playSelectedMusic(currentIndex);
 
-        prevBtn.addEventListener('click', () => {
-            playPrev();
-            resetTimer();
-        });
-        toggleBtn.addEventListener('click', () => {
-            toggleMusic();
-            resetTimer();
-        });
-        nextBtn.addEventListener('click', () => {
-            playNext();
-            resetTimer();
-        });
-        listBtn.addEventListener('click', () => {
-            toggleMusicList();
-            resetTimer();
-        });
-        volumeControl.addEventListener('input', () => {
-            resetTimer();
-        });
-    });
+
+                    const player = document.querySelector('.music-player');
+                    player.addEventListener('mouseover', resetTimer);
+                    player.addEventListener('mouseout', resetTimer);
+                    player.addEventListener('click', resetTimer);
+
+                    setTimeout(() => {
+                        togglePlayer();
+                        resetTimer();
+                    }, 3000); //设置网页加载3秒后弹出播放器
+
+                    prevBtn.addEventListener('click', () => {
+                        playPrev();
+                        resetTimer();
+                    });
+                    toggleBtn.addEventListener('click', () => {
+                        toggleMusic();
+                        resetTimer();
+                    });
+                    nextBtn.addEventListener('click', () => {
+                        playNext();
+                        resetTimer();
+                    });
+                    listBtn.addEventListener('click', () => {
+                        toggleMusicList();
+                        resetTimer();
+                    });
+                    volumeControl.addEventListener('input', () => {
+                        resetTimer();
+                    });
+                });
