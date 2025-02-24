@@ -55,14 +55,14 @@ var musicFiles = [
         
         // 预加载音乐
         loadRandomMusic();
-        
         toggleBtn.addEventListener('click', toggleMusic);        
-        // 移除自动播放的代码
-        // window.onload = function() {
-        //     // 直接在页面加载时开始播放
-        //     setTimeout(() => {
-        //         toggleMusic(); // 触发播放
-        //     }, 5000);
+        
+         移除自动播放的代码
+         window.onload = function() {
+             // 直接在页面加载时开始播放
+             setTimeout(() => {
+                 toggleMusic(); // 触发播放
+            }, 5000);
         
         
         

@@ -1,0 +1,291 @@
+/* 播放器容器样式 */
+.music-player {
+    position: fixed;
+    right: -250px;
+    /* 初始隐藏在屏幕外 */
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    /* 修改边框圆角属性 */
+    border-radius: 15px 5px 0 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* 调整阴影效果，与音乐列表一致 */
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+    /* 确保播放器在最上层 */
+}
+
+/* 控制器容器样式 */
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列子元素 */
+    align-items: center;
+    /* 水平居中对齐 */
+    width: 100%;
+    /* 容器宽度 */
+    padding-bottom: 2px;
+    /* 距离底部2px */
+    box-sizing: border-box;
+    /* 包含内边距和边框 */
+}
+
+/* 播放器展开时的样式 */
+.music-player.expanded {
+    right: 10px;
+    /* 完全显示 */
+}
+
+/* 隐藏时的左侧边框样式 */
+.toggle-border {
+    position: absolute;
+    left: -15px;
+    /* 位于播放器左侧 */
+    width: 15px;
+    height: 80px;
+    /* 固定高度 */
+    top: 5px;
+    /* 顶部与播放器顶部对齐 */
+    background-color: #3a8fd9;
+    border-radius: 5px 0 0 5px; //倒角
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.toggle-border:hover {
+    background-color: #3a8fd9;
+}
+
+/* 添加隐藏/显示图标样式 */
+.toggle-border::before {
+    content: '<';
+    /* 默认显示 < 图标 */
+    color: #FF0080;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.music-player.expanded .toggle-border::before {
+    content: '>';
+    /* 播放器展开时显示 > 图标 */
+    color: #fff;
+}
+
+/* 按钮通用样式 */
+.circle-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #4a9feb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.circle-btn:hover {
+    background-color: #3a8fd9;
+}
+
+/* 播放图标样式 */
+.play-icon {
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 5px;
+}
+
+/* 暂停图标样式（两条竖线） */
+.pause-icon {
+    display: flex;
+    gap: 6px;
+}
+
+.pause-icon::before,
+.pause-icon::after {
+    content: '';
+    width: 6px;
+    height: 20px;
+    background-color: white;
+}
+
+/* 上一首/下一首图标样式 */
+.prev-icon,
+.next-icon {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.prev-icon {
+    border-right: 16px solid white;
+    margin-right: 5px;
+}
+
+.next-icon {
+    border-left: 16px solid white;
+    margin-left: 5px;
+
+}
+
+/* 音乐列表按钮样式（三条横杠） */
+.list-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.list-icon::before,
+.list-icon::after,
+.list-icon div {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: white;
+}
+
+/* 音量控制滑块样式 */
+#volume-control {
+    width: 220px;
+    /* 与第一排按钮总宽度一致 */
+    margin-top: 10px;
+}
+
+/* 音乐列表样式 */
+#music-list {
+    position: fixed;
+    right: 5px;
+    bottom: 179px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 半透明背景 */
+    padding: 15px;
+    /* 增加内边距 */
+    border-radius: 15px;
+    /* 更圆润的边角 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* 更明显的阴影 */
+    display: none;
+    max-height: 250px;
+    /* 增加最大高度 */
+    overflow-y: auto;
+    width: 230px;
+    /* 固定宽度 */
+    font-family: Arial, sans-serif;
+    /* 字体优化 */
+    font-size: 14px;
+    /* 字体大小 */
+    color: #333;
+    /* 字体颜色 */
+    z-index: 1000;
+    /* 确保在最上层 */
+}
+
+/* 列表项样式 */
+#music-list li {
+    list-style: none;
+    padding: 10px 15px;
+    /* 增加内边距 */
+    margin: 5px 0;
+    /* 增加外边距 */
+    border-radius: 8px;
+    /* 圆角边框 */
+    background-color: #f9f9f9;
+    /* 淡色背景 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* 平滑过渡效果 */
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: space-between;
+    /* 内容分布 */
+}
+
+/* 列表项悬停效果 */
+#music-list li:hover {
+    background-color: #e0e0e0;
+    /* 悬停时的背景色 */
+}
+
+/* 列表项选中状态 */
+#music-list li.active {
+    background-color: #4a9feb;
+    /* 选中时的背景色 */
+    color: #fff;
+    /* 选中时的文字颜色 */
+}
+
+/* 滚动条样式 */
+#music-list::-webkit-scrollbar {
+    width: 8px;
+    /* 滚动条宽度 */
+}
+
+#music-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    /* 滚动条颜色 */
+    border-radius: 4px;
+    /* 滚动条圆角 */
+}
+
+#music-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* 滚动条轨道颜色 */
+    border-radius: 4px;
+    /* 滚动条轨道圆角 */
+}
+
+/* 公众号文字样式 */
+.fengyanfengyu {
+    text-align: center;
+    /* 水平居中 */
+    margin-top: 10px;
+    /* 与滑块的间距 */
+    width: 100%;
+    /* 文字宽度适应容器 */
+    font-size: 14px;
+    /* 字体大小 */
+    font-weight: bold;
+    /* 加粗字体 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* 文字阴影 */
+    color: #4a9feb;
+    /* 文字蓝色 */
+    margin: 0;
+    /* 去掉默认外边距 */
+    padding: 0;
+    /* 去掉默认内边距 */
+}
+
+/* 状态消息样式 */
+#status-message {
+    position: fixed;
+    left: 7px;
+    bottom: 300px;
+    max-width: 50%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* 第一排按钮容器样式 */
+.controls-row {
+    display: flex;
+    gap: 5px;
+    /* 按钮之间间隔5px */
+}
