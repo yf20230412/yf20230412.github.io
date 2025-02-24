@@ -5,7 +5,7 @@
     var prevBtn = document.getElementById('prev-btn');
     var nextBtn = document.getElementById('next-btn');
     var listBtn = document.getElementById('list-btn');
-    var musicList = document.getElementById('music-list');
+    var musicList = document.getElementById('/static/music/music-list');
     var statusMessage = document.getElementById('status-message');
     var volumeControl = document.getElementById('volume-control');
     var currentIndex = 0;
