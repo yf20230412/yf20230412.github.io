@@ -5,7 +5,7 @@
     var prevBtn = document.getElementById('prev-btn');
     var nextBtn = document.getElementById('next-btn');
     var listBtn = document.getElementById('list-btn');
-    var musicList = document.getElementById('https://yf1688.top/static/music/music-list.json');
+    var musicList = document.getElementById('music-list');
     var statusMessage = document.getElementById('status-message');
     var volumeControl = document.getElementById('volume-control');
     var currentIndex = 0;
@@ -16,7 +16,7 @@
     // 加载音乐列表
     function loadMusicList() {
         // 从 JSON 文件加载音乐列表
-        fetch('./music-list.json')
+        fetch('music-list.json')
             .then(response => response.json())
             .then(data => {
                 musicFiles = data.musicFiles; // 更新 musicFiles
