@@ -1,14 +1,8 @@
-    var musicFiles = [
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3',
-        'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
-    ];
+// 引入流行音乐的歌曲列表
+import { popMusicFiles } from './流行音乐.js';
+
+// 使用流行音乐的歌曲列表
+var musicFiles = popMusicFiles;
 
     var bgMusic = document.getElementById('bg-music');
     var toggleBtn = document.getElementById('toggle-btn');
