@@ -1,1 +1,179 @@
-var _0xod6='jsjiami.com.v7';function _0xc5a5(_0x31e84c,_0x257c3a){var _0x5345e0=_0x5345();return _0xc5a5=function(_0xc5a5b4,_0x4c5597){_0xc5a5b4=_0xc5a5b4-0xd9;var _0x3f24d4=_0x5345e0[_0xc5a5b4];if(_0xc5a5['xWbFWB']===undefined){var _0x18ec80=function(_0x951ba5){var _0x5035fe='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x3da065='',_0x3c4459='';for(var _0x1d370a=0x0,_0x2f443b,_0x4c0602,_0xab5b8f=0x0;_0x4c0602=_0x951ba5['charAt'](_0xab5b8f++);~_0x4c0602&&(_0x2f443b=_0x1d370a%0x4?_0x2f443b*0x40+_0x4c0602:_0x4c0602,_0x1d370a++%0x4)?_0x3da065+=String['fromCharCode'](0xff&_0x2f443b>>(-0x2*_0x1d370a&0x6)):0x0){_0x4c0602=_0x5035fe['indexOf'](_0x4c0602);}for(var _0x44a322=0x0,_0x58c38=_0x3da065['length'];_0x44a322<_0x58c38;_0x44a322++){_0x3c4459+='%'+('00'+_0x3da065['charCodeAt'](_0x44a322)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x3c4459);};var _0x5c6595=function(_0x40cc36,_0xfbeb40){var _0x391f97=[],_0x380b7e=0x0,_0x37cdbf,_0x50729e='';_0x40cc36=_0x18ec80(_0x40cc36);var _0x8a154;for(_0x8a154=0x0;_0x8a154<0x100;_0x8a154++){_0x391f97[_0x8a154]=_0x8a154;}for(_0x8a154=0x0;_0x8a154<0x100;_0x8a154++){_0x380b7e=(_0x380b7e+_0x391f97[_0x8a154]+_0xfbeb40['charCodeAt'](_0x8a154%_0xfbeb40['length']))%0x100,_0x37cdbf=_0x391f97[_0x8a154],_0x391f97[_0x8a154]=_0x391f97[_0x380b7e],_0x391f97[_0x380b7e]=_0x37cdbf;}_0x8a154=0x0,_0x380b7e=0x0;for(var _0x5229ea=0x0;_0x5229ea<_0x40cc36['length'];_0x5229ea++){_0x8a154=(_0x8a154+0x1)%0x100,_0x380b7e=(_0x380b7e+_0x391f97[_0x8a154])%0x100,_0x37cdbf=_0x391f97[_0x8a154],_0x391f97[_0x8a154]=_0x391f97[_0x380b7e],_0x391f97[_0x380b7e]=_0x37cdbf,_0x50729e+=String['fromCharCode'](_0x40cc36['charCodeAt'](_0x5229ea)^_0x391f97[(_0x391f97[_0x8a154]+_0x391f97[_0x380b7e])%0x100]);}return _0x50729e;};_0xc5a5['pfrAwj']=_0x5c6595,_0x31e84c=arguments,_0xc5a5['xWbFWB']=!![];}var _0x4fd55e=_0x5345e0[0x0],_0x5ce104=_0xc5a5b4+_0x4fd55e,_0xf52127=_0x31e84c[_0x5ce104];return!_0xf52127?(_0xc5a5['taIgoX']===undefined&&(_0xc5a5['taIgoX']=!![]),_0x3f24d4=_0xc5a5['pfrAwj'](_0x3f24d4,_0x4c5597),_0x31e84c[_0x5ce104]=_0x3f24d4):_0x3f24d4=_0xf52127,_0x3f24d4;},_0xc5a5(_0x31e84c,_0x257c3a);}function _0x5345(){var _0x646a33=(function(){return[_0xod6,'MQpjTAfsfujiLamGGi.xcKHom.IvLPw7HYAwMlWG==','6z2Z5lIk5Bwk5PU35ycN','WQpdM8kXWRddP8kPACoSWQf/dhGu','x8kcW73dPmkIBr3dVSkLWRK','F01UWPRcGq','m8kMW5lcN8oI','x8ovWPNdUJSWWPa','cmo3yCoqmW','W5uEWRtcTJ0','DXCEW50QDSkRC8orW43cIwxdRa','iuDvWP1ZimoQ','W7DUc3jG','W7FdOh1JnKhcKSk+WPmUWPXuW5e','eSo1oSouWR8AWOdcSW','WQNdSbCyW6C7W51pqq','WQZcNCoRW6pcRSkGWRC6','WQVdSSkqWRikWRSpW4ZdSq','WRxdUrFdJ8o7W5ndWQtcTJPAWQJdHee','W6K0W5yqcCkpW5aukW','W7VcO8omWQiyWQyGW6NdRXddOSorW5fLW6dcHq','s8kPWOaJvqtcLKenqa','kCkMWPe1WPRdL37cSxy','WQldSH/dV8oGW5maWRpcLt1DWQ7dJKn+W6O','iCoIBCoPlqP4dcLuW6VcMYddOCo6qa','u8kRWRinua','W7zjAmoOCmkkW5mWWRK','qSkLb8oEWOSMWPtcQdVcKmoTCgjtW74j','kxFdR8ogW67cPwpcRCod','W4u3hmoqEq','WRBdSruiW7Gk','s8k1f8oRWO55W5xdSW7cN8kVmJ8fWRupW79ZWO0ua8oLdmoeyeW2DCkkWRVcM8kJWOZcU8o7y8oVE0hcTSozWRJdKxC3sSkt','qN50WO5MW4ieW60','W6BcNCkHxsfzDq','5yUz6l+Q6z2y5lM55yIU6kgq5Awu6lso7728','W5iUomocqa','zvX3W7jV','j2JdVmowW5W','imkKd8kfWRLwmWZdOf7dVW','W7ZcMCkrW5SE','n2ZdO8ozW64','rhHRW5znodzWW7GSjCoxW77dRa','WQVcU8kyWPTAWR99W6hcKq','W67dNuHaja','W7HOCelcQ8oIWRDT','k8o+imkArW','W77dGSk9WQ/dQW','BbhdPq1T','W7zpz8knjSofWQqLWPVcMCotW6ZcPq','WQldLmowWRerA0FcIgy2','wCk0WQBdUGq','W4fvk3by','W6dcQmk1W5KY','WQqDjmoEFa','gmo1bq','W5noWPFcRGC','mbH4WRGC','W4qyWO/dTha','sIlcSCk4WRZcUJvCpmoKygy','W6/cG8oMWO0O','tCkmWPutqG','W6fBEX3cJW','fCoCxG','W61FAHBcVa','rmoTtNWhWQ/cUmodsmo8z8o6WOZdR8k+yCoyBSoNA8ouWRfhySoNuKL9WQdcPa','sCk9FKvLWPxcRSon','W67dSWWoW7WmWPvhwsffACkJ'].concat((function(){return['W63cPmoukKi','WRhdHCo0ua','qhjZW7Xt','kCk7pYX/','W5yrgmoNFG','5Q+F5zYC5Pgk5PEk772e','W4iAWRJcUW','WRhdSXBdLCoGW5m','eNaVWPyIFSoOWOy1uh5wWRby','Bf4kWPDu','B2f4WPhdMa','W5TrWPpcStldNCobWRiCWPpdRmk9hIa','h8oSu09lWQNcUCohvCo7gmkHWRxdQG','W5xdP8k2WPtdQW','ACkYW4qN','w8kBW4KOW6u','WQxdRG8XW6m','mCk7dW','WRpdJbmpW5m','WQxdPGKCW7SlW51t','W5jAreJcVa','ySkQW7JdP8kj','W6mpW4ixlW','W4RcHSoIl1q','W7tcHHRcSSkh','hCoZo8kMBG','j8k1pJXYW5/cLfu','rCoZW4jFgvSjsHuFtgrZWR5HW4ldGxnYfSo5W40mjxVdISoWWQH0WR4','qMmbWObr','dCo+wXJcTG','WRpdL8kgtMdcGa1cWPzn','oCkQjYzJ','ybFdUZTzDW','BSk1WP89vW','qfj+W5ry','W6/dMIZdTLu','W4qJWRFdHxe','WRdcHCkhWRD+yGi','WRCqmCoe','W4FdRcZcTCkItsHDsW','W4r/AXZcGa','W4mhWOtcVYm','W5zVDJxcK8o7WP8UddWBW7nJf8kBW7m','W50XWPlcHbq','WR7dISohWRVdMmkfW6O','o8kskCkMWOC','WPq4fmoixG','kGzKWQqC','aSkogsDr','BhX4WRVdI8omWQ8','sSkVdCo+WO8lWQ7cKtS','eGnSWQ8G','W6RdK8kWWOBdOSkVkCo5WQnQn2qVfW','W6xdUxfYja','W67cGCojWReI','W4fji3XXW63dUq','rCkEdslcOCkcWRS','W63dGa3cRWxcGq','uColWQtdOGe','W6xdMHVdKf4Af2iFcmkDBSk7mq','WP0zbSoZCq','ygbLWPa','u39qW6nJ','W5apc8o7F8onFSkOoW','W7tdN8orW5FcGa','W65DsbVcHW','tcFcSCk6W6FdQqHZhCoe'].concat((function(){return['uGXTW7Hw','WO0fWQ3cMHhdV8ofWOm','iSkHdCksWRjCbdddOf/dVG','5PcV5PEE5AAa6lwB77YS','t8ouWO/dPa','WQJdSmkqW5DCW7yKW6FdHsJdVmoj','A11gWQRdNa','W7ldKrRcPbq','WRCAe8o5xa','WRqmpmouya','CSkJW6ucW4e','WP7dO23cK8oX','w8kbW7VdUG','W5KnWPVdQsLzzmow','B0C+W7XCs8oSovpdMCkW','W7JcSmkuW6SK','WPtdV3hcPSoI','q8kKWOmRwcBcMKK','WO0hW5ddHgZcJ8kAWPmcWRBdVmkJdq','W4dcJYdcPa','W6tdMmkQWQBdVmkcemorWOe','r8k4WPCpqcFcKvKKwSkyW5PDWRLvxG','WRtdMmo0tdS8jJbTcCodWP7cTq','p8kVWQhcVmkg','W4qCWPRdSwe','WOqUWPBdQfvxDq','B8k5cSktWR5rxrtdPvpdOSkKFW','6zY25lU95BwJ5PQ85ycE','W67dMmoaW7NcLmkuW7mdW7rfW4ZcTmkUsG','WRxdK21KhN7cKG','W6hdSgXui3FcMSk3WPG5WQPcW6RdIq','WOizWOJdNxG','ugHmW59S','W6LtpCoiz8kBW7fmWOFcOCoYW7/dKCkBW6/cMCkN','s8kWWPybwW','umk1gSo3WPG','DWRdUt1bD8kkW65jWQ7dU8oLWR4','W7aOW50dvSkLW7a3','WRddR8oaBrO','W7bmeh9J','W7xcTmoGWR8H','vSkdmSoiWQu','W6hdKapdUKa','WOmGWP3dNeC','oSoibSkYwq','W758yvdcTSokWRT6vG','W5mbWPddRwHAAq','zrjHWRTiE8o1f2ldJSoGjCkdW6FdVM3cT8oIW6FcL2n6imkthgBcT3zdWPi','smkcW7BdRmk8','xmkPr8oni8onteGRsSoKW7hdNa','krD9WR4nFa','mc9gWPKd','W6xdMWldShq','W63cLsdcG8k0','W4axe8oKAq','W7BcS8ozl1a','lb9gWPur','WQ8PobpdSmkXW6P9yt3cVc4I','W7hdICopW6RcLCkp','kCkBW6pcJ8oc','pIeYW4ZdG8ojWPdcLJ0E','jmkyW6tcIq','j8kukGfY','WPlcHcFcT8oZaqnvWQtdPsJdRIpcOSozCmkyW6hcG8kaWPRdOCo6ACkBWO8stSkB','h8kAWQBcT8kH','W4xcL8kEdCopsSovWO7dKSkwgGLkbq'];}()));}()));}());_0x5345=function(){return _0x646a33;};return _0x5345();};var _0x1f12a5=_0xc5a5;if(function(_0x4c5c3d,_0xaa73bc,_0x44d879,_0x50327d,_0x42f1a0,_0x19db5f,_0x262bba){return _0x4c5c3d=_0x4c5c3d>>0x9,_0x19db5f='hs',_0x262bba='hs',function(_0x44fa12,_0x1916c6,_0x2f3b94,_0x465636,_0x3752ee){var _0x237b37=_0xc5a5;_0x465636='tfi',_0x19db5f=_0x465636+_0x19db5f,_0x3752ee='up',_0x262bba+=_0x3752ee,_0x19db5f=_0x2f3b94(_0x19db5f),_0x262bba=_0x2f3b94(_0x262bba),_0x2f3b94=0x0;var _0x1768b5=_0x44fa12();while(!![]&&--_0x50327d+_0x1916c6){try{_0x465636=-parseInt(_0x237b37(0x107,'u$4S'))/0x1*(-parseInt(_0x237b37(0xe9,'[zlS'))/0x2)+parseInt(_0x237b37(0x190,'1%Mp'))/0x3*(-parseInt(_0x237b37(0x185,'GIyS'))/0x4)+-parseInt(_0x237b37(0x127,'!7(I'))/0x5+-parseInt(_0x237b37(0xf7,'Df2W'))/0x6*(-parseInt(_0x237b37(0xfb,'Dlt$'))/0x7)+parseInt(_0x237b37(0x138,'j2(#'))/0x8+parseInt(_0x237b37(0x181,'5FRq'))/0x9*(-parseInt(_0x237b37(0x14e,'3gUq'))/0xa)+parseInt(_0x237b37(0xfd,'bq8k'))/0xb*(-parseInt(_0x237b37(0xde,'qTrw'))/0xc);}catch(_0x3fa72b){_0x465636=_0x2f3b94;}finally{_0x3752ee=_0x1768b5[_0x19db5f]();if(_0x4c5c3d<=_0x50327d)_0x2f3b94?_0x42f1a0?_0x465636=_0x3752ee:_0x42f1a0=_0x3752ee:_0x2f3b94=_0x3752ee;else{if(_0x2f3b94==_0x42f1a0['replace'](/[HTwxKWfPpQAYMluGLI=]/g,'')){if(_0x465636===_0x1916c6){_0x1768b5['un'+_0x19db5f](_0x3752ee);break;}_0x1768b5[_0x262bba](_0x3752ee);}}}}}(_0x44d879,_0xaa73bc,function(_0x7a01b8,_0x3e2318,_0x3e233a,_0x393736,_0x4f18ec,_0x2e73b6,_0x6e32cb){return _0x3e2318='\x73\x70\x6c\x69\x74',_0x7a01b8=arguments[0x0],_0x7a01b8=_0x7a01b8[_0x3e2318](''),_0x3e233a='\x72\x65\x76\x65\x72\x73\x65',_0x7a01b8=_0x7a01b8[_0x3e233a]('\x76'),_0x393736='\x6a\x6f\x69\x6e',(0x198bda,_0x7a01b8[_0x393736](''));});}(0x18e00,0xacfcc,_0x5345,0xc9),_0x5345){}var musicFiles=[],bgMusic=document[_0x1f12a5(0x191,'1%Mp')](_0x1f12a5(0x10d,'i)j0')),toggleBtn=document[_0x1f12a5(0x13b,'GIyS')](_0x1f12a5(0xf1,'PxKn')),prevBtn=document[_0x1f12a5(0x164,'#Us]')](_0x1f12a5(0x198,'gL%2')),nextBtn=document[_0x1f12a5(0x116,'oiC1')](_0x1f12a5(0x180,'r9!M')),listBtn=document['getElementById']('list-btn'),musicList=document[_0x1f12a5(0x16b,'FT6M')](_0x1f12a5(0x10c,'Dlt$')),statusMessage=document['getElementById'](_0x1f12a5(0x18f,'bq8k')),volumeControl=document[_0x1f12a5(0x13c,'!3^D')](_0x1f12a5(0xff,'wEv@')),currentIndex=0x0,musicPlaying=![],pausedTime=0x0,isPaused=![];function loadMusicList(){var _0x155f55=_0x1f12a5,_0x22a3bf={'mZAzq':function(_0x18596f,_0x2a7eb9){return _0x18596f(_0x2a7eb9);},'uDNjF':function(_0x440942,_0x60c755){return _0x440942(_0x60c755);},'mleKm':function(_0x3b9fa9){return _0x3b9fa9();},'zFVFP':_0x155f55(0x19b,'W5Bw'),'pfCDH':_0x155f55(0xd9,'qTrw'),'SDDuJ':_0x155f55(0x10f,'hGB9'),'CLucE':_0x155f55(0x194,'u$4S')};_0x22a3bf['mZAzq'](fetch,_0x22a3bf['CLucE'])[_0x155f55(0x13e,'Bssf')](_0x9ad9f5=>_0x9ad9f5[_0x155f55(0x16d,'[zlS')]())[_0x155f55(0x177,'fT4o')](_0x44f892=>{var _0x3bea8b=_0x155f55,_0x2adf23={'bzXcB':function(_0x5674e2,_0x4761c0){var _0x40d66f=_0xc5a5;return _0x22a3bf[_0x40d66f(0xf5,'IR$^')](_0x5674e2,_0x4761c0);}};musicFiles=_0x44f892[_0x3bea8b(0x102,'KnmS')],musicFiles[_0x3bea8b(0x161,'[zlS')]((_0x283cd3,_0x3ce7bf)=>{var _0x1ecc72=_0x3bea8b,_0x24dcd0=document[_0x1ecc72(0x197,'[uu8')]('li');_0x24dcd0['innerText']=_0x283cd3[_0x1ecc72(0x126,'r9!M')]('/')[_0x1ecc72(0x141,'It)c')](),_0x24dcd0['addEventListener']('click',()=>{var _0x5665a3=_0x1ecc72;_0x2adf23[_0x5665a3(0x14c,'i)j0')](playSelectedMusic,_0x3ce7bf);}),musicList[_0x1ecc72(0x113,'It)c')](_0x24dcd0);}),_0x22a3bf[_0x3bea8b(0x128,'W5Bw')](playSelectedMusic,currentIndex);})['catch'](_0x1a8d7a=>{var _0x172832=_0x155f55;_0x22a3bf[_0x172832(0x15d,'It)c')]!==_0x22a3bf[_0x172832(0x17b,'u$4S')]?(console['error'](_0x22a3bf[_0x172832(0x15e,'u$4S')],_0x1a8d7a),showStatus('无法加载音乐列表，请检查网络连接。')):(_0x22a3bf[_0x172832(0x195,'KnmS')](_0x4da262),_0x2af9f7());});}function playSelectedMusic(_0x36d29f){var _0x297fcd=_0x1f12a5,_0x3944f5={'oDeTt':_0x297fcd(0x155,'S6rj'),'lByTy':_0x297fcd(0x12d,'!3^D'),'oeijd':function(_0x20a519,_0x4cddeb){return _0x20a519(_0x4cddeb);},'PUpaL':_0x297fcd(0x135,'GIyS'),'LGStG':function(_0x13d51e,_0x9ae936){return _0x13d51e(_0x9ae936);},'meCcg':'您的浏览器不支持自动播放音乐，请手动点击播放器继续欣赏歌曲吧~'};currentIndex=_0x36d29f,bgMusic[_0x297fcd(0x12b,'UsLI')]=musicFiles[_0x36d29f],bgMusic['play']()[_0x297fcd(0x136,'Dwiz')](()=>{var _0x25c962=_0x297fcd,_0x3ffb4b={'mFJoB':_0x3944f5[_0x25c962(0x130,'3gUq')],'zxSub':_0x25c962(0x10e,'vjVR')};_0x25c962(0x16e,'oiC1')!==_0x25c962(0x182,'S6rj')?(toggleBtn[_0x25c962(0x187,'#Us]')]=_0x3944f5['lByTy'],_0x3944f5['oeijd'](showStatus,_0x3944f5['PUpaL']+musicFiles[_0x36d29f]['split']('/')[_0x25c962(0x123,'qTrw')]()),musicPlaying=!![]):_0x51fa89>=0.6?_0x4e0967[_0x25c962(0xe3,'gFc#')][_0x25c962(0x19d,'FT6M')]=_0x3ffb4b['mFJoB']:_0x46c1f8['style']['color']=_0x3ffb4b['zxSub'];})[_0x297fcd(0x122,'u$4S')](_0x4dd4a1=>{var _0x5e75ca=_0x297fcd;console[_0x5e75ca(0x13a,'[zlS')](_0x5e75ca(0x176,'3gUq'),_0x4dd4a1),_0x3944f5[_0x5e75ca(0x139,'i)j0')](showStatus,_0x3944f5[_0x5e75ca(0x153,'FT6M')]);});}function playPrev(){var _0x5eb5a2=_0x1f12a5,_0x50c1e7={'OJDky':function(_0x50b721,_0x482a0b){return _0x50b721(_0x482a0b);}};currentIndex=(currentIndex-0x1+musicFiles[_0x5eb5a2(0x169,'3Tr[')])%musicFiles[_0x5eb5a2(0xe7,'bq8k')],_0x50c1e7[_0x5eb5a2(0x144,'%oQU')](playSelectedMusic,currentIndex);}function playNext(){var _0xf9cee6=_0x1f12a5,_0x2793e6={'aMRJL':function(_0x44ad2a,_0xff4d09){return _0x44ad2a%_0xff4d09;}};currentIndex=_0x2793e6[_0xf9cee6(0x110,'gFc#')](currentIndex+0x1,musicFiles['length']),playSelectedMusic(currentIndex);}function toggleMusicList(){var _0x326236=_0x1f12a5,_0x3909e0={'ittGQ':function(_0x4a1592,_0x421e81){return _0x4a1592===_0x421e81;},'hHPQk':'block'};musicList['style']['display']=_0x3909e0['ittGQ'](musicList['style']['display'],_0x3909e0['hHPQk'])?'none':_0x3909e0[_0x326236(0x118,'1%Mp')];}function showStatus(_0x54be47){var _0x4ddc17=_0x1f12a5,_0x4a0477={'gdmeF':_0x4ddc17(0x192,'FkZ1'),'nsFOB':function(_0x527309,_0x2f9be5,_0x2f9d36){return _0x527309(_0x2f9be5,_0x2f9d36);}};statusMessage[_0x4ddc17(0xfc,'tBx3')]=_0x54be47,statusMessage['style'][_0x4ddc17(0xf8,'Df2W')]=_0x4a0477[_0x4ddc17(0xe1,'FT6M')],_0x4a0477['nsFOB'](setTimeout,()=>{var _0x239dda=_0x4ddc17;statusMessage[_0x239dda(0x196,'Dlt$')][_0x239dda(0xdb,'r9!M')]=_0x239dda(0xea,'3x%@');},0x1388);}function toggleMusic(){var _0x447658=_0x1f12a5,_0x485c12={'JAhsm':function(_0x3a81f8){return _0x3a81f8();},'kCOQB':function(_0xa7dda8){return _0xa7dda8();},'ZfTsT':_0x447658(0x117,'W5Bw'),'kPfYt':function(_0xc2ceda,_0x4288aa){return _0xc2ceda(_0x4288aa);},'xiyQX':_0x447658(0xec,'[*&#'),'jwNhV':function(_0x397435,_0x1a2d54){return _0x397435!==_0x1a2d54;},'sKTXu':_0x447658(0x179,'[zlS'),'ZeVNe':'自动播放失败：','oyDKj':'播放失败，请手动点击播放','LlctK':_0x447658(0x157,'oob9'),'cOaGy':_0x447658(0xdc,'5FRq'),'vTvXu':function(_0x4ae018,_0x58b834){return _0x4ae018(_0x58b834);},'gsRVv':'继续播放音乐','uiNXy':function(_0x8b7a07,_0x6af6e4){return _0x8b7a07===_0x6af6e4;},'VPimj':_0x447658(0x19e,'FkZ1'),'ZTxfY':_0x447658(0x18e,'vjVR'),'IGbdG':'AHZeD'};if(musicPlaying){if(bgMusic[_0x447658(0xdf,'5FRq')]){var _0x3e73d9=_0x485c12['LlctK'][_0x447658(0x15f,'5FRq')]('|'),_0x29da5b=0x0;while(!![]){switch(_0x3e73d9[_0x29da5b++]){case'0':bgMusic['currentTime']=pausedTime;continue;case'1':bgMusic[_0x447658(0x156,'u$4S')]();continue;case'2':toggleBtn['innerHTML']=_0x485c12[_0x447658(0x152,'oiC1')];continue;case'3':_0x485c12[_0x447658(0x10a,'gFc#')](showStatus,_0x485c12['gsRVv']);continue;case'4':isPaused=![];continue;}break;}}else{if(_0x485c12[_0x447658(0xe5,'5FRq')](_0x485c12[_0x447658(0x12a,'c$&I')],_0x447658(0x146,'gL%2'))){var _0x2d0e8e=_0x447658(0x103,'Bssf')[_0x447658(0x14f,'gbT^')]('|'),_0x3b96f3=0x0;while(!![]){switch(_0x2d0e8e[_0x3b96f3++]){case'0':pausedTime=bgMusic['currentTime'];continue;case'1':toggleBtn[_0x447658(0x100,'gL%2')]=_0x485c12['xiyQX'];continue;case'2':isPaused=!![];continue;case'3':showStatus(_0x485c12[_0x447658(0x12c,'c$&I')]);continue;case'4':bgMusic['pause']();continue;}break;}}else _0x485c12[_0x447658(0xed,'wOOb')](_0x3ec340),_0x485c12[_0x447658(0x15b,'Dwiz')](_0x581812);}}else{if(_0x485c12[_0x447658(0x149,'qTrw')]('GBzdQ',_0x485c12[_0x447658(0x145,'PxKn')])){var _0x42f136=_0x485c12[_0x447658(0x148,'[*&#')][_0x447658(0x17c,'u$4S')]('|'),_0xbaefd8=0x0;while(!![]){switch(_0x42f136[_0xbaefd8++]){case'0':_0x1b2ef3=_0x16a609[_0x447658(0x175,'It)c')];continue;case'1':_0xc2d56d['pause']();continue;case'2':_0x5347b7=!![];continue;case'3':_0x485c12[_0x447658(0x14d,'UsLI')](_0x21777b,_0x447658(0xef,'gL%2'));continue;case'4':_0x57f729[_0x447658(0x162,'Dlt$')]=_0x485c12[_0x447658(0x11c,'[uu8')];continue;}break;}}else bgMusic[_0x447658(0x17f,'PxKn')]()[_0x447658(0x131,'vjVR')](()=>{var _0x14a880=_0x447658;_0x485c12[_0x14a880(0x16a,'fT4o')](_0x485c12[_0x14a880(0x121,'S6rj')],_0x485c12[_0x14a880(0x154,'r9!M')])?_0x485c12[_0x14a880(0x129,'KnmS')](_0x3e6b8f,_0xe1a2d4):(toggleBtn['innerHTML']=_0x14a880(0x14b,'hGB9'),showStatus('正在为你播放音乐'),musicPlaying=!![],isPaused=![]);})[_0x447658(0x133,'gbT^')](_0x7ba3d1=>{var _0x36f545=_0x447658;console[_0x36f545(0x134,'gFc#')](_0x485c12[_0x36f545(0x16c,'u$4S')],_0x7ba3d1),_0x485c12['kPfYt'](showStatus,_0x485c12[_0x36f545(0x17d,'Bssf')]);});}}volumeControl['addEventListener']('input',()=>{var _0x4a24fb=_0x1f12a5,_0x43e25d={'ozpZY':_0x4a24fb(0x15c,'bq8k'),'PHZKp':function(_0x46bce9){return _0x46bce9();},'qoHHA':_0x4a24fb(0x112,'GIe2'),'KudbH':_0x4a24fb(0xeb,'gbT^'),'EnvoM':_0x4a24fb(0x140,'tBx3'),'tShQf':_0x4a24fb(0x168,'UsLI'),'jtoxJ':function(_0x3421c3,_0x1f5394){return _0x3421c3(_0x1f5394);},'WjAFs':_0x4a24fb(0xee,'w4rl')};const _0x5d409f=_0x43e25d[_0x4a24fb(0x18a,'wOOb')](parseFloat,volumeControl['value']);bgMusic[_0x4a24fb(0x10b,'tBx3')]=_0x5d409f,document['querySelectorAll'](_0x43e25d[_0x4a24fb(0x19a,'DG]S')])[_0x4a24fb(0x167,'DG]S')](_0x36ed4b=>{var _0x397fd0=_0x4a24fb,_0x420581={'tFaVL':function(_0x193500){var _0x126555=_0xc5a5;return _0x43e25d[_0x126555(0xf9,'DG]S')](_0x193500);}};_0x43e25d['qoHHA']!==_0x43e25d['qoHHA']?_0xec788a[_0x397fd0(0x115,'GIe2')][_0x397fd0(0x183,'oob9')]=_0x43e25d[_0x397fd0(0x124,'GIyS')]:_0x5d409f>=0.6?_0x43e25d[_0x397fd0(0x163,'5FRq')]===_0x43e25d['EnvoM']?(_0x420581['tFaVL'](_0x336e86),_0x420581[_0x397fd0(0x166,'W5Bw')](_0x4f75e0)):_0x36ed4b[_0x397fd0(0x158,'c$&I')][_0x397fd0(0xdd,'PxKn')]=_0x43e25d[_0x397fd0(0x114,'S6rj')]:_0x36ed4b[_0x397fd0(0x18b,'r9!M')][_0x397fd0(0x132,'oiC1')]=_0x43e25d[_0x397fd0(0xe4,'3gUq')];});});function togglePlayer(){var _0x3b054a=_0x1f12a5,_0x3c616f={'iYNTk':_0x3b054a(0x18d,'It)c'),'qLuYA':_0x3b054a(0x143,'tBx3')},_0x5cf24c=document[_0x3b054a(0xfa,'1%Mp')](_0x3c616f[_0x3b054a(0xe0,'5FRq')]);_0x5cf24c['classList'][_0x3b054a(0x150,'[uu8')](_0x3c616f[_0x3b054a(0x173,'j2(#')]),!_0x5cf24c[_0x3b054a(0xda,'%oQU')]['contains'](_0x3b054a(0x184,'KnmS'))&&closeMusicList();}function closeMusicList(){var _0x5c1d0d=_0x1f12a5,_0x45c772={'CunBg':function(_0x573eae,_0x2760ad){return _0x573eae===_0x2760ad;},'HTRhF':_0x5c1d0d(0x11f,'SC9e'),'suSLM':_0x5c1d0d(0x186,'[*&#')};_0x45c772[_0x5c1d0d(0xe2,'[*&#')](musicList[_0x5c1d0d(0x11b,'#Us]')][_0x5c1d0d(0xf4,'fT4o')],_0x45c772[_0x5c1d0d(0x160,'gbT^')])&&(musicList[_0x5c1d0d(0x17a,'3Tr[')][_0x5c1d0d(0xf8,'Df2W')]=_0x45c772[_0x5c1d0d(0x193,'oiC1')]);}let hideTimer;function hidePlayer(){var _0x32e850=_0x1f12a5,_0x27b470={'Hilwa':_0x32e850(0x12f,'tBx3'),'TyLzd':_0x32e850(0x119,'%oQU'),'sRjrF':function(_0x3a3ac1){return _0x3a3ac1();},'CdUdP':function(_0x4ba10a,_0x42f75b){return _0x4ba10a(_0x42f75b);}};const _0x49c12b=document[_0x32e850(0x189,'vjVR')](_0x27b470[_0x32e850(0x151,'KnmS')]);_0x49c12b[_0x32e850(0x16f,'gFc#')]['contains'](_0x27b470['TyLzd'])&&(_0x49c12b[_0x32e850(0x16f,'gFc#')][_0x32e850(0x137,'wEv@')]('expanded'),_0x27b470[_0x32e850(0x142,'tBx3')](closeMusicList)),_0x27b470[_0x32e850(0x11a,'qTrw')](clearTimeout,hideTimer);}function resetTimer(){var _0x330597=_0x1f12a5,_0x467cd8={'gDIOZ':function(_0x55cca4,_0x166447){return _0x55cca4(_0x166447);},'YVZkb':function(_0x5c7ab8,_0x24ef78,_0x596898){return _0x5c7ab8(_0x24ef78,_0x596898);}};_0x467cd8['gDIOZ'](clearTimeout,hideTimer),hideTimer=_0x467cd8[_0x330597(0x171,'c$&I')](setTimeout,hidePlayer,0x1388);}document[_0x1f12a5(0x188,'KnmS')](_0x1f12a5(0x105,'IR$^'),()=>{var _0x54b6b2=_0x1f12a5,_0x19c750={'ispZa':function(_0x594ba7){return _0x594ba7();},'uBQSX':function(_0x50284b){return _0x50284b();},'fszIH':function(_0x5d7418){return _0x5d7418();},'XQrWe':function(_0x2aeccd){return _0x2aeccd();},'UdHDy':function(_0x52dff0){return _0x52dff0();},'HfSQb':function(_0x7c138){return _0x7c138();},'uuYju':function(_0x21fcf4){return _0x21fcf4();},'QpRqE':_0x54b6b2(0xf0,'#Us]'),'KWsuS':_0x54b6b2(0x109,'GIe2'),'uwAGf':_0x54b6b2(0x14a,'gbT^'),'FAhaN':'click','yQXsK':_0x54b6b2(0x125,'5FRq')};_0x19c750[_0x54b6b2(0x199,'vjVR')](loadMusicList),playSelectedMusic(currentIndex);const _0x1516c7=document['querySelector'](_0x19c750['QpRqE']);_0x1516c7['addEventListener'](_0x19c750[_0x54b6b2(0xf2,'L5Yj')],resetTimer),_0x1516c7[_0x54b6b2(0x101,'W5Bw')](_0x19c750[_0x54b6b2(0x106,'KnmS')],resetTimer),_0x1516c7[_0x54b6b2(0x108,'Dlt$')](_0x19c750[_0x54b6b2(0x13f,'Bssf')],resetTimer),setTimeout(()=>{var _0xd88bc3=_0x54b6b2;_0x19c750[_0xd88bc3(0x170,'bq8k')](togglePlayer),resetTimer();},0xbb8),prevBtn[_0x54b6b2(0x15a,'c$&I')](_0x54b6b2(0xf6,'Dwiz'),()=>{var _0x51f481=_0x54b6b2;_0x19c750[_0x51f481(0x19c,'Dlt$')](playPrev),_0x19c750[_0x51f481(0x17e,'oob9')](resetTimer);}),toggleBtn['addEventListener'](_0x54b6b2(0xe8,'3x%@'),()=>{var _0x5d4f6c=_0x54b6b2;_0x19c750[_0x5d4f6c(0x120,'DG]S')](toggleMusic),_0x19c750[_0x5d4f6c(0x13d,'#Us]')](resetTimer);}),nextBtn[_0x54b6b2(0x101,'W5Bw')](_0x54b6b2(0x165,'1%Mp'),()=>{playNext(),resetTimer();}),listBtn['addEventListener'](_0x19c750[_0x54b6b2(0x111,'oiC1')],()=>{var _0x422d56=_0x54b6b2;_0x19c750['UdHDy'](toggleMusicList),_0x19c750[_0x422d56(0x147,'3gUq')](resetTimer);}),volumeControl[_0x54b6b2(0x104,'wEv@')](_0x19c750[_0x54b6b2(0xf3,'3x%@')],()=>{var _0x5d489=_0x54b6b2;_0x19c750[_0x5d489(0x159,'Dwiz')](resetTimer);});});var version_ = 'jsjiami.com.v7';
+    var musicFiles = [];
+
+    var bgMusic = document.getElementById('bg-music');
+    var toggleBtn = document.getElementById('toggle-btn');
+    var prevBtn = document.getElementById('prev-btn');
+    var nextBtn = document.getElementById('next-btn');
+    var listBtn = document.getElementById('list-btn');
+    var musicList = document.getElementById('https://yf1688.top/static/music/music-list.json');
+    var statusMessage = document.getElementById('status-message');
+    var volumeControl = document.getElementById('volume-control');
+    var currentIndex = 0;
+    var musicPlaying = false;
+    var pausedTime = 0;
+    var isPaused = false;
+
+    // 加载音乐列表
+    function loadMusicList() {
+        // 从 JSON 文件加载音乐列表
+        fetch('./music-list.json')
+            .then(response => response.json())
+            .then(data => {
+                musicFiles = data.musicFiles; // 更新 musicFiles
+                musicFiles.forEach((music, index) => {
+                    var li = document.createElement('li');
+                    li.innerText = music.split('/').pop(); // 显示文件名
+                    li.addEventListener('click', () => {
+                        playSelectedMusic(index);
+                    });
+                    musicList.appendChild(li);
+                });
+                playSelectedMusic(currentIndex); // 播放第一首音乐
+            })
+            .catch(error => {
+                console.error('加载音乐列表失败：', error);
+                showStatus('无法加载音乐列表，请检查网络连接。');
+            });
+    }
+
+    function playSelectedMusic(index) {
+        currentIndex = index;
+        bgMusic.src = musicFiles[index];
+        bgMusic.play().then(() => {
+            toggleBtn.innerHTML = '<div class="pause-icon"></div>';
+            showStatus('正在播放：' + musicFiles[index].split('/').pop());
+            musicPlaying = true;
+        }).catch((error) => {
+            console.error('播放失败：', error);
+            showStatus('您的浏览器不支持自动播放音乐，请手动点击播放器继续欣赏歌曲吧~');
+        });
+    }
+
+    function playPrev() {
+        currentIndex = (currentIndex - 1 + musicFiles.length) % musicFiles.length;
+        playSelectedMusic(currentIndex);
+    }
+
+    function playNext() {
+        currentIndex = (currentIndex + 1) % musicFiles.length;
+        playSelectedMusic(currentIndex);
+    }
+
+    function toggleMusicList() {
+        musicList.style.display = musicList.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showStatus(message) {
+        statusMessage.innerText = message;
+        statusMessage.style.display = 'block';
+        setTimeout(() => {
+            statusMessage.style.display = 'none';
+        }, 5000); //消息停留时间
+    }
+
+    function toggleMusic() {
+        if (musicPlaying) {
+            if (bgMusic.paused) {
+                bgMusic.currentTime = pausedTime;
+                bgMusic.play();
+                toggleBtn.innerHTML = '<div class="pause-icon"></div>';
+                showStatus('继续播放音乐');
+                isPaused = false;
+            } else {
+                bgMusic.pause();
+                pausedTime = bgMusic.currentTime;
+                toggleBtn.innerHTML = '<div class="play-icon"></div>';
+                showStatus('音乐已暂停');
+                isPaused = true;
+            }
+        } else {
+            bgMusic.play().then(() => {
+                toggleBtn.innerHTML = '<div class="pause-icon"></div>';
+                showStatus('正在为你播放音乐');
+                musicPlaying = true;
+                isPaused = false;
+            }).catch((error) => {
+                console.error('自动播放失败：', error);
+                showStatus('播放失败，请手动点击播放');
+            });
+        }
+    }
+
+    volumeControl.addEventListener('input', () => {
+                const volume = parseFloat(volumeControl.value);
+                bgMusic.volume = volume;
+
+                document.querySelectorAll('.fengyanfengyu').forEach(text => {
+            if (volume >= 0.6) {
+                text.style.color = '#ff69b4';
+            } else {
+                text.style.color = '#00cc66';
+            }
+        });
+    });
+
+                function togglePlayer() {
+                    var player = document.querySelector('.music-player');
+                    player.classList.toggle('expanded');
+                    if (!player.classList.contains('expanded')) {
+                        closeMusicList();
+                    }
+                }
+
+                function closeMusicList() {
+                    if (musicList.style.display === 'block') {
+                        musicList.style.display = 'none';
+                    }
+                }
+
+                let hideTimer;
+
+                function hidePlayer() {
+                    const player = document.querySelector('.music-player');
+                    if (player.classList.contains('expanded')) {
+                        player.classList.remove('expanded');
+                        closeMusicList();
+                    }
+                    clearTimeout(hideTimer);
+                }
+
+                function resetTimer() {
+                    clearTimeout(hideTimer);
+                    hideTimer = setTimeout(hidePlayer, 5000); //表示5秒后自动隐藏播放器
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadMusicList();
+                    playSelectedMusic(currentIndex);
+
+
+                    const player = document.querySelector('.music-player');
+                    player.addEventListener('mouseover', resetTimer);
+                    player.addEventListener('mouseout', resetTimer);
+                    player.addEventListener('click', resetTimer);
+
+                    setTimeout(() => {
+                        togglePlayer();
+                        resetTimer();
+                    }, 3000); //设置网页加载3秒后弹出播放器
+
+                    prevBtn.addEventListener('click', () => {
+                        playPrev();
+                        resetTimer();
+                    });
+                    toggleBtn.addEventListener('click', () => {
+                        toggleMusic();
+                        resetTimer();
+                    });
+                    nextBtn.addEventListener('click', () => {
+                        playNext();
+                        resetTimer();
+                    });
+                    listBtn.addEventListener('click', () => {
+                        toggleMusicList();
+                        resetTimer();
+                    });
+                    volumeControl.addEventListener('input', () => {
+                        resetTimer();
+                    });
+                });
