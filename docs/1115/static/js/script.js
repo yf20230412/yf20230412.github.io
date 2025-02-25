@@ -7,7 +7,7 @@ console.log('%c    ) | | | || | |__ | (_) | (_) | (_) |__  ___   _ ____', 'color
 console.log('%c   / /| | | || |___ \\ > _ < > _ < > _ < \\ \\/ / | | |_  /', 'color: #8B4513; font-size: 20px;');
 console.log('%c  / /_| |_| || |___) | (_) | (_) | (_) | >  <| |_| |/ / ', 'color: #8B4513; font-size: 20px;');
 console.log('%c |____|\\___/ |_|____/ \\___/ \\___/ \\___(_)_/\\_\\\\__, /___|', 'color: #8B4513; font-size: 20px;');
-console.log('%c                                               __/ |     ', 'color: #8B4513; font
+console.log('%c                                               __/ |     ', 'color: #8B4513; font-size: 20px;');
 
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
