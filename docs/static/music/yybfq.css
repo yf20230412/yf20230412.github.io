@@ -235,7 +235,7 @@
     /* 字体优化 */
     font-size: 14px;
     /* 字体大小 */
-    color: #333;
+    color: #333!important;
     /* 字体颜色 */
     border: 1px solid #000; /* 添加1.5px的黑色外边框 */
     z-index: 1000;
