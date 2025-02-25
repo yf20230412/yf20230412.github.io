@@ -4,6 +4,8 @@ var bgMusic = document.getElementById('bg-music');
 var toggleBtn = document.getElementById('toggle-btn');
 var prevBtn = document.getElementById('prev-btn');
 var nextBtn = document.getElementById('next-btn');
+var rewindBtn = document.getElementById('rewind-btn'); // 快退按钮
+var fastForwardBtn = document.getElementById('fast-forward-btn'); // 快进按钮
 var listBtn = document.getElementById('list-btn');
 var musicList = document.getElementById('music-list');
 var statusMessage = document.getElementById('status-message');
@@ -58,6 +60,15 @@ function playPrev() {
 function playNext() {
     currentIndex = (currentIndex + 1) % musicFiles.length;
     playSelectedMusic(currentIndex);
+}
+// 快退功能提示
+function promptRewind() {
+    showStatus('~唉！😂该功能真的还没开发……');
+}
+
+// 快进功能提示
+function promptFastForward() {
+    showStatus('~唉！😂该功能暂时还未开发……');
 }
 
 //音乐列表隐藏展开
@@ -165,6 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
         resetTimer();
     });
     volumeControl.addEventListener('input', () => {
+        resetTimer();
+    });
+    // 添加快退和快进的事件监听器，显示提示
+    rewindBtn.addEventListener('click', () => {
+        promptRewind(); // 显示快退提示
+        resetTimer();
+    });
+    fastForwardBtn.addEventListener('click', () => {
+        promptFastForward(); // 显示快进提示
         resetTimer();
     });
 });
