@@ -1,11 +1,12 @@
-console.log('%cCopyright © 2024 yf1688.top',
+console.log('%cCopyright © 2024 yf1688.top  2015888.xyz',
     'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;'
 );
-console.log('%c   /\\_/\\', 'color: #8B4513; font-size: 20px;');
-console.log('%c  ( o.o )', 'color: #8B4513; font-size: 20px;');
-console.log(' %c  > ^ <', 'color: #8B4513; font-size: 20px;');
-console.log('  %c /  ~ \\', 'color: #8B4513; font-size: 20px;');
-console.log('  %c/______\\', 'color: #8B4513; font-size: 20px;');
+console.log('%c  ___   ___  __ _____  ___   ___   ___                  ', 'color: #8B4513; font-size: 20px;');
+console.log('%c |__ \\ / _ \\/_ | ____|/ _ \\ / _ \\ / _ \\                 ', 'color: #8B4513; font-size: 20px;');
+console.log('%c    ) | | | || | |__ | (_) | (_) | (_) |__  ___   _ ____', 'color: #8B4513; font-size: 20px;');
+console.log('%c   / /| | | || |___ \\ > _ < > _ < > _ < \\ \\/ / | | |_  /', 'color: #8B4513; font-size: 20px;');
+console.log('%c  / /_| |_| || |___) | (_) | (_) | (_) | >  <| |_| |/ / ', 'color: #8B4513; font-size: 20px;');
+console.log('%c |____|\\___/ |_|____/ \\___/ \\___/ \\___(_)_/\\_\\\\__, /___|', 'color: #8B4513;
 
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
