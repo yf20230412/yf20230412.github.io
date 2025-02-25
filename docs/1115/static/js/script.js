@@ -1,4 +1,4 @@
-console.log('%cCopyright © 2024 fyfy.net',
+console.log('%cCopyright © 2024 yf1688.top',
     'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;'
 );
 console.log('%c   /\\_/\\', 'color: #8B4513; font-size: 20px;');
