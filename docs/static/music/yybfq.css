@@ -6,10 +6,17 @@
     bottom: 60px;
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
+   /* background-color: rgba(255, 255, 255, 0.9);*/
+    background-image: url('https://yf1688.top/static/music/999.jpg'); 
+    background-size: cover; /* 背景图片大小，这里设置为覆盖整个容器，可按需调整 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+    backdrop-filter: blur(5px); 
+    /* 添加模糊效果，数值5px表示模糊程度，你可以根据需要调整 */
+    -webkit-backdrop-filter: blur(5px); 
+    /* 针对webkit内核的浏览器（如Chrome、Safari）的前缀写法 */
     padding: 15px;
     /* 修改边框圆角属性 */
-    border-radius: 15px 5px 0 0;
+    border-radius: 15px ;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     /* 调整阴影效果，与音乐列表一致 */
     transition: right 0.5s ease-in-out;
@@ -41,20 +48,25 @@
 /* 隐藏时的左侧边框样式 */
 .toggle-border {
     position: absolute;
-    left: -15px;
+    left: -20px;
     /* 位于播放器左侧 */
-    width: 15px;
+    width: 20px;
     height: 80px;
     /* 固定高度 */
-    top: 5px;
+    top: 35px;
     /* 顶部与播放器顶部对齐 */
-    background-color: #3a8fd9;
+    background-color: rgba(182, 184, 179, 0.35); 
+    /* 修改为半透明的背景色，这里设置透明度为0.5，你可以根据需要调整 */
     border-radius: 5px 0 0 5px; //倒角
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s;
+    backdrop-filter: blur(5px); 
+    /* 添加模糊效果，数值5px表示模糊程度，你可以根据需要调整 */
+    -webkit-backdrop-filter: blur(5px); 
+    /* 针对webkit内核的浏览器（如Chrome、Safari）的前缀写法 */
 }
 
 .toggle-border:hover {
@@ -80,7 +92,8 @@
 .circle-btn {
     width: 50px;
     height: 50px;
-    background-color: #4a9feb;
+    background-color: transparent;
+    /*按钮调为透明*/
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -161,14 +174,15 @@
 #volume-control {
     width: 220px;
     /* 与第一排按钮总宽度一致 */
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 /* 音乐列表样式 */
 #music-list {
     position: fixed;
     right: 5px;
-    bottom: 179px;
+    bottom: 205px; 
+    /*调整音乐列表距离屏幕底部距离176行对应调节*/
     background-color: rgba(255, 255, 255, 0.9);
     /* 半透明背景 */
     padding: 15px;
@@ -178,10 +192,10 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     /* 更明显的阴影 */
     display: none;
-    max-height: 250px;
+    max-height: 205px;
     /* 增加最大高度 */
     overflow-y: auto;
-    width: 230px;
+    width: 226px;
     /* 固定宽度 */
     font-family: Arial, sans-serif;
     /* 字体优化 */
@@ -189,6 +203,7 @@
     /* 字体大小 */
     color: #333;
     /* 字体颜色 */
+    border: 1px solid #000; /* 添加1.5px的黑色外边框 */
     z-index: 1000;
     /* 确保在最上层 */
 }
