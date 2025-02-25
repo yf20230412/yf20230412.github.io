@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
    /* background-color: rgba(255, 255, 255, 0.9);*/
-    background-image: url('https://yf1688.top/static/music/999.jpg'); 
+    background-image: url('http://www.2015888.xyz/999/999.jpg'); 
     background-size: cover; /* 背景图片大小，这里设置为覆盖整个容器，可按需调整 */
     background-repeat: no-repeat; /* 背景图片不重复 */
     backdrop-filter: blur(5px); 
@@ -23,6 +23,42 @@
     z-index: 1000;
     /* 确保播放器在最上层 */
 }
+
+/* 倒退和快进按钮的图标样式 */
+.controls-row-secondary {
+    display: flex;
+    justify-content: space-between; /* 使按钮两端对齐 */
+    align-items: center;    
+    width: 100%; /* 确保容器宽度与第一排一致 */
+}
+
+
+.rewind-icon,
+.fast-forward-icon {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/*
+#rewind-btn {
+    position: relative; /* 或者绝对定位 */
+    left: 15px; /* 向右移动 15px */
+}
+
+#fast-forward-btn {
+    position: relative;
+    left: -15px; /* 向左移动 15px */
+}
+
+*/
+
+.controls-row-secondary button[disabled] {
+    opacity: 0; /* 使占位按钮不可见 */
+    pointer-events: none; /* 禁用鼠标事件 */
+}
+
+
 
 /* 控制器容器样式 */
 .controls-container {
@@ -51,10 +87,8 @@
     left: -20px;
     /* 位于播放器左侧 */
     width: 20px;
-    height: 80px;
+    height: 50%;
     /* 固定高度 */
-    top: 35px;
-    /* 顶部与播放器顶部对齐 */
     background-color: rgba(182, 184, 179, 0.35); 
     /* 修改为半透明的背景色，这里设置透明度为0.5，你可以根据需要调整 */
     border-radius: 5px 0 0 5px; //倒角
@@ -174,15 +208,19 @@
 #volume-control {
     width: 220px;
     /* 与第一排按钮总宽度一致 */
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 /* 音乐列表样式 */
 #music-list {
-    position: fixed;
+    position: absolute; /* 设置为绝对定位 */
     right: 5px;
-    bottom: 205px; 
+    top: -254px; 
     /*调整音乐列表距离屏幕底部距离176行对应调节*/
+    left: 0; /* 与播放器左侧对齐 */
+    max-height: 205px;
+    /* 增加最大高度 */
+    width: 223px; /* 宽度与播放器一致 */
     background-color: rgba(255, 255, 255, 0.9);
     /* 半透明背景 */
     padding: 15px;
@@ -192,11 +230,7 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     /* 更明显的阴影 */
     display: none;
-    max-height: 205px;
-    /* 增加最大高度 */
     overflow-y: auto;
-    width: 226px;
-    /* 固定宽度 */
     font-family: Arial, sans-serif;
     /* 字体优化 */
     font-size: 14px;
