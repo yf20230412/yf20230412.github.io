@@ -1,5 +1,5 @@
-<audio id="bg-music" loop></audio>
-
+<!--音乐🎶-->
+    <audio id="bg-music" loop></audio>
     <!-- 音乐播放器 -->
     <div class="music-player">
         <!-- 隐藏时的左侧边框 -->
@@ -45,3 +45,4 @@
 
     <!-- 状态消息 -->
     <div id="status-message"></div>
+    <!--完-->
