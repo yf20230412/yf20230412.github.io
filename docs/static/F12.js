@@ -1,28 +1,45 @@
-//屏蔽F12和右键
+// 屏蔽F12和右键
 function click(e) {
     if (document.all) {
         if (event.button == 2 || event.button == 3) {
             alert("你想干什么？");
-            oncontextmenu = 'return false';
+            return false;
         }
-    }
-    if (document.layers) {
+    } else if (document.layers) {
         if (e.which == 3) {
-            oncontextmenu = 'return false';
+            return false;
         }
     }
 }
+
 if (document.layers) {
     document.captureEvents(Event.MOUSEDOWN);
 }
-document.onmousedown = click;
-document.oncontextmenu = new Function("return false;")
-document.onkeydown = document.onkeyup = document.onkeypress = function() {
-    if (window.event.keyCode == 123) {
-        window.event.returnValue = false;
-        return (false);
+
+document.oncontextmenu = function() {
+    return false;
+};
+
+document.onkeydown = function(e) {
+    if (window.event) {
+        e = window.event;
     }
-}
+    if (e.ctrlKey && e.shiftKey && (e.keyCode === 67 || e.keyCode === 73)) {
+        alert("快捷键已禁用");//禁用Ctrl+Shift+C和Ctrl+Shift+I
+        return false;
+    }
+};
+
+// 屏蔽F12键的打开控制台功能
+document.onkeydown = function(e) {
+    if (window.event) {
+        e = window.event;
+    }
+    if (e.keyCode === 123) {
+        return false;
+    }
+};
+
 
 /*
 // 检测开发者工具
