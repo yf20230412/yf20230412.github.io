@@ -14,7 +14,7 @@
     /* 添加模糊效果，数值5px表示模糊程度，你可以根据需要调整 */
     -webkit-backdrop-filter: blur(5px); 
     /* 针对webkit内核的浏览器（如Chrome、Safari）的前缀写法 */
-    padding: 15px!important;
+    padding: 15px;
     /* 修改边框圆角属性 */
     border-radius: 15px ;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
@@ -41,7 +41,7 @@
     opacity: 0; /* 使占位按钮不可见 */
     pointer-events: none; /* 禁用鼠标事件 */
 }
-
+/*
 /*
 #rewind-btn {
     position: relative; /* 或者绝对定位 */
@@ -63,7 +63,7 @@
     /* 水平居中对齐 */
     width: 100%;
     /* 容器宽度 */
-    padding-bottom: 2px!important;
+    padding-bottom: 2px;
     /* 距离底部2px */
     box-sizing: border-box;
     /* 包含内边距和边框 */
@@ -206,10 +206,10 @@
 }
 
 /* 音乐列表样式 */
-.music-player#music-list3 {
+.music3 {
     position: absolute; /* 设置为绝对定位 */
     right: 5px;
-    top: -255px; 
+    top: -255px;
     /*调整音乐列表距离屏幕底部距离176行对应调节*/
     left: 0; /* 与播放器左侧对齐 */
     height: 205px;
@@ -217,7 +217,7 @@
     width: 223px; /* 宽度与播放器一致 */
     background-color: rgba(255, 255, 255, 1);
     /* 半透明背景 */
-    padding: 15px!important;
+    padding: 15px;
     /* 增加内边距 */
     border-radius: 15px;
     /* 更圆润的边角 */
@@ -237,15 +237,15 @@
 }
 
 /* 列表项样式 */
-.music-player#music-list3 li {
+.music3 li {
     list-style: none;
-    padding: 10px 15px!important;
+    padding: 10px 15px;
     /* 增加内边距 */
-    margin: 5px 0!important;
+    margin: 5px 0;
     /* 增加外边距 */
     border-radius: 8px;
     /* 圆角边框 */
-    background-color: #ffcccc!important;
+    background-color: #ffcccc;
     /* 淡色背景 */
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -258,13 +258,13 @@
 }
 
 /* 列表项悬停效果 */
-.music-player#music-list3 li:hover {
+.music3 li:hover {
     background-color: #e0e0e0;
     /* 悬停时的背景色 */
 }
 
 /* 列表项选中状态 */
-.music-player#music-list3 li.active {
+.music3 li.active {
     background-color: #4a9feb;
     /* 选中时的背景色 */
     color: #fff;
@@ -272,19 +272,19 @@
 }
 
 /* 滚动条样式 */
-#music-list3::-webkit-scrollbar {
+.music3::-webkit-scrollbar {
     width: 8px;
     /* 滚动条宽度 */
 }
 
-#music-list3::-webkit-scrollbar-thumb {
+.music3::-webkit-scrollbar-thumb {
     background-color: #ccc;
     /* 滚动条颜色 */
     border-radius: 2px;
     /* 滚动条圆角 */
 }
 
-#music-list3::-webkit-scrollbar-track {
+.music3::-webkit-scrollbar-track {
     background-color: #f1f1f1;
     /* 滚动条轨道颜色 */
     border-radius: 2px;
