@@ -215,7 +215,7 @@
     max-height: 205px;
     /* 增加最大高度 */
     width: 223px; /* 宽度与播放器一致 */
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 1);
     /* 半透明背景 */
     padding: 15px;
     /* 增加内边距 */
