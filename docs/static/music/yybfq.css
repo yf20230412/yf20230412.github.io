@@ -47,11 +47,12 @@
     position: relative; /* 或者绝对定位 */
     /*left: 15px;  向右移动 15px */
 } 
-/*
-#fast-forward-btn {
+
+/*#fast-forward-btn {
     position: relative;
     left: -15px; /* 向左移动 15px */
-} */
+} 
+*/
 
 /* 控制器容器样式 */
 .controls-container {
@@ -205,7 +206,7 @@
 }
 
 /* 音乐列表样式 */
-#music-list {
+#music-list3 {
     position: absolute; /* 设置为绝对定位 */
     right: 5px;
     top: -254px; 
@@ -214,7 +215,7 @@
     max-height: 205px;
     /* 增加最大高度 */
     width: 223px; /* 宽度与播放器一致 */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
     /* 半透明背景 */
     padding: 15px;
     /* 增加内边距 */
@@ -236,7 +237,7 @@
 }
 
 /* 列表项样式 */
-#music-list li {
+#music-list3 li {
     list-style: none;
     padding: 10px 15px;
     /* 增加内边距 */
@@ -244,7 +245,7 @@
     /* 增加外边距 */
     border-radius: 8px;
     /* 圆角边框 */
-    background-color: #f9f9f9;
+    background-color: #ffcccc!important;
     /* 淡色背景 */
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -257,13 +258,13 @@
 }
 
 /* 列表项悬停效果 */
-#music-list li:hover {
+#music-list3 li:hover {
     background-color: #e0e0e0;
     /* 悬停时的背景色 */
 }
 
 /* 列表项选中状态 */
-#music-list li.active {
+#music-list3 li.active {
     background-color: #4a9feb;
     /* 选中时的背景色 */
     color: #fff;
@@ -271,22 +272,22 @@
 }
 
 /* 滚动条样式 */
-#music-list::-webkit-scrollbar {
+#music-list3::-webkit-scrollbar {
     width: 8px;
     /* 滚动条宽度 */
 }
 
-#music-list::-webkit-scrollbar-thumb {
+#music-list3::-webkit-scrollbar-thumb {
     background-color: #ccc;
     /* 滚动条颜色 */
-    border-radius: 4px;
+    border-radius: 2px;
     /* 滚动条圆角 */
 }
 
-#music-list::-webkit-scrollbar-track {
+#music-list3::-webkit-scrollbar-track {
     background-color: #f1f1f1;
     /* 滚动条轨道颜色 */
-    border-radius: 4px;
+    border-radius: 2px;
     /* 滚动条轨道圆角 */
 }
 

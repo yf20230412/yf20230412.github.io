@@ -7,7 +7,7 @@ var nextBtn = document.getElementById('next-btn');
 var rewindBtn = document.getElementById('rewind-btn'); // 快退按钮
 var fastForwardBtn = document.getElementById('fast-forward-btn'); // 快进按钮
 var listBtn = document.getElementById('list-btn');
-var musicList = document.getElementById('music-list');
+var musicList = document.getElementById('music-list3');
 var statusMessage = document.getElementById('status-message');
 var volumeControl = document.getElementById('volume-control');
 var currentIndex = 0;
@@ -186,5 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
     fastForwardBtn.addEventListener('click', () => {
         promptFastForward(); // 显示快进提示
         resetTimer();
+    });
+    // 添加歌曲播放结束的事件监听器
+    bgMusic.addEventListener('ended', () => {
+        playNext(); // 当前歌曲播放结束后自动播放下一首
     });
 });
