@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>背景音乐播放器</title>
     <style>
-        /* 播放器容器样式 */
+/* 播放器容器样式 */
+        
         .music-player {
             position: fixed;
             right: -250px;
@@ -14,317 +15,357 @@
             bottom: 60px;
             display: flex;
             align-items: center;
-           /* background-color: rgba(255, 255, 255, 0.9);*/
-            background-image: url('https://yf1688.top/static/music/999.jpg'); 
-            background-size: cover; /* 背景图片大小，这里设置为覆盖整个容器，可按需调整 */
-            background-repeat: no-repeat; /* 背景图片不重复 */
-            backdrop-filter: blur(5px); 
+            /* background-color: rgba(255, 255, 255, 0.9);*/
+            background-image: url('https://yf1688.top/static/music/999.jpg');
+            background-size: cover;
+            /* 背景图片大小，这里设置为覆盖整个容器，可按需调整 */
+            background-repeat: no-repeat;
+            /* 背景图片不重复 */
+            backdrop-filter: blur(5px);
             /* 添加模糊效果，数值5px表示模糊程度，你可以根据需要调整 */
-            -webkit-backdrop-filter: blur(5px); 
+            -webkit-backdrop-filter: blur(5px);
             /* 针对webkit内核的浏览器（如Chrome、Safari）的前缀写法 */
             padding: 15px;
             /* 修改边框圆角属性 */
-            border-radius: 15px ;
+            border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
             /* 调整阴影效果，与音乐列表一致 */
             transition: right 0.5s ease-in-out;
             z-index: 1000;
             /* 确保播放器在最上层 */
         }
+        /* 倒退和快进按钮的图标样式 */
         
-        /* 控制器容器样式 */
-        .controls-container {
+        .controls-row-secondary {
             display: flex;
-            flex-direction: column;
-            /* 垂直排列子元素 */
-            align-items: center;
-            /* 水平居中对齐 */
-            width: 100%;
-            /* 容器宽度 */
-            padding-bottom: 2px;
-            /* 距离底部2px */
-            box-sizing: border-box;
-            /* 包含内边距和边框 */
-        }
-        
-        /* 播放器展开时的样式 */
-        .music-player.expanded {
-            right: 10px;
-            /* 完全显示 */
-        }
-        
-        /* 隐藏时的左侧边框样式 */
-        .toggle-border {
-            position: absolute;
-            left: -20px;
-            /* 位于播放器左侧 */
-            width: 20px;
-            height: 80px;
-            /* 固定高度 */
-            top: 35px;
-            /* 顶部与播放器顶部对齐 */
-            background-color: rgba(182, 184, 179, 0.35); 
-            /* 修改为半透明的背景色，这里设置透明度为0.5，你可以根据需要调整 */
-            border-radius: 5px 0 0 5px; //倒角
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background-color 0.3s;
-            backdrop-filter: blur(5px); 
-            /* 添加模糊效果，数值5px表示模糊程度，你可以根据需要调整 */
-            -webkit-backdrop-filter: blur(5px); 
-            /* 针对webkit内核的浏览器（如Chrome、Safari）的前缀写法 */
-        }
-        
-        .toggle-border:hover {
-            background-color: #3a8fd9;
-        }
-        
-        /* 添加隐藏/显示图标样式 */
-        .toggle-border::before {
-            content: '<';
-            /* 默认显示 < 图标 */
-            color: #FF0080;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        
-        .music-player.expanded .toggle-border::before {
-            content: '>';
-            /* 播放器展开时显示 > 图标 */
-            color: #fff;
-        }
-        
-        /* 按钮通用样式 */
-        .circle-btn {
-            width: 50px;
-            height: 50px;
-            background-color: transparent;
-            /*按钮调为透明*/
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            /* 水平居中 */
-            align-items: center;
-            /* 垂直居中 */
-            cursor: pointer;
-            border: none;
-            outline: none;
-            transition: background-color 0.3s;
-        }
-        
-        .circle-btn:hover {
-            background-color: #3a8fd9;
-        }
-        
-        /* 播放图标样式 */
-        .play-icon {
-            width: 0;
-            height: 0;
-            border-left: 20px solid white;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            margin-left: 5px;
-        }
-        
-        /* 暂停图标样式（两条竖线） */
-        .pause-icon {
-            display: flex;
-            gap: 6px;
-        }
-        
-        .pause-icon::before,
-        .pause-icon::after {
-            content: '';
-            width: 6px;
-            height: 20px;
-            background-color: white;
-        }
-        
-        /* 上一首/下一首图标样式 */
-        .prev-icon,
-        .next-icon {
-            width: 0;
-            height: 0;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-        }
-        
-        .prev-icon {
-            border-right: 16px solid white;
-            margin-right: 5px;
-        }
-        
-        .next-icon {
-            border-left: 16px solid white;
-            margin-left: 5px;
-        
-        }
-        
-        /* 音乐列表按钮样式（三条横杠） */
-        .list-icon {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        
-        .list-icon::before,
-        .list-icon::after,
-        .list-icon div {
-            content: '';
-            width: 20px;
-            height: 3px;
-            background-color: white;
-        }
-        
-        /* 音量控制滑块样式 */
-        #volume-control {
-            width: 220px;
-            /* 与第一排按钮总宽度一致 */
-            margin-top: 40px;
-        }
-        
-        /* 音乐列表样式 */
-        #music-list {
-            position: fixed;
-            right: 5px;
-            bottom: 205px; 
-            /*调整音乐列表距离屏幕底部距离176行对应调节*/
-            background-color: rgba(255, 255, 255, 0.9);
-            /* 半透明背景 */
-            padding: 15px;
-            /* 增加内边距 */
-            border-radius: 15px;
-            /* 更圆润的边角 */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            /* 更明显的阴影 */
-            display: none;
-            max-height: 205px;
-            /* 增加最大高度 */
-            overflow-y: auto;
-            width: 226px;
-            /* 固定宽度 */
-            font-family: Arial, sans-serif;
-            /* 字体优化 */
-            font-size: 14px;
-            /* 字体大小 */
-            color: #333;
-            /* 字体颜色 */
-            border: 1px solid #000; /* 添加1.5px的黑色外边框 */
-            z-index: 1000;
-            /* 确保在最上层 */
-        }
-        
-        /* 列表项样式 */
-        #music-list li {
-            list-style: none;
-            padding: 10px 15px;
-            /* 增加内边距 */
-            margin: 5px 0;
-            /* 增加外边距 */
-            border-radius: 8px;
-            /* 圆角边框 */
-            background-color: #f9f9f9;
-            /* 淡色背景 */
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            /* 平滑过渡效果 */
-            display: flex;
-            align-items: center;
-            /* 垂直居中 */
             justify-content: space-between;
-            /* 内容分布 */
-        }
-        
-        /* 列表项悬停效果 */
-        #music-list li:hover {
-            background-color: #e0e0e0;
-            /* 悬停时的背景色 */
-        }
-        
-        /* 列表项选中状态 */
-        #music-list li.active {
-            background-color: #4a9feb;
-            /* 选中时的背景色 */
-            color: #fff;
-            /* 选中时的文字颜色 */
-        }
-        
-        /* 滚动条样式 */
-        #music-list::-webkit-scrollbar {
-            width: 8px;
-            /* 滚动条宽度 */
-        }
-        
-        #music-list::-webkit-scrollbar-thumb {
-            background-color: #ccc;
-            /* 滚动条颜色 */
-            border-radius: 4px;
-            /* 滚动条圆角 */
-        }
-        
-        #music-list::-webkit-scrollbar-track {
-            background-color: #f1f1f1;
-            /* 滚动条轨道颜色 */
-            border-radius: 4px;
-            /* 滚动条轨道圆角 */
-        }
-        
-        /* 公众号文字样式 */
-        .fengyanfengyu {
-            text-align: center;
-            /* 水平居中 */
-            margin-top: 10px;
-            /* 与滑块的间距 */
+            /* 使按钮两端对齐 */
+            align-items: center;
             width: 100%;
-            /* 文字宽度适应容器 */
-            font-size: 14px;
-            /* 字体大小 */
-            font-weight: bold;
-            /* 加粗字体 */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            /* 文字阴影 */
-            color: #4a9feb;
-            /* 文字蓝色 */
-            margin: 0;
-            /* 去掉默认外边距 */
-            padding: 0;
-            /* 去掉默认内边距 */
+            /* 确保容器宽度与第一排一致 */
         }
         
-        /* 状态消息样式 */
-        #status-message {
-            position: fixed;
-            left: 7px;
-            bottom: 300px;
-            max-width: 50%;
-            background-color: #333;
+        .rewind-icon,
+        .fast-forward-icon {
+            font-size: 20px;
             color: white;
-            padding: 10px;
-            border-radius: 5px;
-            display: none;
+            font-weight: bold;
         }
         
-        /* 第一排按钮容器样式 */
-        .controls-row {
-            display: flex;
-            gap: 5px;
-            /* 按钮之间间隔5px */
+        .controls-row-secondary button[disabled] {
+            opacity: 0;
+            /* 使占位按钮不可见 */
+            pointer-events: none;
+            /* 禁用鼠标事件 */
         }
+        /*
+/*
+#rewind-btn {
+    position: relative; /* 或者绝对定位 */
+        /*left: 15px;  向右移动 15px */
+    }
+    /*#fast-forward-btn {
+    position: relative;
+    left: -15px; /* 向左移动 15px */
+}
+*/
+/* 控制器容器样式 */
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列子元素 */
+    align-items: center;
+    /* 水平居中对齐 */
+    width: 100%;
+    /* 容器宽度 */
+    padding-bottom: 2px;
+    /* 距离底部2px */
+    box-sizing: border-box;
+    /* 包含内边距和边框 */
+}
+
+/* 播放器展开时的样式 */
+.music-player.expanded {
+    right: 10px;
+    /* 完全显示 */
+}
+
+/* 隐藏时的左侧边框样式 */
+.toggle-border {
+    position: absolute;
+    left: -20px;
+    /* 位于播放器左侧 */
+    width: 20px;
+    height: 50%;
+    /* 固定高度 */
+    background-color: rgba(182,
+    184,
+    179,
+    0.35);
+    /* 修改为半透明的背景色，这里设置透明度为0.5，你可以根据需要调整 */
+    border-radius: 5px 0 0 5px; //倒角
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    backdrop-filter: blur(5px);
+    /* 添加模糊效果，数值5px表示模糊程度，你可以根据需要调整 */
+    -webkit-backdrop-filter: blur(5px);
+    /* 针对webkit内核的浏览器（如Chrome、Safari）的前缀写法 */
+}
+.toggle-border:hover {
+    background-color: #3a8fd9;
+}
+
+/* 添加隐藏/显示图标样式 */
+.toggle-border::before {
+    content: '<';
+    /* 默认显示 < 图标 */
+    color: #FF0080;
+    font-size: 20px;
+    font-weight: bold;
+}
+.music-player.expanded .toggle-border::before {
+    content: '>';
+    /* 播放器展开时显示 > 图标 */
+    color: #fff;
+}
+
+/* 按钮通用样式 */
+.circle-btn {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    /*按钮调为透明*/
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+.circle-btn:hover {
+    background-color: #3a8fd9;
+}
+
+/* 播放图标样式 */
+.play-icon {
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 5px;
+}
+
+/* 暂停图标样式（两条竖线） */
+.pause-icon {
+    display: flex;
+    gap: 6px;
+}
+.pause-icon::before,
+.pause-icon::after {
+    content: '';
+    width: 6px;
+    height: 20px;
+    background-color: white;
+}
+
+/* 上一首/下一首图标样式 */
+.prev-icon,
+.next-icon {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.prev-icon {
+    border-right: 16px solid white;
+    margin-right: 5px;
+}
+.next-icon {
+    border-left: 16px solid white;
+    margin-left: 5px;
+}
+
+/* 音乐列表按钮样式（三条横杠） */
+.list-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.list-icon::before,
+.list-icon::after,
+.list-icon div {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: white;
+}
+
+/* 音量控制滑块样式 */
+#volume-control {
+    width: 220px;
+    /* 与第一排按钮总宽度一致 */
+    margin-top: 10px;
+}
+
+/* 音乐列表样式 */
+.music3 {
+    position: absolute;
+    /* 设置为绝对定位 */
+    right: 5px;
+    top: -255px;
+    /*调整音乐列表距离屏幕底部距离176行对应调节*/
+    left: 0;
+    /* 与播放器左侧对齐 */
+    height: 205px;
+    /* 增加最大高度 */
+    width: 223px;
+    /* 宽度与播放器一致 */
+    background-color: rgba(255,
+    255,
+    255,
+    1);
+    /* 半透明背景 */
+    padding: 15px;
+    /* 增加内边距 */
+    border-radius: 15px;
+    /* 更圆润的边角 */
+    box-shadow: 0 6px 15px rgba(0,
+    0,
+    0,
+    0.15);
+    /* 更明显的阴影 */
+    display: none;
+    overflow-y: auto;
+    font-family: Arial,
+    sans-serif;
+    /* 字体优化 */
+    font-size: 14px;
+    /* 字体大小 */
+    color: #333!important;
+    /* 字体颜色 */
+    border: 1px solid #000;
+    /* 添加1.5px的黑色外边框 */
+    z-index: 1000;
+    /* 确保在最上层 */
+}
+
+/* 列表项样式 */
+.music3 li {
+    list-style: none;
+    padding: 10px 15px;
+    /* 增加内边距 */
+    margin: 5px 0;
+    /* 增加外边距 */
+    border-radius: 8px;
+    /* 圆角边框 */
+    background-color: #ffcccc;
+    /* 淡色背景 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* 平滑过渡效果 */
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: space-between;
+    /* 内容分布 */
+}
+
+/* 列表项悬停效果 */
+.music3 li:hover {
+    background-color: #e0e0e0;
+    /* 悬停时的背景色 */
+}
+
+/* 列表项选中状态 */
+.music3 li.active {
+    background-color: #4a9feb;
+    /* 选中时的背景色 */
+    color: #fff;
+    /* 选中时的文字颜色 */
+}
+
+/* 滚动条样式 */
+.music3::-webkit-scrollbar {
+    width: 8px;
+    /* 滚动条宽度 */
+}
+.music3::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    /* 滚动条颜色 */
+    border-radius: 2px;
+    /* 滚动条圆角 */
+}
+.music3::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* 滚动条轨道颜色 */
+    border-radius: 2px;
+    /* 滚动条轨道圆角 */
+}
+
+/* 公众号文字样式 */
+.fengyanfengyu {
+    text-align: center;
+    /* 水平居中 */
+    margin-top: 10px;
+    /* 与滑块的间距 */
+    width: 100%;
+    /* 文字宽度适应容器 */
+    font-size: 14px;
+    /* 字体大小 */
+    font-weight: bold;
+    /* 加粗字体 */
+    text-shadow: 1px 1px 2px rgba(0,
+    0,
+    0,
+    0.2);
+    /* 文字阴影 */
+    color: #4a9feb;
+    /* 文字蓝色 */
+    margin: 0;
+    /* 去掉默认外边距 */
+    padding: 0;
+    /* 去掉默认内边距 */
+}
+
+/* 状态消息样式 */
+#status-message {
+    position: fixed;
+    left: 7px;
+    bottom: 300px;
+    max-width: 50%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* 第一排按钮容器样式 */
+.controls-row {
+    display: flex;
+    gap: 5px;
+    /* 按钮之间间隔5px */
+}
     </style>
 </head>
 
 <body>
     <h1>背景音乐播放器</h1>
     <audio id="bg-music" loop></audio>
-
     <!-- 音乐播放器 -->
     <div class="music-player">
         <!-- 隐藏时的左侧边框 -->
         <div class="toggle-border" onclick="togglePlayer()"></div>
         <!-- 音乐列表 -->
-        <ul id="music-list"></ul>
+        <ul class="music3" id="music-list3"></ul>
         <!-- 播放器内容 -->
         <div class="controls-container">
             <!-- 第一排按钮 -->
@@ -350,60 +391,58 @@
                 <button id="rewind-btn" class="circle-btn">
                     <div class="rewind-icon">⏪</div>
                 </button>
-                <button class="circle-btn" disabled></button> <!-- 占位按钮 -->
+                <button class="circle-btn" disabled></button>
+                <!-- 占位按钮 -->
                 <button id="fast-forward-btn" class="circle-btn">
                     <div class="fast-forward-icon">⏩</div>
                 </button>
-                <button class="circle-btn" disabled></button> <!-- 占位按钮 -->
+                <button class="circle-btn" disabled></button>
+                <!-- 占位按钮 -->
             </div>
             <!-- 音量控制滑块 -->
             <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
             <p class="fengyanfengyu">公众号：风言锋语88</p>
         </div>
     </div>
-
     <!-- 状态消息 -->
     <div id="status-message"></div>
-
     <script>
-        var musicFiles = [
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/秋风吹起.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/待我.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/云要散了何必再追.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/大风吹倒梧桐树.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/此去半生.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/有风无风皆自由.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/我知道你最近很累.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/灿烂的你.mp3',
-            'https://raw.gitcode.com/yf1688/api/raw/main/background_music/记忆烈酒.mp3'
-        ];
-        
+        var musicFiles = [];
         var bgMusic = document.getElementById('bg-music');
         var toggleBtn = document.getElementById('toggle-btn');
         var prevBtn = document.getElementById('prev-btn');
         var nextBtn = document.getElementById('next-btn');
+        var rewindBtn = document.getElementById('rewind-btn'); // 快退按钮
+        var fastForwardBtn = document.getElementById('fast-forward-btn'); // 快进按钮
         var listBtn = document.getElementById('list-btn');
-        var musicList = document.getElementById('music-list');
+        var musicList = document.getElementById('music-list3');
         var statusMessage = document.getElementById('status-message');
         var volumeControl = document.getElementById('volume-control');
         var currentIndex = 0;
         var musicPlaying = false;
-        var pausedTime = 0; // 用于记录暂停时的时间点
-        var isPaused = false; // 用于记录是否暂停
-        
         // 加载音乐列表
         function loadMusicList() {
-            musicFiles.forEach((music, index) => {
-                var li = document.createElement('li');
-                li.innerText = music.split('/').pop(); // 显示文件名
-                li.addEventListener('click', () => {
-                    playSelectedMusic(index);
+            fetch('https://yf1688.top/static/music/music-list.json')
+                .then(response => response.json())
+                .then(data => {
+                    musicFiles = data.musicFiles;
+                    musicFiles.forEach((music, index) => {
+                        var li = document.createElement('li');
+                        li.innerText = music.split('/').pop();
+                        li.addEventListener('click', () => {
+                            playSelectedMusic(index);
+                        });
+                        musicList.appendChild(li);
+                    });
+                    currentIndex = Math.floor(Math.random() * musicFiles.length);
+                    playSelectedMusic(currentIndex);
+                })
+                .catch(error => {
+                    console.error('加载音乐列表失败：', error);
+                    showStatus('无法加载音乐列表，请检查网络连接。');
                 });
-                musicList.appendChild(li);
-            });
         }
-        
-        // 播放选中的音乐
+
         function playSelectedMusic(index) {
             currentIndex = index;
             bgMusic.src = musicFiles[index];
@@ -416,126 +455,105 @@
                 showStatus('您的浏览器不支持自动播放音乐，请手动点击播放器继续欣赏歌曲吧~');
             });
         }
-        
         // 上一首
         function playPrev() {
             currentIndex = (currentIndex - 1 + musicFiles.length) % musicFiles.length;
             playSelectedMusic(currentIndex);
         }
-        
         // 下一首
         function playNext() {
             currentIndex = (currentIndex + 1) % musicFiles.length;
             playSelectedMusic(currentIndex);
         }
-        
-        // 显示/隐藏音乐列表
+        // 快退功能提示
+        function promptRewind() {
+            showStatus('~唉！😂该功能真的还没开发……');
+        }
+        // 快进功能提示
+        function promptFastForward() {
+            showStatus('~唉！😂该功能暂时还未开发……');
+        }
+        //音乐列表隐藏展开
         function toggleMusicList() {
             musicList.style.display = musicList.style.display === 'block' ? 'none' : 'block';
         }
-        
-        // 显示状态信息
+
         function showStatus(message) {
             statusMessage.innerText = message;
             statusMessage.style.display = 'block';
             setTimeout(() => {
                 statusMessage.style.display = 'none';
-            }, 5000); // 消息显示时间
+            }, 5000); //消息停留时间
         }
-        
-        // 切换播放/暂停
+
         function toggleMusic() {
             if (musicPlaying) {
                 if (bgMusic.paused) {
-                    bgMusic.currentTime = pausedTime; // 恢复暂停时的时间点
                     bgMusic.play();
                     toggleBtn.innerHTML = '<div class="pause-icon"></div>';
                     showStatus('继续播放音乐');
-                    isPaused = false;
                 } else {
                     bgMusic.pause();
-                    pausedTime = bgMusic.currentTime; // 记录暂停时的时间点
                     toggleBtn.innerHTML = '<div class="play-icon"></div>';
                     showStatus('音乐已暂停');
-                    isPaused = true;
                 }
             } else {
                 bgMusic.play().then(() => {
                     toggleBtn.innerHTML = '<div class="pause-icon"></div>';
                     showStatus('正在为你播放音乐');
                     musicPlaying = true;
-                    isPaused = false;
                 }).catch((error) => {
                     console.error('自动播放失败：', error);
                     showStatus('播放失败，请手动点击播放');
                 });
             }
         }
-        
-        // 音量控制事件监听
         volumeControl.addEventListener('input', () => {
-            const volume = parseFloat(volumeControl.value); // 获取当前音量值
-            bgMusic.volume = volume; // 设置音乐音量
-        
-            // 根据音量值动态改变公众号文字颜色
+            const volume = parseFloat(volumeControl.value);
+            bgMusic.volume = volume;
             document.querySelectorAll('.fengyanfengyu').forEach(text => {
-                if (volume >= 0.6) {
-                    text.style.color = '#ff69b4'; // 粉红色
-                } else {
-                    text.style.color = '#00cc66'; // 绿色
-                }
-            });
+                text.style.color = volume >= 0.6 ? '#ff69b4' : '#00cc66';
+            }); //音量多少调节颜色变化
         });
-        
-        // 播放器展开/隐藏切换
+
         function togglePlayer() {
             var player = document.querySelector('.music-player');
             player.classList.toggle('expanded');
-        
-            // 如果播放器被隐藏，并且音乐列表处于展开状态，则关闭音乐列表
             if (!player.classList.contains('expanded')) {
                 closeMusicList();
             }
         }
-        
-        // 关闭音乐列表的函数
+
         function closeMusicList() {
             if (musicList.style.display === 'block') {
                 musicList.style.display = 'none';
             }
         }
-        
-        // 自动隐藏播放器和音乐列表
         let hideTimer;
-        
+
         function hidePlayer() {
             const player = document.querySelector('.music-player');
             if (player.classList.contains('expanded')) {
                 player.classList.remove('expanded');
-                closeMusicList(); // 关闭音乐列表
+                closeMusicList();
             }
             clearTimeout(hideTimer);
         }
-        
+
         function resetTimer() {
             clearTimeout(hideTimer);
             hideTimer = setTimeout(hidePlayer, 5000);
-        }
-        
+        } //表示5秒后自动隐藏播放器
         document.addEventListener('DOMContentLoaded', () => {
             loadMusicList();
-            playSelectedMusic(currentIndex);
-        
             const player = document.querySelector('.music-player');
             player.addEventListener('mouseover', resetTimer);
             player.addEventListener('mouseout', resetTimer);
             player.addEventListener('click', resetTimer);
-        
             setTimeout(() => {
                 togglePlayer();
                 resetTimer();
-            }, 3000);
-        
+            }, 3000); //设置网页加载3秒后弹出播放器
             prevBtn.addEventListener('click', () => {
                 playPrev();
                 resetTimer();
@@ -555,10 +573,21 @@
             volumeControl.addEventListener('input', () => {
                 resetTimer();
             });
+            // 添加快退和快进的事件监听器，显示提示
+            rewindBtn.addEventListener('click', () => {
+                promptRewind(); // 显示快退提示
+                resetTimer();
+            });
+            fastForwardBtn.addEventListener('click', () => {
+                promptFastForward(); // 显示快进提示
+                resetTimer();
+            });
+            // 添加歌曲播放结束的事件监听器
+            bgMusic.addEventListener('ended', () => {
+                playNext(); // 当前歌曲播放结束后自动播放下一首
+            });
         });
     </script>
-
-
 </body>
 
 </html>
