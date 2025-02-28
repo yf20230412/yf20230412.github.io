@@ -40,7 +40,7 @@ document.body.insertAdjacentHTML('beforeend', `
 `);
 
 var script = document.createElement("script");
-script.src = "https://yf1688.top/static/music/yybfq.js";
+script.src = "https://yf1688.top/static/music/yybfq.js?v=" + new Date().getTime();
 script.onload = function () {
     console.log("JS 文件加载成功");
 };
