@@ -1,10 +1,12 @@
-var link = document.createElement("link");
-link.href = "https://yf1688.top/static/music/yybfq.css";
-link.rel = "stylesheet";
-link.type = "text/css";
-document.head.appendChild(link);
+// 加载 CSS
+$("<link>").attr({
+    href: "https://yf1688.top/static/music/yybfq.css",
+    rel: "stylesheet",
+    type: "text/css"
+}).appendTo('head');
 
-document.body.insertAdjacentHTML('beforeend', `
+// 插入 DIV
+$('body').append(`
     <!--音乐🎶-->
     <audio id="bg-music" loop></audio>
     <!--音乐播放器-->
@@ -39,12 +41,10 @@ document.body.insertAdjacentHTML('beforeend', `
     <!--完-->
 `);
 
-var script = document.createElement("script");
-script.src = "https://yf1688.top/static/music/yybfq.js?v=" + new Date().getTime();
-script.onload = function () {
-    console.log("JS 文件加载成功");
-};
-script.onerror = function () {
-    console.error("JS 文件加载失败");
-};
-document.head.appendChild(script);
+// 加载 JS
+$.ajax({
+    url: 'https://yf1688.top/static/music/yybfq.js',
+    dataType: "script",
+    cache: true,
+    async: false
+});
