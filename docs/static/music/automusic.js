@@ -1,5 +1,5 @@
 var link = document.createElement("link");
-link.href = "./yybfq.css";
+link.href = "yybfq.css";
 link.rel = "stylesheet";
 link.type = "text/css";
 document.head.appendChild(link);
@@ -40,7 +40,7 @@ document.body.insertAdjacentHTML('beforeend', `
 `);
 
 var script = document.createElement("script");
-script.src = "./yybfq.js";
+script.src = "yybfq.js";
 script.onload = function () {
     console.log("JS 文件加载成功");
 };
