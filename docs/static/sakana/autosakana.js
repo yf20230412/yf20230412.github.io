@@ -15,6 +15,12 @@ $.ajax({
     cache: true,
     async: false
 });
+$.ajax({
+    url: 'https://yf1688.top/static/sakana/1.js',
+    dataType: "script",
+    cache: true,
+    async: false
+});
 
 /*
 <!-- https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css -->
