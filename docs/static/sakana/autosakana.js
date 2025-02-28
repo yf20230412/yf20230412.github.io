@@ -16,7 +16,7 @@ $.ajax({
     async: false
 });
 $.ajax({
-    url: 'https://yf1688.top/static/sakana/1.js',
+    url: 'https://yf1688.top/static/sakana/2.js',
     dataType: "script",
     cache: true,
     async: false
