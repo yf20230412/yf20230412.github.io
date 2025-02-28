@@ -17,6 +17,7 @@
     <link rel="Bookmark" href="/static/icon/favicon.ico">
     <link rel="stylesheet" href="./1.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"/>
     <title>公众号《风言锋语88》- 联系方式</title>
     <style>
         
@@ -59,7 +60,13 @@
             </div>
         </div>
     </div>
-    <script src="/static/sakana/autosakana.js"></script>
+    <div id="sakana-widget"></div>
+    <script async onload="initSakanaWidget()" src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"></script>
+    <script>
+  function initSakanaWidget() {
+    new SakanaWidget().mount('#sakana-widget');
+  }
+</script>
     <script src='/static/music/automusic.js'></script>
 </body>
 
