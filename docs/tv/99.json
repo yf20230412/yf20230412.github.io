@@ -18,7 +18,7 @@
         "ua": "okhttp/3.15",
         "catchup": {
             "type": "append",
-            "source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"
+            "source": "?livemode=4&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"
         }
     },
     {
@@ -140,41 +140,16 @@
         "timeout": 25
     },
     {
-        "key": "永夜影视",
-        "name": "🔮┃永夜┃App💯",
+        "key": "溢彩",
+        "name": "🧬┃溢彩┃多线💯",
         "type": 3,
-        "api": "csp_Muou",
+        "api": "csp_AppSKGuard",
+        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "ext": "caHR0cDovL2FwcC55aXlpNTIxLnRvcHxZSVlJ5b2x6KeGfDQuMS44",
-        "timeout": 10
-    },
-    {
-        "key": "雨滴",
-        "name": "💦┃雨滴┃App💯",
-        "type": 3,
-        "api": "csp_Xdai",
-        "playerType": 1,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "jaHR0cDovL2M4dzJvdjd1NXdnMnoxbzhwMjFjLmFsaXl1bmNzLmNsaWNrfGs5bzNwMmM4YjdtM3owbzh8azlvM3AyYzhiN20zejBvOHwxMDA=",
-        "timeout": 25
-    },
-    {
-        "key": "优质",
-        "name": "🎖┃优质┃App💯",
-        "type": 3,
-        "api": "csp_Xdai",
-        "playerType": 1,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "jaHR0cDovL2R5eXp0dmFwcGFwaWdvb2RneC42OC5neS9jaXdrMjh2dTM4aW84L2FwaXVybC50eHR8ZHl5enR2YXBpYXBweXlkc3xkeXl6dHZhcGlhcHB5eWRzfDEwMA==",
+        "ext": "rfOX1voDIQhH8epBwpmIsuSlujLK3srq3iIoaYP8Hh5fZE0d4nF48/dsb7YNi44z/yjNcsFajjBz6XJtDuw2FdqR/a6UV3ywWevO",
         "timeout": 25
     },
     {
@@ -215,40 +190,6 @@
         "ext": "w7TClcK8w5rDrcKYwoPCmcKkw57ClcK0wpvCnF9SwoPCmcOtw5jDj8Orw6ZValLCmMOtw6fDqsOswrRiX8KdacOcw57CrMKxw6DCqmbCnmPDpsKow6XCsMKywpRhYMKUwqfDl8Ozw7LDtGVewpPCn8Omwq3Cr8KvwrJsX8KRwqDDosKhw6rDocOqVVxSecOnw5zDrsOQw6nCpcKUUmrCm8KVwqbCm8OuwpzCoFJqwpvDjuWHv+mFoeaQn+WQllzlhpzkvYflkbDCreW/q+iov+i2vua7g+esicKNUsKlwpXCu8Oew61+wpXCqVLCs8KVw57DssOzwq3CpMKmwpHDqcOcw5vDqcOqwqzCqcKUwqPCm8KfwpzCusOfwqZ5wqZSwrPClcOew7LDs8KtwqTCpsKRw6nDnMObw6nDqsKswqnClMKjwpvDsA==",
         "timeout": 15
     },
-    {
-        "key": "小米虎虎",
-        "name": "🐯┃虎虎┃APP💯",
-        "type": 3,
-        "api": "csp_AppHuhu",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        
-        "timeout": 10
-    },  
-    {
-        "key": "小米多多",
-        "name": "👭┃多多┃APP💯",
-        "type": 3,
-        "api": "csp_DuoDuoApp",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 10
-    },
-    {
-        "key": "小米良人",
-        "name": "🧍‍♂️┃良人┃APP💯",
-        "type": 3,
-        "api": "csp_LiangRenApp",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 10
-    },       
     {
         "key": "糯米影视",
         "name": "🍓┃糯米┃影视💯",
@@ -318,19 +259,6 @@
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "木星",
-        "name": "🎄┃木星┃多线",
-        "type": 3,
-        "api": "csp_AppSx",
-        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "FbjPcVZY48PN/RIZ5QqOrspjLMNAA5xaRiBa8vT6iB4RAYHOp3SFmQTE9v/hX3nlPzHB3X051Sp3XDoyUIN9aRARCZzZk1aDbikK",
         "timeout": 25
     },
     {
@@ -555,7 +483,7 @@
         "key": "csp_WoGG",
         "name": "🤵‍♂️┃玩偶┃哥哥📀",
         "type": 3,
-        "api": "csp_WoGG",
+        "api": "csp_WoGGGuard",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 0,
@@ -565,74 +493,6 @@
             "from": "4k|auto",
             "siteUrl": "https://www.wogg.net/",
             "danMu": "关"
-        }
-    },
-    {
-        "key": "夸克闪电弹幕",
-        "name": "⚡️┃闪电┃4K📀",
-        "type": 3,
-        "api": "csp_Wobg",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 0,
-        "filterable": 1,
-        "ext": {
-            "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-            "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-            "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-            "site": "https://shandian.banye.tech:7086",
-            "danmu": false
-        }
-    },
-    {
-        "key": "玩偶弹幕",
-        "name": "🧸┃玩偶┃4K📀",
-        "type": 3,
-        "api": "csp_Wogg",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 0,
-        "filterable": 1,
-        "ext": {
-            "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-            "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-            "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-            "wogg": true,
-            "danmu": false
-        }
-    },
-    {
-        "key": "夸克虎斑弹幕",
-        "name": "🐯┃虎斑┃4K📀",
-        "type": 3,
-        "api": "csp_Wobg",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 0,
-        "filterable": 1,
-        "ext": {
-                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "https://huban.banye.tech:7086",
-                "danmu": false
-        }
-    },
-    {
-        "key": "木偶弹幕",
-        "name": "🤡┃木偶┃4K📀",
-        "type": 3,
-        "api": "csp_Wobg",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 0,
-        "filterable": 1,
-        "ext": {
-            "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-            "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-            "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-            "site": "http://muou.6qu.top",
-            "danmu": false
         }
     },
     {
@@ -831,7 +691,7 @@
 
 {"key":"JRKAN直播","name":"🏀┃JRK┃直播🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","style":{"type":"rect","ratio":1.755},"quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./js/JRKAN直播.js"},
 
-{"key":"alllive","name":"⚔️┃竞技┃直播💯","type":3,"api":"csp_Alllive","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","playerType":2,"quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
+{"key":"alllive","name":"⚔️┃竞技┃直播💯","type":3,"api":"csp_AllliveGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","playerType":2,"quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
 
 {"key":"Aid","name":"🚑┃急救┃教学💯","type":3,"api":"csp_FirstAid","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"style":{"type":"rect","ratio":3.8}},
 
@@ -842,25 +702,25 @@
 {"key":"Local","name":"💻┃本地┃视频💯","type":3,"api":"csp_Local","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
 
     
-{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSs","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSsGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"UC","name":"🔍┃优汐┃搜搜📀","type":3,"api":"csp_UuSs","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"UC","name":"🔍┃优汐┃搜搜📀","type":3,"api":"csp_UuSsGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"PanSso","name":"🔍┃盘他┃三盘📀","type":3,"api":"csp_PanSso","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSso","name":"🔍┃盘他┃三盘📀","type":3,"api":"csp_PanSsoGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"YpanSo","name":"🔍┃盘她┃三盘📀","type":3,"api":"csp_YpanSo","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"YpanSo","name":"🔍┃盘她┃三盘📀","type":3,"api":"csp_YpanSoGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"xzso","name":"🔍┃盘它┃三盘📀","type":3,"api":"csp_xzso","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"xzso","name":"🔍┃盘它┃三盘📀","type":3,"api":"csp_xzsoGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"米搜","name":"🔍┃米搜┃夸父📀","type":3,"api":"csp_MIPanSo","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"米搜","name":"🔍┃米搜┃夸父📀","type":3,"api":"csp_MIPanSoGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"夸搜","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"pan":"quark","Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"夸搜","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearchGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"pan":"quark","Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"Aliso","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"Aliso","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSearchGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSoGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
-{"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_PushGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
 {"key":"浪酷弹幕","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_TianTian","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":{"danmu":true,"site":"aHR0cDovL3YubGt1eXMuY24="}},
 
@@ -932,7 +792,14 @@
 
 {"name":"Quad9","url":"https://dns.quad9.net/dns-quer","ips":["9.9.9.9","149.112.112.112"]}],
 
-    
+"hosts": [
+        "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
+    ],    
 
     "flags":["youku","qq","QQ","iqiyi","iqiyi","imgo","xueren","m1905","qiyi","letv","sohu","tudou","pptv","PPTV","dbm3u8","FY","fy","FeiYun","feiyun","飞云","funshion","mgtv","wasu","bilibili","le","duoduozy","renrenmi","xmm","xigua","ltnb","rx","SLYS4k","CL4K","xfyun","wuduzy","BYGA","BYGB","luanzi","dxzy","QEYSS","aliyun","优酷","优酷","优酷视频","西瓜","AliS","122","chuangying","乐视","芒果","腾讯","腾讯","腾讯视频","芒果TV","芒果TV","爱奇艺","奇艺","爱奇艺","奇艺视频","西瓜视频","乐视视频","搜狐","搜狐","搜狐视频","哔哩哔哩","哔哩"],
 
