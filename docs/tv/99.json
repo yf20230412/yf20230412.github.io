@@ -86,21 +86,7 @@
         "searchable": 0,
         "changeable": 1,
         "filterable": 1
-    },   
-    {
-        "key": "厂长资源",
-        "name": "🏭️┃厂长┃1080💯",
-        "type": 3,
-        "api": "csp_Czzy",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": {
-            "danmu": false
-        },
-        "timeout": 25
-    },   
+    },          
     {
         "key": "浪酷弹幕",
         "name": "🌊┃浪酷┃弹幕💯",
@@ -114,81 +100,6 @@
                 "danmu": true,
                 "site": "aHR0cDovL3YubGt1eXMuY24="
         }
-    },
-    {
-        "key": "腾讯",
-        "name": "🐧┃腾腾┃解析🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/qq.js",
-        "timeout": 25
-    },
-    {
-        "key": "芒果",
-        "name": "🥭┃果果┃解析🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/mgtv.js",
-        "timeout": 25
-    },
-    {
-        "key": "溢彩",
-        "name": "🧬┃溢彩┃多线💯",
-        "type": 3,
-        "api": "csp_AppSKGuard",
-        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "rfOX1voDIQhH8epBwpmIsuSlujLK3srq3iIoaYP8Hh5fZE0d4nF48/dsb7YNi44z/yjNcsFajjBz6XJtDuw2FdqR/a6UV3ywWevO",
-        "timeout": 25
-    },
-    {
-        "key": "木头",
-        "name": "🪵┃木头┃App💯",
-        "type": 3,
-        "api": "csp_Shark",
-        "playerType": 1,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "saHR0cDovL21pdG8ubWlub3R2LmNuL3xhYXNzZGR3d3h4bGxzeDF4fGJic3NxZGJic3NsbDI1c3g=",
-        "timeout": 25
-    },
-    {
-        "key": "时常",
-        "name": "⏰┃时常┃App💯",
-        "type": 3,
-        "api": "csp_Xdai",
-        "playerType": 1,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "jaHR0cHM6Ly9zYzEwODAudG9wfGU1OWQ0NGIyZWVmMDNiYTJ8ZTU5ZDQ0YjJlZWYwM2JhMnwxMzQ=",
-        "timeout": 15
-    },
-    {
-        "key": "站长影视",
-        "name": "⛵️┃站长┃App💯",
-        "type": 3,
-        "api": "csp_AppGetApp",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "w7TClcK8w5rDrcKYwoPCmcKkw57ClcK0wpvCnF9SwoPCmcOtw5jDj8Orw6ZValLCmMOtw6fDqsOswrRiX8KdacOcw57CrMKxw6DCqmbCnmPDpsKow6XCsMKywpRhYMKUwqfDl8Ozw7LDtGVewpPCn8Omwq3Cr8KvwrJsX8KRwqDDosKhw6rDocOqVVxSecOnw5zDrsOQw6nCpcKUUmrCm8KVwqbCm8OuwpzCoFJqwpvDjuWHv+mFoeaQn+WQllzlhpzkvYflkbDCreW/q+iov+i2vua7g+esicKNUsKlwpXCu8Oew61+wpXCqVLCs8KVw57DssOzwq3CpMKmwpHDqcOcw5vDqcOqwqzCqcKUwqPCm8KfwpzCusOfwqZ5wqZSwrPClcOew7LDs8KtwqTCpsKRw6nDnMObw6nDqsKswqnClMKjwpvDsA==",
-        "timeout": 15
     },
     {
         "key": "糯米影视",
@@ -227,18 +138,6 @@
         "timeout": 25
     },
     {
-        "key": "金牌影院",
-        "name": "🥇┃金牌┃1080🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/金牌影院.js",
-        "timeout": 25
-    },
-    {
         "key": "文采",
         "name": "📝┃文采┃1080💯",
         "type": 3,
@@ -249,7 +148,58 @@
         "filterable": 1,
         "ext": "./json/文才.json",
         "timeout": 25
-    },            
+    },        
+    {
+        "key": "木头",
+        "name": "🪵┃木头┃App💯",
+        "type": 3,
+        "api": "csp_Shark",
+        "playerType": 1,
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": "saHR0cDovL21pdG8ubWlub3R2LmNuL3xhYXNzZGR3d3h4bGxzeDF4fGJic3NxZGJic3NsbDI1c3g=",
+        "timeout": 25
+    },
+    {
+        "key": "溢彩",
+        "name": "🧬┃溢彩┃多线💯",
+        "type": 3,
+        "api": "csp_AppSKGuard",
+        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": "rfOX1voDIQhH8epBwpmIsuSlujLK3srq3iIoaYP8Hh5fZE0d4nF48/dsb7YNi44z/yjNcsFajjBz6XJtDuw2FdqR/a6UV3ywWevO",
+        "timeout": 25
+    },
+    {
+        "key": "时常",
+        "name": "⏰┃时常┃App💯",
+        "type": 3,
+        "api": "csp_Xdai",
+        "playerType": 1,
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": "jaHR0cHM6Ly9zYzEwODAudG9wfGU1OWQ0NGIyZWVmMDNiYTJ8ZTU5ZDQ0YjJlZWYwM2JhMnwxMzQ=",
+        "timeout": 15
+    },
+    {
+        "key": "站长影视",
+        "name": "⛵️┃站长┃App💯",
+        "type": 3,
+        "api": "csp_AppGetApp",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": "w7TClcK8w5rDrcKYwoPCmcKkw57ClcK0wpvCnF9SwoPCmcOtw5jDj8Orw6ZValLCmMOtw6fDqsOswrRiX8KdacOcw57CrMKxw6DCqmbCnmPDpsKow6XCsMKywpRhYMKUwqfDl8Ozw7LDtGVewpPCn8Omwq3Cr8KvwrJsX8KRwqDDosKhw6rDocOqVVxSecOnw5zDrsOQw6nCpcKUUmrCm8KVwqbCm8OuwpzCoFJqwpvDjuWHv+mFoeaQn+WQllzlhpzkvYflkbDCreW/q+iov+i2vua7g+esicKNUsKlwpXCu8Oew61+wpXCqVLCs8KVw57DssOzwq3CpMKmwpHDqcOcw5vDqcOqwqzCqcKUwqPCm8KfwpzCusOfwqZ5wqZSwrPClcOew7LDs8KtwqTCpsKRw6nDnMObw6nDqsKswqnClMKjwpvDsA==",
+        "timeout": 15
+    },    
     {
         "key": "真心影视",
         "name": "❤️‍🔥┃真心┃影视💯",
@@ -259,6 +209,20 @@
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
+        "timeout": 25
+    },
+    {
+        "key": "厂长资源",
+        "name": "🏭️┃厂长┃1080💯",
+        "type": 3,
+        "api": "csp_Czzy",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+            "danmu": false
+        },
         "timeout": 25
     },
     {
@@ -344,141 +308,7 @@
         "filterable": 1,
         "ext": "./js/采集之王.js?type=url&params=../json/采集精选.json$1"
     },    
-    {
-        "key": "荐片",
-        "name": "🧲┃荐片┃磁力💯",
-        "type": 3,
-        "api": "csp_Jianpian",
-        "quickSearch": 1,
-        "searchable": 0,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "哔嘀影视",
-        "name": "🧲┃哔嘀┃磁力🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/哔嘀影视[优].js",
-        "timeout": 25
-    },
-    {
-        "key": "csp_Bttoo",
-        "name": "🧲┃比特┃磁力🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/两个BT.js",
-        "timeout": 25
-    },
-    {
-        "key": "酷吧电影",
-        "name": "🧲┃酷吧┃磁力💯",
-        "type": 3,
-        "api": "csp_KubaCL",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "美剧天堂",
-        "name": "🧲┃美剧┃磁力💯",
-        "type": 3,
-        "api": "csp_MeijuTT",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "6V新磁力",
-        "name": "🧲┃6V新┃磁力💯",
-        "type": 3,
-        "api": "csp_Xb6v",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "4KHDR",
-        "name": "🧲┃HDR┃磁力🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/4KHDR磁力.js",
-        "timeout": 25
-    },
-    {
-        "key": "SeedHub",
-        "name": "🧲┃SHB┃磁力💯",
-        "type": 3,
-        "api": "csp_SeedHub",
-        "quickSearch": 1,
-        "searchable": 0,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "美剧迷",
-        "name": "🧲┃美剧┃磁力💯",
-        "type": 3,
-        "api": "csp_MeijuMi",
-        "quickSearch": 1,
-        "searchable": 0,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "迅雷吧",
-        "name": "🧲┃迅雷┃磁力💯",
-        "type": 3,
-        "api": "csp_Xunlei8",
-        "quickSearch": 1,
-        "searchable": 0,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "Mp4电影",
-        "name": "🧲┃Mp4┃磁力💯",
-        "type": 3,
-        "api": "csp_Mp4Mov",
-        "quickSearch": 1,
-        "searchable": 0,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
-    {
-        "key": "磁力_lf_p2p2",
-        "name": "🧲┃磁力┃搜索㊙️",
-        "type": 3,
-        "api": "./js/lf_p2p2_min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "18+"
-    },   
+
     {
         "key": "csp_WoGG",
         "name": "🤵‍♂️┃玩偶┃哥哥📀",
@@ -511,131 +341,28 @@
             "site": "https://libvio.link"
         }
     },
-    {
-        "key": "我的阿里",
-        "name": "🗂┃我的┃阿里📀",
-        "type": 3,
-        "api": "csp_MyAli",
-        "quickSearch": 0,
-        "searchable": 0,
-        "changeable": 0,
-        "filterable": 1,
-        "indexs": 0,
-        "ext": {
-            "token": "http://127.0.0.1:9978/file/TVBox/token.txt"
-        },
-        "style": {
-            "type": "list"
-        }
-    },
-    {
-        "key": "我的夸克",
-        "name": "🗂┃我的┃夸克📀",
-        "type": 3,
-        "api": "csp_MyQuark",
-        "quickSearch": 0,
-        "searchable": 0,
-        "changeable": 0,
-        "filterable": 1,
-        "indexs": 0,
-        "ext": {
-            "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt"
-        },
-        "style": {
-            "type": "list"
-        }
-    },
-    {
-        "key": "我的UC",
-        "name": "🗂┃我的┃UC📀",
-        "type": 3,
-        "api": "csp_MyUc",
-        "quickSearch": 0,
-        "searchable": 0,
-        "changeable": 0,
-        "filterable": 1,
-        "indexs": 0,
-        "ext": {
-            "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt"
-        },
-        "style": {
-            "type": "list"
-        }
-    },
+    
+{"key":"我的阿里","name":"🗂┃我的┃阿里📀","type":3,"api":"csp_MyAli","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt"},"style":{"type":"list"}},
 
-    {
-        "key": "奇艺",
-        "name": "💖┃奇奇┃解析🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/iqiyi.js",
-        "timeout": 25
-    },
-    {
-        "key": "优酷",
-        "name": "👔‍┃酷酷┃解析🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/youku.js",
-        "timeout": 25
-    },
-    {
-        "key": "搜狗",
-        "name": "🐶┃狗狗┃解析🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/sougou.js",
-        "timeout": 25
-    },
-    {
-        "key": "360_spider",
-        "name": "⚽️┃360┃解析💯",
-        "type": 3,
-        "api": "csp_Sp360",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": {
-            "danmu": false
-        },
-        "timeout": 25
-    },
-    {
-        "key": "NT动漫",
-        "name": "🌸┃NTT┃动漫🌺",
-        "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "./js/NT动漫.js",
-        "timeout": 25
-    },
-    {
-        "key": "Dm84",
-        "name": "🌸┃巴士┃动漫💯",
-        "type": 3,
-        "api": "csp_Dm84",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 25
-    },
+{"key":"我的夸克","name":"🗂┃我的┃夸克📀","type":3,"api":"csp_MyQuark","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt"},"style":{"type":"list"}},
+
+{"key":"我的UC","name":"🗂┃我的┃UC📀","type":3,"api":"csp_MyUc","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"ext":{"uc_cookie":"http://127.0.0.1:9978/file/TVBox/uc.txt"},"style":{"type":"list"}},
+    
+{"key":"腾讯","name":"🐧┃腾腾┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/qq.js","timeout":25},
+
+{"key":"芒果","name":"🥭┃果果┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/mgtv.js","timeout":25},
+
+{"key":"奇艺","name":"💖┃奇奇┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/iqiyi.js","timeout":25},
+
+{"key":"优酷","name":"👔‍┃酷酷┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/youku.js","timeout":25},
+
+{"key":"搜狗","name":"🐶┃狗狗┃解析🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/sougou.js","timeout":25},
+
+{"key":"360_spider","name":"⚽️┃360┃解析💯","type":3,"api":"csp_Sp360","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":{"danmu":false},"timeout":25},
+
+{"key":"NT动漫","name":"🌸┃NTT┃动漫🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/NT动漫.js","timeout":25},
+    
+{"key":"Dm84","name":"🌸┃巴士┃动漫💯","type":3,"api":"csp_Dm84","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":25},
 
 
 {"key":"dr_兔小贝","name":"📚┃儿童┃启蒙🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"style":{"type":"rect","ratio":1.433},"ext":"./js/兔小贝.js"},
@@ -701,6 +428,27 @@
 
 {"key":"Local","name":"💻┃本地┃视频💯","type":3,"api":"csp_Local","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
 
+{"key":"荐片","name":"🧲┃荐片┃磁力💯","type":3,"api":"csp_Jianpian","quickSearch":1,"searchable":0,"changeable":1,"filterable":1,"timeout":25},
+
+{"key":"哔嘀影视","name":"🧲┃哔嘀┃磁力🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/哔嘀影视[优].js","timeout":25},
+
+{"key":"csp_Bttoo","name":"🧲┃比特┃磁力🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/两个BT.js","timeout":25},
+
+{"key":"酷吧电影","name":"🧲┃酷吧┃磁力💯","type":3,"api":"csp_KubaCL","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":25},
+
+{"key":"美剧天堂","name":"🧲┃美剧┃磁力💯","type":3,"api":"csp_MeijuTT","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":25},
+
+{"key":"6V新磁力","name":"🧲┃6V新┃磁力💯","type":3,"api":"csp_Xb6v","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":25},
+
+{"key":"4KHDR","name":"🧲┃HDR┃磁力🌺","type":3,"api":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/4KHDR磁力.js","timeout":25},
+
+{"key":"SeedHub","name":"🧲┃SHB┃磁力💯","type":3,"api":"csp_SeedHub","quickSearch":1,"searchable":0,"changeable":1,"filterable":1,"timeout":25},
+
+{"key":"美剧迷","name":"🧲┃美剧┃磁力💯","type":3,"api":"csp_MeijuMi","quickSearch":1,"searchable":0,"changeable":1,"filterable":1,"timeout":25},
+
+{"key":"迅雷吧","name":"🧲┃迅雷┃磁力💯","type":3,"api":"csp_Xunlei8","quickSearch":1,"searchable":0,"changeable":1,"filterable":1,"timeout":25},{"key":"Mp4电影","name":"🧲┃Mp4┃磁力💯","type":3,"api":"csp_Mp4Mov","quickSearch":1,"searchable":0,"changeable":1,"filterable":1,"timeout":25},
+
+{"key":"磁力_lf_p2p2","name":"🧲┃磁力┃搜索㊙️","type":3,"api":"./js/lf_p2p2_min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"18+"},
     
 {"key":"抠搜","name":"🔍┃抠抠┃搜搜📀","type":3,"api":"csp_KkSsGuard","jar":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 
