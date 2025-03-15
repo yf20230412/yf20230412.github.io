@@ -50,7 +50,7 @@
     /* 进度条背景颜色 */
     border-radius: 0.1px;
     position: absolute;
-    margin-top: 4px;
+    margin-top: 3px;
     left: 0px;
     width: 0%;
     /* 初始宽度为0 */
