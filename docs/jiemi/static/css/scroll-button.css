@@ -1,5 +1,5 @@
 #container {
-    margin-bottom: 25px;  /* 调整输入框到输出框中间的距离*/
+    margin-bottom: 26px;  /* 调整输入框到输出框中间的距离*/
     position: relative;
     /* 确保容器是相对定位 */
 }
@@ -8,7 +8,7 @@
     position: absolute;
     display: none;
     /* 隐藏按钮 */
-    margin-top: -18px;/* 调整跳转按钮到输出框距离*/
+    margin-top: -19px;/* 调整跳转按钮到输出框距离*/
     right: 0;
     z-index: 10;
     padding: 1px 1px;
@@ -50,7 +50,7 @@
     /* 进度条背景颜色 */
     border-radius: 0.1px;
     position: absolute;
-    margin-top: 3px;
+    margin-top: 2px;
     left: 0px;
     width: 0%;
     /* 初始宽度为0 */
