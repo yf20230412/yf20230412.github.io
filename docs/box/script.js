@@ -16,7 +16,7 @@ function Toast(msg, duration) {
 const list = [
 
     {
-        "url": "https://a.2015888.xyz/22",
+        "url": "http://www.2015888.xyz",
         "name": "🏰小鱼多线",
         "color": "#48c0a4"
     },
@@ -81,7 +81,7 @@ const list = [
         "color": "#91ad70"
     },
     {
-        "url": "https://tv.nxog.top/m/",
+        "url": "https://vip.nxog.top",
         "name": "🛳欧歌线路",
         "color": "#91ad70"
     },
