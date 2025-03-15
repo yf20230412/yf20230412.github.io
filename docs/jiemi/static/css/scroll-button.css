@@ -1,5 +1,5 @@
 #container {
-    margin-bottom: 23px;  /* 调整输入框到输出框中间的距离*/
+    margin-bottom: 25px;  /* 调整输入框到输出框中间的距离*/
     position: relative;
     /* 确保容器是相对定位 */
 }
@@ -44,13 +44,13 @@
 }
 
 .progress-bar {
-    height: 1.5px;
+    height: 2px;
     /* 进度条高度 */
-    background: linear-gradient(to bottom, #4caf50, #ffeb3b);
+    background: linear-gradient(to bottom, #4caf50, #ff0000);
     /* 进度条背景颜色 */
     border-radius: 0.1px;
     position: absolute;
-    margin-top: 5px;
+    margin-top: 4px;
     left: 0px;
     width: 0%;
     /* 初始宽度为0 */
