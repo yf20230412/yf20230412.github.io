@@ -21,7 +21,7 @@ const list = [
         "color": "#48c0a4"
     },
     {
-        "url": "https://o.nxog.top/nxog/ou1.php",
+        "url": "https://xn--oxxo-rp5imh.v.nxog.top/api.php?id=2",
         "name": "🏰欧歌多线",
         "color": "#48c0a4"
     },
