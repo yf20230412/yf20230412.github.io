@@ -10,6 +10,15 @@
 
     "lives": [
     {
+        "name": "ITV",
+        "type": 0,
+        "url": "https://9877.kstore.space/Live/ITV.txt",
+        "epg": "http://epg.51zmt.top:8000/e.xml",
+        "ua": "okhttp/3.15,AptvPlayer/1.4.0",
+        "timeout": 3,
+        "playerType": 2
+    },
+    {
         "name": "肥羊直播",
         "type": 3,
         "api": "csp_Feiyang",
