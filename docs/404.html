@@ -2,96 +2,23 @@
 layout: default
 title: 404 Not Found
 ---
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>该网站暂时无法进行访问</title>
-    <style>
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            width: 85%;
-            margin: 10% auto 0;
-            background-color: #f0f0f0;
-            padding: 2% 5%;
-            border-radius: 10px;
-        }
-        
-        ul {
-            padding-left: 20px;
-        }
-        
-        ul li {
-            line-height: 2.3;
-        }
-        
-        a {
-            color: #20a53a;
-        }
-        
-        h1 {
-            text-align: center;
-        }
-        
-        /* 渐变色文字 */
-        .wechat-text {
-    background: linear-gradient(135deg,
-        #0eaf6d,
-        #ff6ac6 25%,
-        #147b96 50%,
-        #e6d205 55%,
-        #2cc4e0 60%,
-        #8b2ce0 80%,
-        #ff6384 95%,
-        #08dfb4);
-    /* 文字颜色填充设置为透明 */
-    -webkit-text-fill-color: transparent;
-    /* 背景裁剪，即让文字使用背景色 */
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* 背景图放大一下，看着柔和一些 */
-    -webkit-background-size: 200% 200%;
-    background-size: 200% 200%;
-    /* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
-    -webkit-animation: flowCss 12s infinite linear;
-    animation: flowCss 12s infinite linear;
-    font-size: 20px; /* 设置字体大小 */
-    font-weight: bold; /* 设置字体粗细 */
-    letter-spacing: 2px; /* 设置字符间距 */
-}
-
-/* 定义动画 */
-@keyframes flowCss {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
+    <style type="text/css">
+        body{background-color:#F2F4F7;color:#616a88;-webkit-filter:blur(0.2px);filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius="0.2")}.container{max-width:680px;margin-left:auto;margin-right:auto;margin-top:120px}.content-header{text-align:center;margin-bottom:80px}h3{font-size:2.2em}h4{font-size:1.2em}
     </style>
     <style>
-        .box a {
+        a[href="https://a.2015888.xyz"] {
           display: inline-block;
           padding: 10px 18px;
-          font-size: 16px;
+          font-size: 20px;
           background-image: linear-gradient(to right, #00f, #f00);
-          background-size: 160% 80%;
+          background-size: 200% 100%;
           background-position: left bottom;
           color: white;
           text-decoration: none;
@@ -99,33 +26,30 @@ title: 404 Not Found
           transition: background-position 0.5s ease;
         }
         
-        .box a:hover {
+        a[href="https://a.2015888.xyz"]:hover {
           background-position: right bottom;
         }
     </style>
-</head>
-
-<body>
-
-    <div class="overlay" id="overlay">
-        <div class="container">
-            <h1>&#9888;&#65039;警告&#9888;&#65039;</h1>
-            <ul>
-                <li><strong style="color: red; font-size: larger;">~哎呀😂，你想干嘛？</strong>
-                    <br><span style="color: blue; font-size: 12px;">如果想观影,请直接在影视盒子里面粘贴该链接食用……</span>
-                </li>
-                <br>
-                <li>1.本站为公益站点，致力于收集多线路接口资源，方便用户免费使用。</li>
-                <li>2.本站不提供存储服务，所有接口资源均来自网友分享。</li>
-                <li>3.若网站关闭，用户可通过其他途径获取接口资源。</li>
-                <li>微信公众号：<span class="wechat-text">风言锋语88</span>，欢迎关注获取更多信息。</li>
-            </ul>
+    <div class="container">
+        <div class="content-header">
+            <h3>😂 该网站暂时无法进行访问</h3>
+            <p>~哎呀，看起来你访问的页面不存在。</p>
         </div>
-        <div class="box">
-            </p>
-            <a href="/" target="_blank">返回首页</a>
+        <div class="content-wrapper">
+            <div class="box">
+                <h4>可能由于以下原因导致：</h4>
+                <p><strong>🔹原因一：</strong>您输入的网址有误，请输入正确网站，重新访问;</p>
+                <p><strong>🔹原因二：</strong>根据工信部相关法规，您未进行备案;</p>
+                <p><strong>🔹原因三：</strong>根据工信部相关法规，您当前接入商不正确;</p>
+                <p><strong>🔹原因四：</strong>您的网站存在不宜传播，请联系网站管理员进行处理。</p>
+            </div>
+            <div class="box">
+                </p>
+                <a href="https://a.2015888.xyz" target="_blank">返回首页</a>
+            </div>
         </div>
     </div>
-</body>
+    </div>
+    </body>
 
 </html>
