@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/layui@2.9.21/dist/css/layui.css" rel="stylesheet">
+    <script src="//unpkg.com/layui@2.9.21/dist/layui.js"></script>
+    <title>随机视频播放器</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            padding: 20px;
+         
+        }
+
+        .container {
+            background: rgb(229, 240, 243);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .container2 {
+            background: rgb(229, 240, 243);
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .container3 {
+            background: rgb(229, 240, 243);
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .video-card {
+            flex: 1;
+            min-width: 0;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .video-info {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .video-info p {
+            margin: 5px 0;
+        }
+
+        .input-group {
+            margin: 15px 0;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 14px;
+            border: none;
+
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="video-card">
+            <video id="videoPlayer" controls autoplay>
+                <source id="videoSource" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="video-info">
+            <div class="row text-center">
+                <h5 id="videoTitle"></h5>
+                <br>
+                <br>
+                <div class="col-4">
+                    <h5>视频ID</h5>
+                    <span class="h5 text-info" id="videoId"></span>
+                </div>
+                <div class="col-4">
+                    <h5>视频总数</h5>
+                    <span class="h5 text-warning" id="videoNumber"></span>
+                </div>
+                <div class="col-4">
+                    <h5>视频平台</h5>
+                    <span class="h5 text-success" id="videoPlatform"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="text-center mt-3">
+            <input type="number" id="videoIdInput" placeholder="输入视频ID" min="1" max="1830"
+                style="padding: 8px; font-size: 14px; border: none; border-radius: 5px; cursor: pointer; margin: 5px; width: 90px; height: 36px;">
+            <button class="control-btn" onclick="loadVideoById()"
+                style=" background: linear-gradient(45deg, #6a89f1, #4CAF50);">播放指定视频</button>
+        </div>
+
+        <div class="controls" style="display: flex; justify-content: space-around;">
+            <button id="toggleLoopButton" onclick="toggleLoopMode()"
+                style=" background: linear-gradient(45deg, #ff6b81, #4CAF50);">随机播放</button>
+            <button onclick="showDownloadOptions()"
+                style=" background: linear-gradient(45deg, #ee6bff, #36daa3);">下载视频</button>
+            <button onclick="loadNextVideo()"
+                style=" background: linear-gradient(45deg, #6b7aff, #4CAF50);">下一个位</button>
+        </div>
+    </div>
+    <script>
+        let currentVideoId = null;
+        let isLoopMode = false; // 默认不循环播放
+        let videoElement = document.getElementById('videoPlayer');
+
+        // 加载视频并显示信息
+        function loadVideo(videoData) {
+            const sourceElement = document.getElementById('videoSource');
+            const titleElement = document.getElementById('videoTitle');
+            const platformElement = document.getElementById('videoPlatform');
+            const numberElement = document.getElementById('videoNumber');
+            const idElement = document.getElementById('videoId');
+
+            sourceElement.src = videoData.download_url;
+            titleElement.textContent = videoData.video_title;
+            platformElement.textContent = `${videoData.Video_platform}`;
+            numberElement.textContent = `${videoData.video_number}`;
+            idElement.textContent = `${videoData.video_id}`;
+
+            // 设置视频循环播放模式
+            videoElement.loop = isLoopMode;
+
+            videoElement.load();
+            videoElement.play();
+
+            currentVideoId = videoData.video_id;
+
+            // 检测视频方向并调整最大宽度
+            adjustVideoSize(videoData.download_url);
+        }
+
+        // 切换循环播放模式
+        function toggleLoopMode() {
+            isLoopMode = !isLoopMode;
+            const toggleButton = document.getElementById('toggleLoopButton');
+
+            // 修改按钮文字
+            if (isLoopMode) {
+                toggleButton.textContent = '循环播放';
+                layer.msg('已切换循环播放');
+            } else {
+                toggleButton.textContent = '随机播放';
+                layer.msg('已切换随机播放');
+            }
+
+            videoElement.loop = isLoopMode; // 更新视频的 loop 属性
+        }
+
+        // 检测视频方向并调整大小
+        function adjustVideoSize(videoUrl) {
+            const tempVideo = document.createElement('video');
+            tempVideo.src = videoUrl;
+            tempVideo.onloadedmetadata = function () {
+                if (tempVideo.videoWidth > tempVideo.videoHeight) {
+                    // 横屏
+                    videoElement.style.maxWidth = '400px';
+                } else {
+                    // 竖屏
+                    videoElement.style.maxWidth = '200px';
+                }
+            };
+        }
+
+        // 播放指定视频ID
+        function loadVideoById() {
+            const videoId = document.getElementById('videoIdInput').value;
+            if (!videoId) return layer.msg('请输入视频ID', { icon: 0 });
+            var loadIndex = layer.load(0); // 显示加载提示
+            //随机小姐姐api链接🔥
+            fetch(`https://api.kxzjoker.cn/api/Beautyvideo?type=json&id=${video_Id}`) 
+                .then(response => response.json())
+                .then(data => {
+                    layer.close(loadIndex); // 关闭加载提示
+                    if (data.code === 200) {
+                        loadVideo(data);
+                    } else {
+                        layer.msg('视频加载失败: ' + data.msg, { icon: 0 });
+                    }
+                })
+                .catch(error => {
+                    layer.close(loadIndex); // 关闭加载提示
+                    layer.msg('视频加载失败: ' + error.message, { icon: 0 });
+                });
+        }
+
+        // 加载下一个视频
+        function loadNextVideo() {
+            let retryCount = 0;
+            function fetchVideo() {
+                var loadIndex = layer.load(0); // 显示加载提示
+                //随机小姐姐api链接🔥
+                fetch('https://api.kxzjoker.cn/api/Beautyvideo?type=json')
+                    .then(response => response.json())
+                    .then(data => {
+                        layer.close(loadIndex); // 关闭加载提示
+                        if (data.code === 200) {
+                            loadVideo(data);
+                        } else {
+                            layer.msg('视频加载失败', { icon: 0 });
+                            if (retryCount < 2) {
+                                retryCount++;
+                                fetchVideo(); // 尝试重新加载
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        layer.close(loadIndex); // 关闭加载提示
+                        layer.msg('视频加载失败: ' + error, { icon: 0 });
+                        if (retryCount < 2) {
+                            retryCount++;
+                            fetchVideo(); // 尝试重新加载
+                        }
+                    });
+            }
+
+            fetchVideo();
+        }
+
+        // 下载当前视频1 大部分浏览器支持 
+        function downloadVideo1() {
+            const videoData = document.getElementById('videoSource').src;
+            if (!videoData) return alert('没有视频可下载');
+
+            const a = document.createElement('a');
+            a.href = videoData;
+            a.download = 'video.mp4';
+            a.click();
+        }
+
+        // 下载当前视频2 有部分浏览器不支持 如果要使用下载2 请注释下载1 并取消注释下载2
+        function downloadVideo2() {
+            const videoData = document.getElementById('videoSource').src;
+            if (!videoData) return alert('没有视频可下载');
+
+            fetch(videoData)
+                .then(response => {
+                    const contentDisposition = response.headers.get('Content-Disposition');
+                    const filename = contentDisposition ? contentDisposition.split('filename=')[1] : 'video.mp4';
+                    const reader = response.body.getReader();
+                    const stream = new ReadableStream({
+                        start(controller) {
+                            function push() {
+                                reader.read().then(({ done, value }) => {
+                                    if (done) {
+                                        controller.close();
+                                        return;
+                                    }
+                                    controller.enqueue(value);
+                                    push();
+                                });
+                            }
+                            push();
+                        }
+                    });
+                    const newResponse = new Response(stream);
+                    newResponse.blob().then(blob => {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = filename;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                    });
+                })
+                .catch(error => {
+                    console.error('下载出错:', error);
+                });
+        }
+        // 更新后的逻辑：点击下载视频按钮后弹出询问窗
+        function showDownloadOptions() {
+            layer.alert('请选择下载方式<br>部分浏览器不支持下载方式2<br>如果下载方式2无反应请选择下载方式1', {
+                btn: ['下载方式1', '下载方式2'],
+                btnAlign: 'c', // 按钮居中显示
+                btn1: function(){
+                    layer.msg('开始使用下载方式1');
+                    downloadVideo1();
+                },
+                btn2: function(){
+                    layer.msg('开始使用下载方式2');
+                    downloadVideo2();
+                },
+            });
+        }
+        // 在视频播放完后加载下一个视频 
+        videoElement.addEventListener('ended', function () {
+            if (!isLoopMode) {
+                loadNextVideo();
+            }
+        });
+
+        // 初始化加载一个随机视频
+        loadNextVideo();
+    </script>
+
+</body>
+
+</html>
