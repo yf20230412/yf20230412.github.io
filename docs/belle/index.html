@@ -75,6 +75,10 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+		
+		#videoIdInput {
+            width: 125px !important;
+        }
 
         button {
             padding: 8px 12px;
@@ -148,6 +152,9 @@
         let currentVideoId = null;
         let isLoopMode = false; // 默认不循环播放
         let videoElement = document.getElementById('videoPlayer');
+		
+        // 定义 API URL 为变量，随机小姐姐api链接🔥
+        const API_URL = "https://api.kxzjoker.cn/api/Beautyvideo?type=json";
 
         // 加载视频并显示信息
         function loadVideo(videoData) {
@@ -212,8 +219,9 @@
             const videoId = document.getElementById('videoIdInput').value;
             if (!videoId) return layer.msg('请输入视频ID', { icon: 0 });
             var loadIndex = layer.load(0); // 显示加载提示
-            //随机小姐姐api链接🔥
-            fetch(`https://api.kxzjoker.cn/api/Beautyvideo?type=json&id=${video_Id}`) 
+            
+			// 使用变量拼接完整的🔥 API URL
+            fetch(`${API_URL}&id=${videoId}`) 
                 .then(response => response.json())
                 .then(data => {
                     layer.close(loadIndex); // 关闭加载提示
@@ -234,8 +242,8 @@
             let retryCount = 0;
             function fetchVideo() {
                 var loadIndex = layer.load(0); // 显示加载提示
-                //随机小姐姐api链接🔥
-                fetch('https://api.kxzjoker.cn/api/Beautyvideo?type=json')
+                //直接调用基础 API URL，不带额外参数，随机小姐姐api链接🔥
+                fetch(API_URL)
                     .then(response => response.json())
                     .then(data => {
                         layer.close(loadIndex); // 关闭加载提示
