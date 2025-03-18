@@ -129,12 +129,12 @@ button:hover {
 }
 
 .urlencode-btn {
-    background: #0066ff;
+    background: #E58FC1;
     color: white;
 }
 
 .urldecode-btn {
-    background: #6666ff;
+    background: #704da9;
     color: white;
 }
 
@@ -149,7 +149,7 @@ button:hover {
 }
 
 .gzipencode-btn {
-    background: #449149;
+    background: #d34947;
     color: white;
 }
 
@@ -159,7 +159,7 @@ button:hover {
 }
 
 .hexencode-btn {
-    background: #2688F7;
+    background: #023270;
     color: white;
 }
 
