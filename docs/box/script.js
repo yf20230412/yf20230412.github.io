@@ -21,7 +21,7 @@ const list = [
         "color": "#48c0a4"
     },
     {
-        "url": "https://xn--oxxo-rp5imh.v.nxog.top/api.php?id=2",
+        "url": "https://vip.nxog.top",
         "name": "🏰欧歌多线",
         "color": "#48c0a4"
     },
@@ -81,7 +81,7 @@ const list = [
         "color": "#91ad70"
     },
     {
-        "url": "https://vip.nxog.top",
+        "url": "https://vip.nxog.top/m/",
         "name": "🛳欧歌线路",
         "color": "#91ad70"
     },
