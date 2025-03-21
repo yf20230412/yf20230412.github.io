@@ -1,6 +1,6 @@
 # 文件保存路径/storage/emulated/0/风言锋语88/风言锋语/
 # 功能:支持任何tvbox加密文件的解密
-# "User-Agent": "okhttp/"
+# "User-Agent": "okhttp/5.0.0-alpha.14"
 import requests
 import random
 import time
@@ -27,16 +27,16 @@ except ImportError:
 # 网页请求相关函数
 # ======================
 
-# 设置User-Agent为okhttp/
+# 设置User-Agent为okhttp/5.0.0-alpha.14
 def get_webpage_source(url, timeout=10):
     # 请求超时时间，默认值为10秒
     headers = {
     #请求头包含了用户代理信息、可接受的内容类型、语言偏好、编码方式、连接保持和升级不安全请求的设置
-        "User-Agent": "okhttp/",
+        "User-Agent": "okhttp/5.0.0-alpha.14",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Language": "zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3",
         "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
+        "Proxy-Connection": "keep-alive",
         "Upgrade-Insecure-Requests": "1"
     }
 
@@ -46,11 +46,9 @@ def get_webpage_source(url, timeout=10):
         # 检查请求是否成功
         response.raise_for_status()
         print(f"\n状态码: {response.status_code}")
-        if response.history:
-            redirect_url = response.url
-            print(f"\n重定向URL: {redirect_url}")  # 打印重定向URL
-            # 返回网页的HTML源码
-            return response.text                
+        print(f"\n链接: {response.url}") 
+        # 返回网页的HTML源码
+        return response.text                
     except requests.RequestException as e:
         print(f"\n请求失败：{e}")
         return None
@@ -83,16 +81,29 @@ def save_to_file(content, file_path="/storage/emulated/0/风言锋语88/风言�
 # ======================
 def is_garbled(text):
     if not text:
-        return False
-    
+        return False #为空,函数直接返回 `False`，表示没有乱码
+
     # 定义允许的字符范围（包括空格、制表符、换行符等常见字符）
     allowed_chars = {' ', '\t', '\n', '\r'}  # 可以根据需要扩展
-    
-    # 检查前2个字符是否有乱码
-    for char in text[:2]:
+
+    # 去除开头的空格和换行
+    text = text.lstrip()
+
+    # 检查是否以｛ 开头
+    if text.startswith('｛ '):
+        return False #函数直接返回 `False`，表示没有乱码
+
+    # 检查前5个字符是否有乱码
+    for char in text[:5]:
         if (ord(char) < 32 and char not in allowed_chars) or ord(char) > 126:
-            return True
-    return False
+            return True #函数直接返回 `True`，表示有乱码
+
+    # 检查是否以BM开头
+    if text.startswith('BM'):
+        return True #函数直接返回 `True`，表示有乱码
+
+    return False #函数直接返回 `False`，表示没有乱码
+
 
 def process_garbled_text(text):
     """
@@ -292,7 +303,7 @@ if __name__ == "__main__":
     if webpage_source:
         # 判断是否包含乱码
         if is_garbled(webpage_source):
-            print("\n检测到网页源码存在乱码加密🔐，正在解密📝...")
+            print("\n检测到网页源码存在加密🔐，正在解密📝...")
             # 处理乱码
             processed_text = process_garbled_text(webpage_source)
             if processed_text:
@@ -312,7 +323,7 @@ if __name__ == "__main__":
                     else:
                         print("输入错误，请输入'y'或'n'。")
             else:
-                print("\n乱码解密🔓-失败。")
+                print("\n 解密🔓-失败。")
         else:
             # 检查是否符合AES加密条件
             if webpage_source.startswith("2423"):

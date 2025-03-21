@@ -11,12 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/3.');  // 设置 User-Agent
+        curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/5.0.0');  // 设置 User-Agent
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);    // 自动跟随重定向
         curl_setopt($ch, CURLOPT_MAXREDIRS, 10);           // 最大重定向次数
         
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'User-Agent: okhttp/3.',
+            'User-Agent: okhttp/5.0.0',
             'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
         ));
 
