@@ -5,6 +5,7 @@ import requests
 import random
 import time
 import base64
+import json
 import os
 import time
 from datetime import datetime, timedelta
@@ -222,6 +223,7 @@ def process_aes_encrypted_text(text):
 # ======================
 # JSON格式化处理
 # ======================
+
 def format_json_content(text):
     """
     尝试格式化文本为JSON，支持处理含注释的非标准JSON
@@ -231,7 +233,7 @@ def format_json_content(text):
     # 尝试标准JSON解析
     try:
         data = json.loads(text)
-        formatted = json.dumps(data, indent=2, ensure_ascii=False)
+        formatted = json.dumps(data, indent=2, ensure_ascii=False)  # 缩进为2个空格
         return formatted
     except json.JSONDecodeError:
         pass
@@ -242,7 +244,7 @@ def format_json_content(text):
     try:
         import json5
         data = json5.loads(text)
-        formatted = json.dumps(data, indent=2, ensure_ascii=False)
+        formatted = json.dumps(data, indent=2, ensure_ascii=False)  # 缩进为2个空格
         return formatted
     except ImportError:
         pass
@@ -253,9 +255,11 @@ def format_json_content(text):
     def simple_indent(text):
         indent_level = 0
         result = []
-        indent_str = '  '
+        indent_str = '  '  # 缩进为2个空格
         in_string = False
         escape = False
+        is_outermost = True  # 标记是否是最外层的 {
+
         for char in text:
             if char == '"' and not escape:
                 in_string = not in_string
@@ -266,14 +270,20 @@ def format_json_content(text):
 
             if not in_string:
                 if char in '{[':
+                    if char == '{' and not is_outermost:
+                        result.append('    ')  # 非最外层的 { 前面加4个空格
                     result.append(char)
                     indent_level += 1
                     result.append('\n' + indent_str * indent_level)
+                    if char == '{':
+                        is_outermost = False  # 进入内层后，标记为非最外层
                     continue
                 elif char in '}]':
                     indent_level = max(indent_level - 1, 0)
                     result.append('\n' + indent_str * indent_level)
                     result.append(char)
+                    if char == '}' and indent_level == 0:
+                        is_outermost = True  # 回到最外层
                     continue
                 elif char == ',':
                     result.append(char)
