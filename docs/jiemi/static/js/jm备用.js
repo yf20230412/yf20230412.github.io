@@ -267,7 +267,7 @@ function downloadJar() {
                 fileLink.startsWith('http://bobohome.ignorelist.com') ||
                 fileLink.startsWith('https://bobohome.ignorelist.com')
             )) {
-            alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/3. 然后再重新点击下载`);
+            alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/5.0.0然后再重新点击下载`);
         }
         downloadFile(fileLink);
 
