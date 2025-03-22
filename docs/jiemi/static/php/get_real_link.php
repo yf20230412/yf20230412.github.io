@@ -19,7 +19,7 @@ curl_setopt($ch, CURLOPT_URL, $link);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // 自动跟随重定向
 curl_setopt($ch, CURLOPT_MAXREDIRS, 5); // 最大重定向次数
-curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/5.0.0');
+curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/5.0.0-alpha.14');
 curl_setopt($ch, CURLOPT_HEADER, false);
 // 忽略 SSL 证书验证
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 

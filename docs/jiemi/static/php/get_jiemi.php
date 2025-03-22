@@ -1,9 +1,306 @@
 <?php
-/*
- 本代码由 DeckPHP Beta [ V2.0.5 ] 创建
- 创建时间 2025-02-19 14:54:07
- 技术支持 微信公众号：风言锋语88
- 严禁反编译、逆向等任何形式的侵权行为，违者将追究法律责任
-*/
-if(!defined('A_AA_____'))define('A_AA_____', '___AA_AA_');$GLOBALS[A_AA_____]=explode('|B|Y|.','H*|B|Y|.6375726C5F676574696E666F|B|Y|.48545450204572726F723A20E78AB6E68081E4BBA3E7A08120|B|Y|.2072657475726E65642E|B|Y|.6375726C5F7365746F7074|B|Y|.6F6B687474702F332E|B|Y|.707265675F6D61746368|B|Y|.2F5B5E5C7830302D5C7837465D2F|B|Y|.737562737472|B|Y|.6375726C5F696E6974|B|Y|.737472706F73|B|Y|.636861727365743D|B|Y|.636861727365743D|B|Y|.6375726C5F636C6F7365|B|Y|.6865783262696E|B|Y|.E697A0E6B395E8A7A3E7A081E4B8BAE69687E69CAC|B|Y|.6F70656E73736C5F64656372797074|B|Y|.6165732D3132382D636263|B|Y|.E8A7A3E5AF86E5A4B1E8B4A53A20|B|Y|.6765744D657373616765|B|Y|.6375726C5F65786563|B|Y|.4355524C204572726F723A20|B|Y|.6375726C5F6572726F72|B|Y|.6A736F6E5F656E636F6465|B|Y|.686561646572|B|Y|.4163636573732D436F6E74726F6C2D416C6C6F772D4F726967696E3A202A|B|Y|.436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D7574662D38|B|Y|.524551554553545F4D4554484F44|B|Y|.504F5354|B|Y|.68616E646C65476172626167654C6F676963|B|Y|.75726C|B|Y|.75726C|B|Y|.|B|Y|.686578546F54657874|B|Y|.7374725F706164|B|Y|.30|B|Y|.32333234|B|Y|.E69CAAE689BEE588B032333234E6A087E8AEB0EFBC810A|B|Y|.7374726C656E|B|Y|.2F32343233285B302D39612D66412D465D2B29323332342F|B|Y|.E69CAAE689BEE588B04B6579E5AF86E7A081EFBC810A|B|Y|.61657344656372797074|B|Y|.0A|B|Y|.687474705F726573706F6E73655F636F6465|B|Y|.55524C20697320656D7074792E|B|Y|.616573446563727970744C6F676963|B|Y|.4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C696D6167652F776562702C2A2F2A3B713D302E38|B|Y|.6A736F6E5F6465636F6465|B|Y|.6A736F6E5F6C6173745F6572726F72|B|Y|.6D625F636F6E766572745F656E636F64696E67|B|Y|.5554462D38|B|Y|.6C7472696D|B|Y|.32343233|B|Y|.73747272706F73|B|Y|.2A2A|B|Y|.707265675F7265706C616365|B|Y|.2F5E5C732A5C2F5C2F2E2A3F5B5C7D2C225D5C732A242F6D|B|Y|.42617365363420E8A7A3E7A081E5A4B1E8B4A5E38082E697A0E69588E79A842042617365363420E695B0E68DAE2E0A|B|Y|.E8A681E8A7A3E7A081E79A84E69687E69CAC3A20|B|Y|.6261736536345F6465636F6465');unset($��������);$��������; goto qzdNDGfzfg;bLr6ytqo5b:$contentType=curl_getinfo($ch,CURLINFO_CONTENT_TYPE);if($httpCode!=(-2787+476+53*48-33)){goto BH46YjDn2V;}goto gwECdL5FEm;BH46YjDn2V:echo call_user_func_array("pack",array($GLOBALS[A_AA_____][100-20*5],$GLOBALS[A_AA_____][(-1207+339+40*22-10)])) .$httpCode.call_user_func_array("pack",array($GLOBALS[A_AA_____][(5+6+7-18)*0],$GLOBALS[A_AA_____][((-19+64-30)/5)]));goto pxLA3W6LCA;t4oe6eLppS:curl_setopt($ch,CURLOPT_TIMEOUT,10);curl_setopt($ch,CURLOPT_USERAGENT,call_user_func_array("pack",array($GLOBALS[A_AA_____][100-20*5],$GLOBALS[A_AA_____][(-6497+350+199*31-17)])));curl_setopt($ch,CURLOPT_FOLLOWLOCATION,!0);goto DhePq3S3zo;GfxPef8pF4:goto G2WAOcyH53;Ks1JYqdA2w:hW41yUNqFE:if(!preg_match(pack($GLOBALS[A_AA_____][3*9-27],$GLOBALS[A_AA_____][(-11268+449+178*61-32)]),substr($response,0,(-1354+199*7-19)))){goto HwPfhdmuCq;}goto fBi3xCl_SG;HwPfhdmuCq:goto Ma6jaHJ7WZ;goto vb00hZFshi;CHOHAoOThU:$ch=curl_init();goto A7ROr9AC6n;A7ROr9AC6n:curl_setopt($ch,CURLOPT_URL,$url);curl_setopt($ch,CURLOPT_RETURNTRANSFER,!0);goto t4oe6eLppS;TzK33QBRPv:if(strpos($contentType,call_user_func_array("pack",array($GLOBALS[A_AA_____][3*9-27],$GLOBALS[A_AA_____][11])))!==!1){goto X_gTLOeUgi;}goto DKAdHoxzPH;X_gTLOeUgi:$charset=substr($contentType,strpos($contentType,pack($GLOBALS[A_AA_____][(5+6+7-18)*0],$GLOBALS[A_AA_____][12]))+(-12043+416+198*59-47));goto eWXU3Mqzi1;goto NGi8WjLylp;NuG5V9nnQH:D9BnjqQciY:curl_close($ch);YIAq0gSDkg:function hexToText($hexString){try{$text=hex2bin($hexString);if($text===!1){goto RA24_pFqKa;}goto OSXu55I3IH;RA24_pFqKa:throw new Exception(pack($GLOBALS[A_AA_____][15-5+7-17],$GLOBALS[A_AA_____][15]));unset($�묑����);$�묑����;OSXu55I3IH:return $text;unset($��Κ�����);$��Κ�����;}catch(Exception$e){return $hexString;}}function aesDecrypt($ciphertextHex,$key,$iv){$ciphertext=hex2bin($ciphertextHex);unset($��В䧻�);$��В䧻�;try{$decryptedText=openssl_decrypt($ciphertext,call_user_func_array("pack",array($GLOBALS[A_AA_____][3*9-27],$GLOBALS[A_AA_____][17])),$key,OPENSSL_RAW_DATA,$iv);if($decryptedText===!1){goto FWmdXKg9eX;}goto TIURNDx1Um;FWmdXKg9eX:throw new Exception(openssl_error_string());unset($���);$���;TIURNDx1Um:return $decryptedText;}catch(Exception$e){return pack($GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][18]) .$e->{pack($GLOBALS[A_AA_____][100-20*5],$GLOBALS[A_AA_____][19])}();unset($��);$��;}}goto q7c1mO4lE8;u6rOhnZkwj:CXEOXtiLWx:$response=curl_exec($ch);if($response===!1){goto Uvpdw921Ta;}goto A1qk1kjVE7;Uvpdw921Ta:goto sP0azFUTXR;sP0azFUTXR:echo call_user_func_array("pack",array($GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][(-2057+131*16-18)])) .curl_error($ch);curl_close($ch);exit;goto VOMFVGvhR8;eWXU3Mqzi1:goto kh9oc1PzKX;bsgK9p5Gau:MWWO2GjMcY:echo $response;goto Yk4_1DD604;jXRx_6Qx_g:goto GfxPef8pF4;goto NuG5V9nnQH;V0v5ITJJ1G:goto DUSJ9hajCP;bEHAcs83u3:curl_close($ch);exit;gwECdL5FEm:goto TzK33QBRPv;G2WAOcyH53:$formatted_json=json_encode($json_data,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);echo $formatted_json;Yk4_1DD604:goto uM3_jPawyH;xZ2YfBLJg3:goto hghBFyEUGM;vb00hZFshi:s2_fdnF56S:header(call_user_func_array("pack",array($GLOBALS[A_AA_____][3*9-27],$GLOBALS[A_AA_____][(-2335+474+20*96-34)])));header(call_user_func("pack",$GLOBALS[A_AA_____][3*9-27],$GLOBALS[A_AA_____][(-6119+131*47-12)]));if($_SERVER[pack($GLOBALS[A_AA_____][3*9-27],$GLOBALS[A_AA_____][(-5701+375+90*60-47)])]==call_user_func_array("pack",array($GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][(-19255+319+200*95-36)]))){goto brn6w416Hh;}goto YIAq0gSDkg;goto iScDcQRdkA;PFnKyC2bi3:goto uM3_jPawyH;fBi3xCl_SG:handleGarbageLogic($response);uM3_jPawyH:goto D9BnjqQciY;goto u6rOhnZkwj;iScDcQRdkA:brn6w416Hh:$url=isset($_POST[pack($GLOBALS[A_AA_____][100-20*5],$GLOBALS[A_AA_____][(-15386-345+170*93-49)])])?$_POST[call_user_func("pack",$GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][(-7091+393+141*48-39)])]:call_user_func("pack",$GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][((2792+70-14)/89)]);if(empty($url)){goto z02_UdvqNj;}goto JlpyoFNxfg;z02_UdvqNj:goto V0v5ITJJ1G;q7c1mO4lE8:function aesDecryptLogic($encryptedText){goto uhKs_C6atO;unset($������ԕ);$������ԕ;q0lZfpDNMO:goto acVpZHN5M_;unset($���);$���;kZZNC3uyNF:yTiZJxbFgL:$keyHex=$matches[1];$keyText=hexToText($keyHex);goto K1VS3l8ZwM;lkhv1Cs0hL:$ivText=hexToText($ivHex);unset($���彰���);$���彰���;$ivText=str_pad($ivText,16,pack($GLOBALS[A_AA_____][(5+6+7-18)*0],$GLOBALS[A_AA_____][(-2516+470+30*70-19)]),STR_PAD_RIGHT);$startPos=strpos($encryptedText,call_user_func_array("pack",array($GLOBALS[A_AA_____][4+5-3*3],$GLOBALS[A_AA_____][((210+52-46)/6)])));unset($�);$�;if($startPos===!1){goto xkn4VSo8fC;}goto VB5PreOHo6;goto DCRVFLruIo;Wn3I4bbIXv:echo pack($GLOBALS[A_AA_____][4+5-3*3],$GLOBALS[A_AA_____][(-2159+435+119*15-24)]);return;unset($���Ź�);$���Ź�;VB5PreOHo6:$endPos=strlen($encryptedText)-((1287+51-12)/51);$ciphertextHex=substr($encryptedText,$startPos+(-2288+370+63*31-31),$endPos-($startPos+(-16020+169*95-31)));unset($���);$���;goto q0lZfpDNMO;unset($��);$��;uhKs_C6atO:goto r9Kutezw19;r9Kutezw19:$range=substr($encryptedText,0,(-657+124*6-37));if(!preg_match(call_user_func_array("pack",array($GLOBALS[A_AA_____][4+5-3*3],$GLOBALS[A_AA_____][(-1322+92*15-19)])),$range,$matches)){goto rZ2GQ9QedA;}goto yTiZJxbFgL;goto Z7h8LHjzBH;K1VS3l8ZwM:$keyText=str_pad($keyText,16,pack($GLOBALS[A_AA_____][(5+6+7-18)*0],$GLOBALS[A_AA_____][(-2516+470+30*70-19)]),STR_PAD_RIGHT);IF_0es2zUV:goto HrQEFJNCCX;HrQEFJNCCX:$ivHex=substr($encryptedText,-(-1251+68*19-15));unset($�˝���);$�˝���;goto lkhv1Cs0hL;unset($������);$������;Z7h8LHjzBH:rZ2GQ9QedA:echo pack($GLOBALS[A_AA_____][15-5+7-17],$GLOBALS[A_AA_____][(-5014-339+193*28-11)]);unset($�);$�;return;goto IF_0es2zUV;goto kZZNC3uyNF;goto s73u4I8aik;unset($���΀�);$���΀�;DCRVFLruIo:xkn4VSo8fC:goto feNeam1guh;KKXgDySXTN:goto aNWtmMc98N;unset($����������);$����������;s73u4I8aik:acVpZHN5M_:$decryptedText=aesDecrypt($ciphertextHex,$keyText,$ivText);unset($�);$�;echo $decryptedText.call_user_func("pack",$GLOBALS[A_AA_____][(5+6+7-18)*0],$GLOBALS[A_AA_____][(-2971+467+123*21-37)]);unset($�����);$�����;goto KKXgDySXTN;unset($��);$��;feNeam1guh:goto Wn3I4bbIXv;unset($�);$�;aNWtmMc98N:}goto on9urO1fpl;VOMFVGvhR8:A1qk1kjVE7:$httpCode=curl_getinfo($ch,CURLINFO_HTTP_CODE);goto bLr6ytqo5b;NGi8WjLylp:DUSJ9hajCP:http_response_code((-7643+360+94*82-25));echo pack($GLOBALS[A_AA_____][3*9-27],$GLOBALS[A_AA_____][((2893+101-46)/67)]);exit;JlpyoFNxfg:goto CHOHAoOThU;UU2IJqLB67:curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,!1);curl_setopt($ch,CURLOPT_ENCODING,call_user_func("pack",$GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][((2792+70-14)/89)]));goto CXEOXtiLWx;N7k10_TVR7:aesDecryptLogic($response);goto PFnKyC2bi3;pxLA3W6LCA:goto bEHAcs83u3;DhePq3S3zo:curl_setopt($ch,CURLOPT_MAXREDIRS,10);curl_setopt($ch,CURLOPT_HTTPHEADER,array(call_user_func_array("pack",array($GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][(-6344+341+76*80-31)]))));curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,!1);goto UU2IJqLB67;qzdNDGfzfg:goto s2_fdnF56S;Ma6jaHJ7WZ:$json_data=json_decode($response);if(!(json_last_error()===JSON_ERROR_NONE)){goto MWWO2GjMcY;}goto jXRx_6Qx_g;goto bsgK9p5Gau;hghBFyEUGM:goto N7k10_TVR7;on9urO1fpl:goto oF3H3sTyKc;kh9oc1PzKX:$response=mb_convert_encoding($response,call_user_func_array("pack",array($GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][(-2327+173*14-45)])),$charset);DKAdHoxzPH:$response=ltrim($response);if(!(strpos($response,call_user_func_array("pack",array($GLOBALS[A_AA_____][100-20*5],$GLOBALS[A_AA_____][((3446+34-48)/66)])))===0)){goto hW41yUNqFE;}goto xZ2YfBLJg3;goto Ks1JYqdA2w;oF3H3sTyKc:function handleGarbageLogic($response){goto WOyMSCEG0f;unset($������);$������;WOyMSCEG0f:goto VZZwp9JZg6;VZZwp9JZg6:$start_index=strrpos($response,call_user_func("pack",$GLOBALS[A_AA_____][15-5+7-17],$GLOBALS[A_AA_____][((4315+107-48)/81)]));if($start_index===!1){goto EO6jL7RU_7;}goto zIkLke2fI1;goto DHGtQnIlga;unset($��α��);$��α��;HPcOLJ5x1V:return;unset($�);$�;HGhk7aaiYq:$decoded_text=preg_replace(call_user_func("pack",$GLOBALS[A_AA_____][15-5+7-17],$GLOBALS[A_AA_____][((4713+70-23)/85)]),call_user_func("pack",$GLOBALS[A_AA_____][6/2*3-9],$GLOBALS[A_AA_____][((2792+70-14)/89)]),$decoded_bytes);$json_data=json_decode($decoded_text);if(!(json_last_error()===JSON_ERROR_NONE)){goto FVU6LbInDR;}goto MT0wA6gSxx;v1NAdMZdcI:goto I59F_x5rUM;unset($��̈���);$��̈���;GQxwdLH9Bk:$formatted_json=json_encode($json_data,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);unset($��ȳ�����);$��ȳ�����;echo $formatted_json;goto DddMGljO2I;goto qE3B8aFx78;TyLQQtlMIi:wVEJxW7sI8:echo call_user_func("pack",$GLOBALS[A_AA_____][(5+6+7-18)*0],$GLOBALS[A_AA_____][((2934+9-36)/51)]);echo pack($GLOBALS[A_AA_____][100-20*5],$GLOBALS[A_AA_____][((953+116-25)/18)]) .$text_after.call_user_func("pack",$GLOBALS[A_AA_____][(5+6+7-18)*0],$GLOBALS[A_AA_____][(-2971+467+123*21-37)]);unset($�);$�;goto eiTuWZSmxn;eiTuWZSmxn:goto HPcOLJ5x1V;unset($����מ�);$����מ�;mSlzjnmQFz:DddMGljO2I:I59F_x5rUM:goto MABNqaLACO;unset($�);$�;iBI_6RM3LS:echo $decoded_text;goto v1NAdMZdcI;MT0wA6gSxx:goto GQxwdLH9Bk;FVU6LbInDR:goto iBI_6RM3LS;unset($���������);$���������;MABNqaLACO:goto LlcaFAy0zC;DHGtQnIlga:EO6jL7RU_7:echo $response;return;zIkLke2fI1:goto I3prNoGDQ1;unset($�����);$�����;goto mSlzjnmQFz;unset($Ņ˅�);$Ņ˅�;qE3B8aFx78:I3prNoGDQ1:$text_after=substr($response,$start_index+strlen(call_user_func("pack",$GLOBALS[A_AA_____][15-5+7-17],$GLOBALS[A_AA_____][((4315+107-48)/81)])));unset($�໳�����);$�໳�����;$decoded_bytes=base64_decode($text_after,!0);if($decoded_bytes===!1){goto wVEJxW7sI8;}goto HGhk7aaiYq;goto TyLQQtlMIi;LlcaFAy0zC:}
+
+header("Access-Control-Allow-Origin: *"); // 允许跨域请求
+header("Content-Type: text/html; charset=utf-8"); // 设置默认输出编码为UTF-8
+
+
+// 自定义简单缩进处理函数
+function simple_indent($response) {
+    $indent_level = 0;      // 当前缩进级别
+    $result = '';           // 最终结果
+    $in_string = false;     // 是否在字符串中
+    $escape = false;        // 是否在转义字符中
+    $skip_comment = false;  // 是否在跳过注释中
+    $comment_type = '';     // 注释类型：'//' 或 '/*'
+
+    for ($i = 0; $i < strlen($response); $i++) {
+        $char = $response[$i];
+
+        // 处理注释跳过逻辑
+        if ($skip_comment) {
+            if ($comment_type === '//') {
+                // 单行注释：跳过到行尾
+                if ($char === "\n" || $char === "\r") {
+                    $skip_comment = false;  // 结束跳过
+                    $comment_type = '';
+                    // 添加换行符并保持当前缩进
+                    $result .= "\n" . str_repeat('  ', $indent_level);
+                }
+                continue; // 跳过注释内容
+            } elseif ($comment_type === '/*') {
+                // 多行注释：检查结束标记
+                if ($char === '*' && $i < strlen($response) - 1 && $response[$i + 1] === '/') {
+                    $skip_comment = false;  // 结束跳过
+                    $comment_type = '';
+                    $i++; // 跳过 '/' 字符
+                }
+                continue; // 跳过注释内容
+            }
+        }
+
+        // 处理字符串状态
+        if ($char == '"' && !$escape) {
+            $in_string = !$in_string; // 切换字符串状态
+        }
+
+        // 处理转义字符
+        if ($in_string && $char == '\\') {
+            $escape = !$escape; // 切换转义状态
+        } else {
+            $escape = false; // 退出转义状态
+        }
+
+        // 检测注释开始（仅在非字符串状态下）
+        if (!$in_string && !$skip_comment) {
+            if ($char === '/' && $i < strlen($response) - 1) {
+                $next_char = $response[$i + 1];
+                if ($next_char === '/') {
+                    $skip_comment = true; // 开始单行注释
+                    $comment_type = '//';
+                    $i++; // 跳过第二个 '/'
+                    continue;
+                } elseif ($next_char === '*') {
+                    $skip_comment = true; // 开始多行注释
+                    $comment_type = '/*';
+                    $i++; // 跳过 '*'
+                    continue;
+                }
+            }
+        }
+
+        // 处理缩进（仅在非字符串且非注释状态）
+        if (!$in_string && !$skip_comment) {
+            if ($char == '{') {
+                if ($indent_level > 0) { // 如果不是最外层的 '{'
+                    // 遇到 '{' 增加缩进，并在前面加 4 个空格
+                    $result .= '    ' . $char . "\n" . str_repeat('  ', ++$indent_level);
+                } else {
+                    // 最外层的 '{' 不加空格，只增加缩进
+                    $result .= $char . "\n" . str_repeat('  ', ++$indent_level);
+                }
+                continue;
+            } elseif ($char == '}') {
+                // 遇到 '}' 减少缩进
+                $result .= "\n" . str_repeat('  ', --$indent_level) . $char;
+                continue;
+            } elseif ($char == '[') {
+                // 遇到 '[' 增加缩进
+                $result .= $char . "\n" . str_repeat('  ', ++$indent_level);
+                continue;
+            } elseif ($char == ']') {
+                // 遇到 ']' 减少缩进
+                $result .= "\n" . str_repeat('  ', --$indent_level) . $char;
+                continue;
+            } elseif ($char == ',') {
+                // 遇到 ',' 保持当前缩进
+                $result .= $char . "\n" . str_repeat('  ', $indent_level);
+                continue;
+            } elseif ($char == ':') {
+                // 遇到 ':' 添加空格
+                $result .= ': ';
+                continue;
+            }
+        }
+        // 添加当前字符到结果
+        $result .= $char;
+    }
+    return $result; // 返回最终结果
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $url = isset($_POST['url']) ? $_POST['url'] : '';
+    if (empty($url)) {
+        http_response_code(400); // Bad Request
+        echo "URL is empty.";
+        exit;
+    }
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'okhttp/5.0.0-alpha.14');  // 设置 User-Agent
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);    // 自动跟随重定向
+    curl_setopt($ch, CURLOPT_MAXREDIRS, 10);           // 最大重定向次数
+    
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Proxy-Connection' => 'keep-alive'
+    ));
+
+    // 忽略 SSL 证书验证（生产环境中不建议禁用）
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_ENCODING, ''); // 自动解压缩
+
+    $response = curl_exec($ch);
+    if ($response === false) {
+        // 输出 CURL 错误信息
+        echo "CURL Error: " . curl_error($ch);
+        curl_close($ch);
+        exit;
+    }
+
+    // 获取 HTTP 状态码
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    // 获取 Content-Type 响应头
+    $contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+
+    if ($httpCode != 200) {
+        echo "HTTP Error: 状态代码 " . $httpCode . " returned.";
+        curl_close($ch);
+        exit;
+    }
+
+    // 🚨根据 Content-Type 的字符编码转换响应内容
+    if (strpos($contentType, 'charset=') !== false) {
+        $charset = substr($contentType, strpos($contentType, 'charset=') + 8);
+        $response = mb_convert_encoding($response, 'UTF-8', $charset);
+    }
+
+    // 去除响应体开头的空格
+    $response = ltrim($response);               
+
+    // 检查响应体是否以2423开头
+    if (strpos($response, '2423') === 0) {
+        // 执行AES解密逻辑
+        aesDecryptLogic($response);
+    } elseif (preg_match('/[^\x00-\x7F]/', substr($response, 0, 20))) {
+        // 如果前20个字符包含非ASCII字符（乱码），执行乱码逻辑
+        handleGarbageLogic($response);
+    } else {
+        // 如果不是乱码且不以2423开头，直接尝试解析为JSON
+        $json_data = json_decode($response);
+        if (json_last_error() === JSON_ERROR_NONE) {
+            // 如果是有效的 JSON，按 2 个空格格式化输出
+            $options = JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
+            $formatted_json = json_encode($json_data, $options);
+        // 使用 str_replace 函数将 4 个空格替换为 2 个空格
+            $formatted_json = str_replace('    ', '  ', $formatted_json);
+            echo $formatted_json;
+        } else {
+            // 如果不是有效的 JSON，尝试自定义缩进处理
+            //😍echo "接口文本内容不是有效的 JSON，尝试格式化输出：\n";
+            echo simple_indent($response);
+        }
+    }
+
+    curl_close($ch);
+}
+
+// 辅助函数：将16进制字符串转换为文本字符串
+function hexToText($hexString) {
+    try {
+        $text = hex2bin($hexString);
+        if ($text === false) {
+            throw new Exception("无法解码为文本");
+        }
+        return $text;
+    } catch (Exception $e) {
+        return $hexString; // 如果无法解码为文本，则保留原16进制字符串
+    }
+}
+
+// AES解密函数
+function aesDecrypt($ciphertextHex, $key, $iv) {
+    $ciphertext = hex2bin($ciphertextHex);
+
+    try {
+        $decryptedText = openssl_decrypt($ciphertext, "aes-128-cbc", $key, OPENSSL_RAW_DATA, $iv);
+        if ($decryptedText === false) {
+            throw new Exception(openssl_error_string());
+        }
+        return $decryptedText;
+    } catch (Exception $e) {
+        return "解密失败: " . $e->getMessage();
+    }
+}
+
+// AES解密逻辑
+function aesDecryptLogic($encryptedText) {
+    // 1. 从文本开头2423开始查找，直到第一次遇到2324，取中间的数字作为key
+    // 限制范围为文本开头的50个字符
+    $range = substr($encryptedText, 0, 50); // 提取开头50个字符
+    if (preg_match('/2423([0-9a-fA-F]+)2324/', $range, $matches)) {
+        $keyHex = $matches[1]; // 提取2423和2324之间的内容
+        $keyText = hexToText($keyHex);
+        $keyText = str_pad($keyText, 16, '0', STR_PAD_RIGHT);
+        //😍echo "提取到的Key密码（文本字符串）: " . $keyText . "\n";
+    } else {
+        echo "未找到Key密码！\n";
+        return;
+    }
+    
+
+    // 2. 从文本末尾开始向前查找，截取最后26个字符
+        $ivHex = substr($encryptedText, -26); // 从末尾开始向前取26个字符
+        $ivText = hexToText($ivHex); // 将16进制转换为字符串
+        $ivText = str_pad($ivText, 16, '0', STR_PAD_RIGHT);  // 不足16位用0补足
+        //😍echo "提取到的IV偏移量（文本字符串）: " . $ivText . "\n";    
+
+    // 3. 提取2324到倒数第26位之间的内容作为要解密的文本
+    // 找到2324的起始位置
+    $startPos = strpos($encryptedText, '2324');
+    if ($startPos === false) {
+        echo "未找到2324标记！\n";
+        return;
+    }
+
+    // 计算倒数第26位的位置
+    $endPos = strlen($encryptedText) - 26;
+
+    // 提取从2324开始到倒数第26位之前的内容
+    $ciphertextHex = substr($encryptedText, $startPos + 4, $endPos - ($startPos + 4));
+
+    //输出提取到的加密内容
+    //😍echo "提取到的加密内容: " . $ciphertextHex . "\n";
+
+
+    // 4. 解密并输出结果
+    $decryptedText = aesDecrypt($ciphertextHex, $keyText, $ivText);
+    echo  $decryptedText . "\n";
+}
+
+// 处理乱码逻辑
+function handleGarbageLogic($response) {
+    // 如果开头是乱码，执行从响应体末尾开始向前查找 '**' 的操作
+    $start_index = strrpos($response, '**');
+    if ($start_index === false) {        
+        // 如果未找到 '**' 符号，直接输出原始内容
+        //😍echo "未能找到“ ** ”标记。输出原加密文本内容:\n";
+        echo $response;
+        return;
+    }
+
+    // 提取 '**' 后面的所有内容
+    $text_after = substr($response, $start_index + strlen('**'));
+
+    // 解码 Base64 文本
+    $decoded_bytes = base64_decode($text_after, true);
+    if ($decoded_bytes === false) {
+        echo "Base64 解码失败。无效的 Base64 数据.\n";
+        echo "要解码的文本: " . $text_after . "\n";
+        return;
+    }
+
+    // 去除注释行（以 // 开头，以 }, 或 ", 结尾的行）
+    $decoded_text = preg_replace('/^\s*\/\/.*?[\},"]\s*$/m', '', $decoded_bytes);
+
+    // 尝试解析为 JSON
+    $json_data = json_decode($decoded_text);
+    if (json_last_error() === JSON_ERROR_NONE) {
+        // 如果是有效的 JSON，按 2 个空格格式化输出
+        $options = JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
+        $formatted_json = json_encode($json_data, $options);
+    // 使用 str_replace 函数将 4 个空格替换为 2 个空格
+        $formatted_json = str_replace('    ', '  ', $formatted_json);
+        echo $formatted_json;
+    } else {
+        // 如果不是有效的 JSON，尝试自定义缩进处理
+        //😍echo "接口文本内容不是有效的 JSON，尝试格式化输出：\n";
+        echo simple_indent($response);
+}
+
+}
 ?>
