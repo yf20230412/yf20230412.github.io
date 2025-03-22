@@ -34,11 +34,7 @@ def get_webpage_source(url, timeout=10):
     headers = {
     #请求头包含了用户代理信息、可接受的内容类型、语言偏好、编码方式、连接保持和升级不安全请求的设置
         "User-Agent": "okhttp/5.0.0-alpha.14",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Proxy-Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1"
+        "Accept": ""        
     }
 
     try:

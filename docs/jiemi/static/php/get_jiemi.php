@@ -125,8 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     curl_setopt($ch, CURLOPT_MAXREDIRS, 10);           // 最大重定向次数
     
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Proxy-Connection' => 'keep-alive'
+        'Accept: ' //设置字段位空值
     ));
 
     // 忽略 SSL 证书验证（生产环境中不建议禁用）

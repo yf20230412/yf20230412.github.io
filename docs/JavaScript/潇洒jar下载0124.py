@@ -9,9 +9,8 @@ url = "http://bobohome.ignorelist.com:20247/潇洒/spider.jar"
 
 # 定义请求头
 headers = {
-    'Content-Type': 'application/json',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-    'User-Agent': 'okhttp/3.'
+    'Accept': '',
+    'User-Agent': 'okhttp/5.0.0-alpha.14'
 }
 
 # 发送get请求或者post请求

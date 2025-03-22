@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 def get_original_url(url):
     try:
         headers = {
-    'User-Agent': 'okhttp/3.'  # 将User-Agent设置为'okhttp/3.'
+    'User-Agent': 'okhttp/5.0.0-alpha.14'  # 将User-Agent设置为'okhttp/5.0.0-alpha.14'
 }
         response = requests.get(url, headers=headers)
         print(f"状态码: {response.status_code}")

@@ -14,7 +14,7 @@ def send_post_request():
     # 提示用户选择User-Agent
     user_agent_prompt = """
 请选择User-Agent标识类型：
-  1. 直接回车选择 okhttp/3.
+  1. 直接回车选择 okhttp/5.0.0-alpha.14
   2. 选择 Chrome (Android)
   3. 选择 Chrome (PC)
   4. 选择 IE 11
@@ -24,7 +24,7 @@ def send_post_request():
     
     # 根据用户选择设置User-Agent
     user_agents = {
-        "1": "okhttp/3.",
+        "1": "okhttp/5.0.0-alpha.14",
         "2": "Mozilla/5.0 (Linux; Android 11; M2007J1SC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.117 Mobile Safari/537.36",
         "3": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36",
         "4": "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
@@ -35,7 +35,7 @@ def send_post_request():
     # 定义请求头
     headers = {
         'Content-Type': 'application/json',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept': '',
         'User-Agent': user_agent
     }
     
