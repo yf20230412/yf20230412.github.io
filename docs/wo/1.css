@@ -188,6 +188,9 @@ body {
     background: #f0f0f0;
     line-height: 30px;
     text-align: center;
+    border:5px dashed #F60;
+    overflow:hidden; 
+    clear:both;
 }
 
 YourName {
