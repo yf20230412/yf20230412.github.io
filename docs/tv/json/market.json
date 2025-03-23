@@ -10,7 +10,7 @@
             },
             {
                 "name": "网盘本地配置",
-                "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/tvfan.zip",
+                "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/网盘配置.zip",
                 "icon": "https://a.2015888.xyz/img/555.jpg",
                 "version": "阿里_夸克_uc"
             }
@@ -124,6 +124,18 @@
                 "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/GKD去广告内置.apk",
                 "icon": "https://a.2015888.xyz/img/555.jpg",
                 "version": "内置手机版"
+            },
+            {
+                "name": "李跳跳去广告",
+                "url": "https://4645.kstore.space/apk/李跳跳.apk",
+                "icon": "https://4645.kstore.space/img/李跳跳.png",
+                "version": "派大星2.2"
+            },
+            {
+                "name": "小飞电视",
+                "url": "https://y977.com/d/",
+                "icon": "https://4645.kstore.space/img/小飞电视.png",
+                "version": "派大星2.2"
             },
             {
                 "name": "TiviMate",
