@@ -63,10 +63,11 @@ jobs:
           echo "Checking contents of docs/bk..."
           ls -l docs/bk/
       
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: docs/bk
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/bk
 
   deploy:
     environment:
