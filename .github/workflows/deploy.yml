@@ -45,13 +45,13 @@ jobs:
       
       - name: Move build output to docs
         run: |
-          rm -rf docs/bk/*
-          cp -R docs/vite/.vitepress/dist/* docs/bk/
+          rm -rf ./bk/*
+          cp -R ./vite/.vitepress/dist/* ./bk/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/bk
+          path: ./bk
 
   deploy:
     environment:
