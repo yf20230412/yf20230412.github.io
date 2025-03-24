@@ -1,15 +1,26 @@
 {
-    "scripts": {
-        "docs:dev": "vitepress dev docs",
-        "docs:build": "vitepress build docs",
-        "docs:preview": "vitepress preview docs"
-    },
-    "pnpm": {
-        "peerDependencyRules": {
-            "ignoreMissing": [
-                "@algolia/client-search",
-                "search-insights"
-            ]
-        }
-    }
+  "name": "yf20230412.github.io",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs/vite",
+    "build": "vitepress build docs/vite && npm run move-dist",
+    "preview": "vitepress preview docs/vite",
+    "move-dist": "rm -rf docs/bk/* && cp -R docs/vite/.vitepress/dist/* docs/bk/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "busuanzi.pure.js": "^1.0.3",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "vitepress-plugin-announcement": "^0.1.4"
+  }
 }
