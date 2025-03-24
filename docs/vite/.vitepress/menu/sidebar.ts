@@ -8,7 +8,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         text: '小鱼影视TV',
         collapsed: false,  //控制展开和隐藏
         items: [
-          { text: '小鱼影视更新日志', link: '/blog/小鱼影视更新日志' },
+          { text: '小鱼影视更新日志', link: 'https://yf1688.top/log/' },
           { text: '小鱼影视必看技巧', link: '/blog/小鱼影视必看技巧' },   
           { text: '小鱼影视内置打包修改', link: '/blog/影视内置打包修改' }
         ]        
