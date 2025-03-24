@@ -5,7 +5,7 @@ on:
   # 仅在推送到 docs/vite 文件夹时运行
   push:
     paths:
-      - '/vite/**'
+      - 'docs/vite/**'
   # 手动触发器
   workflow_dispatch:
 
@@ -54,7 +54,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /bk
+          path: docs/bk/
 
   # 部署工作
   deploy:

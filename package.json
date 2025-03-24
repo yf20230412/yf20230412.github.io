@@ -6,10 +6,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vitepress dev docs/vite",
-    "build": "vitepress build docs/vite && npm run move-dist",
+    "dev": "vitepress dev /docs/vite",
+    "build": "vitepress build /docs/vite && npm run move-dist",
     "preview": "vitepress preview docs/vite",
-    "move-dist": "rm -rf docs/bk/* && cp -R docs/vite/.vitepress/dist/* docs/bk/"
+    "move-dist": "rm -rf /docs/bk/* && cp -R /docs/vite/.vitepress/dist/* /docs/bk/"
   },
   "keywords": [],
   "author": "",
