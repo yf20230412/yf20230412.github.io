@@ -72,10 +72,10 @@ jobs:
       - name: Send deployment notification
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: smtp.example.com
+          server_address: smtp.example.com  # 发件人邮箱服务器
           server_port: 587
-          username: your-email@example.com
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Deployment Notification"
-          body: "The site has been deployed to ${{ steps.deployment.outputs.page_url }}"
-          to: "yufeng1688778@163.com"
+          username: yufeng1688778@163.com   # 发件人邮箱
+          password: ${{ secrets.EMAIL_PASSWORD }}  # 确保这里正确引用了 GitHub Secrets
+          subject: "Deployment Notification"  # 邮箱标题
+          body: "The site has been deployed to ${{ steps.deployment.outputs.page_url }}"  # 邮箱内容 page_url 
+          to: "1010164222@163.com" # 收件人邮箱
