@@ -58,25 +58,24 @@ jobs:
 
   # 部署工作
   deploy:
-  environment:
-    name: github-pages
-    url: ${{ steps.deployment.outputs.page_url }}
-  needs: build
-  runs-on: ubuntu-latest
-  name: Deploy
-  steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-    - name: Send deployment notification
-      uses: dawidd6/action-send-mail@v2
-      with:
-        server_address: smtp.example.com
-        server_port: 587
-        username: your-email@example.com
-        password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "Deployment Notification"
-        body: "The site has been deployed to ${{ steps.deployment.outputs.page_url }}"
-        to: "yufeng1688778@163.com"
-        
+      - name: Send deployment notification
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.example.com
+          server_port: 587
+          username: your-email@example.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Deployment Notification"
+          body: "The site has been deployed to ${{ steps.deployment.outputs.page_url }}"
+          to: "yufeng1688778@163.com"
