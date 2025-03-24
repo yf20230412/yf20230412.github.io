@@ -43,10 +43,25 @@ jobs:
       - name: Build with VitePress
         run: pnpm run build
       
-      - name: Move build output to docs
+      - name: Debug build output
+        run: |
+          echo "Checking if docs/docs/.vitepress/dist/ exists..."
+          ls -l docs/docs/.vitepress/dist/
+      
+      - name: Ensure docs/bk directory exists and has write permissions
+        run: |
+          mkdir -p docs/bk
+          chmod -R 755 docs/bk
+      
+      - name: Move build output to docs/bk
         run: |
           rm -rf docs/bk/*
           cp -R docs/docs/.vitepress/dist/* docs/bk/
+      
+      - name: Debug final output
+        run: |
+          echo "Checking contents of docs/bk..."
+          ls -l docs/bk/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
