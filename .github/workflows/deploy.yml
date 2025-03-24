@@ -1,18 +1,14 @@
-# 构建 VitePress 站点并将其部署到 GitHub Pages 的工作流程
 name: Deploy VitePress site to Pages
 
 on:
-  # 仅在推送到 docs/vite 文件夹时运行
   push:
     paths:
-      - 'docs/vite/**'
-  # 手动触发器
+      - 'docs/**'
   workflow_dispatch:
 
 env:
   TZ: Asia/Shanghai  
 
-# 设置 GITHUB_TOKEN 的权限
 permissions:
   contents: read
   pages: write
@@ -23,19 +19,18 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # 构建工作
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+          fetch-depth: 0
           
       - uses: pnpm/action-setup@v3
         with:
-          version: 9      
-          
+          version: 9
+      
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -46,24 +41,24 @@ jobs:
         run: pnpm install
       
       - name: Build with VitePress
-        run: pnpm run build
+        run: pnpm run docs:build
       
-      - name: Move build output to /bk
-        run: npm run move-dist
+      - name: Move build output to docs
+        run: |
+          rm -rf docs/bk/*
+          cp -R docs/.vitepress/dist/* docs/bk/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/bk/
+          path: ./docs/bk
 
-  # 部署工作
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
