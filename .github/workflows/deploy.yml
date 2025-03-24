@@ -5,7 +5,7 @@ on:
   # 仅在推送到 docs/vite 文件夹时运行
   push:
     paths:
-      - 'docs/vite/**'
+      - '/vite/**'
   # 手动触发器
   workflow_dispatch:
 
@@ -48,24 +48,13 @@ jobs:
       - name: Build with VitePress
         run: pnpm run build
       
-      - name: Ensure docs/bk/ directory exists and has write permissions
-        run: |
-          mkdir -p docs/bk
-          chmod -R 755 docs/bk
-      
-      - name: Move build output to docs/bk
-        run: |
-          echo "Checking if docs/vite/.vitepress/dist/ exists..."
-          ls -l docs/vite/.vitepress/dist/
-          echo "Copying files to docs/bk..."
-          cp -R docs/vite/.vitepress/dist/* docs/bk/
-          echo "Checking contents of docs/bk..."
-          ls -l docs/bk/
+      - name: Move build output to /bk
+        run: npm run move-dist
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/bk
+          path: /bk
 
   # 部署工作
   deploy:
