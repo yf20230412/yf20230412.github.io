@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.mjs",
   "directories": {
-    "doc": "vite"
+    "doc": "docs"
   },
   "scripts": {
-    "dev": "vitepress dev vite",
-    "build": "vitepress build vite",
-    "preview": "vitepress preview vite"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   },
   "keywords": [],
   "author": "",

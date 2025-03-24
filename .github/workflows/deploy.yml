@@ -3,7 +3,7 @@ name: Deploy VitePress site to Pages
 on:
   push:
     paths:
-      - 'docs/**'
+      - 'docs**'
   workflow_dispatch:
 
 env:
@@ -46,7 +46,7 @@ jobs:
       - name: Move build output to docs
         run: |
           rm -rf docs/bk/*
-          cp -R vite/.vitepress/dist/* docs/bk/
+          cp -R docs/.vitepress/dist/* docs/bk/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
