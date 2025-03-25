@@ -10,13 +10,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 1. 检出代码
       - uses: actions/checkout@v4
 
+      # 2. 安装 PNPM（关键修复）
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+          run_install: false
+
+      # 3. 设置 Node.js（必须放在 PNPM 安装之后）
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: 'pnpm' # 启用 PNPM 缓存
+
+      # 4. 安装依赖
+      - name: Install dependencies
+        run: |
+          pnpm install
+          pnpm --version
 
       - name: System Hardening
         run: |
