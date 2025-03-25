@@ -1,19 +1,19 @@
-// vite/.vitepress/menu/navbar.ts右侧导航栏
+// docs/.vitepress/menu/navbar.ts右侧导航栏
 import { DefaultTheme } from 'vitepress';
 
 export const nav: DefaultTheme.NavItem[] = [
 
     {
         text: '首页',
-        link: '/' // 表示vite/index.md
+        link: '/' // 表示docs/index.md
     },
     {
          text: '写在前面',
-         link: '/blog/写在前面'  // 表示vite/blog/写在前面.md
+         link: '/blog/写在前面'  // 表示docs/blog/写在前面.md
     },
     {
         text: '小鱼影视TV',
-        link: '/blog/' // 表示vite/blog/index.md
+        link: '/blog/' // 表示docs/blog/index.md
     },
     {
         text: '手机去广系列',

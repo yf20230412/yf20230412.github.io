@@ -1,6 +1,9 @@
 {
   "name": "yf20230412.github.io",
-  "version": "1.0.0",
+  "author": "yf20230412",
+  "home": "https://yf1688.top/bk",
+  "version": "1.6.8",
+  "type": "module",
   "main": "index.mjs",
   "directories": {
     "doc": "docs/"
