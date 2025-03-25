@@ -1,4 +1,4 @@
-name: Deploy VitePress site to Pages
+name: Deploy VitePress to GitHub Pages
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  TZ: Asia/Shanghai  
+  TZ: Asia/Shanghai
 
 permissions:
   contents: read
@@ -22,67 +22,110 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: pnpm/action-setup@v3
+      # 1. 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. 设置 PNPM
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
         with:
           version: 9
-          
-      - uses: actions/setup-node@v4
+
+      # 3. 设置 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-          
+
+      # 4. 权限检查和修复
+      - name: Check and fix permissions
+        run: |
+          echo "=== 当前用户 ==="
+          whoami
+          echo "=== 初始权限 ==="
+          ls -la docs/ docs/docs/ docs/docs/.vitepress/ || true
+          echo "=== 修复权限 ==="
+          sudo chown -R runner:runner docs/
+          sudo chmod -R 755 docs/
+          echo "=== 修复后权限 ==="
+          ls -la docs/ docs/docs/ docs/docs/.vitepress/
+
+      # 5. 安装依赖
       - name: Install dependencies
         run: pnpm install
-        
-      - name: Build with debug
+
+      # 6. 清理旧构建
+      - name: Clean previous builds
+        run: |
+          rm -rf docs/docs/.vitepress/dist
+          rm -rf docs/docs/.vitepress/cache
+
+      # 7. 构建过程（带详细日志）
+      - name: Build VitePress
         working-directory: docs/docs
         run: |
-          echo "当前目录: $(pwd)"
-          echo "开始构建..."
-          pnpm run build
-          echo "构建后目录内容:"
+          echo "=== 构建前资源 ==="
+          df -h .
+          free -h
+          echo "=== 开始构建 ==="
+          pnpm run build --verbose 2>&1 | tee build.log
+          echo "=== 构建日志 ==="
+          cat build.log
+          echo "=== 构建后目录 ==="
           ls -la ./.vitepress/
-          
+
+      # 8. 验证构建输出
       - name: Verify build output
         run: |
-          echo "检查构建输出..."
           if [ -d "docs/docs/.vitepress/dist" ]; then
-            echo "构建输出存在:"
+            echo "✅ 构建成功！"
+            echo "=== 输出文件 ==="
             ls -la docs/docs/.vitepress/dist/
+            echo "=== 文件统计 ==="
+            find docs/docs/.vitepress/dist/ -type f | wc -l
           else
-            echo "错误: 构建输出不存在!"
-            echo "整个.vitepress目录内容:"
-            ls -la docs/docs/.vitepress/
+            echo "❌ 构建失败！诊断信息："
+            echo "1. VitePress 版本："
+            pnpm list vitepress
+            echo "2. 配置文件内容："
+            cat docs/docs/.vitepress/config.mjs || echo "无配置文件"
+            echo "3. 磁盘空间："
+            df -h .
             exit 1
           fi
-          
-      - name: Prepare target dir
+
+      # 9. 准备部署
+      - name: Prepare deployment
         run: |
+          echo "=== 准备部署目录 ==="
           mkdir -p docs/bk
+          echo "=== 清理目标目录 ==="
           rm -rf docs/bk/*
-          
-      - name: Copy files
-        run: cp -R docs/docs/.vitepress/dist/* docs/bk/
-      
-      - name: Verify copied files
-        run: ls -la docs/bk/
+          echo "=== 复制构建文件 ==="
+          cp -Rv docs/docs/.vitepress/dist/* docs/bk/
+          echo "=== 最终部署内容 ==="
+          ls -la docs/bk/
+          du -sh docs/bk/
+
+      # 10. 上传制品
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/bk
 
   deploy:
-    environment:
-      name: github-pages
-      url: https://yf1688.top/bk  # 硬编码你的域名
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          target-path: '/bk'  # 关键参数
-          
-      - name: Verify deployment URL
-        run: |
-          echo "Deployed to: https://yf1688.top/bk"
-          curl -I https://yf1688.top/bk
+          target-path: '/bk'
