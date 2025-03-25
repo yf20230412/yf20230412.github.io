@@ -6,90 +6,72 @@ on:
       - 'docs/docs/**'
   workflow_dispatch:
 
-env:
-  TZ: Asia/Shanghai
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. 检出代码
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      # 2. 设置 PNPM
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v3
-        with:
-          version: 9
-
-      # 3. 设置 Node.js
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
 
-      # 系统级诊断
-      - name: System diagnostics
+      - name: System Hardening
         run: |
-          echo "=== 用户 ==="
-          whoami
-          echo "=== 权限 ==="
-          ls -la docs/ docs/docs/ docs/docs/.vitepress/
-      
-      # 使用更干净的容器环境
-      - name: Setup environment
-        uses: docker://node:20-bullseye
-        with:
-          args: bash -c "apt-get update && apt-get install -y tree"
-      
-      # 构建步骤
-      - name: Build VitePress
+          # 修复可能的权限问题
+          sudo chown -R $(whoami):$(whoami) .
+          sudo chmod -R 755 docs
+          
+          # 系统资源检查
+          echo "=== 系统资源 ==="
+          ulimit -a
+          df -ih
+          free -h
+
+      - name: Build with Atomic Checks
         working-directory: docs/docs
         run: |
-          echo "=== PNPM 版本 ==="
-          pnpm -v
-          echo "=== Node 版本 ==="
-          node -v
+          # 强制清理环境
+          rm -rf .vitepress/dist node_modules/.vite .vitepress/cache
           
-          # 强制清理并重建
-          rm -rf docs/docs/.vitepress/cache .vitepress/dist node_modules/.vite
+          # 创建验证锁文件
+          echo "Build started at $(date)" > build.lock
           
-          # 带详细日志的构建
-          pnpm install --verbose
-          pnpm run build 2>&1 | tee build.log
+          # 带资源限制的构建
+          NODE_OPTIONS="--max-old-space-size=4096" pnpm run build 2>&1 | tee build.log
           
-          echo "=== 构建日志 ==="
-          cat build.log
-          echo "=== 输出目录 ==="
-          tree -a docs/docs/.vitepress/dist || find . -name dist -type d
+          # 原子验证
+          if [ ! -f ".vitepress/dist/index.html" ]; then
+            echo "=== 构建失败诊断 ==="
+            echo "最后10行日志:"
+            tail -n 10 build.log
+            echo "VitePress版本:"
+            pnpm list vitepress
+            echo "目录结构:"
+            tree -a -L 3
+            exit 1
+          fi
           
-          # 硬性验证
-          [ -f "docs/docs/.vitepress/dist/index.html" ] || exit 1
-      
-      # 部署准备
-      - name: Prepare deployment
+          # 验证文件完整性
+          find .vitepress/dist -type f -exec file {} \; | grep -v "ASCII text" && \
+            echo "发现非文本文件" || echo "全部为文本文件可能有问题"
+
+      - name: Prepare Deployment
         run: |
-          mkdir -p docs/bk
-          rm -rf docs/bk/*
-          cp -R docs/docs/.vitepress/dist/* docs/bk/
+          # 双重验证
+          [ -f "docs/docs/.vitepress/dist/index.html" ] || exit 1
           
-          echo "=== 部署包验证 ==="
-          [ -f "docs/bk/index.html" ] || exit 1
-          du -sh docs/bk/
-      
+          mkdir -p docs/bk
+          rsync -av --delete docs/docs/.vitepress/dist/ docs/bk/
+          
+          # 最终验证
+          [ $(wc -c < docs/bk/index.html) -gt 1000 ] || {
+            echo "生成文件过小，内容可能不完整"
+            exit 1
+          }
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/bk
