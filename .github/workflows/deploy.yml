@@ -75,6 +75,6 @@ jobs:
           target-path: '/bk'  # 关键参数
           
       - name: Verify deployment URL
-  run: |
-    echo "Deployed to: https://yf1688.top/bk"
-    curl -I https://yf1688.top/bk
+        run: |
+          echo "Deployed to: https://yf1688.top/bk"
+          curl -I https://yf1688.top/bk
