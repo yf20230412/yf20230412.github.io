@@ -1,18 +1,14 @@
-# 构建 VitePress 站点并将其部署到 GitHub Pages 的工作流程
 name: Deploy VitePress site to Pages
 
 on:
-  # 仅在推送到 docs/vite 文件夹时运行
   push:
     paths:
       - 'docs/docs/**'
-  # 手动触发器
   workflow_dispatch:
 
 env:
   TZ: Asia/Shanghai  
 
-# 设置 GITHUB_TOKEN 的权限
 permissions:
   contents: read
   pages: write
@@ -43,8 +39,11 @@ jobs:
         run: pnpm install
       
       - name: Build with VitePress
-        working-directory: docs/docs  # 关键修改：在子目录中构建
+        working-directory: docs/docs
         run: pnpm run build
+      
+      - name: Verify build output
+        run: ls -la docs/docs/.vitepress/dist/
       
       - name: Prepare target directory
         run: |
@@ -62,15 +61,20 @@ jobs:
         with:
           path: docs/bk
 
-  # 部署工作
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://yf1688.top/bk  # 硬编码你的域名
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          target-path: '/bk'  # 关键参数
+          
+      - name: Verify deployment URL
+  run: |
+    echo "Deployed to: https://yf1688.top/bk"
+    curl -I https://yf1688.top/bk
