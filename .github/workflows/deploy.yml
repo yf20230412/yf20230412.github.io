@@ -52,7 +52,7 @@ jobs:
           rm -rf docs/bk/*
       
       - name: Copy build output
-        run: cp -R docs/vite/.vitepress/dist/* docs/bk/
+        run: cp -R docs/docs/.vitepress/dist/* docs/bk/
       
       - name: Verify copied files
         run: ls -la docs/bk/
