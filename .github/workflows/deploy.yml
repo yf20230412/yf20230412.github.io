@@ -88,13 +88,13 @@ jobs:
         with:
           tag_name: "release-v${{ env.RELEASE_DATE }}"
           release_name: "Vitepress-Build-Bolg-${{ env.RELEASE_DATE }}"
-          body: "VitePress 自动构建产物"
+          body: "VitePress 自动构建"
           draft: false
           prerelease: false
           
       # 上传Release Asset
       - name: Upload Release Asset
-        uses: actions/upload-release-asset@v2
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
