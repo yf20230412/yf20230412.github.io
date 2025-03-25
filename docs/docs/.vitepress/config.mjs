@@ -15,20 +15,7 @@ export default defineConfig({
   ],
   
   base: '/bk/',  // 设置基础路径,部署在bk😍目录,名字和仓库目录一致
-  
-  outDir: './.vitepress/dist',
-  
-  srcDir: 'docs/docs',  // docs/docs/ 目录会被作为源目录
-  
-  // 构建验证钩子
-  async buildEnd() {
-    const fs = require('fs')
-    if (!fs.existsSync('.vitepress/dist/index.html')) {
-      throw new Error('构建输出验证失败')
-    }
-  },
-  
-  
+   
   vite: {
     // ↓↓↓↓↓
     plugins: [
@@ -77,12 +64,7 @@ export default defineConfig({
         //不展示再次打开按钮
        // reopen: false,
       })
-    ],
-    // ↑↑↑↑↑
-    server: { fs: { strict: true } },
-    // 安全限制
-    build: { minify: 'terser' }
-    // 使用更激进的压缩
+    ]
   },
   
   themeConfig: {

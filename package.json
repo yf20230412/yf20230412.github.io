@@ -7,8 +7,9 @@
   },
   "scripts": {
     "dev": "vitepress dev docs/docs",
-    "build": "vitepress build docs/docs--emptyOutDir",
-    "preview": "vitepress preview docs/docs"
+    "build": "vitepress build docs/docs",
+    "preview": "vitepress preview docs/docs",
+    "move-dist": "rm -rf docs/bk/* && cp -R docs/docs/.vitepress/dist/* docs/bk/"
   },
   "keywords": [],
   "author": "",

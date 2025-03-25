@@ -1,98 +1,114 @@
-name: Deploy VitePress to GitHub Pages
+# 构建 VitePress 站点并将其部署到 GitHub Pages 的工作流程
+name: Deploy VitePress site to Pages
 
 on:
+  # 仅在推送到 docs/docs 文件夹时运行
   push:
     paths:
       - 'docs/docs/**'
+  # 手动触发器
   workflow_dispatch:
 
+env:
+  TZ: Asia/Shanghai  
+
+# 设置 GITHUB_TOKEN 的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
+  # 构建工作
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. 检出代码
-      - uses: actions/checkout@v4
-
-      # 2. 安装 PNPM（关键修复）
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          version: 9
-          run_install: false
-
-      # 3. 设置 Node.js（必须放在 PNPM 安装之后）
+          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+          
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9      
+          
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm' # 启用 PNPM 缓存
-
-      # 4. 安装依赖
+          cache: pnpm
+          
+      # 权限检查和修复
+      - name: Check and fix permissions
+        run: |
+          echo "=== 当前用户 ==="
+          whoami
+          echo "=== 初始权限 ==="
+          ls -la docs/ docs/docs/ docs/docs/.vitepress/ || true
+          echo "=== 修复权限 ==="
+          sudo chown -R runner:runner docs/
+          sudo chmod -R 755 docs/
+          echo "=== 修复后权限 ==="
+          ls -la docs/ docs/docs/ docs/docs/.vitepress/
+          
+      # 安装依赖   
       - name: Install dependencies
+        run: pnpm install
+        
+      # 清理旧构建
+      - name: Clean previous builds
         run: |
-          pnpm install
-          pnpm --version
-
-      - name: System Hardening
-        run: |
-          # 修复可能的权限问题
-          sudo chown -R $(whoami):$(whoami) .
-          sudo chmod -R 755 docs
+          rm -rf docs/docs/.vitepress/dist
+          rm -rf docs/docs/.vitepress/cache
           
-          # 系统资源检查
-          echo "=== 系统资源 ==="
-          ulimit -a
-          df -ih
+      # 构建过程（带详细日志）
+      - name: Build with VitePress
+        run: |
+          echo "=== 构建前资源 ==="
+          df -h .
           free -h
-
-      - name: Build with Atomic Checks
-        working-directory: docs/docs
+          echo "=== 开始构建 ==="
+          pnpm run build --verbose 2>&1 | tee build.log
+          echo "=== 构建日志 ==="
+          cat build.log
+          echo "=== 构建后目录 ==="
+          ls -la docs/docs/.vitepress/
+          
+      # 验证构建输出
+      - name: Verify build output
         run: |
-          # 强制清理环境
-          rm -rf .vitepress/dist node_modules/.vite .vitepress/cache
-          
-          # 创建验证锁文件
-          echo "Build started at $(date)" > build.lock
-          
-          # 带资源限制的构建
-          NODE_OPTIONS="--max-old-space-size=4096" pnpm run build 2>&1 | tee build.log
-          
-          # 原子验证
-          if [ ! -f ".vitepress/dist/index.html" ]; then
-            echo "=== 构建失败诊断 ==="
-            echo "最后10行日志:"
-            tail -n 10 build.log
-            echo "VitePress版本:"
-            pnpm list vitepress
-            echo "目录结构:"
-            tree -a -L 3
+          if [ -d "docs/docs/.vitepress/dist" ]; then
+            echo "✅ 构建成功！"
+            echo "=== 输出文件 ==="
+            ls -la docs/docs/.vitepress/dist/
+            echo "=== 文件统计 ==="
+            find docs/docs/.vitepress/dist/ -type f | wc -l
+          else
+            echo "❌ 构建失败！诊断信息："
             exit 1
           fi
-          
-          # 验证文件完整性
-          find .vitepress/dist -type f -exec file {} \; | grep -v "ASCII text" && \
-            echo "发现非文本文件" || echo "全部为文本文件可能有问题"
-
-      - name: Prepare Deployment
-        run: |
-          # 双重验证
-          [ -f "docs/docs/.vitepress/dist/index.html" ] || exit 1
-          
-          mkdir -p docs/bk
-          rsync -av --delete docs/docs/.vitepress/dist/ docs/bk/
-          
-          # 最终验证
-          [ $(wc -c < docs/bk/index.html) -gt 1000 ] || {
-            echo "生成文件过小，内容可能不完整"
-            exit 1
-          }
-
-      - uses: actions/upload-pages-artifact@v3
+      
+      - name: Move build output to docs/bk
+        run: npm run move-dist
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: docs/bk
 
+  # 部署工作
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
