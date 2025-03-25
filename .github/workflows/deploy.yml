@@ -1,20 +1,16 @@
-# 构建 VitePress 站点并将其部署到 GitHub Pages 的工作流程
 name: Deploy VitePress site to Pages
 
 on:
-  # 仅在推送到 docs/docs 文件夹时运行
   push:
     paths:
       - 'docs/docs/**'
-  # 手动触发器
   workflow_dispatch:
 
 env:
-  TZ: Asia/Shanghai  
+  TZ: Asia/Shanghai
 
-# 设置 GITHUB_TOKEN 的权限
 permissions:
-  contents: read
+  contents: write  # 需要写权限来推送提交
   pages: write
   id-token: write
 
@@ -23,92 +19,63 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # 构建工作
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+          fetch-depth: 0
           
       - uses: pnpm/action-setup@v3
         with:
-          version: 9      
+          version: 9
           
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
           
-      # 权限检查和修复
-      - name: Check and fix permissions
-        run: |
-          echo "=== 当前用户 ==="
-          whoami
-          echo "=== 初始权限 ==="
-          ls -la docs/ docs/docs/ docs/docs/.vitepress/ || true
-          echo "=== 修复权限 ==="
-          sudo chown -R runner:runner docs/
-          sudo chmod -R 755 docs/
-          echo "=== 修复后权限 ==="
-          ls -la docs/ docs/docs/ docs/docs/.vitepress/
+      - name: Fix permissions
+        run: sudo chmod -R 755 docs
           
-      # 安装依赖   
       - name: Install dependencies
         run: pnpm install
         
-      # 清理旧构建
-      - name: Clean previous builds
-        run: |
-          rm -rf docs/docs/.vitepress/dist
-          rm -rf docs/docs/.vitepress/cache
+      - name: Clean builds
+        run: rm -rf docs/docs/.vitepress/dist
           
-      # 构建过程（带详细日志）
-      - name: Build with VitePress
-        run: |
-          echo "=== 构建前资源 ==="
-          df -h .
-          free -h
-          echo "=== 开始构建 ==="
-          pnpm run build --verbose 2>&1 | tee build.log
-          echo "=== 构建日志 ==="
-          cat build.log
-          echo "=== 构建后目录 ==="
-          ls -la docs/docs/.vitepress/
+      - name: Build VitePress
+        run: pnpm run build
           
-      # 验证构建输出
-      - name: Verify build output
+      - name: Verify build
         run: |
-          if [ -d "docs/docs/.vitepress/dist" ]; then
-            echo "✅ 构建成功！"
-            echo "=== 输出文件 ==="
-            ls -la docs/docs/.vitepress/dist/
-            echo "=== 文件统计 ==="
-            find docs/docs/.vitepress/dist/ -type f | wc -l
-          else
-            echo "❌ 构建失败！诊断信息："
-            exit 1
-          fi
-      
-      - name: Move build output to docs/bk
+          [ -d "docs/docs/.vitepress/dist" ] || exit 1
+          du -sh docs/docs/.vitepress/dist
+          
+      - name: Move files
         run: npm run move-dist
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/bk
+          
+      - name: Verify moved files
+        run: |
+          [ -f "docs/bk/index.html" ] || exit 1
+          
+      - name: Commit files
+        run: |
+          git config --global user.name "yf20230412"
+          git config --global user.email "yufeng1688778@163.com"
+          git add docs/bk/
+          git commit -m "自动提交构建文件"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # 部署工作
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/bk
+          force_orphan: true
