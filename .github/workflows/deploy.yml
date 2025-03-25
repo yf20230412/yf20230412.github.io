@@ -41,91 +41,61 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-      # 4. 权限检查和修复
-      - name: Check and fix permissions
+      # 系统级诊断
+      - name: System diagnostics
         run: |
-          echo "=== 当前用户 ==="
+          echo "=== 用户 ==="
           whoami
-          echo "=== 初始权限 ==="
-          ls -la docs/ docs/docs/ docs/docs/.vitepress/ || true
-          echo "=== 修复权限 ==="
-          sudo chown -R runner:runner docs/
-          sudo chmod -R 755 docs/
-          echo "=== 修复后权限 ==="
+          echo "=== 权限 ==="
           ls -la docs/ docs/docs/ docs/docs/.vitepress/
-
-      # 5. 安装依赖
-      - name: Install dependencies
-        run: pnpm install
-
-      # 6. 清理旧构建
-      - name: Clean previous builds
-        run: |
-          rm -rf docs/docs/.vitepress/dist
-          rm -rf docs/docs/.vitepress/cache
-
-      # 7. 构建过程（带详细日志）
+      
+      # 使用更干净的容器环境
+      - name: Setup environment
+        uses: docker://node:20-bullseye
+        with:
+          args: bash -c "apt-get update && apt-get install -y tree"
+      
+      # 构建步骤
       - name: Build VitePress
         working-directory: docs/docs
         run: |
-          echo "=== 构建前资源 ==="
-          df -h .
-          free -h
-          echo "=== 开始构建 ==="
-          pnpm run build --verbose 2>&1 | tee build.log
+          echo "=== PNPM 版本 ==="
+          pnpm -v
+          echo "=== Node 版本 ==="
+          node -v
+          
+          # 强制清理并重建
+          rm -rf docs/docs/.vitepress/cache .vitepress/dist node_modules/.vite
+          
+          # 带详细日志的构建
+          pnpm install --verbose
+          pnpm run build 2>&1 | tee build.log
+          
           echo "=== 构建日志 ==="
           cat build.log
-          echo "=== 构建后目录 ==="
-          ls -la ./.vitepress/
-
-      # 8. 验证构建输出
-      - name: Verify build output
-        run: |
-          if [ -d "docs/docs/.vitepress/dist" ]; then
-            echo "✅ 构建成功！"
-            echo "=== 输出文件 ==="
-            ls -la docs/docs/.vitepress/dist/
-            echo "=== 文件统计 ==="
-            find docs/docs/.vitepress/dist/ -type f | wc -l
-          else
-            echo "❌ 构建失败！诊断信息："
-            echo "1. VitePress 版本："
-            pnpm list vitepress
-            echo "2. 配置文件内容："
-            cat docs/docs/.vitepress/config.mjs || echo "无配置文件"
-            echo "3. 磁盘空间："
-            df -h .
-            exit 1
-          fi
-
-      # 9. 准备部署
+          echo "=== 输出目录 ==="
+          tree -a docs/docs/.vitepress/dist || find . -name dist -type d
+          
+          # 硬性验证
+          [ -f "docs/docs/.vitepress/dist/index.html" ] || exit 1
+      
+      # 部署准备
       - name: Prepare deployment
         run: |
-          echo "=== 准备部署目录 ==="
           mkdir -p docs/bk
-          echo "=== 清理目标目录 ==="
           rm -rf docs/bk/*
-          echo "=== 复制构建文件 ==="
-          cp -Rv docs/docs/.vitepress/dist/* docs/bk/
-          echo "=== 最终部署内容 ==="
-          ls -la docs/bk/
+          cp -R docs/docs/.vitepress/dist/* docs/bk/
+          
+          echo "=== 部署包验证 ==="
+          [ -f "docs/bk/index.html" ] || exit 1
           du -sh docs/bk/
-
-      # 10. 上传制品
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/bk
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          target-path: '/bk'
+      - uses: actions/deploy-pages@v4

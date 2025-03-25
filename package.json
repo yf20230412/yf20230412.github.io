@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.mjs",
   "directories": {
-    "doc": "docs"
+    "doc": "docs/"
   },
   "scripts": {
     "dev": "vitepress dev docs/docs",

@@ -16,8 +16,6 @@ export default defineConfig({
   
   base: '/bk/',  // 设置基础路径,部署在bk😍目录,名字和仓库目录一致
   
-  outDir: 'docs/docs/.vitepress/dist/', // 输出目录到
-  
   srcDir: 'docs/docs',  // docs/docs/ 目录会被作为源目录
   
   vite: {
