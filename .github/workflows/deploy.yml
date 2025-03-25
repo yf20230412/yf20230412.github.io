@@ -77,12 +77,12 @@ jobs:
       - name: Get current date
         id: get-date
         run: |
-          echo "RELEASE_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
+          echo "RELEASE_DATE=$(date +%Y%m%d-%H%M)" >> $GITHUB_ENV
 
       # 发布到 Releases
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v2
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
