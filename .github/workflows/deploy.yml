@@ -100,7 +100,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./docs/vitepress-release.zip
-          asset_name: vitepress-build-${{ env.RELEASE_DATE }}.zip
+          asset_name: vitepress-bk.zip
           asset_content_type: application/zip
 
       # 自动提交变更
