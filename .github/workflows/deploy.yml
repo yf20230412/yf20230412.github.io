@@ -80,8 +80,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "v$(date +%Y.%m.%d)"
-          release_name: "Build $(date +'%Y-%m-%d')"
+          tag_name: "release-$(date +%Y%m%d)"
+          release_name: "Build $(date +'%Y-%m-%d %H:%M')"
+          body: "VitePress 自动构建产物\n工作流ID: ${{ github.run_id }}"
           draft: false
           prerelease: false
 
@@ -92,7 +93,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./docs/vitepress-release.zip
-          asset_name: vitepress-build.zip
+          asset_name: vitepress-build-$(date +%Y%m%d).zip
           asset_content_type: application/zip
 
       # 自动提交变更
@@ -105,7 +106,7 @@ jobs:
             echo "✅ 无需提交任何更改."
           else
             echo "📌 正在提交更改..."
-            git commit -m "自动部署 [$(date +'%m-%d %H:%M')]"
+            git commit -m "自动部署"
             echo "🚀 推送更改到分支 ${{ github.ref }}"
             git push origin HEAD:${{ github.ref }}
             echo "🎉 提交完成"
