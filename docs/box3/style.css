@@ -68,9 +68,9 @@ h2 {
     /* 对于 Webkit 浏览器（如 Chrome 和 Safari） */
 }
 
-#url-table a {
+#url-list a {
     text-decoration: none;
-    color: #007BFF;
+    color: #000000;
 }
 
 .copy-button {
