@@ -80,7 +80,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "release-v8a-$(date +%Y%m%d)"
+          tag_name: "release-v$(date +%Y%m%d)"
           release_name: "vitepress-Build $(date +'%Y-%m-%d %H:%M')"
           body: "VitePress 自动构建产物"
           draft: false
