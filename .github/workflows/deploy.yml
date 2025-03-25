@@ -39,27 +39,29 @@ jobs:
         run: pnpm install
       
       - name: Build with VitePress
-        working-directory: docs/docs
+        working-directory: docs/docs  # 确保在正确目录构建
         run: pnpm run build
       
-      - name: Verify build output
-        run: ls -la docs/docs/.vitepress/dist/
+      - name: Locate build output
+        run: |
+          echo "构建输出位于："
+          ls -la docs/docs/.vitepress/
+          ls -la docs/docs/.vitepress/dist/
       
       - name: Prepare target directory
         run: |
-          mkdir -p docs/bk
-          rm -rf docs/bk/*
+          mkdir -p /docs/bk
+          rm -rf /docs/bk/*
       
       - name: Copy build output
-        run: cp -R docs/docs/.vitepress/dist/* docs/bk/
+        run: |
+          echo "正在从 docs/docs/.vitepress/dist/ 复制到 docs/bk/"
+          cp -R docs/docs/.vitepress/dist/* docs/bk/ || echo "复制失败，尝试备用路径..."
+          # 备用复制命令
+          [ -d "./docs/.vitepress/dist" ] && cp -R ./docs/.vitepress/dist/* docs/bk/
       
       - name: Verify copied files
         run: ls -la docs/bk/
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/bk
 
   deploy:
     environment:
