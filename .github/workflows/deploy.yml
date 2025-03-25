@@ -1,9 +1,10 @@
+# 相对于release.yml没有release功能
+# 自动上传到文件到docs/docs/才能触发,自动构建,复制按钮bk文件名
 name: Deploy VitePress to Branch
-
 on:
   push:
     paths:
-      - 'docs/docs/**'
+      - 'docs/docs/**'  #上传到docs/docs/才能触发
   workflow_dispatch:
 
 env:
@@ -52,56 +53,34 @@ jobs:
       # 移动构建产物到目标目录
       - name: Move Artifacts
         run: |
+          echo "=== 开始移动构建产物 ==="
+          
           echo "源目录结构："
           ls -lR docs/docs/.vitepress/dist
+          
+          echo "目标目录原始状态："
+          ls -la docs/bk/ || echo "目录不存在（这是正常现象）"
+          
+          echo "创建目标目录..."
           mkdir -p docs/bk
-          echo "清理/bk文件夹中旧文件..."
-          rm -rf docs/bk/*
-          cp -R docs/docs/.vitepress/dist/* docs/bk/
+          echo "创建后权限："
+          ls -ld docs/bk
+          
+          echo "清理旧文件..."
+          rm -rfv docs/bk/*
+          
+          echo "复制新文件（详细列表）..."
+          cp -Rv docs/docs/.vitepress/dist/* docs/bk/
+          
+          echo "复制后验证："
+          echo "目标目录大小："
+          du -sh docs/bk
           echo "目标目录文件数："
           find docs/bk/ -type f | wc -l
           echo "关键文件检查："
           ls -l docs/bk/index.html docs/bk/assets/*
           
           echo "=== 移动完成==="
-          
-      # 新增压缩步骤
-      - name: Create release zip
-        run: |
-          cd docs/bk
-          zip -r ../vitepress-release.zip .
-          echo "压缩包信息:"
-          ls -lh ../vitepress-release.zip
-          
-      # 生成日期变量
-      - name: Get current date
-        id: get-date
-        run: |
-          echo "RELEASE_DATE=$(date +%Y%m%d-%H%M)" >> $GITHUB_ENV
-
-      # 发布到 Releases
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: "release-v${{ env.RELEASE_DATE }}"
-          release_name: "Vitepress-Build-Bolg-${{ env.RELEASE_DATE }}"
-          body: "VitePress 自动构建"
-          draft: false
-          prerelease: false
-          
-      # 上传Release Asset
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./docs/vitepress-release.zip
-          asset_name: vitepress-bk.zip
-          asset_content_type: application/zip
 
       # 自动提交变更
       - name: Commit changes
@@ -110,14 +89,10 @@ jobs:
           git config --global user.email "yufeng1688778@163.com"
           git add docs/bk/
           if git diff --staged --quiet; then
-            echo "✅ 无需提交任何更改."
+            echo "无需提交任何更改."
           else
-            echo "📌 正在提交更改..."
             git commit -m "自动部署"
-            echo "🚀 推送更改到分支 ${{ github.ref }}"
             git push origin HEAD:${{ github.ref }}
-            echo "🎉 提交完成"
           fi
-          echo "=== 提交流程结束 ==="
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
