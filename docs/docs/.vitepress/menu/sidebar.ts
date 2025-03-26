@@ -27,7 +27,8 @@ export const sidebar: DefaultTheme.Sidebar = {
         items: [
           { text: 'Allinone部署', link: '/blog/Allinone部署' },
           { text: 'serv00免费10年虚拟主机', link: '/blog/sev00' },
-          { text: 'markdown语法扩展', link: '/blog/markdown' }          
+          { text: 'markdown语法扩展', link: '/blog/markdown' },
+          { text: 'git冲突处理流程', link: '/blog/git冲突处理流程' }          
         ]        
       },      
       {

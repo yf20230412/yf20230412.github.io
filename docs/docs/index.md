@@ -11,7 +11,7 @@ lastUpdated: true
 hero:
   name: "XiaoYu博客"
   text: "Hi，终于等到你！"
-  tagline: 影视盒子迷、全栈开发者、云原生追随者
+  tagline: 影视盒子迷、全栈开发者、云原生追随者、只为热爱❤️‍🔥
   image:
         # 首页右边的图片
         src: /logo.png
@@ -22,12 +22,14 @@ hero:
     - theme: brand
       text: 写在前面
       link: /blog/写在前面      
+      
     - theme: alt
       text: 小鱼影视TV
       link: /blog/
+      
     - theme: alt
-      text: 赞助作者
-      link: https://yf1688.top/588/ 
+      text: IPTV订阅源
+      link: https://yf1688.top/iptv
 
 features:
 
@@ -35,7 +37,7 @@ features:
     icon: 
       src: /dog.svg    
     details: 主要分享tvbox软件相关内容
-    link: https://yf1688.top
+    link: https://yf1688.top/533
     linkText: 跳转主页
 
   - title: 微信公众号：风言锋语88
@@ -49,9 +51,7 @@ features:
     icon:
       src: /kk.svg
     details: 平平无奇但是热爱学习的云原生追随者
-    link: https://yf1688.top/533/
-    
-    
+    link: /blog/云原生系列
 ---
 
 

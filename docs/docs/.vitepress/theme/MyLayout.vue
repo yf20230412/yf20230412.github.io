@@ -9,7 +9,7 @@ const { frontmatter } = useData(); //这里的frontmatter就是各个md文件中
 <template>
   <Layout>
     <template #doc-before>
-      <span class="page-info">✍️{{ frontmatter.author }}</span>
+      <span class="page-info">🚔🚔🚘🚘……👉无人扶我青云志,我自踏雪至山巅👈……✍️{{ frontmatter.author }}</span>
     </template>
   </Layout>
 </template>
