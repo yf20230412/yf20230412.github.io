@@ -1,7 +1,5 @@
 {
   "name": "yf20230412.github.io",
-  "author": "yf20230412",
-  "home": "https://yf1688.top/bk",
   "version": "1.6.8",
   "type": "module",
   "main": "index.mjs",
@@ -14,9 +12,12 @@
     "preview": "vitepress preview docs/docs"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "小鱼",
+    "url": "https://yf1688.top/bk"
+  },
   "license": "ISC",
-  "description": "",
+  "description": "个人博客",
   "devDependencies": {
     "busuanzi.pure.js": "^1.0.3",
     "vitepress": "^1.6.3"
