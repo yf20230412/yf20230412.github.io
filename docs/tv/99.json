@@ -23,7 +23,7 @@
         "type": 0,
         "url": "https://gh.2015888.xyz/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
         "playerType": 2,
-        "timeout": 10
+        "timeout": 5
     },
     {
         "name": "肥羊直播",
@@ -44,7 +44,8 @@
         "playerType": 2,
         "timeout": 10,
         "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-        "logo": "https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+        "logo": "https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png",
+        "timeout": 3
     },
     {
         "name": "Gather_live",
@@ -53,7 +54,8 @@
         "playerType": 1,
         "ua": "okhttp/3.15",
         "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-        "logo": "https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+        "logo": "https://ghfast.top/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png",
+        "timeout": 5
     },
     {
         "group": "redirect",
@@ -172,43 +174,29 @@
         "timeout": 25
     },
     {
-        "key": "溢彩",
-        "name": "🧬┃溢彩┃多线💯",
+        "key": "素白白",
+        "name": "🦢┃白白┃秒播🌺",
         "type": 3,
-        "api": "csp_AppSKGuard",
-        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
+        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "ext": "rfOX1voDIQhH8epBwpmIsuSlujLK3srq3iIoaYP8Hh5fZE0d4nF48/dsb7YNi44z/yjNcsFajjBz6XJtDuw2FdqR/a6UV3ywWevO",
+        "ext": "./js/素白白.js",
         "timeout": 25
     },
     {
-        "key": "时常",
-        "name": "⏰┃时常┃App💯",
+        "key": "猎手",
+        "name": "⚔️┃猎手┃App💯",
         "type": 3,
-        "api": "csp_Xdai",
-        "playerType": 1,
+        "api": "./py/猎手影视.py",
+        "playerType": 2,
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "ext": "jaHR0cHM6Ly9zYzEwODAudG9wfGU1OWQ0NGIyZWVmMDNiYTJ8ZTU5ZDQ0YjJlZWYwM2JhMnwxMzQ=",
         "timeout": 15
     },
-    {
-        "key": "站长影视",
-        "name": "⛵️┃站长┃App💯",
-        "type": 3,
-        "api": "csp_AppGetApp",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": "w7TClcK8w5rDrcKYwoPCmcKkw57ClcK0wpvCnF9SwoPCmcOtw5jDj8Orw6ZValLCmMOtw6fDqsOswrRiX8KdacOcw57CrMKxw6DCqmbCnmPDpsKow6XCsMKywpRhYMKUwqfDl8Ozw7LDtGVewpPCn8Omwq3Cr8KvwrJsX8KRwqDDosKhw6rDocOqVVxSecOnw5zDrsOQw6nCpcKUUmrCm8KVwqbCm8OuwpzCoFJqwpvDjuWHv+mFoeaQn+WQllzlhpzkvYflkbDCreW/q+iov+i2vua7g+esicKNUsKlwpXCu8Oew61+wpXCqVLCs8KVw57DssOzwq3CpMKmwpHDqcOcw5vDqcOqwqzCqcKUwqPCm8KfwpzCusOfwqZ5wqZSwrPClcOew7LDs8KtwqTCpsKRw6nDnMObw6nDqsKswqnClMKjwpvDsA==",
-        "timeout": 15
-    },    
     {
         "key": "真心影视",
         "name": "❤️‍🔥┃真心┃影视💯",
@@ -245,6 +233,17 @@
         "filterable": 1,
         "ext": "./js/可可影视.js",
         "timeout": 25
+    },
+    {
+        "key": "韩小圈",
+        "name": "👠┃韩圈┃APP💯",
+        "type": 3,
+        "api": "csp_HanXiaoQuan",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 15
     },
     {
         "key": "csp_DiDuan",
