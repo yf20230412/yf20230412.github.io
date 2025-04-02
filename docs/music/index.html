@@ -74,7 +74,8 @@
     </div>
 </body>
 <script>
-    function copyToClipboard(url) {
+    function copyToClipboard() {
+    const url = 'https://yf1688.top/maotoumao.json';
     var tempInput = document.createElement('input');
     tempInput.value = url;
     document.body.appendChild(tempInput);
@@ -83,8 +84,6 @@
     document.body.removeChild(tempInput);
     alert('复制成功，请前往软件粘贴接口');
 }
-// 调用函数并传入URL
-copyToClipboard('https://yf1688.top/maotoumao.json');
 
 </script>
 
