@@ -67,21 +67,25 @@
             </div>
 
             <div class="popup-footer">
-                <div class="popup-btn close-pop" onclick="copyToClipboard('https://yf1688.top/maotoumao.json')">复制</div>
+                <div class="popup-btn close-pop" onclick="copyToClipboard()">复制</div>
             </div>
         </div>
         <div class="shortcuts-mobile-overlay"></div>
     </div>
 </body>
 <script>
-    function copyToClipboard(content) {
+    function copyToClipboard(url) {
     var tempInput = document.createElement('input');
-    tempInput.value = content;
+    tempInput.value = url;
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
-    alert('复制成功，请前往软件粘贴接口')}
+    alert('复制成功，请前往软件粘贴接口');
+}
+// 调用函数并传入URL
+copyToClipboard('https://yf1688.top/maotoumao.json');
+
 </script>
 
 <script>
