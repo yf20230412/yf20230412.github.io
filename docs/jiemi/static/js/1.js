@@ -12,7 +12,8 @@ const fetchOptions = {
   redirect: 'follow',
   headers: {
     'User-Agent': 'okhttp/5.0.0-alpha.14',
-    'Accept': '*/*' // 这里表示接受所有类型的内容，可以根据需要更改为特定的MIME类型
+    'Content-Type': 'application/json',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
   }
 };
 
