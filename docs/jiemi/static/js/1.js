@@ -1,6 +1,3 @@
-// 允许跨域请求
-const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-
 // 获取前端传递的链接
 const link = new URLSearchParams(window.location.search).get('link');
 
@@ -14,18 +11,18 @@ const fetchOptions = {
   method: 'GET',
   redirect: 'follow',
   headers: {
-    'User-Agent': 'okhttp/5.0.0-alpha.14'
+    'User-Agent': 'okhttp/5.0.0-alpha.14',
+    'Accept': '*/*' // 这里表示接受所有类型的内容，可以根据需要更改为特定的MIME类型
   }
 };
 
-// 忽略 SSL 证书验证
-if (link.startsWith('https://')) {
-  fetchOptions.agent = new HttpsProxyAgent(corsProxy);
-}
-
-// 执行 fetch 请求
-fetch(corsProxy + link, fetchOptions)
+// 执行 fetch 请求（不使用 CORS 代理）
+fetch(link, fetchOptions)
   .then(response => {
+    // 检查响应状态码是否成功
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     // 获取最终的真实链接
     const realLink = response.url;
     showSuccess(realLink, link);
