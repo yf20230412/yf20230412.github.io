@@ -12,8 +12,7 @@ const fetchOptions = {
   redirect: 'follow',
   headers: {
     'User-Agent': 'okhttp/5.0.0-alpha.14',
-    'Content-Type': 'application/json',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'Accept': ''
   }
 };
 
