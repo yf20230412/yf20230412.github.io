@@ -24,7 +24,7 @@ async function fetchData() {
   if (cachedData) return cachedData;
 
   try {
-    const response = await fetch('http://www.2015888.xyz/M.json', {
+    const response = await fetch('/static/M.json', {
       cache: 'no-store', // 禁用缓存，确保获取最新数据
     });
 
