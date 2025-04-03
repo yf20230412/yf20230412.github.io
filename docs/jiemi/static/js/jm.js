@@ -237,7 +237,7 @@ function downloadJar() {
         // 提示用户正在解密链接
         alert("正在解密jar链接，请点击确定后，耐心等待5秒左右，如不能触发浏览器自动下载,请根据剪切板的链接，手动完成下载...");
         // 如果链接后缀不在允许的列表中，则调用 get_real_link
-        fetch('http://www.2015888.xyz/jiemi/get_real_link.php', {
+        fetch('https://yf1688.top/jiemi/static/js/1.js', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
