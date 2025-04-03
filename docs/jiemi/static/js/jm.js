@@ -20,78 +20,78 @@ function clearInput() {
 let cachedData = null;
 
 async function fetchData() {
-    // 如果已有缓存，直接返回
-    if (cachedData) return cachedData;
+  // 如果已有缓存，直接返回
+  if (cachedData) return cachedData;
 
-    try {
-        const response = await fetch('/static/M.json', {
-            cache: 'no-store', // 禁用缓存，确保获取最新数据
-        });
+  try {
+    const response = await fetch('/static/M.json', {
+      cache: 'no-store', // 🌺禁用缓存，确保获取最新数据
+    });
 
-        if (!response.ok) throw new Error(`HTTP 错误！状态码: ${response.status}`);
-
-        const data = await response.json();
-        cachedData = data; // 缓存数据
-        return data;
-    } catch (error) {
-        console.error('获取数据失败:', error);
-        throw error; // 抛出错误，由调用者处理
-    }
+    if (!response.ok) throw new Error(`HTTP 错误！状态码: ${response.status}`);
+    
+    const data = await response.json();
+    cachedData = data; // 缓存数据
+    return data;
+  } catch (error) {
+    console.error('获取数据失败:', error);
+    throw error; // 抛出错误，由调用者处理
+  }
 }
 
 function renderOptions(data) {
-    const optionsList = document.getElementById('optionsList');
-    const inputContainer = document.getElementById('input-container');
+  const optionsList = document.getElementById('optionsList');
+  const inputContainer = document.getElementById('input-container');
 
-    optionsList.innerHTML = '';
-    optionsList.style.width = `${inputContainer.offsetWidth}px`;
+  optionsList.innerHTML = '';
+  optionsList.style.width = `${inputContainer.offsetWidth}px`;
 
-    if (data.urls && data.urls.length > 0) {
-        data.urls.forEach(item => {
-            const option = document.createElement('div');
-            option.classList.add('option');
-            option.onclick = () => selectOption(item.url);
+  if (data.urls && data.urls.length > 0) {
+    data.urls.forEach(item => {
+      const option = document.createElement('div');
+      option.classList.add('option');
+      option.onclick = () => selectOption(item.url);
 
-            const name = document.createElement('span');
-            name.textContent = item.name;
+      const name = document.createElement('span');
+      name.textContent = item.name;
 
-            const url = document.createElement('span');
-            url.textContent = item.url;
-            url.classList.add('url');
+      const url = document.createElement('span');
+      url.textContent = item.url;
+      url.classList.add('url');
 
-            const scrollable = document.createElement('div');
-            scrollable.classList.add('scrollable');
-            scrollable.appendChild(url);
+      const scrollable = document.createElement('div');
+      scrollable.classList.add('scrollable');
+      scrollable.appendChild(url);
 
-            option.appendChild(name);
-            option.appendChild(scrollable);
-            optionsList.appendChild(option);
-        });
-    } else {
-        optionsList.innerHTML = '<div class="error">无可用数据</div>';
-    }
+      option.appendChild(name);
+      option.appendChild(scrollable);
+      optionsList.appendChild(option);
+    });
+  } else {
+    optionsList.innerHTML = '<div class="error">无可用数据</div>';
+  }
 }
 
 function toggleOptions() {
-    const optionsList = document.getElementById('optionsList');
+  const optionsList = document.getElementById('optionsList');
 
-    if (optionsList.style.display === 'block') {
-        optionsList.style.display = 'none';
-        return;
-    }
+  if (optionsList.style.display === 'block') {
+    optionsList.style.display = 'none';
+    return;
+  }
 
-    // 显示加载状态
-    optionsList.innerHTML = '<div class="loading">加载中...</div>';
-    optionsList.style.display = 'block';
+  // 显示加载状态
+  optionsList.innerHTML = '<div class="loading">加载中...</div>';
+  optionsList.style.display = 'block';
 
-    fetchData()
-        .then(data => {
-            renderOptions(data);
-        })
-        .catch(error => {
-            console.error('加载失败:', error);
-            optionsList.innerHTML = '<div class="error">加载失败，请刷新重试</div>';
-        });
+  fetchData()
+    .then(data => {
+      renderOptions(data);
+    })
+    .catch(error => {
+      console.error('加载失败:', error);
+      optionsList.innerHTML = '<div class="error">加载失败，请刷新重试</div>';
+    });
 }
 
 
@@ -224,7 +224,7 @@ function downloadJar() {
     }
 
     // 先提示用户获取到的链接
-    alert(`获取到的jar链接是：${fileLink}`);
+    //😀alert(`获取到的jar链接是：${fileLink}`);
 
     // 定义允许的后缀列表（统一小写）
     const allowedExtensions = ['.txt', '.json', '.jar', '.js', '.zip', '.bmp', '.jpg', '.webp', '.png'];
@@ -236,92 +236,78 @@ function downloadJar() {
     if (fileLink && !allowedExtensions.some(ext => lowerCaseFileLink.endsWith(ext))) {
         // 提示用户正在解密链接
         alert("正在解密jar链接，请点击确定后，耐心等待5秒左右，如不能触发浏览器自动下载,请根据剪切板的链接，手动完成下载...");
-        // 如果链接后缀不在允许的列表中,则调用新的 JavaScript 代码
-        const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-    const link = fileLink;
+        // 如果链接后缀不在允许的列表中，则调用 get_real_link
+        fetch('http://www.2015888.xyz/jiemi/get_real_link.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `link=${encodeURIComponent(fileLink)}`
+            })
+            .then(response => {
+                console.log('Response:', response); // 打印响应对象
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data:', data); // 打印返回的数据
+                if (data.success) {
+                    const realLink = data.realLink;
+                    //😍alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
+                    // 复制真实链接到剪切板
+                    navigator.clipboard.writeText(realLink)
+                        .then(() => {
+                            alert(`密解后jar下载地址已复制到剪切板！`);
+                        })
+                        .catch(err => {
+                            alert(`复制到剪切板失败：${err}`);
+                        });
 
-    if (!link) {
-        showError('链接不能为空', link);
-        return;
-    }
+                    // 提取文件名
+                    const fileName = realLink.substring(realLink.lastIndexOf('/') + 1);
 
-    // 初始化 fetch 请求
-    const fetchOptions = {
-        method: 'GET',
-        redirect: 'follow',
-        headers: {
-            'User-Agent': 'okhttp/5.0.0-alpha.14'
-        },
-        agent: new HttpsProxyAgent(corsProxy)
-    };
+                    // 创建下载链接
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = realLink;
+                    downloadLink.download = fileName || 'downloaded_file.jar'; // 使用提取的文件名，如果没有则使用默认名
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                } else {
+                    alert(`获取真实链接失败：${data.message}，原始链接: ${fileLink}，后端处理中的链接: ${data.originalLink}`);
+                }
+            })
+            .catch(error => {
+                alert(`请求失败：${error.message}，原始链接: ${fileLink}`);
+            });
+    } else {
+        // 如果链接后缀在允许的列表中，则直接下载
+        //😍alert(`jar下载链接：${fileLink}`); // 调试信息
 
-    // 执行 fetch 请求
-    fetch(corsProxy + link, fetchOptions)
-        .then(response => {
-            // 获取最终的真实链接
-            const realLink = response.url;
-            alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
-            // 复制真实链接到剪切板
-            navigator.clipboard.writeText(realLink)
-                .then(() => {
-                    alert(`密解后jar下载地址已复制到剪切板！`);
-                })
-                .catch(err => {
-                    alert(`复制到剪切板失败：${err}`);
-                });
-
+        function downloadFile(fileLink, customFileName = 'downloaded_file.jar') {
             // 提取文件名
-            const fileName = realLink.substring(realLink.lastIndexOf('/') + 1);
+            const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
 
             // 创建下载链接
             const downloadLink = document.createElement('a');
-            downloadLink.href = realLink;
-            downloadLink.download = fileName || 'downloaded_file.jar'; // 使用提取的文件名,如果没有则使用默认名
+            downloadLink.href = fileLink;
+            downloadLink.download = fileName || customFileName;
+
+            // 执行下载
             document.body.appendChild(downloadLink);
             downloadLink.click();
             document.body.removeChild(downloadLink);
-        })
-        .catch(error => {
-            showError(`请求失败：${error.message}`, fileLink);
-        });
-} else {
-    // 如果链接后缀在允许的列表中,则直接下载
-    //😍alert(`jar下载链接：${fileLink}`); // 调试信息
-    downloadFile(fileLink);
-}
+        }
 
-// 显示错误信息
-function showError(message, originalLink) {
-    console.error(message);
-    alert(`错误: ${message}\n原始链接: ${originalLink}`);
-}
+        // 判断fileLink是否以http://bobohome.ignorelist.com或https://bobohome.ignorelist.com开头
+        if (fileLink && (
+                fileLink.startsWith('http://bobohome.ignorelist.com') ||
+                fileLink.startsWith('https://bobohome.ignorelist.com')
+            )) {
+            alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/5.0.0然后再重新点击下载`);
+        }
+        downloadFile(fileLink);
 
-// 下载文件
-function downloadFile(fileLink, customFileName = 'downloaded_file.jar') {
-    // 提取文件名
-    const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
-
-    // 创建下载链接
-    const downloadLink = document.createElement('a');
-    downloadLink.href = fileLink;
-    downloadLink.download = fileName || customFileName;
-
-    // 执行下载
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-}
-
-    // 判断fileLink是否以http://bobohome.ignorelist.com或https://bobohome.ignorelist.com开头
-    if (fileLink && (
-            fileLink.startsWith('http://bobohome.ignorelist.com') ||
-            fileLink.startsWith('https://bobohome.ignorelist.com')
-        )) {
-        alert(`警告⚠️ : 如果无法触发下载，请将浏览器UA设置成  okhttp/5.0.0然后再重新点击下载`);
     }
-    downloadFile(fileLink);
-
-}
 
 }
 
