@@ -238,77 +238,79 @@ function downloadJar() {
         alert("正在解密jar链接，请点击确定后，耐心等待5秒左右，如不能触发浏览器自动下载,请根据剪切板的链接，手动完成下载...");
         // 如果链接后缀不在允许的列表中,则调用新的 JavaScript 代码
         const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-        const link = fileLink;
+    const link = fileLink;
 
-        if (!link) {
-            showError('链接不能为空', link);
-            return;
-        }
-
-        // 初始化 fetch 请求
-        const fetchOptions = {
-            method: 'GET',
-            redirect: 'follow',
-            headers: {
-                'User-Agent': 'okhttp/5.0.0-alpha.14'
-            }
-        };
-
-        // 忽略 SSL 证书验证
-        if (link.startsWith('https://')) {
-            fetchOptions.agent = new HttpsProxyAgent(corsProxy);
-        }
-
-        // 执行 fetch 请求
-        fetch(corsProxy + link, fetchOptions)
-            .then(response => {
-                    // 获取最终的真实链接
-                    const realLink = response.url;
-                    alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
-                    // 复制真实链接到剪切板
-                    navigator.clipboard.writeText(realLink)
-                        .then(() => {
-                            alert(`密解后jar下载地址已复制到剪切板！`);
-                        })
-                        .catch(err => {
-                            alert(`复制到剪切板失败：${err}`);
-                        });
-
-                    // 提取文件名
-                    const fileName = realLink.substring(realLink.lastIndexOf('/') + 1);
-
-                    // 创建下载链接
-                    const downloadLink = document.createElement('a');
-                    downloadLink.href = realLink;
-                    downloadLink.download = fileName || 'downloaded_file.jar'; // 使用提取的文件名，如果没有则使用默认名
-                    document.body.appendChild(downloadLink);
-                    downloadLink.click();
-                    document.body.removeChild(downloadLink);
-                } else {
-                    alert(`获取真实链接失败：${data.message}，原始链接: ${fileLink}，后端处理中的链接: ${data.originalLink}`);
-                }
-            })
-    .catch(error => {
-        alert(`请求失败：${error.message}，原始链接: ${fileLink}`);
-    });
-} else {
-    // 如果链接后缀在允许的列表中，则直接下载
-    //😍alert(`jar下载链接：${fileLink}`); // 调试信息
-
-    function downloadFile(fileLink, customFileName = 'downloaded_file.jar') {
-        // 提取文件名
-        const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
-
-        // 创建下载链接
-        const downloadLink = document.createElement('a');
-        downloadLink.href = fileLink;
-        downloadLink.download = fileName || customFileName;
-
-        // 执行下载
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
+    if (!link) {
+        showError('链接不能为空', link);
+        return;
     }
+
+    // 初始化 fetch 请求
+    const fetchOptions = {
+        method: 'GET',
+        redirect: 'follow',
+        headers: {
+            'User-Agent': 'okhttp/5.0.0-alpha.14'
+        },
+        agent: new HttpsProxyAgent(corsProxy)
+    };
+
+    // 执行 fetch 请求
+    fetch(corsProxy + link, fetchOptions)
+        .then(response => {
+            // 获取最终的真实链接
+            const realLink = response.url;
+            alert(`解密后jar真实下载地址：${realLink}`); // 调试信息
+            // 复制真实链接到剪切板
+            navigator.clipboard.writeText(realLink)
+                .then(() => {
+                    alert(`密解后jar下载地址已复制到剪切板！`);
+                })
+                .catch(err => {
+                    alert(`复制到剪切板失败：${err}`);
+                });
+
+            // 提取文件名
+            const fileName = realLink.substring(realLink.lastIndexOf('/') + 1);
+
+            // 创建下载链接
+            const downloadLink = document.createElement('a');
+            downloadLink.href = realLink;
+            downloadLink.download = fileName || 'downloaded_file.jar'; // 使用提取的文件名,如果没有则使用默认名
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        })
+        .catch(error => {
+            showError(`请求失败：${error.message}`, fileLink);
+        });
+} else {
+    // 如果链接后缀在允许的列表中,则直接下载
+    //😍alert(`jar下载链接：${fileLink}`); // 调试信息
+    downloadFile(fileLink);
+}
+
+// 显示错误信息
+function showError(message, originalLink) {
+    console.error(message);
+    alert(`错误: ${message}\n原始链接: ${originalLink}`);
+}
+
+// 下载文件
+function downloadFile(fileLink, customFileName = 'downloaded_file.jar') {
+    // 提取文件名
+    const fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
+
+    // 创建下载链接
+    const downloadLink = document.createElement('a');
+    downloadLink.href = fileLink;
+    downloadLink.download = fileName || customFileName;
+
+    // 执行下载
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
 
     // 判断fileLink是否以http://bobohome.ignorelist.com或https://bobohome.ignorelist.com开头
     if (fileLink && (
