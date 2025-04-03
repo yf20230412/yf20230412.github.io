@@ -429,3 +429,6 @@
             border-radius: 3px;
             /* 圆角 */
         }
+        .loading .error{
+        color: #ff0033;
+        }
