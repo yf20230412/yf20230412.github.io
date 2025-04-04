@@ -507,11 +507,7 @@
 
 {"name":"Web聚合","type":3,"url":"Web"},
 
-{"name":"臻享","type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","bilibili","1905"],"header":{"User-Agent":"okhttp/4.9.1"}}},
-
-{"name":"虾米","type":0,"url":"https://jx.xmflv.cc/?url=","ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","qq预告及花絮","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"okhttp/4.9.1"}}},
-
-{"name":"A6","type":0,"url":"https://pl.a6club.com/player/analysis.php?v="},
+{"name":"虾米","type":0,"url":"http://pan.qiaoji8.com/tvbox/neibu.php?url=","ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","qq预告及花絮","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"okhttp/4.9.1"}}},
 
 {"name":"8090","type":0,"url":"https://www.8090g.cn/?url="},
 
@@ -519,7 +515,15 @@
 
 {"name":"CK","type":0,"url":"https://www.ckplayer.vip/jiexi/?url="},
 
-{"name":"冰豆","type":0,"url":"https://bd.jx.cn/?url="}
+{"name":"冰豆","type":0,"url":"https://bd.jx.cn/?url="},
+
+{"name":"盘古","type":0,"url":"https://www.playm3u8.cn/jiexi.php?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
+
+{"name":"咸鱼","type":0,"url":"https://jx.xymp4.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/134.0.0.0Safari/537.36Edg/134.0.3124.68"}}},
+
+{"name":"淘片","type":0,"url":"https://jx.yparse.com/index.php?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
+
+{"name":"夜幕","type":0,"url":"https://yemu.xyz/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}}
 
 ],
 
