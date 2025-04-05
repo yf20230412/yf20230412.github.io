@@ -15,7 +15,6 @@
         "type": 0,
         "url": "https://gh.2015888.xyz/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u ",
         "playerType": 2,
-        "timeout": 10,
         "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
         "logo": "https://gh.2015888.xyz/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png",
         "timeout": 3
@@ -127,7 +126,7 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 15
-    },        
+    },
     {
         "key": "木头",
         "name": "🪵┃木头┃App💯",
@@ -143,14 +142,14 @@
     },
     {
         "key": "素白白",
-        "name": "🦢┃白白┃秒播🌺",
+        "name": "🦢┃白白┃秒播💯",
         "type": 3,
-        "api": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/douban/drpy3.min.js",
+        "api": "csp_SbaibaiGuard",
+        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "ext": "./js/素白白.js",
         "timeout": 15
     },
     {
@@ -159,17 +158,6 @@
         "type": 3,
         "api": "./py/猎手影视.py",
         "playerType": 2,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 15
-    },
-    {
-        "key": "真心影视",
-        "name": "❤️‍🔥┃真心┃影视💯",
-        "type": 3,
-        "api": "csp_WebGZ",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
@@ -296,7 +284,6 @@
         "filterable": 1,
         "ext": "./js/采集之王.js?type=url&params=../json/采集精选.json$1"
     },    
-
     {
         "key": "csp_WoGG",
         "name": "🤵‍♂️┃玩偶┃哥哥📀",
@@ -495,8 +482,17 @@
 
 ],
 
+"proxy": ["raw.githubusercontent.com","googleapis.com","googlevideo.com","cdn.v82u1l.com","cdn.iz8qkg.com","cdn.kin6c1.com","c.biggggg.com","c.olddddd.com","haiwaikan.com","www.histar.tv","youtube.com","uhibo.com",".*boku.*",".*nivod.*",".*ulivetv.*"],
 
-"rules":[{"name":"proxy","hosts":["raw.githubusercontent.com","googleapis.com","googlevideo.com","cdn.v82u1l.com","cdn.iz8qkg.com","cdn.kin6c1.com","c.biggggg.com","c.olddddd.com","haiwaikan.com","www.histar.tv","youtube.com","uhibo.com",".*boku.*",".*nivod.*",".*ulivetv.*"]},
+"hosts": [
+        "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
+        ],
+
+"rules":[
 
 {"name":"海外看","hosts":["haiwaikan"],"regex":["8.1748","10.0099","10.3333","16.0599"]},
 
@@ -532,16 +528,7 @@
 
 {"name":"Quad9","url":"https://dns.quad9.net/dns-quer","ips":["9.9.9.9","149.112.112.112"]}],
 
-"hosts": [
-        "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-        "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-        "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-        "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-        "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-        "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
-    ],    
-
-    "flags":["youku","qq","QQ","iqiyi","iqiyi","imgo","xueren","m1905","qiyi","letv","sohu","tudou","pptv","PPTV","dbm3u8","FY","fy","FeiYun","feiyun","飞云","funshion","mgtv","wasu","bilibili","le","duoduozy","renrenmi","xmm","xigua","ltnb","rx","SLYS4k","CL4K","xfyun","wuduzy","BYGA","BYGB","luanzi","dxzy","QEYSS","aliyun","优酷","优酷","优酷视频","西瓜","AliS","122","chuangying","乐视","芒果","腾讯","腾讯","腾讯视频","芒果TV","芒果TV","爱奇艺","奇艺","爱奇艺","奇艺视频","西瓜视频","乐视视频","搜狐","搜狐","搜狐视频","哔哩哔哩","哔哩"],
+    "flags": ["youku", "qq", "QQ", "iqiyi", "iqiyi", "imgo", "xueren", "m1905", "qiyi", "letv", "sohu", "tudou", "pptv", "PPTV", "dbm3u8", "FY", "fy", "FeiYun", "feiyun", "飞云", "funshion", "mgtv", "wasu", "bilibili", "le", "duoduozy", "renrenmi", "xmm", "xigua", "ltnb", "rx", "SLYS4k", "CL4K", "xfyun", "wuduzy", "BYGA", "BYGB", "luanzi", "dxzy", "QEYSS", "aliyun", "优酷", "优酷", "优酷视频", "西瓜", "AliS", "122", "chuangying", "乐视", "芒果", "腾讯", "腾讯", "腾讯视频", "芒果TV", "芒果TV", "爱奇艺", "奇艺", "爱奇艺", "奇艺视频", "西瓜视频", "乐视视频", "搜狐", "搜狐", "搜狐视频", "哔哩哔哩", "哔哩"],
 
     "ads": ["static-mozai.4gtv.tv", "pv.vipwm.cc"]
 }
