@@ -1,6 +1,6 @@
 # coding=utf-8
 # !/usr/bin/python
-# by嗷呜(finally)
+# by小鱼(finally)
 import sys
 import os
 sys.path.append("..")
@@ -139,7 +139,7 @@ class Spider(Spider):
                         play.append(result)
                     else:
                         play.append("")
-        video["vod_play_from"] = "$$$".join(names)
+        video["vod_play_from"] ="小鱼🐬"+"$$$".join(names)
         video["vod_play_url"] = "$$$".join(play)
         result = {"list": [video]}
         return result
