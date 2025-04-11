@@ -48,7 +48,7 @@
         "ext": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/json/douban.json"
     },
     {
-        "key": "路飞搜索",
+        "key": "小鱼搜索",
         "name": "🐬小鱼🔹搜索🐬",
         "type": 3,
         "api": "./js/路飞搜索.js",
@@ -70,17 +70,6 @@
         "timeout": 15
     }, 
     {
-        "key": "糯米影视",
-        "name": "🍓┃糯米┃秒播💯",
-        "type": 3,
-        "api": "csp_NmyswvGuard",
-        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
-        "searchable": 1,
-        "quickSearch": 1,
-        "filterable": 1,
-        "timeout": 15
-    },
-    {
         "key": "csp_Xpg",
         "name": "🍎┃苹果┃秒播💯",
         "type": 3,
@@ -90,13 +79,27 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 15
-    },    
+    },
+    {
+        "key": "糯米影视",
+        "name": "🍓┃糯米┃秒播💯",
+        "type": 3,
+        "api": "csp_NmysGuard",
+        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/ok.txt",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1,
+        "ext": {
+        "danmu": true
+      },
+        "timeout": 15
+    },        
     {
         "key": "文采",
         "name": "📝┃文采┃秒播💯",
         "type": 3,
         "api": "csp_JpysGuard",
-        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
+        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/ok.txt",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
@@ -123,13 +126,74 @@
         "key": "素白白",
         "name": "🦢┃白白┃秒播💯",
         "type": 3,
-        "api": "csp_SbaibaiGuard",
-        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/fan.txt",
+        "api": "csp_SubaibaiGuard",
+        "jar": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/jar/ok.txt",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
+        "ext": {
+        "danmu": true
+      },
         "timeout": 15
+    },
+    {
+        "key": "边缘",
+        "name": "🧶┃边缘┃App🏮",
+        "type": 3,
+        "api": "./py/边缘影视.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
+        "key": "金牌",
+        "name": "🥇┃金牌┃App🏮",
+        "type": 3,
+        "api": "./py/金牌.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+            "site": "https://www.jiabaide.cn"
+        },
+        "timeout": 10
+    },
+    {
+        "key": "光速",
+        "name": "🔦┃光速┃App🏮",
+        "type": 3,
+        "api": "./py/光速.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
+        "key": "云端",
+        "name": "⛅️┃云端┃App🏮",
+        "type": 3,
+        "api": "./py/云端.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
+        "key": "若惜",
+        "name": "💋┃若惜┃App🏮",
+        "type": 3,
+        "api": "./py/若惜追剧.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
     },
     {
         "key": "猎手",
@@ -204,7 +268,7 @@
         "key": "php_heimuer",
         "name": "🐝┃木耳┃采集🦋",
         "type": 1,
-        "api": "https://json02.heimuer.xyz/api.php/provide/vod",
+        "api": "https://json.heimuer.xyz/api.php/provide/vod/",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
@@ -218,7 +282,7 @@
       "key": "索尼",
       "name": "🐝┃索尼┃采集🦋",
       "type": 1,
-      "api": "https://suoniapi.com/api.php/provide/vod/?ac=list",
+      "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,

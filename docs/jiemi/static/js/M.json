@@ -3,7 +3,11 @@
         {
             "url": "http://www.饭太硬.com/tv",
             "name": "🚀饭太硬线路"
-        },                
+        },      
+        {
+            "url": "http://tvbox.xn--4kq62z5rby2qupq9ub.top",
+            "name": "🚀放牛线路"
+        },          
         {
             "url": "http://肥猫.com",
             "name": "🚀肥猫线路"
@@ -11,11 +15,7 @@
         {
             "url": "http://我不是.摸鱼儿.com",
             "name": "🚀摸鱼线路"
-        },
-        {
-            "url": "http://tvbox.王二小放牛娃.top",
-            "name": "🚀放牛线路"
-        },
+        },        
         {
             "url": "https://mpanso.me/DEMO.json",
             "name": "🚀小米线路"
@@ -27,18 +27,14 @@
         {
             "url": "http://bobohome.ignorelist.com:20247/🧑潇洒哥/",
             "name": "🚀潇洒单线"
-        },
-        {
-            "url":"https://9877.kstore.space/AnotherD/api.json",
-            "name":"🚀潇洒线路" 
-        },
-        {
-            "url": "http://bobohome.ignorelist.com:20247/",
-            "name": "🕺潇洒多线"
-        },
+        },        
         {
             "url": "http://ok321.top/tv",
             "name": "🚀ok线路"
+        },
+        {
+            "url": "http://www.fish2018.ip-ddns.com/p/jsm.json",
+            "name": "🚀pg线路"
         },
         {
             "url": "https://4645.kstore.space/99.json",
@@ -53,9 +49,25 @@
             "name": "🐟小鱼线路3"
         },
         {
+            "url":"https://9877.kstore.space/AnotherD/api.json",
+            "name":"🚀潇洒凯速" 
+        },
+        {
+            "url": "http://bobohome.ignorelist.com:20247/",
+            "name": "🚀潇洒多线"
+        },
+        {
             "url": "http://gh.2015888.xyz/raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
             "name": "🐹香雅情线路"
-        },        
+        },
+        {
+            "url": "https://xn--8owq8u.com/tv/",
+            "name": "🐹毒盒线路"
+        },  
+        {
+            "url": "https://tv.蜗牛.top/svip",
+            "name": "🐹蜗牛线路"
+        },      
         {
             "url": "https://raw.liucn.cc/box/m.json",
             "name": "🐹老刘备线路"
@@ -89,6 +101,10 @@
             "name": "💎青龙线路"
         },
         {
+            "url": "http://cdn.qiaoji8.com/tvbox.json",
+            "name": "🏄️巧计线路"
+        },
+        {
       "url": "https://notabug.org/qizhen15800/My9394/raw/master/不良帅.json",
       "name": "🏄️不良帅线"
         },
@@ -103,11 +119,7 @@
         {
             "url": "http://gh.2015888.xyz/raw.githubusercontent.com/793641910/binge/main/BinGeShi.json",
             "name": "🏄️兵哥线路"
-        },
-        {
-            "url": "http://cdn.qiaoji8.com/tvbox.json",
-            "name": "🏄️巧计线路"
-        },
+        },        
         {
             "url": "http://fmys.top/fmys.json",
             "name": "🏄️驸马线路"

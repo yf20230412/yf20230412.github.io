@@ -77,7 +77,7 @@ var rule = {
     headers:{
         "User-Agent":"PC_UA",
         "Referer": "https://www.bilibili.com",
-        "Cookie":"https://d.kstore.space/download/6296/cookie.txt"
+        "Cookie":"填写自己的哔哩哔哩cookie"
     },
     timeout:5000,
     limit:8,

@@ -1,5 +1,5 @@
 
 //主页AES
 function goToHome() {
-    window.location.href = "https://yf1688.top/128/";
+    window.location.href = "https://128.2015888.xyz";
 }

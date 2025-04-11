@@ -28,7 +28,8 @@ export const sidebar: DefaultTheme.Sidebar = {
           { text: 'Allinone部署', link: '/blog/Allinone部署' },
           { text: 'serv00免费10年虚拟主机', link: '/blog/sev00' },
           { text: 'markdown语法扩展', link: '/blog/markdown' },
-          { text: 'git冲突处理流程', link: '/blog/git冲突处理流程' }          
+          { text: 'git冲突处理流程', link: '/blog/git冲突处理流程' },
+          { text: 'AI人工智能聚合', link: '/blog/AI人工智能聚合' }          
         ]        
       },      
       {
