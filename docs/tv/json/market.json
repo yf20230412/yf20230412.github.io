@@ -13,6 +13,12 @@
                 "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/网盘配置.zip",
                 "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "阿里_夸克_uc"
+            },
+            {
+                "name": "X5电视版",
+                "url": "https://yf1688.top/X5离线版/4x/[x5.tbs.apk].txt",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
+                "version": "Android4.0专用"
             }
         ]
     },
@@ -23,13 +29,25 @@
                 "name": "当前版本",
                 "url": "",
                 "icon": "http://127.0.0.1:9978/file/风言锋语88/风言锋语/jar/.Version.png",
-                "version": "Jar"
+                "version": "jar"
             },
             {
                 "name": "最新版本",
                 "url": "",
                 "icon": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.Version.png",
                 "version": "jar"
+            },
+            {
+                "name": "本地单线",
+                "url": "https://gitee.com/PizazzXS/another-d/raw/master/单线路.zip",
+                "icon": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.单.png",
+                "version": "潇洒"
+            },
+            {
+                "name": "本地多线",
+                "url": "https://gitee.com/PizazzXS/another-d/raw/master/多线路.zip",
+                "icon": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.双.png",
+                "version": "潇洒"
             }
         ]
     },
@@ -94,12 +112,7 @@
                 "url": "https://4645.kstore.space/apk/应用管家.apk",
                 "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.666.jpg",
                 "version": "TV版1.6.0"
-            }
-        ]
-    },
-    {
-        "name": "工具商店",
-        "list": [
+            },
             {
                 "name": "LocalSend文件传输",
                 "url": "https://4645.kstore.space/apk/LocalSend.apk",
@@ -119,22 +132,5 @@
                 "version": "手机解锁版"
             }
         ]
-    },
-    {
-        "name": "腾讯X5离线版",
-        "list": [
-            {
-                "name": "X5电视版",
-                "url": "https://yf1688.top/X5离线版/32w/[x5.tbs.apk].txt",
-                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
-                "version": "Android9专用"
-            },
-            {
-                "name": "X5电视版",
-                "url": "https://yf1688.top/X5离线版/4x/[x5.tbs.apk].txt",
-                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
-                "version": "Android4.0专用"
-            }
-        ]
-    }    
+    }
 ]
