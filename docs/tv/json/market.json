@@ -5,13 +5,13 @@
             {
                 "name": "微信公众号",
                 "url": "",
-                "icon": "https://a.2015888.xyz/img/wxgzh2.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.wxgzh2.png",
                 "version": ""
             },
             {
                 "name": "网盘配置示例",
                 "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/网盘配置.zip",
-                "icon": "https://a.2015888.xyz/img/555.jpg",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "阿里_夸克_uc"
             }
         ]
@@ -28,8 +28,8 @@
             {
                 "name": "最新版本",
                 "url": "",
-                "icon": "https://2015888.xyz/Version",
-                "version": "无内容"
+                "icon": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.Version.png",
+                "version": "jar"
             }
         ]
     },
@@ -39,19 +39,19 @@
             {
                 "name": "《小鱼影视》",
                 "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/mobile-python-arm64_v8a.apk",
-                "icon": "https://a.2015888.xyz/img/小鱼.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.小鱼.png",
                 "version": "手机专用"
             },
             {
                 "name": "《小鱼影视》",
                 "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/leanback-python-armeabi_v7a.apk",
-                "icon": "https://a.2015888.xyz/img/小鱼.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.小鱼.png",
                 "version": "TV专用"
             },
             {
                 "name": "《小鱼影视》",
                 "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/kitkat/leanback.apk",
-                "icon": "https://a.2015888.xyz/img/小鱼.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.小鱼.png",
                 "version": "TV安卓4x版"
             }            
         ]
@@ -62,38 +62,38 @@
             {
                 "name": "ATVTools",
                 "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/atvTools苹果版ADB.ipa",
-                "icon": "https://a.2015888.xyz/img/555.jpg",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "苹果版ADB"
             },
             {
                 "name": "WiFi钥匙",
                 "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/WiFi钥匙显示密码.apk",
-                "icon": "https://a.2015888.xyz/img/555.jpg",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "v1.0.10版"
             },
             {
                 "name": "百度输入法",
                 "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/百度输入法破解剪切板条数.apk",
-                "icon": "https://a.2015888.xyz/img/555.jpg",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "破解字数限制"
             },
             {
                 "name": "GKD去广告",
                 "url": "https://d.kstore.dev/download/9202/TVBox/Myapp/GKD去广告内置.apk",
-                "icon": "https://a.2015888.xyz/img/555.jpg",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "内置手机版"
             },
             {
                 "name": "李跳跳去广告",
                 "url": "https://4645.kstore.space/apk/李跳跳.apk",
-                "icon": "https://4645.kstore.space/img/李跳跳.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.李跳跳.png",
                 "version": "派大星2.2"
             },
             {
                 "name": "应用管家",
                 "url": "https://4645.kstore.space/apk/应用管家.apk",
-                "icon": "https://a.2015888.xyz/img/666.jpg",
-                "version": "TV版"
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.666.jpg",
+                "version": "TV版1.6.0"
             }
         ]
     },
@@ -103,25 +103,19 @@
             {
                 "name": "LocalSend文件传输",
                 "url": "https://4645.kstore.space/apk/LocalSend.apk",
-                "icon": "https://a.2015888.xyz/img/239.png",
-                "version": "手机版"
-            },
-            {
-                "name": "小鱼影视助手",
-                "url": "https://4645.kstore.space/apk/小鱼影视助手.apk",
-                "icon": "https://a.2015888.xyz/img/240.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.239.png",
                 "version": "手机版"
             },
             {
                 "name": "MT管理器",
                 "url": "https://4645.kstore.space/apk/MT管理器.apk",
-                "icon": "https://a.2015888.xyz/img/243.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.243.png",
                 "version": "手机版"
             },
             {
                 "name": "甲壳虫adb助手",
                 "url": "https://4645.kstore.space/apk/甲壳虫adb助手.apk",
-                "icon": "https://a.2015888.xyz/img/229.png",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.229.png",
                 "version": "手机解锁版"
             }
         ]
@@ -132,13 +126,13 @@
             {
                 "name": "X5电视版",
                 "url": "https://yf1688.top/X5离线版/32w/[x5.tbs.apk].txt",
-                "icon": "https://a.2015888.xyz/img/555.jpg",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "Android9专用"
             },
             {
                 "name": "X5电视版",
                 "url": "https://yf1688.top/X5离线版/4x/[x5.tbs.apk].txt",
-                "icon": "https://a.2015888.xyz/img/555.jpg",
+                "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "Android4.0专用"
             }
         ]

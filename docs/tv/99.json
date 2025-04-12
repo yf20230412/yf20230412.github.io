@@ -480,7 +480,7 @@
 
 {"key":"配置中心","name":"👨‍🍳网盘♦️配置👨‍🍳","type":3,"api":"csp_Config","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"style":{"type":"rect","ratio":1.597}},
 
-{"key":"应用商店","name":"🏪┃应用┃商店💯","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"http://www.2015888.xyz/tv/json/market.json"},
+{"key":"应用商店","name":"🏪┃应用┃商店💯","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/json/market.json"},
 
 {"key":"版本信息","name":"👿┃版本┃信息💯","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"ext":"https://9877.kstore.space/Market/market.json"}],    
 
