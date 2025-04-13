@@ -122,7 +122,7 @@ function getIPTV() {
     document.getElementById("error-message").style.display = "none";
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://2015888.xyz/jiemi/get_jiemi.php", true);
+    xhr.open("POST", "http://www.2015888.xyz/jiemi/get_jiemi.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("url=" + input);
 
