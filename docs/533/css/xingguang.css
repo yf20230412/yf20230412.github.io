@@ -5,7 +5,7 @@
     top: 20px;
 }
 
-.gradient-text {
+footer a {
     background: linear-gradient(135deg,
             #0eaf6d,
             #ff6ac6 25%,
@@ -44,6 +44,26 @@
     /* 定义动画速度曲线 */
     animation-fill-mode: forwards;
     /* 定义动画结束后状态 */
+    text-decoration: none;
+    /* 去除下划线 */
+    color: transparent;
+    /* 文字颜色透明 */
+}
+
+/* 设置 mark 标签样式 */
+footer mark {
+    background-color: #ffff00;
+    /* 背景颜色 */
+    color: #ff0033;
+    /* 文字颜色 */
+    padding: 2px 5px;
+    /* 内边距 */
+    border-radius: 3px;
+    /* 圆角 */
+}
+
+.loading .error {
+    color: #ff0033;
 }
 
 /* 定义动画 */
@@ -64,12 +84,6 @@
     }
 }
 
-a {
-    text-decoration: none;
-    /* 去除下划线 */
-    color: inherit;
-    /* 继承父元素的颜色，保持一致 */
-}
 
 /* 运行时间美化 */
 #momk {
