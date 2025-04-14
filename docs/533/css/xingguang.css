@@ -5,7 +5,7 @@
     top: 20px;
 }
 
-footer a {
+.footer a {
     background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -23,7 +23,7 @@ footer a {
 }
 
 /* 设置 mark 标签样式 */
-footer mark {
+.footer mark {
     background-color: #ffff00;
     /* 背景颜色 */
     color: #ff0033;
