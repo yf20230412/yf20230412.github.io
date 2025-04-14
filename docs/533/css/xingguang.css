@@ -24,13 +24,13 @@ h4.gradient-text a.custom-link {
 
 /* 设置 mark 标签样式 */
 a.custom-link mark {
-    background-color: #ffff00;
+    background-color: #ffff00;!important;
     /* 背景颜色 */
-    color: #ff0033;
+    color: #ff0033;!important;
     /* 文字颜色 */
-    padding: 2px 5px;
+    padding: 2px 5px;!important;
     /* 内边距 */
-    border-radius: 3px;
+    border-radius: 3px;!important;
     /* 圆角 */
 }
 
