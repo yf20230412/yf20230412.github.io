@@ -5,8 +5,8 @@
     top: 20px;
 }
 
-h4.gradient-text a.custom-link {
-    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);!important;
+h4.gradient-text , a.custom-link {
+    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -18,19 +18,19 @@ h4.gradient-text a.custom-link {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
-    text-decoration: none;!important;
+    text-decoration: none;
     /* 去除下划线 */
 }
 
 /* 设置 mark 标签样式 */
-a.custom-link mark {
-    background-color: #ffff00;!important;
+.custom-link , mark {
+    background-color: #ffff00;
     /* 背景颜色 */
-    color: #ff0033;!important;
+    color: #ff0033;
     /* 文字颜色 */
-    padding: 2px 5px;!important;
+    padding: 2px 5px;
     /* 内边距 */
-    border-radius: 3px;!important;
+    border-radius: 3px;
     /* 圆角 */
 }
 
