@@ -12,12 +12,11 @@ h4.gradient-text {
     background-clip: text;
     -webkit-background-size: 200% 100%;
     background-size: 200% 100%;
-    -webkit-animation: flowCss 5s infinite linear;
-    animation: flowCss 5s infinite linear;
+    transition: background 0.5s ease;
+    animation: change 5s infinite linear;
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
-    letter-spacing: 2px;
     color: transparent!important;
     text-decoration: none;
     /* 去除下划线 */
@@ -46,17 +45,15 @@ h4.gradient-text {
 
 a.custom-link {
     background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4)!important;
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-background-size: 200% 100%;
     background-size: 200% 100%;
-    -webkit-animation: flowCss 5s infinite linear;
-    animation: flowCss 5s infinite linear;
+    transition: background 0.5s ease;
+    animation: change 5s infinite linear;
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
-    letter-spacing: 2px;
     color: transparent!important;
     text-decoration: none;
     /* 去除下划线 */
@@ -79,23 +76,6 @@ a.custom-link {
     color: #ff0033;
 }
 
-/* 定义动画 */
-@keyframes flowCss {
-    0% {
-        /* 设置背景图像的位置 */
-        background-position: 0% 50%;
-    }
-
-    50% {
-        /* 设置背景图片的位置 */
-        background-position: 100% 50%;
-    }
-
-    100% {
-        /* 设置背景图片的位置 */
-        background-position: 0% 100%;
-    }
-}
 
 
 /* 运行时间美化 */

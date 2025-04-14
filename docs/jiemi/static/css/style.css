@@ -393,15 +393,14 @@
         /* 设置链接样式 */
         footer a {
             background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
-            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             background-clip: text;
-            -webkit-background-size: 200% 100%;
-            background-size: 200% 100%;
-            -webkit-animation: flowCss 5s infinite linear;
-            animation: flowCss 5s infinite linear;
-            display: inline-block;
-            color: transparent;
+            color: transparent; /* 文字颜色透明 */
+            text-decoration: none;  /* 去掉下划线 */
+            transition: background 0.5s ease;
+            animation: gradientAnimation 3s infinite alternate;
+            display: inline-block;           
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 2px;
