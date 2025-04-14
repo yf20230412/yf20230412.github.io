@@ -416,7 +416,7 @@
         footer mark {
             background-color: #ffff00;
             /* 背景颜色 */
-            color: #ff0033;
+            color: #ff0033!important;
             /* 文字颜色 */
             padding: 2px 5px;
             /* 内边距 */
