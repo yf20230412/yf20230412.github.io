@@ -414,8 +414,8 @@
 
         /* 设置 mark 标签样式 */
         footer mark {
-            background-color: #FEF263; 
-            color: #000000!important;
+            background-color: #2cc4e0; 
+            color: #ff0000!important;
             /* 文字颜色 */
             padding: 2px 5px;
             /* 内边距 */
