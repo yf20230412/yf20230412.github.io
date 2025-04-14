@@ -6,7 +6,7 @@
 }
 
 h4.gradient-text {
-    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
+    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4)!important;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -21,27 +21,24 @@ h4.gradient-text {
     text-decoration: none;
     /* 去除下划线 */
 }
-
 .custom-link {
-    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
-    -webkit-text-fill-color: transparent;
+    background: none;
+    color: transparent;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b)!important; /* 渐变文字 */
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-background-size: 200% 100%;
-    background-size: 200% 100%;
-    -webkit-animation: flowCss 5s infinite linear;
-    animation: flowCss 5s infinite linear;
-    display: inline-block;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
-    text-decoration: none;
+    animation: flowCss 5s infinite linear;
+    display: inline-block;
+    text-decoration: none!important;
     /* 去除下划线 */
 }
 
 /* 设置 mark 标签样式 */
 .custom-link mark {
-    background-color: #ffff00;
+    background-color: rgba(255, 255, 0, 0.5); /* 半透明的黄色背景 */
     /* 背景颜色 */
     color: #ff0033!important;
     /* 文字颜色 */
