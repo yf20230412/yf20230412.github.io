@@ -401,6 +401,7 @@
             -webkit-animation: flowCss 5s infinite linear;
             animation: flowCss 5s infinite linear;
             display: inline-block;
+            color: transparent;
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 2px;
@@ -414,7 +415,7 @@
 
         /* 设置 mark 标签样式 */
         footer mark {
-            background-color: #2cc4e0; 
+            background-color: #2cc4e0;
             color: #ff0000!important;
             /* 文字颜色 */
             padding: 2px 5px;

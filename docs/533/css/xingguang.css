@@ -18,6 +18,7 @@ h4.gradient-text {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
+    color: transparent!important;
     text-decoration: none;
     /* 去除下划线 */
 }
@@ -56,6 +57,7 @@ a.custom-link {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
+    color: transparent!important;
     text-decoration: none;
     /* 去除下划线 */
 }
@@ -63,9 +65,9 @@ a.custom-link {
 
 /* 设置 mark 标签样式 */
 .custom-link mark {
-    background-color: rgba(255, 255, 0, 0.5); /* 半透明的黄色背景 */
+    background-color: #ffff00; /* 半透明的黄色背景 */
     /* 背景颜色 */
-    color: #000000!important;
+    color: #ff0033!important;
     /* 文字颜色 */
     padding: 2px 5px;
     /* 内边距 */
