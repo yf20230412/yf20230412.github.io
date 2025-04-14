@@ -46,8 +46,6 @@ footer a {
     /* 定义动画结束后状态 */
     text-decoration: none;
     /* 去除下划线 */
-    color: transparent;
-    /* 文字颜色透明 */
 }
 
 /* 设置 mark 标签样式 */
