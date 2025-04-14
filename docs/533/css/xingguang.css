@@ -21,7 +21,29 @@ h4.gradient-text {
     text-decoration: none;
     /* 去除下划线 */
 }
-.custom-link {
+@keyframes change {
+    0% {
+        color: #5cb85c;
+    }
+
+    25% {
+        color: #556bd8;
+    }
+
+    50% {
+        color: #e40707;
+    }
+
+    75% {
+        color: #66e616;
+    }
+
+    100% {
+        color: #67bd31;
+    }
+}
+
+a.custom-link {
     background: none;
     color: transparent;
     background: linear-gradient(135deg, #ff7e5f, #feb47b)!important; /* 渐变文字 */
@@ -30,17 +52,25 @@ h4.gradient-text {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
-    animation: flowCss 5s infinite linear;
+    animation: gradient 3s infinite; /* 渐变动画 */
     display: inline-block;
     text-decoration: none!important;
     /* 去除下划线 */
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 /* 设置 mark 标签样式 */
 .custom-link mark {
     background-color: rgba(255, 255, 0, 0.5); /* 半透明的黄色背景 */
     /* 背景颜色 */
-    color: #ff0033!important;
+    color: #000000!important;
     /* 文字颜色 */
     padding: 2px 5px;
     /* 内边距 */
@@ -77,24 +107,3 @@ h4.gradient-text {
     font-weight: 800;
 }
 
-@keyframes change {
-    0% {
-        color: #5cb85c;
-    }
-
-    25% {
-        color: #556bd8;
-    }
-
-    50% {
-        color: #e40707;
-    }
-
-    75% {
-        color: #66e616;
-    }
-
-    100% {
-        color: #67bd31;
-    }
-}
