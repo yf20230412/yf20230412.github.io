@@ -6,7 +6,7 @@
 }
 
 h4.gradient-text {
-    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4)!important;
+    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4) !important;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -17,34 +17,27 @@ h4.gradient-text {
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
-    color: transparent!important;
+    color: transparent;
     text-decoration: none;
     /* 去除下划线 */
 }
+
 @keyframes change {
     0% {
-        color: #5cb85c;
-    }
-
-    25% {
-        color: #556bd8;
+        background-position: 0% 50%;
     }
 
     50% {
-        color: #e40707;
-    }
-
-    75% {
-        color: #66e616;
+        background-position: 100% 50%;
     }
 
     100% {
-        color: #67bd31;
+        background-position: 0% 50%;
     }
 }
 
 a.custom-link {
-    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4)!important;
+    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4) !important;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-background-size: 200% 100%;
@@ -54,7 +47,7 @@ a.custom-link {
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
-    color: transparent!important;
+    color: transparent;
     text-decoration: none;
     /* 去除下划线 */
 }
@@ -62,9 +55,10 @@ a.custom-link {
 
 /* 设置 mark 标签样式 */
 .custom-link mark {
-    background-color: #ffff00; /* 半透明的黄色背景 */
+    background-color: #ffff00;
+    /* 半透明的黄色背景 */
     /* 背景颜色 */
-    color: #ff0033!important;
+    color: #ff0033 !important;
     /* 文字颜色 */
     padding: 2px 5px;
     /* 内边距 */
@@ -83,4 +77,3 @@ a.custom-link {
     animation: change 10s infinite;
     font-weight: 800;
 }
-
