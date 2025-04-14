@@ -5,7 +5,7 @@
     top: 20px;
 }
 
-h4.gradient-text {
+h4.gradient-text , a.custom-link, #momk { 
     background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -36,22 +36,6 @@ h4.gradient-text {
     }
 }
 
-a.custom-link {
-    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    /* 文字颜色透明 */
-    text-decoration: none;
-    /* 去掉下划线 */
-    transition: background 0.5s ease;
-    animation: change 5s infinite alternate;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
 
 
 /* 设置 mark 标签样式 */
@@ -75,6 +59,5 @@ a.custom-link {
 
 /* 运行时间美化 */
 #momk {
-    animation: change 10s infinite;
     font-weight: 800;
 }
