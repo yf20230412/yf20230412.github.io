@@ -399,7 +399,7 @@
             color: transparent; /* 文字颜色透明 */
             text-decoration: none;  /* 去掉下划线 */
             transition: background 0.5s ease;
-            animation: gradientAnimation 3s infinite alternate;
+            animation: gradientAnimation 5s infinite alternate;
             display: inline-block;           
             font-size: 16px;
             font-weight: bold;
