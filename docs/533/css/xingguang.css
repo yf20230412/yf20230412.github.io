@@ -34,7 +34,7 @@
     }
 }
 a.custom-link {
-    color: #00ff37;
+    color: #ff6ac6;
     /* 文字颜色 */
     text-decoration: none;
     /* 去掉下划线 */
@@ -42,7 +42,7 @@ a.custom-link {
 
 
 /* 设置 mark 标签样式 */
-#mark {
+mark {
     background-color: #ffff00;
     /* 半透明的黄色背景 */
     /* 背景颜色 */
