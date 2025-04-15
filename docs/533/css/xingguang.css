@@ -34,7 +34,7 @@
     }
 }
 a.custom-link {
-    color: #F596AA;
+    color: #00ff37;
     /* 文字颜色 */
     text-decoration: none;
     /* 去掉下划线 */
@@ -46,7 +46,7 @@ a.custom-link {
     background-color: #ffff00;
     /* 半透明的黄色背景 */
     /* 背景颜色 */
-    color: #ff0033;
+    color: #ff0033!important;
     /* 文字颜色 */
     padding: 2px 5px;
     /* 内边距 */
