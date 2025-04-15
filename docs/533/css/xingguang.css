@@ -7,7 +7,7 @@
 
 .gradient-text {
     background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
-    background-size: 200% 200%;
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -34,12 +34,12 @@
     }
 }
 .custom-link {
-    background: linear-gradient(left, #F596AA, #66CCFF 25%, #F596AA 50%, #e6d205 55%, #66CCFF 75%, #8b2ce0 80%, #F596AA);
-    background-size: 200% 200%;
+    background: linear-gradient(145deg, #F596AA, #66CCFF 25%, #F596AA 50%, #e6d205 55%, #66CCFF 75%, #8b2ce0 80%, #F596AA);
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    /* 文字颜色透明 */
+    color: #ff0033;
+    /* 文字颜色 */
     text-decoration: none;
     /* 去掉下划线 */
     transition: background 0.5s ease;
