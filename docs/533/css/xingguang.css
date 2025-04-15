@@ -34,30 +34,12 @@
     }
 }
 a.custom-link {
-    background: linear-gradient(145deg, #F596AA, #66CCFF 25%, #F596AA 50%, #e6d205 55%, #66CCFF 75%, #8b2ce0 80%, #ff6384);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #F596AA;
     /* 文字颜色 */
     text-decoration: none;
     /* 去掉下划线 */
-    transition: background 0.5s ease;
-    animation: flowCsscustom 5s infinite alternate;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 2px;
 }
-@keyframes flowCsscustom {
-    0% {
-        background-position: 0% 50%;
-    }
 
-    100% {
-        background-position: 100% 50%;
-    }
-}
 
 /* 设置 mark 标签样式 */
 #mark {
