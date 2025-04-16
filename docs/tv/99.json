@@ -196,6 +196,28 @@
         "timeout": 10
     },
     {
+        "key": "零度",
+        "name": "❄️┃零度┃App🏮",
+        "type": 3,
+        "api": "./py/零度影视.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
+        "key": "悠悠",
+        "name": "🐣┃悠悠┃App🏮",
+        "type": 3,
+        "api": "./py/悠悠.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
         "key": "猎手",
         "name": "⚔️┃猎手┃App🏮",
         "type": 3,
