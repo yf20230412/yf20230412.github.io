@@ -10,7 +10,7 @@
             },
             {
                 "name": "网盘配置示例",
-                "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/网盘配置.zip",
+                "url": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/apk/网盘配置.zip",
                 "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.555.jpg",
                 "version": "阿里_夸克_uc"
             },
@@ -34,19 +34,19 @@
             {
                 "name": "最新版本",
                 "url": "",
-                "icon": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.Version.png",
+                "icon": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.Version.png",
                 "version": "jar"
             },
             {
                 "name": "本地单线",
                 "url": "https://gitee.com/PizazzXS/another-d/raw/master/单线路.zip",
-                "icon": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.单.png",
+                "icon": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.单.png",
                 "version": "潇洒"
             },
             {
                 "name": "本地多线",
                 "url": "https://gitee.com/PizazzXS/another-d/raw/master/多线路.zip",
-                "icon": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.双.png",
+                "icon": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/.双.png",
                 "version": "潇洒"
             }
         ]
@@ -56,19 +56,19 @@
         "list": [
             {
                 "name": "《小鱼影视》",
-                "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/mobile-python-arm64_v8a.apk",
+                "url": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/mobile-arm64_v8a.apk",
                 "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.小鱼.png",
                 "version": "手机专用"
             },
             {
                 "name": "《小鱼影视》",
-                "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/leanback-python-armeabi_v7a.apk",
+                "url": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/leanback-armeabi_v7a.apk",
                 "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.小鱼.png",
                 "version": "TV专用"
             },
             {
                 "name": "《小鱼影视》",
-                "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/kitkat/leanback.apk",
+                "url": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/kitkat/leanback.apk",
                 "icon": "https://raw.gitcode.com/yf1688/api/raw/main/img/.小鱼.png",
                 "version": "TV安卓4x版"
             }            

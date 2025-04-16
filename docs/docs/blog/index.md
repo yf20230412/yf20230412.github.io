@@ -31,12 +31,12 @@
 
 ▸ **[点击官网下载](https://yf1688.top/1115)**  
 
-▸ **手机最新版本**：[下载直达](https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/mobile-python-arm64_v8a.apk) 
+▸ **手机最新版本**：[下载直达](https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/mobile-arm64_v8a.apk) 
 
 
-▸ **电视最新版本**：[下载直达](https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/leanback-python-armeabi_v7a.apk)
+▸ **电视最新版本**：[下载直达](https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/release/leanback-armeabi_v7a.apk)
 
-▸ **电视安卓4版本，停更**：[v2.5.0 下载直达](https://cdn09022024.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/kitkat/leanback.apk)
+▸ **电视安卓4版本，停更**：[v2.5.0 下载直达](https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/master/Release/apk/kitkat/leanback.apk)
 
 ✨ *提示：安卓/电视端均支持，安装包仅50MB！注意安卓4盒子几乎淘太了,很多接口也不再支持了。安卓4版自带腾讯x5所以大小有73M左右。*  
 

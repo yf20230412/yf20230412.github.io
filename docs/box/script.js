@@ -143,7 +143,7 @@ const list = [
         "color": "#91ad70"
     },
     {
-        "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/wykj/ys/raw/master/ya.json",
+        "url": "https://cdn04132025.gitlink.org.cn/api/v1/repos/wykj/ys/raw/master/ya.json",
         "name": "🛵无意线路",
         "color": "#91ad70"
     },
