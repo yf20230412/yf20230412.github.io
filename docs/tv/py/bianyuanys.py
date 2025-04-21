@@ -99,7 +99,7 @@ class Spider(Spider):
         names=[]
         for i in vod['vod_play_url']:
             ulist=[]
-            names.append(i['name'].split(' ')[0])
+            names.append("🌺风言锋语88🌺" +i['name'].split(' ')[0])
             jdata={'parse':''}
             if i.get('parse') and isinstance(i['parse'], list) and len(i['parse']):
                 jdata['parse']=self.e64(json.dumps(i['parse']))
@@ -107,7 +107,7 @@ class Spider(Spider):
                 jdata['url']=j['url']
                 ulist.append(f'{j["name"]}${self.e64(json.dumps(jdata))}')
             plist.append('#'.join(ulist))
-        vod['vod_play_from']='小鱼🐬'+'$$$'.join(names)
+        vod['vod_play_from']='$$$'.join(names)
         vod['vod_play_url']='$$$'.join(plist)
         vod.pop('cover_list', None)
         return {'list':[vod]}

@@ -130,7 +130,9 @@ class Spider(Spider):
         w, e = [],[]
         for i, x in pd.items():
             if x:
-                w.append(n[i])
+                #w.append(n[i])
+                w.append(f"🌺风言锋语88🌺 {n[i]}")
+
                 e.append(x)
         vod['vod_play_from'] = '$$$'.join(w)
         vod['vod_play_url'] = '$$$'.join(e)

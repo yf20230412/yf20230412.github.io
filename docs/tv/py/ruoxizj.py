@@ -104,13 +104,13 @@ class Spider(Spider):
         names = []
         for itt in data["vod_play_list"]:
             a = []
-            names.append(itt["player_info"]["show"])
+            names.append("🌺风言锋语88🌺" +itt["player_info"]["show"])
             for it in itt['urls']:
                 it['user_agent']=itt["player_info"].get("user_agent")
                 it["parse"]=itt["player_info"].get("parse")
                 a.append(f"{it['name']}${self.e64(json.dumps(it))}")
             play.append("#".join(a))
-        vod["vod_play_from"] ="小鱼🐬"+ "$$$".join(names)
+        vod["vod_play_from"] = "$$$".join(names)
         vod["vod_play_url"] = "$$$".join(play)
         result = {"list": [vod]}
         return result

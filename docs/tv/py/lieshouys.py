@@ -123,7 +123,7 @@ class Spider(Spider):
         names = []
         tasks = []
         for itt in data["play_from"]:
-            name = itt["name"]
+            name ="🌺风言锋语88🌺"+ itt["name"]
             a = []
             if len(itt["list"]) > 0:
                 names.append(name)
@@ -139,7 +139,7 @@ class Spider(Spider):
                         play.append(result)
                     else:
                         play.append("")
-        video["vod_play_from"] ="小鱼🐬"+"$$$".join(names)
+        video["vod_play_from"] ="$$$".join(names)
         video["vod_play_url"] = "$$$".join(play)
         result = {"list": [video]}
         return result
