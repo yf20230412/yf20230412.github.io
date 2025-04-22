@@ -1,6 +1,6 @@
 // Base64 编码
 function encodeBase64() {
-    const inputText = document.getElementById('inputText').value;
+    const inputText = document.getElementById('inputText').value.trim(); // 使用trim()方法去除两端空白字符
     const encoder = new TextEncoder();
     const data = encoder.encode(inputText);
     const encodedText = btoa(String.fromCharCode.apply(null, new Uint8Array(data)));
@@ -14,7 +14,7 @@ function encodeBase64() {
 
 // Base64 解码
 function decodeBase64() {
-    const inputText = document.getElementById('inputText').value;
+    const inputText = document.getElementById('inputText').value.trim(); // 使用trim()方法去除两端空白字符
     try {
         const binaryString = atob(inputText);
         const len = binaryString.length;
