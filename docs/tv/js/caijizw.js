@@ -18,7 +18,7 @@ globalThis.getRandomItem = function (items) {//从列表随机取出一个元素
 var rule = {
     title: '采集之王[合]',
     author: '🌺风言锋语88🌺',
-    version: '20240706 beta17',
+    version: '风言锋语88',
     update_info: `
 20240706:
 1.静态json数据支持cate_excludes分类名称列表过滤无数据分类
@@ -191,9 +191,9 @@ var rule = {
     }),
     推荐: $js.toString(() => {
         let update_info = [{
-            vod_name: '更新日志',
+            vod_name: '微信公众号',
             vod_id: 'update_info',
-            vod_remarks: `版本:${rule.version}`,
+            vod_remarks: `${rule.version}`,
             vod_pic: 'https://a.2015888.xyz/img/wxgzh2.png'
         }];
         VODS = [];
@@ -239,10 +239,10 @@ var rule = {
         if (orId === 'update_info') {
             VOD = {
                 vod_content: rule.update_info.trim(),
-                vod_name: '更新日志',
-                type_name: '更新日志',
+                vod_name: '微信公众号',
+                type_name: '微信公众号',
                 vod_pic: 'https://raw.gitcode.com/yf1688/api/raw/main/img/.怦然心动.jpg',
-                vod_remarks: `版本:${rule.version}`,
+                vod_remarks: `${rule.version}`,
                 vod_play_from: '小鱼在线',
                 vod_play_url: '嗅探播放$https://raw.gitcode.com/yf1688/api/raw/main/videos/SNH48MV.mp4',
               //  vod_play_url: '随机小视频$http://api.yujn.cn/api/zzxjj.php',
@@ -259,7 +259,7 @@ var rule = {
                 let data = json.list;
                 VOD = data[0];
                 if (current_vod && current_vod.type_name) {
-                    VOD.vod_play_from = VOD.vod_play_from.split('$$$').map(it => current_vod.type_name + '|' + it).join('$$$')
+                    VOD.vod_play_from = VOD.vod_play_from.split('$$$').map(it => current_vod.type_name + '🌺' +"风言锋语88🌺"+ it).join('$$$')
                 }
             }
         }
