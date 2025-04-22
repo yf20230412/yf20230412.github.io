@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Cache - Control" content="no - cache, no - store, must - revalidate">
+    <meta http-equiv="Pragma" content="no - cache">
+    <meta http-equiv="Expires" content="0">
+    <!--完-->
     <link rel="apple-touch-icon" sizes="72x72" href="/static/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/icon/32.png">
@@ -28,71 +33,363 @@
         <canvas id="startrack"></canvas>
         <div class="cover"></div>
     </div>
-    
-    <div class="main"></div>
-    <div class="find ch"></div>
-    
-    <div class="gate ch">
-        <div class="container links">
-            <h2 class="chtitle">影视资源<span>免费推荐</span></h2>
-            <div class="clear col-3"></div>
-            <!-- 页脚 -->
-            <div class="footer yy">
-                <div class="container">
-                    <a href="https://yf1688.top/wo/">
-                        <h4 class="gradient-text">星光满载 初心不改 © 2023 小鱼</h4>
-                    </a><br>
-                    <!--以下为网站运行时间-->
-                    <span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
-                    <script type="text/javascript">
-                        function NewDate(str) {
-                        str = str.split('-');
-                        var date = new Date();
-                        date.setUTCFullYear(str[0], str[1] - 1, str[2]);
-                        date.setUTCHours(0, 0, 0, 0);
-                        return date;
-                        }
-                        function momxc() {
-                        var birthDay =NewDate("2023-11-11");
-                        var today=new Date();
-                        var timeold=today.getTime()-birthDay.getTime();
-                        var sectimeold=timeold/1000
-                        var secondsold=Math.floor(sectimeold);
-                        var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
-                        var daysold=Math.floor(e_daysold);
-                        var e_hrsold=(daysold-e_daysold)*-24;
-                        var hrsold=Math.floor(e_hrsold);
-                        var e_minsold=(hrsold-e_hrsold)*-60;
-                        var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
-                        document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
-                        setTimeout(momxc, 1000);
-                        }momxc();
-                    </script><br>
-                    <a class="custom-link" target="_blank" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMTUyMTgwMA==&action=getalbum&album_id=3215428467836715013#wechat_redirect" title="微信公众号：风言锋语88" alt="微信公众号：风言锋语88">
-                        微信公众号：<mark>风言锋语88</mark>
-                    </a>
+    <div class="main">
+        <div class="ch intro">
+            <div class="container">
+                <div class="hello">
+                    <h1 id="slogan">思考中...</h1>
+                    <!--随机文字信息在\js\page.3a0791a3.js中修改-->
+                    <h2>
+                        <div class="circle"> <span></span> <span></span>
+                            <span></span>
+                        </div> 小鱼
+                    </h2>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="ch about">
+            <div class="container">
+                <h2 class="chtitle">Who is <span> </span></h2>
+                <div class="clear">
+                    <div class="introduct">
+                        <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=1010164222&s=640">
+                        <p>&nbsp;&nbsp;🔸 学习是一个永无止境的过程，你知道的越多，你不知道的也会越多，然而，正是在这有限的时光里，若能坚持每日多学一点，哪怕只是微小的进步，你终将一步步迈向那个理想中的自己。<br>&nbsp;&nbsp;因为，正如古语所言：“不积跬步，无以至千里；不积小流，无以成江海。”每一份努力，都不会被辜负；每一次坚持，都在为你的未来默默铺路。相信自己，用汗水浇灌希望的种子，用行动书写属于自己的辉煌篇章。终有一天，你会成为那个光芒万丈的自己！</p><br>
+
+                        <p style="padding-bottom:1em;">How lucky to meet you!</p>
+                        <p>你好，我是小鱼 <sup>Small fish</sup> ，对有趣的世界和可能有趣的你充满好奇，热爱折腾~</p><br>
+                        <p>茫茫人海，感恩与你不期而遇。期待着我们共同成长，成为更好的自己。在学习的路上，我们不孤单，因为有你，有我，有这无尽星空的见证。</p>
+                        <div class="chatbox">
+                            <div class="line loading"> <span></span>
+                                <span></span> <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="skill clear">
+                        <li>
+                            <p>颜值</p>
+                            <div class="progress">
+                                <div style="width:77%;"></div>
+                                <span>若非群玉山头见 会向瑶台月下逢</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>身材</p>
+                            <div class="progress">
+                                <div style="width:80%;"></div>
+                                <span>似撼天狮子下云端 如摇地貔貅临座上</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>三观</p>
+                            <div class="progress">
+                                <div style="width:88%;"></div>
+                                <span>三观永远比五官正~</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>钱包</p>
+                            <div class="progress">
+                                <div style="width:35%;"></div>
+                                <span>手机不贴膜 上厕所不折纸</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>梦想实现</p>
+                            <div class="progress">
+                                <div style="width:46%;"></div>
+                                <span>相距很远 努力实现</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>生活态度</p>
+                            <div class="progress">
+                                <div style="width:76%;"></div>
+                                <span>颇为满意 小有不足</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>未来期望</p>
+                            <div class="progress">
+                                <div style="width:94%;"></div>
+                                <span>实现理想 彼此幸福~</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>迷茫指数</p>
+                            <div class="progress">
+                                <div style="width:50%;"></div>
+                                <span>时而清醒 时而迷茫</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="find ch"></div>
+
+        <div class="gate ch">
+            <div class="container links">
+                <h2 class="chtitle">影视资源<span>免费推荐</span></h2>
+                <div class="clear col-3">
+
+                    <a href="https://a.2015888.xyz/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="/static/icon/72.png">
+                            </div>
+                            <div class="inner">
+                                <h5>主页导航</h5>
+                                <p>另一个主页~哈哈~</p>
+                            </div>
+                        </div>
+                    </a>
 
 
-    <script src="./js/page.3a0791a3.js"></script>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/jiek.js"></script>
-    <script src="./js/ziyuan.js"></script>
-    <!--以下为点击复制调用js-->
-    <script src="./js/clipboard.min.js"></script>
-    <script src="./js/copy.js"></script>
-    <!--在线播放器API-->
-    <script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script>
-    <!--雪花API-->
-    <script src='https://api.vvhan.com/api/script/snow'></script>
-    <!--底部波浪-->
-    <div id="hans-bolang"></div>
-    <script src="https://api.vvhan.com/api/bolang"></script>
-    <script src="/static/F12.js"></script>
+                    <a href="/jiemi/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/948818849.svg">
+                            </div>
+                            <div class="inner">
+                                <h5>TVBox解密</h5>
+                                <p>TVBox接口解密以及AES加解密</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="https://www.iconfont.cn/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg"> </div>
+                            <div class="inner">
+                                <h5>阿里矢量图标库</h5>
+                                <p>一个免费矢量图网站</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/1115/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/reactivex-svgrepo-com.svg"> </div>
+                            <div class="inner">
+                                <h5>小鱼影视</h5>
+                                <p>一个完全免费，无任何广告的影视软件</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="/jm/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/369231317.svg">
+                            </div>
+                            <div class="inner">
+                                <h5>tvbox配置编辑</h5>
+                                <p>配置编辑器，支持接口加密</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/toos/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/invision-svgrepo-com.svg">
+                            </div>
+                            <div class="inner">
+                                <h5>工具箱</h5>
+                                <p>网络工具书签，快速收藏、分类管理常用网址，方便随时访问。</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="https://yf1688.top/m3u/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://s1.imagehub.cc/images/2023/07/01/zbzh.webp">
+                            </div>
+                            <div class="inner">
+                                <h5>直播源格式转换</h5>
+                                <p>直播源格式在线转换工具</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://my.ksust.com/kstore.htm?aff=4645" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://my.ksust.com/upload/avatar/000/1.png?1577675522"> </div>
+                            <div class="inner">
+                                <h5>凯速直链文件存储</h5>
+                                <p>稳定速度快，个人私用接口托管足够了</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="mqqwpa://im/chat?chat_type=wpa&uin=1010164222&version=1&src_type=web&web_src=oicqzone.com" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/380601855.svg"> </div>
+                            <div class="inner">
+                                <h5>TVBox交流群</h5>
+                                <p>只有分享了，你的快乐才是真的快乐</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://t.me/TVBoxxoo/27464" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://s1.imagehub.cc/images/2023/07/01/Telegram_2019_Logo.svg.md.png"> </div>
+                            <div class="inner">
+                                <h5>Box醒人室</h5>
+                                <p>饭太硬分享交流群！大伙们分享交流！来交个朋友吧~</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="http://qiqiv.cn/tvbox.php" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://s1.imagehub.cc/images/2023/07/31/photo_2023-07-31_20-21-18.md.jpeg">
+                            </div>
+                            <div class="inner">
+                                <h5>TVBox软件下载</h5>
+                                <p>奇奇持续更新分享各种BOX改版</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://zouming.com/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/1233325234.svg">
+                            </div>
+                            <div class="inner">
+                                <h5>影视资源下载</h5>
+                                <p>收集全网影视资源,免费下载~</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                    <a href="https://github.com/takagen99/Box" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://s1.imagehub.cc/images/2023/07/01/taka.md.png">
+                            </div>
+                            <div class="inner">
+                                <h5>takagen99仓库</h5>
+                                <p>基于Tvbox官仓源码，修改美化UI</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/FongMi/TV" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/balena-svgrepo-com.svg">
+                            </div>
+                            <div class="inner">
+                                <h5>FongMI仓库</h5>
+                                <p>台湾活雷锋，极简而强大的影视播放器</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="https://www.iptvindex.com/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://4645.kstore.space/img/iptv.png">
+                            </div>
+                            <div class="inner">
+                                <h5>IPTV资源</h5>
+                                <p>有关iptv的软件和接口~</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/fanmingming/live" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/418479907.svg">
+                            </div>
+                            <div class="inner">
+                                <h5>范明明直播仓</h5>
+                                <p>一个可直连访问的电视/广播图标库与相关工具项目 ✯ 🔕 永久免费 直连访问 完整开源 不断完善的台标 支持IPv4/IPv6双栈访问 🔕</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="https://suo.yt/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/974377863.svg">
+                            </div>
+                            <div class="inner">
+                                <h5>太短</h5>
+                                <p>缩短链接，屌！也不是很短~</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://gh.2015888.xyz/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="https://a.2015888.xyz/svg/code-github-hosting-svgrepo-com.svg"> </div>
+                            <div class="inner">
+                                <h5>太快</h5>
+                                <p>GitHub 文件加速</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+                <div class="footer yy">
+                    <div class="container">
+                        <a href="https://yf1688.top/wo/">
+                            <h4 class="gradient-text">星光满载 初心不改 © 2023 小鱼</h4>
+                        </a><br>
+                        <!--以下为网站运行时间-->
+                        <span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+                        <script type="text/javascript">
+                            function NewDate(str) {
+                            str = str.split('-');
+                            var date = new Date();
+                            date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+                            date.setUTCHours(0, 0, 0, 0);
+                            return date;
+                            }
+                            function momxc() {
+                            var birthDay =NewDate("2023-11-11");
+                            var today=new Date();
+                            var timeold=today.getTime()-birthDay.getTime();
+                            var sectimeold=timeold/1000
+                            var secondsold=Math.floor(sectimeold);
+                            var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+                            var daysold=Math.floor(e_daysold);
+                            var e_hrsold=(daysold-e_daysold)*-24;
+                            var hrsold=Math.floor(e_hrsold);
+                            var e_minsold=(hrsold-e_hrsold)*-60;
+                            var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+                            document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+                            setTimeout(momxc, 1000);
+                            }momxc();
+                        </script><br>
+                        <a class="custom-link" target="_blank" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMTUyMTgwMA==&action=getalbum&album_id=3215428467836715013#wechat_redirect" title="微信公众号：风言锋语88" alt="微信公众号：风言锋语88">
+                            微信公众号：<mark>风言锋语88</mark>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./js/page.3a0791a3.js"></script>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/jiek.js"></script>
+        
+        <!--以下为点击复制调用js-->        
+        <script src="./js/clipboard.min.js"></script>
+        <script src="./js/copy.js"></script>
+
+        <!--在线播放器API-->
+        <script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script>
+        <!--雪花API-->
+        <script src='https://api.vvhan.com/api/script/snow'></script>
+        <!--看板娘-->
+        <!--<script src="https://fastly.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
+<script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>-->
+        <!--底部波浪-->
+        <div id="hans-bolang"></div>
+        <script src="https://api.vvhan.com/api/bolang"></script>
+        <script src="/static/F12.js"></script>
 </body>
 
 </html>
