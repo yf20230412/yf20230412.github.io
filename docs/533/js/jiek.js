@@ -1,7 +1,7 @@
 // 定义HTML内容
 const htmlContent = `
 <div class="container links">
-    <h2 class="chtitle">Tvbox<span>接口</span>点击复制</h2>
+    <h2 class="chtitle">TVBox接口<span>点击复制</span></h2>
     <div class="clear col-3">
         <!-- 一排 -->
         <div class="item">
