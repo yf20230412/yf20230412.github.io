@@ -469,7 +469,7 @@
 
 {"key":"Mp4电影","name":"🧲┃Mp4┃磁力💯","type":3,"api":"csp_Mp4Mov","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":15},
 
-{"key":"酷狗","name":"🐶┃酷狗┃音乐💯","type":3,"api":"KugouGuard","jar":"https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
+{"key":"酷狗","name":"🐶┃酷狗┃音乐💯","type":3,"api":"KugouGuard","jar":"https://yf1688.top/tv/jar/xiaoyu.jar","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
 
 {"key":"直播转点播","name":"📺┃电视┃直播🪅","type":3,"api":"./js/zhibozdb2.js","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/zhiboc.json"},
 
