@@ -452,17 +452,14 @@
 
 
 
-{"key":"哔嘀影视","name":"🧲┃哔嘀┃磁力🌺","type":3,"api":"https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/bidiys.js","timeout":15},
 
 {"key":"csp_Bttoo","name":"🧲┃比特┃磁力🌺","type":3,"api":"https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/lianggebt.js","timeout":15},
-
-{"key":"酷吧电影","name":"🧲┃酷吧┃磁力💯","type":3,"api":"csp_KubaCL","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":15},
 
 {"key":"美剧天堂","name":"🧲┃美剧┃磁力💯","type":3,"api":"csp_MeijuTT","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":15},
 
 {"key":"6V新磁力","name":"🧲┃6V新┃磁力💯","type":3,"api":"csp_New6v","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext": "https://www.xb6v.com","timeout":15},
 
-{"key":"80S","name":"🧲┃80S┃磁力🌺","type":3,"api":"csp_BLSGod","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":15},
+{"key":"80S","name":"🧲┃80S┃磁力💯","type":3,"api":"csp_BLSGod","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":15},
 
 {"key":"SeedHub","name":"🧲┃SHB┃磁力💯","type":3,"api":"csp_SeedHub","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":15},
 
@@ -472,7 +469,7 @@
 
 {"key":"Mp4电影","name":"🧲┃Mp4┃磁力💯","type":3,"api":"csp_Mp4Mov","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"timeout":15},
 
-{"key":"酷狗","name":"🐶┃酷狗┃音乐💯","type":3,"api":"csp_Kugou","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
+{"key":"酷狗","name":"🐶┃酷狗┃音乐💯","type":3,"api":"KugouGuard","jar":"https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt","quickSearch":0,"searchable":0,"changeable":0,"filterable":1},
 
 {"key":"直播转点播","name":"📺┃电视┃直播🪅","type":3,"api":"./js/zhibozdb2.js","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/zhiboc.json"},
 
