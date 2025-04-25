@@ -135,7 +135,7 @@ class Spider(Spider):
             'type_name': v.get('category'),
             'vod_year': v.get('time'),
             'vod_remarks': v.get('duration'),
-            'vod_content': '公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇┃+' + (v.get('desc') or ''),
+            'vod_content': '公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇┃' + (v.get('desc') or ''),
             'vod_play_from': '小鱼爱看短剧',
             'vod_play_url': '#'.join([f"{i['title']}${i['video_id']}" for i in v['data']])
         }

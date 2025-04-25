@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @小鱼
+# 光速App
 import re
 import sys
 from Crypto.Hash import MD5

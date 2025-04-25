@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @小鱼
-# 小苹果
+# 小苹果App
 import sys
 sys.path.append('..')
 from base.spider import Spider
@@ -98,7 +98,7 @@ class Spider(Spider):
             'vod_actor':v.get('actor'),
             'vod_director':v.get('director'),
             'vod_content': '公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇┃' + (v.get('content') or ''),
-            'vod_play_from': '小鱼影视',
+            'vod_play_from': '🌺风言锋语88🌺',
             'vod_play_url': '#'.join([f"{i['key']}${i['url']}" for i in v['urls']])
         }
         return {'list':[vod]}

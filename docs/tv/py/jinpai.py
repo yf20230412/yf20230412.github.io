@@ -1,5 +1,6 @@
-# coding=utf-8
-# !/usr/bin/python
+# -*- coding: utf-8 -*-
+# by @小鱼
+# 金牌影视
 import json
 import sys
 import threading

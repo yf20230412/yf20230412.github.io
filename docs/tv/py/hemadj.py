@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# by @小鱼
+# 河马短剧
 import requests
 import re
 import json

@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# by @小鱼
+# 奇迹App
 import re
 import sys
 from Crypto.Hash import MD5

@@ -1,6 +1,6 @@
-# coding=utf-8
-# !/usr/bin/python
-# by小鱼(finally)
+# -*- coding: utf-8 -*-
+# by @小鱼
+# 猎手App
 import sys
 import os
 sys.path.append("..")

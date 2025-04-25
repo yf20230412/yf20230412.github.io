@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @小鱼
-# 云端
+# 云端App
 import re
 import sys
 import threading

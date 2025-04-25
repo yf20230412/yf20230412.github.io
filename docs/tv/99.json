@@ -250,6 +250,18 @@
         "timeout": 15
     },
     {
+        "key": "小红影视",
+        "name": "💄┃小红┃影视🏮",
+        "type": 3,
+        "api": "./py/xiaohongys.py",
+        "playerType": 2,
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
         "key": "csp_可可影视",
         "name": "🍹┃可可┃影视🌺",
         "type": 3,

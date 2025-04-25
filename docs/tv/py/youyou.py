@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @小鱼
-# 悠悠
+# 悠悠App
 import re
 import sys
 from Crypto.Hash import MD5
