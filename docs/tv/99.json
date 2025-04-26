@@ -399,7 +399,7 @@
 
 {"key":"搜狗","name":"🐶┃搜狗┃解析🌺","type":3,"api": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/sougou.js","timeout":15},
 
-{"key":"360_spider","name":"⚽️┃360┃解析💯","type":3,"api":"csp_Sp360","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":{"danmu":false},"timeout":15},
+{"key":"360_spider","name":"⚽️┃360┃解析💯","type":3,"api":"csp_SP360","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":{"danmu":false},"timeout":15},
 
 {"key":"樱花","name":"🌸┃樱花┃动漫💯","type":3,"api":"csp_YHDMGuard","jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt","searchable":1,"quickSearch":1,"filterable":1,"timeout":10},
 
