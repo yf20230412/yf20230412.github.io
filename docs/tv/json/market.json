@@ -79,19 +79,19 @@
         "list": [
             {
                 "name": "野草助手",
-                "url": "https://2015888.xyz/api/apk/yecao.apk",
+                "url": "https://2015888.xyz/api/apk/yecao.apk.1",
                 "icon": "https://2015888.xyz/api/img/.yecao.png",
                 "version": "V2.0.7电视版"
             },
             {
                 "name": "WiFi万能钥匙",
-                "url": "https://2015888.xyz/api/apk/WiFi.apk",
+                "url": "https://2015888.xyz/api/apk/WiFi.apk.1",
                 "icon": "https://2015888.xyz/api/img/.WiFi.png",
                 "version": "v1.0.10手机版"
             },
             {
                 "name": "搜狗输入法",
-                "url": "https://2015888.xyz/api/apk/sougou.apk",
+                "url": "https://2015888.xyz/api/apk/sougou.apk.1",
                 "icon": "https://2015888.xyz/api/img/.sougou.png",
                 "version": "v11.50手机版"
             },
@@ -109,19 +109,19 @@
             },
             {
                 "name": "应用管家",
-                "url": "https://2015888.xyz/api/apk/yygj.apk",
+                "url": "https://2015888.xyz/api/apk/yygj.apk.1",
                 "icon": "https://2015888.xyz/api/img/.yygj.png",
                 "version": "v1.6.1电视版"
             },
             {
                 "name": "LocalSend",
-                "url": "https://2015888.xyz/api/apk/LocalSend.apk",
+                "url": "https://2015888.xyz/api/apk/LocalSend.apk.1",
                 "icon": "https://2015888.xyz/api/img/.LocalSend.png",
                 "version": "v1.17.0手机版"
             },
             {
                 "name": "MT管理器",
-                "url": "https://2015888.xyz/api/apk/MT.apk",
+                "url": "https://2015888.xyz/api/apk/MT.apk.1",
                 "icon": "https://2015888.xyz/api/img/.MT.png",
                 "version": "v2.18.2手机版"
             },
