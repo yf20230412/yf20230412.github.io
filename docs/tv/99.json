@@ -172,17 +172,6 @@
         "timeout": 10
     },
     {
-        "key": "光速",
-        "name": "🔦┃光速┃App🏮",
-        "type": 3,
-        "api": "./py/guangsu.py",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 10
-    },
-    {
         "key": "云端",
         "name": "⛅️┃云端┃App🏮",
         "type": 3,
