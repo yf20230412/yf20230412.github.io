@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,11 +13,12 @@
     <link rel="stylesheet" type="text/css" href="./static/css/iptv.css">
     <title>📺 IPTV研究所…</title>
 </head>
+
 <body>
     <div class="container">
         <h1 class="title">佛系收集，免费分享 😊</h1>
         <p class="subtitle">实时直播集萃 🌟| 尽享精彩瞬间</p>
-        
+
         <div class="subscription-grid">
             <div class="subscription-link" onclick="copySubscriptionLink('https://tv.iill.top/m3u/Gather')">
                 <span class="emoji">📺</span>电视直播
@@ -25,32 +26,41 @@
 
             <div class="subscription-link" onclick="copySubscriptionLink('https://tv.iill.top/m3u/Live')">
                 <span class="emoji">🎥</span>网络直播
-            </div>
-
-            <div class="subscription-link" onclick="copySportLink()">
-                <span class="emoji">🚴‍♂️</span>暂无项目
-            </div>
+            </div>            
 
             <div class="subscription-link" onclick="copyMytvLink()">
                 <span class="emoji">📡</span>MyTV直播
             </div>
+            
+            <div class="subscription-link" onclick="copySportLink()">
+                <span class="emoji">🐬</span>小鱼直播
+            </div>
+            
+            <div class="subscription-link" onclick="copyXiaoYuYsLink()">
+                <span class="emoji">🎞️</span>小鱼影视Json
+            </div>
+            
         </div>
 
         <div class="small-links">
             <a href="https://t.me/yf2020" target="_blank">Telegram</a>
-            <a href="https://github.com/yf20230412/yf20230412.github.io/issues" target="_blank">问题留言</a>
+            <a href="https://support.qq.com/product/673813" target="_blank">问题留言</a>
         </div>
     </div>
-    
+
     <div id="updateModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeUpdateNotice()">&times;</span>
             <div class="update-content">
                 <h2 style="text-align: center;">✨ 公告 ✨</h2>
                 <div class="notice-text">请勿频繁刷新订阅..</div>
-                
+
                 <strong>㊀ · 更新日志 📝</strong>
-                    <div class="update-section">
+                <div class="update-section">
+
+                    <div class="update-date">• 2025.4.29</div>
+                    <div class="update-item">增加 Json 格式订阅「其他问题·待定」</div>
+                    <div class="update-item">维护 Live「更新周期改为 15 分钟」</div>
 
                     <div class="update-date">• 2025.4.1</div>
                     <div class="update-item">维护 Gather「删除 •咪咕源 / 当作节目表吧」</div>
@@ -61,7 +71,7 @@
                     <div class="update-item">维护 Live「修复生成错误 BUG」</div>
 
                     <div class="update-date">• 2025.2.4</div>
-                    <div class="update-item">重启 Gather「删除 •IPV6 源 / •国际「汇集」」</div>
+                    <div class="update-item">重启 Gather「删除 •IPV6 源 / •國際「匯集」」</div>
                     <div class="update-item">重启 Live「备份文件为1月1号 / 更新周期改为 30 分钟」</div>
 
                     <div class="update-date">• 2024.12.28</div>
@@ -78,7 +88,7 @@
         </div>
     </div>
 
-<script src="./static/js/iptv.js"></script>
+    <script src="./static/js/iptv.js"></script>
 
 </body>
 
