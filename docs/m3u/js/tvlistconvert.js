@@ -92,5 +92,5 @@ function downloadmitv() {
           else
           {
                   download("tvlist.txt",textmitv);
-          }                                                                                                                                                                                                                                                                                                                                                                          
-}                                                                                        
+          }
+}

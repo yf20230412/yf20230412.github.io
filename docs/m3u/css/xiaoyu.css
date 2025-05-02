@@ -1,0 +1,112 @@
+.txtarea {
+    resize: none;
+    height: 366px;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    line-height: 160%
+}
+
+.tvinput {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 4px 5px 0px
+}
+
+.form-group {
+    float: right;
+    margin-top: 5px;
+    margin-left: 21px;
+    margin-bottom: 10px
+}
+
+.fileinput-button {
+    float: left;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: 10px
+}
+
+.fileinput-button input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 20px
+}
+
+.kratos-post-inner {
+    padding-top: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .kratos-post-inner {
+        padding-top: 2px;
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+.tvinput {
+    .tvinput#TXTAJAX {
+        background-color: #C431B4;
+        /* 紫色 */
+        color: white;
+    }
+
+    .tvinput#M3UPPAJAX {
+        background-color: #33FF57;
+        /* 绿色 */
+        color: black;
+    }
+
+    .tvinput#M3Utest {
+        background-color: #3377FF;
+        /* 蓝色 */
+        color: white;
+    }
+
+    .tvinput#m3uclear {
+        background-color: #FF9800;
+        /* 橙色 */
+        color: black;
+    }
+
+
+
+    .tvinput[onClick="copy();"] {
+        background-color: #FFD700;
+        /* 金色 */
+        color: black;
+    }
+
+    .tvinput[onClick="downloadmitv();"] {
+        background-color: #00BFFF;
+        /* 亮蓝色 */
+        color: white;
+    }
+    
+    
+    .btn.btn-success.fileinput-button {
+    background-color: #5cb85c; /* 原btn-success默认绿色 */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #4cae4c;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+.btn.btn-success.fileinput-button:hover {
+    background-color: #449d44;
+    border-color: #398439;
+}
