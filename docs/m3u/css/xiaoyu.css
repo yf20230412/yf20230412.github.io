@@ -7,12 +7,6 @@
     line-height: 160%
 }
 
-.tvinput {
-    font-size: 14px;
-    color: #333;
-    margin: 5px 4px 5px 0px
-}
-
 .form-group {
     float: right;
     margin-top: 5px;
@@ -54,7 +48,10 @@ a {
     text-decoration: none;
 }
 
-
+.tvinput {
+    font-size: 14px;
+    margin: 5px 4px 5px 0px
+}
 
 .tvinput {
     .tvinput#TXTAJAX {
@@ -94,6 +91,7 @@ a {
         /* 亮蓝色 */
         color: white;
     }
+}    
     
     
     .btn.btn-success.fileinput-button {
