@@ -8,6 +8,7 @@
 }
 
 .form-group {
+    font-size: 14px;
     float: right;
     margin-top: 5px;
     margin-left: 21px;
@@ -50,7 +51,7 @@ a {
 
 .tvinput {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 8px 10px;
     margin: 5px 4px 5px 0px
 }
 
@@ -60,8 +61,8 @@ a {
 }
 
 .tvinput#M3UPPAJAX {
-    background-color: #ff0000;
-    color: black;
+    background-color: #f78da7;
+    color: white;
 }
 
 .tvinput#M3Utest {
@@ -71,14 +72,14 @@ a {
 
 .tvinput#m3uclear {
     background-color: #FF9800;
-    color: black;
+    color: white;
 }
 
 
 
 .tvinput[onClick="copy();"] {
     background-color: #039BE5;
-    color: black;
+    color: white;
 }
 
 .tvinput[onClick="downloadmitv();"] {
