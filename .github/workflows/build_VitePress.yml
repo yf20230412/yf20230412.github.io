@@ -1,5 +1,3 @@
- # 相对于deploy.yml多了release功能,构建时忽略 `set-output` command is deprecated and will报错,  这是actions/upload-release-asset@v1 版本问题,不需要管
-# 取消注释后才能使用
 name: VitePress to Branch torelease
 on:
   workflow_dispatch:
@@ -74,6 +72,14 @@ jobs:
         id: get-date
         run: |
           echo "RELEASE_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV        
+          
+      # 上传构建产物到artifacts
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: xiaoyu_blog
+          path: docs/xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
+          if-no-files-found: ignore # 静默跳过,不报错也不警告，直接跳过上传
           
       # 检查并删除现有的 Release
       - name: Delete old Release and Tag

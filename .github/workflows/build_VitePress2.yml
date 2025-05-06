@@ -1,10 +1,10 @@
 # 相对于release.yml没有release功能
 # 自动上传到文件到docs/docs/才能触发,自动构建,复制按钮bk文件名
-name: Deploy VitePress to Branch
+name: VitePress2 to Branch torelease
 on:
-  push:
-    paths:
-      - 'docs/docs/**'  #上传到docs/docs/才能触发
+  #push:
+    #paths:
+      #- 'docs/docs/**'  #上传到docs/docs/才能触发
   workflow_dispatch:
 
 env:

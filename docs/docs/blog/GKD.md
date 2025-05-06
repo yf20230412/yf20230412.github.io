@@ -5,7 +5,7 @@
 
 * 下载地址📂：https://github.com/gkd-kit/gkd/releases
 
-**🎖当前版本: v190**
+**🎖当前版本: v1.10.3**
 
 ## [订阅链接](https://github.com/topics/gkd-subscription)：
 
