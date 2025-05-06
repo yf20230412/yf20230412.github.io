@@ -35,23 +35,7 @@
       "ua": "okhttp/3.8.1",
       "timeout": 10,
       "playerType": 1
-    },
-    {
-      "name": "Live",
-      "type": 0,
-      "url": "https://tv.iill.top/m3u/Live",
-      "ua": "okhttp/3.8.1",
-      "timeout": 10,
-      "playerType": 1
-    },
-    {
-      "name": "MyTV",
-      "type": 0,
-      "url": "https://tv.iill.top/m3u/MyTV",
-      "ua": "okhttp/3.8.1",
-      "timeout": 10,
-      "playerType": 1
-    },
+    },    
     {
         "name": "范明明_IPV6",
         "type": 0,
@@ -111,7 +95,7 @@
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "timeout": 10
+        "timeout": 15
     },    
     {
         "key": "糯米影视",
@@ -143,32 +127,56 @@
         "timeout": 15
     },
     {
-        "key": "时常",
-        "name": "🍔┃时常┃APP💯",
+        "key": "人人",
+        "name": "👫┃人人┃App💯",
         "type": 3,
-        "api": "csp_Xdai",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "ext": "jaHR0cDovLzExMS4xODAuMTk4LjQwOjExMTB8YXNnY3hoamt0czEyNDU3M3xhc2djeGhqa3RzMTI0NTczfDEwMQ==",
+        "api": "csp_AppGet",
+        "ext": {
+            "url": "https://svip1.fun",
+            "dataKey": "laodiesdawsswasd",
+            "dataIv": "laodiesdawsswasd",
+            "deviceId": "298e5fe29c74b35aabb9836ee2f6f449f",
+            "version": "105"
+        },
         "timeout": 15
     },
     {
-      "key": "浪酷弹幕版",
-      "name": "🌊┃浪酷┃弹幕💯",
-      "type": 3,
-      "api": "csp_TianTianGuard",
-      "jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt",
-      "quickSearch": 1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": {
-        "danmu": true,
-        "site": 2
+        "key": "星河",
+        "name": "🔮┃星河┃App💯",
+        "type": 3,
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "url": "http://121.62.22.204:9876",
+            "dataKey": "f5e2tx53ykp6s2c9",
+            "dataIv": "f5e2tx53ykp6s2c9",
+            "deviceId": "",
+            "version": "361"
+        },
+        "timeout": 15
+    },
+    {
+        "key": "浪酷弹幕版",
+        "name": "🌊┃浪酷┃弹幕💯",
+        "type": 3,
+        "api": "csp_TianTianGuard",
+        "jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+          "danmu": true,
+          "site": 2
       },
-      "timeout": 10
+        "timeout": 10
     },
     {
         "key": "边缘",
