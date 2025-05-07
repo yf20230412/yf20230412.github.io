@@ -1,0 +1,71 @@
+# 高效清理旧工作流记录
+name: Cleanup Old Workflows (Batch)
+on:
+  schedule:
+    - cron: '0 3 * * *'  # 每天凌晨3点运行
+  workflow_dispatch:
+
+permissions:
+  actions: write  # 需要删除工作流的权限
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cleanup in Batches
+        uses: actions/github-script@v6
+        env:
+          RETENTION_DAYS: 1  # 保留最近1天的记录
+          BATCH_SIZE: 30     # 每批次处理30条
+          MAX_PAGES: 5       # 最多检查5页（防止超限）
+        with:
+          script: |
+            const { RETENTION_DAYS, BATCH_SIZE, MAX_PAGES } = process.env;
+            const cutoffDate = new Date();
+            cutoffDate.setDate(cutoffDate.getDate() - parseInt(RETENTION_DAYS));
+
+            let deletedCount = 0;
+            let page = 1;
+
+            while (page <= parseInt(MAX_PAGES)) {
+              console.log(`📖 正在检查第 ${page} 页...`);
+              const { data: runs } = await github.rest.actions.listWorkflowRunsForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                per_page: parseInt(BATCH_SIZE),
+                page: page,
+                status: 'completed',
+              });
+
+              if (runs.workflow_runs.length === 0) break;
+
+              for (const run of runs.workflow_runs) {
+                if (new Date(run.created_at) < cutoffDate) {
+                  try {
+                    await github.rest.actions.deleteWorkflowRun({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      run_id: run.id,
+                    });
+                    deletedCount++;
+                    console.log(`♻️ 已删除 #${run.id} (${run.created_at})`);
+                    
+                    // 每删除10条暂停5秒，避免触发速率限制
+                    if (deletedCount % 10 === 0) {
+                      await new Promise(resolve => setTimeout(resolve, 5000));
+                    }
+                  } catch (error) {
+                    console.error(`❌ 删除 #${run.id} 失败: ${error.message}`);
+                  }
+                }
+              }
+
+              page++;
+              // 每处理完一页暂停10秒
+              await new Promise(resolve => setTimeout(resolve, 10000));
+            }
+
+            console.log(`✅ 总计删除 ${deletedCount} 条旧记录`);
