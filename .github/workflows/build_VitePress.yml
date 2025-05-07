@@ -1,6 +1,9 @@
 name: VitePress to Branch torelease
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - 'docs/docs/**'  #上传到docs/docs/才能触发
+  workflow_dispatch:   #手动触发
 
 env:
   TZ: Asia/Shanghai
@@ -80,64 +83,68 @@ jobs:
           name: xiaoyu_blog
           path: docs/xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
           if-no-files-found: ignore # 静默跳过,不报错也不警告，直接跳过上传
-          
+      
+# -------❤️暂时删除上传到Release/Tag❤️------
+
       # 检查并删除现有的 Release
-      - name: Delete old Release and Tag
-        uses: actions/github-script@v6
-        env:
-          TAG_NAME: xiaoyu_blog
-        with:
-          script: |
-            try {
-              // 1. 删除 Release
-              const release = await github.rest.repos.getReleaseByTag({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                tag: process.env.TAG_NAME
-              });
-              await github.rest.repos.deleteRelease({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                release_id: release.data.id
-              });
-              console.log(`✅ 已删除旧 Release: ${process.env.TAG_NAME}`);
+#      - name: Delete old Release and Tag
+#        uses: actions/github-script@v6
+#        env:
+#          TAG_NAME: xiaoyu_blog
+#        with:
+#          script: |
+#            try {
+#              // 1. 删除 Release
+#              const release = await github.rest.repos.getReleaseByTag({
+#                owner: context.repo.owner,
+#                repo: context.repo.repo,
+#                tag: process.env.TAG_NAME
+#              });
+#              await github.rest.repos.deleteRelease({
+#                owner: context.repo.owner,
+#                repo: context.repo.repo,
+#                release_id: release.data.id
+#              });
+#              console.log(`✅ 已删除旧 Release: ${process.env.TAG_NAME}`);
               
-              // 2. 删除 Git 标签
-              await github.rest.git.deleteRef({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: `tags/${process.env.TAG_NAME}`
-              });
-              console.log(`✅ 已删除旧 Tag: ${process.env.TAG_NAME}`);
-            } catch (error) {
-              if (error.status === 404) {
-                console.log(`⚠️ 未找到现有 Release/Tag: ${process.env.TAG_NAME}`);
-              } else {
-                throw error;
-              }
-            }
+#              // 2. 删除 Git 标签
+#              await github.rest.git.deleteRef({
+#                owner: context.repo.owner,
+#                repo: context.repo.repo,
+#                ref: `tags/${process.env.TAG_NAME}`
+#              });
+#              console.log(`✅ 已删除旧 Tag: ${process.env.TAG_NAME}`);
+#            } catch (error) {
+#              if (error.status === 404) {
+#                console.log(`⚠️ 未找到现有 Release/Tag: ${process.env.TAG_NAME}`);
+#              } else {
+#                throw error;
+#              }
+#            }
           
       # 发布Release
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: xiaoyu_blog
-          name: xiaoyu_blog-v${{ steps.package-version.outputs.version }}_${{ env.RELEASE_DATE }}
-          body: |
+#      - name: Create Release
+#        id: create_release
+#        uses: softprops/action-gh-release@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          tag_name: xiaoyu_blog
+#          name: xiaoyu_blog-v${{ steps.package-version.outputs.version }}_${{ env.RELEASE_DATE }}
+#          body: |
             ### 构建信息
-            - 版本: ${{ steps.package-version.outputs.version }}
-            - 来源分支: ${{ github.ref_name }}
-            - 构建日期: ${{ env.RELEASE_DATE }}
-            ### 更新内容
-            1. 个人博客自动构建并部署
-            2. 日常生活更新
-          draft: false
-          prerelease: false
-          files: |
-            docs/xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
+#            - 版本: ${{ steps.package-version.outputs.version }}
+#            - 来源分支: ${{ github.ref_name }}
+#            - 构建日期: ${{ env.RELEASE_DATE }}
+#            ### 更新内容
+#            1. 个人博客自动构建并部署
+#            2. 日常生活更新
+#          draft: false
+#          prerelease: false
+#          files: |
+#            docs/xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
+
+# ---------------❤️完❤️-------------
 
       - name: Commit changes
         run: |

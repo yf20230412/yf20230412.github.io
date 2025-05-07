@@ -5,7 +5,7 @@ on:
   #push:
     #paths:
       #- 'docs/docs/**'  #上传到docs/docs/才能触发
-  workflow_dispatch:
+  workflow_dispatch:   #手动触发
 
 env:
   TZ: Asia/Shanghai
