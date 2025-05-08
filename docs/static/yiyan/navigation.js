@@ -5,9 +5,9 @@ console.log("Navigation导航文件加载开始");
   const htmlTemplate = `
     <div class="daohang-info">
 		  <div class="marquee-container">
-			  <span class="marquee-content" style="font-size: 22px;">
+			  <span class="marquee-content" style="font-size: 20px;">
 				  遇见湖北，遇见美好，大美武汉欢迎大家来做客！ 反诈宣传：
-				  <span id="xiaoyu" style="font-size: 28px;">
+				  <span id="xiaoyu" style="font-size: 26px;">
 					  小鱼一言获取中...
 				  </span>
 			  </span>
@@ -52,7 +52,7 @@ console.log("Navigation导航文件加载开始");
 
             .marquee-content {
                 display: inline-block;
-                animation: marquee 12s linear 2 forwards, gradientFlow 5s ease infinite;
+                animation: marquee 10s linear 2 forwards, gradientFlow 5s ease infinite;
                 padding-left: 100%;
                 font-weight: 700;
                 color: red; /* 固定红色 */
