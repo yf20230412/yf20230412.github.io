@@ -1,19 +1,22 @@
 console.log("Navigation导航文件加载开始");
 
-(function () {
-    // 定义HTML结构
-    const htmlTemplate = `
-        <div class="daohang-info">
-            <div class="marquee-container">
-                <span class="marquee-content" id="xiaoyu">
-                    小鱼一言获取中...
-                </span>
-            </div>
-        </div>
+(function() {
+  // 定义HTML结构
+  const htmlTemplate = `
+    <div class="daohang-info">
+		  <div class="marquee-container">
+			  <span class="marquee-content">
+				  遇见湖北，遇见美好，大美武汉欢迎大家来做客！ 反诈宣传：
+				  <span id="xiaoyu">
+					  小鱼一言获取中...
+				  </span>
+			  </span>
+		  </div>
+	  </div>
     `;
 
-    // 定义CSS样式
-    const cssStyles = `
+  // 定义CSS样式
+  const cssStyles = `
         <style>
             /* 一言置顶显示 */
             .daohang-info {
@@ -79,56 +82,64 @@ console.log("Navigation导航文件加载开始");
         </style>
     `;
 
-    // 将CSS插入到<head>中
-    document.head.insertAdjacentHTML('beforeend', cssStyles);
+  // 将CSS插入到<head>中
+  document.head.insertAdjacentHTML('beforeend', cssStyles);
 
-    // 在 DOM 加载完成后插入 HTML 结构并初始化逻辑
-    document.addEventListener('DOMContentLoaded', function () {
-        document.body.insertAdjacentHTML('afterbegin', htmlTemplate);
+  // 在 DOM 加载完成后插入 HTML 结构并初始化逻辑
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.insertAdjacentHTML('afterbegin', htmlTemplate);
 
-        // 检查是否正确插入
-        const daohangInfo = document.querySelector('.daohang-info');
-        if (daohangInfo) {
-            console.log("HTML模板已正确插入到<body>中。");
-        } else {
-            console.error("HTML模板未正确插入到<body>中。");
-        }
+    // 检查是否正确插入
+    const daohangInfo = document.querySelector('.daohang-info');
+    if (daohangInfo) {
+      console.log("HTML模板已正确插入到<body>中。");
+    } else {
+      console.error("HTML模板未正确插入到<body>中。");
+    }
 
-        // 初始化一言内容
-        const sentences = [
-            "诈骗分子常常利用人们的旅游心理进行诈骗。",
-            "请不要轻信陌生人的低价旅游套餐，谨防诈骗。",
-            "在旅游过程中，注意保护个人信息，避免被诈骗。",
-            "遇到可疑的旅游推销，请及时报警。",
-            "不要轻易点击不明链接，防止个人信息泄露。",
-            "旅游诈骗手段多样，一定要提高警惕。"
-        ];
+    // 初始化一言内容
+    const sentences = [
+      "诈骗分子常常利用人们的旅游心理进行诈骗。",
+      "请不要轻信陌生人的低价旅游套餐，谨防诈骗。",
+      "在旅游过程中，注意保护个人信息，避免被诈骗。",
+      "遇到可疑的旅游推销，请及时报警。",
+      "不要轻易点击不明链接，防止个人信息泄露。",
+      "旅游诈骗手段多样，一定要提高警惕。"
+    ];
 
-        const randomSentence = sentences[Math.floor(Math.random() * sentences.length)];
-        const dom = document.querySelector('#xiaoyu');
-        if (dom) {
-            dom.innerText = randomSentence;
-        } else {
-            console.error("元素 #xiaoyu 在 DOM 中找不到.");
-        }
+    const randomSentence = sentences[Math.floor(Math.random() * sentences.length)];
+    const dom = document.querySelector('#xiaoyu');
+    if (dom) {
+      dom.innerText = randomSentence;
+    } else {
+      console.error("元素 #xiaoyu 在 DOM 中找不到.");
+    }
 
-        // 监听动画播放次数并控制隐藏
-        const marqueeContent = document.querySelector('.marquee-content');
-        let animationCount = 0;
-
-        if (marqueeContent) {
-            marqueeContent.addEventListener('animationiteration', () => {
+    // 监听动画结束并控制隐藏
+    const marqueeContent = document.querySelector('.marquee-content');
+    let animationCount = 0;
+    
+    if (marqueeContent) {
+        marqueeContent.addEventListener('animationend', function (e) {
+            if (e.animationName === 'marquee') {
                 animationCount++;
-
-                console.log(`动画已播放第 ${animationCount} 次`);
-
+                console.log(`滚动动画已播放 ${animationCount} 次`);
+    
                 if (animationCount >= 2) {
-                    marqueeContent.style.display = 'none';
-                    console.log('动画已完成2次，元素已隐藏');
+                    const daohangInfo = document.querySelector('.daohang-info');
+                    if (daohangInfo) {
+                        daohangInfo.style.display = 'none';
+                    } else {
+                        marqueeContent.style.display = 'none';
+                    }
+    
+                    console.log('动画已完成2次，元素已完全隐藏');
                 }
-            });
-        }
-    });
+            }
+        });
+    }    
+    
+  });
 })();
 
 console.log("Navigation导航文件加载完成");
