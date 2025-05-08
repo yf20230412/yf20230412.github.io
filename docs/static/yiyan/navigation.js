@@ -5,9 +5,9 @@ console.log("Navigation导航文件加载开始");
   const htmlTemplate = `
     <div class="daohang-info">
 		  <div class="marquee-container">
-			  <span class="marquee-content">
+			  <span class="marquee-content" style="font-size: 22px;">
 				  遇见湖北，遇见美好，大美武汉欢迎大家来做客！ 反诈宣传：
-				  <span id="xiaoyu">
+				  <span id="xiaoyu" style="font-size: 28px;">
 					  小鱼一言获取中...
 				  </span>
 			  </span>
@@ -30,7 +30,11 @@ console.log("Navigation导航文件加载开始");
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                 z-index: 999;
                 overflow: hidden; /* 确保内容超出时不会溢出 */
-                transition: all 0.3s ease; /* 添加平滑过渡效果 */
+                transition: background-color 0.5s ease; /* 背景色过渡动画 */
+            }
+            
+            .daohang-info.white-bg {
+                background-color: white; /* 白色背景的类 */
             }
             
             .daohang-info.hidden {
@@ -50,7 +54,6 @@ console.log("Navigation导航文件加载开始");
                 display: inline-block;
                 animation: marquee 12s linear 2 forwards, gradientFlow 5s ease infinite;
                 padding-left: 100%;
-                font-size: 22px;
                 font-weight: 700;
                 color: red; /* 固定红色 */
                 white-space: nowrap;
@@ -62,7 +65,6 @@ console.log("Navigation导航文件加载开始");
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                font - size:28px !important;
             }
 
             /* 流动渐变动画 */
@@ -114,48 +116,35 @@ console.log("Navigation导航文件加载开始");
     }
 
     // 初始化一言内容
-    const sentences = [
-      "诈骗分子常常利用人们的旅游心理进行诈骗。",
-      "请不要轻信陌生人的低价旅游套餐，谨防诈骗。",
-      "在旅游过程中，注意保护个人信息，避免被诈骗。",
-      "遇到可疑的旅游推销，请及时报警。",
-      "不要轻易点击不明链接，防止个人信息泄露。",
-      "旅游诈骗手段多样，一定要提高警惕。"
-    ];
-
-    const randomSentence = sentences[Math.floor(Math.random() * sentences.length)];
-    const dom = document.querySelector('#xiaoyu');
-    if (dom) {
-      dom.innerText = randomSentence;
-    } else {
-      console.error("元素 #xiaoyu 在 DOM 中找不到.");
-    }
-
-    // 隐藏逻辑优化
-    const marqueeContent = document.querySelector('.marquee-content');
-    let animationCount = 0;
-    
-    if (marqueeContent) {
-      marqueeContent.addEventListener('animationend', function (e) {
-        if (e.animationName === 'marquee') {
-          animationCount++;
-          console.log(`滚动动画次数：${animationCount}`);
-
-          if (animationCount >= 2) {
-            const daohangInfo = document.querySelector('.daohang-info');
-            if (daohangInfo) {
-              daohangInfo.classList.add('hidden');
-              
-              // 监听过渡完成事件
-              daohangInfo.addEventListener('transitionend', () => {
-                daohangInfo.style.display = 'none';
-              }, { once: true });
-            }
-          }
+        const sentences = [
+            "诈骗分子常常利用人们的旅游心理进行诈骗。",
+            "请不要轻信陌生人的低价旅游套餐，谨防诈骗。",
+            "在旅游过程中，注意保护个人信息，避免被诈骗。",
+            "遇到可疑的旅游推销，请及时报警。",
+            "不要轻易点击不明链接，防止个人信息泄露。",
+            "旅游诈骗手段多样，一定要提高警惕。"
+        ];
+        const xiaoyuDom = document.querySelector('#xiaoyu');
+        if (xiaoyuDom) {
+            xiaoyuDom.innerText = sentences[Math.floor(Math.random() * sentences.length)];
         }
-      });
-    }
-  });
+
+    // 监听动画结束，切换背景色
+        const marqueeContent = document.querySelector('.marquee-content');
+        let animationCount = 0;
+        
+        marqueeContent.addEventListener('animationend', function(e) {
+            if (e.animationName === 'marquee') {
+                animationCount++;
+                console.log(`动画播放次数: ${animationCount}`);
+                
+                if (animationCount >= 2) {
+                    daohangInfo.classList.add('white-bg');
+                    console.log('导航栏背景已切换为白色');
+                }
+            }
+        });
+    });
 })();
 
 console.log("Navigation导航文件加载完成");
