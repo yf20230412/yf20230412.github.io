@@ -1,126 +1,286 @@
     body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-size: cover;
-        background-position: center;
-        transition: background-image 0.5s ease-in-out;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-image: url('../images/background.jpg');
+      /* 指定背景图片路径 */
+      background-size: cover;
+      /* 背景图片覆盖整个容器 */
+      background-position: center;
+      /* 背景图片居中 */
+      background-repeat: no-repeat;
+      /* 背景图片不重复 */
+      transition: background-image 0.5s ease-in-out;
+      /* 背景图片变化时的过渡效果（可选） */
     }
-	.container {
-        display: flex; /* 使用Flex布局 */
-        flex-direction: column; /* 内容竖直排列 */
-        min-height: 100vh; /* 至少占据整个视口高度 */
-	    min-width:100%;
+
+    .container {
+      display: flex;
+      /* 使用Flex布局 */
+      flex-direction: column;
+      /* 内容竖直排列 */
+      min-height: 100vh;
+      /* 至少占据整个视口高度 */
+      min-width: 100%;
     }
+
     .content {
-        flex-grow: 1; /* 内容区域自适应填充剩余空间 */
+      flex-grow: 1;
+      /* 内容区域自适应填充剩余空间 */
     }
-  
-  
+
+
     .content1 {
-        position: absolute; /* 或者使用 'relative'，具体取决于您的布局需求 */
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center; /* 使文本居中 */
+      position: absolute;
+      /* 或者使用 'relative'，具体取决于您的布局需求 */
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      /* 使文本居中 */
     }
 
     h1 {
-        color: #FF0000; /* 保持您指定的颜色 */
+      color: #FF0000;
+      /* 保持您指定的颜色 */
     }
 
 
     .footer-备案 {
-        background-color: #000;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
 
-	.bookmark-container {
-        display: flex;
-        flex-wrap: wrap;/*允许换行*/
-        justify-content: center;/*横向居中*/
-        gap: 15px;/*按钮间的间隔*/
-		margin-top: 30%;/*上内边距，增加内容与顶部的距离*/
+    .bookmark-container {
+      display: flex;
+      flex-wrap: wrap;
+      /*允许换行*/
+      justify-content: center;
+      /*横向居中*/
+      gap: 15px;
+      /*按钮间的间隔*/
+      margin-top: 30%;
+      /*上内边距，增加内容与顶部的距离*/
     }
+
     .button {
-        border: 1px solid #ccc;  /*实心边框 */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-        border-radius: 10px; /* 更圆润的边角 */
-        text-align: center;
-        padding: 12px 20px;
-        width: calc(25% - 20px);/*使按钮宽度适应3分之一减去间隔的宽度*/
-        min-height: 80px; /* 增加高度以适应图标 */
-        text-decoration: none;
-        color: white;
-		font-size: 16px;
-        font-weight: bold;
-        position: relative; /* 为图标定位做准备 */
-        transition: transform 0.3s; /* 动画过渡 */
-		margin: 10px; /* 添加宽度以适应每排三个的布局 */
+      border: 1px solid #ccc;
+      /*实心边框 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* 阴影效果 */
+      border-radius: 10px;
+      /* 更圆润的边角 */
+      text-align: center;
+      padding: 12px 20px;
+      width: calc(25% - 20px);
+      /*使按钮宽度适应3分之一减去间隔的宽度*/
+      min-height: 80px;
+      /* 增加高度以适应图标 */
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      position: relative;
+      /* 为图标定位做准备 */
+      transition: transform 0.3s;
+      /* 动画过渡 */
+      margin: 10px;
+      /* 添加宽度以适应每排三个的布局 */
     }
+
     .button::before {
-        content: ""; /* 伪元素用于添加图标背景 */
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+      content: "";
+      /* 伪元素用于添加图标背景 */
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
+
     .button:hover {
-        transform: translateY(-3px) scale(1.05); /* 悬停时的3D抬起效果 */
-        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+      transform: translateY(-3px) scale(1.05);
+      /* 悬停时的3D抬起效果 */
+      box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+      /* 增强阴影 */
     }
+
     /* 为每个按钮添加颜色 */
-    .button1 { background-color: #DA70D6; }
-    .button2 { background-color: #FF6A6A; }
-    .button3 { background-color: #4caf50; } 
-    .button4 { background-color: #2196f3; } 
-    .button5 { background-color: #006400; } 
-    .button6 { background-color: #008B8B; } 
-    .button7 { background-color: #9370DB; }
-    .button8 { background-color: #8B0000; } 
-    .button9 { background-color: #9c27b0; }
-    .button10 { background-color: #2F4F4F; }
-    .button11 { background-color: #00BFFF; } 
-    .button12 { background-color: #32CD32; }	
-    .button13 { background-color: #40E0D0; }
-    .button14 { background-color: #4682B4; } 
-    .button15 { background-color: #FF7F50; }	
-    .button16 { background-color: #00FF00; }
-    .button17 { background-color: #FF1493; } 
-    .button18 { background-color: #FF0000; }
-    .button19 { background-color: #cc3399; }
-    .button20 { background-color: #66CDAA; }
-    .button21 { background-color: #4169E1; }
-	/* 为每个按钮添加图标*/
-    
-	.button1::before { background-image: url('../images/icon/01.png');}
-    .button2::before { background-image: url('../images/icon/01.png');} 
-	.button3::before { background-image: url('../images/icon/02.svg'); } 
-    .button4::before { background-image: url('../images/icon/03.svg'); }
-	.button5::before { background-image: url('../images/icon/04.png'); } 
-    .button6::before { background-image: url('../images/icon/04.png'); } 	
-    .button7::before { background-image: url('../images/icon/05.svg');}
-    .button8::before { background-image: url('../images/icon/06.png');} 
-	.button9::before { background-image: url('../images/icon/07.svg'); } 
-    .button10::before { background-image: url('../images/icon/08.svg'); }
-	.button11::before { background-image: url('../images/icon/09.png'); } 
-    .button12::before { background-image: url('../images/icon/04.png'); } 	
-    .button13::before { background-image: url('../images/icon/10.svg'); }	
-	.button14::before { background-image: url('../images/icon/11.svg'); } 
-    .button15::before { background-image: url('../images/icon/12.png'); } 	
-    .button16::before { background-image: url('../images/icon/13.png'); }
-	.button17::before { background-image: url('../images/icon/14.svg'); } 
-    .button18::before { background-image: url('../images/icon/15.png'); }
-    .button19::before { background-image: url('../images/icon/29.svg'); } 
-    .button20::before { background-image: url('../images/icon/10.svg'); }
-    .button21::before { background-image: url('../images/icon/17.png'); }
+    .button1 {
+      background-color: #DA70D6;
+    }
+
+    .button2 {
+      background-color: #FF6A6A;
+    }
+
+    .button3 {
+      background-color: #4caf50;
+    }
+
+    .button4 {
+      background-color: #2196f3;
+    }
+
+    .button5 {
+      background-color: #006400;
+    }
+
+    .button6 {
+      background-color: #008B8B;
+    }
+
+    .button7 {
+      background-color: #9370DB;
+    }
+
+    .button8 {
+      background-color: #8B0000;
+    }
+
+    .button9 {
+      background-color: #9c27b0;
+    }
+
+    .button10 {
+      background-color: #2F4F4F;
+    }
+
+    .button11 {
+      background-color: #00BFFF;
+    }
+
+    .button12 {
+      background-color: #32CD32;
+    }
+
+    .button13 {
+      background-color: #40E0D0;
+    }
+
+    .button14 {
+      background-color: #4682B4;
+    }
+
+    .button15 {
+      background-color: #FF7F50;
+    }
+
+    .button16 {
+      background-color: #00FF00;
+    }
+
+    .button17 {
+      background-color: #FF1493;
+    }
+
+    .button18 {
+      background-color: #FF0000;
+    }
+
+    .button19 {
+      background-color: #cc3399;
+    }
+
+    .button20 {
+      background-color: #66CDAA;
+    }
+
+    .button21 {
+      background-color: #4169E1;
+    }
+
+    /* 为每个按钮添加图标*/
+
+    .button1::before {
+      background-image: url('../images/icon/01.png');
+    }
+
+    .button2::before {
+      background-image: url('../images/icon/01.png');
+    }
+
+    .button3::before {
+      background-image: url('../images/icon/02.svg');
+    }
+
+    .button4::before {
+      background-image: url('../images/icon/03.svg');
+    }
+
+    .button5::before {
+      background-image: url('../images/icon/04.png');
+    }
+
+    .button6::before {
+      background-image: url('../images/icon/04.png');
+    }
+
+    .button7::before {
+      background-image: url('../images/icon/05.svg');
+    }
+
+    .button8::before {
+      background-image: url('../images/icon/06.png');
+    }
+
+    .button9::before {
+      background-image: url('../images/icon/07.svg');
+    }
+
+    .button10::before {
+      background-image: url('../images/icon/08.svg');
+    }
+
+    .button11::before {
+      background-image: url('../images/icon/09.png');
+    }
+
+    .button12::before {
+      background-image: url('../images/icon/04.png');
+    }
+
+    .button13::before {
+      background-image: url('../images/icon/10.svg');
+    }
+
+    .button14::before {
+      background-image: url('../images/icon/11.svg');
+    }
+
+    .button15::before {
+      background-image: url('../images/icon/12.png');
+    }
+
+    .button16::before {
+      background-image: url('../images/icon/13.png');
+    }
+
+    .button17::before {
+      background-image: url('../images/icon/14.svg');
+    }
+
+    .button18::before {
+      background-image: url('../images/icon/15.png');
+    }
+
+    .button19::before {
+      background-image: url('../images/icon/29.svg');
+    }
+
+    .button20::before {
+      background-image: url('../images/icon/10.svg');
+    }
+
+    .button21::before {
+      background-image: url('../images/icon/17.png');
+    }
