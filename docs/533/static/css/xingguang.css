@@ -100,7 +100,7 @@ mark {
     margin: 10% auto;
     border-radius: 4px;
     text-align: center;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
     letter-spacing: .1em;
 }
@@ -110,7 +110,7 @@ mark {
 }
 
 .lunar {
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .hour-minut-second {
@@ -124,7 +124,7 @@ mark {
 .week-2 { color: #00FFFF; } /* 星期二 - 青色 */
 .week-3 { color: #FF00FF; } /* 星期三 - 紫色 */
 .week-4 { color: #FFA500; } /* 星期四 - 橙色 */
-.week-5 { color: #0000FF; } /* 星期五 - 蓝色 */
+.week-5 { color: #CC00FF; } /* 星期五 - 紫色 */
 .week-6 { color: #FF0000; } /* 星期六 - 红色 */
 
 /* 媒体查询：适配手机屏幕 */
@@ -132,15 +132,15 @@ mark {
     .time-content {
         height: auto; /* 自动调整高度 */
         padding: 5px;
-        font-size: 16px; /* 减小字体大小 */
-    }
-
-    .hour-minut-second {
         font-size: 24px; /* 减小字体大小 */
     }
 
+    .hour-minut-second {
+        font-size: 32px; /* 减小字体大小 */
+    }
+
     .lunar {
-        font-size: 14px; /* 减小字体大小 */
+        font-size: 22px; /* 减小字体大小 */
     }
 }
 
@@ -149,14 +149,14 @@ mark {
     .time-content {
         margin: 5% auto; /* 减小外边距 */
         padding: 3px;
-        font-size: 14px; /* 进一步减小字体大小 */
+        font-size: 16px; /* 进一步减小字体大小 */
     }
 
     .hour-minut-second {
-        font-size: 20px; /* 进一步减小字体大小 */
+        font-size: 22px; /* 进一步减小字体大小 */
     }
 
     .lunar {
-        font-size: 12px; /* 进一步减小字体大小 */
+        font-size: 14px; /* 进一步减小字体大小 */
     }
 }
