@@ -96,6 +96,14 @@ console.log("Navigation导航文件加载开始");
     document.addEventListener('DOMContentLoaded', function() {
         document.body.insertAdjacentHTML('afterbegin', htmlTemplate);
 
+        // 检查是否正确插入
+        const daohangInfo = document.querySelector('.daohang-info');
+        if (daohangInfo) {
+            console.log("HTML模板已正确插入到<body>中。");
+        } else {
+            console.error("HTML模板未正确插入到<body>中。");
+        }
+
         // 确保 DOM 更新完成后再查询元素
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
@@ -115,6 +123,8 @@ console.log("Navigation导航文件加载开始");
                 const dom = document.querySelector('#xiaoyu');
                 if (dom) {
                     dom.innerText = randomSentence;
+                } else {
+                    console.error("Element #xiaoyu not found in the DOM.");
                 }
             });
         });
