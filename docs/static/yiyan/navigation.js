@@ -50,7 +50,7 @@ console.log("Navigation导航文件加载开始");
                 display: inline-block;
                 animation: marquee 12s linear 2 forwards, gradientFlow 5s ease infinite;
                 padding-left: 100%;
-                font-size: 28px;
+                font-size: 22px;
                 font-weight: 700;
                 color: red; /* 固定红色 */
                 white-space: nowrap;
@@ -62,7 +62,7 @@ console.log("Navigation导航文件加载开始");
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                font-size: 22px;
+                font - size:28px !important;
             }
 
             /* 流动渐变动画 */
@@ -131,31 +131,31 @@ console.log("Navigation导航文件加载开始");
       console.error("元素 #xiaoyu 在 DOM 中找不到.");
     }
 
-    // 监听动画结束并控制隐藏
+    // 隐藏逻辑优化
     const marqueeContent = document.querySelector('.marquee-content');
     let animationCount = 0;
     
     if (marqueeContent) {
-        marqueeContent.addEventListener('animationend', function (e) {
-            if (e.animationName === 'marquee') {
-                animationCount++;
-                console.log(`滚动动画已播放 ${animationCount} 次`);
-    
-                if (animationCount >= 2) {
-                    const daohangInfo = document.querySelector('.daohang-info');
-                    if (daohangInfo) {
-                        daohangInfo.classList.add('hidden'); // 使用CSS类来隐藏整个元素
-                        setTimeout(() => {
-                                daohangInfo.style.display = 'none'; // 完全从文档流中移除
-                            }, 100); // 等待过渡动画完成
-                        }
-                        console.log('动画已完成2次，导航栏已完全隐藏');
-                    }
-                }
-            });
+      marqueeContent.addEventListener('animationend', function (e) {
+        if (e.animationName === 'marquee') {
+          animationCount++;
+          console.log(`滚动动画次数：${animationCount}`);
+
+          if (animationCount >= 2) {
+            const daohangInfo = document.querySelector('.daohang-info');
+            if (daohangInfo) {
+              daohangInfo.classList.add('hidden');
+              
+              // 监听过渡完成事件
+              daohangInfo.addEventListener('transitionend', () => {
+                daohangInfo.style.display = 'none';
+              }, { once: true });
+            }
+          }
         }
-    
-    });
+      });
+    }
+  });
 })();
 
 console.log("Navigation导航文件加载完成");
