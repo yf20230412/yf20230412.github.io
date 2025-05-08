@@ -87,3 +87,38 @@ mark {
         color: #67bd31;
     }
 }
+
+
+/*时间显示*/
+
+.time-content {
+            width: 100%;
+            height: 140px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 10% auto;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: .1em;
+        }
+        .time-content .week {
+            margin-left: 15px;
+        }
+        .lunar {
+            font-size: 16px;
+        }
+        .hour-minut-second {
+            font-size: 40px;
+            font-family: Times New Roman;
+        }
+		
+		/* 为不同的星期几设置不同的颜色 */
+        .week-0 { color: #FFD700; } /* 星期日 - 金色 */
+        .week-1 { color: #00FF00; } /* 星期一 - 绿色 */
+        .week-2 { color: #00FFFF; } /* 星期二 - 青色 */
+        .week-3 { color: #FF00FF; } /* 星期三 - 紫色 */
+        .week-4 { color: #FFA500; } /* 星期四 - 橙色 */
+        .week-5 { color: #0000FF; } /* 星期五 - 蓝色 */
+        .week-6 { color: #FF0000; } /* 星期六 - 红色 */
