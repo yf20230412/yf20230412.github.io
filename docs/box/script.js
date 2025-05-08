@@ -71,7 +71,7 @@ const list = [
         "color": "#91ad70"
     },
     {
-        "url": "https://mpanso.me/DEMO.json",
+        "url": "http://www.mpanso.com/小米/DEMO.json",
         "name": "🛳小米线路",
         "color": "#91ad70"
     },

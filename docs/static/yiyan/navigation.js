@@ -22,12 +22,22 @@ console.log("Navigation导航文件加载开始");
             .daohang-info {
                 position: fixed;
                 top: 0;
+                left: 0;
                 width: 100%;
                 text-align: center;
                 background-color: #000;
                 padding: 12px 0;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                 z-index: 999;
+                overflow: hidden; /* 确保内容超出时不会溢出 */
+                transition: all 0.3s ease; /* 添加平滑过渡效果 */
+            }
+            
+            .daohang-info.hidden {
+                opacity: 0;
+                height: 0;
+                padding: 0;
+                visibility: hidden;
             }
 
             .marquee-container {
@@ -40,13 +50,19 @@ console.log("Navigation导航文件加载开始");
                 display: inline-block;
                 animation: marquee 12s linear 2 forwards, gradientFlow 5s ease infinite;
                 padding-left: 100%;
-                font-size: 20px;
+                font-size: 28px;
                 font-weight: 700;
+                color: red; /* 固定红色 */
+                white-space: nowrap;
+            }
+            
+            #xiaoyu {
+                animation: gradientFlow 5s ease infinite; /* 单独应用渐变动画 */
                 background: linear-gradient(90deg, #0eaf6d, #ff6ac6, #e6d205, #8b2ce0, #ff6384, #08dfb4);
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                white-space: nowrap;
+                font-size: 22px;
             }
 
             /* 流动渐变动画 */
@@ -128,18 +144,18 @@ console.log("Navigation导航文件加载开始");
                 if (animationCount >= 2) {
                     const daohangInfo = document.querySelector('.daohang-info');
                     if (daohangInfo) {
-                        daohangInfo.style.display = 'none';
-                    } else {
-                        marqueeContent.style.display = 'none';
+                        daohangInfo.classList.add('hidden'); // 使用CSS类来隐藏整个元素
+                        setTimeout(() => {
+                                daohangInfo.style.display = 'none'; // 完全从文档流中移除
+                            }, 100); // 等待过渡动画完成
+                        }
+                        console.log('动画已完成2次，导航栏已完全隐藏');
                     }
-    
-                    console.log('动画已完成2次，元素已完全隐藏');
                 }
-            }
-        });
-    }    
+            });
+        }
     
-  });
+    });
 })();
 
 console.log("Navigation导航文件加载完成");
