@@ -1,242 +1,235 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="apple-touch-icon" sizes="72x72" href="/static/icon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/static/icon/32.png">
-		<link rel="apple-touch-icon" href="/static/icon/favicon.ico">
-		<link rel="shortcut icon" href="/static/icon/favicon.ico">
-		<link rel="Bookmark" href="/static/icon/favicon.ico">
-		<title>
-			数据工坊
-		</title>
-		<link rel="stylesheet" href="./static/css/styles.css">
-	</head>
-	<body>
-		<div class="container">
-			<h1 class="title-neon" style="text-align: center;--primary: #a855f7">
-				数据工坊
-			</h1>
-			<!--<h1 style="margin-bottom: 2rem; color: var(--primary); text-align:
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/icon/32.png">
+    <link rel="apple-touch-icon" href="/static/icon/favicon.ico">
+    <link rel="shortcut icon" href="/static/icon/favicon.ico">
+    <link rel="Bookmark" href="/static/icon/favicon.ico">
+    <title>
+        数据工坊
+    </title>
+    <link rel="stylesheet" href="./static/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title-neon" style="text-align: center;--primary: #a855f7">
+            数据工坊
+        </h1>
+        <!--<h1 style="margin-bottom: 2rem; color: var(--primary); text-align:
 			center;">🔮 小鱼数据工坊 | 数据处理工具</h1>-->
-			<!-- action传入后端，处理数据 -->
-			<form method="post" enctype="multipart/form-data" id="mainForm" onsubmit="return handleSubmit(event)"
-			action="https://xn--qoqw77q.top/%E6%95%B4%E7%90%86/">
-				<div class="grid">
-					<!-- 输入源部分 -->
-					<div>
-					
-						<div class="input-group">
-						
-							<label>
-								📄 导入数据源
-							</label>
-							
-							<div class="upload-container">
-								<input type="file" name="fileUpload" id="fileUpload" class="file-input"
-								multiple>
-								<label for="fileUpload" class="upload-wrapper">
-									<svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-										d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-										/>
-									</svg>
-									<div class="upload-text">
-										<!--<div class="upload-subtitle">点击选择文件或拖放至此</div>-->
-										<div class="upload-subtitle" id="fileList">
-											点击选择文件或拖放至此
-										</div>
-										<div class="upload-subtitle">
-											支持单个或多个文件，最大50MB
-										</div>
-									</div>
-								</label>
-							</div>
-							
-							<label>
-								⚙️ 处理参数
-							</label>
-							
-							<div class="action-group" style="display: flex;justify-content: center;align-items: center; gap: 20px; margin-top: 15px;">
-								<textarea name="priorityKeywords" rows="4" class="enhanced-textarea mb-2 text-green"
-								placeholder="优先排序关键词（逗号分隔）">
-								</textarea>
-								<textarea name="removeKeywords" rows="4" class="enhanced-textarea mb-2 text-red"
-								placeholder="过滤删除关键词（逗号分隔）">
-								</textarea>
-							</div>
-							
-							<div class="action-group" style="display: flex;justify-content: center;align-items: center;gap: 20px;margin-top: 65px;">
-							
-								<!-- 按钮 -->
-								<button type="submit" class="btn btn-primary" style="padding: 10px 20px">
-									🚀 开始处理数据
-								</button>
-								
-								<!-- 复选框标签 -->
-								<label class="save-checkbox" style="display: none; align-items: center">
-									<!--<label class="save-checkbox" style="align-items: center;margin-top:
-									15px">-->
-									<input type="checkbox" name="saveToFile" onchange="toggleSaveOption(this)"
-									style="margin: 0 5px 0 0">
-									<span class="checkmark">
-									</span>
-									<span class="label-text">
-										💾 保存到服务器
-									</span>
-								</label>
-								
-								
-								<!-- 添加处理中模态框 -->
-								<div id="processingModal" style="display: none;
-								z-index: 9999;
-								position: fixed;
-								top: 30%;
-								left: 50%;
-								transform: translate(-50%, -50%);
-								background: white;
-								padding: 20px;
-								border-radius: 5px;
-								box-shadow: 0 0 10px rgba(0,0,0,0.2);
-								width: 100px;  <!-- 新增固定宽度 -->
-								height: 80px;  <!-- 新增固定高度 -->
-								box-sizing: border-box;">
-									<!-- 确保尺寸包含padding -->
-									<p style="margin: 0; 
-									white-space: nowrap;  <!-- 禁止换行 -->
-									text-align: center;  <!-- 文字居中 -->
-									line-height: 40px;  <!-- 垂直居中适配高度 -->
-									font-size: 14px;">
-										正在处理中
-										<span id="processingDots">
-										</span>
-									</p>
-								</div>
-								<!-- 密码验证模态框 -->
-								
-								<!--<form method="post" action=""> -->
-								<div id="passwordModal" class="modal">
-									<div class="modal-content">
-										<h3 style="margin-bottom: 1.5rem;">
-											🔒 管理员验证
-										</h3>
-										<input type="password" id="passwordInput" name="password" placeholder="请输入管理密码"
-										style="width: 80%; margin-bottom: 1.5rem;">
-										<div style="display: flex; gap: 1rem;">
-											<button class="btn btn-primary" onclick="submitPassword()">
-												确认
-											</button>
-											<button class="btn" onclick="closeModal()">
-												取消
-											</button>
-										</div>
-									</div>
-								</div>
-								<!--</form>-->
-								
-							</div>
-						</div>
-					</div>
-					
-					
-										
-					<!-- 处理参数部分 -->
-					<div>
-						<div class="input-group">
-							<label>
-								📤 输入数据源
-							</label>
-							<!--<input type="url" name="dataUrl" placeholder="输入数据URL" class="mb-2">-->
-							<textarea name="dataInput" rows="8" class="enhanced-textarea mb-2" placeholder="在这里输入数据，然后点击“🚀 开始处理数据”查看输出...
-							TXT,JSON格式：           
-							央视频道,#genre#
-							CCTV1,http://127.0.0.1/diyp/live.m3u8
-							M3U格式:            
-							#EXTM3U
-							#EXTINF:-1 tvg-id=&quot;&quot; tvg-name=&quot;A&E&quot; tvg-logo=&quot;&quot; group-title=&quot;ENTRETENIMIENTO&quot;,A&E`http://127.0.0.1/jarenas/iDKZrC56xZ/76.ts
-							http://127.0.0.1/iDKZrC56xZ/76.ts
-							数据源URL：
-							http://127.0.0.1/diyp/live.php
-							http://127.0.0.1/diyp/ycl_iptv.txt
-							多条数据源URL，用^拼接
-							如：http://127.0.0.1/iptv.txt^http://127.0.0.1/live.txt">
-							</textarea>
-						</div>
-					</div>
-					
-				</div>
-			</form>
-		</div>
-		
-		<!-- 后端处理，提示信息 -->
-		<div id="alert" class="alert">
-		</div>
-		
-		
-		<!-- 外链及备案 -->
-		<div class="beian-info">
-			<div class="image-wrapper">
-				<div class="icon-text-group">
-					<img src="https://a.yf1688.top/img/qq.png" alt="QQ Icon" class="icon-image">
-					<span class="text-label">
-						QQ群
-					</span>
-				</div>
-				<img src="https://a.yf1688.top/img/qqun.jpg" alt="QQ Popup Image" class="popup-image">
-			</div>
-			<div class="image-wrapper">
-				<div class="icon-text-group">
-					<img src="https://a.yf1688.top/img/wx.png" alt="WeChat Icon" class="icon-image">
-					<span class="text-label">
-						公众号
-					</span>
-				</div>
-				<img src="https://a.yf1688.top/img/wxgzh99.jpg" alt="WeChat Popup Image" class="popup-image">
-			</div>
-			<div class="image-wrapper">
-				<div class="icon-text-group">
-					<img src="https://a.yf1688.top/img/dy.png" alt="Douyin Icon" class="icon-image">
-					<span class="text-label">
-						抖音
-					</span>
-				</div>
-				<img src="https://a.yf1688.top/img/douyin2.png" alt="Douyin Popup Image" class="popup-image">
-			</div>
-			<br>
-			
-			
-			<!-- 备案信息开始 -->
-			<a href="index.html" style="text-decoration:none;" rel="noopener">
-				<span style="color:#939393;vertical-align:middle;">
-					Copyright&nbsp;© 2023 Powered by xiaoyu
-				</span>
-				 
-			</a>
-			<span id="runtime_span" style="color: #808080;">
-			</span><br>
+        <!-- action传入后端，处理数据 -->
+        <form method="post" enctype="multipart/form-data" id="mainForm" onsubmit="return handleSubmit(event)" action="https://xn--qoqw77q.top/%E6%95%B4%E7%90%86/">
+            <div class="grid">
+                <!-- 输入源部分 -->
+                <div>
 
-			<a href="https://beian.mps.gov.cn/#/query/webSearch?code=44140302000240"
-			target="_blank" style="text-decoration:none;" rel="noopener">
-				<img src="https://a.yf1688.top/img/备案图标.png" style="width:16px;height:16px;vertical-align:middle;">
-				<span style="color:#939393;font-size:12px;vertical-align:middle;">
-					鄂公网安备007
-				</span>
-				&nbsp;
-			</a>
-			<img src="https://a.yf1688.top/img/ICP.png" style="width:16px;height:16px;vertical-align:middle;">
-			<a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:none;"
-			rel="noopener">
-				<span style="color:#939393;font-size:12px;vertical-align:middle;">
-					鄂ICP备007号-1
-				</span>
-			</a>
-		</div>
-		<!-- 备案信息结束 -->
+                    <div class="input-group">
 
-		<script src="./static/js/shuju.js"></script>
-		<script src="/static/yiyan/yiyan.js" defer></script>
-	</body>
+                        <label>
+                            📄 导入数据源
+                        </label>
+
+                        <div class="upload-container">
+                            <input type="file" name="fileUpload" id="fileUpload" class="file-input" multiple>
+                            <label for="fileUpload" class="upload-wrapper">
+                                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                </svg>
+                                <div class="upload-text">
+                                    <!--<div class="upload-subtitle">点击选择文件或拖放至此</div>-->
+                                    <div class="upload-subtitle" id="fileList">
+                                        点击选择文件或拖放至此
+                                    </div>
+                                    <div class="upload-subtitle">
+                                        支持单个或多个文件，最大50MB
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <label>
+                            ⚙️ 处理参数
+                        </label>
+
+                        <div class="action-group" style="display: flex;justify-content: center;align-items: center; gap: 20px; margin-top: 15px;">
+                            <textarea name="priorityKeywords" rows="4" class="enhanced-textarea mb-2 text-green" placeholder="优先排序关键词（逗号分隔）"></textarea>
+                            <textarea name="removeKeywords" rows="4" class="enhanced-textarea mb-2 text-red" placeholder="过滤删除关键词（逗号分隔）"></textarea>
+
+                        </div>
+
+                        <div class="action-group" style="display: flex;justify-content: center;align-items: center;gap: 20px;margin-top: 65px;">
+
+                            <!-- 按钮 -->
+                            <button type="submit" class="btn btn-primary" style="padding: 10px 20px">
+                                🚀 开始处理数据
+                            </button>
+
+                            <!-- 复选框标签 -->
+                            <label class="save-checkbox" style="display: none; align-items: center">
+                                <!--<label class="save-checkbox" style="align-items: center;margin-top:
+								15px">-->
+                                <input type="checkbox" name="saveToFile" onchange="toggleSaveOption(this)" style="margin: 0 5px 0 0">
+                                <span class="checkmark">
+                                </span>
+                                <span class="label-text">
+                                    💾 保存到服务器
+                                </span>
+                            </label>
+
+
+                            <!-- 添加处理中模态框 -->
+                            <div id="processingModal" style="display: none;
+							z-index: 9999;
+							position: fixed;
+							top: 30%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							background: white;
+							padding: 20px;
+							border-radius: 5px;
+							box-shadow: 0 0 10px rgba(0,0,0,0.2);
+							width: 100px;  <!-- 新增固定宽度 -->
+							height: 80px;  <!-- 新增固定高度 -->
+							box-sizing: border-box;">
+                                <!-- 确保尺寸包含padding -->
+                                <p style="margin: 0; 
+								white-space: nowrap;  <!-- 禁止换行 -->
+								text-align: center;  <!-- 文字居中 -->
+								line-height: 40px;  <!-- 垂直居中适配高度 -->
+								font-size: 14px;">
+                                    正在处理中
+                                    <span id="processingDots">
+                                    </span>
+                                </p>
+                            </div>
+                            <!-- 密码验证模态框 -->
+
+                            <!--<form method="post" action=""> -->
+                            <div id="passwordModal" class="modal">
+                                <div class="modal-content">
+                                    <h3 style="margin-bottom: 1.5rem;">
+                                        🔒 管理员验证
+                                    </h3>
+                                    <input type="password" id="passwordInput" name="password" placeholder="请输入管理密码" style="width: 80%; margin-bottom: 1.5rem;">
+                                    <div style="display: flex; gap: 1rem;">
+                                        <button class="btn btn-primary" onclick="submitPassword()">
+                                            确认
+                                        </button>
+                                        <button class="btn" onclick="closeModal()">
+                                            取消
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--</form>-->
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 处理参数部分 -->
+                <div>
+                    <div class="input-group">
+                        <label>
+                            📤 输入数据源
+                        </label>
+                        <!--<input type="url" name="dataUrl" placeholder="输入数据URL" class="mb-2">-->
+
+                        <textarea name="dataInput" rows="8" class="enhanced-textarea mb-2" placeholder="在这里输入数据，然后点击“🚀 开始处理数据”查看输出...
+TXT,JSON格式：           
+央视频道,#genre#
+CCTV1,http://127.0.0.1/diyp/live.m3u8
+M3U格式:            
+#EXTM3U
+#EXTINF:-1 tvg-id=&quot;&quot; tvg-name=&quot;A&E&quot; tvg-logo=&quot;&quot; group-title=&quot;ENTRETENIMIENTO&quot;,A&E`http://127.0.0.1/jarenas/iDKZrC56xZ/76.ts
+http://127.0.0.1/iDKZrC56xZ/76.ts
+数据源URL：
+http://127.0.0.1/diyp/live.php
+http://127.0.0.1/diyp/ycl_iptv.txt
+多条数据源URL，用^拼接
+如：http://127.0.0.1/iptv.txt^http://127.0.0.1/live.txt">
+</textarea>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <!-- 后端处理，提示信息 -->
+    <div id="alert" class="alert">
+    </div>
+
+
+    <!-- 外链及备案 -->
+    <div class="beian-info">
+        <div class="image-wrapper">
+            <div class="icon-text-group">
+                <img src="https://a.yf1688.top/img/qq.png" alt="QQ Icon" class="icon-image">
+                <span class="text-label">
+                    QQ群
+                </span>
+            </div>
+            <img src="https://a.yf1688.top/img/qqun.jpg" alt="QQ Popup Image" class="popup-image">
+        </div>
+        <div class="image-wrapper">
+            <div class="icon-text-group">
+                <img src="https://a.yf1688.top/img/wx.png" alt="WeChat Icon" class="icon-image">
+                <span class="text-label">
+                    公众号
+                </span>
+            </div>
+            <img src="https://a.yf1688.top/img/wxgzh99.jpg" alt="WeChat Popup Image" class="popup-image">
+        </div>
+        <div class="image-wrapper">
+            <div class="icon-text-group">
+                <img src="https://a.yf1688.top/img/dy.png" alt="Douyin Icon" class="icon-image">
+                <span class="text-label">
+                    抖音
+                </span>
+            </div>
+            <img src="https://a.yf1688.top/img/douyin2.png" alt="Douyin Popup Image" class="popup-image">
+        </div>
+        <br>
+
+
+        <!-- 备案信息开始 -->
+        <a href="index.html" style="text-decoration:none;" rel="noopener">
+            <span style="color:#939393;vertical-align:middle;">
+                Copyright&nbsp;© 2023 Powered by xiaoyu
+            </span>
+             
+        </a>
+        <span id="runtime_span" style="color: #808080;">
+        </span><br>
+
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=44140302000240" target="_blank" style="text-decoration:none;" rel="noopener">
+            <img src="https://a.yf1688.top/img/备案图标.png" style="width:16px;height:16px;vertical-align:middle;">
+            <span style="color:#939393;font-size:12px;vertical-align:middle;">
+                鄂公网安备007
+            </span>
+            &nbsp;
+        </a>
+        <img src="https://a.yf1688.top/img/ICP.png" style="width:16px;height:16px;vertical-align:middle;">
+        <a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:none;" rel="noopener">
+            <span style="color:#939393;font-size:12px;vertical-align:middle;">
+                鄂ICP备007号-1
+            </span>
+        </a>
+    </div>
+    <!-- 备案信息结束 -->
+
+    <script src="./static/js/shuju.js"></script>
+    <script src="/static/yiyan/yiyan.js" defer></script>
+</body>
 
 </html>
