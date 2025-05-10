@@ -29,12 +29,12 @@
         "timeout": 5
     },
     {
-      "name": "Gather",
-      "type": 0,
-      "url": "https://tv.iill.top/m3u/Gather",
-      "ua": "okhttp/3.8.1",
-      "timeout": 10,
-      "playerType": 1
+        "name": "Gather",
+        "type": 0,
+        "url": "https://tv.iill.top/m3u/Gather",
+        "ua": "okhttp/3.8.1",
+        "timeout": 10,
+        "playerType": 1
     },    
     {
         "name": "范明明_IPV6",
@@ -84,7 +84,7 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 15
-    },   
+    },
     {
         "key": "小苹果",
         "name": "🍎┃苹果┃App🏮",
@@ -107,8 +107,8 @@
         "quickSearch": 1,
         "filterable": 1,
         "ext": {
-        "danmu": true
-      },
+            "danmu": true
+        },
         "timeout": 15
     },
     {
@@ -122,8 +122,8 @@
         "changeable": 1,
         "filterable": 1,
         "ext": {
-        "danmu": true
-      },
+            "danmu": true
+        },
         "timeout": 15
     },
     {
@@ -173,8 +173,8 @@
         "changeable": 1,
         "filterable": 1,
         "ext": {
-          "danmu": true,
-          "site": 2
+            "danmu": true,
+            "site": 2
       },
         "timeout": 10
     },
@@ -305,8 +305,8 @@
         "changeable": 1,
         "filterable": 1,
         "ext": {
-        "danmu": true
-      },
+            "danmu": true
+        },
         "timeout": 10
     },
     {
@@ -358,15 +358,15 @@
         }
     },
     {
-      "key": "360资源",
-      "name": "🐝┃360┃采集🦋",
-      "type": 1,
-      "api": "https://360zy.com/api.php/seaxml/vod/",
-      "quickSearch": 1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "categories":["国产动漫","国产剧","动作片","喜剧片","爱情片","剧情片","恐怖片","悬疑片","科幻片","欧美动漫","灾难片","欧美剧","战争片","连续剧","伦理片","香港剧","韩国剧","体育","NBA","惊悚片","家庭篇","古装片","历史片","犯罪片","纪录片","短片","动画片","台湾剧","日本剧","海外剧","泰国剧","大陆综艺","日韩综艺","日韩动漫","未分类","西部片","爽文短剧","现代都市","脑洞悬疑","年代穿越","古装仙侠","女频恋爱","成长逆袭"]
+        "key": "360资源",
+        "name": "🐝┃360┃采集🦋",
+        "type": 1,
+        "api": "https://360zy.com/api.php/seaxml/vod/",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "categories":["国产动漫","国产剧","动作片","喜剧片","爱情片","剧情片","恐怖片","悬疑片","科幻片","欧美动漫","灾难片","欧美剧","战争片","连续剧","伦理片","香港剧","韩国剧","体育","NBA","惊悚片","家庭篇","古装片","历史片","犯罪片","纪录片","短片","动画片","台湾剧","日本剧","海外剧","泰国剧","大陆综艺","日韩综艺","日韩动漫","未分类","西部片","爽文短剧","现代都市","脑洞悬疑","年代穿越","古装仙侠","女频恋爱","成长逆袭"]
     },   
     {
         "key": "csp_WoGG",
@@ -436,37 +436,37 @@
         "timeout": 15
     },
     {
-      "key": "偷乐短剧",
-      "name": "📱┃偷乐┃短剧🏮",
-      "type": 3,
-      "api": "./py/toutedj.py",
-      "quickSearch": 1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "timeout": 10
+        "key": "偷乐短剧",
+        "name": "📱┃偷乐┃短剧🏮",
+        "type": 3,
+        "api": "./py/toutedj.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
     },
     {
-      "key": "甜圈短剧",
-      "name": "📱┃甜圈┃短剧🏮",
-      "type": 3,
-      "api": "./py/tianquandj.py",
-      "quickSearch": 1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "timeout": 10
+        "key": "甜圈短剧",
+        "name": "📱┃甜圈┃短剧🏮",
+        "type": 3,
+        "api": "./py/tianquandj.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
     },
     {
-      "key": "河马短剧",
-      "name": "📱┃河马┃短剧🏮",
-      "type": 3,
-      "api": "./py/hemadj.py",
-      "quickSearch": 1,
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "timeout": 10
+        "key": "河马短剧",
+        "name": "📱┃河马┃短剧🏮",
+        "type": 3,
+        "api": "./py/hemadj.py",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
     },
 
 {"key":"bilimd","name":"🅱️┃哔哩┃影视💯","type":3,"api":"csp_BilimdGuard","jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"style":{"type":"rect","ratio":1.433}},
