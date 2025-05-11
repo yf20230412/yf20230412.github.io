@@ -25,6 +25,6 @@
   "dependencies": {
     "canvas-confetti": "^1.9.3",
     "vitepress-plugin-announcement": "^0.1.4",
-    "@giscus/vue": "^3.1.1" // 确保使用最新的版本号
+    "@giscus/vue": "^3.1.1"
   }
 }
