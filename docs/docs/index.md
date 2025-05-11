@@ -60,15 +60,15 @@ features:
 <script setup>
 
 // 导入 home.vue 组件
-import home from './.vitepress/components/home.vue';
-
+// import home from './.vitepress/components/home.vue';
 
 // 导入 confetti.vue 组件
 import confetti from './.vitepress/theme/confetti.vue';
 
 </script>
-
-<home />
+<!-- 取消分页组件
+<home />-->
 <confetti />
-
+<!--
 <p>本站总访问量 <span id="busuanzi_value_site_pv" /> 次</p>
+-->

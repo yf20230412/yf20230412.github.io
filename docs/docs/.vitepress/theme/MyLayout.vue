@@ -2,6 +2,7 @@
 import DefaultTheme from 'vitepress/theme';
 import { useData } from 'vitepress';
 import { ref, onMounted, onUnmounted } from 'vue';
+import GiscusComment from "./GiscusComment.vue"; // 导入评论组件
 const { Layout } = DefaultTheme;
 
 const { frontmatter } = useData();
@@ -66,8 +67,17 @@ onUnmounted(() => {
         </div>
       </div>
     </template>
+    
+    
+    <template #doc-footer-before>
+      <!-- 在文档底部添加 Giscus 评论组件 -->
+      <GiscusComment />
+    </template>
+    
+    
   </Layout>
 </template>
+
 
 <style>
 .page-info-container {
