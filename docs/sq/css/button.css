@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px); /* 确保内容足够长以推挤页脚 */
     /* 至少占据整个视口高度 */
     margin: 0;
     background-image: url('../images/background.jpg');

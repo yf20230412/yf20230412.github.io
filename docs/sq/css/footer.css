@@ -13,36 +13,77 @@
 }
 
 footer {
-    position: absolute; /* 保持绝对定位 */
-    left: 0; /* 从左侧开始 */
-    right: 0; /* 延伸到右侧 */
-    bottom: 0; /* 固定在底部 */
-    max-height: 80px; /* 限制最大高度 */
-    min-height: 50px; /* 限制最小高度 */
-    padding: 10px 20px; /* 减少内边距 */
-    text-align: center; /* 文字居中 */
-    width: 100%; /* 宽度占满 */
-    background-color: #000000; /* 黑色背景 */
-    color: var(--footer-text-color); /* 白色文字 */
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* 顶部边框 */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-    font-size: 26px; /* 字体大小 */
-    transition: background 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
-    box-sizing: border-box; /* 确保内边距不影响宽度 */
+    position: absolute;
+    /* 保持绝对定位 */
+    left: 0;
+    /* 从左侧开始 */
+    right: 0;
+    /* 延伸到右侧 */
+    bottom: 0;
+    /* 固定在底部 */
+    max-height: 80px;
+    /* 限制最大高度 */
+    min-height: 50px;
+    /* 限制最小高度 */
+    padding: 10px 20px;
+    /* 减少内边距 */
+    text-align: center;
+    /* 文字居中 */
+    width: 100%;
+    /* 宽度占满 */
+    background-color: #000000;
+    /* 黑色背景 */
+    color: var(--footer-text-color);
+    /* 白色文字 */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    /* 顶部边框 */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+    font-size: 26px;
+    /* 字体大小 */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    /* 过渡效果 */
+    box-sizing: border-box;
+    /* 确保内边距不影响宽度 */
+    display: flex;
+    /* 使用Flexbox布局 */
+    align-items: center;
+    /* 垂直居中对齐内容 */
+    justify-content: center;
+    /* 水平居中对齐内容 */
+}
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    footer {
+        font-size: 20px;
+        /* 在小屏设备上减小字体大小 */
+        padding: 10px;
+        /* 减少内边距 */
+    }
 }
 
 
 .footer-content {
-    display: flex; /* 使用 Flexbox 布局 */
-    flex-direction: column; /* 垂直排列 */
-    align-items: center; /* 水平居中 */
-    text-align: center; /* 文字居中 */
+    display: flex;
+    /* 使用 Flexbox 布局 */
+    flex-direction: column;
+    /* 垂直排列 */
+    align-items: center;
+    /* 水平居中 */
+    text-align: center;
+    /* 文字居中 */
 }
 
 
-.runtime, .copyright, .contact {
-    margin: 5px 0; /* 上下间距 */
-    text-align: center; /* 文字居中 */
+.runtime,
+.copyright,
+.contact {
+    margin: 5px 0;
+    /* 上下间距 */
+    text-align: center;
+    /* 文字居中 */
 }
 
 .copyright {
