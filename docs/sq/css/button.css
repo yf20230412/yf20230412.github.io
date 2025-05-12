@@ -6,16 +6,11 @@ body {
     min-height: 100vh;
     /* 至少占据整个视口高度 */
     margin: 0;
-    background-image: url('../images/background.jpg');
-    /* 指定背景图片路径 */
-    background-size: cover;
-    /* 背景图片覆盖整个容器 */
-    background-position: center;
-    /* 背景图片居中 */
-    background-repeat: no-repeat;
-    /* 背景图片不重复 */
-    transition: background-image 0.5s ease-in-out;
-    /* 背景图片变化时的过渡效果（可选） */
+    background-image: url('../images/background.jpg'); /* 背景图片路径 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    background-position: center; /* 背景图片居中 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+    transition: background-image 0.5s ease-in-out; /* 背景图片变化时的过渡效果（可选） */}
 }
 
 .container {
