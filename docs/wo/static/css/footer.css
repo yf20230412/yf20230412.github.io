@@ -50,6 +50,9 @@ footer {
     color: #ffcc00;
     margin: 5px 0;
 }
+.copyright a {
+    text-decoration: none;
+}
 
 .footer-link {
     color: var(--footer-link-color);
