@@ -6,11 +6,17 @@ body {
     min-height: 100vh;
     /* 至少占据整个视口高度 */
     margin: 0;
-    background-image: url('../images/background.jpg'); /* 背景图片路径 */
-    background-size: cover; /* 背景图片覆盖整个容器 */
-    background-position: center; /* 背景图片居中 */
-    background-repeat: no-repeat; /* 背景图片不重复 */
-    transition: background-image 0.5s ease-in-out; /* 背景图片变化时的过渡效果（可选） */}
+    background-image: url('../images/background.jpg');
+    /* 背景图片路径 */
+    background-size: cover;
+    /* 背景图片覆盖整个容器 */
+    background-position: center;
+    /* 背景图片居中 */
+    background-repeat: no-repeat;
+    /* 背景图片不重复 */
+    transition: background-image 0.5s ease-in-out;
+    /* 背景图片变化时的过渡效果（可选） */
+}
 }
 
 .container {
@@ -45,12 +51,18 @@ h1 {
 }
 
 .bookmark-container {
-        display: flex;
-        flex-wrap: wrap;/*允许换行*/
-        justify-content: center;/*横向居中*/
-        gap: 15px;/*按钮间的间隔*/
-		margin-top: 30%;/*上内边距，增加内容与顶部的距离*/
-    }
+    margin-top: 30%;
+    /*上内边距，增加内容与顶部的距离*/
+    max-width: 1200px;
+    /* 最大宽度 */
+    width: 100%;
+    /* 自适应宽度 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 每行3列 */
+    gap: 20px;
+    /* 按钮之间的间距 */
+}
 
 .button {
     border: 1px solid #ccc;
@@ -61,20 +73,13 @@ h1 {
     /* 更圆润的边角 */
     text-align: center;
     padding: 12px 20px;
-    width: calc(25% - 20px);
-    /*使按钮宽度适应3分之一减去间隔的宽度*/
-    min-height: 80px;
-    /* 增加高度以适应图标 */
+    min-height: 80px; /* 增加高度以适应图标 */
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: bold;
-    position: relative;
-    /* 为图标定位做准备 */
-    transition: transform 0.3s;
-    /* 动画过渡 */
-    margin: 10px;
-    /* 添加宽度以适应每排三个的布局 */
+    position: relative; /* 为图标定位做准备 */
+    transition: transform 0.3s; /* 动画过渡 */
 }
 
 .button::before {
