@@ -32,7 +32,7 @@ body {
 .content1 {
     position: absolute; /* 现在相对于 .container */
     /* 或者使用 'relative'，具体取决于您的布局需求 */
-    top: 5px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -47,7 +47,7 @@ h1 {
 .bookmark-container {
     max-width: 1200px;
     /* 最大宽度 */
-    padding-top: 30px; /* 根据需要调整 */
+    padding-top: 10px; /* 根据需要调整 */
     /* 或者使用 flex/grid 来控制位置 */
     width: 100%;
     /* 自适应宽度 */
@@ -58,7 +58,7 @@ h1 {
     /* 按钮之间的间距,如果需要垂直居中，可以将其放在一个 flex 容器中  */
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 480px) {
     .bookmark-container {
         grid-template-columns: repeat(2, 1fr); /* 中等屏幕减少列数 */
     }
