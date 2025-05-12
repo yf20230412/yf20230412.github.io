@@ -14,6 +14,7 @@
 
 footer {
     position: absolute; /* 固定在底部 */
+    text-align: center;
     left: 0; /* 从左侧开始 */
     right: 0; /* 延伸到右侧 */
     bottom: 0; /* 固定在底部 */
