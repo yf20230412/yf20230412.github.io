@@ -32,8 +32,9 @@ body {
 .content1 {
     position: absolute; /* 现在相对于 .container */
     /* 或者使用 'relative'，具体取决于您的布局需求 */
-    top: 30px;
+    top: 10px;
     left: 50%;
+    font-size: 36px;
     transform: translateX(-50%);
     text-align: center;
     /* 使文本居中 */
@@ -47,14 +48,14 @@ h1 {
 .bookmark-container {
     max-width: 1200px;
     /* 最大宽度 */
-    padding-top: 10px; /* 根据需要调整 */
+    padding-top: 300px; /* 距离父元素距离 */
     /* 或者使用 flex/grid 来控制位置 */
     width: 100%;
     /* 自适应宽度 */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 每行3列 */
-    gap: 20px;
+    gap: 45px; /* 跳转水平和垂直间隔 */
     /* 按钮之间的间距,如果需要垂直居中，可以将其放在一个 flex 容器中  */
 }
 
@@ -73,15 +74,20 @@ h1 {
     border-radius: 10px;
     /* 更圆润的边角 */
     text-align: center;
-    padding: 12px 20px;
-    min-height: 80px; /* 增加高度以适应图标 */
+    padding: 7px 12px; /* 减少内边距，水平和垂直方向都调整 */
+    min-height: 120px; /* 适当降低按钮高度 */
+    min-width: 230px; /* 设置最小宽度为120px，内容较多时会自动变宽 */
+    /*min-width: calc((100vw / 3) - 80px); /* 100vw 表示视口宽度，这里以宽度为例，高度等属性也类似*/
+    /*根据gap: 30px值得4倍，设置最小宽度为 */
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 24px; /* 适当减小字体大小 */
     font-weight: bold;
     position: relative; /* 为图标定位做准备 */
     transition: transform 0.3s; /* 动画过渡 */
 }
+
+
 
 .button::before {
     content: "";
@@ -90,8 +96,8 @@ h1 {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);/* 使图标居中 */
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -170,7 +176,7 @@ h1 {
 }
 
 .button16 {
-    background-color: #00FF00;
+    background-color: #009999;
 }
 
 .button17 {

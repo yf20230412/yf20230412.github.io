@@ -23,7 +23,7 @@ footer {
     /* 限制最大高度 */
     min-height: 50px;
     /* 限制最小高度 */
-    padding: 10px 20px;
+    padding: 7px 15px;
     /* 减少内边距 */
     text-align: center;
     /* 文字居中 */
@@ -37,8 +37,6 @@ footer {
     /* 顶部边框 */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     /* 阴影效果 */
-    font-size: 22px;
-    /* 字体大小 */
     transition: background 0.3s ease, box-shadow 0.3s ease;
     /* 过渡效果 */
     box-sizing: border-box;
@@ -49,7 +47,7 @@ footer {
     /* 垂直居中对齐内容 */
     justify-content: center;
     /* 水平居中对齐内容 */
-    padding: 10px 20px; /* 根据需要调整 */    
+    padding: 100px 20px; /* 根据需要调整 */    
     /* 如果需要固定页脚，可以重新添加 position: fixed */
 }
 
@@ -74,6 +72,7 @@ footer {
     /* 水平居中 */
     text-align: center;
     /* 文字居中 */
+    font-size: 32px;
 }
 
 
@@ -130,7 +129,7 @@ footer {
     background-size: 200% 100%;
     -webkit-animation: flowCss 12s infinite linear;
     animation: flowCss 12s infinite linear;
-    font-size: 18px;
+    font-size: 32px;
     font-weight: bold;
     letter-spacing: 2px;
     animation-name: flowCss;
