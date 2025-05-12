@@ -4,6 +4,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh; /* 至少占据整个视口高度 */
     margin: 0;
     background-image: url('../images/background.jpg');
     /* 指定背景图片路径 */
