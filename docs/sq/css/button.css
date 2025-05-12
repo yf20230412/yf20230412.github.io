@@ -21,7 +21,6 @@ body {
     min-height: 100vh;
     /* 至少占据整个视口高度 */
     min-width: 100%;
-    margin-top: 10px;
 }
 
 .content {
@@ -33,8 +32,7 @@ body {
 .content1 {
     position: absolute;
     /* 或者使用 'relative'，具体取决于您的布局需求 */
-    top: 20px;
-    margin - bottom: 10px;
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
