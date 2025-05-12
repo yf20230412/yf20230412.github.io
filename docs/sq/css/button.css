@@ -2,9 +2,9 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* 至少占据整个视口高度 */
+    min-height: 100vh;
+    /* 至少占据整个视口高度 */
     margin: 0;
     background-image: url('../images/background.jpg');
     /* 指定背景图片路径 */
@@ -18,8 +18,23 @@ body {
     /* 背景图片变化时的过渡效果（可选） */
 }
 
+.container {
+    display: flex;
+    /* 使用Flex布局 */
+    flex-direction: column;
+    /* 内容竖直排列 */
+    min-height: 100vh;
+    /* 至少占据整个视口高度 */
+    min-width: 100%;
+}
 
 .content {
+    flex-grow: 1;
+    /* 内容区域自适应填充剩余空间 */
+}
+
+
+.content1 {
     position: absolute;
     /* 或者使用 'relative'，具体取决于您的布局需求 */
     top: 20px;
@@ -35,24 +50,12 @@ h1 {
 }
 
 .bookmark-container {
-    display: flex;
-    /* 使用Flex布局 */
-    flex-grow: 1;
-    /* 内容区域自适应填充剩余空间 */
-    flex-direction: row;
-    /* 让子元素横向排列 */
-
-    min-width: 100%;
-    flex-wrap: wrap;
-    /*允许换行*/
-    justify-content: center;
-    /*横向居中*/
-    gap: 15px;
-    /*按钮间的间隔*/
-    margin-top: 30%;
-    /*上内边距，增加内容与顶部的距离*/
-    margin-bottom: 20px;
-}
+        display: flex;
+        flex-wrap: wrap;/*允许换行*/
+        justify-content: center;/*横向居中*/
+        gap: 15px;/*按钮间的间隔*/
+		margin-top: 30%;/*上内边距，增加内容与顶部的距离*/
+    }
 
 .button {
     border: 1px solid #ccc;
