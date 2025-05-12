@@ -48,14 +48,6 @@
       /* 保持您指定的颜色 */
     }
 
-
-    .footer-备案 {
-      background-color: #000;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
     .bookmark-container {
       display: flex;
       flex-wrap: wrap;
