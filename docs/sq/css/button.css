@@ -1,33 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px); /* 确保内容足够长以推挤页脚 */
+    flex-direction: column;
+    min-height: 100vh;
     /* 至少占据整个视口高度 */
     margin: 0;
     background-image: url('../images/background.jpg');
-    /* 背景图片路径 */
     background-size: cover;
-    /* 背景图片覆盖整个容器 */
     background-position: center;
-    /* 背景图片居中 */
     background-repeat: no-repeat;
-    /* 背景图片不重复 */
     transition: background-image 0.5s ease-in-out;
-    /* 背景图片变化时的过渡效果（可选） */
-}
+    font-family: Arial, sans-serif;
 }
 
 .container {
+    flex: 1; /* 让内容区域占据剩余空间 */
+    position: relative; /* 添加此行 */
     display: flex;
-    /* 使用Flex布局 */
-    flex-direction: column;
-    /* 内容竖直排列 */
-    min-height: 100vh;
-    /* 至少占据整个视口高度 */
-    min-width: 100%;
+    flex-direction: column; /* 根据需要调整为 row */
+    align-items: center; /* 根据需要调整 */
+    justify-content: center; /* 根据需要调整 */
+    padding: 20px; /* 根据需要添加内边距 */
 }
+
 
 .content {
     flex-grow: 1;
@@ -36,7 +30,7 @@ body {
 
 
 .content1 {
-    position: absolute;
+    position: absolute; /* 现在相对于 .container */
     /* 或者使用 'relative'，具体取决于您的布局需求 */
     top: 5px;
     left: 50%;
@@ -51,18 +45,25 @@ h1 {
 }
 
 .bookmark-container {
-    margin-top: 30%;
-    /*上内边距，增加内容与顶部的距离*/
     max-width: 1200px;
     /* 最大宽度 */
+    padding-top: 30px; /* 根据需要调整 */
+    /* 或者使用 flex/grid 来控制位置 */
     width: 100%;
     /* 自适应宽度 */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 每行3列 */
     gap: 20px;
-    /* 按钮之间的间距 */
+    /* 按钮之间的间距,如果需要垂直居中，可以将其放在一个 flex 容器中  */
 }
+
+@media (max-width: 1200px) {
+    .bookmark-container {
+        grid-template-columns: repeat(2, 1fr); /* 中等屏幕减少列数 */
+    }
+}
+
 
 .button {
     border: 1px solid #ccc;
@@ -88,12 +89,16 @@ h1 {
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);/* 使图标居中 */
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+     /* 如果需要图标在按钮上方，可以调整 top 和 transform */    
+     /* top: -10px; /* 根据需要调整 */
+     /* transform: translateX(-50%); */    
+     /* pointer-events: none; /* 确保图标不影响鼠标事件 */
 }
 
 .button:hover {
