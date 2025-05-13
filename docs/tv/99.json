@@ -13,7 +13,7 @@
     {
         "name": "小鱼AI直播+",
         "type": 0,
-        "url": "https://d.yf1688.top/output/user_result.m3u ",
+        "url": "https://tv2.2015888.xyz/output/user_result.m3u ",
         "playerType": 2,
         "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
         "logo": "https://gh.2015888.xyz/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png",
@@ -87,9 +87,10 @@
     },
     {
         "key": "小苹果",
-        "name": "🍎┃苹果┃App🏮",
+        "name": "🍎┃苹果┃App💯",
         "type": 3,
-        "api": "./py/xiaopg.py",
+        "api": "csp_XpgGuard",
+        "jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt",
         "playerType": 2,
         "quickSearch": 1,
         "searchable": 1,
@@ -123,24 +124,6 @@
         "filterable": 1,
         "ext": {
             "danmu": true
-        },
-        "timeout": 15
-    },
-    {
-        "key": "人人",
-        "name": "👫┃人人┃App💯",
-        "type": 3,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "api": "csp_AppGet",
-        "ext": {
-            "url": "https://svip1.fun",
-            "dataKey": "laodiesdawsswasd",
-            "dataIv": "laodiesdawsswasd",
-            "deviceId": "298e5fe29c74b35aabb9836ee2f6f449f",
-            "version": "105"
         },
         "timeout": 15
     },
@@ -276,6 +259,17 @@
         "type": 3,
         "api": "./py/xiaohongys.py",
         "playerType": 2,
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 10
+    },
+    {
+        "key": "海马",
+        "name": "🦄┃海马┃App🏮",
+        "type": 3,
+        "api": "./py/haimays.py",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
