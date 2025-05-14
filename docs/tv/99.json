@@ -97,6 +97,20 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 15
+    },
+    {
+        "key": "天天弹幕版",
+        "name": "⛅️┃天天┃App💯",
+        "type": 3,
+        "api": "csp_AppRJ",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+          "url": "http://tt.ysdqjs.cn"
+      },
+        "timeout": 10
     },    
     {
         "key": "糯米影视",
