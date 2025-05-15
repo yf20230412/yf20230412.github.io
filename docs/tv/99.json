@@ -416,6 +416,8 @@
     },
 {"key":"荐片","name":"🧲┃荐片┃磁力💯","type":3,"api":"csp_Jianpian","quickSearch":1,"searchable":0,"changeable":1,"filterable":1,"ext": "http://api2.rinhome.com","timeout":15},
 
+{"key":"修罗","name":"🧲┃修罗┃磁力🍄","type":3,"api":"csp_XBPQ","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./json/xiuluoys.json","timeout":15},
+
 {"key":"磁力_lf_p2p2","name":"🧲┃磁力┃搜索㊙️","type":3,"api":"./js/lf_p2p2_min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"18+"},
 
 {"key":"腾讯","name":"🐧┃腾讯┃解析🌺","type":3,"api": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/douban/drpy3.min.js","quickSearch":1,"searchable":1,"changeable":1,"filterable":1,"ext":"./js/qq.js","timeout":15},
