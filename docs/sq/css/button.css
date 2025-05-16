@@ -4,7 +4,7 @@ body {
     min-height: 100vh;
     /* 至少占据整个视口高度 */
     margin: 0;
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/.background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
