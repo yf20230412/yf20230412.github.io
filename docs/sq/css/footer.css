@@ -33,7 +33,7 @@ footer {
     /* 黑色背景 */
     color: var(--footer-text-color);
     /* 白色文字 */
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid #00ff00;
     /* 顶部边框 */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     /* 阴影效果 */
