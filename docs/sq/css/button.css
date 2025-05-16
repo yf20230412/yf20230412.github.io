@@ -4,7 +4,7 @@ body {
     min-height: 100vh;
     /* 至少占据整个视口高度 */
     margin: 0;
-    background-image: url('../images/.background.jpg');
+    background-image: url('https://master.2015888.xyz/sq/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -202,85 +202,85 @@ h1 {
 /* 为每个按钮添加图标*/
 
 .button1::before {
-    background-image: url('../images/icon/01.png');
+    background-image: url('https://master.2015888.xyz/sq/01.png');
 }
 
 .button2::before {
-    background-image: url('../images/icon/01.png');
+    background-image: url('https://master.2015888.xyz/sq/01.png');
 }
 
 .button3::before {
-    background-image: url('../images/icon/02.svg');
+    background-image: url('https://master.2015888.xyz/sq/02.svg');
 }
 
 .button4::before {
-    background-image: url('../images/icon/03.svg');
+    background-image: url('https://master.2015888.xyz/sq/03.svg');
 }
 
 .button5::before {
-    background-image: url('../images/icon/04.png');
+    background-image: url('https://master.2015888.xyz/sq/04.png');
 }
 
 .button6::before {
-    background-image: url('../images/icon/04.png');
+    background-image: url('https://master.2015888.xyz/sq/04.png');
 }
 
 .button7::before {
-    background-image: url('../images/icon/05.svg');
+    background-image: url('https://master.2015888.xyz/sq/05.svg');
 }
 
 .button8::before {
-    background-image: url('../images/icon/06.png');
+    background-image: url('https://master.2015888.xyz/sq/06.png');
 }
 
 .button9::before {
-    background-image: url('../images/icon/07.svg');
+    background-image: url('https://master.2015888.xyz/sq/07.svg');
 }
 
 .button10::before {
-    background-image: url('../images/icon/08.svg');
+    background-image: url('https://master.2015888.xyz/sq/08.svg');
 }
 
 .button11::before {
-    background-image: url('../images/icon/09.png');
+    background-image: url('https://master.2015888.xyz/sq/09.png');
 }
 
 .button12::before {
-    background-image: url('../images/icon/04.png');
+    background-image: url('https://master.2015888.xyz/sq/04.png');
 }
 
 .button13::before {
-    background-image: url('../images/icon/10.svg');
+    background-image: url('https://master.2015888.xyz/sq/10.svg');
 }
 
 .button14::before {
-    background-image: url('../images/icon/11.svg');
+    background-image: url('https://master.2015888.xyz/sq/11.svg');
 }
 
 .button15::before {
-    background-image: url('../images/icon/12.png');
+    background-image: url('https://master.2015888.xyz/sq/12.png');
 }
 
 .button16::before {
-    background-image: url('../images/icon/13.png');
+    background-image: url('https://master.2015888.xyz/sq/13.png');
 }
 
 .button17::before {
-    background-image: url('../images/icon/14.svg');
+    background-image: url('https://master.2015888.xyz/sq/14.svg');
 }
 
 .button18::before {
-    background-image: url('../images/icon/15.png');
+    background-image: url('https://master.2015888.xyz/sq/15.png');
 }
 
 .button19::before {
-    background-image: url('../images/icon/29.svg');
+    background-image: url('https://master.2015888.xyz/sq/29.svg');
 }
 
 .button20::before {
-    background-image: url('../images/icon/10.svg');
+    background-image: url('https://master.2015888.xyz/sq/10.svg');
 }
 
 .button21::before {
-    background-image: url('../images/icon/17.png');
+    background-image: url('https://master.2015888.xyz/sq/17.png');
 }
