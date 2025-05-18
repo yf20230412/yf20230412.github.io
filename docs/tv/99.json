@@ -9,7 +9,14 @@
     "logo": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/img/588.txt",
 
     "lives": [
-        
+    
+    {
+        "name": "湖北联通",
+        "type": 0,
+        "url": "./txt/HB_unicom.txt",
+        "playerType": 1,
+        "timeout": 15
+    },        
     {
         "name": "小鱼AI直播+",
         "type": 0,
@@ -384,6 +391,7 @@
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 0,
+        "filterable": 1,
         "jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/fan.txt",
         "ext": {
             "Cloud-drive": "tvfan/Cloud-drive.txt",
@@ -391,6 +399,21 @@
             "siteUrl": "https://www.wogg.one/",
             "danMu": "弹"
         }
+    },
+    {
+        "key": "二小弹幕",
+        "name": "🐃┃二小┃4K📀",
+        "type": 3,
+        "api": "csp_ErXiaoGuard",
+        "jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/ok.txt",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 0,
+        "filterable": 1,
+        "ext": {
+            "danmu": true
+        },
+        "timeout": 25
     },
     {
         "key": "采集之王",

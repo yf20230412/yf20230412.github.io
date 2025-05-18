@@ -10,6 +10,13 @@
 
     "lives": [
     {
+        "name": "湖北联通",
+        "type": 0,
+        "url": "./txt/HB_unicom.txt",
+        "playerType": 1,
+        "timeout": 15
+    },
+    {
         "name": "小鱼AI直播+",
         "type": 0,
         "url": "https://gh.2015888.xyz/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u ",
