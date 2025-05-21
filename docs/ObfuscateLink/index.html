@@ -211,7 +211,9 @@
             //删除汉字㊙️
             cleaned = cleaned.replace(/[^a-zA-Z0-9./:?=&#_@%~$+\-()!]/g, '');
             
-
+            // 🔥删除http或https前面所有的字符
+            cleaned = cleaned.replace(/^.*?(https?:\/\/)/i, '$1');
+            
             document.getElementById('output').value = cleaned;
             
             document.getElementById('openLinkButton').style.display = 'inline-block';
