@@ -110,6 +110,11 @@ body,.btn,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .center-block {margin: 0 auto; float: none; padding: 0;}
 .nk-footer-wrap {display: block;}
 .nk-footer-copyright {text-align: center;}
+.nk-footer-copyright img {
+  vertical-align: middle; /* 垂直居中对齐，可改为 top/bottom 调整 */
+  margin-right: 4px; /* 可选：添加间距更美观 */
+}
+
 #link_content {margin-top: 40px;}
 .nk-ibx-action-item .fa { font-size: 1.2rem; }
 .nk-ibx-action-item .fa + span { margin-left: 0.5rem; }
