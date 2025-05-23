@@ -112,6 +112,7 @@ body,.btn,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .nk-footer-copyright {text-align: center;}
 .nk-footer-copyright img {
   vertical-align: middle; /* 垂直居中对齐，可改为 top/bottom 调整 */
+  display: inline-block!important;
   margin-right: 4px; /* 可选：添加间距更美观 */
 }
 
