@@ -355,7 +355,6 @@
         "searchable": 1,
         "changeable": 1,
         "filterable": 1,
-        "ext": "https://v.aikanbot.com",
         "timeout": 15
     },
     {
