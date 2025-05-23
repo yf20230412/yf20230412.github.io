@@ -270,7 +270,7 @@ const desktopMenu = `
         `;
 
 // 获取菜单容器元素
-const menuContainer = document.getElementById('nk-wrap');
+const menuContainer = document.querySelector('.nk-wrap');
 
 // 根据设备类型插入相应的内容
 if (window.matchMedia('(max-width: 768px)').matches) {
