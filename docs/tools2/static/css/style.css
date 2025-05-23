@@ -70,7 +70,7 @@ body,.btn,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .breadcrumb-item.active a {
 	color:#086cf0 !important;
 }
-.nk-menu-text.font-weight-bold {
+.nya-title {
 	position:absolute;
 	top:-15px;
 	background-color:#6576ff;
