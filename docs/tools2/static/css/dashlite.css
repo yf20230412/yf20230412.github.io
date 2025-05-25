@@ -5520,7 +5520,7 @@ input[type="radio"]:checked ~ label { cursor: default; }
 .toast .close { display: inline-flex; margin-right: -0.5rem; margin-left: 0.5rem; }
 
 
-@font-face { font-family: "Nioicon"; src: url("../fonts/Nioicon.eot"); src: url("../fonts/Nioicon.eot") format("embedded-opentype"), url("../fonts/Nioicon.ttf") format("truetype"), url("../fonts/Nioicon.woff") format("woff"), url("https://www.qiushui.vip/template/dashlite/fonts/Nioicon.svg") format("svg"); font-weight: normal; font-style: normal; font-display: block; }
+@font-face { font-family: "Nioicon"; src: url("../fonts/Nioicon.eot"); src: url("../fonts/Nioicon.eot#iefix") format("embedded-opentype"), url("../fonts/Nioicon.ttf") format("truetype"), url("../fonts/Nioicon.woff") format("woff"), url("../fonts/Nioicon.svg#Nioicon") format("svg"); font-weight: normal; font-style: normal; font-display: block; }
 
 .ni { /* use !important to prevent issues with browser extensions that change fonts */ font-family: "Nioicon" !important; speak: never; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
