@@ -139,3 +139,15 @@ img.loginbtn{width: 66px;margin: 16px;}
 }
 .dark-mode .query-title{background-color:#273b5f;}
 .dark-mode .table-title{background-color:#273b5f;}
+@media (max-width: 768px) {
+        #xy2 {
+            display: none; /* 移动端隐藏移动端特有元素 */
+        }
+    }
+    
+@media (min-width: 769px) {
+        #xy {
+            display: none; /* 电脑端隐藏移动端特有元素 */
+        }    
+    }
+        

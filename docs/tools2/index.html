@@ -57,6 +57,33 @@
                   <span class="nk-menu-text">博客</span>
                 </a>
               </li>
+              <div class="xiaoyu" id=xy>
+              <hr>
+              
+              <li class="nk-menu-item" data-id="8"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(8)">图片</a></li>
+              
+              <li class="nk-menu-item" data-id="9"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(9)">影视</a></li>
+
+              <li class="nk-menu-item" data-id="6"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(6)">加密解密</a></li>
+
+              <li class="nk-menu-item" data-id="8"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(8)">AI智能</a></li>
+
+              <li class="nk-menu-item" data-id="11"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(11)">检索</a></li>
+
+              <li class="nk-menu-item" data-id="4"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(4)">工具</a></li>
+
+              <li class="nk-menu-item" data-id="5"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(5)">开发</a></li>
+
+              <li class="nk-menu-item" data-id="14"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(14)">TV</a></li>
+
+              <li class="nk-menu-item" data-id="12"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(12)">论坛</a></li>
+
+              <li class="nk-menu-item" data-id="10"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(10)">图床</a></li>
+
+              <li class="nk-menu-item" data-id="4"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(4)">采集</a></li>
+
+              <li class="nk-menu-item" data-id="7"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(7)">站务</a></li>
+              </div>
             </ul>
           </div>
           <!-- .nk-header-menu -->
@@ -99,8 +126,7 @@
           <div class="card-inner p-2">
             <div class="container-xl">
               <nav>
-                <ul class="breadcrumb breadcrumb-pipe">
-                  <li class="breadcrumb-item fs-16px category-all active"><a href="javascript:show_tool_list(0)">全部</a></li>
+                <ul class="breadcrumb breadcrumb-pipe" id=xy2>
                   <li class="breadcrumb-item fs-16px category-item" data-id="8"><a href="javascript:show_tool_list(8)">图片工具</a></li>
                   <li class="breadcrumb-item fs-16px category-item" data-id="9"><a href="javascript:show_tool_list(9)">影视</a></li>
                   <li class="breadcrumb-item fs-16px category-item" data-id="6"><a href="javascript:show_tool_list(6)">加密解密</a></li>
@@ -124,24 +150,9 @@
     <div class="nk-content nk-content-lg nk-content-fluid">
       <div class="container-xl">
         <div class="nk-content-body">
-          <meta name='impact-site-verification' value='350c1ab5-7a20-4f18-9daa-f639552e59b9'>
-
-          <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-54626MTEG5"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            
-            gtag('config', 'G-54626MTEG5');
-          </script>
-          <script>
-            (function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A5639117-b3e0-4bd2-9999-78c623639c8e1.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');
-          </script>
+          
           <div id="toollist">
-
-
-
+            <!-- 主要内容 -->
             <div class="card card-preview category-card" data-category-id="8">
               <div class="card-inner mt-3">
                 <div class="nya-title nk-ibx-action-item progress-rating">
@@ -659,299 +670,12 @@
     <!-- footer @e -->
   </div>
   <!-- wrap @e -->
-  <script src="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
-  <script src="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
-  <script src="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/layer/3.5.1/layer.js"></script>
+  <script src="./static/js/jquery.min.js"></script>
+  <script src="./static/js/bootstrap.bundle.min.js"></script>
+  <script src="./static/js/layer.js"></script>
   <script src="./static/js/nioapp.min.js"></script>
   <script src="./static/js/script.js"></script>
   <script src="./static/js/sousuo.js"></script>
-
-  <script>
-    var tool_list = [
-    
-    {"id":8,"title":"图片工具","icon":"icon ni ni-img","items":[
-    
-    {"id":29,"title":"聚合高速图床","alias":"imghosting","keyword":"qqbaidugaosutuchuang,qqbdgstc","request_count":13,"category_id":8,"level":0,"url":"\/imghosting","out":false},
-    {"id":31,"title":"网站Favicon获取","alias":"favicon","keyword":"wangzhanfaviconhuoqu,wzfaviconhq","request_count":4,"category_id":8,"level":0,"url":"\/favicon","out":false},
-    {"id":38,"title":"图片转base64","alias":"image2base64","keyword":"tupianzhuanbase64,tpzbase64","request_count":4,"category_id":8,"level":0,"url":"\/image2base64","out":false},
-    {"id":93,"title":"微博图片反查","alias":"wbimg","keyword":"weibotupianfancha,wbtpfc","request_count":10,"category_id":8,"level":0,"url":"\/wbimg","out":false},
-    {"id":37,"title":"在线图片编辑","alias":"image_editor","keyword":"zaixiantupianbianji,zxtpbj","request_count":17,"category_id":8,"level":0,"url":"\/image_editor","out":false},
-    {"id":134,"title":"在线PS","alias":"ps","keyword":"图片,在线,ps,PS,photoshop","request_count":2,"category_id":8,"level":0,"url":"\/ps","out":false},
-    {"id":140,"title":"证件照AI生成","alias":"photo","keyword":"证件照,Ai","request_count":0,"category_id":8,"level":0,"url":"\/photo","out":false}]},
-    
-    
-    
-    {"id":9,"title":"视频工具","icon":"icon ni ni-video","items":[
-    
-    {"id":86,"title":"B站视频解析","alias":"bili_video","keyword":"bzhanshipinjiexi,bzspjx","request_count":15,"category_id":9,"level":0,"url":"\/bili_video","out":false},
-    {"id":87,"title":"查B站弹幕发送者","alias":"bili_danmu","keyword":"chabzhandanmufasongzhe,cbzdmfsz","request_count":24,"category_id":9,"level":0,"url":"\/bili_danmu","out":false},
-    {"id":138,"title":"油管视频处理","alias":"easyvideo","keyword":"油管,视频,easyvideo,youtube,video","request_count":2,"category_id":9,"level":0,"url":"\/easyvideo","out":false},
-    {"id":139,"title":"海外视频下载","alias":"cobalt","keyword":"视频,video,download,下载,国外,youtube,tiktok","request_count":1,"category_id":9,"level":0,"url":"\/cobalt","out":false}]},
-    
-    
-    
-    {"id":6,"title":"\u52a0\u5bc6\u89e3\u5bc6","icon":"icon ni ni-code","items":[
-    
-    {"id":54,"title":"编码解码器","alias":"decode","keyword":"bianmajiemaqi,bmjmq","request_count":14,"category_id":6,"level":0,"url":"\/decode","out":false},
-    {"id":45,"title":"RSA公私钥生成","alias":"rsa","keyword":"rsagongsiyueshengcheng,rsagsysc","request_count":2,"category_id":6,"level":0,"url":"\/rsa","out":false},
-    {"id":26,"title":"对称加密解密","alias":"encrypt","keyword":"duichenjiamijiemi,dcjmjm","request_count":5,"category_id":6,"level":0,"url":"\/encrypt","out":false},
-    {"id":24,"title":"base64编码\/解码","alias":"base64","keyword":"base64bianmajiema,base64bmjm","request_count":7,"category_id":6,"level":0,"url":"\/base64","out":false},
-    {"id":96,"title":"国密SM2工具","alias":"guomi","keyword":"guomism2,gmsm2","request_count":22,"category_id":6,"level":0,"url":"\/guomi","out":false}]},
-    
-    
-    
-    {"id":7,"title":"格式转化","icon":"icon ni ni-tranx","items":[
-    
-    {"id":22,"title":"字节计算器","alias":"byte_calc","keyword":"zijiejisuanqi,zjjsq","request_count":0,"category_id":7,"level":0,"url":"\/byte_calc","out":false},
-    {"id":33,"title":"在线进制转换","alias":"hex_convert","keyword":"zaixianjinzhizhuanhuan,zxjzzh","request_count":4,"category_id":7,"level":0,"url":"\/hex_convert","out":false},
-    {"id":39,"title":"JSON解析格式化","alias":"json","keyword":"jsonjiexigeshihua,jsonjxgsh","request_count":48,"category_id":7,"level":0,"url":"\/json","out":false},
-    {"id":21,"title":"JavaScript格式化\/压缩","alias":"code_js","keyword":"javascriptgeshihuayasuo,jsgshys","request_count":3,"category_id":7,"level":0,"url":"\/code_js","out":false},
-    {"id":20,"title":"Html格式化\/压缩","alias":"code_html","keyword":"htmlgeshihuayasuo,htmlgshys","request_count":3,"category_id":7,"level":0,"url":"\/code_html","out":false},
-    {"id":19,"title":"CSS格式化\/压缩","alias":"code_css","keyword":"cssgeshihuayasuo,cssgshys","request_count":0,"category_id":7,"level":0,"url":"\/code_css","out":false},
-    {"id":50,"title":"Unix时间戳转换","alias":"timestamp","keyword":"unixshijianchuozhuanhuan,unixsjczh","request_count":24,"category_id":7,"level":0,"url":"\/timestamp","out":false},
-    {"id":132,"title":"JSON CRACK","alias":"json_crack","keyword":"json crack","request_count":4,"category_id":7,"level":0,"url":"\/json_crack","out":false}]},
-    
-    
-    
-    {"id":2,"title":"开发工具","icon":"icon ni ni-code","items":[
-    
-    {"id":51,"title":"UUID生成器","alias":"uuid","keyword":"uuidshengchengqi,guid,uuidscq","request_count":4,"category_id":2,"level":0,"url":"\/uuid","out":false},
-    {"id":40,"title":"Linux命令查询","alias":"linux_command","keyword":"linuxminglingchaxun,linuxmlcx","request_count":1,"category_id":2,"level":0,"url":"\/linux_command","out":false},
-    {"id":67,"title":"RGB颜色对照表","alias":"rgb_color","keyword":"rgbyanseduizhaobiao,rgbysdzb","request_count":0,"category_id":2,"level":0,"url":"\/rgb_color","out":false},
-    {"id":42,"title":"MimeType类型表","alias":"mime_type","keyword":"mimetypeleixingbiao,mimetypelxb","request_count":2,"category_id":2,"level":0,"url":"\/mime_type","out":false},
-    {"id":27,"title":"文件哈希计算","alias":"file_hash","keyword":"wenjianhaxijisuan,wenjianhashjisuan,wjhxjs","request_count":3,"category_id":2,"level":0,"url":"\/file_hash","out":false},
-    {"id":32,"title":"字符串哈希计算","alias":"str_hash","keyword":"zifuchuanhaxijisuan,zfchxjs","request_count":0,"category_id":2,"level":0,"url":"\/str_hash","out":false},
-    {"id":97,"title":"证书信息查看","alias":"cert","keyword":"zhengshuxinxichakan,zsxxck","request_count":19,"category_id":2,"level":0,"url":"\/cert","out":false},
-    {"id":98,"title":"证书格式转换","alias":"cert_convert","keyword":"rsazhengshugeshizhuanhuan,rsazsgszh","request_count":10,"category_id":2,"level":0,"url":"\/cert_convert","out":false},{"id":99,"title":"CSR生成与查看","alias":"csr","keyword":"csrshengchengchakan,csrscck","request_count":8,"category_id":2,"level":0,"url":"\/csr","out":false}]},
-    
-    
-    
-    {"id":1,"title":"站长工具","icon":"icon ni ni-setting","items":[
-    
-    {"id":65,"title":"网页源代码查看","alias":"viewhtml","keyword":"wangyeyuandaimachakan,wyydmck","request_count":5,"category_id":1,"level":0,"url":"\/viewhtml","out":false},
-    {"id":35,"title":"IP地址查询","alias":"ip","keyword":"ipdizhichaxun,ipquery,ipdzcx","request_count":5,"category_id":1,"level":0,"url":"\/ip","out":false},
-    {"id":36,"title":"域名Whois查询","alias":"whois","keyword":"yumingwhoischaxun,ymwhoiscx","request_count":3,"category_id":1,"level":0,"url":"\/whois","out":false},
-    {"id":74,"title":"域名DNS查询","alias":"dns","keyword":"yumingdnschaxun,ymdnscx","request_count":2,"category_id":1,"level":0,"url":"\/dns","out":false},
-    {"id":55,"title":"腾讯域名拦截查询","alias":"checkurl","keyword":"yuminglanjiechaxun,ymljcx","request_count":3,"category_id":1,"level":0,"url":"\/checkurl","out":false},
-    {"id":66,"title":"数字IP地址转换","alias":"ip_num","keyword":"shuziipdizhizhuanhuan,szipdzzh","request_count":3,"category_id":1,"level":0,"url":"\/ip_num","out":false},
-    {"id":53,"title":"中文域名转码","alias":"punycode","keyword":"zhongwenyumingzhuanma,zwymzm,punycode","request_count":1,"category_id":1,"level":0,"url":"\/punycode","out":false},
-    {"id":58,"title":"MySQL管理器","alias":"\/tool\/mysql\/","keyword":"mysqlguanliqi,mysqlglq","request_count":2,"category_id":1,"level":0,"url":"\/tool\/mysql\/","out":true},
-    {"id":57,"title":"手机在线FTP","alias":"http:\/\/ftp.cccyun.cc\/","keyword":"shoujizaixianftp,sjzxftp","request_count":3,"category_id":1,"level":0,"url":"http:\/\/ftp.cccyun.cc\/","out":true},
-    {"id":68,"title":"查看HTTP请求","alias":"http","keyword":"chakanhttpqingqiu,ckhttpqq","request_count":2,"category_id":1,"level":0,"url":"\/http","out":false},
-    {"id":71,"title":"PING网站测速","alias":"https:\/\/ping.chinaz.com\/","keyword":"pingwangzhancesu,pingwzcs","request_count":2,"category_id":1,"level":0,"url":"https:\/\/ping.chinaz.com\/","out":true},
-    {"id":73,"title":"HTTP状态查询","alias":"http_status","keyword":"httpzhuangtaichaxun,httpztcx","request_count":1,"category_id":1,"level":0,"url":"\/http_status","out":false},
-    {"id":101,"title":"外链查询","alias":"https:\/\/ahrefs.com\/","keyword":"外链,ahrefs,href","request_count":2,"category_id":1,"level":0,"url":"https:\/\/ahrefs.com\/","out":true}]},
-    
-    
-    
-    {"id":3,"title":"实用工具","icon":"icon ni ni-map","items":[
-    
-    {"id":61,"title":"全网音乐搜索","alias":"http:\/\/music.hi.cn\/","keyword":"quanwangyinyuesousuo,qwyyss,music","request_count":4,"category_id":3,"level":0,"url":"http:\/\/music.hi.cn\/","out":true},
-    {"id":72,"title":"音乐文件解锁","alias":"http:\/\/unlock.music.hi.cn\/","keyword":"yinyuewenjianjiesuo,yywjjs","request_count":4,"category_id":3,"level":0,"url":"http:\/\/unlock.music.hi.cn\/","out":true},
-    {"id":41,"title":"Markdown在线编辑","alias":"markdown","keyword":"markdownzaixianbianji,markdownzxbj","request_count":4,"category_id":3,"level":0,"url":"\/markdown","out":false},
-    {"id":69,"title":"音乐外链转换","alias":"https:\/\/link.hhtjim.com\/","keyword":"yinyuewailianzhuanhuan,yywlzh","request_count":4,"category_id":3,"level":0,"url":"https:\/\/link.hhtjim.com\/","out":true},
-    {"id":63,"title":"手机归属地查询","alias":"mobile","keyword":"shoujiguishudichaxun,sjgsdcx","request_count":0,"category_id":3,"level":0,"url":"\/mobile","out":false},
-    {"id":64,"title":"身份证归属地查询","alias":"idcard","keyword":"shenfenzhengguishudichaxun,sfzgsdcx","request_count":4,"category_id":3,"level":0,"url":"\/idcard","out":false},
-    {"id":92,"title":"银行卡归属地查询","alias":"bankcard","keyword":"yinhangkaguishudichaxun,yhkgsdcx","request_count":1,"category_id":3,"level":0,"url":"\/bankcard","out":false},
-    {"id":44,"title":"二维码生成","alias":"qrcode","keyword":"erweimashengcheng,ewmsc,qrcode","request_count":3,"category_id":3,"level":0,"url":"\/qrcode","out":false},
-    {"id":2,"title":"随机密码生成","alias":"rand_password","keyword":"suijimimashengcheng,sjmmsc","request_count":1,"category_id":3,"level":0,"url":"\/rand_password","out":false},
-    {"id":52,"title":"中文简繁体转化","alias":"zh_convert","keyword":"zhongwenjianfantizhuanhua,zwjftzh","request_count":0,"category_id":3,"level":0,"url":"\/zh_convert","out":false},
-    {"id":13,"title":"emoji表情","alias":"emoji","keyword":"emojibiaoqing,emojibq","request_count":5,"category_id":3,"level":0,"url":"\/emoji","out":false},
-    {"id":47,"title":"特殊符号大全","alias":"special_symbols","keyword":"teshufuhaodaquan,tsfhdq","request_count":0,"category_id":3,"level":0,"url":"\/special_symbols","out":false},
-    {"id":49,"title":"字数统计与排版","alias":"text_count","keyword":"zishutongjiyupaiban,zstjypb","request_count":2,"category_id":3,"level":0,"url":"\/text_count","out":false},
-    {"id":119,"title":"pdf转化","alias":"pdf","keyword":"pdf,pdf压缩,pdf转化,pdf操作,pdf合并,office","request_count":12,"category_id":3,"level":0,"url":"\/pdf","out":false}]},
-    
-    
-    
-    {"id":12,"title":"指数排名","icon":"icon ni ni-box","items":[
-    
-    {"id":70,"title":"SEO综合查询","alias":"https:\/\/seo.chinaz.com\/","keyword":"seozonghechaxun,seozhcx","request_count":4,"category_id":12,"level":0,"url":"https:\/\/seo.chinaz.com\/","out":true},
-    {"id":100,"title":"Alexa排名","alias":"http:\/\/www.alexa.cn\/","keyword":"alexa","request_count":3,"category_id":12,"level":0,"url":"http:\/\/www.alexa.cn\/","out":true},
-    {"id":102,"title":"抖音搜索SEO","alias":"https:\/\/www.dso100.com\/","keyword":"抖音,douyin,seo","request_count":2,"category_id":12,"level":0,"url":"https:\/\/www.dso100.com\/","out":true},
-    {"id":103,"title":"新科数据分析","alias":"https:\/\/xd.newrank.cn\/","keyword":"新科,抖音短视频,直播电商,数据分析","request_count":0,"category_id":12,"level":0,"url":"https:\/\/xd.newrank.cn\/","out":true},
-    {"id":104,"title":"新红","alias":"https:\/\/xh.newrank.cn\/","keyword":"小红书,数据,数据分析，达人运营","request_count":2,"category_id":12,"level":0,"url":"https:\/\/xh.newrank.cn\/","out":true},
-    {"id":105,"title":"ChinaZ","alias":"https:\/\/rank.chinaz.com\/","keyword":"chiaZ,seo,排名,站长工具","request_count":0,"category_id":12,"level":0,"url":"https:\/\/rank.chinaz.com\/","out":true},
-    {"id":109,"title":"飞瓜数据","alias":"https:\/\/www.feigua.cn\/","keyword":"飞瓜,抖音流量趋势,热门视频","request_count":0,"category_id":12,"level":0,"url":"https:\/\/www.feigua.cn\/","out":true},
-    {"id":110,"title":"灰豚数据","alias":"https:\/\/dy.huitun.com\/","keyword":"灰豚,直播及销售数据,助力账号内容定位","request_count":1,"category_id":12,"level":0,"url":"https:\/\/dy.huitun.com\/","out":true},
-    {"id":111,"title":"蝉妈妈数据","alias":"https:\/\/www.chanmama.com\/","keyword":"蝉妈妈,短视频电商","request_count":1,"category_id":12,"level":0,"url":"https:\/\/www.chanmama.com\/","out":true},
-    {"id":112,"title":"卡思数据","alias":"https:\/\/www.caasdata.com\/","keyword":"卡思,全视频网站大数据分析,抖音,快手","request_count":2,"category_id":12,"level":0,"url":"https:\/\/www.caasdata.com\/","out":true},
-    {"id":113,"title":"热浪数据","alias":"https:\/\/www.relangdata.cn\/","keyword":"热浪,短视频直播,一站式数据服务平台","request_count":0,"category_id":12,"level":0,"url":"https:\/\/www.relangdata.cn\/","out":true},
-    {"id":114,"title":"考拉新媒体助手","alias":"https:\/\/www.xu1s.com\/","keyword":"公众号,数据采集,分享收藏,新媒体知识地图","request_count":1,"category_id":12,"level":0,"url":"https:\/\/www.xu1s.com\/","out":true},
-    {"id":115,"title":"新榜","alias":"https:\/\/www.newrank.cn\/","keyword":"新榜,新媒体,趋势,动态,咨询评估","request_count":0,"category_id":12,"level":0,"url":"https:\/\/www.newrank.cn\/","out":true},
-    {"id":116,"title":"西瓜数据","alias":"http:\/\/data.xiguaji.com\/","keyword":"西瓜数据,辨别,水号,公众号数据分析","request_count":1,"category_id":12,"level":0,"url":"http:\/\/data.xiguaji.com\/","out":true},
-    {"id":117,"title":"友望数据","alias":"http:\/\/www.youwant.cn\/","keyword":"友望,视频号,榜单,挂链,直播","request_count":0,"category_id":12,"level":0,"url":"http:\/\/www.youwant.cn\/","out":true},
-    {"id":118,"title":"清博大数据","alias":"http:\/\/www.gsdata.cn\/","keyword":"清博,新媒体平台排行榜,舆情报告","request_count":1,"category_id":12,"level":0,"url":"http:\/\/www.gsdata.cn\/","out":true}]},
-    
-    
-    
-    {"id":13,"title":"AI相关","icon":"icon ni ni-text-a","items":[
-    
-    {"id":127,"title":"ChatGLM","alias":"https:\/\/chatglm.cn\/","keyword":"chat glm,ai,聊天","request_count":2,"category_id":13,"level":0,"url":"https:\/\/chatglm.cn\/","out":true},
-    {"id":126,"title":"Kimi Chat","alias":"https:\/\/kimi.ai","keyword":"ai, 聊天,kimi","request_count":5,"category_id":13,"level":0,"url":"https:\/\/kimi.ai","out":true},
-    {"id":128,"title":"文心一言","alias":"https:\/\/yiyan.baidu.com","keyword":"文心一言","request_count":0,"category_id":13,"level":0,"url":"https:\/\/yiyan.baidu.com","out":true},
-    {"id":129,"title":"通义万相-图片","alias":"https:\/\/tongyi.aliyun.com\/wanxiang\/","keyword":"通义万象,文字生成图片","request_count":3,"category_id":13,"level":0,"url":"https:\/\/tongyi.aliyun.com\/wanxiang\/","out":true},
-    {"id":130,"title":"图片-剪映-Dreamina","alias":"https:\/\/www.capcut.cn\/ai-tool","keyword":"剪映, Dreamina","request_count":0,"category_id":13,"level":0,"url":"https:\/\/www.capcut.cn\/ai-tool","out":true},
-    {"id":131,"title":"图片-LibLibAI","alias":"https:\/\/www.liblib.art\/","keyword":"liblib,哩布,图片","request_count":3,"category_id":13,"level":0,"url":"https:\/\/www.liblib.art\/","out":true},
-    {"id":141,"title":"通义千问","alias":"https:\/\/tongyi.aliyun.com","keyword":"通义千问,AI","request_count":0,"category_id":13,"level":0,"url":"https:\/\/tongyi.aliyun.com","out":true},
-    {"id":142,"title":"豆包","alias":"https:\/\/www.doubao.com","keyword":"豆包,AI","request_count":0,"category_id":13,"level":0,"url":"https:\/\/www.doubao.com","out":true},
-    {"id":143,"title":"秘塔AI","alias":"https:\/\/metaso.cn\/","keyword":"秘塔,AI","request_count":1,"category_id":13,"level":0,"url":"https:\/\/metaso.cn\/","out":true},
-    {"id":144,"title":"Renderforest视频生成","alias":"https:\/\/www.renderforest.com\/","keyword":"renderforest","request_count":1,"category_id":13,"level":0,"url":"https:\/\/www.renderforest.com\/","out":true},
-    {"id":145,"title":"supawork去水印","alias":"https:\/\/supawork.ai\/ai-video-watermark-remover","keyword":"supawork,去水印","request_count":0,"category_id":13,"level":0,"url":"https:\/\/supawork.ai\/ai-video-watermark-remover","out":true},
-    {"id":146,"title":"硅基流动","alias":"https:\/\/cloud.siliconflow.cn\/","keyword":"siliconflow,硅基流动,大模型,ai","request_count":0,"category_id":13,"level":0,"url":"https:\/\/cloud.siliconflow.cn\/","out":true},
-    {"id":147,"title":"stabledifffusion","alias":"https:\/\/stabledifffusion.com\/tools\/ai-image-generator","keyword":"stabledifffusion","request_count":0,"category_id":13,"level":0,"url":"https:\/\/stabledifffusion.com\/tools\/ai-image-generator","out":true}]},
-    
-    
-    
-    {"id":5,"title":"ＱＱ工具","icon":"icon ni ni-chat-circle-fill","items":[
-    
-    {"id":79,"title":"QQ强制聊天","alias":"qqchat","keyword":"qqqiangzhiliaotian,qqqzlt","request_count":58,"category_id":5,"level":0,"url":"\/qqchat","out":false},
-    {"id":83,"title":"自定义在线机型","alias":"online_device","keyword":"zidingyizaixianjixing,zdyzxjx","request_count":13,"category_id":5,"level":0,"url":"\/online_device","out":false},
-    {"id":60,"title":"QQ获取COOKIE","alias":"\/tool\/newsid\/","keyword":"qqhuoqucookie,qqhqcookie","request_count":9,"category_id":5,"level":0,"url":"\/tool\/newsid\/","out":true},
-    {"id":78,"title":"单向好友检测","alias":"friend_check","keyword":"qqdanxianghaoyoujiance,qqdxhyjc","request_count":11,"category_id":5,"level":0,"url":"\/friend_check","out":false},
-    {"id":81,"title":"设置空白昵称","alias":"setqqnick","keyword":"shezhikongbainicheng,szkbnc","request_count":0,"category_id":5,"level":0,"url":"\/setqqnick","out":false},
-    {"id":80,"title":"生成加群链接","alias":"group_join","keyword":"shengchengjiaqunlianjie","request_count":6,"category_id":5,"level":0,"url":"\/group_join","out":false},
-    {"id":75,"title":"提取群成员","alias":"group_members","keyword":"tiquqqqunchengyuan,tqqqqcy","request_count":6,"category_id":5,"level":0,"url":"\/group_members","out":false},
-    {"id":76,"title":"批量删除群公告","alias":"group_announce","keyword":"piliangshanchuqungonggao,plscqgg","request_count":0,"category_id":5,"level":0,"url":"\/group_announce","out":false},
-    {"id":77,"title":"自助解散群","alias":"group_dismiss","keyword":"zizhujiesanqqqun,zzjsqqq","request_count":2,"category_id":5,"level":0,"url":"\/group_dismiss","out":false}]},
-    
-    
-    
-    {"id":10,"title":"在线资源","icon":"icon ni ni-network","items":[
-    
-    {"id":106,"title":"igoutu免费icon","alias":"https:\/\/igoutu.cn\/","keyword":"免费,icon,图标,插图,照片,在线","request_count":3,"category_id":10,"level":0,"url":"https:\/\/igoutu.cn\/","out":true},
-    {"id":107,"title":"iconfont阿里巴巴矢量库","alias":"https:\/\/www.iconfont.cn\/","keyword":"阿里巴巴,矢量库,icon","request_count":0,"category_id":10,"level":0,"url":"https:\/\/www.iconfont.cn\/","out":true},
-    {"id":108,"title":"临时邮箱","alias":"https:\/\/www.linshiyou.com\/","keyword":"email,临时,邮箱","request_count":1,"category_id":10,"level":0,"url":"https:\/\/www.linshiyou.com\/","out":true},
-    {"id":120,"title":"Unsplash免费图片","alias":"https:\/\/unsplash.com\/","keyword":"免费,图片,无版权,视频,音频","request_count":11,"category_id":10,"level":0,"url":"https:\/\/unsplash.com\/","out":true},
-    {"id":121,"title":"Pexels免费图片","alias":"https:\/\/www.pexels.com\/","keyword":"图片,免费,高清,在线","request_count":6,"category_id":10,"level":0,"url":"https:\/\/www.pexels.com\/","out":true},
-    {"id":122,"title":"Canva在线设计","alias":"https:\/\/www.canva.com\/","keyword":"图片,免费,canva,ai设计","request_count":3,"category_id":10,"level":0,"url":"https:\/\/www.canva.com\/","out":true},
-    {"id":123,"title":"Pixabay免费图片音视频","alias":"https:\/\/pixabay.com\/","keyword":"图片,在线,免费,pixabay,视频,音频","request_count":1,"category_id":10,"level":0,"url":"https:\/\/pixabay.com\/","out":true},
-    {"id":124,"title":"LibreStock聚合免费图片","alias":"https:\/\/librestock.com\/","keyword":"图片,免费,在线,无版权","request_count":3,"category_id":10,"level":0,"url":"https:\/\/librestock.com\/","out":true},
-    {"id":125,"title":"生成微信聊天图片","alias":"https:\/\/www.baituling.com\/chat\/","keyword":"图片,微信,聊天","request_count":3,"category_id":10,"level":0,"url":"https:\/\/www.baituling.com\/chat\/","out":true},
-    {"id":136,"title":"Pixso","alias":"https:\/\/pixso.cn\/","keyword":"pixso,海报,免费","request_count":0,"category_id":10,"level":0,"url":"https:\/\/pixso.cn\/","out":true},
-    {"id":137,"title":"Fotor懒设计","alias":"https:\/\/www.fotor.com.cn\/","keyword":"fotor,Fortor,懒设计,海报,免费,在线","request_count":0,"category_id":10,"level":0,"url":"https:\/\/www.fotor.com.cn\/","out":true}]},
-    
-    
-    
-    {"id":4,"title":"娱乐工具","icon":"icon ni ni-aperture","items":[
-    
-    {"id":25,"title":"ASCII艺术字生成","alias":"ascii_art","keyword":"asciiyishuzishengcheng,asciiyszsc","request_count":3,"category_id":4,"level":0,"url":"\/ascii_art","out":false},
-    {"id":3,"title":"支付宝到账语音","alias":"alipay_arrival","keyword":"zhifubaodaozhangyuyin,zfbdzyy","request_count":2,"category_id":4,"level":0,"url":"\/alipay_arrival","out":false},
-    {"id":43,"title":"在线钢琴","alias":"piano","keyword":"zaixiangangqin,piano,zxgq","request_count":6,"category_id":4,"level":0,"url":"\/piano","out":false}
-    ]
-    }
-    ];
-    
-    
-    
-    
-    var tools = [];
-    var searchkw = '';
-    function show_category_btn(catid){
-        if(catid == 0){
-            $("#link_content").show();
-            $(".category-all").addClass("active");
-            $(".category-item").removeClass("active");
-        }else{
-            $("#link_content").hide();
-            $(".category-all").removeClass("active");
-            $(".category-item").removeClass("active");
-            $.each($(".category-item"), function(index,value){
-                if($(value).attr('data-id') == catid){
-                    $(value).addClass("active");
-                }
-            })
-        }
-    }
-    function show_tool_list(catid){
-        searchkw = '';$("#searchkw").val('');
-        show_category_btn(catid);
-        var html = '';
-        $.each(tool_list, function(index, value){
-            if(catid!=0 && value.id!=catid) return;
-            html += `
-    <div class="card card-preview category-card" data-category-id="${value.id}">
-        <div class="card-inner mt-3">
-            <div class="nya-title nk-ibx-action-item progress-rating">
-                <em class="${value.icon}"></em>
-                <span class="nk-menu-text font-weight-bold">${value.title}</span>
-            </div>
-            <div class="row g-2">`;
-            $.each(value.items, function(index, value){
-                html += `
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="${value.url}" data-id="${value.id}" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" ${value.out?'target="_blank"':''}>${value.title}</a>
-                </div>`
-            })
-            html += `
-            </div>
-        </div>
-    </div>`;
-        });
-        $("#toollist").html(html);
-    }
-    function show_search_list(){
-        var list = tools.filter(v => {
-            return v.title.indexOf(searchkw) !== -1 || v.keyword!=null && v.keyword.indexOf(searchkw) !== -1
-        })
-        var html = '';
-        html += `
-    <div class="card card-preview category-card">
-        <div class="card-inner mt-3">
-            <div class="nya-title nk-ibx-action-item progress-rating">
-                <em class="icon ni ni-search"></em>
-                <span class="nk-menu-text font-weight-bold">搜索结果</span>
-            </div>
-            <div class="row g-2">`;
-        if(list.length>0){
-            $.each(list, function(index, value){
-                html += `
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="${value.url}" data-id="${value.id}" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" ${value.out?'target="_blank"':''}>${value.title}</a>
-                </div>`
-            })
-        }else{
-            html += `<p class="search-placeholder">暂无搜索结果</p>`
-        }
-        html += `
-            </div>
-        </div>
-    </div>`;
-        $("#toollist").html(html);
-        $("#link_content").hide();
-        $(".category-all").removeClass("active");
-        $(".category-item").removeClass("active");
-    }
-    function watch_searchkw(kw){
-        if(kw != searchkw){
-            searchkw = kw;
-            if(searchkw == ''){
-                show_tool_list(0)
-            }else{
-                show_search_list()
-            }
-        }
-    }
-    $(document).ready(function(){
-        //show_tool_list(0);
-        $.each(tool_list, function(index, value){
-            $.each(value.items, function(index, value){
-                tools.push(value);
-            });
-        });
-        $("#searchkw").on('input', function(){
-            watch_searchkw($(this).val().trim().toLowerCase())
-        });
-        $("#searchkw").change(function(){
-            watch_searchkw($(this).val().trim().toLowerCase())
-        });
-        $(document).keydown(function(event){
-            if(event.ctrlKey && event.keyCode==70){
-                $("#searchkw").focus();
-                return false;
-            }
-        });
-    })
-  </script>
 
 </body>
 
