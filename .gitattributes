@@ -1,2 +1,4 @@
 # 匹配所有文件，自动检测文件是否为文本文件，统一使用 LF 换行符
-* text=auto eol=lf
+* text=auto  
+*.html text eol=lf  
+*.css text eol=lf  
