@@ -149,6 +149,35 @@
         "timeout": 15
     },
     {
+        "key": "米兔",
+        "name": "🐇┃米兔┃App💯",
+        "type": 3,
+        "api": "csp_AppGet",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+            "url": "http://v.tkbot.fun",
+            "dataKey": "d032c12876bc6848",
+            "dataIv": "d032c12876bc6848",
+            "deviceId": "",
+            "version": "200"
+        },
+        "timeout": 15
+    },
+    {
+        "key": "来看影视",
+        "name": "⛵️┃来看┃影视💯",
+        "type": 3,
+        "api": "csp_Lkdy",
+        "quickSearch": 1,
+        "searchable": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 15
+    },
+    {
         "key": "星河",
         "name": "🔮┃星河┃App💯",
         "type": 3,
