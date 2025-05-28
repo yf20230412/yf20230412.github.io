@@ -1485,7 +1485,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .custom-control-pro .custom-control-label::before, .custom-control-pro .custom-control-label::after { top: 50%; transform: translateY(-50%); left: 1.125rem; }
 
-.custom-control-pro .custom-control-label .icon { font-size: 1.4em; line-height: inherit; }
+.custom-control-pro .custom-control-label .icon , .iconfont { font-size: 1.4em; line-height: inherit; }
 
 .custom-control-pro .custom-control-label .icon-lg { font-size: 2.2em; }
 
@@ -7738,7 +7738,7 @@ body.nav-shown { overflow: hidden; }
 
 .nk-header-menu.nk-header-active { transform: translateX(0); }
 
-.nk-header-mobile { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid #e5e9f2; }
+.nk-header-mobile { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid #e5e9f2; width: 250px; min-width: 250px;}
 
 .nk-header-mobile .logo-dark { opacity: 1; }
 

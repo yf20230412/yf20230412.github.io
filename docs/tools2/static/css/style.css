@@ -9,7 +9,7 @@ body,.btn,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .nk-ibx-action { position: relative; padding: 1rem 1.5rem; border-bottom: 1px solid #e5e9f2; }
 .nk-ibx-action-list { display: flex; justify-content: space-between; align-items: center; }
 .nk-ibx-action-item a { display: flex; align-items: center; }
-.nk-ibx-action-item .icon { font-size: 1.5rem; }
+.nk-ibx-action-item .icon，.iconfont { font-size: 1.5rem; }
 .nk-ibx-action-item .icon + span { margin-left: 0.5rem; }
 
 .dark-switch.active .ni-moon {
