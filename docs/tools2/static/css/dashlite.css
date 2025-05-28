@@ -1493,7 +1493,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .custom-control-pro .custom-control-label > span:only-child { width: 100%; }
 
-.custom-control-pro .custom-control-label .icon + span, .custom-control-pro .custom-control-label span + .icon { padding-left: 8px; }
+.custom-control-pro .custom-control-label .icon + span, .iconfont + span, .custom-control-pro .custom-control-label span + .icon { padding-left: 8px; }
 
 .custom-control-pro.custom-control-sm { padding-left: 0; }
 
@@ -4569,7 +4569,7 @@ a.alert:hover { color: currentColor; }
 
 .link .icon-circle { display: inline-flex; }
 
-.link .icon + span, .link span + .icon { padding-left: 10px; }
+.link .icon + span,.link .iconfont + span, .link span + .icon { padding-left: 10px; }
 
 .link-md { font-size: 1.25rem; }
 
@@ -7738,7 +7738,7 @@ body.nav-shown { overflow: hidden; }
 
 .nk-header-menu.nk-header-active { transform: translateX(0); }
 
-.nk-header-mobile { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid #e5e9f2; width: 250px; min-width: 250px;}
+.nk-header-mobile { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid #e5e9f2; width: 15%!important; min-width: 180px!important;}
 
 .nk-header-mobile .logo-dark { opacity: 1; }
 
@@ -7794,7 +7794,7 @@ body.nav-shown { overflow: hidden; }
 
 .nk-menu-icon svg, .nk-menu-icon img { width: 36px; }
 
-.nk-menu-icon .icon { font-size: 24px; letter-spacing: normal; vertical-align: middle; color: currentColor; transition: color .4s, background-color .4s; }
+.nk-menu-icon .icon , .iconfont{ font-size: 24px; letter-spacing: normal; vertical-align: middle; color: currentColor; transition: color .4s, background-color .4s; }
 
 .nk-menu-link:hover .nk-menu-icon, .nk-menu-item.active > .nk-menu-link .nk-menu-icon, .nk-menu-item.current-menu > .nk-menu-link .nk-menu-icon { color: #7f8dff; }
 
@@ -8314,7 +8314,7 @@ li { list-style: none; }
 
 .link-check li a:hover { color: #6576ff; background: #f5f6fa; }
 
-.link-check li .icon { width: 1.75rem; font-size: 1.125rem; }
+.link-check li .icon,.iconfont { width: 1.75rem; font-size: 1.125rem; }
 
 .link-tidy.no-bdr { padding: .5rem 0; }
 
@@ -8332,7 +8332,7 @@ li { list-style: none; }
 
 .link-list a:hover { color: #6576ff; }
 
-.link-list a .icon { font-size: 1.125rem; width: 1.5rem; line-height: 1; }
+.link-list a .icon, .iconfont { font-size: 1.125rem; width: 1.5rem; line-height: 1; }
 
 .link-list-opt.no-bdr { padding: .5rem 0; }
 
@@ -8344,7 +8344,7 @@ li { list-style: none; }
 
 .link-list-opt a:hover { color: #6576ff; background: #f5f6fa; }
 
-.link-list-opt a .icon { font-size: 1.125rem; width: 1.75rem; opacity: .8; }
+.link-list-opt a .icon , .iconfont{ font-size: 1.125rem; width: 1.75rem; opacity: .8; }
 
 .link-list-opt li.disabled > a, .link-list-opt a.disabled { pointer-events: none; color: #8094ae; opacity: 0.7; }
 
@@ -8364,7 +8364,7 @@ li { list-style: none; }
 
 .link-list-menu a:after { position: absolute; font-size: 1rem; font-family: "Nioicon"; content: ""; right: 1.25rem; color: #8094ae; transition: .3s ease; }
 
-.link-list-menu a .icon { font-size: 1.125rem; width: 1.75rem; opacity: .8; color: #8094ae; margin-top: -2px; }
+.link-list-menu a  , .iconfont { font-size: 1.125rem; width: 1.75rem; opacity: .8; color: #8094ae; margin-top: -2px; }
 
 .link-list-menu li.active > a, .link-list-menu a.active, .link-list-menu a:hover, .link-list-menu li.active > a .icon, .link-list-menu a.active .icon, .link-list-menu a:hover .icon, .link-list-menu li.active > a:after, .link-list-menu a.active:after, .link-list-menu a:hover:after { color: #6576ff; }
 
@@ -8380,7 +8380,7 @@ li { list-style: none; }
 
 .link-list-plain a:hover { color: #6576ff; background: #f5f6fa; }
 
-.link-list-plain a .icon { font-size: 1.125rem; width: 1.75rem; opacity: .8; color: #6576ff; }
+.link-list-plain a  , .iconfont { font-size: 1.125rem; width: 1.75rem; opacity: .8; color: #6576ff; }
 
 .link-list-plain li.active > a, .link-list-plain a.active { color: #6576ff; background: #f5f6fa; }
 
@@ -8426,7 +8426,7 @@ li { list-style: none; }
 
 .form-clip.xl, .form-text-hint.xl { height: calc(3.25rem + 2px); }
 
-.form-clip .icon + span, .form-clip span + .icon, .form-text-hint .icon + span, .form-text-hint span + .icon { margin-left: 0.25rem; }
+.form-clip .icon + span, .form-clip span + .icon, .form-text-hint .icon + span, .form-text-hint span + .icon + .iconfont { margin-left: 0.25rem; }
 
 .nk-upload-input { position: relative; z-index: 2; width: 100%; height: calc(2.125rem + 2px); margin: 0; opacity: 0; }
 
@@ -8889,7 +8889,7 @@ h6 .badge { margin-left: 0.5rem; }
 
 .data-item { position: relative; padding: 1rem 1.25rem; display: flex; align-items: center; }
 
-.data-item .icon { color: #8094ae; text-align: center; height: 32px; vertical-align: middle; line-height: 32px; display: inline-block; }
+.data-item .icon  , .iconfont { color: #8094ae; text-align: center; height: 32px; vertical-align: middle; line-height: 32px; display: inline-block; }
 
 .data-item:not(:last-child) { border-bottom: 1px solid #e5e9f2; }
 
@@ -8971,7 +8971,7 @@ h6 .badge { margin-left: 0.5rem; }
 
 .icon-text { display: flex; align-items: center; font-size: 13px; }
 
-.icon-text .icon { font-size: 1.5em; width: 1.75rem; }
+.icon-text .icon  , .iconfont{ font-size: 1.5em; width: 1.75rem; }
 
 .icon-image { width: 70px; }
 
@@ -9510,7 +9510,7 @@ body.toggle-shown { overflow: hidden; }
 
 .entry p + h2, .entry p + h3, .entry p + h4, .entry p + h5, .entry p + h6, .entry p + .video, .entry p + .image-group { padding-top: 0.75rem; }
 
-p > span > .icon.ni { vertical-align: middle; }
+p > span > .icon.ni >.iconfont{ vertical-align: middle; }
 
 .btn-trigger + .dropdown-menu-right, .btn-trigger + .dropdown-menu-left { margin: -.75rem 0; }
 
@@ -9637,7 +9637,7 @@ p > span > .icon.ni { vertical-align: middle; }
 
 .rating-progress { display: flex; align-items: center; }
 
-.icon + span, span + .icon { margin-left: 0.25rem; }
+.icon + span, span + .icon, span + .iconfont, .iconfont + span { margin-left: 0.25rem; }
 
 /** 06. PAGES */
 .nk-auth-body { padding: 1.25rem; }
