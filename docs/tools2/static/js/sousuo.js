@@ -20,7 +20,7 @@ function show_tool_list(categoryId) {
     });
 
     // 添加scroll-margin-top样式
-    targetCategory.style.scrollMarginTop = '10px';
+    targetCategory.style.scrollMarginTop = '70px';
 
     // 添加高亮效果
     targetCategory.style.transition = 'none';
@@ -34,49 +34,62 @@ function show_tool_list(categoryId) {
   }
 }
 
-// 搜索功能实现
+// 搜索功能，确保搜索功能在DOM加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('searchkw');
   const toolLinks = document.querySelectorAll('.tool-link');
-
+  
   // 监听搜索框输入
-  searchInput.addEventListener('input', function() {
-    const searchTerm = this.value.trim().toLowerCase();
-
-    // 遍历所有工具链接
-    toolLinks.forEach(link => {
-      const title = link.getAttribute('title').toLowerCase();
-      const text = link.textContent.toLowerCase();
-
-      // 检查标题或文本是否包含搜索词
-      if (title.includes(searchTerm) || text.includes(searchTerm)) {
-        link.parentElement.style.display = ''; // 显示匹配项
-      } else {
-        link.parentElement.style.display = 'none'; // 隐藏不匹配项
+  if(searchInput) {
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.trim().toLowerCase();
+      let anyMatchFound = false;
+      
+      // 先显示所有分类卡片
+      document.querySelectorAll('.category-card').forEach(card => {
+        card.style.display = '';
+      });
+      
+      // 如果搜索框为空，显示所有工具
+      if(searchTerm === '') {
+        toolLinks.forEach(link => {
+          link.parentElement.style.display = '';
+        });
+        return;
       }
+      
+      // 遍历所有工具链接
+      toolLinks.forEach(link => {
+        const title = link.getAttribute('title')?.toLowerCase() || '';
+        const text = link.textContent.toLowerCase();
+        
+        // 检查标题或文本是否包含搜索词
+        if (title.includes(searchTerm) || text.includes(searchTerm)) {
+          link.parentElement.style.display = '';
+          anyMatchFound = true;
+        } else {
+          link.parentElement.style.display = 'none';
+        }
+      });
+      
+      // 隐藏没有匹配项的分类卡片
+      document.querySelectorAll('.category-card').forEach(card => {
+        const visibleTools = card.querySelectorAll('.col-6:not([style*="display: none"])').length > 0;
+        card.style.display = visibleTools ? '' : 'none';
+      });
     });
-
-    // 显示/隐藏分类卡片（如果分类中没有可见的工具则隐藏整个分类）
-    document.querySelectorAll('.category-card').forEach(card => {
-      const visibleTools = card.querySelectorAll('.col-6').length > 0;
-      card.style.display = visibleTools ? '' : 'none';
-    });
-  });
-
+  }
+  
   // 添加Ctrl+F快捷键聚焦搜索框
   document.addEventListener('keydown', function(e) {
     if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
       e.preventDefault();
-      searchInput.focus();
+      if(searchInput) searchInput.focus();
     }
   });
-
-  // 默认显示第一个分类为活跃状态
-  document.querySelector('.nk-menu-item').classList.add('active');
-
+  
   // 为所有分类卡片添加默认的scroll-margin-top
   document.querySelectorAll('.category-card').forEach(card => {
-    card.style.scrollMarginTop = '10px';
+    card.style.scrollMarginTop = '70px';
   });
-
 });
