@@ -16,6 +16,9 @@ function show_tool_list(categoryId) {
     // 滚动到目标分类
     targetCategory.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
+    // 添加scroll-margin-top样式
+    targetCategory.style.scrollMarginTop = '10px';
+    
     // 添加高亮效果
     targetCategory.style.transition = 'none';
     targetCategory.style.boxShadow = '0 0 0 2px rgba(100, 180, 255, 0.5)';
@@ -67,4 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 默认显示第一个分类为活跃状态
   document.querySelector('.nk-menu-item').classList.add('active');
+});
+
+  // 为所有分类卡片添加默认的scroll-margin-top
+  document.querySelectorAll('.category-card').forEach(card => {
+    card.style.scrollMarginTop = '10px';
+  });
 });
