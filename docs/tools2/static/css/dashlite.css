@@ -7738,7 +7738,7 @@ body.nav-shown { overflow: hidden; }
 
 .nk-header-menu.nk-header-active { transform: translateX(0); }
 
-.nk-header-mobile { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid #e5e9f2; width: 15%!important; min-width: 180px!important;}
+.nk-header-mobile { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid #e5e9f2;}
 
 .nk-header-mobile .logo-dark { opacity: 1; }
 
