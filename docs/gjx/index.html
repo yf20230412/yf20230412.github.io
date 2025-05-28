@@ -338,9 +338,9 @@
          justify-content: center;
         /* 改为center实现真正居中 */
          padding: 0 15px;
-         height: 80px;
+         height: 70px;
         /* 统一高度 */
-         background-color: black;
+         background-color: white;
          z-index: 999;
     }
     /* 移动端菜单切换按钮 */
@@ -369,7 +369,7 @@
      .menu-toggle i {
          font-size: 32px;
         /* 确保图标大小与按钮匹配 */
-         color: white;
+         color: black;
     }
     /* 标题框 */
      .mobile-header {
@@ -380,7 +380,7 @@
         /* 垂直居中 */
     }
      .mobile-logo {
-         width: 56px;
+         width: 46px;
          height: 46px;
          margin-right: 1px;
          flex-shrink: 0;
@@ -459,7 +459,7 @@
     }
     /* 如果需要，可以为图标添加额外的样式 */
      .theme-toggle i {
-         color: white;
+         color: black;
          font-size: 24px;
     }
     /* 暗色模式样式 */
@@ -476,9 +476,11 @@
      body.dark-mode .theme-toggle i {
          color: white;
     }
+    body.dark-mode .menu-toggle i {
+         color: white;
+    }
      body.dark-mode .top-bar-container {
          background-color: black;
-        /* 确保背景透明 */
     }
      body.dark-mode .sidebar-header h1 {
          color: #AAC9FF;
@@ -677,7 +679,7 @@
       </div>
       <!-- 标题显示框 -->
       <div class="mobile-header">
-        <img src="http://www.2015888.xyz/44/logo_zy.svg" alt="Logo" class="mobile-logo">
+        <img src="https://yf1688.top/bk/dog.svg" alt="Logo" class="mobile-logo">
         <div class="mobile-title">
           <div class="main-title" id="xiaoyu">
             小鱼儿工具箱
@@ -709,7 +711,7 @@
         <div class="category-content">
           <!-- TVBox加解密 -->
           <a href="/jiemi" class="bookmark-item">
-            <i class="iconfont icon-jiemi"></i>
+            <i class="iconfont icon-icon_jiemi"></i>
             <span>
               接口解密一
             </span>
@@ -793,9 +795,9 @@
             </span>
           </a>
           <a href="/belle" class="bookmark-item">
-            <i class="iconfont icon-afdcb"></i>
+            <i class="iconfont icon-meinv-copy"></i>
             <span>
-              随机小姐姐
+              美女小姐姐
             </span>
           </a>
           <a href="/888" class="bookmark-item">
@@ -1769,19 +1771,6 @@
               站长素材
             </span>
           </a>
-          <a href="https://www.lanrentuku.com/tupian/" class="bookmark-item">
-            <img src="https://www.lanrentuku.com/images/logo.jpg" />
-            <span>
-              懒人图库
-            </span>
-          </a>
-          <a href="https://gaoimg.com/" class="bookmark-item">
-            <img src="https://favicon.im/gaoimg.com" alt="gaoimg.com favicon (large)"
-            />
-            <span>
-              高图网
-            </span>
-          </a>
           <a href="https://www.uugai.com/" class="bookmark-item">
             <img src="https://favicon.im/www.uugai.com" alt="www.uugai.com favicon (large)"
             />
@@ -1918,7 +1907,7 @@
         }
     });
     
-    // 返回顶部按钮
+        // 返回顶部按钮
     document.getElementById('backToTop').addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -1932,7 +1921,7 @@
             top: document.body.scrollHeight,
             behavior: 'smooth'
         });
-    });
+    });    
     
     // 搜索功能
     document.getElementById('searchInput').addEventListener('input', function(e) {
