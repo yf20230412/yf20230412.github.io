@@ -20,7 +20,7 @@ function show_tool_list(categoryId) {
     });
 
     // 添加scroll-margin-top样式
-    targetCategory.style.scrollMarginTop = '70px';
+    targetCategory.style.scrollMarginTop = '80px';
 
     // 添加高亮效果
     targetCategory.style.transition = 'none';
@@ -90,6 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 为所有分类卡片添加默认的scroll-margin-top
   document.querySelectorAll('.category-card').forEach(card => {
-    card.style.scrollMarginTop = '70px';
+    card.style.scrollMarginTop = '80px';
   });
 });
