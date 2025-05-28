@@ -7681,7 +7681,7 @@ body.nav-shown { overflow: hidden; }
 
 .nk-header-tools { margin-left: auto; padding-top: 14px; padding-bottom: 14px; }
 
-.nk-header-brand { flex-shrink: 0; padding-top: 14px; padding-bottom: 14px; }
+.nk-header-brand { flex-shrink: 0; padding: 14px; }
 
 .nk-header .dropdown-menu .lead-text { color: #364a63; }
 
@@ -9684,7 +9684,7 @@ p > span > .icon.ni >.iconfont{ vertical-align: middle; }
 
 .has-shadow .nk-header { box-shadow: 0 3px 0 -1px rgba(60, 77, 98, 0.04); }
 
-.nio-version { text-transform: uppercase; font-size: 9px; font-weight: 700; letter-spacing: 0.02em; position: absolute; right: -1px; bottom: -3px;}
+.nio-version { text-transform: uppercase; font-weight: 700; letter-spacing: 0.02em; right: -1px; bottom: -3px;}
 
 .code-tag { color: #816bff; }
 
