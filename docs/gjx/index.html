@@ -1893,130 +1893,122 @@
         <i class="fas fa-arrow-down"></i>
       </div>
     </div>
-    <script>
-      // 获取侧边栏和按钮元素
-      var sidebar = document.getElementById('sidebar');
-      var menuToggle = document.getElementById('menuToggle');
-      var sidebarToggle = document.getElementById('sidebarToggle');
-
-      // 监听移动端菜单切换按钮的点击事件
-      menuToggle.addEventListener('click',
-      function(event) {
+<script>
+    // 获取侧边栏和按钮元素
+    var sidebar = document.getElementById('sidebar');
+    var menuToggle = document.getElementById('menuToggle');
+    var sidebarToggle = document.getElementById('sidebarToggle');
+    
+    // 监听移动端菜单切换按钮的点击事件
+    menuToggle.addEventListener('click', function(event) {
         event.stopPropagation(); // 阻止事件冒泡
         sidebar.classList.toggle('active');
-      });
-
-      // 监听收回左侧栏按钮的点击事件
-      sidebarToggle.addEventListener('click',
-      function(event) {
+    });
+    
+    // 监听收回左侧栏按钮的点击事件
+    sidebarToggle.addEventListener('click', function(event) {
         event.stopPropagation(); // 阻止事件冒泡
         sidebar.classList.toggle('active');
-      });
-
-      // 监听文档点击事件，确保点击侧边栏外部区域也能关闭侧边栏
-      document.addEventListener('click',
-      function(event) {
+    });
+    
+    // 监听文档点击事件，确保点击侧边栏外部区域也能关闭侧边栏
+    document.addEventListener('click', function(event) {
         if (!event.target.matches('.menu-toggle') && !event.target.matches('.sidebar-toggle') && !event.target.closest('.sidebar')) {
-          sidebar.classList.remove('active');
+           sidebar.classList.remove('active');
         }
-      });
-
-      // 返回顶部按钮
-      document.getElementById('backToTop').addEventListener('click',
-      function() {
+    });
+    
+    // 返回顶部按钮
+    document.getElementById('backToTop').addEventListener('click', function() {
         window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+            top: 0,
+            behavior: 'smooth'
         });
-      });
-
-      // 跳转底部按钮
-      document.getElementById('goToBottom').addEventListener('click',
-      function() {
+    });
+    
+    // 跳转底部按钮
+    document.getElementById('goToBottom').addEventListener('click', function() {
         window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: 'smooth'
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
         });
-      });
-
-      // 搜索功能
-      document.getElementById('searchInput').addEventListener('input',
-      function(e) {
+    });
+    
+    // 搜索功能
+    document.getElementById('searchInput').addEventListener('input', function(e) {
         const searchTerm = e.target.value.toLowerCase();
         const bookmarkItems = document.querySelectorAll('.bookmark-item');
-
-        bookmarkItems.forEach(item = >{
-          const text = item.textContent.toLowerCase();
-          if (text.includes(searchTerm)) {
-            item.style.display = 'flex';
-          } else {
-            item.style.display = 'none';
-          }
+        
+        bookmarkItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
         });
-      });
-
-      // 分类折叠功能
-      const categoryHeaders = document.querySelectorAll('.category-header');
-      categoryHeaders.forEach(header = >{
-        header.addEventListener('click',
-        function() {
-          const content = this.nextElementSibling;
-          content.style.display = content.style.display === 'none' ? 'grid': 'none';
+    });
+    
+    // 分类折叠功能
+    const categoryHeaders = document.querySelectorAll('.category-header');
+    categoryHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === 'none' ? 'grid' : 'none';
         });
-      });
-
-      // 主题切换功能
-      document.getElementById('themeToggle').addEventListener('click',
-      function() {
+    });
+    
+    // 主题切换功能
+    document.getElementById('themeToggle').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
-
+        
         // 切换图标
         const icon = this.querySelector('i');
         if (document.body.classList.contains('dark-mode')) {
-          icon.classList.replace('fa-moon', 'fa-sun');
+            icon.classList.replace('fa-moon', 'fa-sun');
         } else {
-          icon.classList.replace('fa-sun', 'fa-moon');
+            icon.classList.replace('fa-sun', 'fa-moon');
         }
-
+        
         // 保存用户偏好到本地存储
         localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-      });
-
-      // 初始化时检查用户偏好
-      if (localStorage.getItem('darkMode') === 'true') {
+    });
+    
+    // 初始化时检查用户偏好
+    if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
         document.querySelector('.theme-toggle i').classList.replace('fa-moon', 'fa-sun');
+    }
+    
+    // 平滑滚动到分类
+    document.querySelectorAll('.category-nav-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      // 关闭移动端侧边栏
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove('active');
       }
-
-      // 平滑滚动到分类
-      document.querySelectorAll('.category-nav-item').forEach(item = >{
-        item.addEventListener('click',
-        function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-
-          if (targetElement) {
-            // 关闭移动端侧边栏
-            if (window.innerWidth <= 768) {
-              sidebar.classList.remove('active');
-            }
-
-            // 动态获取顶部栏高度
-            const topBar = document.querySelector('.top-bar-container');
-            const offset = topBar ? topBar.offsetHeight + 10 : 70; // 10px额外间距
-            // 计算目标位置
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-
-            // 平滑滚动到补偿位置
-            window.scrollTo({
-              top: targetPosition - offset,
-              behavior: 'smooth'
-            });
-          }
-        });
+      
+      // 动态获取顶部栏高度
+      const topBar = document.querySelector('.top-bar-container');
+      const offset = topBar ? topBar.offsetHeight + 10 : 70; // 10px额外间距
+      
+      // 计算目标位置
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      
+      // 平滑滚动到补偿位置
+      window.scrollTo({
+        top: targetPosition - offset,
+        behavior: 'smooth'
       });
-    </script>
+    }
+      });
+    });
+  </script>
   </body>
 
 </html>

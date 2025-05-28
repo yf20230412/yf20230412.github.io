@@ -7730,7 +7730,7 @@ body.nav-shown { overflow: hidden; }
 @keyframes overlay-fade-in { 0% { opacity: 0; }
   100% { opacity: 1; } }
 
-.nk-header-menu { position: fixed; top: 0; left: 0; transform: translateX(-100%); width: 280px; height: 100vh; max-height: 100vh; z-index: 999; background: #fff; }
+.nk-header-menu { position: fixed; top: 0; left: 0; transform: translateX(-100%); width: 200px; height: 100vh; max-height: 100vh; z-index: 999; background: #fff; }
 
 .nk-header-menu-inner { overflow: auto; max-height: 100%; min-height: 100%; }
 
@@ -7868,7 +7868,7 @@ body.nav-shown { overflow: hidden; }
 
 .nk-menu { padding-top: 0.75rem; }
 
-.nk-menu .nk-menu-link { color: #526484; padding-left: 24px; }
+.nk-menu .nk-menu-link { color: #526484; padding-left: 20px; }
 
 .nk-menu .nk-menu-sub { padding: 0; margin: 0; transition: none; }
 
@@ -8344,7 +8344,7 @@ li { list-style: none; }
 
 .link-list-opt a:hover { color: #6576ff; background: #f5f6fa; }
 
-.link-list-opt a .icon , .iconfont{ font-size: 1.125rem; width: 1.75rem; opacity: .8; }
+.link-list-opt a .icon { font-size: 1.125rem; width: 1.75rem; opacity: .8; }
 
 .link-list-opt li.disabled > a, .link-list-opt a.disabled { pointer-events: none; color: #8094ae; opacity: 0.7; }
 
@@ -8364,7 +8364,7 @@ li { list-style: none; }
 
 .link-list-menu a:after { position: absolute; font-size: 1rem; font-family: "Nioicon"; content: ""; right: 1.25rem; color: #8094ae; transition: .3s ease; }
 
-.link-list-menu a  , .iconfont { font-size: 1.125rem; width: 1.75rem; opacity: .8; color: #8094ae; margin-top: -2px; }
+.link-list-menu a { font-size: 1.125rem; width: 1.75rem; opacity: .8; color: #8094ae; margin-top: -2px; }
 
 .link-list-menu li.active > a, .link-list-menu a.active, .link-list-menu a:hover, .link-list-menu li.active > a .icon, .link-list-menu a.active .icon, .link-list-menu a:hover .icon, .link-list-menu li.active > a:after, .link-list-menu a.active:after, .link-list-menu a:hover:after { color: #6576ff; }
 
@@ -9684,7 +9684,7 @@ p > span > .icon.ni >.iconfont{ vertical-align: middle; }
 
 .has-shadow .nk-header { box-shadow: 0 3px 0 -1px rgba(60, 77, 98, 0.04); }
 
-.nio-version { text-transform: uppercase; font-size: 9px; font-weight: 700; letter-spacing: 0.02em; position: absolute; right: -1px; bottom: -3px; }
+.nio-version { text-transform: uppercase; font-size: 9px; font-weight: 700; letter-spacing: 0.02em; position: absolute; right: -1px; bottom: -3px;}
 
 .code-tag { color: #816bff; }
 
