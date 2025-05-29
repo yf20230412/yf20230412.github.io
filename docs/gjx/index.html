@@ -40,6 +40,10 @@
          display: flex;
          min-height: 100vh;
         }
+         /* LyToday-JS插件 */
+        .hot-panel {
+            width: 370px;
+        }
         /* 设置图片的样式 */
          a img, .iconfont {
          width: 24px;
@@ -1761,11 +1765,9 @@
             </div>
         </div>
 
-        <!-- LyToday-JS插件 https://lytoday.lylme.com/code.html-->
-        <div class="nk-content-fluid">
-            <div id="lytoday"></div>
-            <script src="https://lytoday.lylme.com/"></script>
-        </div>
+        <!-- LyToday-JS插件 https://lytoday.lylme.com/code.html
+        <div id="lytoday"></div>
+        <script src="https://lytoday.lylme.com/?day=none&hot=weibo,baidu,bilibili,douyin,qqnews_hot,zhihu"></script>-->
 
         <!-- 页脚 -->
         <div class="footer">
@@ -1789,6 +1791,8 @@
         </div>
         <!-- footer -->
     </div>
+    
+    
     <!-- 快捷操作按钮 -->
     <div class="quick-actions">
         <div class="quick-btn" id="backToTop">
