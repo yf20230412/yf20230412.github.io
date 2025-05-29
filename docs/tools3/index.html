@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/icon/32.png">
+    <link rel="apple-touch-icon" href="/static/icon/favicon.ico">
+    <link rel="shortcut icon" href="/static/icon/favicon.ico">
+    <link rel="Bookmark" href="/static/icon/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="robots" content="all">
+    <meta name="referrer" content="always">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>公众号《风言锋语88》- 工具箱</title>
+    <link rel="stylesheet" href="./static/css/responsive.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./static/css/page.css" />
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="mod-head">
+                <ul class="only-pc link">
+                    <li><span class="icon-date"></span></li>
+                </ul>
+                <a class="logo" href="/533/"><img src="https://master.2015888.xyz/img/taibiao2.jpg" width="210" height="60" alt="小鱼主页"></a>
+                <a class="menu only-mobile" href="javascript:;" rel="nofollow"><span></span><span></span><span></span></a>
+                <ul class="nav">
+                    <li>
+                        <a class="type" href="javascript:;" rel="nofollow">格式化</a>
+                        <div class="sub">
+                            <a href="http://www.66zan.cn/formathtml/">HTML格式化/压缩</a>
+                            <a href="https://tool.ip138.com/xml/">XML格式化</a>
+                            <a href="https://tool.ip138.com/xmljson/">XML/JSON互转</a>
+                            <a href="https://tool.ip138.com/javascript/">Javascript格式化/压缩</a>
+                            <a href="https://tool.ip138.com/java/">Java格式化</a>
+                            <a href="https://tool.itman.org.cn/formatphp/">PHP代码格式化</a>
+                            <a href="http://www.66zan.cn/htmlescapechar/">HTML特殊字符转义</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="type" href="javascript:;" rel="nofollow">编码加密</a>
+                        <div class="sub">
+                            <a href="https://tool.ip138.com/base64/">Base64编码/解码</a>
+                            <a href="https://www.metools.info/other/o21.html">MD5查看器</a>
+                            <a href="https://tool.ip138.com/gzip/">Gzip编码/解码</a>
+                            <a href="https://tool.itman.org.cn/ascii/">ASCII编码/解码</a>
+                            <a href="http://www.txttool.com/t/?id=NDgz/">多功能unicode编码转换器</a>
+                            <a href="https://tool.ip138.com/ascii/">Unicode编码汉字互转</a>
+                            <a href="https://tool.ip138.com/urlencode/">URL编码/解码</a>
+                            <a href="https://tool.ip138.com/escape/">Escape编码/解码</a>
+                            <a href="https://tool.ip138.com/utf8/">UTF-8编码汉字互转</a>
+                            <a href="http://www.txttool.com/t/?id=NDI2/">在线DES加密解密</a>
+                            <a href="http://www.txttool.com/t/?id=NDI3/">在线AES加密解密</a>
+                            <a href="http://www.txttool.com/t/?id=NDI0/">在线RSA加密解密</a>
+                            <a href="http://www.158566.com/">加密解密工具大全</a>
+                            <a href="http://www.cha128.com/archives/14/">JS代码压缩加密解密</a>
+                            <a href="https://tool.ip138.com/punycode/">Punycode编码/解码</a>
+                            <a href="https://tool.ip138.com/hash/">哈希加密算法</a>
+                            <a href="https://tool.ip138.com/aesdes/">对称加密算法</a>
+                            <a href="https://tool.ip138.com/rsa/">RSA加密/解密</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="type" href="javascript:;" rel="nofollow">图文处理</a>
+                        <div class="sub">
+                            <a href="https://www.mklab.cn/utils/txt/">MKLab去空行空格</a>
+                            <a href="http://www.txttool.com/t/?id=MzQy/">过滤文本行所有换行</a>
+                            <a href="http://www.txttool.com/t/?id=MzE1/">文本编辑排版</a>
+                            <a href="http://www.txttool.com/t/?id=NTM5/">文本内容关键词删除</a>
+                            <a href="http://www.txttool.com/t/?id=NTEx/">文本行第N个位置插入字符串</a>
+                            <a href="https://tool.ip138.com/txtprefix/">文本行批量添加前后缀</a>
+                            <a href="http://www.cha128.com/archives/269/">在线文本行头尾添加</a>
+                            <a href="http://www.cha128.com/archives/289/">文本行批量截取</a>
+                            <a href="http://www.txttool.com/t/?id=NDM4/">过滤文本内容所有特殊符号</a>
+                            <a href="http://www.txttool.com/t/?id=MzE3/">文字内容对比</a>
+                            <a href="http://www.txttool.com/t/?id=NDI5/">TXT文本列分割 </a>
+                            <a href="http://www.txttool.com/t/?id=NDM5/">过滤文本内容所有数字</a>
+                            <a href="http://www.txttool.com/t/?id=MzE5/">文本清除行号</a>
+                            <a href="https://tool.ip138.com/difference/">文本比较工具</a>
+                            <a href="https://tool.ip138.com/txtunique/">文本去重工具</a>
+                            <a href="https://tool.ip138.com/txtsort/">文本排序工具</a>
+                            <a href="https://tool.ip138.com/wordcount/">字数统计工具具</a>
+                            <a href="https://yasuo.xunjiepdf.com/img/">迅捷在线图片压缩</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="type" href="javascript:;" rel="nofollow">常用工具</a>
+                        <div class="sub">
+                            <a href="https://dash.cloudflare.com/">cloudflare</a>
+                            <a href="https://qun.qq.com/join.html">QQ群跳转密钥</a>
+                            <a href="http://www.txttool.com/t/?id=NDcx/">简体、繁体、火星文转换</a>
+                            <a href="http://www.txttool.com/t/?id=MzYy/">在线文本中文转拼音</a>
+                            <a href="http://www.cha128.com/archives/238/">在线HTML源码正文提取</a>
+                            <a href="http://www.cha128.com/archives/223/">在线获取网址所有链接</a>
+                            <a href="http://www.cha128.com/archives/224/">在线获取网页源代码</a>
+                            <a href="http://www.cha128.com/archives/29/">在线网址链接生成器</a>
+                            <a href="http://www.cha128.com/archives/207/">在线多彩文字特效生成</a>
+                            <a href="https://tool.ip138.com/markdown/">Markdown在线编辑器</a>
+                            <a href="https://tool.ip138.com/txttoimg/">在线文字生成图片</a>
+                            <a href="https://tool.ip138.com/pictureformat/">图片格式转换</a>
+                            <a href="https://tool.ip138.com/compressor/">图片压缩</a>
+                            <a href="https://tool.ip138.com/img2base64/">图片转Base64编码</a>
+                            <a href="https://www.sojson.com/jsjiemi.html">最牛JS加密解密</a>
+                            <a href="https://acl4ssr-sub.github.io/">节点订阅转换</a>
+                            <a href="https://greasyfork.org/zh-CN/">油猴脚本</a>
+                            <a href="https://suo.yt/">Myurls短链</a>
+                            <a href="http://gg.gg/">gg短链</a>
+                            <a href="http://www.cha128.com/category/tx/">在线二维码生成工具</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="type" href="javascript:;" rel="nofollow">在线网盘登录</a>
+                        <div class="sub">
+                            <a href="https://www.aliyundrive.com/sign/in/">阿里云盘32位token</a>
+                            <a href="https://messense-aliyundrive-webdav-backendrefresh-token-ucs0wn.streamlit.app/">阿里云盘280位token</a>
+                            <a href="https://pan.quark.cn/">夸克网盘__pus=</a>
+                            <a href="https://drive.uc.cn/">UC网盘__pus=</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="text-red" href="javascript:;" rel="nofollow">TVBox专区</a>
+                        <div class="sub">
+                            <a href="/1115/">小鱼影视官网</a>
+                            <a href="/box/">TVBox接口一</a>
+                            <a href="/box2/">TVBox接口二</a>
+                            <a href="/jm/">TVBox加密</a>
+                            <a href="/jiemi/">TVBox解密</a>
+                            <a href="/128/">AES-128-CBC加密解密</a>
+                            <a href="/m3u/">TXT、M3U互转</a>
+
+                            <a href="/sq/">APP网盘下载</a>
+                            <a href="https://tools.v1.mk/">肥羊工具箱</a>
+                            <a href="https://live.fanmingming.com/txt2m3u/">范明明TXT转M3u</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="text-red" href="https://api.vvhan.com/" target="_blank" rel="nofollow">韩小韩WebAPI接口</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="side">
+                <div class="mod-link">
+                    <div class="bd">
+                        <ul>
+                            <li> <a href="/533/" target="_blank">个人主页</a></li>
+                            <li class="small"><a href="/jm/" target="_blank" style="background-color: #185A56; color: #ffffff;">接口加密</a></li>
+                            <li class="small"><a href="/128/" target="_blank" style="background-color: #FD742D;">AES-128</a></li>
+                            <li class="small"><a href="https://412.2015888.xyz/jiemi/" target="_blank" style="background-color: #022A99; color: #ffffff;">接口解密</a></li>
+                            <li class="small"><a href="https://128.2015888.xyz/" target="_blank" style="background-color: #FBCD08;">AES加解密</a></li>
+							
+							
+							
+                            <li> <a href="/box2/" target="_blank" style="color: red;">TVBox接口</a></li>
+                            <li class="small"><a href="https://docs.qq.com/doc/DRE1hUUFPQ29zWkxw" target="_blank" style="background-color: #FC8416; color: #ffffff;">影视教程</a></li>
+                            <li class="small"><a href="/sq/" target="_blank" style="background-color: #363636; color: #ffffff;">APP下载</a></li>
+                            <li class="small"><a href="https://zouming.com/" target="_blank" style="background-color: #7FA91F; color: #ffffff;">全网影视盒子</a></li>
+                            <li class="small"><a href="https://m.pandalive.co.kr/" target="_blank" style="background-color: #A8ABB0; color: #ffffff;">pandalive韩舞</a></li>
+
+
+
+                            <li> <a href="https://www.jsjiami.com/" target="_blank" style="color: red;">JavaScript最牛加密</a></li>
+                            <li class="small"><a href="https://deck.phpth.cn/" target="_blank" style="background-color: #66D3C0;color: #ffffff;">PHP加密</a></li>
+                            <li class="small"><a href="https://www.jshaman.com/" target="_blank" style="background-color: #FDDE83;">JS加密</a></li>
+                            <li class="small"><a href="https://jiagu.360.cn/#/app/android/list" target="_blank" style="background-color: #00324D; color: #ffffff;">360加固</a></li>
+                            <li class="small"><a href="https://jsonlint.com/" target="_blank" style="background-color: #E913E6; color: #ffffff;">JS格式校验</a></li>
+
+
+
+                            <li> <a href="https://www.svgrepo.com/?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im" target="_blank" style="color: red;">SVG彩色图标下载</a></li>
+                            <li class="small"><a href="https://icons.getbootstrap.com/" target="_blank">SVG图标</a></li>
+                            <li class="small"><a href="https://33tool.com/color" target="_blank">取色神器</a></li>
+                            <li class="small"><a href="https://www.fontke.com/tool/rgbschemes/" target="_blank">RGB配色器</a></li>
+                            <li class="small"><a href="http://yansedaima.com/beisebiao.html#character_4" target="_blank">配色表</a></li>
+
+
+
+                            <li> <a href="https://33tool.com/punycode" target="_blank" style="color: red;">Punycode编码解码</a></li>
+                            <li class="small"><a href="https://www.jyshare.com/front-end/3602/" target="_blank" style="background-color: #0D7E9C; color: #ffffff;">unicode编码</a></li>
+                            <li class="small"><a href="https://www.bejson.com/enc/urlencode/" target="_blank" style="background-color: #D5BA9F; color: #000000;">URL编码</a></li>
+                            <li class="small"><a href="https://tool.lu/timestamp/" target="_blank">时间戳转换</a></li>
+							<li class="small"><a href="http://www.esjson.com/cssformat.html" target="_blank">CSS压缩</a></li>
+
+                            
+
+                            <li><a href="http://patorjk.com/software/taag/" target="_blank" style="color: red;">ASCII控制台花漾字</a></li>	
+                            <li class="small"><a href="https://theme.sugarat.top/" target="_blank">VitePress</a></li>
+                            <li class="small"><a href="https://www.appinn.com/markdown/" target="_blank">markdown</a></li>
+                            <li class="small"><a href="https://shuyuan.yiove.com/complex" target="_blank">阅读书源</a></li>
+                            <li class="small"><a href="https://www.zxgj.cn/g/jshtmlformat" target="_blank">HTML/JS</a></li>
+
+
+
+
+                            <li> <a href="https://ishuqian.com/" target="_blank" style="color: red;">书签网</a></li>
+                            <li class="small"><a href="https://github.com/FongMi/TV" target="_blank" style="background-color: #7CA682; color: #ffffff;">影视仓库</a></li>
+                            <li class="small"><a href="https://github.com/FongMi/CatVodSpider" target="_blank" style="background-color: #D17E9C; color: #ffffff;">爬虫仓库</a></li>
+                            <li class="small"><a href="https://github.com/gkd-kit/gkd" target="_blank" style="background-color: #9D73BD; color: #ffffff;">GKD去广</a></li>
+                            <li class="small"><a href="https://github.com/blackmatrix7/" target="_blank" style="background-color: #7BA6D1; color: #ffffff;">blackmatrix7</a></li>
+							
+							
+							
+
+                            <li> <a href="https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile/releases" target="_blank" style="color: red;">Mobile</a></li>
+                            <li class="small"><a href="https://github.com/fanmingming/live" target="_blank">范明明直播</a></li>
+                            <li class="small"><a href="https://github.com/YanG-1989/m3u" target="_blank">YanG直播</a></li>
+                            <li class="small"><a href="https://lxmusic.toside.cn/download" target="_blank" style="background-color: #F28195; color: #ffffff;">落雪音乐</a></li>
+                            <li class="small"><a href="https://bbs.binmt.cc/" target="_blank" style="background-color: #7F919F; color: #ffffff;">MT论坛</a></li>
+
+
+
+                            <li> <a href="https://qq.ip138.com/idsearch/" target="_blank" style="color: red;">身份证号码查询验证</a></li>
+                            <li class="small"><a href="https://www.fenxm.com/" target="_blank">分享迷</a></li>
+                            <li class="small"><a href="https://tool.itman.org.cn/unicode/" target="_blank">ASCII编码</a></li>
+                            <li class="small"><a href="https://api.pearktrue.cn/" target="_blank">API调用</a></li>
+                            <li class="small"><a href="https://myhkw.cn/" target="_blank">音乐API</a></li>
+							
+							
+
+                            <li><a href="https://www.ip138.com/jb.htm" target="_blank" style="color: red;">国内国际机票查询</a></li>
+                            <li class="small"><a href="https://api.vvhan.com/" target="_blank">韩小韩API</a></li>
+                            <li class="small"><a href="https://www.appinn.com/markdown/" target="_blank">markdown</a></li>
+                            <li class="small"><a href="https://qun.qq.com/#/login" target="_blank">QQ群分享</a></li>
+                            <li class="small"><a href="https://www.ip138.com/ems/" target="_blank">快递查询</a></li>
+							
+							
+
+                            <li><a href="https://www.iconfont.cn/" target="_blank" style="color: red;">阿里巴巴矢量图标库</a></li>
+                            <li class="small"><a href="https://www.cnblogs.com/" target="_blank" style="background-color: #A5D6A7; color: #000000;">博客园</a></li>
+                            <li class="small"><a href="https://juejin.cn/" target="_blank" style="background-color: #A5D6A7; color: #000000;">掘金</a></li>
+							<li class="small"><a href="https://tool.lu/ip/" target="_blank">IP地址查询</a></li>	
+                            <li class="small"><a href="https://www.uugai.com/" target="_blank">免费logo设计</a></li>
+							
+							
+
+                            <li><a href="https://www.eggradients.com/" target="_blank" style="color: red;">国外纯色背景</a></li>
+                            <li class="small"><a href="https://www.yunedit.com/" target="_blank">香蕉云编证书</a></li>
+                            <li class="small"><a href="https://freessl.cn/" target="_blank">SSL证书申请</a></li>
+                            <li class="small"><a href="https://www.sourcepower.top/" target="_blank">源动力</a></li>
+                            <li class="small"><a href="https://qrbtf.com/zh/style/c2" target="_blank">艺术二维码</a></li>
+
+
+
+
+                            <li><a href="https://qq.ip138.com/train/" target="_blank" style="color: red;">国内列车时刻表查询</a></li>
+                            <li><a href="https://www.ip138.com/carlist.htm" target="_blank">全国各地车牌查询表</a></li>
+                            <li><a href="https://www.ip138.com/weizhang.htm" target="_blank">车辆交通违章查询</a></li>
+                            <li ><a href="https://music.2015888.xyz/" target="_blank" style="background-color: #A5D6A7; color: #000000;">网易云音乐解析</a></li>    
+
+
+
+                            <li><a href="http://www.66zan.cn/browserinfo/" target="_blank" style="color: red;">浏览器信息</a></li>
+                            <li><a href="https://4645.kstore.space/影视更新日志.json" target="_blank" style="color: red;">影视升级日志</a></li>	
+                            <li class="small"><a href="https://xjj.2015888.xyz/" target="_blank" style="background-color: #F8BBD0; color: #000000;">随机小姐姐</a></li>
+                            <li class="small"><a href="https://yf1688.top/ObfuscateLink/" target="_blank" style="background-color: #F9A825; color: #000000;">链接混淆</a></li>
+                            
+                            
+                            
+									
+				     		<li><a href="http://www.txttool.com/t/?id=MzQy" target="_blank">文本换行</a></li>
+                            <li><a href="https://www.mklab.cn/utils/txt" target="_blank">文本空行空格</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="mod-panel">
+                    <div class="hd">
+                        <h1>小鱼专用工具箱</h1>
+                    </div>
+                    <div class="bd">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ol class="breadcrumb">
+                                    <li><a id="jsonFormatLink" title="JSON格式化" href="#" onclick="activateJsonFormat(); return false;">JSON格式化</a></li>
+                                    <li><a id="urlLink" title="Url加解码" href="#" onclick="activateUrl(); return false;">Url加解码</a></li>
+                                    <li><a id="base64Link" title="Base64加解码" href="#" onclick="activateBase64(); return false;">Base64加解码</a></li>
+                                    <li><a id="gzipLink" title="Gzip加解密" href="#" onclick="activateGzip(); return false;">Gzip加密解密</a></li>
+                                    <li><a id="HexLink" title="16进制转字符串" href="#" onclick="activatehex(); return false;">16进制转换</a></li>
+                                    <li><a class="text-red" href="javascript:;" rel="nofollow" onclick="toggleDropdown(event);" style="color: red;">TVBox专区▼</a>
+                                        <div class="subb">
+                                            <a href="/1115/">小鱼影视官网</a>
+                                            <a href="/box/">TVBox接口一</a>
+                                            <a href="/box2/">TVBox接口二</a>
+                                            <a href="/jiemi/">TVBox解密</a>
+                                            <a href="https://www.xn--sss604efuw.com/jm">饭总解密</a>
+                                            <a href="/jm/">TVBox加密</a>
+                                            <a href="/128/">AES加密解密</a>
+                                            <a href="/m3u/">TXT、M3U互转</a>
+
+                                            <a href="/sq/">APP网盘下载</a>
+                                            <a href="https://tools.v1.mk/">肥羊工具箱</a>
+                                            <a href="https://live.fanmingming.com/txt2m3u/">范明明TXT转M3u</a>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <!-- 缩进设置和格式化按钮 -->
+                                <div class="controls-row" id="jsonControls">
+                                    <label>缩进设置：</label>
+                                    <select id="indent">
+                                        <option value="2">2空格</option>
+                                        <option value="4" selected>4空格</option>
+                                        <option value="6">6空格</option>
+                                        <option value="8">8空格</option>
+                                    </select>
+                                    <button class="format-btn" onclick="formatText()">格式化</button>
+                                    <button class="compress-btn" onclick="compressText()">压缩</button>
+                                </div>
+
+                                <!-- Url编码解码按钮 -->
+                                <div class="controls-row" id="urlControls" style="display: none;">
+                                    <button class="urlencode-btn" onclick="encodeUrl()">Url编码</button>
+                                    <button class="urldecode-btn" onclick="decodeUrl()">Url解码</button>
+                                </div>
+
+                                <!-- Base64编码解码按钮 -->
+                                <div class="controls-row" id="base64Controls" style="display: none;">
+                                    <button class="encode-btn" onclick="encodeBase64()">Base64编码</button>
+                                    <button class="decode-btn" onclick="decodeBase64()">Base64解码</button>
+                                </div>
+
+                                <!-- Gzip加密解密按钮 -->
+                                <div class="controls-row" id="gzipControls" style="display: none;">
+                                    <button class="gzipencode-btn" onclick="encodeGzip()">Gzip加密</button>
+                                    <button class="gzipdecode-btn" onclick="decodeGzip()">Gzip解密</button>
+                                </div>
+                                <!-- 16进制转字符串按钮 -->
+                                <div class="controls-row" id="HexControls" style="display: none;">
+                                    <button class="hexencode-btn" onclick="encodehex()">16进制转字符串</button>
+                                    <button class="hexdecode-btn" onclick="decodehex()">字符串转16进制</button>
+                                </div>
+                                <!-- 错误提示 -->
+                                <div id="errorMessage" class="error"></div>
+
+                                <!-- 输入框 -->
+                                <textarea id="inputText" placeholder="输入JSON内容..."></textarea>
+
+                                <!-- 复制、清空和交换按钮 -->
+                                <div class="controls-row">
+                                    <button class="copy-btn" onclick="copyOutput()">复制结果</button>
+                                    <button class="clear-btn" onclick="clearInput()">清空所有</button>
+                                    <button class="swap-btn" id="swapButton" style="display: none;" onclick="swapContent()">↕ 交换</button>
+                                </div>
+
+                                <!-- 输出框 -->
+                                <textarea id="outputText" readonly placeholder="格式化或压缩后的JSON..."></textarea>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="tips">
+                                    <h4>📚使用说明📚</h4>
+                                    <ul>
+                                        <li>
+                                            <font color="#7D2AB4" size="3">友</font>
+                                            <font color="#D33D71" size="3">情</font>
+                                            <font color="#79AE96" size="3">提</font>
+                                            <font color="#44013C" size="3">示</font>
+                                            <font color="#ABC51D" size="3">：</font>
+                                            <font color="#000000">如需 更 多 功 能 请 将</font>
+                                            <font color="#6013C5">浏</font>
+                                            <font color="#91C380">览</font>
+                                            <font color="#CA6D8E">器</font>
+                                            <font color="#000000"> 设 置 成</font>
+                                            <font color="#E76751">桌</font>
+                                            <font color="#58D54E">面</font>
+
+                                            <font color="#000000"> 模 式</font>
+                                        </li><br>
+                                        <li>资源收集于网络,如有侵权联系删除</li><br>
+                                        <li>更多资源获取请关注,微信公众号🍎：<span style="color: #ff3e3e;">风言锋语88 </span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="mod-foot">
+                    <div class="logo only-pc"><a href="/"><img src="/bk/dog.svg" width="50" height="50" alt="小鱼主页"></a></div>
+                    <div class="info">
+                        <p><span>如果您觉得本站对您的朋友有帮助，别忘了告诉他（她）们哟 ^_^</span></p>
+                        <p>
+                            <span class="contact">联系我们：请<a href="mailto:yufeng1688778@163.com" rel="nofollow" target="_blank">发email💌</a>或给<a href="https://support.qq.com/product/673813" rel="nofollow" target="_blank">我们留言📮</a>谢谢!🎉</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="mod-goback">
+                    <a href="#" rel="nofollow">返回顶部</a>
+                </div>
+                <div class="mod-mask"></div>
+            </div>
+        </div>
+        <script src="./static/js/active.js"></script>
+        <script src="./static/js/encoding.js"></script>
+        <script src="./static/js/formatting.js"></script>
+        <script src="./static/js/compression.js"></script>
+        <script src="./static/js/copyemptying.js"></script>
+        <script src="./static/js/Base64.js"></script>
+        <script src="./static/js/gzip.js"></script>
+        <script src="./static/js/hex.js"></script>
+        <script src="./static/js/dropdown-toggle.js"></script>
+        <script type="text/javascript" src="./static/js/common.js"></script>
+</body>
+
+</html>
