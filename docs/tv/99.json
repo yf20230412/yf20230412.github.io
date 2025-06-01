@@ -149,35 +149,6 @@
         "timeout": 15
     },
     {
-        "key": "米兔",
-        "name": "🐇┃米兔┃App💯",
-        "type": 3,
-        "api": "csp_AppGet",
-        "quickSearch": 1,
-        "searchable": 0,
-        "changeable": 1,
-        "filterable": 1,
-        "ext": {
-            "url": "http://v.tkbot.fun",
-            "dataKey": "d032c12876bc6848",
-            "dataIv": "d032c12876bc6848",
-            "deviceId": "",
-            "version": "200"
-        },
-        "timeout": 15
-    },
-    {
-        "key": "来看影视",
-        "name": "⛵️┃来看┃影视💯",
-        "type": 3,
-        "api": "csp_Lkdy",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 15
-    },
-    {
         "key": "星河",
         "name": "🔮┃星河┃App💯",
         "type": 3,
@@ -263,52 +234,6 @@
         "name": "❄️┃零度┃App🏮",
         "type": 3,
         "api": "./py/lingduys.py",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 10
-    },
-    {
-        "key": "悠悠",
-        "name": "🐣┃悠悠┃App🏮",
-        "type": 3,
-        "api": "./py/youyou.py",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 10
-    },
-    {
-        "key": "奇迹",
-        "name": "🐓┃奇迹┃App🏮",
-        "type": 3,
-        "api": "./py/qiji.py",
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 10
-    },
-    {
-        "key": "猎手",
-        "name": "⚔️┃猎手┃App🏮",
-        "type": 3,
-        "api": "./py/lieshouys.py",
-        "playerType": 2,
-        "quickSearch": 1,
-        "searchable": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 15
-    },
-    {
-        "key": "小红影视",
-        "name": "💄┃小红┃影视🏮",
-        "type": 3,
-        "api": "./py/xiaohongys.py",
-        "playerType": 2,
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
@@ -748,6 +673,14 @@
     {"name":"抖音","hosts":["douyin.com"],"regex":["is_play_url="]}
 ],
 
+"hosts": [
+        "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
+    ],
 
 "flags": ["youku", "qq", "QQ", "iqiyi", "iqiyi", "imgo", "xueren", "m1905", "qiyi", "letv", "sohu", "tudou", "pptv", "PPTV", "dbm3u8", "FY", "fy", "FeiYun", "feiyun", "飞云", "funshion", "mgtv", "wasu", "bilibili", "le", "duoduozy", "renrenmi", "xmm", "xigua", "ltnb", "rx", "SLYS4k", "CL4K", "xfyun", "wuduzy", "BYGA", "BYGB", "luanzi", "dxzy", "QEYSS", "aliyun", "优酷", "优酷", "优酷视频", "西瓜", "AliS", "122", "chuangying", "乐视", "芒果", "腾讯", "腾讯", "腾讯视频", "芒果TV", "芒果TV", "爱奇艺", "奇艺", "爱奇艺", "奇艺视频", "西瓜视频", "乐视视频", "搜狐", "搜狐", "搜狐视频", "哔哩哔哩", "哔哩"],
 
