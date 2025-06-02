@@ -1283,9 +1283,3 @@ function m3ucleararea() {
     document.getElementById("contents").value = "";
     document.getElementById("rtips").innerHTML = "Tip：";
 }
-
-
-
-if (!(location.host.match(/yf1688.top/))) {
-    window.location = "https://a.2015888.xyz/";
-}
