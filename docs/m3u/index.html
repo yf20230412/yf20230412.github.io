@@ -10,8 +10,6 @@
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="description" content="" />
     <meta name="keywords" content="M3U列表格式转换" />
-    <meta itemprop="image" content="https://guihet.com/wp-content/themes/Kratos/images/default.jpg" />
-    <meta name="description" itemprop="description" content="" />
     <meta name='robots' content='max-image-preview:large' />
     <link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
     <link rel="apple-touch-icon" href="/static/icon/favicon.ico">
@@ -133,8 +131,56 @@ CCTV-13新闻,https://live.cctv.com/2/sd/live.m3u8
                                 <hr />
 
                                 <div id="comments" class="comments-area">
+                                    <script type="text/javascript" language="javascript">
+                                        /* <![CDATA[ */
+                                            function grin(tag) {
+                                                var myField;
+                                                tag = ' ' + tag + ' ';
+                                                if (document.getElementById('comment') && document.getElementById('comment').type == 'textarea') {
+                                                    myField = document.getElementById('comment');
+                                                } else {
+                                                    return false;
+                                                }
+                                                if (document.selection) {
+                                                    myField.focus();
+                                                    sel = document.selection.createRange();
+                                                    sel.text = tag;
+                                                    myField.focus();
+                                                }
+                                                else if (myField.selectionStart || myField.selectionStart == '0') {
+                                                    var startPos = myField.selectionStart;
+                                                    var endPos = myField.selectionEnd;
+                                                    var cursorPos = endPos;
+                                                    myField.value = myField.value.substring(0, startPos)
+                                                                  + tag
+                                                                  + myField.value.substring(endPos, myField.value.length);
+                                                    cursorPos += tag.length;
+                                                    myField.focus();
+                                                    myField.selectionStart = cursorPos;
+                                                    myField.selectionEnd = cursorPos;
+                                                }
+                                                else {
+                                                    myField.value += tag;
+                                                    myField.focus();
+                                                }
+                                            }
+                                        /* ]]> */
+                                    </script>
                                     <div class="commentshow"></div>
                                 </div>
+                                <script>
+                                    jQuery('.comment-body').parent().hover(     
+                                        function(){
+                                            jQuery(this).find('.useragent').show();
+                                        },
+                                        function(){
+                                            jQuery(this).find('.useragent').hide();
+                                        });
+                                    jQuery('.comment-body').parent().click(     
+                                        function(){
+                                            jQuery(this).find('.useragent').show();
+                                        });
+                                </script>
                             </article>
                         </section>
                     </div>
