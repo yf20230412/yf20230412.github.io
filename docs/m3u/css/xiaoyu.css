@@ -76,28 +76,28 @@ a {
 }
 
 .tvinput#M3UPPAJAX {
-    background-color: #ff0000;
+    background-color: #ff6900;
     color: white;
 }
 
 .tvinput#M3Utest {
-    background-color: #3377FF;
+    background-color: #f78da7;
     color: white;
 }
 
 .tvinput#m3uclear {
-    background-color: #FF9800;
+    background-color: #ff0000;
     color: white;
 }
 
 
 
 .tvinput[onClick="copy();"] {
-    background-color: #039BE5;
+    background-color: #0693e3;
     color: white;
 }
 
 .tvinput[onClick="downloadmitv();"] {
-    background-color: #00C853;
+    background-color: #00d084;
     color: white;
 }
