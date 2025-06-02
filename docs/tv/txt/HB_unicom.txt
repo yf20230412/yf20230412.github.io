@@ -50,6 +50,8 @@ CCTV17,rtp://228.0.0.161:7161
 金鹰纪实,rtp://228.0.0.145:7145
 中国教育-1,rtp://228.0.0.146:7146
 
+
+
 体育赛事,rtp://228.0.0.175:7175
 CHC家庭影院,rtp://228.0.0.211:6108
 CHC动作电影,rtp://228.0.0.212:6108
@@ -58,6 +60,32 @@ CHC高清电影,rtp://228.0.0.233:6108
 风云足球,rtp://228.0.0.236:6108
 怀旧剧场,rtp://228.0.0.237:6108
 
+🦚｜港澳台频道,#genre#
+兵团卫视,http://8.138.7.223/tv/btws.m3u8
+莲花卫视,http://8.138.7.223/tv/lotustv.m3u8
+香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
+民视,rtmp://f13h.mine.nu/sat/tv051
+台视,rtmp://f13h.mine.nu/sat/tv071
+中视,rtmp://f13h.mine.nu/sat/tv091
+华视,rtmp://f13h.mine.nu/sat/tv111
+纬来体育,rtmp://f13h.mine.nu/sat/tv721
+纬来育乐,rtmp://f13h.mine.nu/sat/tv701
+纬来日本,rtmp://f13h.mine.nu/sat/tv771
+东森超视,rtmp://f13h.mine.nu/sat/tv331
+MoMo综合,rtmp://f13h.mine.nu/sat/tv761
+ELEVEN体育1,rtmp://f13h.mine.nu/sat/tv731
+ELEVEN体育2,rtmp://f13h.mine.nu/sat/tv741
+TVBS新闻,rtmp://f13h.mine.nu/sat/tv551
+东森财经新闻,rtmp://f13h.mine.nu/sat/tv571
+ELTA体育1,rtmp://f13h.mine.nu/sat/md051
+ELTA体育2,rtmp://f13h.mine.nu/sat/md041
+TVBS欢乐,rtmp://f13h.mine.nu/sat/tv421
+澳门莲花,http://php.jdshipin.com:8880/amlh.php
+凤凰中文,http://php.jdshipin.com/TVOD/iptv.php?id=fhzw
+凤凰资讯,http://php.jdshipin.com/TVOD/iptv.php?id=fhzx
+凤凰卫视,http://php.jdshipin.com/TVOD/iptv.php?id=fhzw
+无线翡翠,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct
+无线华丽,http://php.jdshipin.com:8880/TVOD/iptv.php?id=huali
 
 
 👠｜韩国女团,#genre#
@@ -252,4 +280,6 @@ CHC高清电影,rtp://228.0.0.233:6108
 韩国太妍38,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240368550193.mp4
 韩国太妍39,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240250429573.mp4
 韩国太妍40,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240370230905.mp4
+
+
 
