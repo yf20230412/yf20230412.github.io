@@ -27,43 +27,26 @@ function grin(tag) {
         myField.focus();
     }
 }
-/* ]]> */
-<
-/script> <
-link href = "https://guihet.com/wp-content/themes/Kratos/inc/owo/OwO.min.css"
-rel = "stylesheet"
-type = "text/css" / >
 
 
-    <
-    div class = "commentshow" >
-    <
-    /div> < /
-div >
 
 
-    <
-    script >
-    jQuery('.comment-body').parent().hover(
-        function() {
-            jQuery(this).find('.useragent').show();
-        },
-        function() {
-            jQuery(this).find('.useragent').hide();
-        });
+
+jQuery('.comment-body').parent().hover(
+    function() {
+        jQuery(this).find('.useragent').show();
+    },
+    function() {
+        jQuery(this).find('.useragent').hide();
+    });
 jQuery('.comment-body').parent().click(
     function() {
         jQuery(this).find('.useragent').show();
-    }); <
-/script> < /
-article > <
-    /section> < /
-div > <
-    /div> < /
-div > <
-    script >
-    //监听控件Radio和checkbox状态改变事件
-    var radioArr = document.getElementsByName("gender");
+    });
+
+
+//监听控件Radio和checkbox状态改变事件
+var radioArr = document.getElementsByName("gender");
 var radioTA = document.getElementById("qiandiv");
 radioTA.style.display = "none";
 for (var i = 0; i < radioArr.length; i++) {
