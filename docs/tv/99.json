@@ -542,7 +542,7 @@
 {"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSoGuard","jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/fan.txt","quickSearch":1,"searchable":1,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_PushGuard","jar": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/fan.txt","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"浪酷弹幕","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_TianTian","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":{"danmu":true,"site":"aHR0cDovL3YubGt1eXMuY24="}},
-{"key":"歪片星球","name":"🚦请勿相信任何广告","type":3,"api":"csp_XYQHiker","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/wanpianxq.json"},
+{"key":"歪片星球","name":"🚦请勿相信任何广告","type":3,"api":"csp_XYQHiker","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/waipianxq.json"},
 {"key":"配置中心","name":"👨‍🍳网盘♦️配置👨‍🍳","type":3,"api":"csp_Config","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"style":{"type":"rect","ratio":1.433}},
 {"key":"应用商店","name":"🏪┃应用┃商店💯","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"ext":"./json/market.json"},
 {"key":"版本信息","name":"👿┃版本┃信息💯","type":3,"api":"csp_Market","quickSearch":0,"searchable":0,"changeable":0,"filterable":1,"indexs":0,"ext":"https://9877.kstore.space/Market/market.json"}
