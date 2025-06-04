@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/static/icon/favicon.ico">
     <link rel="Bookmark" href="/static/icon/favicon.ico">
     <meta name="keywords" content="工具网,在线,工具,小鱼,书签">
-  <meta name="description" content="这是一个非常Nice的在线书签导航网站">
+    <meta name="description" content="这是一个非常Nice的在线书签导航网站">
     <title>
         小鱼导航 - 书签网
     </title>
@@ -47,6 +47,36 @@
          display: flex;
          min-height: 100vh;
         }
+        
+        
+        .category-xy {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1px; /* 你可以根据需要调整间距 */
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        
+        .category-xy a {
+            display: inline-block;
+            text-decoration: none;
+            color: red; /* 导航文字颜色 */
+            font-size: 16px; /* 可以根据需要调整字体大小 */
+        }
+        
+        .category-xy a::after {
+            content: "┃";
+            margin: 0 0.5px;
+            color: #333;
+        }
+        
+        .category-xy a:last-child::after {
+            content: none;
+        }
+        
+        
+        
          /* LyToday-JS插件 */
         .hot-panel {
             width: 370px;
@@ -117,56 +147,56 @@
         /* 链接颜色（可自定义） */
         }
          .footer-copyright a:hover {
-         text-decoration: underline;
-        /* 鼠标悬停时显示下划线（可选） */
-         color: #fff;
-        /* 悬停颜色（可选） */
+             text-decoration: underline;
+            /* 鼠标悬停时显示下划线（可选） */
+             color: #fff;
+            /* 悬停颜色（可选） */
         }
          .disclaimer {
-         color: #999999;
-        /* 灰色字体 */
-         display: block;
-        /* 转为块级元素，独占一行 */
-         margin-top: 10px;
-        /* 间距 */
+             color: #999999;
+            /* 灰色字体 */
+             display: block;
+            /* 转为块级元素，独占一行 */
+             margin-top: 10px;
+            /* 间距 */
         }
         /* 左侧导航栏的标题栏样式 */
          .sidebar-header {
-         display: flex;
-         align-items: center;
-        /* 垂直居中对齐 */
-         justify-content: space-between;
-        /* 两端对齐 */
-         padding: 10px 15px;
-        /* 调整内边距 */
-         padding-bottom: 35px;
-        /* 增加底部内边距 */
-         background-color: var(--card-color);
-        /* 背景颜色 */
-         border-bottom: 1px solid var(--light-text);
-        /* 底部边框 */
+             display: flex;
+             align-items: center;
+            /* 垂直居中对齐 */
+             justify-content: space-between;
+            /* 两端对齐 */
+             padding: 7px 15px;
+            /* 调整内边距 */
+            
+             background-color: var(--card-color);
+            /* 背景颜色 */
+             border-bottom: 1px solid var(--light-text);
+            /* 底部边框 */
         }
+        
         /* 收回左侧栏的按钮样式 */
          .sidebar-toggle {
-         background: none;
-         border: none;
-         font-size: 24px;
-         cursor: pointer;
-         color: var(--primary-color);
-        /* 使用主色调 */
+             background: none;
+             border: none;
+             font-size: 24px;
+             cursor: pointer;
+             color: var(--primary-color);
+            /* 使用主色调 */
         }
         /* 侧边栏标题样式 */
          .sidebar-header h1 {
-         font-size: 1.5rem;
-         color: var(--primary-color);
-         margin: 0;
-        /* 重置外边距 */
-         white-space: nowrap;
-        /* 防止文字换行 */
-         flex-grow: 1;
-        /* 使标题占据剩余空间 */
-         text-align: center;
-        /* 文字居中 */
+             font-size: 1.5rem;
+             color: var(--primary-color);
+             margin: 0;
+            /* 重置外边距 */
+             white-space: nowrap;
+            /* 防止文字换行 */
+             flex-grow: 1;
+            /* 使标题占据剩余空间 */
+             text-align: center;
+            /* 文字居中 */
         }
          .nav-item {
          padding: 12px 25px;
@@ -317,7 +347,6 @@
          transform: translateY(-3px);
         }
         /* 响应式设计 */
-         @media (max-width: 768px) {
          .sidebar {
              transform: translateX(-100%);
              width: 250px;
@@ -386,9 +415,9 @@
          .mobile-header {
              position: relative;
              display: flex;
-            /* 确保为flex布局 */
+             /* 确保为flex布局 */
              align-items: center;
-            /* 垂直居中 */
+             /* 垂直居中 */
         }
          .mobile-logo {
              width: 46px;
@@ -508,61 +537,73 @@
          .footer {
              padding: 10px 15px;
         }
+        
+        @media (min-width: 769px) {
+        .menu-toggle, .sidebar-toggle {
+            display: none;
+           /* 电脑端隐藏移动端特有元素 */
         }
-         @media (min-width: 769px) {
-         .menu-toggle, .mobile-header , .sidebar-toggle{
-             display: none;
-            /* 电脑端隐藏移动端特有元素 */
+        
+        .category-xy {
+            margin-left: 0px;
+            flex-wrap: nowrap; /* 防止自动换行 */
+            gap: 1px; /* 你可以根据需要调整间距 */
+            align-items: center;
+            margin-top: 90px;
+            overflow-x: auto; /* 添加水平滚动条 */
+            white-space: nowrap; /* 确保内容在一行内显示 */
+            padding: 0 10px; /* 添加内边距，避免滚动条与内容紧贴 */
         }
-         .sidebar {
-             transform: translateX(0);
+        
+        .sidebar {
+            transform: translateX(0);
             /* 确保侧边栏可见 */
-             width: 15%;
-             min-width: 180px;
+            width: 15%;
+            min-width: 180px;
         }
-         .main-content {
-             margin-left: 15%;
-             padding: 30px;
-             padding-top: 30px;
-            /* 重置移动端的padding-top */
-        }
-         .category-content {
-             grid-template-columns: repeat(4, 1fr);
-            /* 电脑端一行四个 */
-             gap: 20px;
-            /* 增大间距 */
-        }
-        /* 电脑端分类卡片优化 */
-         .category {
-             margin-bottom: 30px;
-            /* 增大分类间距 */
-        }
-         .bookmark-item {
-             padding: 12px 20px;
-            /* 增大内边距 */
-             font-size: 15px;
-            /* 稍大字体 */
-        }
-        /* 搜索栏优化 */
-         .search-container {
-             max-width: 900px;
-             margin-bottom: 40px;
-        }
-         .search-input {
-             padding: 15px 25px;
-             padding-left: 50px;
-             font-size: 17px;
-        }
-        /* 侧边栏优化 */
-         .nav-item {
-             padding: 14px 30px;
-             font-size: 15px;
-        }
-         .sidebar-header h1 {
-             font-size: 1.8rem;
-            /* 增大标题 */
-        }
-        }
+        .main-content {
+            margin-left: max(15%, 190px); /* 取较大值，左侧距离至少190px */
+            padding: 30px;
+            padding-top: 30px;
+           /* 重置移动端的padding-top */
+               }
+        .category-content {
+            grid-template-columns: repeat(4, 1fr);
+           /* 电脑端一行四个 */
+            gap: 20px;
+           /* 增大间距 */
+               }
+               /* 电脑端分类卡片优化 */
+        .category {
+            margin-bottom: 30px;
+           /* 增大分类间距 */
+               }
+        .bookmark-item {
+            padding: 12px 20px;
+           /* 增大内边距 */
+            font-size: 15px;
+           /* 稍大字体 */
+               }
+               /* 搜索栏优化 */
+        .search-container {
+            max-width: 900px;
+            margin-bottom: 40px;
+               }
+               .search-input {
+           padding: 15px 25px;
+           padding-left: 50px;
+           font-size: 17px;
+              }
+               /* 侧边栏优化 */
+        .nav-item {
+            padding: 14px 30px;
+            font-size: 15px;
+               }
+        .sidebar-header h1 {
+            font-size: 1.8rem;
+           /* 增大标题 */
+               }
+            }
           
     </style>
 </head>
@@ -713,6 +754,64 @@
     </div>
     <!-- 主内容区 -->
     <div class="main-content">
+        <!-- 横向导航栏 -->
+        <div class="category-xy">
+            <a href="#TVBox加解密" class="category-xy-item">
+                <span>
+                    TVBox加解密
+                </span>
+            </a>
+            <a href="#站长工具" class="category-xy-item">
+                <span>
+                    站长工具
+                </span>
+            </a>
+            <a href="#交流论坛" class="category-xy-item">
+                <span>
+                    交流论坛
+                </span>
+            </a>
+            <a href="#GitHub仓库" class="category-xy-item">
+                <span>
+                    GitHub仓库
+                </span>
+            </a>
+            <a href="#实用工具" class="category-xy-item">
+                <span>
+                    实用工具
+                </span>
+            </a>
+            <a href="#网盘" class="category-xy-item">
+                <span>
+                    网盘
+                </span>
+            </a>
+            <a href="#AI智能" class="category-xy-item">
+                <span>
+                    AI智能
+                </span>
+            </a>
+            <a href="#影视" class="category-xy-item">
+                <span>
+                    影视
+                </span>
+            </a>
+            <a href="#开发工具" class="category-xy-item">
+                <span>
+                    开发工具
+                </span>
+            </a>
+            <a href="#格式化代码" class="category-xy-item">
+                <span>
+                    格式化代码
+                </span>
+            </a>
+            <a href="#图片工具" class="category-xy-item">
+                <span>
+                    图片工具
+                </span>
+            </a>
+        </div>
         <!-- 搜索栏 -->
         <div class="search-container">
             <i class="fas fa-search search-icon"></i>
@@ -2422,11 +2521,21 @@
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
             const bookmarkItems = document.querySelectorAll('.bookmark-item');
-            
+            const categories = document.querySelectorAll('.category');
+        
+            // 先隐藏所有分类栏
+            categories.forEach(category => {
+                category.style.display = 'none';
+            });
+        
             bookmarkItems.forEach(item => {
                 const text = item.textContent.toLowerCase();
                 if (text.includes(searchTerm)) {
                     item.style.display = 'flex';
+                    const category = item.closest('.category'); // 获取当前书签项所属的分类栏
+                    if (category) {
+                        category.style.display = 'flex'; // 显示包含搜索结果的分类栏
+                    }
                 } else {
                     item.style.display = 'none';
                 }
@@ -2465,7 +2574,7 @@
         }
         
         // 平滑滚动到分类
-        document.querySelectorAll('.category-nav-item').forEach(item => {
+        document.querySelectorAll('.category-nav-item, .category-xy-item').forEach(item => {
           item.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
