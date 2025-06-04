@@ -425,7 +425,7 @@
         "key": "偷乐短剧",
         "name": "📱┃偷乐┃短剧🏮",
         "type": 3,
-        "api": "./py/toutedj.py",
+        "api": "./py/touledj.py",
         "quickSearch": 1,
         "searchable": 1,
         "changeable": 1,
