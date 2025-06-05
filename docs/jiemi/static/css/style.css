@@ -181,7 +181,7 @@ h2 {
 
 /* 选择项样式 */
 .options {
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     max-height: 376px;
     /* 最大高度 */
     overflow-y: auto;
@@ -194,9 +194,9 @@ h2 {
     /* 背景颜色 */
     z-index: 1000;
     /* 确保在其他元素之上 */
-    width: calc(100% - 2px);
+    width: calc(100% - 3px);
     /* 选项列表宽度与输入框和按钮总宽度一致 */
-    left: 0;
+    left: -1px;
     /* 确保左侧对齐 */
 
 }

@@ -50,8 +50,6 @@ CCTV17,rtp://228.0.0.161:7161
 金鹰纪实,rtp://228.0.0.145:7145
 中国教育-1,rtp://228.0.0.146:7146
 
-
-
 体育赛事,rtp://228.0.0.175:7175
 CHC家庭影院,rtp://228.0.0.211:6108
 CHC动作电影,rtp://228.0.0.212:6108
@@ -60,7 +58,9 @@ CHC高清电影,rtp://228.0.0.233:6108
 风云足球,rtp://228.0.0.236:6108
 怀旧剧场,rtp://228.0.0.237:6108
 
-🦚｜港澳台频道,#genre#
+
+
+🦚｜港澳频道,#genre#
 兵团卫视,http://8.138.7.223/tv/btws.m3u8
 莲花卫视,http://8.138.7.223/tv/lotustv.m3u8
 香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
@@ -78,40 +78,7 @@ ELEVEN体育2,rtmp://f13h.mine.nu/sat/tv741
 
 
 
-📻┃电台,#genre#
-Soft Rock,https://stream.revma.ihrhls.com/zc4414
-Easy 101.5,http://ice10.securenetsystems.net/KCLS
-The Truth Salt Lake,https://stream.falconinternet.net:9018/
-KONY 99.9 FM,http://ice10.securenetsystems.net/KONY
-KAUU The Eagle 105.1 FM,http://ais-sa1.streamon.fm/7169_48k.aac
-100.3 HD2 Sunday Sounds,https://bonneville.cdnstream1.com/2703_48.aac
-103.5 HD2 Deep Tracks,https://bonneville.cdnstream1.com/2701_48.aac
-CNR1中国之声,https://ngcdn001.cnr.cn/live/zgzs/index.m3u8
-CNR2经济之声,https://ngcdn002.cnr.cn/live/jjzs/index.m3u8
-CNR3音乐之声,https://ngcdn003.cnr.cn/live/yyzs/index.m3u8
-CNR4经典音乐广播,https://ngcdn004.cnr.cn/live/dszs/index.m3u8
-CNR5台海之声,https://ngcdn005.cnr.cn/live/zhzs/index.m3u8
-CNR6神州之声,https://ngcdn006.cnr.cn/live/szzs/index.m3u8
-CNR7大湾区之声,https://ngcdn007.cnr.cn/live/hxzs/index.m3u8
-CNR8民族之声,https://ngcdn009.cnr.cn/live/mzzs/index.m3u8
-CNR9文艺之声,https://ngcdn009.cnr.cn/live/wyzs/index.m3u8
-CNR10老年之声,https://ngcdn010.cnr.cn/live/lnzs/index.m3u8
-CNR11藏语广播,https://ngcdn011.cnr.cn/live/zygb/index.m3u8
-CNR12阅读之声,https://ngcdn012.cnr.cn/live/ylgb/index.m3u8
-CNR13维语广播,https://ngcdn013.cnr.cn/live/wygb/index.m3u8
-CNR14⾹港之声,https://ngcdn014.cnr.cn/live/xgzs/index.m3u8
-CNR15中国交通广播,https://ngcdn001.cnr.cn/live/gsgljtgb/index.m3u8
-CNR16中国乡村之声,https://ngcdn016.cnr.cn/live/xczs/index.m3u8
-CNR17哈萨克语广播,https://ngcdn017.cnr.cn/live/hygb/index.m3u8
-CRI华语环球(CRIChineseService),https://sk.cri.cn/hyhq.m3u8
-环球资讯广播(CRINewsRadio),https://sk.cri.cn/905.m3u8
-CRI世界华声(粤客闽潮方言广播海峡飞虹),https://sk.cri.cn/hxfh.m3u8
-CRIEZFM轻松调频,https://sk.cri.cn/915.m3u8
-HITFM劲曲调频,https://sk.cri.cn/887.m3u8
-
-
-
-🎙┃蜻蜓电台FM,#genre#
+📻┃蜻蜓电台,#genre#
 893音乐广播,https://lhttp-hw.qtfm.cn/live/4846/64k.mp3
 AI潮流音乐台,https://lhttp-hw.qtfm.cn/live/15318300/64k.mp3
 阿拉善汉语综合广播,https://lhttp-hw.qtfm.cn/live/5022521/64k.mp3
@@ -1070,7 +1037,7 @@ AI潮流音乐台,https://lhttp-hw.qtfm.cn/live/15318300/64k.mp3
 
 
 
-📻┃大陆电台FM,#genre#
+📻┃综合电台,#genre#
 大湾区之声,https://ngcdn007.cnr.cn/live/hxzs/index.m3u8
 经典音乐,https://ngcdn004.cnr.cn/live/dszs/index.m3u8
 经济之声,https://ngcdn002.cnr.cn/live/jjzs/index.m3u8
@@ -1280,11 +1247,36 @@ HITFM国际流行音乐,https://sk.cri.cn/887.m3u8
 浙江女主播电台,https://satellitepull.cnr.cn/live/wxzj1045/playlist.m3u8
 浙江悦动之音,https://satellitepull.cnr.cn/live/wxzj968/playlist.m3u8
 浙江之声,https://satellitepull.cnr.cn/live/wxzjzs/playlist.m3u8
+Soft Rock,https://stream.revma.ihrhls.com/zc4414
+Easy 101.5,http://ice10.securenetsystems.net/KCLS
+The Truth Salt Lake,https://stream.falconinternet.net:9018/
+KONY 99.9 FM,http://ice10.securenetsystems.net/KONY
+KAUU The Eagle 105.1 FM,http://ais-sa1.streamon.fm/7169_48k.aac
+100.3 HD2 Sunday Sounds,https://bonneville.cdnstream1.com/2703_48.aac
+103.5 HD2 Deep Tracks,https://bonneville.cdnstream1.com/2701_48.aac
+CNR1中国之声,https://ngcdn001.cnr.cn/live/zgzs/index.m3u8
+CNR2经济之声,https://ngcdn002.cnr.cn/live/jjzs/index.m3u8
+CNR3音乐之声,https://ngcdn003.cnr.cn/live/yyzs/index.m3u8
+CNR4经典音乐广播,https://ngcdn004.cnr.cn/live/dszs/index.m3u8
+CNR5台海之声,https://ngcdn005.cnr.cn/live/zhzs/index.m3u8
+CNR6神州之声,https://ngcdn006.cnr.cn/live/szzs/index.m3u8
+CNR7大湾区之声,https://ngcdn007.cnr.cn/live/hxzs/index.m3u8
+CNR8民族之声,https://ngcdn009.cnr.cn/live/mzzs/index.m3u8
+CNR9文艺之声,https://ngcdn009.cnr.cn/live/wyzs/index.m3u8
+CNR10老年之声,https://ngcdn010.cnr.cn/live/lnzs/index.m3u8
+CNR11藏语广播,https://ngcdn011.cnr.cn/live/zygb/index.m3u8
+CNR12阅读之声,https://ngcdn012.cnr.cn/live/ylgb/index.m3u8
+CNR13维语广播,https://ngcdn013.cnr.cn/live/wygb/index.m3u8
+CNR14⾹港之声,https://ngcdn014.cnr.cn/live/xgzs/index.m3u8
+CNR15中国交通广播,https://ngcdn001.cnr.cn/live/gsgljtgb/index.m3u8
+CNR16中国乡村之声,https://ngcdn016.cnr.cn/live/xczs/index.m3u8
+CNR17哈萨克语广播,https://ngcdn017.cnr.cn/live/hygb/index.m3u8
+CRI华语环球(CRIChineseService),https://sk.cri.cn/hyhq.m3u8
+环球资讯广播(CRINewsRadio),https://sk.cri.cn/905.m3u8
+CRI世界华声(粤客闽潮方言广播海峡飞虹),https://sk.cri.cn/hxfh.m3u8
+CRIEZFM轻松调频,https://sk.cri.cn/915.m3u8
+HITFM劲曲调频,https://sk.cri.cn/887.m3u8
 
-
-
-
-📻┃台湾电台FM,#genre#
 923魅力亞太AsiaFM亞太電台,https://n04a-eu.rcs.revma.com/kydend74hv8uv?rj-ttl=5&rj-tok=AAABk3-PFmIANQOl8U4dGJCCgQ
 927魅力亞洲AsiaFM亞洲電台,https://n02a-eu.rcs.revma.com/xpgtqc74hv8uv?rj-ttl=5&rj-tok=AAABk3-DGv0AIdOP5OI3uapVnA
 AI台粵廣播電台,https://n27a-eu.rcs.revma.com/h4ta80hbqwuvv?rj-ttl=5&rj-tok=AAABk3-xktMA5rXeWEpOIWNGvQ
