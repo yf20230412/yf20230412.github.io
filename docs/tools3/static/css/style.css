@@ -2,8 +2,9 @@
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
-    /* 允许换行 */
-    row-gap: 30px;
+    justify-content: flex-start; /* 左对齐 */
+    row-gap: 10px; /* 缩小行间距 */
+    column-gap: 10px; /* 缩小列间距 */
     padding: 5px 0;
     margin: 15px 0;
     list-style: none;
@@ -14,9 +15,10 @@
 }
 
 .breadcrumb li {
-    display: inline-block; /* 改为 inline-block 更好地与 flex 布局配合 */
-    margin: 0; /* 去除默认的上下外边距，间距由外层的 gap 控制 */
+    display: inline-block;
+    margin: 0; /* 去除默认的上下外边距 */
     font-size: 14px;
+    width: calc(33.333% - 10px); /* 每个元素占三分之一宽度，减去间距 */
 }
 
 .breadcrumb li a {
@@ -25,6 +27,8 @@
     transition: color 0.2s, background-color 0.2s;
     padding: 10px 12px;
     border-radius: 4px;
+    display: block; /* 确保链接占满整个li的宽度 */
+    text-align: center; /* 文字居中 */
 }
 
 .breadcrumb li a:hover {
