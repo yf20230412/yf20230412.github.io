@@ -205,6 +205,7 @@ h2 {
 .option {
     padding: 10px;
     cursor: pointer;
+    color: #000;
     display: flex;
     /* 使用Flexbox布局 */
     justify-content: flex-start;
