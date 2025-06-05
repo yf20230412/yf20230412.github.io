@@ -148,6 +148,26 @@ button:hover {
     color: white;
 }
 
+.punycode-encode-btn {
+    background: #A21B17;
+    color: white;
+}
+
+.punycode-decode-btn {
+    background: #10CFB3;
+    color: white;
+}
+
+.unicode-encode-btn {
+    background: #FF7900;
+    color: white;
+}
+
+.unicode-decode-btn {
+    background: #C564FB;
+    color: white;
+}
+
 .gzipencode-btn {
     background: #00BCD4;
     color: white;

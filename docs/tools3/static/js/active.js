@@ -17,7 +17,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('outputText').placeholder = placeholderOutput;
 
     // 显示相关按钮，隐藏其他按钮
-    const allControls = ['jsonControls', 'urlControls', 'base64Controls', 'gzipControls','HexControls'];
+    const allControls = ['jsonControls', 'urlControls', 'base64Controls', 'punycodeControls', 'unicodeControls', 'gzipControls','HexControls'];
     allControls.forEach(id => {
         document.getElementById(id).style.display = id === controlsId ? 'flex' : 'none';
     });
@@ -26,7 +26,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
     document.getElementById('swapButton').style.display = showSwapButton ? 'inline-block' : 'none';
 
     // 设置菜单项的激活状态
-    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link', 'gzipLink', 'HexLink'];
+    const allLinks = ['jsonFormatLink', 'urlLink', 'base64Link', 'punycodeLink', 'unicodeLink', 'gzipLink', 'HexLink'];
     allLinks.forEach(id => {
         document.getElementById(id).classList.toggle('active', id === activeLinkId);
     });
@@ -38,7 +38,7 @@ function activateFunction(placeholderInput, placeholderOutput, controlsId, activ
 // 激活 JSON 格式化功能
 function activateJsonFormat() {
     activateFunction(
-        "输入JSON内容...",
+        "请输入需要进行JSON格式化的内容...",
         "格式化或压缩后的JSON...",
         "jsonControls",
         "jsonFormatLink"
@@ -48,17 +48,18 @@ function activateJsonFormat() {
 // 激活 Url 编码解码功能
 function activateUrl() {
     activateFunction(
-        "输入需要Url编码或解码的内容...",
+        "请输入需要进行Url编码或解码的内容...",
         "Url处理结果...",
         "urlControls",
-        "urlLink"
+        "urlLink",
+        true // 显示交换按钮
     );
 }
 
 // 激活 Base64 编码解码功能
 function activateBase64() {
     activateFunction(
-        "输入需要Base64编码或解码的内容...",
+        "请输入需要进行Base64编码或解码的内容...",
         "Base64处理结果...",
         "base64Controls",
         "base64Link",
@@ -66,10 +67,32 @@ function activateBase64() {
     );
 }
 
+// 激活 punycode 编码解码功能
+function activateBase64() {
+    activateFunction(
+        "请输入需要进行punycode中文域名编码或解码的内容...",
+        "punycode处理结果...",
+        "punycodeControls",
+        "punycodeLink",
+        true // 显示交换按钮
+    );
+}
+
+// 激活 Unicode 编码解码功能
+function activateBase64() {
+    activateFunction(
+        "请输入需要进行Unicode与中文编码或解码的内容...",
+        "Unicode处理结果...",
+        "unicodeControls",
+        "unicodeLink",
+        true // 显示交换按钮
+    );
+}
+
 // 激活 Gzip 加密解密功能
 function activateGzip() {
     activateFunction(
-        "输入需要 Gzip 加密或解密的内容...",
+        "请输入需要进行 Gzip 加密或解密的内容...",
         "Gzip 处理结果...",
         "gzipControls",
         "gzipLink",
@@ -80,8 +103,8 @@ function activateGzip() {
 // 激活 16进制转字符串功能
 function activatehex() {
     activateFunction(
-        "输入16进制内容或字符串...",
-        "处理结果...",
+        "请输入需要进行16进制与字符串转换的内容...",
+        "16进制处理结果...",
         "HexControls",
         "HexLink",
         true // 显示交换按钮
