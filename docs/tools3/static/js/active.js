@@ -68,7 +68,7 @@ function activateBase64() {
 }
 
 // 激活 punycode 编码解码功能
-function activateBase64() {
+function activatePunycode() {
     activateFunction(
         "请输入需要进行punycode中文域名编码或解码的内容...",
         "punycode处理结果...",
@@ -79,7 +79,7 @@ function activateBase64() {
 }
 
 // 激活 Unicode 编码解码功能
-function activateBase64() {
+function activateUnicode() {
     activateFunction(
         "请输入需要进行Unicode与中文编码或解码的内容...",
         "Unicode处理结果...",
