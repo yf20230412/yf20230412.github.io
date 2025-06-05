@@ -11,30 +11,25 @@ h2 {
 #output {
     background-color: #DCDFE6;
     color: black;
-    width: calc(100% - 10px);
-    /* 默认宽度，留出左右间距 */
+    width: calc(100% - 2px); /* 确保输出框宽度与输入框一致 */
+    height: calc(100vh - 350px); /* 输出框高度 */
     resize: none;
     margin: 0 auto;
     display: block;
 }
 
+
 #input-container {
     display: flex;
     align-items: stretch;
+    width: calc(100% - 2px); /* 确保输入框宽度与输出框一致 */
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 20px;
-    width: 100%;
-    /* 确保容器宽度为100% */
-    box-sizing: border-box;
-    /* 包括内边距和边框 */
+    box-sizing: border-box;  /* 包括内边距和边框 */
 }
 
-#input-wrapper {
-    flex: 3;
-    position: relative;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    /* 包括内边距和边框 */
-}
+
 
 /* 输入框样式 */
 #input-field {
@@ -47,6 +42,14 @@ h2 {
     font-size: 14px;
     outline: none;
     box-sizing: border-box;
+}
+
+#input-wrapper {
+    flex: 3;
+    position: relative;
+	border: 1px solid;
+	color: #ccc;
+	box-sizing: border-box;
 }
 
 #input-wrapper #clear-input-button {
@@ -78,29 +81,18 @@ h2 {
     /* 移除内边距 */
 }
 
-/* 输入框选中效果 */
-#input-field:focus {
-    outline: 1.5px solid #1e90ff;
-    /* 修改颜色轮廓 */
-}
-
-
 #clear-input-button:hover {
     color: #999;
     background-color: #f0f0f0;
     /* 鼠标悬停时添加背景色 */
 }
 
-/* 电脑模式 */
-@media (min-width: 768px) {
-    #input-wrapper #clear-input-button {
-        width: 22px;
-        /* 桌面模式下稍大一些 */
-        height: 22px;
-        font-size: 18px;
-        /* 桌面模式下字体稍大 */
-    }
+/* 输入框选中效果 */
+#input-field:focus {
+    outline: 1.5px solid #1e90ff;
+    /* 修改颜色轮廓 */
 }
+
 
 #input-container button {
     flex: 1;
@@ -115,6 +107,7 @@ h2 {
     border-left: none;
 }
 
+
 #error-message,
 #loading-message {
     color: red;
@@ -125,8 +118,14 @@ h2 {
 
 
 #output-container {
+    width: calc(100% - 2px);
+    /* 确保输出框宽度与输入框一致 */
     margin-top: 20px;
     margin-bottom: 30px;
+    margin-left: 0;
+    /* 取消左边距 */
+    margin-right: 0;
+    /* 取消右边距 */
 }
 
 #button-container {
@@ -195,7 +194,7 @@ h2 {
     /* 背景颜色 */
     z-index: 1000;
     /* 确保在其他元素之上 */
-    width: calc(100% - 10px);
+    width: calc(100% - 2px);
     /* 选项列表宽度与输入框和按钮总宽度一致 */
     left: 0;
     /* 确保左侧对齐 */
@@ -238,64 +237,38 @@ h2 {
     /* 防止换行 */
 }
 
-/* 手机模式 */
-@media (max-width: 767px) {
-    #output {
-        width: calc(100% - 2px);
-        /* 确保输出框宽度与输入框一致 */
-        height: calc(100vh - 350px);
-        /* 输出框高度 */
-    }
-
-    #input-container {
-        width: calc(100% - 2px);
-        /* 确保输入框宽度与输出框一致 */
-        margin-left: 0;
-        /* 取消左边距 */
-        margin-right: 0;
-        /* 取消右边距 */
-    }
-
-    #input-field {
-        padding: 11px 30px 11px 11px;
-        /* 手机模式下调整输入框内边距 */
-    }
-
-    #input-container button {
-        padding: 11px 10px;
-        /* 手机模式下调整按钮内边距 */
-    }
-
-    #output-container {
-        width: calc(100% - 2px);
-        /* 确保输出框宽度与输入框一致 */
-        margin-left: 0;
-        /* 取消左边距 */
-        margin-right: 0;
-        /* 取消右边距 */
-    }
-
-    .options {
-        width: calc(100% - 2px);
-        /* 确保选择框宽度与输入框一致 */
-        left: 0;
-    }
+.error{
+    width: calc(100% - 10px);
 }
 
-/* 电脑模式 */
-@media (min-width: 768px) {
 
-    #input-container,
-    #output-container {
-        width: calc(80% - 10px);
-        /* 统一宽度，确保对齐 */
+
+/* 电脑模式 */
+@media (min-width: 769px) {
+	
+	#container {
+        margin-bottom: 26px;  /* 调整输入框到输出框中间的距离*/
+        position: relative; /* 确保容器是相对定位 */
+	    width: calc(80% - 10px);
+        margin-left: auto;
+        margin-right: auto;	
+    }
+
+    #input-container, #output-container {
+        width: calc(80% - 10px); /* 统一宽度，确保对齐 */
         margin-left: auto;
         margin-right: auto;
     }
+    
+    #input-wrapper #clear-input-button {
+        width: 22px; /* 桌面模式下稍大一些 */
+        height: 22px;
+        font-size: 18px; /* 桌面模式下字体稍大 */
+    }
 
     #output {
-        width: calc(100% - 2px);
-        /* 输出框宽度与输入框和按钮对齐 */
+        width: calc(80% - 10px); /* 输出框宽度与输入框和按钮对齐 */
+        height: calc(100vh - 350px);
     }
 
     #input-field {

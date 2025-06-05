@@ -1,7 +1,7 @@
 #container {
     margin-bottom: 26px;  /* 调整输入框到输出框中间的距离*/
-    position: relative;
-    /* 确保容器是相对定位 */
+    position: relative; /* 确保容器是相对定位 */
+
 }
 
 .scroll-button {
@@ -27,17 +27,6 @@
     /* 默认背景颜色 */
 }
 
-@media (min-width: 768px) {
-    .scroll-button {
-        right: calc(10% + 2px); /*电脑模式下右对齐*/
-        margin-right: 0;
-    }
-
-    .progress-bar {
-        margin-left: calc(10% + 5px);
-    }
-}
-
 // 进度条
 .output-box {
     overflow-y: auto;
@@ -57,4 +46,16 @@
     transition: width 0.2s ease;
     /* 平滑过渡效果 */
     max-width: 100%;
+}
+
+@media (min-width: 769px) {
+    .scroll-button {
+        right: calc(10% + 2px); /*电脑模式下右对齐*/
+        margin-right: 0;
+    }
+
+    .progress-bar {
+        margin-left: calc(10% + 5px);
+        max-width: calc(79% + 8px);
+    }
 }
