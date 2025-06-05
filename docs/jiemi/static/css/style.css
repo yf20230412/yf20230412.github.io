@@ -181,7 +181,7 @@ h2 {
 
 /* 选择项样式 */
 .options {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     max-height: 376px;
     /* 最大高度 */
     overflow-y: auto;
