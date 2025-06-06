@@ -3,14 +3,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; /* 左对齐 */
-    row-gap: 10px; /* 缩小行间距 */
-    column-gap: 10px; /* 缩小列间距 */
-    padding: 5px 0;
+    row-gap: 5px; /* 缩小行间距 */
+    column-gap: 8px; /* 缩小列间距 */
+    padding: 10px 20px;  /* 内边距 */
     margin: 15px 0;
     list-style: none;
     background-color: #f8f8f8;
     border-radius: 4px;
-    padding: 20px;
     border: 1px solid #ddd;
 }
 
@@ -25,7 +24,7 @@
     color: #2196F3;
     text-decoration: none;
     transition: color 0.2s, background-color 0.2s;
-    padding: 10px 12px;
+    padding: 5px ;
     border-radius: 4px;
     display: block; /* 确保链接占满整个li的宽度 */
     text-align: center; /* 文字居中 */
@@ -54,6 +53,8 @@
     background: #fff;
     border: 1px solid #d4d4d4;
     z-index: 1000; /* 确保下拉框显示在其他元素之上 */
+    max-height: 200px; /* 设置最大高度 */
+    overflow-y: auto; /* 超出高度时允许滚动 */
     
 }
 
