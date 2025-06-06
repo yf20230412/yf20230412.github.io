@@ -22,7 +22,7 @@
     overflow: hidden; /* 隐藏超出部分 */
     overflow-x: auto; /* 允许水平滚动 */
     text-align: center; /* 文字居中 */
-    padding: 0; /* 添加内边距 */
+    padding: 10px 0; /* 添加内边距 */
     box-sizing: border-box; /* 确保内边距包含在宽度内 */
 }
 
