@@ -70,7 +70,7 @@ function activateBase64() {
 // 激活 punycode 编码解码功能
 function activatePunycode() {
     activateFunction(
-        "请输入需要进行punycode中文域名编码或解码的内容...",
+        "请输入需要进行ASCII域名与Unicode域名转换的内容...",
         "punycode处理结果...",
         "punycodeControls",
         "punycodeLink",
