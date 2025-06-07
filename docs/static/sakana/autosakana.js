@@ -1,6 +1,6 @@
 // 加载 CSS
 $("<link>").attr({
-    href: "https://yf1688.top/static/sakana/sakana.min.css",
+    href: "https://2015888.xyz/static/sakana/sakana.min.css",
     rel: "stylesheet",
     type: "text/css"
 }).appendTo('head');
@@ -10,7 +10,7 @@ $('body').append(`<div id="sakana-widget"></div>`);
 
 // 加载 JS
 $.ajax({
-    url: 'https://yf1688.top/static/sakana/sakana.min.js',
+    url: 'https://2015888.xyz/static/sakana/sakana.min.js',
     dataType: "script",
     cache: true,
     async: false

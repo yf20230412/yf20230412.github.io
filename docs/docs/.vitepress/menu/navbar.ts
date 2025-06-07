@@ -20,15 +20,15 @@ export const nav: DefaultTheme.NavItem[] = [
         items: [           
             {
                 text: 'TVBox接口',
-                link: 'https://yf1688.top/box2/'
+                link: '/box2/'
             },
             {
-                text: '小鱼工具箱',
-                link: 'https://yf1688.top/tools/'
+                text: '小鱼书签导航',
+                link: '/tools/'
             },
             {
                 text: 'VIP音乐格式转MP3',
-                link: 'https://yf1688.top/888/'
+                link: '/888/'
             }
         ]
     },
@@ -37,19 +37,19 @@ export const nav: DefaultTheme.NavItem[] = [
         items: [
             {
                 text: '小鱼影视🎞',
-                link: 'https://yf1688.top/1115/'
+                link: '/1115/'
             },            
             {
                 text: '免责声明📄',
-                link: 'https://yf1688.top/916/'
+                link: '/916/'
             },
             {
                 text: '打赏💰',
-                link: 'https://yf1688.top/588/'
+                link: '/588/'
             },
             {
                 text: '联系☎️',
-                link: 'https://yf1688.top/wo/'
+                link: '/wo/'
             },
             {
                 text: '掘金💻',

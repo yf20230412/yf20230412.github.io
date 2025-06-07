@@ -6,10 +6,6 @@
             "name": "🍚小鱼在线┃饭总专线🍚"
         },
         {
-            "url": "https://2015888.xyz/ks/99.json",
-            "name": "🐬小鱼影视┃凯速专线🐬"
-        },
-        {
             "url": "http://tvbox.王二小放牛娃.top",
             "name": "🐮小鱼在线┃放牛专线🐮"
         },
@@ -38,6 +34,10 @@
             "name": "🕺小鱼在线┃潇洒专线🕺"
         },
         {
+            "url": "https://clun.top/box.json",
+            "name": "💦小鱼在线┃雨呢专线💦"
+        },
+        {
             "url": "http://cdn.qiaoji8.com/tvbox.json",
             "name": "🥰小鱼在线┃巧计专线🥰"
         },
@@ -46,28 +46,12 @@
             "name": "☀️小鱼在线┃天微专线☀️"
         },
         {
-            "url": "http://tv.laohu.cool/tvbox.json",
-            "name": "🐯小鱼在线|老虎专线🐯"
-        },
-        {
-            "url": "https://json.doube.eu.org/t4.php",
-            "name": "🌻小鱼在线|沐辰T4🌻"
-        },
-        {
-            "url": "http://zhangqun66.com/zq/api.json",
-            "name": "🌻小鱼在线|老张T4🌻"
+            "url": "http://hb.小虎斑.site:25252/仅供测试",
+            "name": "🐯小鱼在线┃小虎斑专线🐯"
         },
         {
             "url": "http://www.2015888.xyz/tv",
             "name": "🐬小鱼影视┃三维专线🐬"
-        },
-        {
-            "url": "https://yf1688.top/tv/99.json",
-            "name": "🐬小鱼影视┃ZY专线🐬"
-        },
-        {
-            "url": "https://yf1688.top/tv/88.json",
-            "name": "🐬小鱼影视┃福利专线👩‍❤️‍👨"
         },
         {
             "url": "",
@@ -78,20 +62,8 @@
             "name": "🐠小鱼影视┃软件内置❤️"
         },
         {
-            "url": "clan://localhost/风言锋语88/风言锋语/88.json",
-            "name": "🐬小鱼专享┃本地福利👩‍❤️‍👨"
-        },
-        {
-            "url": "clan://localhost/TVBoxOSC/tvbox/api.json",
-            "name": "🐟小鱼本地┃潇洒影视💜"
-        },
-        {
             "url": "clan://localhost/风言锋语88/风言锋语/99.json",
             "name": "🐟小鱼本地┃99影视💜"
-        },
-        {
-            "url": "clan://localhost/风言锋语88/风言锋语/77.json",
-            "name": "🐟小鱼本地┃77少儿🧚‍♀️"
         },
         {
             "url": "clan://localhost/风言锋语88/22.json",

@@ -66,7 +66,7 @@ const htmlContent = `
 </a>
 
 
-<a href="https://yf1688.top/m3u/" target="_blank">
+<a href="https://2015888.xyz/m3u/" target="_blank">
     <div class="item">
         <div class="avatar"> <img src="https://s1.imagehub.cc/images/2023/07/01/zbzh.webp">
         </div>

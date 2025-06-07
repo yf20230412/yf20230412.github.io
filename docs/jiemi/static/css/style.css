@@ -269,7 +269,7 @@ h2 {
 
     #output {
         width: calc(80% - 10px); /* 输出框宽度与输入框和按钮对齐 */
-        height: calc(100vh - 350px);
+        height: calc(90% - 10px);
     }
 
     #input-field {

@@ -6,7 +6,7 @@
 
     "warningText": "【风言锋语88·温馨提示您】：🔴线路利用网络爬虫技术获取，各线路的版本、清晰度、播放速度等存在差异请自行切换。建议避开晚上高峰时段。🔵软件和接口都是免费分享使用。💢请勿相信视频中的任何广告，以免您上当受骗……💯",
 
-    "logo": "https://2015888.xyz/box/img/588.txt",
+    "logo": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/img/588.txt",
 
     "lives": [
     {
@@ -104,9 +104,8 @@
 
 {"key": "api.maozyapi.com","name": "🔞┃成人5","type": 1,"api": "https://api.maozyapi.com/inc/apijson_vod.php","searchable": 1,"recordable": 0,"style": {"type": "rect","ratio": 1.33}},
 
-{"key": "磁力_lf_p2p2","name": "🧲┃磁力┃搜索㊙️","type": 3,"api": "https://yf1688.top/tv/js/lf_p2p2_min.js","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "18+"},
+{"key": "磁力_lf_p2p2","name": "🧲┃磁力┃搜索㊙️","type": 3,"api": "./js/lf_p2p2_min.js","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "18+"},
 
-{"key": "浪酷弹幕","name": "🚀导航-https://yf1688.top","type": 3,"api": "csp_TianTian","quickSearch": 0,"searchable": 0,"changeable": 0,"filterable": 1,"ext": {"danmu": true,"site": "aHR0cDovL3YubGt1eXMuY24="}},
 
 {"key": "韩小圈","name": "🚦请勿相信任何广告","type": 3,"api": "csp_HanXiaoQuan","quickSearch": 0,"searchable": 0,"changeable": 0,"filterable": 1}
 

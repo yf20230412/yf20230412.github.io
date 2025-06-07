@@ -29,7 +29,7 @@ hero:
       
     - theme: alt
       text: IPTV订阅源
-      link: https://yf1688.top/iptv
+      link: https://2015888.xyz/iptv
 
 features:
 
@@ -37,14 +37,14 @@ features:
     icon: 
       src: /dog.svg    
     details: 主要分享tvbox软件相关内容
-    link: https://yf1688.top/533
+    link: https://2015888.xyz/533
     linkText: 跳转主页
 
   - title: 微信公众号：风言锋语88
     icon: 
       src: /weixin.svg    
     details: 分享影视盒子、接口，想白嫖你就来
-    link: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMTUyMTgwMA==&action=getalbum&album_id=3215428467836715013#wechat_redirect
+    link: https://2015888.xyz/gzh
     linkText: 查看详情
     
   - title: 云原生技术

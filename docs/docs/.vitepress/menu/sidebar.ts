@@ -8,7 +8,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         text: '小鱼影视TV',
         collapsed: false,  //控制展开和隐藏
         items: [
-          { text: '小鱼影视更新日志', link: 'https://yf1688.top/log/' },
+          { text: '小鱼影视更新日志', link: '/log/' },
           { text: '小鱼影视必看技巧', link: '/blog/小鱼影视必看技巧' },   
           { text: '小鱼影视内置打包修改', link: '/blog/影视内置打包修改' }
         ]        
@@ -36,9 +36,9 @@ export const sidebar: DefaultTheme.Sidebar = {
       {
         text: '关于我',
         items: [
-          { text: '打赏💰', link: 'https://yf1688.top/588/' },
-          { text: '联系☎️', link: 'https://yf1688.top/wo/' },
-          { text: '主页🚀', link: 'https://yf1688.top/533/' },
+          { text: '打赏💰', link: '/588/' },
+          { text: '联系☎️', link: '/wo/' },
+          { text: '主页🚀', link: '/533/' },
           { text: '掘金💻', link: 'https://juejin.cn/' }
           
         ]
