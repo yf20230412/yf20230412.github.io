@@ -29,12 +29,12 @@ export default defineConfig({
           },
           {
             type: 'image',
-            src: 'http://www.2015888.xyz/img/wxgzh.jpg',
+            src: 'https://master.2015888.xyz/img/wxgzh.jpg',
             style: 'display: inline-block;width:46%;padding-right:6px'
           },
           {
             type: 'image',
-            src: 'http://www.2015888.xyz/img/wxzsm.jpg',
+            src: 'https://master.2015888.xyz/img/wxzsm.jpg',
             style: 'display: inline-block;width:46%;padding-left:6px'
           }
         ],
