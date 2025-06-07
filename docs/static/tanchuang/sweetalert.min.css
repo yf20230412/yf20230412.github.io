@@ -3,6 +3,10 @@ body.stop-scrolling {
     overflow: hidden
 }
 
+.gzhlink:hover {  
+  text-decoration: underline;   /* 悬停下划线样式 */
+}  
+
 .sweet-overlay {
     background-color: black;
     -ms-filter: "alpha(opacity=40)";
