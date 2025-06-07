@@ -5,7 +5,7 @@ export const sidebar: DefaultTheme.Sidebar = {
   // /blog/表示对这个文件夹下的所有md文件做侧边栏配置  
   '/blog/': [
       {
-        text: '小鱼影视TV',
+        text: '小鱼影视',
         collapsed: false,  //控制展开和隐藏
         items: [
           { text: '小鱼影视更新日志', link: '/log/' },
@@ -36,11 +36,9 @@ export const sidebar: DefaultTheme.Sidebar = {
       {
         text: '关于我',
         items: [
-          { text: '打赏💰', link: '/588/' },
-          { text: '联系☎️', link: '/wo/' },
-          { text: '主页🚀', link: '/533/' },
-          { text: '掘金💻', link: 'https://juejin.cn/' }
-          
+          { text: '打赏💰', link: 'https://2015888.xyz/588/' },
+          { text: '联系☎️', link: 'https://2015888.xyz/wo/' },
+          { text: '主页🚀', link: 'https://2015888.xyz/533/' }        
         ]
       }
   ]
