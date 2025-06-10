@@ -91,19 +91,7 @@ function downloadmitv() {
         filename = "tvlist.txt";
     }
     
-    // 创建Blob对象
-    var blob = new Blob([textmitv], { type: 'text/plain' });
-    
-    // 创建下载链接
-    var link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = filename;
-    
-    // 触发点击事件
-    document.body.appendChild(link);
-    link.click();
-    
-    // 清理
-    document.body.removeChild(link);
-    URL.revokeObjectURL(link.href);
+    // 使用 FileSaver.js 库下载
+    var blob = new Blob([textmitv], { type: 'text/plain;charset=utf-8' });
+    saveAs(blob, filename);
 }
