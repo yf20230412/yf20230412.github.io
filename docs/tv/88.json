@@ -14,6 +14,8 @@
         "type": 0,
         "url": "./txt/HB_unicom.txt",
         "playerType": 1,
+        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+        "logo": "https://epg.v1.mk/logo/{name}.png",
         "timeout": 15
     },
     {
@@ -22,13 +24,6 @@
         "url": "https://gh.2015888.xyz/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u ",
         "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
         "logo": "https://gh.2015888.xyz/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png",
-        "timeout": 3
-    },
-    {
-        "name": "范明明_IPV6",
-        "type": 0,
-        "url": "https://gh.2015888.xyz/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
-        "playerType": 2,
         "timeout": 5
     },
     {
