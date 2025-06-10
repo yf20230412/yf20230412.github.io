@@ -76,21 +76,34 @@ function copy(){
 }     
 
 function downloadmitv() {
-        var textmitv = document.getElementById('contents').value;      
-        if (textmitv.indexOf("playUrl") != -1 && textmitv.indexOf("genre") != -1)
-          {
-                 download("mitv.txt",textmitv);
-          }
-        else if(textmitv.indexOf("EXTM3U") != -1 && textmitv.indexOf("EXTINF") != -1)
-          {
-                download("tvlist.m3u",textmitv);
-          }
-         else if(textmitv.indexOf("DAUMPLAYLIST") != -1 && textmitv.indexOf("file") != -1)
-          {
-                download("tvlist.dpl",textmitv);
-          }
-          else
-          {
-                  download("tvlist.txt",textmitv);
-          }
+    //从输出框contents获取文本内容。
+    var textmitv = document.getElementById('contents').value;
+    var filename;
+    
+    //检查文本内容，判断它属于哪种播放列表格式，并决定下载的文件名
+    if (textmitv.indexOf("playUrl") != -1 && textmitv.indexOf("genre") != -1) {
+        filename = "mitv.txt";
+    } else if(textmitv.indexOf("EXTM3U") != -1 && textmitv.indexOf("EXTINF") != -1) {
+        filename = "tvlist.m3u";
+    } else if(textmitv.indexOf("DAUMPLAYLIST") != -1 && textmitv.indexOf("file") != -1) {
+        filename = "tvlist.dpl";
+    } else {
+        filename = "tvlist.txt";
+    }
+    
+    // 创建Blob对象
+    var blob = new Blob([textmitv], { type: 'text/plain' });
+    
+    // 创建下载链接
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    
+    // 触发点击事件
+    document.body.appendChild(link);
+    link.click();
+    
+    // 清理
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
 }
