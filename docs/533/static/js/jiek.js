@@ -36,7 +36,7 @@ const htmlContent = `
 
         <div class="item">
             <div class="bg" style="background-color:#32CCBC"></div>
-            <div class="inner copy-btn" id="xiaomi" data-clipboard-text="https://mpanso.me/DEMO.json">
+            <div class="inner copy-btn" id="xiaomi" data-clipboard-text="http://miqk.cc/小米/DEMO.json">
                 <span>小米</span>
             </div>
         </div>
