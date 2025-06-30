@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能播放列表转换器 (支持分组)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="file"], input[type="url"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            border-style: dashed;
+            border-color: #ccc;
+        }
+        .upload-type-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .upload-type-option {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #f8f9fa;
+        }
+        .upload-type-option:hover {
+            border-color: #28a745;
+            background-color: #e8f5e8;
+        }
+        .upload-type-option.active {
+            border-color: #28a745;
+            background-color: #e8f5e8;
+            font-weight: bold;
+        }
+        .upload-type-option input[type="radio"] {
+            display: none;
+        }
+        .upload-section {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 20px;
+        }
+        .upload-section.active {
+            display: block;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .info {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #28a745;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #dc3545;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        .format-type {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .url-examples {
+            background-color: #e7f3ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 智能播放列表转换器</h1>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="background-color: #ffeaa7; padding: 5px 10px; border-radius: 15px; font-size: 14px;">
+                ✨ 完整支持分组功能 + 远程订阅
+            </span>
+        </div>
+        
+        <div class="info">
+            <strong>🎯 智能转换特性：</strong><br>
+            • 自动识别M3U和TXT格式<br>
+            • <span class="highlight">完整保留分组信息</span><br>
+            • 支持本地文件上传和远程URL订阅<br>
+            • 支持标准IPTV播放列表格式<br>
+            • 无需手动选择转换方向
+        </div>
+
+        
+        <form method="post" enctype="multipart/form-data">
+            <!-- 上传方式选择 -->
+            <div class="upload-type-selector">
+                <label class="upload-type-option active" for="type_file">
+                    <input type="radio" id="type_file" name="upload_type" value="file" checked>
+                    <div>📁 本地文件上传</div>
+                    <small>选择电脑中的M3U或TXT文件</small>
+                </label>
+                <label class="upload-type-option" for="type_url">
+                    <input type="radio" id="type_url" name="upload_type" value="url">
+                    <div>🌐 远程订阅链接</div>
+                    <small>输入在线播放列表URL</small>
+                </label>
+            </div>
+
+            <!-- 本地文件上传区域 -->
+            <div id="file_section" class="upload-section active">
+                <div class="form-group">
+                    <label for="fileInput">选择文件 (M3U 或 TXT)：</label>
+                    <input type="file" id="fileInput" name="fileInput" accept=".m3u,.txt,.m3u8">
+                </div>
+            </div>
+
+            <!-- 远程URL订阅区域 -->
+            <div id="url_section" class="upload-section">
+                <div class="form-group">
+                    <label for="remoteUrl">远程订阅链接：</label>
+                    <input type="url" id="remoteUrl" name="remoteUrl" placeholder="https://example.com/playlist.m3u">
+                    <div class="url-examples">
+                        <strong>支持的链接格式示例：</strong><br>
+                        • http://example.com/iptv.m3u<br>
+                        • https://example.com/channels.txt<br>
+                        • http://example.com/playlist.m3u8<br>
+                        • 支持重定向和HTTPS链接
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">🚀 智能转换</button>
+        </form>
+        
+        <div class="example">
+            <strong>转换示例 (支持分组)：</strong><br><br>
+            
+            <span class="format-type">📺 M3U格式 → TXT格式:</span><br>
+            <strong>输入:</strong><br>
+            #EXTM3U<br>
+            #EXTINF:-1 group-title="央视",CCTV1<br>
+            http://example.com/cctv1.m3u8<br>
+            #EXTINF:-1 group-title="央视",CCTV2<br>
+            http://example.com/cctv2.m3u8<br>
+            #EXTINF:-1 group-title="卫视",湖南卫视<br>
+            http://example.com/hunan.m3u8<br><br>
+            
+            <strong>输出:</strong><br>
+            <span class="highlight">央视,#genre#</span><br>
+            CCTV1,http://example.com/cctv1.m3u8<br>
+            CCTV2,http://example.com/cctv2.m3u8<br>
+            <span class="highlight">卫视,#genre#</span><br>
+            湖南卫视,http://example.com/hunan.m3u8<br><br>
+            
+            <hr style="margin: 20px 0; border: 1px solid #ddd;">
+            
+            <span class="format-type">📝 TXT格式 → M3U格式:</span><br>
+            <strong>输入:</strong><br>
+            <span class="highlight">央视,#genre#</span><br>
+            CCTV1,http://example.com/cctv1.m3u8<br>
+            <span class="highlight">卫视,#genre#</span><br>
+            湖南卫视,http://example.com/hunan.m3u8<br><br>
+            
+            <strong>输出:</strong><br>
+            #EXTM3U<br>
+            <strong style="color: #28a745;">#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="" group-title="央视",CCTV1</strong><br>
+            http://example.com/cctv1.m3u8<br>
+            <strong style="color: #28a745;">#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="" group-title="卫视",湖南卫视</strong><br>
+            http://example.com/hunan.m3u8
+        </div>
+    </div>
+
+    <script>
+        // 切换上传方式
+        const typeRadios = document.querySelectorAll('input[name="upload_type"]');
+        const uploadSections = document.querySelectorAll('.upload-section');
+        const typeOptions = document.querySelectorAll('.upload-type-option');
+
+        typeRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                // 更新选项样式
+                typeOptions.forEach(option => option.classList.remove('active'));
+                this.parentElement.classList.add('active');
+                
+                // 显示对应的上传区域
+                uploadSections.forEach(section => section.classList.remove('active'));
+                document.getElementById(this.value + '_section').classList.add('active');
+            });
+        });
+
+        // 点击选项也能切换
+        typeOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                const radio = this.querySelector('input[type="radio"]');
+                if (radio) {
+                    radio.checked = true;
+                    radio.dispatchEvent(new Event('change'));
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'956b631d2b5dd48a',t:'MTc1MTA5NDg2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
