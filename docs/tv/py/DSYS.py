@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @嗷呜
+# 18+
 import time
 import uuid
 from base64 import b64decode, b64encode

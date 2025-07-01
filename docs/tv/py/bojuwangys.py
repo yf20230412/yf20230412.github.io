@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # 播剧网爬虫精简版 - https://www.boju.me/
 # 基于PyramidStore框架，优化精简版本
+# 播剧网影视
 
 import sys
 import re

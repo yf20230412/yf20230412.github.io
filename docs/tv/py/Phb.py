@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @嗷呜
+# 18+
 import json
 import re
 import sys

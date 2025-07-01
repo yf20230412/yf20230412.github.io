@@ -263,56 +263,241 @@ class Spider(Spider):
         return play_from, play_url
 
     def searchContent(self, key, quick, pg="1"):
-        """搜索内容"""
+        """搜索内容 - 修复版"""
         result = {}
         videos = []
 
         try:
-            # 构建搜索URL
+            # 构建搜索URL（使用GET请求）
             search_url = f"{self.host}/index.php/vod/search.html"
-            search_data = {'wd': key, 'submit': ''}
+            params = {'wd': key}
+            if pg != '1':
+                params['page'] = pg
 
-            rsp = self.post(search_url, data=search_data, headers=self.headers)
-            content = rsp.text
-            doc = self.html(content)
+            url = f"{search_url}?{urllib.parse.urlencode(params)}"
+            self.log(f"搜索URL: {url}")
+            rsp = self.fetch(url, headers=self.headers)
+            doc = self.html(rsp.text)
 
-            # 解析搜索结果
-            search_links = doc.xpath('//a[contains(@href,"/detail/id/")]')
-            self.log(f"找到 {len(search_links)} 个搜索链接")
+            # 查找搜索结果容器
+            search_containers = doc.xpath('//div[contains(@class,"search-item") or contains(@class,"module-search-item") or contains(@class,"public-list-box")]')
 
-            for link in search_links:
-                try:
-                    href = link.xpath('./@href')[0] if link.xpath('./@href') else ''
-                    if not href:
-                        continue
+            if not search_containers:
+                search_containers = doc.xpath('//a[contains(@href,"/detail/")]/ancestor::*[position()<=3]')
 
-                    vod_id = self.regStr(r'/detail/id/(\d+)\.html', href)
-                    if not vod_id:
-                        continue
+            self.log(f"找到 {len(search_containers)} 个搜索容器")
 
-                    # 获取标题
-                    title = link.xpath('./@title | ./text()')[0] if link.xpath('./@title | ./text()') else ''
-                    title = title.strip()
+            processed_ids = set()
 
-                    if title and vod_id and len(title) > 2:
-                        videos.append({
-                            'vod_id': vod_id,
-                            'vod_name': title,
-                            'vod_pic': '',
-                            'vod_remarks': '',
-                            'vod_year': ''
-                        })
+            for container in search_containers:
+                detail_links = container.xpath('.//a[contains(@href,"/detail/")]')
 
-                except Exception as e:
-                    continue
+                for link in detail_links:
+                    href = link.xpath('./@href')
+                    if href:
+                        vod_id = self.regStr(r'/detail/id/(\d+)\.html', href[0])
+                        if vod_id and vod_id not in processed_ids:
+                            processed_ids.add(vod_id)
+
+                            # 提取标题
+                            title = self._extract_search_title(container, link)
+
+                            # 过滤无关结果
+                            if title and vod_id and title != '播放正片' and self._is_relevant_search_result(title, key):
+                                # 获取图片、备注等信息
+                                pic, remarks, year, area, type_name = self._get_search_info(container)
+
+                                videos.append({
+                                    'vod_id': vod_id,
+                                    'vod_name': title,
+                                    'vod_pic': pic,
+                                    'vod_remarks': remarks,
+                                    'vod_year': year,
+                                    'vod_area': area,
+                                    'vod_tag': type_name
+                                })
+                                self.log(f"✅ 相关视频: {title} (ID: {vod_id})")
+                                break
+                            elif title:
+                                self.log(f"❌ 过滤无关: {title} (搜索: {key})")
 
             result['list'] = videos
+            self.log(f"最终搜索结果: {len(videos)} 个视频")
 
         except Exception as e:
             self.log(f"搜索出错: {str(e)}")
             result['list'] = []
 
         return result
+
+    def _is_relevant_search_result(self, title, search_key):
+        """检查搜索结果是否相关"""
+        if not title or not search_key:
+            return False
+
+        title_lower = title.lower()
+        search_key_lower = search_key.lower()
+
+        # 直接包含搜索关键词
+        if search_key_lower in title_lower:
+            return True
+
+        # 过滤明显不相关的内容
+        irrelevant_keywords = ['哈哈哈哈哈', '执法者们', '刑侦', '韶华若锦', '陷入我们的热恋', '护宝寻踪', '逆天成仙', '折腰', '藏海传', '临江仙', '石来运转', '大侦探', '长安的荔枝', '濑户麻沙美', '伊利娅', '曾经潇洒', '某天，草帽', '娜美偶然', '传奇海盗']
+
+        for irrelevant in irrelevant_keywords:
+            if irrelevant in title:
+                return False
+
+        # 特定作品的严格匹配
+        specific_works = {
+            '斗罗大陆': ['斗罗', '唐门', '绝世', '龙王', '燃魂'],
+            '凡人修仙传': ['凡人', '修仙', '韩立'],
+            '海贼王': ['海贼', '航海王', '路飞', 'one piece'],
+            '火影忍者': ['火影', '忍者', '鸣人'],
+            '死神': ['死神', '一护', 'bleach'],
+            '进击的巨人': ['进击', '巨人', '艾伦'],
+            '鬼灭之刃': ['鬼灭', '炭治郎', '鬼杀队'],
+            '龙珠': ['龙珠', '悟空', '赛亚人']
+        }
+
+        for work, keywords in specific_works.items():
+            if work in search_key_lower:
+                return any(keyword in title_lower for keyword in keywords)
+
+        # 字符匹配（高阈值）
+        search_chars = set(search_key_lower.replace(' ', ''))
+        title_chars = set(title_lower.replace(' ', ''))
+
+        if len(search_chars) > 0:
+            match_ratio = len(search_chars & title_chars) / len(search_chars)
+            if match_ratio >= 0.9:
+                return True
+
+        # 搜索词变体
+        search_variants = {
+            '斗罗': ['斗罗', '唐门', '绝世'],
+            '凡人': ['凡人', '修仙'],
+            '海贼': ['海贼', '航海王'],
+            '火影': ['火影', '忍者'],
+            '龙珠': ['龙珠', '悟空']
+        }
+
+        for base_word, variants in search_variants.items():
+            if base_word in search_key_lower:
+                return any(variant in title_lower for variant in variants)
+
+        # 短搜索词要求严格匹配
+        if len(search_key_lower) <= 2:
+            return search_key_lower in title_lower
+
+        return False
+
+    def _extract_search_title(self, container, link):
+        """提取搜索结果标题"""
+        title = ''
+
+        try:
+            # 从链接title属性获取
+            title_attr = link.xpath('./@title')
+            if title_attr and title_attr[0].strip():
+                title = title_attr[0].strip()
+                if title and title not in ['播放正片', '详情', '观看'] and len(title) < 80:
+                    return title
+
+            # 从容器文本中查找
+            all_texts = container.xpath('.//text()')
+            candidate_titles = []
+
+            for text in all_texts:
+                text = text.strip()
+                if (text and 2 < len(text) < 50 and
+                    text not in ['播放正片', '详情', '观看', '已完结', '更新中', 'HD', 'TC', 'TS', 'BD', 'NO'] and
+                    '更新至' not in text and '导演：' not in text and '主演：' not in text and
+                    '该剧改编' not in text and '传奇海盗' not in text and
+                    not text.isdigit() and '/' not in text and '年' not in text and
+                    text not in ['大陆', '中国大陆', '美国', '日本', '韩国', '英国', '法国'] and
+                    text not in ['国产动漫', '日韩动漫', '欧美动漫', '动漫电影', '电视剧', '电影', '综艺', '体育赛事'] and
+                    '动漫' not in text and '电影' not in text and '电视剧' not in text and
+                    not re.match(r'^\d{4}$', text) and not re.match(r'^NO\s*\d+$', text) and
+                    '，' not in text and '。' not in text):
+                    candidate_titles.append(text)
+
+            if candidate_titles:
+                # 优先选择包含关键词的标题
+                for candidate in candidate_titles:
+                    if any(keyword in candidate for keyword in ['斗罗', '传说', '绝世', '龙王', '燃魂', '凡人', '修仙', '海贼王', '航海王']):
+                        title = candidate
+                        break
+
+                if not title:
+                    suitable_titles = [t for t in candidate_titles if 3 <= len(t) <= 30]
+                    if suitable_titles:
+                        title = suitable_titles[0]
+
+            # 从链接文本获取
+            if not title or title in ['播放正片', '详情']:
+                link_text = link.xpath('./text()')
+                if link_text and link_text[0].strip():
+                    text = link_text[0].strip()
+                    if text not in ['播放正片', '详情', '观看'] and len(text) < 50:
+                        title = text
+
+            # 清理标题
+            if title:
+                title = re.sub(r'^(NO\s*\d+\s*)', '', title).strip()
+                if len(title) > 50:
+                    title = ''
+
+        except Exception as e:
+            self.log(f"提取搜索标题出错: {str(e)}")
+
+        return title if title else ''
+
+    def _get_search_info(self, container):
+        """获取搜索结果的图片、备注、元信息"""
+        pic = ''
+        remarks = ''
+        year = ''
+        area = ''
+        type_name = ''
+
+        try:
+            # 获取图片
+            pic_elements = container.xpath('.//img/@data-src | .//img/@src')
+            for pic_url in pic_elements:
+                if pic_url and not pic_url.startswith('data:'):
+                    pic = pic_url if pic_url.startswith('http') else self.host + pic_url
+                    break
+
+            # 获取所有文本用于提取信息
+            all_texts = container.xpath('.//text()')
+            all_info_text = ' '.join([text.strip() for text in all_texts if text.strip()])
+
+            # 获取备注
+            for text in all_texts:
+                text = text.strip()
+                if ('更新' in text or '完结' in text or '集' in text) and len(text) < 50:
+                    remarks = text
+                    break
+
+            # 提取年份、地区、类型
+            year_match = re.search(r'(\d{4})', all_info_text)
+            if year_match:
+                year = year_match.group(1)
+
+            area_match = re.search(r'(大陆|香港|台湾|美国|日本|韩国|英国|法国|德国|意大利|加拿大|澳大利亚|泰国|印度|中国大陆)', all_info_text)
+            if area_match:
+                area = area_match.group(1)
+
+            type_match = re.search(r'(国产动漫|日韩动漫|欧美动漫|动漫电影|剧情|喜剧|动作|爱情|科幻|动漫|悬疑|恐怖|战争|历史|犯罪|奇幻|青春|古装|冒险|武侠|偶像)', all_info_text)
+            if type_match:
+                type_name = type_match.group(1)
+
+        except Exception as e:
+            self.log(f"提取搜索信息出错: {str(e)}")
+
+        return pic, remarks, year, area, type_name
 
     def detailContent(self, ids):
         """获取详情内容"""
