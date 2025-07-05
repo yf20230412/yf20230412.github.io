@@ -1,7 +1,7 @@
 <?php
 setlocale(LC_ALL, 'en_US.utf8');
 // --- 配置区 ---
-$json_directory = __DIR__ . '/json/';
+$json_directory = __DIR__ . '/list/';
 
 // --- 响应头 ---
 header('Content-Type: application/json; charset=utf-8');

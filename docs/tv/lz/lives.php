@@ -5,7 +5,7 @@ setlocale(LC_ALL, 'en_US.utf8');
 header('Content-Type: application/json; charset=utf-8');
 
 // --- 文件系统配置 ---
-define('WJ_DIR', 'wj');
+define('WJ_DIR', 'lives');
 // 定义存放分类文件的目录
 
 /**
@@ -114,7 +114,9 @@ if (!empty($wd)) {
                     $item = [
                         'vod_id' => $vod_id,
                         'vod_name' => $vod_name,
-                        'vod_pic' => '',
+                     //   'vod_pic' => "https://www.252035.xyz/imgs?t=". mt_rand(),
+                        'vod_pic' => $ids,
+ // 空白              
                         'vod_actor' => '', // 空白
                         'vod_area' => '', // 空白
                         'vod_director' => '', // 空白
@@ -199,7 +201,8 @@ if ($ac === 'detail' && !empty($ids)) {
             [
                 'vod_id' => $ids,
                 'vod_name' => $target_category,
-                'vod_pic' => '',
+                'vod_pic' => 
+ $ids,
                 'vod_actor' => $target_category,
                 'vod_content' => "来自 '" . htmlspecialchars($target_category) . "' 分类的内容。",
                 'vod_director' => '',
@@ -250,7 +253,7 @@ if ($pg === '1' && !empty($t)) {
                 $subcategory_name = trim(explode(',', $trimmed_line, 2)[0]);
                 $category_list_as_videos[] = [
                     'vod_name' => $subcategory_name,
-                    'vod_pic' => '',
+                    'vod_pic' => $ids,
                     'vod_remarks' => $file_basename, // 将源文件名作为备注
                     // vod_id 格式: '文件名|分类名,#genre'
                     'vod_id' => base64_encode($file_basename . '|' . $subcategory_name . ',#genre#')
@@ -262,7 +265,7 @@ if ($pg === '1' && !empty($t)) {
         if (!$has_genre_marker && !empty($lines)) {
             $category_list_as_videos[] = [
                 'vod_name' => '默认',
-                'vod_pic' =>'',
+                'vod_pic' => $ids,
                 'vod_remarks' => $file_basename,
                 // vod_id 格式: '文件名|文件名,#genre' (文件名既是文件标识也是分类标识)
                 'vod_id' => base64_encode($file_basename . '|' . $file_basename . ',#genre#')
