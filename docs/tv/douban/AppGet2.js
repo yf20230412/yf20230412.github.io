@@ -54,11 +54,11 @@ var rule = {
     host: '',
     title: 'APPG[模版]',
     desc: 'APPG[模版]',
-    homeUrl: '/api.php/getappapi.index/initV119',
-    url: '/api.php/getappapi.index/typeFilterVodList?fyfilter',
-    detailUrl: '/api.php/getappapi.index/vodDetail?vod_id=fyid',
+    homeUrl: '/api.php/qijiappapi.index/initV119',
+    url: '/api.php/qijiappapi.index/typeFilterVodList?fyfilter',
+    detailUrl: '/api.php/qijiappapi.index/vodDetail?vod_id=fyid',
     filter_url: 'area={{fl.area or "全部"}}&year={{fl.year or "全部"}}&type_id=fyclass&page=fypage&sort={{fl.sort or "最新"}}&lang={{fl.lang or "全部"}}&class={{fl.class or "全部"}}',
-    searchUrl: '/api.php/getappapi.index/searchList?keywords=**&type_id=0&page=fypage',
+    searchUrl: '/api.php/qijiappapi.index/searchList?keywords=**&type_id=0&page=fypage',
     searchable: 1,
     filterable: 1,
     quickSearch: 1,
@@ -199,8 +199,8 @@ var rule = {
         };
         let playlist = list.vod_play_list;
         let playmap = {};
-        let excludeRegex = /(备用线路①|720|花絮|广告)/i;
-        let priorityList = ['腾讯','芒果','优质'];
+        let excludeRegex = /(映画|1080P|MAX|广告)/i;
+        let priorityList = ['4K','腾讯','芒果','优质'];
         let sortOrder = (a, b) => {
             let getPriority = s => {
                 let index = priorityList.findIndex(keyword => s.includes(keyword));
@@ -271,7 +271,7 @@ var rule = {
                 method: 'POST',
                 body: formData
             };
-            let apiUrl = rule.host + '/api.php/getappapi.index/vodParse';
+            let apiUrl = rule.host + '/api.php/qijiappapi.index/vodParse';
             let html = request(apiUrl, options);
             let data = JSON.parse(html).data;
             if (!data || (Array.isArray(data) && data.length === 0)) {
