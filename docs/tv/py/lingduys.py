@@ -30,7 +30,7 @@ class Spider(Spider):
     def destroy(self):
         pass
 
-    host='http://zero.mitotv.com'
+    host='http://ldys.sq1005.top'
 
     headers = {
         'User-Agent': 'okhttp/4.12.0',
@@ -49,7 +49,7 @@ class Spider(Spider):
         sort={
             'key':'sreecnTypeEnum',
             'name': '排序',
-            'value':[{'n':'人气','v':'POPULARITY'},{'n':'评分','v':'COLLECT'},{'n':'热搜','v':'HOT'}]
+            'value':[{'n':'最新','v':'NEWEST'},{'n':'人气','v':'POPULARITY'},{'n':'评分','v':'COLLECT'},{'n':'热搜','v':'HOT'}]
         }
         classes = []
         filters = {}
