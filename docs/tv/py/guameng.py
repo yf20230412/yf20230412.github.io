@@ -137,7 +137,7 @@ class Spider(Spider):
         headers = {
             'User-Agent': 'okhttp/3.14.9'
         }
-        host ='https://www.guahd.com'
+        host ='https://guahd.com'
         return host.strip()
 
     def aes(self, text, b=None):

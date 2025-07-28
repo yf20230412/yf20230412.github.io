@@ -52,6 +52,8 @@
 
 {"key": "精东","name": "🔞┃采集┃精东","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1},
 
+{"key": "jable","name": "🔞┃jable┃🪜","type": 3,"api": "csp_XBPQ","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "./json/jable.json","timeout": 15},
+
 {"key": "葡萄","name": "🔞┃采集┃葡萄","type": 1,"api": "https://caiji.putaozyw.net/inc/apijson_vod.php","searchable": 1},
 
 {"key": "155专场","name": "🔞┃155┃采集","type": 1,"api": "https://155api.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["无码专区","麻豆传媒","制服诱惑","三级伦理","AI换脸","中文字幕","卡通动漫","欧美系列","美女主播","国产自拍","熟女人妻","萝莉少女","女同性爱","多人群交","美乳巨乳","强奸乱伦","抖音视频","韩国主播","网红头条","网爆黑料","欧美无码","女优明星","SM调教","AV解说"]},
