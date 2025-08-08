@@ -73,6 +73,10 @@
             "name": "🚀小苹果线路"
         },
         {
+            "url": "https://git.acwing.com/iduoduo/orange/-/raw/main/config.bin",
+            "name": "🚀多多线路"
+        },
+        {
             "url": "http://www.2015888.xyz/tv/",
             "name": "🐬小鱼线路"
         },
@@ -101,7 +105,7 @@
             "name": "🐹南风线路"
         },
         {
-            "url": "https://json.doube.eu.org/t4.php",
+            "url": "https://py.doube.eu.org/static/t4.json",
             "name": "🐹沐辰T4线路"
         },
         {
@@ -115,6 +119,10 @@
         {
             "url": "https://fmbox.cc/",
             "name": "🐹星辰线路"
+        },
+        {
+            "url": "http://www.meowtv.vip/tvbox.json",
+            "name": "🐹喵影视线路"
         },
         {
             "url": "https://git.acwing.com/lw0704/66/-/raw/master/jjzx.json",
