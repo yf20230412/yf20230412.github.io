@@ -20,6 +20,39 @@
         "timeout": 15
     },
     {
+        "name": "快直播(python)",
+        "type": 3,
+        "api": "./txt/live_kzb.py",
+        "ext": {
+          "host": "https://jzb5kqln.huajiaedu.com"
+        }
+    },
+    {
+        "name": "(翻墙)BeeSport直播(python)",
+        "type": 3,
+        "api": "./txt/live_beesport.py",
+        "ext": {},
+        "header": {
+          "Referer": "https://p.m82xg4z0cdbz7.com"
+        }
+    },
+    {
+        "name": "(翻墙)SMT直播(python)",
+        "type": 3,
+        "api": "./txt/live_smt.py",
+        "ext": {},
+        "header": {
+          "CLIENT-IP": "127.0.0.1",
+          "X-FORWARDED-FOR": "127.0.0.1"
+        }
+    },
+    {
+        "name": "(翻墙)(18+)FreesHot(python)",
+        "type": 3,
+        "api": "./txt/live_freeshot.py",
+        "ext": {}
+    },
+    {
         "name": "小鱼AI直播+",
         "type": 0,
         "url": "https://gh.2015888.xyz/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u ",
