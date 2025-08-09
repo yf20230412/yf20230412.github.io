@@ -19,7 +19,7 @@ class Spider(Spider):
     def init(self, extend=""):
         '''
         如果一直访问不了，手动访问导航页:https://a.hdys.top，替换：
-        self.host = 'https://xxx.xxx.xxx'
+        self.hsot = 'https://xxx.xxx.xxx'
         '''
         self.session = requests.Session()
         self.headers = {
@@ -36,8 +36,8 @@ class Spider(Spider):
         }
         try:self.proxies = json.loads(extend)
         except:self.proxies = {}
-        self.hsot=self.gethost()
-        # self.hsot='https://hd.hdys2.com'
+        #self.hsot=self.gethost()
+        self.hsot='https://hd.hdys2.com'
         self.headers.update({'referer': f"{self.hsot}/"})
         self.session.proxies.update(self.proxies)
         self.session.headers.update(self.headers)
