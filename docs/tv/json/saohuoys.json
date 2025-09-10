@@ -1,7 +1,7 @@
 {
     "首页": "0",
     "请求头": "User-Agent$MOBILE_UA#Accept$text/html,application/xhtml+xml,application/xml；；q=0.9,image/avif,image/webp,image/apng,*/*；；q=0.8,application/signed-exchange；；v=b3；；q=0.7&&Accept-Language@zh-CN,zh；；q=0.9",
-    "分类url": "https://shdy2.com/list/{cateId}-{catePg}.html",
+    "分类url": "https://shdy5.us/list/{cateId}-{catePg}.html",
     "分类": "剧集$2#电影$1#港剧$21#台剧$26#日剧$24#韩剧$22#美剧$23",
     "数组": "class=\"v_img&&/li>",
     "标题": "alt=\"&&\"",
