@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 # by @嗷呜
-# 18+
 import json
 import sys
 from base64 import b64decode, b64encode
-from urllib.parse import urlparse
-
-import requests
 from pyquery import PyQuery as pq
 from requests import Session
 sys.path.append('..')
@@ -16,28 +12,9 @@ from base.spider import Spider
 class Spider(Spider):
 
     def init(self, extend=""):
-        try:self.proxies = json.loads(extend)
-        except:self.proxies = {}
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5410.0 Safari/537.36',
-            'pragma': 'no-cache',
-            'cache-control': 'no-cache',
-            'sec-ch-ua-platform': '"Windows"',
-            'sec-ch-ua': '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
-            'dnt': '1',
-            'sec-ch-ua-mobile': '?0',
-            'origin': '',
-            'sec-fetch-site': 'cross-site',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-dest': 'empty',
-            'referer': f'',
-            'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
-            'priority': 'u=1, i',
-        }
         self.host = self.gethost()
+        self.headers['referer'] = f'{self.host}/'
         self.session = Session()
-        self.headers.update({'origin': self.host,'referer': f'{self.host}/'})
-        self.session.proxies.update(self.proxies)
         self.session.headers.update(self.headers)
         pass
 
@@ -52,6 +29,14 @@ class Spider(Spider):
 
     def destroy(self):
         pass
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-ch-ua': '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
+        'sec-ch-ua-full-version-list': '"Not(A:Brand";v="99.0.0.0", "Google Chrome";v="133.0.6943.98", "Chromium";v="133.0.6943.98"',
+        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+    }
 
     def homeContent(self, filter):
         result = {}
@@ -71,7 +56,7 @@ class Spider(Spider):
                 'type_name': k,
                 'type_id': cateManual[k]
             })
-            if k != '4K': filters[cateManual[k]] = [{'key': 'type', 'name': '类型', 'value': [{'n': '4K', 'v': '/4k'}]}]
+            if k !='4K':filters[cateManual[k]]=[{'key':'type','name':'类型','value':[{'n':'4K','v':'/4k'}]}]
         result['class'] = classes
         result['filters'] = filters
         return result
@@ -89,7 +74,7 @@ class Spider(Spider):
         result['total'] = 999999
         if tid in ['/4k', '/newest', '/best'] or 'two_click_' in tid:
             if 'two_click_' in tid: tid = tid.split('click_')[-1]
-            data = self.getpq(f'{tid}{extend.get("type", "")}/{pg}')
+            data = self.getpq(f'{tid}{extend.get("type","")}/{pg}')
             vdata = self.getlist(data(".thumb-list--sidebar .thumb-list__item"))
         elif tid == '/channels':
             data = self.getpq(f'{tid}/{pg}')
@@ -98,7 +83,7 @@ class Spider(Spider):
                 vdata.append({
                     'vod_id': f"two_click_" + i.get('channelURL'),
                     'vod_name': i.get('channelName'),
-                    'vod_pic': self.proxy(i.get('siteLogoURL')),
+                    'vod_pic': i.get('siteLogoURL'),
                     'vod_year': f'videos:{i.get("videoCount")}',
                     'vod_tag': 'folder',
                     'vod_remarks': f'subscribers:{i["subscriptionModel"].get("subscribers")}',
@@ -123,7 +108,7 @@ class Spider(Spider):
                 vdata.append({
                     'vod_id': f"two_click_" + i.get('pageURL'),
                     'vod_name': i.get('name'),
-                    'vod_pic': self.proxy(i.get('imageThumbUrl')),
+                    'vod_pic': i.get('imageThumbUrl'),
                     'vod_remarks': i.get('translatedCountryName'),
                     'vod_tag': 'folder',
                     'style': {'ratio': 1.33, 'type': 'rect'}
@@ -137,7 +122,7 @@ class Spider(Spider):
                         vdata.append({
                             'vod_id': f"two_click_" + j.get('url'),
                             'vod_name': j.get('name'),
-                            'vod_pic': self.proxy(j.get('thumb')),
+                            'vod_pic': j.get('thumb'),
                             'vod_tag': 'folder',
                             'style': {'ratio': 1.33, 'type': 'rect'}
                         })
@@ -146,7 +131,11 @@ class Spider(Spider):
 
     def detailContent(self, ids):
         data = self.getpq(ids[0])
-        djs = self.getjsdata(data)
+        link = data('link[rel="preload"][as="fetch"][crossorigin="true"]').attr('href')
+        if  link:
+            ggggx = f"多音画$666_{link}"
+        else:
+            ggggx = f"嗅探${ids[0]}"
         vn = data('meta[property="og:title"]').attr('content')
         dtext = data('#video-tags-list-container')
         href = dtext('a').attr('href')
@@ -158,37 +147,9 @@ class Spider(Spider):
             'vod_name': vn,
             'vod_director': pdtitle,
             'vod_remarks': data('.rb-new__info').text(),
-            'vod_play_from': 'Xhamster',
-            'vod_play_url': ''
+            'vod_play_from': '老僧酿酒',
+            'vod_play_url': ggggx
         }
-        try:
-            plist = []
-            d = djs['xplayerSettings']['sources']
-            f = d.get('standard')
-
-            def custom_sort_key(url):
-                quality = url.split('$')[0]
-                number = ''.join(filter(str.isdigit, quality))
-                number = int(number) if number else 0
-                return -number, quality
-
-            if f:
-                for key, value in f.items():
-                    if isinstance(value, list):
-                        for info in value:
-                            id = self.e64(f'{0}@@@@{info.get("url") or info.get("fallback")}')
-                            plist.append(f"{info.get('label') or info.get('quality')}${id}")
-            plist.sort(key=custom_sort_key)
-            if d.get('hls'):
-                for format_type, info in d['hls'].items():
-                    if url := info.get('url'):
-                        encoded = self.e64(f'{0}@@@@{url}')
-                        plist.append(f"{format_type}${encoded}")
-
-        except Exception as e:
-            plist = [f"{vn}${self.e64(f'{1}@@@@{ids[0]}')}"]
-            print(f"获取视频信息失败: {str(e)}")
-        vod['vod_play_url'] = '#'.join(plist)
         return {'list': [vod]}
 
     def searchContent(self, key, quick, pg="1"):
@@ -196,20 +157,22 @@ class Spider(Spider):
         return {'list': self.getlist(data(".thumb-list--sidebar .thumb-list__item")), 'page': pg}
 
     def playerContent(self, flag, id, vipFlags):
-        ids = self.d64(id).split('@@@@')
-        if '.m3u8' in ids[1]: ids[1] = self.proxy(ids[1], 'm3u8')
-        return {'parse': int(ids[0]), 'url': ids[1], 'header': self.headers}
+        p,url=1,id
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5410.0 Safari/537.36',
+            'origin': self.host,
+            'referer': f'{self.host}/',
+        }
+        if id.startswith("666_"):
+            p,url=0,id[4:]
+        return {'parse': p, 'url': url, 'header': headers}
 
     def localProxy(self, param):
-        url = self.d64(param['url'])
-        if param.get('type') == 'm3u8':
-            return self.m3Proxy(url)
-        else:
-            return self.tsProxy(url)
+        pass
 
     def gethost(self):
         try:
-            response = requests.get('https://xhamster.com',proxies=self.proxies,headers=self.headers,allow_redirects=False)
+            response = self.fetch('https://xhamster.com', headers=self.headers, allow_redirects=False)
             return response.headers['Location']
         except Exception as e:
             print(f"获取主页失败: {str(e)}")
@@ -239,7 +202,7 @@ class Spider(Spider):
             vlist.append({
                 'vod_id': i('.role-pop').attr('href'),
                 'vod_name': i('.video-thumb-info a').text(),
-                'vod_pic': self.proxy(i('.role-pop img').attr('src')),
+                'vod_pic': i('.role-pop img').attr('src'),
                 'vod_year': i('.video-thumb-info .video-thumb-views').text().split(' ')[0],
                 'vod_remarks': i('.role-pop div[data-role="video-duration"]').text(),
                 'style': {'ratio': 1.33, 'type': 'rect'}
@@ -248,42 +211,11 @@ class Spider(Spider):
 
     def getpq(self, path=''):
         h = '' if path.startswith('http') else self.host
-        response = self.session.get(f'{h}{path}').text
-        try:
-            return pq(response)
-        except Exception as e:
-            print(f"{str(e)}")
-            return pq(response.encode('utf-8'))
+        response = self.session.get(f'{h}{path}')
+        return pq(response.content)
+
 
     def getjsdata(self, data):
         vhtml = data("script[id='initials-script']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
-
-    def m3Proxy(self, url):
-        ydata = requests.get(url, headers=self.headers, proxies=self.proxies, allow_redirects=False)
-        data = ydata.content.decode('utf-8')
-        if ydata.headers.get('Location'):
-            url = ydata.headers['Location']
-            data = requests.get(url, headers=self.headers, proxies=self.proxies).content.decode('utf-8')
-        lines = data.strip().split('\n')
-        last_r = url[:url.rfind('/')]
-        parsed_url = urlparse(url)
-        durl = parsed_url.scheme + "://" + parsed_url.netloc
-        for index, string in enumerate(lines):
-            if '#EXT' not in string:
-                if 'http' not in string:
-                    domain = last_r if string.count('/') < 2 else durl
-                    string = domain + ('' if string.startswith('/') else '/') + string
-                lines[index] = self.proxy(string, string.split('.')[-1].split('?')[0])
-        data = '\n'.join(lines)
-        return [200, "application/vnd.apple.mpegur", data]
-
-    def tsProxy(self, url):
-        data = requests.get(url, headers=self.headers, proxies=self.proxies, stream=True)
-        return [200, data.headers['Content-Type'], data.content]
-
-    def proxy(self, data, type='img'):
-        if data and len(self.proxies):return f"{self.getProxyUrl()}&url={self.e64(data)}&type={type}"
-        else:return data
-
