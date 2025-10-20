@@ -56,7 +56,6 @@
         "name": "撸管源",
         "type": 0,
         "url": "./txt/撸管源.txt",
-        "playerType": 1,
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
         "logo": "https://epg.v1.mk/logo/{name}.png",
         "ua": "okhttp/3.15,AptvPlayer/1.4.0",
@@ -66,7 +65,6 @@
         "name": "1234",
         "type": 0,
         "url": "./txt/1234.txt",
-        "playerType": 1,
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
         "logo": "https://epg.v1.mk/logo/{name}.png",
         "ua": "okhttp/3.15,AptvPlayer/1.4.0",
@@ -79,14 +77,8 @@
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
         "logo": "https://epg.v1.mk/logo/{name}.png",
         "timeout": 3
-    },
-    {
-        "group": "redirect",
-        "channels": [{
-            "name": "redirect",
-            "urls": ["proxy://do=live&type=live&proxy=&url="]
-        }]
-    }],
+    }
+],
     
 
  "sites": [
@@ -108,9 +100,15 @@
 },
 
 {"key": "精东","name": "🔞┃采集┃精东","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "freeok","name": "🔞┃freeok(py)","type": 3,"api": "./py/freeok.py"},
+
+{"key": "香蕉","name": "🔞┃香蕉(py)","type": 3,"api": "./py/香蕉.py"},
+
+{"key": "haoseTV","name": "🔞┃好色(py)","type": 3,"api": "./py/haoseTV.py"},
 
 {"key": "py_DSYS","name": "🔞┃DSYS(py)","type": 3,"api": "./py/DSYS.py"},
-    
+
+{"key":"麻豆","name":"🔞┃麻豆(js)","type":3,"api":"./js/麻豆.min.js","quickSearch":0,"searchable":0,"changeable":1,"filterable":1},
 {
     "key": "Missav",
     "name": "🔞┃Missav(proxy)",
@@ -128,10 +126,6 @@
 },
 
 {"key": "stripchat","name": "🔞┃stripchat(proxy)","type": 3,"api": "./py/stripchat.py"},
-    
-{"key": "py_Phb","name": "🔞┃Phb(proxy)","type": 3,"api": "./py/Phb.py"},
-
-{"key": "py_Xhm","name": "🔞┃Xhm(proxy)","type": 3,"api": "./py/Xhm.py"},
 
 {"key": "jable","name": "🔞┃jable(proxy)","type": 3,"api": "csp_XBPQ","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "./json/jable.json","timeout": 15},
 
