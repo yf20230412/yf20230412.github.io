@@ -109,6 +109,8 @@
 {"key": "py_DSYS","name": "🔞┃DSYS(py)","type": 3,"api": "./py/DSYS.py"},
 
 {"key":"麻豆","name":"🔞┃麻豆(js)","type":3,"api":"./js/麻豆.min.js","quickSearch":0,"searchable":0,"changeable":1,"filterable":1},
+
+{"key":"js_ying_hua","name":"🔞┃樱花视频(js)","type":3,"api":"./js/樱花视频.min.js","searchable":1,"quickSearch":0,"filterable":0,"changeable":0,"ext":{}},
 {
     "key": "Missav",
     "name": "🔞┃Missav(proxy)",
