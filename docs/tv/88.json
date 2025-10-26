@@ -1,6 +1,6 @@
 {
 
-    "spider": "./jar/xiaoyu.jar",
+    "spider": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/xiaoyu.txt",
 
     "wallpaper": "http://www.kf666888.cn/api/tvbox/img",
 
@@ -12,7 +12,7 @@
     {
         "name": "湖北联通",
         "type": 0,
-        "url": "./txt/HB_unicom.txt",
+        "url": "./txt/HB_zonghe.txt",
         "playerType": 1,
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
         "logo": "https://epg.v1.mk/logo/{name}.png",
@@ -87,6 +87,8 @@
 
 {"key": "大奶子","name": "🔞┃采集┃奶子","type": 1,"api": "https://apidanaizi.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产主播","国产乱伦","自拍偷拍","制服丝袜","网曝事件","传媒探花","清纯学生","AV解说","淫妻作乐","港台辣妹","足浴撩妹","反差母狗","AI换脸","VR视角","重口性癖","制服诱惑","丝袜美腿","中文字幕","无码流出","多人群交","凌辱快感","角色剧情","强奸乱伦","韩国三级","欧美激情","人妻熟女","主奴调教","动漫卡通","变性伪娘","女同性恋","野外露出"]},
 
+{"key": "精东","name": "🔞┃采集┃精东","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1},
+
 {
     "key": "Javxx",
     "name": "🔞┃Javxx",
@@ -99,12 +101,7 @@
     "ext": "./js/JAVXX.js"
 },
 
-{"key": "精东","name": "🔞┃采集┃精东","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key": "freeok","name": "🔞┃freeok(py)","type": 3,"api": "./py/freeok.py"},
-
 {"key": "香蕉","name": "🔞┃香蕉(py)","type": 3,"api": "./py/香蕉.py"},
-
-{"key": "haoseTV","name": "🔞┃好色(py)","type": 3,"api": "./py/haoseTV.py"},
 
 {"key": "py_DSYS","name": "🔞┃DSYS(py)","type": 3,"api": "./py/DSYS.py"},
 
@@ -262,6 +259,23 @@
     
     {"name": "抖音","hosts": ["douyin.com"],"regex": ["is_play_url="]}
 ],
+
+"headers":[{"host":"hlsztemgsplive.miguvideo.com","header":{"User-Agent": "bingcha/1.1 (mianfeifenxiang) "}}],
+
+"hosts": [
+        "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        
+        "hlsztemgsplive.miguvideo.com=hlsztemgsplive.miguvideo.com.b.cdn.chinamobile.com",
+        "push-rtmp-hs-spe-f5.douyincdn.com=source-fcdn-spe-push.s.bytefcdn.com",
+        "cdn9.163189.xyz=gcore.jsdelivr.net",
+        "cache.ott.fifalive.itv.cmvideo.cn=cache.ott.fifalive.itv.cmvideo.cn.e.cdn.chinamobile.com",
+        "studentlive.migucloud.com=base-v4v6-miguvideo.e.cdn.chinamobile.com"
+    ],
 
 
 "flags": ["youku", "qq", "QQ", "iqiyi", "imgo", "xueren", "m1905", "qiyi", "letv", "sohu", "tudou", "pptv", "PPTV", "dbm3u8", "FY", "fy", "FeiYun", "feiyun", "飞云", "funshion", "mgtv", "wasu", "bilibili", "le", "duoduozy", "renrenmi", "xmm", "xigua", "ltnb", "rx", "SLYS4k", "CL4K", "xfyun", "wuduzy", "BYGA", "BYGB", "luanzi", "dxzy", "QEYSS", "aliyun", "优酷", "优酷视频", "西瓜", "AliS", "122", "chuangying", "乐视", "芒果", "腾讯", "腾讯视频", "芒果TV", "爱奇艺", "爱奇艺", "奇艺视频", "西瓜视频", "乐视视频", "搜狐", "搜狐视频", "哔哩哔哩", "哔哩"],
