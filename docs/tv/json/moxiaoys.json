@@ -1,0 +1,28 @@
+{
+    "首页": "https://www.moxy.top",
+    
+    "简介":"公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇┃+描述:&&</div>",
+    
+    "图片": "data-src=\"&&\"",
+    
+    "线路数组":"ds-dianying\"></i>&&</a>",
+    
+    "线路标题":"nbsp;&&</a>",
+    
+    "分类url": "https://www.moxy.top/show/id/{cateId}/page/{catePg}.html",
+    
+    "分类": "电视剧$dianshiju#电影$dianying#短剧$duanju#综艺$zongyi#动漫$dongman",
+    
+    "筛选":{
+        "dianshiju":[  
+        {"key":"cateId","name":"分类","value":[
+    	{"n":"全部","v":""},	
+        {"n":"国产剧","v":"guochanju"},
+        {"n":"港台剧","v":"gangtaiju"},
+        {"n":"欧美剧","v":"oumeiju"},
+        {"n":"海外剧","v":"haiwaiju"}
+        ]
+        }
+        ]
+    }
+}
