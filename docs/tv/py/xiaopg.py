@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # by @小鱼
-# 小苹果App
 import sys
 sys.path.append('..')
 from base.spider import Spider
+import re
 
 class Spider(Spider):
 
@@ -19,14 +19,14 @@ class Spider(Spider):
     def destroy(self):
         pass
 
-    host='http://c.xpgtv.net'
+    host = 'http://asp.xpgtv.com'
 
     headers = {
-      "User-Agent": "okhttp/3.12.11"
+        "User-Agent": "okhttp/3.12.11"
     }
 
     def homeContent(self, filter):
-        data = self.fetch(f"{self.host}/api.php/v2.vod/androidtypes",headers=self.headers,).json()
+        data = self.fetch(f"{self.host}/api.php/v2.vod/androidtypes", headers=self.headers).json()
         dy = {
             "classes": "类型",
             "areas": "地区",
@@ -37,7 +37,7 @@ class Spider(Spider):
         classes = []
         for item in data['data']:
             has_non_empty_field = False
-            item['sortby'] = ['updatetime', 'hits', 'score']
+            item['soryby'] = ['updatetime', 'hits', 'score']
             demos = ['时间', '人气', '评分']
             classes.append({"type_name": item["type_name"], "type_id": str(item["type_id"])})
             for key in dy:
@@ -65,19 +65,20 @@ class Spider(Spider):
     def homeVideoContent(self):
         rsp = self.fetch(f"{self.host}/api.php/v2.main/androidhome", headers=self.headers).json()
         videos = []
-        for i in rsp['data']['list']:videos.extend(self.getlist(i['list']))
-        return {'list':videos}
+        for i in rsp['data']['list']:
+            videos.extend(self.getlist(i['list']))
+        return {'list': videos}
 
     def categoryContent(self, tid, pg, filter, extend):
         params = {
             "page": pg,
             "type": tid,
-            "area":extend.get('areaes',''),
-            "year":extend.get('yeares',''),
-            "sortby":extend.get('sortby',''),
-            "class":extend.get('classes','')
+            "area": extend.get('areaes', ''),
+            "year": extend.get('yeares', ''),
+            "sortby": extend.get('sortby', ''),
+            "class": extend.get('classes', '')
         }
-        params={i:v for i,v in params.items() if v}
+        params = {i: v for i, v in params.items() if v}
         rsp = self.fetch(f'{self.host}/api.php/v2.vod/androidfilter10086', headers=self.headers, params=params).json()
         result = {}
         result['list'] = self.getlist(rsp['data'])
@@ -89,23 +90,48 @@ class Spider(Spider):
 
     def detailContent(self, ids):
         rsp = self.fetch(f'{self.host}/api.php/v3.vod/androiddetail2?vod_id={ids[0]}', headers=self.headers).json()
-        v = rsp['data']
+        v = rsp.get('data', {}) or {}
+
+        urls = v.get('urls') or []
+        play_items = []
+        
+        for i in urls:
+            # 多种方式获取播放源名称
+            key = (i.get('key') or i.get('name') or "").strip()
+            url = (i.get('url') or "").strip()
+            
+            # 检查是否为及时雨源（更严格的过滤）
+            if key and url:
+                # 转换为小写进行匹配
+                key_lower = key.lower()
+                # 检查是否包含及时雨相关的关键词
+                if any(bad_word in key_lower for bad_word in ['及时雨', '及時雨', 'jsy']):
+                    continue  # 跳过及时雨源
+                
+                play_items.append(f"{key}${url}")
+
+        play_url = "#".join(play_items)
+        
         vod = {
-            'vod_year':v.get('year'),
-            'vod_area':v.get('area'),
-            'vod_lang':v.get('lang'),
-            'type_name':v.get('className'),
-            'vod_actor':v.get('actor'),
-            'vod_director':v.get('director'),
+            'vod_id': v.get('id'),
+            'vod_name': v.get('name'),
+            'vod_pic': v.get('pic'),
+            'vod_year': v.get('year'),
+            'vod_area': v.get('area'),
+            'vod_lang': v.get('lang'),
+            'type_name': v.get('className'),
+            'vod_actor': v.get('actor'),
+            'vod_director': v.get('director'),
             'vod_content': '公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇┃' + (v.get('content') or ''),
             'vod_play_from': '🌺风言锋语88🌺',
-            'vod_play_url': '#'.join([f"{i['key']}${i['url']}" for i in v['urls']])
+            'vod_play_url': play_url
         }
-        return {'list':[vod]}
+
+        return {'list': [vod]}
 
     def searchContent(self, key, quick, pg='1'):
         rsp = self.fetch(f'{self.host}/api.php/v2.vod/androidsearch10086?page={pg}&wd={key}', headers=self.headers).json()
-        return {'list':self.getlist(rsp['data']),'page':pg}
+        return {'list': self.getlist(rsp['data']), 'page': pg}
 
     def playerContent(self, flag, id, vipFlags):
         header = {
@@ -114,22 +140,22 @@ class Spider(Spider):
             'version': 'XPGBOX com.phoenix.tv1.5.7',
             'hash': 'd78a',
             'screenx': '2345',
-            'user-agent': 'Lavf/58.12.100',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
             'token': 'ElEDlwCVgXcFHFhddiq2JKteHofExRBUrfNlmHrWetU3VVkxnzJAodl52N9EUFS+Dig2A/fBa/V9RuoOZRBjYvI+GW8kx3+xMlRecaZuECdb/3AdGkYpkjW3wCnpMQxf8vVeCz5zQLDr8l8bUChJiLLJLGsI+yiNskiJTZz9HiGBZhZuWh1mV1QgYah5CLTbSz8=',
             'timestamp': '1743060300',
             'screeny': '1065',
         }
-        if 'http' not in id:id=f"http://c.xpgtv.net/m3u8/{id}.m3u8"
+        if 'http' not in id:
+            id = f"http://c.xpgtv.net/m3u8/{id}.m3u8"
         return {"parse": 0, "url": id, "header": header}
 
     def localProxy(self, param):
         pass
 
-    def getlist(self,data):
+    def getlist(self, data):
         videos = []
         for vod in data:
-            r=f"更新至{vod.get('updateInfo')}" if vod.get('updateInfo') else ''
+            r = f"更新至{vod.get('updateInfo')}" if vod.get('updateInfo') else ''
             videos.append({
                 "vod_id": vod['id'],
                 "vod_name": vod['name'],
@@ -137,5 +163,3 @@ class Spider(Spider):
                 "vod_remarks": r or vod['score']
             })
         return videos
-
-
