@@ -9,14 +9,27 @@
     "logo": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/img/588.txt",
 
     "lives": [
+    
+    {
+        "name": "develop202",
+        "type": 0,
+        "playerType": 2,
+        "url": "https://gh.llkk.cc/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}"
+    },
+    {
+      "name": "冰茶",
+      "type": 0,
+      "url": "https://fy.188766.xyz/?ip=&huikan=1&json=true",
+      "ua": "bingcha/1.1 (mianfeifenxiang) "
+    },
     {
         "name": "湖北联通",
         "type": 0,
         "url": "./txt/HB_zonghe.txt",
         "playerType": 1,
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-        "logo": "https://epg.v1.mk/logo/{name}.png",
-        "ua": "okhttp/3.15,AptvPlayer/1.4.0",
+        "logo": "https://gitee.com/yf2026/TVLogo/raw/master/img/{name}.png",
         "timeout": 15
     },
     {
@@ -87,6 +100,8 @@
 
 {"key": "大奶子","name": "🔞┃采集┃奶子","type": 1,"api": "https://apidanaizi.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产主播","国产乱伦","自拍偷拍","制服丝袜","网曝事件","传媒探花","清纯学生","AV解说","淫妻作乐","港台辣妹","足浴撩妹","反差母狗","AI换脸","VR视角","重口性癖","制服诱惑","丝袜美腿","中文字幕","无码流出","多人群交","凌辱快感","角色剧情","强奸乱伦","韩国三级","欧美激情","人妻熟女","主奴调教","动漫卡通","变性伪娘","女同性恋","野外露出"]},
 
+{"key":"XJCJ","name":"🔞┃香蕉┃采集","type":1,"api":"https://www.xiangjiaozyw.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"filterable":1,"categories":["欧美精品","卡通动漫","乱伦中出","传媒原创","口爆颜射","岛国女优","萝莉少女","国产直播","岛国群交","中文字幕","岛国素人","吃瓜爆料","淫娃自慰","公开漏出","户外打野","高潮喷水","AI换脸","AV解说","伦理三级","韩国直播"]},
+
 {"key": "精东","name": "🔞┃采集┃精东","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1},
 
 {
@@ -99,18 +114,6 @@
     "changeable": 1,
     "filterable": 1,
     "ext": "./js/JAVXX.js"
-},
-
-{
-    "key": "ss直播",
-    "name": "🔞┃ss直播",
-    "type": 3,
-    "api": "./douban/drpy3.min.js",
-    "quickSearch": 1,
-    "searchable": 1,
-    "changeable": 1,
-    "filterable": 1,
-    "ext": "./js/ss直播.js"
 },
 {
     "key": "lavAPP.py",
@@ -143,8 +146,26 @@
 {"key": "py_DSYS","name": "🔞┃DSYS(py)","type": 3,"api": "./py/DSYS.py"},
 
 {"key":"麻豆","name":"🔞┃麻豆(js)","type":3,"api":"./js/麻豆.min.js","quickSearch":0,"searchable":0,"changeable":1,"filterable":1},
-
-{"key":"js_ying_hua","name":"🔞┃樱花视频(js)","type":3,"api":"./js/樱花视频.min.js","searchable":1,"quickSearch":0,"filterable":0,"changeable":0,"ext":{}},
+{
+        "key": "E佬1",
+        "name": "🔞┃E佬视频(py)",
+        "type": 3,
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1,
+        "api": "./py/E佬通用视频.py",
+        "ext": ""
+    },
+    {
+        "key": "E佬2",
+        "name": "🔞┃E佬视频2(py)",
+        "type": 3,
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1,
+        "api": "./py/E佬通用视频2.py",
+        "ext": ""
+    },
 {
     "key": "Missav",
     "name": "🔞┃Missav(proxy)",
