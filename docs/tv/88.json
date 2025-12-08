@@ -9,19 +9,19 @@
     "logo": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/img/588.txt",
 
     "lives": [
-    
+
+    {
+      "name": "冰茶",
+      "type": 0,
+      "url": "https://fy.188766.xyz/?ip=&huikan=1&json=true",
+      "ua": "bingcha/1.1 (mianfeifenxiang) "
+    },
     {
         "name": "develop202",
         "type": 0,
         "playerType": 2,
         "url": "https://gh.llkk.cc/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}"
-    },
-    {
-      "name": "冰茶",
-      "type": 0,
-      "url": "https://fy.188766.xyz/?ip=&huikan=1&json=true",
-      "ua": "bingcha/1.1 (mianfeifenxiang) "
     },
     {
         "name": "湖北联通",
@@ -68,7 +68,7 @@
     {
         "name": "撸管源",
         "type": 0,
-        "url": "./txt/撸管源.txt",
+        "url": "./18/txt/撸管源.txt",
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
         "logo": "https://epg.v1.mk/logo/{name}.png",
         "ua": "okhttp/3.15,AptvPlayer/1.4.0",
@@ -77,7 +77,7 @@
     {
         "name": "1234",
         "type": 0,
-        "url": "./txt/1234.txt",
+        "url": "./18/txt/1234.txt",
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
         "logo": "https://epg.v1.mk/logo/{name}.png",
         "ua": "okhttp/3.15,AptvPlayer/1.4.0",
@@ -113,7 +113,7 @@
     "searchable": 1,
     "changeable": 1,
     "filterable": 1,
-    "ext": "./js/JAVXX.js"
+    "ext": "./18/js/JAVXX.js"
 },
 {
     "key": "lavAPP.py",
@@ -122,7 +122,7 @@
     "searchable": 1,
     "quickSearch": 1,
     "filterable": 1,
-    "api": "./py/lavAPP.py",
+    "api": "./18/lavAPP.py",
     "order_num": 5,
     "ext": ""
 },
@@ -141,11 +141,11 @@
     }
 },
 
-{"key": "香蕉","name": "🔞┃香蕉(py)","type": 3,"api": "./py/香蕉.py"},
+{"key": "香蕉","name": "🔞┃香蕉(py)","type": 3,"api": "./18/香蕉.py"},
 
-{"key": "py_DSYS","name": "🔞┃DSYS(py)","type": 3,"api": "./py/DSYS.py"},
+{"key": "py_DSYS","name": "🔞┃DSYS(py)","type": 3,"api": "./18/DSYS.py"},
 
-{"key":"麻豆","name":"🔞┃麻豆(js)","type":3,"api":"./js/麻豆.min.js","quickSearch":0,"searchable":0,"changeable":1,"filterable":1},
+{"key":"麻豆","name":"🔞┃麻豆(js)","type":3,"api":"./18/js/麻豆.min.js","quickSearch":0,"searchable":0,"changeable":1,"filterable":1},
 {
         "key": "E佬1",
         "name": "🔞┃E佬视频(py)",
@@ -153,7 +153,7 @@
         "searchable": 1,
         "quickSearch": 1,
         "filterable": 1,
-        "api": "./py/E佬通用视频.py",
+        "api": "./18/E佬通用视频.py",
         "ext": ""
     },
     {
@@ -163,7 +163,7 @@
         "searchable": 1,
         "quickSearch": 1,
         "filterable": 1,
-        "api": "./py/E佬通用视频2.py",
+        "api": "./18/E佬通用视频2.py",
         "ext": ""
     },
 {
@@ -173,18 +173,18 @@
     "searchable": 0,
     "quickSearch": 0,
     "filterable": 0,
-    "api": "./py/Miss.py",
+    "api": "./18/Miss.py",
     "ext": {
         "site": "https://missav.ai",
-        "cfgo":"./cf-proxy-linux-arm64",
+        "cfgo":"./Miss_cf-proxy-linux-arm64",
         "plp": "",
         "proxy": {}
     }
 },
 
-{"key": "stripchat","name": "🔞┃stripchat(proxy)","type": 3,"api": "./py/stripchat.py"},
+{"key": "stripchat","name": "🔞┃stripchat(proxy)","type": 3,"api": "./18/stripchat.py"},
 
-{"key": "jable","name": "🔞┃jable(proxy)","type": 3,"api": "csp_XBPQ","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "./json/jable.json","timeout": 15},
+{"key": "jable","name": "🔞┃jable(proxy)","type": 3,"api": "csp_XBPQ","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "./18/json/jable.json","timeout": 15},
 
 {"key": "155专场","name": "🔞┃155┃采集","type": 1,"api": "https://155api.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["无码专区","麻豆传媒","制服诱惑","三级伦理","AI换脸","中文字幕","卡通动漫","欧美系列","美女主播","国产自拍","熟女人妻","萝莉少女","女同性爱","多人群交","美乳巨乳","强奸乱伦","抖音视频","韩国主播","网红头条","网爆黑料","欧美无码","女优明星","SM调教","AV解说"]},
 
