@@ -241,10 +241,10 @@ var rule = {
                 vod_content: rule.update_info.trim(),
                 vod_name: '微信公众号',
                 type_name: '微信公众号',
-                vod_pic: 'https://raw.gitcode.com/yf1688/api/raw/main/img/.怦然心动.jpg',
+                vod_pic: 'https://q.axvo.cn/f/W4jtY/.怦然心动.jpg',
                 vod_remarks: `${rule.version}`,
                 vod_play_from: '小鱼在线',
-                vod_play_url: '嗅探播放$https://raw.gitcode.com/yf1688/api/raw/main/videos/SNH48MV.mp4',
+                vod_play_url: '嗅探播放$https://q.axvo.cn/f/B4Rue/SNH48MV.mp4',
               //  vod_play_url: '随机小视频$http://api.yujn.cn/api/zzxjj.php',
             };
         } else {
