@@ -176,7 +176,7 @@
     "api": "./18/Miss.py",
     "ext": {
         "site": "https://missav.ai",
-        "cfgo":"./Miss_cf-proxy-linux-arm64",
+        "cfgo":"./18/Miss_cf-proxy-linux-arm64",
         "plp": "",
         "proxy": {}
     }

@@ -10,7 +10,7 @@
     },
     {
         "name": "茅台┃采集",
-        "url": "https://caiji.maotaizy.cc",
+        "url": "https://mtzy.me/",
         "api": "/api.php/provide/vod/",
         "parse_url": "",
         "cate_excludes":["电影","演唱会","新闻资讯","LPL","电影资讯","娱乐新闻"],
