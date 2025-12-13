@@ -4,7 +4,7 @@
 
     "wallpaper": "http://www.kf666888.cn/api/tvbox/img",
 
-    "warningText": "【风言锋语88·温馨提示您】：🔴线路利用网络爬虫技术获取，各线路的版本、清晰度、播放速度等存在差异请自行切换。建议避开晚上高峰时段。🔵软件和接口都是免费分享使用。💢请勿相信视频中的任何广告，以免您上当受骗……💯",
+    "warningText": "【温馨提示您】：🔴线路利用网络爬虫技术获取，各线路的版本、清晰度、播放速度等存在差异请自行切换。建议避开晚上高峰时段。🔵软件和接口都是免费分享使用。💢请勿相信视频中的任何广告，以免您上当受骗……💯",
 
     "logo": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/img/588.txt",
 
@@ -33,102 +33,35 @@
         "timeout": 15
     },
     {
-        "name": "快直播(python)",
-        "type": 3,
-        "api": "./txt/live_kzb.py",
-        "ext": {
-          "host": "https://jzb5kqln.huajiaedu.com"
-        }
-    },
-    {
-        "name": "(翻墙)BeeSport直播(python)",
-        "type": 3,
-        "api": "./txt/live_beesport.py",
-        "ext": {},
-        "header": {
-          "Referer": "https://p.m82xg4z0cdbz7.com"
-        }
-    },
-    {
-        "name": "(翻墙)SMT直播(python)",
-        "type": 3,
-        "api": "./txt/live_smt.py",
-        "ext": {},
-        "header": {
-          "CLIENT-IP": "127.0.0.1",
-          "X-FORWARDED-FOR": "127.0.0.1"
-        }
-    },
-    {
-        "name": "(翻墙)(18+)FreesHot(python)",
-        "type": 3,
-        "api": "./txt/live_freeshot.py",
-        "ext": {}
-    },
-    {
-        "name": "撸管源",
-        "type": 0,
-        "url": "./18/txt/撸管源.txt",
-        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-        "logo": "https://epg.v1.mk/logo/{name}.png",
-        "ua": "okhttp/3.15,AptvPlayer/1.4.0",
-        "timeout": 15
-    },
-    {
         "name": "1234",
         "type": 0,
-        "url": "./18/txt/1234.txt",
-        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-        "logo": "https://epg.v1.mk/logo/{name}.png",
-        "ua": "okhttp/3.15,AptvPlayer/1.4.0",
-        "timeout": 15
+        "url": "./18/txt/1234.txt"
     },
     {
         "name": "小鱼AI直播+",
         "type": 0,
+        "playerType": 2,
         "url": "https://gh.2015888.xyz/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u ",
         "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
         "logo": "https://epg.v1.mk/logo/{name}.png",
-        "timeout": 3
+        "timeout": 10
     }
 ],
     
 
  "sites": [
  
-{"key": "豆豆热播","name": "🔥公众号《风言锋语88》","type": 3,"api": "csp_Douban","quickSearch": 0,"searchable": 0},
-
-{"key": "大奶子","name": "🔞┃采集┃奶子","type": 1,"api": "https://apidanaizi.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产主播","国产乱伦","自拍偷拍","制服丝袜","网曝事件","传媒探花","清纯学生","AV解说","淫妻作乐","港台辣妹","足浴撩妹","反差母狗","AI换脸","VR视角","重口性癖","制服诱惑","丝袜美腿","中文字幕","无码流出","多人群交","凌辱快感","角色剧情","强奸乱伦","韩国三级","欧美激情","人妻熟女","主奴调教","动漫卡通","变性伪娘","女同性恋","野外露出"]},
-
-{"key":"XJCJ","name":"🔞┃香蕉┃采集","type":1,"api":"https://www.xiangjiaozyw.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"filterable":1,"categories":["欧美精品","卡通动漫","乱伦中出","传媒原创","口爆颜射","岛国女优","萝莉少女","国产直播","岛国群交","中文字幕","岛国素人","吃瓜爆料","淫娃自慰","公开漏出","户外打野","高潮喷水","AI换脸","AV解说","伦理三级","韩国直播"]},
-
-{"key": "精东","name": "🔞┃采集┃精东","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1},
-
 {
-    "key": "Javxx",
-    "name": "🔞┃Javxx",
+    "key": "豆豆热播",
+    "name": "🔥┃豆瓣┃热播",
     "type": 3,
-    "api": "./douban/drpy3.min.js",
-    "quickSearch": 1,
-    "searchable": 1,
-    "changeable": 1,
-    "filterable": 1,
-    "ext": "./18/js/JAVXX.js"
-},
-{
-    "key": "lavAPP.py",
-    "name": "🔞┃lavAPP",
-    "type": 3,
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 1,
-    "api": "./18/lavAPP.py",
-    "order_num": 5,
-    "ext": ""
+    "api": "csp_Douban",
+    "quickSearch": 0,
+    "searchable": 0
 },
 {
     "key": "py_AiDou",
-    "name": "🔞┃AiDou",
+    "name": "🔞┃AiDou(T4)",
     "type": 4,
     "api": "https://py.doube.eu.org/spider?site=AiDou",
     "searchable": 1,
@@ -140,39 +73,138 @@
         "ratio": 1.5
     }
 },
-
-{"key": "香蕉","name": "🔞┃香蕉(py)","type": 3,"api": "./18/香蕉.py"},
-
-{"key": "py_DSYS","name": "🔞┃DSYS(py)","type": 3,"api": "./18/DSYS.py"},
-
-{"key":"麻豆","name":"🔞┃麻豆(js)","type":3,"api":"./18/js/麻豆.min.js","quickSearch":0,"searchable":0,"changeable":1,"filterable":1},
 {
-        "key": "E佬1",
-        "name": "🔞┃E佬视频(py)",
-        "type": 3,
-        "searchable": 1,
-        "quickSearch": 1,
-        "filterable": 1,
-        "api": "./18/E佬通用视频.py",
-        "ext": ""
-    },
-    {
-        "key": "E佬2",
-        "name": "🔞┃E佬视频2(py)",
-        "type": 3,
-        "searchable": 1,
-        "quickSearch": 1,
-        "filterable": 1,
-        "api": "./18/E佬通用视频2.py",
-        "ext": ""
-    },
-{
-    "key": "Missav",
-    "name": "🔞┃Missav(proxy)",
-    "type": 3,
-    "searchable": 0,
+    "key": "py_Miss",
+    "name": "🔞┃MissAV(T4)",
+    "type": 4,
+    "api": "https://py.doube.eu.org/spider?site=Miss",
+    "searchable": 1,
     "quickSearch": 0,
     "filterable": 0,
+    "changeable": 0
+},
+{
+    "key": "py_BadNews",
+    "name": "🔞┃BadNews(T4)",
+    "type": 4,
+    "api": "https://py.doube.eu.org/spider?site=BadNews",
+    "searchable": 1,
+    "quickSearch": 0,
+    "filterable": 0,
+    "changeable": 0,
+    "style": {
+        "type": "rect",
+        "ratio": 1.5
+    }
+},
+{
+    "key": "py_madou",
+    "name": "🔞┃麻豆(T4)",
+    "type": 4,
+    "api": "https://py.doube.eu.org/spider?site=MaDou",
+    "searchable": 1,
+    "quickSearch": 0,
+    "filterable": 0,
+    "changeable": 0,
+    "style": {
+        "type": "rect",
+        "ratio": 1.5
+    }
+},
+{
+    "key": "溏心次元",
+    "name": "🔞┃溏心次元(py)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/溏心次元.py"
+},
+{
+    "key": "黄色仓库",
+    "name": "🔞┃黄色仓库(py)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/黄色仓库.py"
+},
+{
+    "key": "lavAPP.py",
+    "name": "🔞┃lavAPP(py)",
+    "type": 3,    
+    "changeable": 0,
+    "api": "./18/lavAPP.py",
+    "ext": ""
+},
+{
+    "key": "香蕉",
+    "name": "🔞┃香蕉(py)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/香蕉.py"
+},
+{
+    "key": "py_DSYS",
+    "name": "🔞┃DSYS(py)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/DSYS.py"
+},
+{
+    "key":"麻豆",
+    "name":"🔞┃麻豆(js)",
+    "type":3,
+    "changeable": 0,
+    "api":"./18/js/麻豆.min.js"
+},
+{
+    "key": "E佬1",
+    "name": "🔞┃E佬视频(py)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/E佬通用视频.py",
+    "ext": ""
+},
+{
+    "key": "E佬2",
+    "name": "🔞┃E佬视频2(py)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/E佬通用视频2.py",
+    "ext": ""
+},
+{
+    "key": "韩国电影",
+    "name": "🔞┃韩国电影(py🪜)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/韩国电影.py"
+},
+{
+    "key": "Javxx",
+    "name": "🔞┃Javxx(drpy🪜)",
+    "type": 3,
+    "api": "./douban/drpy3.min.js",
+    "changeable": 0,
+    "ext": "./18/js/JAVXX.js"
+},
+{
+    "key": "stripchat",
+    "name": "🔞┃stripchat(py🪜)",
+    "type": 3,
+    "changeable": 0,
+    "api": "./18/stripchat.py"
+},
+{
+    "key": "jable",
+    "name": "🔞┃jable(py🪜)┃待修",
+    "type": 3,
+    "api": "csp_XBPQ",
+    "changeable": 0,
+    "ext": "./18/json/jable.json"
+},
+{
+    "key": "Missav",
+    "name": "🔞┃Missav(py🪜)",
+    "type": 3,
+    "changeable": 0,
     "api": "./18/Miss.py",
     "ext": {
         "site": "https://missav.ai",
@@ -182,13 +214,15 @@
     }
 },
 
-{"key": "stripchat","name": "🔞┃stripchat(proxy)","type": 3,"api": "./18/stripchat.py"},
+{"key": "大奶子","name": "🔞┃奶子┃采集","type": 1,"api": "https://apidanaizi.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产主播","国产乱伦","自拍偷拍","制服丝袜","网曝事件","传媒探花","清纯学生","AV解说","淫妻作乐","港台辣妹","足浴撩妹","反差母狗","AI换脸","VR视角","重口性癖","制服诱惑","丝袜美腿","中文字幕","无码流出","多人群交","凌辱快感","角色剧情","强奸乱伦","韩国三级","欧美激情","人妻熟女","主奴调教","动漫卡通","变性伪娘","女同性恋","野外露出"]},
 
-{"key": "jable","name": "🔞┃jable(proxy)","type": 3,"api": "csp_XBPQ","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "./18/json/jable.json","timeout": 15},
+{"key":"XJCJ","name":"🔞┃香蕉┃采集","type":1,"api":"https://www.xiangjiaozyw.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"filterable":1,"categories":["欧美精品","卡通动漫","乱伦中出","传媒原创","口爆颜射","岛国女优","萝莉少女","国产直播","岛国群交","中文字幕","岛国素人","吃瓜爆料","淫娃自慰","公开漏出","户外打野","高潮喷水","AI换脸","AV解说","伦理三级","韩国直播"]},
+
+{"key": "精东","name": "🔞┃精东┃采集","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories":["麻豆视频","中文字幕"]},
 
 {"key": "155专场","name": "🔞┃155┃采集","type": 1,"api": "https://155api.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["无码专区","麻豆传媒","制服诱惑","三级伦理","AI换脸","中文字幕","卡通动漫","欧美系列","美女主播","国产自拍","熟女人妻","萝莉少女","女同性爱","多人群交","美乳巨乳","强奸乱伦","抖音视频","韩国主播","网红头条","网爆黑料","欧美无码","女优明星","SM调教","AV解说"]},
 
-{"key": "森林专场","name": "🔞┃采集┃森林","type": 1,"api": "https://slapibf.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产色情","主播直播","亚洲无码","亚洲有码","中文字幕","巨乳美乳","人妻熟女","强奸乱伦","欧美精品","萝莉少女","伦理三级","成人动漫","自拍偷拍","制服丝袜","口交颜射","日本精品","Cosplay","素人自拍","台湾辣妹","韩国御姐","唯美港姐","东南亚AV","欺辱凌辱","剧情介绍","多人多P","91探花","网红流出","野外露出","古装扮演","女优系列","可爱学生","风情旗袍","兽耳系列","瑜伽裤","闷骚护士","过膝袜","网曝门","传媒出品","女同性恋","男同性恋","恋腿狂魔"]},
+{"key": "森林专场","name": "🔞┃森林┃采集","type": 1,"api": "https://slapibf.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产色情","主播直播","亚洲无码","亚洲有码","中文字幕","巨乳美乳","人妻熟女","强奸乱伦","欧美精品","萝莉少女","伦理三级","成人动漫","自拍偷拍","制服丝袜","口交颜射","日本精品","Cosplay","素人自拍","台湾辣妹","韩国御姐","唯美港姐","东南亚AV","欺辱凌辱","剧情介绍","多人多P","91探花","网红流出","野外露出","古装扮演","女优系列","可爱学生","风情旗袍","兽耳系列","瑜伽裤","闷骚护士","过膝袜","网曝门","传媒出品","女同性恋","男同性恋","恋腿狂魔"]},
 
 {"key": "量子","name": "🔞┃量子┃采集","type": 0,"api": "https://cj.lziapi.com/api.php/provide/vod/at/xml/","searchable": 1,"changeable": 1,"categories": ["伦理片"]},
 
@@ -202,23 +236,17 @@
 
 {"key":"naixx","name":"🔞┃奶香┃采集","type":1,"api":"https://naixxzy.com/api.php/provide/vod/?ac=list","playUrl":"https://nxxbfjx.com/?url=","searchable":1,"quickSearch":1,"filterable":1,"categories":["国产自拍","主播诱惑","探花约炮","偷拍偷窥","网曝吃瓜","抖阴短片","传媒剧情","日韩主播","日韩无码","中文字幕","AV解说","换脸明星","强奸乱伦","女优明星","欧美激情","重口激情","三级伦理","剧情动漫","SM调教","女同性恋","VR视角"]},
 
-{"key": "大地采集","name": "🔞┃大地┃采集","type": 0,"api": "https://dadiapi.com/apple_m3u8.php","playUrl": "https://play.dadiapi.com/watch?url=","searchable": 1,"quickSearch": 1,"filterable": 0},
+{"key": "大地","name": "🔞┃大地┃采集","type": 0,"api": "https://dadiapi.com/api.php","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["日韩无码","强奸乱伦","欧美精品","国产精品","人妻系列","中文字幕","动漫精品","伦理影片","日韩精品","制服诱惑","自拍偷拍","AV明星","3P合辑","巨乳系列","颜射系列","口交视频","自慰系列","SM重味","教师学生","大秀视频","AV明星1"]},
 
-{"key": "zp067","name": "🔞┃环亚┃无码","type": 0,"api": "https://dadiapi.com/api.php","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["日韩无码","强奸乱伦","欧美精品","国产精品","人妻系列","中文字幕","动漫精品","伦理影片","日韩精品","制服诱惑","自拍偷拍","AV明星","3P合辑","巨乳系列","颜射系列","口交视频","自慰系列","SM重味","教师学生","大秀视频","AV明星1"]},
-
-{"key": "美少女资源","name": "🔞┃美少女资源","type": 0,"api": "https://www.msnii.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
+{"key": "美少女资源","name": "🔞┃少女┃采集","type": 0,"api": "https://www.msnii.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
 
 {"key": "乐播","name": "️🔞┃乐播┃采集","type": 1,"api": "https://lbapi9.com/api.php/provide/vod/at/json/?ac=list","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["亚洲情色","国产主播","国产自拍","无码专区","欧美性爱","熟女人妻","强奸乱伦","巨乳美乳","中文字幕","制服诱惑","女同性恋","卡通动画","视频伦理","少女萝莉","重口色情","人兽性交"]},
 
 {"key": "番外","name": "🔞┃番外┃采集","type": 1,"api": "http://fhapi9.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["群交淫乱","偷拍自拍","制服丝袜","无码专区","卡通动漫","中文字幕","欧美性爱","巨乳美乳","国产裸聊","国产自拍","国产盗摄","伦理三级","女同性恋","少女萝莉","人妖系列","虚拟VR"]},
 
-{"key": "api.sexnguon.com","name": "🔞┃成人1","type": 1,"api": "http://api.sexnguon.com/api.php/provide/vod/","searchable": 1,"recordable": 0,"style": {"type": "rect","ratio": 1.33}},
-
-{"key": "dadiapi.com","name": "🔞┃成人2","type": 0,"api": "http://dadiapi.com/api.php","searchable": 1,"recordable": 0,"style": {"type": "rect","ratio": 1.33}},
-
 {"key": "磁力_lf_p2p2","name": "🧲┃磁力┃搜索㊙️","type": 3,"api": "./js/lf_p2p2_min.js","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "18+"},
 
-{"key": "韩小圈","name": "🚦请勿相信任何广告","type": 3,"api": "csp_HanXiaoQuan","quickSearch": 0,"searchable": 0,"changeable": 0,"filterable": 1}
+{"key": "本地","name": "🚦请勿相信任何广告","type": 3,"api": "csp_LocalFile","quickSearch": 0,"searchable": 0,"changeable": 0,"filterable": 1}
 
 ],
 
