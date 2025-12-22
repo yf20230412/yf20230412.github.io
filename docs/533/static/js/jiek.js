@@ -6,7 +6,7 @@ const htmlContent = `
         <!-- 一排 -->
         <div class="item">
             <div class="bg" style="background-color:#F8D800"></div>
-            <div class="inner copy-btn" id="fengyanfengyu" data-clipboard-text="http://www.2015888.xyz/tv">
+            <div class="inner copy-btn" id="fengyanfengyu" data-clipboard-text="http://2015888.xyz/tv">
                 <span>小鱼</span>
             </div>
         </div>

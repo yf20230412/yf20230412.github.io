@@ -2,35 +2,90 @@
 import DefaultTheme from 'vitepress/theme';
 import { useData } from 'vitepress';
 import { ref, onMounted, onUnmounted } from 'vue';
-import GiscusComment from "./GiscusComment.vue"; // 导入评论组件
-const { Layout } = DefaultTheme;
+import GiscusComment from "./GiscusComment.vue";
 
+const { Layout } = DefaultTheme;
 const { frontmatter } = useData();
 
-// 倒计时逻辑
+// 倒计时数据
 const countdown = ref({
   days: 0,
   hours: 0,
   minutes: 0,
   seconds: 0
 });
-
 let intervalId: number;
 
+// 春节日期映射表（补充2025年，含2026-2046）
+const springFestivalMap: Record<number, string> = {
+  2025: '2025-01-29',
+  2026: '2026-02-17',
+  2027: '2027-02-06',
+  2028: '2028-01-26',
+  2029: '2029-02-13',
+  2030: '2030-02-03',
+  2031: '2031-01-23',
+  2032: '2032-02-11',
+  2033: '2033-01-31',
+  2034: '2034-02-19',
+  2035: '2035-02-08',
+  2036: '2036-01-28',
+  2037: '2037-02-15',
+  2038: '2038-02-04',
+  2039: '2039-01-24',
+  2040: '2040-02-12',
+  2041: '2041-02-01',
+  2042: '2042-01-22',
+  2043: '2043-02-10',
+  2044: '2044-01-30',
+  2045: '2045-02-17',
+  2046: '2046-02-06'
+};
+
+// 核心：自动获取下一个春节的公历日期（含兜底逻辑）
+const getNextSpringFestival = () => {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const availableYears = Object.keys(springFestivalMap).map(Number);
+  let targetYear = currentYear;
+
+  // 若当前年份不在映射表中，取最近的最大年份
+  if (!springFestivalMap[targetYear]) {
+    targetYear = Math.max(...availableYears);
+  }
+
+  let sfDate = new Date(springFestivalMap[targetYear]);
+  // 若当年春节已过，取下一年（若下一年不存在则取最大可用年份）
+  if (sfDate < now) {
+    targetYear += 1;
+    sfDate = new Date(springFestivalMap[targetYear] || springFestivalMap[Math.max(...availableYears)]);
+  }
+
+  // 若日期解析失败，强制取2025年春节（最终兜底）
+  if (isNaN(sfDate.getTime())) {
+    sfDate = new Date(springFestivalMap[2025]);
+    targetYear = 2025;
+  }
+
+  return { date: sfDate, year: targetYear };
+};
+
+// 更新倒计时（含数值容错）
 const updateCountdown = () => {
   const now = new Date();
-  const newYear = new Date('2026-01-01T00:00:00');
-  const diff = newYear.getTime() - now.getTime();
-  
-  if (diff <= 0) {
+  const { date: nextSF } = getNextSpringFestival();
+  const diff = nextSF.getTime() - now.getTime();
+
+  // 若差值为非数字或负数，直接置0
+  if (isNaN(diff) || diff <= 0) {
     countdown.value = { days: 0, hours: 0, minutes: 0, seconds: 0 };
     return;
   }
-  
+
   const seconds = Math.floor(diff / 1000);
   const minutes = Math.floor(seconds / 60);
   const hours = Math.floor(minutes / 60);
-  
+
   countdown.value = {
     days: Math.floor(hours / 24),
     hours: hours % 24,
@@ -47,6 +102,9 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(intervalId);
 });
+
+// 暴露春节年份供模板使用
+const getSFYear = () => getNextSpringFestival().year;
 </script>
 
 <template>
@@ -54,8 +112,8 @@ onUnmounted(() => {
     <template #doc-before>
       <div class="page-info-container">
         <div class="countdown-box">
-          <div class="countdown-title">2026年
-            <span id="new-year">元旦</span> 倒计时
+          <div class="countdown-title">{{ getSFYear() }}年
+            <span id="new-year">春节</span> 倒计时
           </div>
           <div class="countdown-timer">
             <span class="countdown-number">{{ countdown.days }}</span>天
@@ -67,16 +125,15 @@ onUnmounted(() => {
         </div>
       </div>
     </template>
-    
-    
+
     <template #doc-footer-before>
-      <!-- 在文档底部添加 Giscus 评论组件 -->
       <GiscusComment />
     </template>
-    
-    
   </Layout>
 </template>
+
+
+
 
 
 <style>

@@ -31,14 +31,14 @@ export const sidebar: DefaultTheme.Sidebar = {
           { text: 'git冲突处理流程', link: '/blog/git冲突处理流程' },
           { text: 'AI人工智能聚合', link: '/blog/AI人工智能聚合' },
           { text: '影视仓内置多仓教程', link: '/blog/影视仓内置多仓教程' }          
-        ]        
+        ]
       },      
       {
         text: '关于我',
         items: [
-          { text: '打赏💰', link: 'https://2015888.xyz/588/' },
-          { text: '联系☎️', link: 'https://2015888.xyz/wo/' },
-          { text: '主页🚀', link: 'https://2015888.xyz/533/' }        
+          { text: '打赏💰', link: 'https://a.2015888.xyz/588/' },
+          { text: '联系☎️', link: 'https://a.2015888.xyz/wo/' },
+          { text: '主页🚀', link: 'https://a.2015888.xyz/533/' }
         ]
       }
   ]

@@ -1,0 +1,117 @@
+{
+    "plugins": [{
+        "name": "QQMusic",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/qq.js",
+        "version": "0.0.4"
+    },
+    {
+        "name": "网易云Music",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/网易云.js",
+        "version": "0.0.4"
+    },
+    {
+        "name": "咪咕Music",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/咪咕.js",
+        "version": "0.0.4"
+    },
+    {
+        "name": "酷狗Music",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷狗.js",
+        "version": "0.0.4"
+    },
+    {
+        "name": "酷我Music",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷我.js",
+        "version": "0.0.4"
+    },
+    {
+        "name": "喜马拉雅",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/喜马拉雅.js",
+        "version": "0.1.4"
+    },
+    {
+        "name": "Bilibili",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Bilibili.js",
+        "version": "0.1.7"
+    },
+    {
+        "name": "简繁",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/简繁.js",
+        "version": "0.0.6"
+    },
+    {
+        "name": "5听音乐",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/5听.js",
+        "version": "0.1.1"
+    },
+    {
+        "name": "千千音乐",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/千千音乐.js",
+        "version": "0.1.2"
+    },
+    {
+        "name": "音悦台(搜)",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/音悦台搜索.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "猫耳FM",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/猫耳FM.js",
+        "version": "0.1.3"
+    },
+    {
+        "name": "网易电台",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/网易电台.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "快手(搜)",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/快手搜索.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "Youtube",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Youtube.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "Audiomack",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Audiomack.js",
+        "version": "0.0.2"
+    },
+    {
+        "name": "Navidrome（搭建）",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Navidrome.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "Suno",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Suno.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "WebDAV",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/WebDAV.js",
+        "version": "0.0.2"
+    },
+    {
+        "name": "Udio",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Udio.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "歌词千寻(搜)",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/歌词千寻.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "酷歌词(搜)",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷歌词搜索.js",
+        "version": "0.0.1"
+    },
+    {
+        "name": "歌词网(搜)",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/歌词网搜索.js",
+        "version": "0.0.1"
+    }]
+}

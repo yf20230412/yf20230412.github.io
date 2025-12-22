@@ -28,8 +28,8 @@ hero:
       link: /blog/
       
     - theme: alt
-      text: IPTV订阅源
-      link: https://2015888.xyz/iptv
+      text: 书签导航
+      link: https://a.2015888.xyz/tools
 
 features:
 
