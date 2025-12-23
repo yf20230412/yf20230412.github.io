@@ -194,7 +194,7 @@ var rule = {
             vod_name: '微信公众号',
             vod_id: 'update_info',
             vod_remarks: `${rule.version}`,
-            vod_pic: 'https://a.2015888.xyz/img/wxgzh2.png'
+            vod_pic: 'http://2015888.xyz/img/wxgzh.jpg'
         }];
         VODS = [];
         if (rule.classes) {
