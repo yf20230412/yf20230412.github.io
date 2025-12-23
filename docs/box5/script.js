@@ -51,7 +51,7 @@ const list = [
     },
 
     {
-        "url": "http://www.2015888.xyz/tv",
+        "url": "http://2015888.xyz/tv",
         "name": "🚀小鱼线路",
         "color": "#91ad70"
     },
