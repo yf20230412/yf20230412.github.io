@@ -85,8 +85,8 @@ jobs:
       # 自动提交变更
       - name: Commit changes
         run: |
-          git config --global user.name "yf20230412"
-          git config --global user.email "yufeng1688778@163.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/bk/
           if git diff --staged --quiet; then
             echo "无需提交任何更改."
