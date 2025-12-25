@@ -148,7 +148,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          //使用GitHub Actions机器人账号提交
+          #使用GitHub Actions机器人账号提交
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/bk/
