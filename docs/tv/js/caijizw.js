@@ -244,7 +244,7 @@ var rule = {
                 vod_pic: 'https://q.axvo.cn/f/W4jtY/.怦然心动.jpg',
                 vod_remarks: `${rule.version}`,
                 vod_play_from: '小鱼在线',
-                vod_play_url: '嗅探播放$https://q.axvo.cn/f/B4Rue/SNH48MV.mp4',
+                vod_play_url: '嗅探播放$http://2015888.xyz/videos/SNH48MV.mp4',
               //  vod_play_url: '随机小视频$http://api.yujn.cn/api/zzxjj.php',
             };
         } else {
@@ -259,7 +259,7 @@ var rule = {
                 let data = json.list;
                 VOD = data[0];
                 if (current_vod && current_vod.type_name) {
-                    VOD.vod_play_from = VOD.vod_play_from.split('$$$').map(it => current_vod.type_name + '🌺' +"风言锋语88🌺"+ it).join('$$$')
+                    VOD.vod_play_from = VOD.vod_play_from.split('$$$').map(it => current_vod.type_name + '🌺' + it).join('$$$')
                 }
             }
         }

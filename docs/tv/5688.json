@@ -117,67 +117,102 @@
     "key": "溏心次元",
     "name": "🔞┃溏心次元(py)",
     "type": 3,
-    "changeable": 0,
-    "api": "./18/溏心次元.py"
+    "api": "./18/溏心次元.py",
+    "changeable": 0
 },
 {
     "key": "黄色仓库",
     "name": "🔞┃黄色仓库(py)",
     "type": 3,
-    "changeable": 0,
-    "api": "./18/黄色仓库.py"
+    "api": "./18/黄色仓库.py",
+    "changeable": 0
+},
+{
+    "key": "色播聚合",
+    "name": "🔞┃色播(py)",
+    "type": 3,
+    "api": "./18/色播聚合.py",
+    "changeable": 0
+},
+{
+    "key": "sbjhpy",
+    "name": "🔞┃中国┃大秀",
+    "type": 4,
+    "api": "https://learnpython.ggff.net/sbjhpy",
+    "changeable": 0
+},
+{
+    "key": "omdxzb",
+    "name": "🔞┃欧美┃大秀",
+    "type": 4,
+    "api": "https://learnpython.ggff.net/cam4",
+    "changeable": 0
+},
+{
+    "key": "瑟瑟",
+    "name": "🔞┃瑟瑟(py)",
+    "type": 3,
+    "api": "./18/瑟瑟.py",
+    "changeable": 0
+},
+{
+    "key": "果冻",
+    "name": "🔞┃果冻(py)",
+    "type": 3,
+    "api": "./18/果冻.py",
+    "changeable": 0
 },
 {
     "key": "lavAPP.py",
     "name": "🔞┃lavAPP(py)",
     "type": 3,    
-    "changeable": 0,
     "api": "./18/lavAPP.py",
+    "changeable": 0,
     "ext": ""
 },
 {
     "key": "香蕉",
     "name": "🔞┃香蕉(py)",
     "type": 3,
-    "changeable": 0,
-    "api": "./18/香蕉.py"
+    "api": "./18/香蕉.py",
+    "changeable": 0
 },
 {
     "key": "py_DSYS",
     "name": "🔞┃DSYS(py)",
     "type": 3,
-    "changeable": 0,
-    "api": "./18/DSYS.py"
+    "api": "./18/DSYS.py",
+    "changeable": 0
 },
 {
     "key":"麻豆",
     "name":"🔞┃麻豆(js)",
     "type":3,
-    "changeable": 0,
-    "api":"./18/js/麻豆.min.js"
+    "api":"./18/js/麻豆.min.js",
+    "changeable": 0
 },
 {
     "key": "E佬1",
     "name": "🔞┃E佬视频(py)",
     "type": 3,
-    "changeable": 0,
     "api": "./18/E佬通用视频.py",
+    "changeable": 0,
     "ext": ""
 },
 {
     "key": "E佬2",
     "name": "🔞┃E佬视频2(py)",
     "type": 3,
-    "changeable": 0,
     "api": "./18/E佬通用视频2.py",
+    "changeable": 0,
     "ext": ""
 },
 {
     "key": "韩国电影",
     "name": "🔞┃韩国电影(py🪜)",
     "type": 3,
-    "changeable": 0,
-    "api": "./18/韩国电影.py"
+    "api": "./18/韩国电影.py",
+    "changeable": 0
 },
 {
     "key": "Javxx",
@@ -191,8 +226,8 @@
     "key": "stripchat",
     "name": "🔞┃stripchat(py🪜)",
     "type": 3,
-    "changeable": 0,
-    "api": "./18/stripchat.py"
+    "api": "./18/stripchat.py",
+    "changeable": 0
 },
 {
     "key": "jable",
@@ -206,8 +241,8 @@
     "key": "Missav",
     "name": "🔞┃Missav(py🪜)",
     "type": 3,
-    "changeable": 0,
     "api": "./18/Miss.py",
+    "changeable": 0,
     "ext": {
         "site": "https://missav.ai",
         "cfgo":"./18/Miss_cf-proxy-linux-arm64",
