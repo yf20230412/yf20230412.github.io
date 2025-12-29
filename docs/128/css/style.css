@@ -125,6 +125,12 @@
     }
 }
 
+/* 音乐播放器样式 - 修改为更简洁的样式 */
+.music-player {
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+}
 
 /* ---代码分割线--- */
 

@@ -95,16 +95,88 @@
             </div>
         </div>
     </div>
-<footer class="footer-container">
-    <div class="footer-content">
-        <a target="_blank" href="https://www.2015888.xyz/gzh" title="微信公众号：风言锋语88">
-            微信公众号：<mark class="gradient-text">风言锋语88</mark>
-        </a>
-        <p class="copyright">© 2025 风言锋语88 版权所有</p>
+    <div class="music-player">
+        <i class="bi bi-music-note-beamed"></i>
+        <audio id="bgMusic" loop>
+            <source src="https://mpimg.cn/view.php/f0a550a20a99c47662db2a7013c2d1e2.mp3" type="audio/mpeg">
+            您的浏览器不支持音频元素
+        </audio>
     </div>
-</footer>
-
-<script src="js/aes.js"></script>
+    <footer class="footer-container">
+        <div class="footer-content">
+            <a target="_blank" href="https://www.2015888.xyz/gzh" title="微信公众号：风言锋语88">
+                微信公众号：<mark class="gradient-text">风言锋语88</mark>
+            </a>
+            <p class="copyright">© 2025 风言锋语88 版权所有</p>
+        </div>
+    </footer>
+    <script>
+        // 音乐自动播放处理
+                function setupAudio() {
+                    const audio = document.getElementById('bgMusic');
+                    if (!audio) return;
+                    
+                    // 设置音量
+                    audio.volume = 0.3;
+                    
+                    // 创建音频上下文，用于解决自动播放限制
+                    let audioContext;
+                    
+                    // 尝试自动播放
+                    const playAudio = () => {
+                        audio.play().then(() => {
+                            console.log('音乐自动播放成功');
+                        }).catch(error => {
+                            console.log('自动播放被阻止:', error);
+                            // 如果自动播放失败，显示一个提示
+                            showAudioPrompt();
+                        });
+                    };
+                    
+                    // 显示音频提示
+                    function showAudioPrompt() {
+                        const musicPlayer = document.querySelector('.music-player');
+                        if (!musicPlayer) return;
+                        
+                        // 添加提示文本
+                        const prompt = document.createElement('div');
+                        prompt.innerHTML = '<span style="color: #ff6b6b; font-size: 12px;">🐬</span>';
+                        prompt.style.marginLeft = '10px';
+                        musicPlayer.appendChild(prompt);
+                        
+                        // 添加点击事件监听器
+                        document.body.addEventListener('click', function initAudio() {
+                            playAudio();
+                            // 移除提示
+                            if (prompt.parentNode) {
+                                prompt.parentNode.removeChild(prompt);
+                            }
+                            // 移除事件监听器
+                            document.body.removeEventListener('click', initAudio);
+                        }, { once: true });
+                    }
+                    
+                    // 页面加载后尝试播放
+                    window.addEventListener('load', () => {
+                        // 延迟播放，确保页面完全加载
+                        setTimeout(playAudio, 1000);
+                    });
+                    
+                    // 监听音频错误
+                    audio.addEventListener('error', (e) => {
+                        console.error('音频加载错误:', e);
+                        // 尝试备用音频源
+                        audio.src = 'https://mpimg.cn/view.php/f0a550a20a99c47662db2a7013c2d1e2.mp3';
+                        setTimeout(playAudio, 1000);
+                    });
+                }
+                // 设置音频自动播放
+            setupAudio();
+    </script>
+    <script src="js/aes.js"></script>
+    <script src='/static/music/music_2025.js'></script>
+    <script src="/static/tanchuang/sweetalert/sweetalert.min.js"></script>
+    <script src="/static/tanchuang/sweetalert/sweetalert_verify.js"></script>
 </body>
 
 </html>
