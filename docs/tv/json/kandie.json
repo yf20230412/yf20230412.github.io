@@ -1,0 +1,45 @@
+{
+    "主页url": "https://kdie.cc/",
+    "嗅探词": ".m3u8#/video/tos/#.mp4#flv",
+    "简介":"公众号《风言锋语88》提醒您:请勿相信影片中的广告，以免上当受骗🥇┃+jq-jieshao\">&&</div>",
+    "影片类型":"类型：&&</p>",            
+    "倒序": "是",
+    "播放列表": "<li&&</li",
+    "播放数组": "class=\"juji-con&&</ul",
+    "播放标题": ">&&</a",
+    "播放链接": "href=\"&&\"",
+    "跳转播放链接": "<iframe*src=\"/p.html?url=&&\"",
+    "搜索模式": "1",
+    "搜索url": "https://kdie.cc/search{wd}/page/{pg}/",
+    "分类url": "https://kdie.cc/type-{cateId}-{catePg}",
+    "分类": "电视剧$dianshiju#电影$dianying#动漫$dongman#综艺$zongyi",
+    "筛选":{
+        "dianshiju":[  
+        {"key":"cateId","name":"分类","value":[
+    	{"n":"全部","v":""},	
+        {"n":"国产","v":"guochan"},
+        {"n":"韩剧","v":"hanju"},
+        {"n":"短剧","v":"duanju"},
+        {"n":"泰剧","v":"taiju"},
+        {"n":"美剧","v":"meiju"},
+        {"n":"港剧","v":"gangju"},
+        {"n":"日剧","v":"riju"},
+        {"n":"台剧","v":"taibei"}
+        ]
+        }
+        ],
+        "dianying":[  
+        {"key":"cateId","name":"分类","value":[
+    	{"n":"全部","v":""},	
+        {"n":"动作片","v":"dongzuo"},
+        {"n":"喜剧片","v":"xiju"},
+        {"n":"爱情片","v":"aiqing"},
+        {"n":"科幻片","v":"kehuan"},
+        {"n":"恐怖片","v":"kongbu"},
+        {"n":"战争片","v":"zhanzheng"},
+        {"n":"剧情片","v":"juqing"}
+        ]
+        }
+        ]
+    }            
+}

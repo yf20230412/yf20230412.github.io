@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真ikun免费图床</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            /*background-image: url('https://yanxuan.nosdn.127.net/b5fd460e37448bbffae4fd8885134d67.jpg');*/
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 35px;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 24px;
+            color: #000000;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .upload-area {
+            margin-bottom: 24px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto 16px;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            font-size: 16px;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        input[type="file"]:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        button {
+            background-color: rgba(102, 187, 106, 0.8);
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            font-weight: 500;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        button:hover {
+            background-color: rgba(76, 175, 80, 0.9);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .result {
+            margin-top: 24px;
+            padding: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.15);
+            font-size: 16px;
+            color: #ffffff;
+            min-height: 40px;
+            transition: all 0.3s ease;
+            overflow-wrap: break-word;  /* 新增：允许在单词内换行 */
+            word-break: break-all;      /* 新增：允许在任意字符间断行 */
+        }
+        
+        /* 紧凑版的运行时间样式 */
+        .runtime-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            padding: 6px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        .runtime-content {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 5px 12px;
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+        }
+        
+        .runtime-label {
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 6px;
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+        
+        .runtime-value {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 3px;
+        }
+        
+        .runtime-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 35px;
+        }
+        
+        .runtime-number {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .runtime-text {
+            font-size: 9px;
+            opacity: 0.9;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>文件上传</h1>
+        <div class="upload-area">
+            <form id="uploadForm">
+                <input type="file" id="fileInput" name="file" accept="image/*" required />
+                <button type="submit">上传文件</button>
+            </form>
+        </div>
+        <div id="result" class="result"></div>
+    </div>
+
+    <!-- 网站运行时间显示 -->
+    <div class="runtime-container">
+        <div class="runtime-content">
+            <span class="runtime-label">网站已持续运行:</span>
+            <div class="runtime-value">
+                <span class="runtime-unit">
+                    <span class="runtime-number" id="runtimeDays">0</span>
+                    <span class="runtime-text">天</span>
+                </span>
+                <span class="runtime-unit">
+                    <span class="runtime-number" id="runtimeHours">00</span>
+                    <span class="runtime-text">小时</span>
+                </span>
+                <span class="runtime-unit">
+                    <span class="runtime-number" id="runtimeMinutes">00</span>
+                    <span class="runtime-text">分钟</span>
+                </span>
+                <span class="runtime-unit">
+                    <span class="runtime-number" id="runtimeSeconds">00</span>
+                    <span class="runtime-text">秒</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 文件上传功能
+        const form = document.getElementById('uploadForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                resultDiv.innerHTML = '<p>请先选择文件！</p>';
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('https://api.xinyew.cn/api/jdtc', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                if (data.errno === 0) {
+                    resultDiv.innerHTML = `
+                        <p>上传成功！</p>
+                        <p>图片链接: <a href="${data.data.url}" target="_blank">${data.data.url}</a></p>
+                        <p>图片文件名: ${data.data.imgFile}</p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<p>${data.error}</p>`;
+                    // 请求失败后2秒自动刷新网页
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p>请求失败：${error.message}</p>`;
+                // 请求失败后3秒自动刷新网页
+                setTimeout(() => {
+                    location.reload();
+                }, 3000);
+            }
+        });
+
+        // 计算并显示网站运行时间
+        function updateRuntime() {
+            // 设置网站开始时间 - 这里使用当前时间作为示例
+            const startTime = new Date(2025, 6, 28);
+            startTime.setHours(0, 0, 0, 0); // 设置为当天零点
+            
+            const currentTime = new Date();
+            const diffTime = currentTime - startTime;
+            
+            // 计算天、小时、分钟、秒
+            const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diffTime % (1000 * 60)) / 1000);
+            
+            // 更新显示
+            document.getElementById('runtimeDays').textContent = days;
+            document.getElementById('runtimeHours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('runtimeMinutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('runtimeSeconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // 初始更新运行时间
+        updateRuntime();
+        
+        // 每秒更新一次运行时间
+        setInterval(updateRuntime, 1000);
+    </script>
+</body>
+</html>
+
+<!-- 网页鼠标点击特效 - 核心价值观关键字 -->
+<script>
+    (function () {
+        var a_idx = 0;
+        window.onclick = function (event) {
+            var a = new Array("🏀真的是你啊", "🏀喜欢唱", "🏀跳", "🏀Rap", "🏀篮球", "🏀amaji", "🏀练习时长两年半", "🏀坤坤", "🏀有没有树枝",
+                "🏀你干嘛～", "🏀哎哟～", "🏀鸡你太美");
+            var heart = document.createElement("b"); //创建b元素
+            heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+
+            document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+            a_idx = (a_idx + 1) % a.length;
+            heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+
+            var f = 13, // 字体大小
+                x = event.clientX - f / 2 - 30, // 横坐标
+                y = event.clientY - f, // 纵坐标
+                c = randomColor(), // 随机颜色
+                a = 1, // 透明度
+                s = 0.8; // 放大缩小
+
+            var timer = setInterval(function () { //添加定时器
+                if (a <= 0) {
+                    document.body.removeChild(heart);
+                    clearInterval(timer);
+                } else {
+                    heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                        c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                        s + ");";
+
+                    y--;
+                    a -= 0.016;
+                    s += 0.002;
+                }
+            }, 15)
+        }
+        // 随机颜色
+        function randomColor() {
+            return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+                .random() * 255)) + ")";
+        }
+    }());
+</script>

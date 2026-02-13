@@ -1,0 +1,404 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#output {
+    background-color: #DCDFE6;
+    color: black;
+    width: calc(100% - 2px); /* 确保输出框宽度与输入框一致 */
+    height: calc(100vh - 350px); /* 输出框高度 */
+    resize: none;
+    margin: 0 auto;
+    display: block;
+}
+
+
+#input-container {
+    display: flex;
+    align-items: stretch;
+    width: calc(100% - 2px); /* 确保输入框宽度与输出框一致 */
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;  /* 包括内边距和边框 */
+}
+
+
+
+/* 输入框样式 */
+#input-field {
+    width: 100%;
+    padding: 11px 30px 11px 11px;
+    /* 右侧留出更多空间 */
+    padding-right: 35px;
+    /* 以确保文本不会与清除按钮重叠 */
+    border: none;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#input-wrapper {
+    flex: 3;
+    position: relative;
+	border: 1px solid;
+	color: #ccc;
+	box-sizing: border-box;
+}
+
+#input-wrapper #clear-input-button {
+    position: absolute;
+    right: 5px;
+    /* 调整距离右侧的距离 */
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+    /* 调整字体大小 */
+    color: red;
+    width: 20px;
+    /* 调整按钮宽度 */
+    height: 20px;
+    /* 调整按钮高度 */
+    border-radius: 50%;
+    /* 确保按钮为圆形 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    display: none;
+    /* 默认隐藏 */
+    box-sizing: border-box;
+    padding: 0;
+    /* 移除内边距 */
+}
+
+#clear-input-button:hover {
+    color: #999;
+    background-color: #f0f0f0;
+    /* 鼠标悬停时添加背景色 */
+}
+
+/* 输入框选中效果 */
+#input-field:focus {
+    outline: 1.5px solid #1e90ff;
+    /* 修改颜色轮廓 */
+}
+
+
+#input-container button {
+    flex: 1;
+    padding: 11px 10px;
+    cursor: pointer;
+    margin-right: 0;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    white-space: nowrap;
+    color: orange;
+    border: 1px solid #ccc;
+    border-left: none;
+}
+
+
+#error-message,
+#loading-message {
+    color: red;
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+#output-container {
+    width: calc(100% - 2px);
+    /* 确保输出框宽度与输入框一致 */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    /* 取消左边距 */
+    margin-right: 0;
+    /* 取消右边距 */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    /* 按钮居中显示 */
+    margin-top: 10px;
+    width: 100%;
+    /* 按钮容器宽度与输出框一致 */
+    max-width: calc(100% - 10px);
+    /* 最大宽度不超过输出框 */
+    box-sizing: border-box;
+    /* 包括内边距和边框 */
+}
+
+#button-container button {
+    flex: 1;
+    /* 按钮平均分配宽度 */
+    margin: 0 5px;
+    padding: 11px 10px;
+    /* 调整内边距 */
+    cursor: pointer;
+    color: white;
+    border: none;
+    white-space: nowrap;
+    border-radius: 8px;
+    /* 添加圆角效果 */
+    font-size: 14px;
+    /* 统一字体大小 */
+    max-width: 25%;
+    /* 每个按钮最大宽度为25% */
+    overflow: hidden;
+    /* 防止内容溢出 */
+    text-overflow: ellipsis;
+    /* 超出部分显示省略号 */
+}
+
+#copy-output-button {
+    background-color: #039BE5;
+}
+
+#download-jar-button {
+    background-color: #00C853;
+}
+
+#home-button {
+    background-color: #FF6D00;
+}
+
+#clear-button {
+    background-color: #651FFF;
+}
+
+/* 选择项样式 */
+.options {
+    border: 1px solid #ccc;
+    max-height: 293px;
+    /* 最大高度 */
+    overflow-y: auto;
+    /* 超出部分滚动 */
+    display: none;
+    /* 初始隐藏 */
+    position: absolute;
+    /* 绝对定位 */
+    background: white;
+    /* 背景颜色 */
+    z-index: 1000;
+    /* 确保在其他元素之上 */
+    width: calc(100% - 3px);
+    /* 选项列表宽度与输入框和按钮总宽度一致 */
+    left: -1px;
+    /* 确保左侧对齐 */
+
+}
+
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+    color: #000;
+    display: flex;
+    /* 使用Flexbox布局 */
+    justify-content: flex-start;
+    /* 改为左对齐 */
+    white-space: nowrap;
+    /* 防止换行 */
+    overflow: hidden;
+    /* 防止超出部分显示 */
+    gap: 10px;
+    /* 设置名称和URL之间的间距 */
+}
+
+.url {
+    overflow: hidden;
+    /* 超出部分隐藏 */
+    text-overflow: ellipsis;
+    /* 超出部分用省略号表示 */
+    white-space: nowrap;
+    /* 防止换行 */
+    max-width: 200px;
+    /* 设置URL的最大宽度 */
+    margin-left: 10px;
+    /* URL左边距 */
+}
+
+.scrollable {
+    overflow-x: auto;
+    /* 横向滚动 */
+    white-space: nowrap;
+    /* 防止换行 */
+}
+
+.error{
+    width: calc(100% - 10px);
+}
+
+
+
+/* 电脑模式 */
+@media (min-width: 769px) {
+	
+	#container {
+        margin-bottom: 26px;  /* 调整输入框到输出框中间的距离*/
+        position: relative; /* 确保容器是相对定位 */
+	    width: calc(80% - 10px);
+        margin-left: auto;
+        margin-right: auto;	
+    }
+
+    #input-container, #output-container {
+        width: calc(80% - 10px); /* 统一宽度，确保对齐 */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #input-wrapper #clear-input-button {
+        width: 22px; /* 桌面模式下稍大一些 */
+        height: 22px;
+        font-size: 18px; /* 桌面模式下字体稍大 */
+    }
+
+    #output {
+        width: calc(80% - 10px); /* 输出框宽度与输入框和按钮对齐 */
+        height: calc(90% - 10px);
+    }
+
+    #input-field {
+        padding: 15px 30px 15px 15px;
+        /* 桌面模式下增加输入框高度 */
+    }
+
+    #input-container button {
+        flex: 0 1 auto;
+        /* 按钮宽度根据内容自适应 */
+        padding: 15px 20px;
+        /* 桌面模式下增加按钮高度 */
+    }
+
+    #error-message,
+    #loading-message {
+        color: red;
+        display: none;
+        margin-left: 11%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .options {
+        width: calc(80% - 10px);
+        /* 确保选择框宽度与输入框和按钮总宽度一致 */
+        left: 0;
+        right: 0;
+        /* 确保左侧对齐 */
+    }
+
+    /* 新增：调整按钮容器的宽度和居中显示 */
+    #button-container {
+        width: auto;
+        /* 宽度根据内容自适应 */
+        max-width: none;
+        /* 取消最大宽度限制 */
+        justify-content: center;
+        /* 按钮居中显示 */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 新增：调整按钮宽度包裹内容 */
+    #button-container button {
+        flex: 0 1 auto;
+        /* 按钮宽度根据内容自适应 */
+        max-width: none;
+        /* 取消最大宽度限制 */
+        padding: 11px 20px;
+        /* 调整内边距 */
+    }
+}
+
+
+/* 定义渐变动画 */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 设置 footer 样式 */
+footer {
+    position: fixed;
+    /* 固定在页面底部fixed 一起移动absolute*/
+    bottom: 0;
+    /* 距离底部 0 */
+    left: 0;
+    /* 左侧对齐 */
+    width: 100%;
+    /* 宽度占满屏幕 */
+    background-color: #000000;
+    /* 背景颜色 */
+    padding: 20px 0 10px 0;
+    /* 上内边距增加为 20px，下内边距保持 10px 左右内边距为0*/
+    text-align: center;
+    /* 文字居中 */
+    border-top: 1px solid #00ff00;
+    /* 顶部边框 */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    /* 添加阴影 */
+    z-index: 1000;
+    /* 确保 footer 在最上层 */
+}
+
+/* 设置链接样式 */
+footer a {
+    background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* 文字颜色透明 */
+    text-decoration: none;
+    /* 去掉下划线 */
+    transition: background 0.5s ease;
+    animation: gradientAnimation 5s infinite alternate;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* 鼠标悬停时停止动画 */
+footer a:hover {
+    animation-play-state: paused;
+    /* 暂停动画 */
+}
+
+/* 设置 mark 标签样式 */
+footer mark {
+    background-color: #ffff00;
+    color: #ff0000;
+    /* 文字颜色 */
+    padding: 2px 5px;
+    /* 内边距 */
+    border-radius: 3px;
+    /* 圆角 */
+}
+
+.loading .error {
+    color: #ff0033;
+}

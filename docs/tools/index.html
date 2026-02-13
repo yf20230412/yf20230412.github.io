@@ -1,0 +1,2675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
+    <link rel="apple-touch-icon" href="/static/icon/favicon.ico">
+    <link rel="shortcut icon" href="/static/icon/favicon.ico">
+    <link rel="Bookmark" href="/static/icon/favicon.ico">
+    <meta name="keywords" content="工具网,在线,工具,小鱼,书签">
+    <meta name="description" content="这是一个非常Nice的在线书签导航网站">
+    <title>
+        小鱼导航 - 书签网
+    </title>
+    <!-- 引入 Font Awesome CSS 地址：https://fontawesome.com/search-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 阿里巴巴图标引用xiaoyu -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4933040_23y9dv9qet2.css">
+    <!-- 阿里巴巴图标引用xiaoyu2 -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4934841_aggf918bp79.css">
+
+    <style>
+        :root {
+         --primary-color: #4a6fa5;
+        /* 蓝色 */
+         --hover-color: #3a5a8a;
+        /* 浅蓝 */
+         --bg-color: #f5f7fa;
+        /* 淡灰 */
+         --card-color: #ffffff;
+        /* 白色 */
+         --text-color: #333333;
+        /* 黑色 */
+         --light-text: #666666;
+        /* 浅灰 */
+        }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+         body {
+         background-color: var(--bg-color);
+         color: var(--text-color);
+         display: flex;
+         min-height: 100vh;
+        }
+        
+        
+        .category-xy {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1px; /* 你可以根据需要调整间距 */
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        
+        .category-xy a {
+            display: inline-block;
+            text-decoration: none;
+            color: red; /* 导航文字颜色 */
+            font-size: 16px; /* 可以根据需要调整字体大小 */
+        }
+        
+        .category-xy a::after {
+            content: "┃";
+            margin: 0 0.5px;
+            color: #333;
+        }
+        
+        .category-xy a:last-child::after {
+            content: none;
+        }
+        
+        
+        
+         /* LyToday-JS插件 */
+        .hot-panel {
+            width: 370px;
+        }
+        /* 设置图片的样式 */
+         a img, .iconfont {
+         width: 24px;
+        /* 设置图片宽度，与Font Awesome图标大小相似 */
+         height: 24px;
+        /* 设置图片高度，与Font Awesome图标大小相似 */
+         border: 2px solid rgba(0, 0, 0, 0);
+        /* 设置透明边框 */
+         border-radius: 4px;
+        /* 添加圆角 */
+         transition: transform 0.3s ease;
+        /* 添加过渡效果 */
+         vertical-align: middle;
+        /* 垂直对齐，使其与文字对齐 */
+         margin-right:5px;
+        /* 与右边文字的间距 */
+        }
+        /* 鼠标悬停时的样式 */
+         a img, .iconfont:hover {
+         transform: scale(1.1);
+        /* 放大图片 */
+         cursor: pointer;
+        /* 鼠标指针变为手形 */
+        }
+        /* 左侧导航栏 */
+         .sidebar {
+         width: 15%;
+         min-width: 180px;
+         background-color: var(--card-color);
+         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+         padding: 0;
+         position: fixed;
+         height: 100vh;
+         overflow-y: auto;
+         transition: all 0.3s ease;
+         z-index: 1000;
+        }
+        /* 分割线 */
+         .divider {
+         height: 1px;
+         background-color: #eee;
+         margin: 20px 0;
+         width: 100%;
+        }
+        /* 页脚 */
+         .footer {
+         text-align: center;
+        /* 内容整体居中 */
+         padding: 20px 0;
+        /* 上下内边距 */
+        }
+         .footer-copyright p {
+         margin: 8px 0;
+        /* 段落间距 */
+        }
+         .footer-copyright img {
+         margin-right: 5px;
+        /* 图标与文字间距 */
+        }
+         .footer-copyright a {
+         text-decoration: none;
+        /* 去除链接下划线 */
+         color: #6c757d;
+        /* 链接颜色（可自定义） */
+        }
+         .footer-copyright a:hover {
+             text-decoration: underline;
+            /* 鼠标悬停时显示下划线（可选） */
+             color: #fff;
+            /* 悬停颜色（可选） */
+        }
+         .disclaimer {
+             color: #999999;
+            /* 灰色字体 */
+             display: block;
+            /* 转为块级元素，独占一行 */
+             margin-top: 10px;
+            /* 间距 */
+        }
+        /* 左侧导航栏的标题栏样式 */
+         .sidebar-header {
+             display: flex;
+             align-items: center;
+            /* 垂直居中对齐 */
+             justify-content: space-between;
+            /* 两端对齐 */
+             padding: 19px 25px;
+            /* 调整内边距 */
+            
+             background-color: var(--card-color);
+            /* 背景颜色 */
+             border-bottom: 1px solid var(--light-text);
+            /* 底部边框 */
+        }
+        
+        /* 收回左侧栏的按钮样式 */
+         .sidebar-toggle {
+             background: none;
+             border: none;
+             font-size: 24px;
+             cursor: pointer;
+             color: var(--primary-color);
+            /* 使用主色调 */
+        }
+        /* 侧边栏标题样式 */
+         .sidebar-header h1 {
+             font-size: 1.5rem;
+             color: var(--primary-color);
+             margin: 0;
+            /* 重置外边距 */
+             white-space: nowrap;
+            /* 防止文字换行 */
+             flex-grow: 1;
+            /* 使标题占据剩余空间 */
+             text-align: center;
+            /* 文字居中 */
+             padding: 0;
+        }
+         .nav-item {
+         padding: 12px 25px;
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+         transition: all 0.2s;
+         text-decoration: none;
+         color: var(--text-color);
+        }
+         .nav-item:hover {
+         background-color: rgba(74, 111, 165, 0.1);
+         color: var(--primary-color);
+        }
+         .nav-item i {
+         margin-right: 10px;
+         width: 20px;
+         text-align: center;
+        }
+        /* 分类导航样式 */
+         .category-nav {
+         margin-top: 30px;
+         padding: 10px 15px;
+         align-items: center;
+        /* 垂直居中对齐 */
+         justify-content: space-between;
+        /* 两端对齐 */
+        }
+        /*左侧栏目录文字及下划线 */
+         .category-nav h3 {
+         color: #666;
+         font-size: 16px;
+         margin-bottom: 10px;
+         padding-bottom: 5px;
+         border-bottom: 1px solid #eee;
+        }
+        /* 主内容区 */
+         .main-content {
+         flex: 1;
+         margin-left: 15%;
+         padding-top: 80px;
+        /* 根据布局调整 */
+        }
+        /* 确保搜索框与标题栏对齐 */
+         .search-container {
+         max-width: 800px;
+         margin: 0 auto 30px;
+         position: relative;
+         margin-top: 20px;
+        }
+         .search-input {
+         width: 100%;
+         padding: 12px 20px;
+         padding-left: 45px;
+         border: 1px solid #ddd;
+         border-radius: 30px;
+         font-size: 16px;
+         outline: none;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+         transition: all 0.3s;
+        }
+         .search-input:focus {
+         border-color: var(--primary-color);
+         box-shadow: 0 2px 15px rgba(74, 111, 165, 0.2);
+        }
+         .search-icon {
+         position: absolute;
+         left: 15px;
+         top: 50%;
+         transform: translateY(-50%);
+         color: var(--light-text);
+        }
+        /* 分类卡片 */
+         .category {
+         background-color: var(--card-color);
+         border-radius: 8px;
+         box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+         margin-bottom: 20px;
+         overflow: hidden;
+        }
+         .category-header {
+         padding: 15px 20px;
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+         background-color: var(--primary-color);
+         color: white;
+         font-weight: bold;
+        }
+         .category-header i {
+         margin-right: 10px;
+         font-size: 18px;
+        }
+         .category-content {
+         padding: 8px;
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+         gap: 5px;
+        }
+         .category-content span {
+         font-size: 14px;
+        }
+         .bookmark-item {
+         display: flex;
+         align-items: center;
+         padding: 10px 15px;
+         background-color: rgba(74, 111, 165, 0.05);
+         border-radius: 6px;
+         transition: all 0.2s;
+         text-decoration: none;
+         color: var(--text-color);
+        }
+         .bookmark-item:hover {
+         background-color: rgba(74, 111, 165, 0.1);
+         transform: translateY(-2px);
+        }
+         .bookmark-item i {
+         margin-right: 10px;
+         color: var(--primary-color);
+         width: 20px;
+         text-align: center;
+        }
+        /* 快捷操作按钮 */
+         .quick-actions {
+         position: fixed;
+         bottom: 30px;
+         right: 30px;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         z-index: 99;
+        }
+         .quick-btn {
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         background-color: var(--primary-color);
+         color: white;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         cursor: pointer;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+         transition: all 0.2s;
+        }
+         .quick-btn:hover {
+         background-color: var(--hover-color);
+         transform: translateY(-3px);
+        }
+        /* 响应式设计 */
+         .sidebar {
+             transform: translateX(-100%);
+             width: 250px;
+        }
+         .sidebar.active {
+             transform: translateX(0);
+        }
+         .main-content {
+             margin-left: 0;
+             padding: 20px;
+             padding-top: 90px;
+            /* 增大以适应新图片标题栏 */
+        }
+         .category-content {
+             grid-template-columns: repeat(2, 1fr);
+            /* 移动端一行两个 */
+        }
+         .category-nav {
+             padding: 0 10px;
+        }
+        /* 新增顶部容器样式 */
+         .top-bar-container {
+             position: fixed;
+             top: 0;
+             left: 0;
+             right: 0;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+            /* 改为center实现真正居中 */
+             padding: 0 15px;
+             height: 70px;
+            /* 统一高度 */
+             background-color: white;
+             z-index: 999;
+        }
+        /* 移动端菜单切换按钮 */
+         .menu-toggle {
+             display: block;
+             position: absolute;
+            /* 改为绝对定位 */
+             background-color: transparent;
+            /* 确保背景透明 */
+             left: 15px;
+             order: 1;
+            /* 左侧第一个元素 */
+             flex-shrink: 0;
+            /* 禁止收缩 */
+             width: 60px;
+             height: 60px;
+             padding: 0px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             cursor: pointer;
+             box-sizing: border-box;
+            /* 确保宽度和高度包括边框 */
+             z-index: 999;
+        }
+         .menu-toggle i {
+             font-size: 32px;
+            /* 确保图标大小与按钮匹配 */
+             color: #666666;
+        }
+        /* 标题框 */
+         .mobile-header {
+             position: relative;
+             display: flex;
+             /* 确保为flex布局 */
+             align-items: center;
+             /* 垂直居中 */
+        }
+         .mobile-logo {
+             width: 46px;
+             height: 46px;
+             margin-right: 1px;
+             flex-shrink: 0;
+            /* 防止图片被压缩 */
+        }
+         .mobile-title {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+            /* 内容居中 */
+             min-width: 0;
+            /* 允许文本溢出处理 */
+        }
+         .main-title {
+             font-size: 16px;
+             font-weight: bold;
+             white-space: nowrap;
+            /* 强制单行显示 */
+             overflow: hidden;
+             text-overflow: ellipsis;
+            /* 文字过长显示省略号 */
+             text-align: center;
+            /* 主标题居中 */
+             width: 100%;
+            /* 确保宽度填满 */
+        }
+         #xiaoyu {
+             background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
+             background-size: 200% 100%;
+             -webkit-background-clip: text;
+             background-clip: text;
+             color: transparent;
+            /* 文字颜色透明 */
+             transition: background 0.5s ease;
+             animation: flowCss 5s infinite alternate;
+             display: inline-block;
+             font-weight: bold;
+             letter-spacing: 2px;
+        }
+         @keyframes flowCss {
+             0% {
+                 background-position: 0% 50%;
+            }
+             50% {
+                 background-position: 100% 50%;
+            }
+             100% {
+                 background-position: 0% 50%;
+            }
+        }
+         .sub-domain {
+             font-size: 12px;
+             color: var(--light-text);
+             margin-top: 2px;
+             text-align: center;
+            /* 子域名居中 */
+             width: 100%;
+            /* 确保居中基于整个标题区域 */
+        }
+        /* 主题切换按钮样式 */
+         .theme-toggle {
+             position: absolute;
+            /* 改为绝对定位 */
+             background-color: transparent;
+            /* 确保背景透明 */
+             right: 15px;
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             cursor: pointer;
+             transition: all 0.3s ease;
+        }
+        /* 如果需要，可以为图标添加额外的样式 */
+         .theme-toggle i {
+             color: #666666;
+             font-size: 24px;
+        }
+        /* 暗色模式样式 */
+         body.dark-mode {
+             --bg-color: #1a1a1a;
+             --card-color: #2d2d2d;
+             --text-color: #f0f0f0;
+             --light-text: #aaaaaa;
+        }
+         body.dark-mode .theme-toggle {
+             background-color: transparent;
+            /* 确保背景透明 */
+        }
+         body.dark-mode .theme-toggle i {
+             color: white;
+        }
+        body.dark-mode .menu-toggle i {
+             color: white;
+        }
+         body.dark-mode .top-bar-container {
+             background-color: black;
+        }
+         body.dark-mode .sidebar-header h1 {
+             color: #AAC9FF;
+            /* 淡蓝色*/
+        }
+         .dark-mode .category-nav h3 {
+             color: #aaa;
+             border-bottom-color: #444;
+        }
+        /* 分割线暗色模式适配 */
+         .dark-mode .divider {
+             background-color: #444;
+        }
+         .footer {
+             padding: 10px 15px;
+        }
+        
+        @media (min-width: 769px) {
+        .menu-toggle, .sidebar-toggle {
+            display: none;
+           /* 电脑端隐藏移动端特有元素 */
+        }
+        
+        .category-xy {
+            margin-left: 0px;
+            flex-wrap: nowrap; /* 防止自动换行 */
+            gap: 1px; /* 你可以根据需要调整间距 */
+            align-items: center;
+            margin-top: 90px;
+            overflow-x: auto; /* 添加水平滚动条 */
+            white-space: nowrap; /* 确保内容在一行内显示 */
+            padding: 0 10px; /* 添加内边距，避免滚动条与内容紧贴 */
+        }
+        
+        .sidebar {
+            transform: translateX(0);
+            /* 确保侧边栏可见 */
+            width: 15%;
+            min-width: 220px;
+        }
+        
+        .sidebar-header {
+            padding: 16px 20px;
+        }
+        
+        .main-content {
+            margin-left: max(15%, 230px); /* 取较大值，左侧距离至少230px */
+            padding: 30px;
+            padding-top: 30px;
+           /* 重置移动端的padding-top */
+               }
+        .category-content {
+            grid-template-columns: repeat(4, 1fr);
+           /* 电脑端一行四个 */
+            gap: 20px;
+           /* 增大间距 */
+               }
+               /* 电脑端分类卡片优化 */
+        .category {
+            margin-bottom: 30px;
+           /* 增大分类间距 */
+               }
+        .bookmark-item {
+            padding: 12px 20px;
+           /* 增大内边距 */
+            font-size: 15px;
+           /* 稍大字体 */
+               }
+               /* 搜索栏优化 */
+        .search-container {
+            max-width: 900px;
+            margin-bottom: 40px;
+               }
+               .search-input {
+           padding: 15px 25px;
+           padding-left: 50px;
+           font-size: 17px;
+              }
+               /* 侧边栏优化 */
+        .nav-item {
+            padding: 14px 30px;
+            font-size: 15px;
+               }
+        .sidebar-header h1 {
+            font-size: 1.8rem;
+           /* 增大标题 */
+               }
+            }
+          
+    </style>
+</head>
+
+<body>
+    <!-- 左侧导航栏 -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1>
+                书签导航
+            </h1>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-arrow-left "></i>
+            </button>
+        </div>
+        <a href="/533" class="nav-item">
+            <!--<i class="fas fa-home"></i>-->
+            <i class="iconfont icon-zhuye"></i>
+            <span>
+                主页
+            </span>
+        </a>
+        <a href="/bk" class="nav-item">
+            <!--<i class="fas fa-book"></i>-->
+            <i class="iconfont icon-boke"></i>
+            <span>
+                博客
+            </span>
+        </a>
+        <a href="/588" class="nav-item">
+            <!--<i class="fas fa-coins"></i>-->
+            <i class="iconfont icon-a-zu12241"></i>
+            <span>
+                打赏作者
+            </span>
+        </a>
+        <a href="/wo" class="nav-item">
+            <!--<i class="fas fa-envelope"></i>-->
+            <i class="iconfont icon-lianxiwomen"></i>
+            <span>
+                联系作者
+            </span>
+        </a>
+        <a href="http://2015888.xyz/222/" class="nav-item">
+            <!--<i class="fas fa-envelope"></i>-->
+            <i class="iconfont icon-liuyanban"></i>
+            <span>
+                留言反馈
+            </span>
+        </a>
+        <!-- 添加分割线 -->
+        <div class="divider"></div>
+        <!-- 新增的分类导航 -->
+        <div class="category-nav">
+            <h3>
+                分类导航
+            </h3>
+            <a href="#TVBox加解密" class="nav-item category-nav-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>
+                    TVBox加解密
+                </span>
+            </a>
+            <a href="#站长工具" class="nav-item category-nav-item">
+                <i class="fas fa-laptop-code"></i>
+                <span>
+                    站长工具
+                </span>
+            </a>
+            <a href="#交流论坛" class="nav-item category-nav-item">
+                <i class="fas fa-users"></i>
+                <span>
+                    交流论坛
+                </span>
+            </a>
+            <a href="#GitHub仓库" class="nav-item category-nav-item">
+                <i class="fa-brands fa-github"></i>
+                <span>
+                    GitHub仓库
+                </span>
+            </a>
+            <a href="#实用工具" class="nav-item category-nav-item">
+                <i class="fas fa-cogs"></i>
+                <span>
+                    实用工具
+                </span>
+            </a>
+            <a href="#网盘" class="nav-item category-nav-item">
+                <i class="fas fa-hdd"></i>
+                <span>
+                    网盘
+                </span>
+            </a>
+            <a href="#AI智能" class="nav-item category-nav-item">
+                <i class="fas fa-robot"></i>
+                <span>
+                    AI智能
+                </span>
+            </a>
+            <a href="#影视" class="nav-item category-nav-item">
+                <i class="fas fa-film"></i>
+                <span>
+                    影视
+                </span>
+            </a>
+            <a href="#开发工具" class="nav-item category-nav-item">
+                <i class="fas fa-code"></i>
+                <span>
+                    开发工具
+                </span>
+            </a>
+            <a href="#格式化代码" class="nav-item category-nav-item">
+                <i class="fas fa-hdd"></i>
+                <span>
+                    格式化代码
+                </span>
+            </a>
+            <a href="#图片工具" class="nav-item category-nav-item">
+                <i class="fas fa-image"></i>
+                <span>
+                    图片工具
+                </span>
+            </a>
+        </div>
+    </div>
+    <!-- 顶部容器 -->
+    <div class="top-bar-container">
+        <!-- 移动端菜单切换按钮 -->
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- 标题显示框 -->
+        <div class="mobile-header">
+            <img src="https://master.2015888.xyz/svg/1448994680.svg" alt="Logo" class="mobile-logo">
+            <div class="mobile-title">
+                <div class="main-title" id="xiaoyu">
+                    小鱼书签导航
+                </div>
+                <div class="sub-domain">
+                    2015888.xyz
+                </div>
+            </div>
+        </div>
+        <!-- 背景切换按钮 -->
+        <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+    <!-- 主内容区 -->
+    <div class="main-content">
+        <!-- 横向导航栏 -->
+        <div class="category-xy">
+            <a href="#TVBox加解密" class="category-xy-item">
+                <span>
+                    TVBox加解密
+                </span>
+            </a>
+            <a href="#站长工具" class="category-xy-item">
+                <span>
+                    站长工具
+                </span>
+            </a>
+            <a href="#交流论坛" class="category-xy-item">
+                <span>
+                    交流论坛
+                </span>
+            </a>
+            <a href="#GitHub仓库" class="category-xy-item">
+                <span>
+                    GitHub仓库
+                </span>
+            </a>
+            <a href="#实用工具" class="category-xy-item">
+                <span>
+                    实用工具
+                </span>
+            </a>
+            <a href="#网盘" class="category-xy-item">
+                <span>
+                    网盘
+                </span>
+            </a>
+            <a href="#AI智能" class="category-xy-item">
+                <span>
+                    AI智能
+                </span>
+            </a>
+            <a href="#影视" class="category-xy-item">
+                <span>
+                    影视
+                </span>
+            </a>
+            <a href="#开发工具" class="category-xy-item">
+                <span>
+                    开发工具
+                </span>
+            </a>
+            <a href="#格式化代码" class="category-xy-item">
+                <span>
+                    格式化代码
+                </span>
+            </a>
+            <a href="#图片工具" class="category-xy-item">
+                <span>
+                    图片工具
+                </span>
+            </a>
+        </div>
+        <!-- 搜索栏 -->
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="输入关键字搜索……" id="searchInput">
+        </div>
+        <!-- TVBox加解密分类 -->
+        <div class="category" id="TVBox加解密">
+            <div class="category-header">
+                <i class="fas fa-shield-alt"></i>
+                <span>
+                    TVBox加解密
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- TVBox加解密 -->
+                <a href="/jiemi" class="bookmark-item">
+                    <i class="iconfont icon-icon_jiemi"></i>
+                    <span>
+                        接口解密一
+                    </span>
+                </a>
+                <a href="https://412.2015888.xyz/jiemi" class="bookmark-item">
+                    <i class="iconfont icon-jiemi"></i>
+                    <span>
+                        接口解密二
+                    </span>
+                </a>
+                <a href="https://www.xn--sss604efuw.com/jm/" class="bookmark-item">
+                    <i class="iconfont icon-yuechi"></i>
+                    <span>
+                        接口解密三
+                    </span>
+                </a>
+                <a href="/jm" class="bookmark-item">
+                    <i class="iconfont icon-jiamijiemi"></i>
+                    <span>
+                        接口加密
+                    </span>
+                </a>
+                <a href="/128" class="bookmark-item">
+                    <i class="iconfont icon-jiamijiemi1"></i>
+                    <span>
+                        接口AES加解密
+                    </span>
+                </a>
+                <a href="/m3u" class="bookmark-item">
+                    <i class="iconfont icon-Txt"></i>
+                    <span>
+                        TXT与M3U互转
+                    </span>
+                </a>
+                <a href="/m3u8" class="bookmark-item">
+                    <i class="iconfont icon-Txt"></i>
+                    <span>
+                        数据工坊
+                    </span>
+                </a>
+                <a href="https://epg.iill.top/Conversion.php" class="bookmark-item">
+                    <i class="iconfont icon-Txt"></i>
+                    <span>
+                        直播源转换的
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- 站长工具 -->
+        <div class="category" id="站长工具">
+            <div class="category-header">
+                <i class="fas fa-laptop-code"></i>
+                <span>
+                    站长工具
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 站长工具 -->
+                <a href="https://a.2015888.xyz/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/a.2015888.ico" alt="a.2015888.xyz favicon" />
+                    <span>
+                        个人主页
+                    </span>
+                </a>
+                <a href="/1115" class="bookmark-item">
+                    <i class="iconfont icon-xiaoyugan"></i>
+                    <span>
+                        小鱼影视
+                    </span>
+                </a>
+                <a href="/tools3/" class="bookmark-item">
+                    <i class="iconfont icon-gongjuxiang1"></i>
+                    <span>
+                        小鱼工具箱
+                    </span>
+                </a>
+                <a href="https://www.json.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.json.cn.ico" alt="www.json.cn favicon" />
+                    <span>
+                        全能工具箱
+                    </span>
+                </a>
+                <a href="/916" class="bookmark-item">
+                    <i class="iconfont icon-mianzeshengming"></i>
+                    <span>
+                        免责声明
+                    </span>
+                </a>
+                <a href="/box2" class="bookmark-item">
+                    <i class="iconfont icon-shipinhezi"></i>
+                    <span>
+                        TVBox接口
+                    </span>
+                </a>
+                <a href="/iptv" class="bookmark-item">
+                    <i class="iconfont icon-02f"></i>
+                    <span>
+                        直播接口
+                    </span>
+                </a>
+                <a href="/sq" class="bookmark-item">
+                    <i class="iconfont icon-yingshi1"></i>
+                    <span>
+                        影视下载
+                    </span>
+                </a>             
+                <a href="https://nbtool8.com/index.html" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/nbtool8.ico" alt="nbtool8.com favicon" />
+                    <span>
+                        NB自签
+                    </span>
+                </a>
+                <a href="https://app.iyouhun.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/app.iyouhun.ico" alt="app.iyouhun.com favicon" />
+                    <span>
+                        优质盒子下载
+                    </span>
+                </a>
+                <a href="https://zouming.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/zouming.ico" alt="zouming.com favicon" />
+                    <span>
+                        影用仓库下载
+                    </span>
+                </a>
+                <a href="/ObfuscateLink" class="bookmark-item">
+                    <i class="iconfont icon-lianjie"></i>
+                    <span>
+                        链接混淆与提取
+                    </span>
+                </a>
+                <a href="/888" class="bookmark-item">
+                    <i class="iconfont icon-yinle"></i>
+                    <span>
+                        VIP音乐解锁
+                    </span>
+                </a>
+                <a href="/CloudMusic" class="bookmark-item">
+                    <i class="iconfont icon-music"></i>
+                    <span>
+                        网易云音乐解析
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- 交流论坛分类 -->
+        <div class="category" id="交流论坛">
+            <div class="category-header">
+                <i class="fas fa-users"></i>
+                <span>
+                    交流论坛
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 论坛类网站 -->
+                <a href="https://www.52pojie.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.52pojie.cn.ico" alt="www.52pojie.cn favicon" />
+                    <span>
+                        吾爱破解
+                    </span>
+                </a>
+                <a href="https://www.znds.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.znds.com.ico" alt="www.znds.com favicon" />
+                    <span>
+                        智能电视网
+                    </span>
+                </a>
+                <a href="https://bbs.binmt.cc/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/mt2.cn.ico" alt="bbs.binmt.cc favicon" />
+                    <span>
+                        MT论坛
+                    </span>
+                </a>
+                <a href="https://bbs.zol.com.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/bbs.zol.com.cn.ico" alt="bbs.zol.com.cn favicon" />
+                    <span>
+                        中关村论坛
+                    </span>
+                </a>
+                <a href="https://www.right.com.cn/forum/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.right.com.ico" alt="www.right.com.cn favicon" />
+                    <span>
+                        恩山无线论坛
+                    </span>
+                </a>
+                
+                <a href="https://iptv.cc/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/iptv.ico" alt="iptv.cc favicon" />
+                    <span>
+                        IPTV论坛
+                    </span>
+                </a>
+                <a href="https://m.jb51.net/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/m.jb51.ico" alt="m.jb51.net favicon" />
+                    <span>
+                        脚本之家
+                    </span>
+                </a>
+                <a href="https://www.chongbuluo.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.chongbuluo.ico" alt="www.chongbuluo.com favicon" />
+                    <span>
+                        虫部落
+                    </span>
+                </a>
+                <a href="https://www.cnblogs.com/cate/javascript/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.cnblogs.ico" alt="www.cnblogs.com favicon" />
+                    <span>
+                        博客园
+                    </span>
+                </a>
+                <a href=" https://juejin.cn/" class="bookmark-item">
+                    <i class="iconfont icon-juejin"></i>
+                    <span>
+                        掘金
+                    </span>
+                </a>
+                <a href="https://bbs.sxtv.top/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/bbs.sxtv.ico" alt="bbs.sxtv.top favicon" />
+                    <span>
+                        神仙论坛
+                    </span>
+                </a>
+                <a href="https://www.iopq.net/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.iopq.ico" alt="www.iopq.net favicon" />
+                    <span>
+                        游戏藏宝湾论坛
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- GitHub仓库 -->
+        <div class="category" id="GitHub仓库">
+            <div class="category-header">
+                <i class="fa-brands fa-github"></i>
+                <span>
+                    GitHub仓库
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- GitHub仓库 -->
+                <a href="https://mt2.cn/download/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/mt2.cn.ico" alt="mt2.cn favicon" />
+                    <span>
+                        MT文件管理
+                    </span>
+                </a>
+                <a href="http://normalplayer.top/" class="bookmark-item">
+                    <i class="iconfont icon-wenjianzhankai"></i>
+                    <span>
+                        NP文件管理
+                    </span>
+                </a>
+                <a href="https://wwty.lanzouj.com/b048jxb9a#6666" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/f-droid.ico" alt="wwty.lanzouj.com favicon" />
+                    <span>
+                        应用管家下载
+                    </span>
+                </a>
+                <a href="https://www.yecao.net/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.yecao.ico" alt="www.yecao.net favicon" />
+                    <span>
+                        野草助手
+                    </span>
+                </a>
+                <a href="https://zhushou.huan.tv/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/zhushou.huan.ico" alt="zhushou.huan.tv favicon" />
+                    <span>
+                        欢视助手
+                    </span>
+                </a>
+                <a href="https://f-droid.org/en/packages/com.termux/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/f-droid.ico" alt="f-droid.org favicon" />
+                    <span>
+                        Termux
+                    </span>
+                </a>
+                <a href="https://github.com/RikkaApps/Shizuku/releases" class="bookmark-item">
+                    <i class="iconfont icon-kaifagongju2"></i>
+                    <span>
+                        Shizuku
+                    </span>
+                </a>
+                <!-- 传输工具 -->
+                <a href="https://localsend.org/zh-CN/download" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/localsend.ico" alt="localsend.org favicon" />
+                    <span>
+                        localsend传输
+                    </span>
+                </a>
+                <a href="https://musetransfer.com/m/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/musetransfer.ico" alt="musetransfer.com favicon" />
+                    <span>
+                        musetransfer图床
+                    </span>
+                </a>
+                <a href="https://wormhole.app/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/wormhole.ico" alt="wormhole.app favicon" />
+                    <span>
+                        wormhole图床
+                    </span>
+                </a>
+                <a href="https://netcut.cn/1isdh365m" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/netcut.ico" alt="netcut.cn favicon" />
+                    <span>
+                        网络剪切板
+                    </span>
+                </a>
+                <!-- 音乐 -->
+                <a href="https://lxmusic.toside.cn/download" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/lxmusic.toside.ico" alt="lxmusic.toside.cn favicon" />
+                    <span>
+                        落雪音乐
+                    </span>
+                </a>
+                <a href="https://github.com/maotoumao/MusicFree" class="bookmark-item">
+                    <i class="iconfont icon-music"></i>
+                    <span>
+                        MusicFree音乐
+                    </span>
+                </a>
+                <a href="https://github.com/gedoor/legado" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/gedoor.github.ico" alt="gedoor.github.io favicon" />
+                    <span>
+                        阅读App
+                    </span>
+                </a>
+                <a href="https://www.yckceo.com/yuedu/shuyuans/index.html" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.yckceo.ico" alt="www.yckceo.com favicon" />
+                    <span>
+                        阅读书源
+                    </span>
+                </a>
+
+                <!-- 点播 -->
+                <a href="https://github.com/FongMi/TV" class="bookmark-item">
+                    <i class="iconfont icon-shipinhezi"></i>
+                    <span>
+                        FongMi
+                    </span>
+                </a>
+                <a href="https://github.com/o0HalfLife0o/TVBoxOSC/releases" class="bookmark-item">
+                    <i class="iconfont icon-shipinhezi"></i>
+                    <span>
+                        小白盒
+                    </span>
+                </a>
+                <a href="https://github.com/MyShellTV/ShellTV" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/shelltv_white.ico" alt="ShellTV favicon" />
+                    <span>
+                        MyShellTV
+                    </span>
+                </a>
+                <a href="http://xpgtv.com/" class="bookmark-item">
+                    <i class="iconfont icon-shipinhezi"></i>
+                    <span>
+                        小苹果
+                    </span>
+                </a>
+                <a href="https://haikuo.lanzouf.com/u/GoldRiver" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/haikuo.lanzouf.ico" alt="haikuo.lanzouf.com favicon" />
+                    <span>
+                        海阔视界
+                    </span>
+                </a>
+                <a href="https://www.sourcepower.top/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.sourcepower.ico" alt="www.sourcepower.top favicon" />
+                    <span>
+                        源动力
+                    </span>
+                </a>
+                <!-- 直播 -->
+                <a href="https://televizo.net/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/televizo.ico" alt="televizo.net favicon" />
+                    <span>
+                        Televizo
+                    </span>
+                </a>
+                <a href="https://y977.com/tv/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/y977.ico" alt="y977.com favicon" />
+                    <span>
+                        小飞电视
+                    </span>
+                </a>
+                <a href="https://github.com/andandroidor/ourtv/releases/" class="bookmark-item">
+                    <i class="iconfont icon-zhibo"></i>
+                    <span>
+                        ourtv
+                    </span>
+                </a>
+                <a href="https://github.com/hxh19950701/WebViewTvLive" class="bookmark-item">
+                    <i class="iconfont icon-zhibo"></i>
+                    <span>
+                        WebViewTvLive
+                    </span>
+                </a>
+                <a href="https://github.com/HTWMedia/HTV" class="bookmark-item">
+                    <i class="iconfont icon-zhibo"></i>
+                    <span>
+                        HTV
+                    </span>
+                </a>
+
+                <a href="https://github.com/xiaoyaocz/dart_simple_live/releases" class="bookmark-item">
+                    <i class="iconfont icon-zhibo"></i>
+                    <span>
+                        simple_live
+                    </span>
+                </a>
+                <!-- 直播订阅源 -->
+                <a href="https://github.com/xisohi/IPTV-Multicast-source" class="bookmark-item">
+                    <i class="iconfont icon-APIjiekou"></i>
+                    <span>
+                        IPTV组播源
+                    </span>
+                </a>
+                <a href="https://github.com/suxuang/myIPTV/" class="bookmark-item">
+                    <i class="iconfont icon-APIjiekou"></i>
+                    <span>
+                        myIPTV
+                    </span>
+                </a>
+                <!-- 去广 -->
+                <a href="https://github.com/gkd-kit/gkd" class="bookmark-item">
+                    <i class="iconfont icon-quguanggao"></i>
+                    <span>
+                        GKD去广
+                    </span>
+                </a>
+                <a href="https://www.18bit.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.18bit.ico" alt="www.18bit.cn favicon" />
+                    <span>
+                        18bit去广
+                    </span>
+                </a>
+                <a href="https://github.com/blackmatrix7/ios_rule_script/tree/master/rule" class="bookmark-item">
+                    <i class="iconfont icon-quguanggao"></i>
+                    <span>
+                        blackmatrix7去广
+                    </span>
+                </a>
+                <a href="https://github.com/ddgksf2013/ddgksf2013" class="bookmark-item">
+                    <i class="iconfont icon-quguanggao"></i>
+                    <span>
+                        墨鱼去广
+                    </span>
+                </a>
+                <a href="https://awavenue.top/Sub.html" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/awavenue.ico" alt="awavenue.top favicon" />
+                    <span>
+                        秋风去广规则
+                    </span>
+                </a>
+                <!-- 代理软件 -->
+                <a href="https://doc.miyun.app/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/doc.miyun.ico" alt="doc.miyun.app favicon" />
+                    <span>
+                        觅云
+                    </span>
+                </a>
+                <a href="https://github.com/SagerNet/sing-box" class="bookmark-item">
+                    <i class="iconfont icon-channel"></i>
+                    <span>
+                        sing-box
+                    </span>
+                </a>
+                <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases" class="bookmark-item">
+                    <i class="iconfont icon-channel"></i>
+                    <span>
+                        ClashMeta
+                    </span>
+                </a>
+                <a href="https://github.com/2dust/v2rayNG/releases" class="bookmark-item">
+                    <i class="iconfont icon-channel"></i>
+                    <span>
+                        v2rayNG
+                    </span>
+                </a>
+                <a href="https://gh-proxy.com/https://github.com/cfwtf/clash_for_windows/releases/download/0.20.39/Clash.for.Windows.Setup.0.20.39.exe" class="bookmark-item">
+                    <i class="iconfont icon-weibiaoti-_huabanfuben-copy-copy-copy"></i>
+                    <span>
+                        Clash for Windows
+                    </span>
+                </a>
+
+                <!-- 在线订阅转换 -->
+                <a href="https://subconverter-rs.netlify.app/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/subconverter-rs.netlify.ico" alt="subconverter-rs.netlify.app favicon" />
+                    <span>
+                        subconverter订阅转换
+                    </span>
+                </a>
+                <a href="https://zh.momobaby.org/" class="bookmark-item">
+                    <i class="iconfont icon-dingyue1"></i>
+                    <span>
+                        momobaby订阅转换
+                    </span>
+                </a>
+                <a href="https://suburl.v1.mk/" class="bookmark-item">
+                    <i class="iconfont icon-dingyue1"></i>
+                    <span>
+                        suburl订阅转换
+                    </span>
+                </a>
+                <a href="https://acl4ssr-sub.github.io/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/acl4ssr-sub.github.ico" alt="acl4ssr-sub.github.io favicon" />
+                    <span>
+                        acl4ssr订阅转换
+                    </span>
+                </a>
+                <a href="https://clash2sfa.xmdhs.com/" class="bookmark-item">
+                    <i class="iconfont icon-dingyue"></i>
+                    <span>
+                        clash2sfa订阅转换
+                    </span>
+                </a>
+                <a href="https://mihomo.haxtop.ggff.net/" class="bookmark-item">
+                    <i class="iconfont icon-dingyue1"></i>
+                    <span>
+                        mihomo订阅转换
+                    </span>
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- 实用工具分类 -->
+        <div class="category" id="实用工具">
+            <div class="category-header">
+                <i class="fas fa-cogs"></i>
+                <span>
+                    实用工具
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 实用工具 -->
+                <a href="https://myhkw.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/myhkw.ico" alt="myhkw.cn favicon" />
+                    <span>
+                        浩空音乐播放器
+                    </span>
+                </a>
+                <a href="https://musicplayer.xfyun.club/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/musicplayer.xfyun.ico" alt="musicplayer.xfyun.club favicon" />
+                    <span>
+                        小枫音乐播放器
+                    </span>
+                </a>
+                <a href="https://api.kxzjoker.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/api.kxzjoker.ico" alt="api.kxzjoker.cn favicon" />
+                    <span>
+                        看戏仔api
+                    </span>
+                </a>
+                <a href="https://api.vvhan.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/api.vvhan.ico" alt="api.vvhan.com favicon" />
+                    <span>
+                        韩小韩api
+                    </span>
+                </a>
+                <a href="https://markza.toolooz.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/markza.toolooz.svg" alt="markza.toolooz.com favicon" />
+                    <span>
+                        Markza图标设计
+                    </span>
+                </a>
+                <a href="https://www.logosc.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.logosc.svg" alt="www.logosc.cn favicon" />
+                    <span>
+                        标小志图标设计
+                    </span>
+                </a>
+                <a href="https://www.uugai.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.uugai.ico" alt="www.uugai.com favicon" />
+                    <span>
+                        U钙图标设计
+                    </span>
+                </a>
+                <a href="https://wuruihong.com/tools/ico-generator" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/wuruihong.ico" alt="wuruihong.com favicon" />
+                    <span>
+                        ico图标生成器
+                    </span>
+                </a>
+                <a href="https://www.emojiall.com/zh-hans" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.emojiall.ico" alt="www.emojiall.com favicon" />
+                    <span>
+                        Emoji表情符号
+                    </span>
+                </a>
+                <a href="https://www.cnkuai.cn/zhuanma.asp?act=save" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.cnkuai.ico" alt="www.cnkuai.cn favicon" />
+                    <span>
+                        中文域名转码
+                    </span>
+                </a>
+                <a href="https://tool.liumingye.cn/m3u8/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/tool.liumingye.ico" alt="tool.liumingye.cn favicon" />
+                    <span>
+                        m3u8在线播放器
+                    </span>
+                </a>
+                <a href="https://jiagu.360.cn/#/global/details/app" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/jiagu.360.ico" alt="jiagu.360.cn favicon" />
+                    <span>
+                        360加固
+                    </span>
+                </a>
+                <a href="http://www.sailtool.com/wenzitexiao/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.sailtool.ico" alt="www.sailtool.com favicon" />
+                    <span>
+                        彩色特效文字
+                    </span>
+                </a>
+                <a href="https://favicon.im/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/favicon.ico" alt="favicon.im favicon" />
+                    <span>
+                        favicon图标
+                    </span>
+                </a>
+                <a href="https://fontawesome.com/search" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/fontawesome.ico" alt="fontawesome.com favicon" />
+                    <span>
+                        Awesome图标
+                    </span>
+                </a>
+                <a href="https://iconpark.oceanengine.com/official" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/iconpark.oceanengine.svg" alt="iconpark.oceanengine.com favicon" />
+                    <span>
+                        iconpark图标
+                    </span>
+                </a>
+                <a href="https://www.svgrepo.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.svgrepo.ico" alt="www.svgrepo.com favicon" />
+                    <span>
+                        svgrepo图标
+                    </span>
+                </a>
+                <a href="https://primer.style/octicons/#16px" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/primer.svg" alt="primer.style favicon" />
+                    <span>
+                        primer图标
+                    </span>
+                </a>
+                <a href="https://www.qrdream.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.qrdream.ico" alt="www.qrdream.com favicon" />
+                    <span>
+                        二维码梦工厂
+                    </span>
+                </a>
+                <a href="https://qr.mewx.art/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/qr.mewx.ico" alt="qr.mewx.art favicon" />
+                    <span>
+                        星月熊二维码
+                    </span>
+                </a>
+                <a href="https://qrbtf.com/zh" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/qrbtf.ico" alt="qrbtf.com favicon" />
+                    <span>
+                        qrbtf二维码
+                    </span>
+                </a>
+                <a href="https://tools.pearktrue.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/tools.pearktrue.ico" alt="tools.pearktrue.cn favicon" />
+                    <span>
+                        PearTools工具箱
+                    </span>
+                </a>
+                <a href="https://betahub.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/betahub.ico" alt="betahub.cn favicon" />
+                    <span>
+                        尝鲜派
+                    </span>
+                </a>
+                <a href="https://1024tools.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/1024tools.ico" alt="1024tools.com favicon" />
+                    <span>
+                        1024工具箱
+                    </span>
+                </a>
+                <a href="https://ohttps.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/ohttps.ico" alt="ohttps.com favicon" />
+                    <span>
+                        免费SSL证书
+                    </span>
+                </a>
+                <a href="http://tools.teyonds.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/tools.teyonds.ico" alt="tools.teyonds.com favicon" />
+                    <span>
+                        聚合工具箱
+                    </span>
+                </a>
+                <a href="https://www.juwanhezi.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.juwanhezi.ico" alt="www.juwanhezi.com favicon" />
+                    <span>
+                        聚玩盒子
+                    </span>
+                </a>
+                <a href="https://www.hefentv.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.hefentv.ico" alt="www.hefentv.cn favicon" />
+                    <span>
+                        盒子汇
+                    </span>
+                </a>
+                <a href="https://www.jikejiang.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.jikejiang.ico" alt="www.jikejiang.com favicon" />
+                    <span>
+                        极客酱
+                    </span>
+                </a>
+                <a href="https://duo.hz.cz/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/duo.hz.ico" alt="duo.hz.cz favicon" />
+                    <span>
+                        大聪明导航
+                    </span>
+                </a>
+                <a href="https://www.sixyin.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.sixyin.ico" alt="www.sixyin.com favicon" />
+                    <span>
+                        六音软件
+                    </span>
+                </a>               
+                <a href="https://www.bgrdh.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.bgrdh.ico" alt="www.bgrdh.com favicon" />
+                    <span>
+                        办公人导航
+                    </span>
+                </a>
+                <a href="https://www.miguyu.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.miguyu.ico" alt="www.miguyu.com favicon" />
+                    <span>
+                        咪咕鱼导航
+                    </span>
+                </a>
+                <a href="https://adzhp.cc/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/adzhp.ico" alt="adzhp.cc favicon" />
+                    <span>
+                        爱达杂货铺导航
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- 网盘分类 -->
+        <div class="category" id="网盘">
+            <div class="category-header">
+                <i class="fas fa-hdd"></i>
+                <span>
+                    网盘
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 各大平台网盘 -->
+                <a href="https://www.aliyundrive.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.alipan.ico" alt="www.alipan.com favicon" />
+                    <span>
+                        阿里云盘
+                    </span>
+                </a>
+                <a href="https://pan.baidu.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/pan.baidu.ico" alt="pan.baidu.com favicon (large)" />
+                    <span>
+                        百度网盘
+                    </span>
+                </a>
+                <a href="https://www.lanzou.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.lanzou.ico" alt="www.lanzou.com favicon (large)" />
+                    <span>
+                        蓝奏云
+                    </span>
+                </a>
+                <a href="https://pan.xunlei.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/pan.xunlei.ico" alt="pan.xunlei.com favicon" />
+                    <span>
+                        迅雷云盘
+                    </span>
+                </a>
+                <a href="https://onedrive.live.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/onedrive.live.ico" alt="onedrive.live.com favicon" />
+                    <span>
+                        OneDrive
+                    </span>
+                </a>
+                <a href="https://cloud.189.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/cloud.189.ico" alt="cloud.189.cn favicon (large)" />
+                    <span>
+                        天翼云盘
+                    </span>
+                </a>
+                <a href="https://drive.uc.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/drive.uc.ico" alt="drive.uc.cn favicon" />
+                    <span>
+                        UC网盘
+                    </span>
+                </a>
+                <a href="https://pan.quark.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/pan.quark.ico" alt="pan.quark.cn favicon" />
+                    <span>
+                        夸克网盘
+                    </span>
+                </a>
+                <a href="https://www.weiyun.com/index.html" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.weiyun.ico" alt="www.weiyun.com favicon" />
+                    <span>
+                        腾讯微云
+                    </span>
+                </a>
+                <a href="https://yun.139.com/w/#/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/yun.139.ico" alt="yun.139.com favicon (large)" />
+                    <span>
+                        移动云盘
+                    </span>
+                </a>
+                <a href="https://www.123pan.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.123pan.ico" alt="www.123pan.com favicon" />
+                    <span>
+                        123盘
+                    </span>
+                </a>
+                <a href="https://www.feijipan.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.feijipan.ico" alt="www.feijipan.com favicon" />
+                    <span>
+                        小飞机盘
+                    </span>
+                </a>
+                <a href="https://www.ctfile.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.ctfile.ico" alt="www.ctfile.com favicon" />
+                    <span>
+                        城通盘
+                    </span>
+                </a>
+                <a href="https://115.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/115.ico" alt="115.com favicon" />
+                    <span>
+                        115网盘
+                    </span>
+                </a>
+                <a href="https://www.now61.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.now61.ico" alt="www.now61.com favicon" />
+                    <span>
+                        六一云盘
+                    </span>
+                </a>
+                <a href="https://www.vyuyun.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.vyuyun.ico" alt="www.vyuyun.com favicon" />
+                    <span>
+                        微雨云存储
+                    </span>
+                </a>
+                <a href="https://cowtransfer.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/cowtransfer.ico" alt="cowtransfer.com favicon" />
+                    <span>
+                        奶牛快传
+                    </span>
+                </a>
+                <a href="https://www.wenshushu.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.wenshushu.ico" alt="www.wenshushu.cn favicon" />
+                    <span>
+                        文叔叔
+                    </span>
+                </a>
+                <a href="https://file.pizza/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/file.ico" alt="file.pizza favicon" />
+                    <span>
+                        FilePizza
+                    </span>
+                </a>
+                <a href="https://my.ksust.com/kstore.htm?aff=4645" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/my.ksust.ico" alt="my.ksust.com favicon" />
+                    <span>
+                        凯速
+                    </span>
+                </a>
+                <a href="https://www.ttttt.link/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.ttttt.ico" alt="www.ttttt.link favicon" />
+                    <span>
+                        钛盘
+                    </span>
+                </a>
+                <a href="https://www.yunpan.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.yunpan.ico" alt="www.yunpan.com favicon" />
+                    <span>
+                        360AI云盘
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- AI智能分类 -->
+        <div class="category" id="AI智能">
+            <div class="category-header">
+                <i class="fas fa-robot"></i>
+                <span>
+                    AI智能
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- AI工具类 -->
+                <a href="https://www.wenxiaobai.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.wenxiaobai.ico" alt="www.wenxiaobai.com favicon" />
+                    <span>
+                        满血版deepseek
+                    </span>
+                </a>
+                <a href="https://chat.deepseek.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/chat.deepseek.ico" alt="chat.deepseek.com favicon" />
+                    <span>
+                        DeepSeek
+                    </span>
+                </a>
+                <a href="https://www.doubao.com/chat/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.doubao.ico" alt="www.doubao.com favicon" />
+                    <span>
+                        豆包
+                    </span>
+                </a>
+                <a href="https://kimi.moonshot.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/kimi.moonshot.ico" alt="kimi.moonshot.cn favicon" />
+                    <span>
+                        KiMi
+                    </span>
+                </a>
+                <a href="https://tongyi.aliyun.com/qianwen/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/tongyi.aliyun.ico" alt="tongyi.aliyun.com favicon" />
+                    <span>
+                        通义千问
+                    </span>
+                </a>
+                <a href="https://yiyan.baidu.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/yiyan.baidu.ico" alt="yiyan.baidu.com favicon" />
+                    <span>
+                        文心一言
+                    </span>
+                </a>
+                <a href="https://xinghuo.xfyun.cn/desk" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/xinghuo.xfyun.ico" alt="xinghuo.xfyun.cn favicon" />
+                    <span>
+                        讯飞星火
+                    </span>
+                </a>
+                <a href="https://chatglm.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/chatglm.svg" alt="chatglm.cn favicon" />
+                    <span>
+                        智普清言
+                    </span>
+                </a>
+                <a href="https://www.tiangong.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.tiangong.ico" alt="www.tiangong.cn favicon" />
+                    <span>
+                        天工AI
+                    </span>
+                </a>
+                <a href="https://yuewen.cn/chats/new" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/yuewen.ico" alt="yuewen.cn favicon (large)" />
+                    <span>
+                        跃问
+                    </span>
+                </a>
+                <a href="https://hailuoai.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/hailuoai.ico" alt="hailuoai.com favicon" />
+                    <span>
+                        海螺AI
+                    </span>
+                </a>
+                <a href="https://yuanbao.tencent.com/chat/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/yuanbao.tencent.ico" alt="yuanbao.tencent.com favicon" />
+                    <span>
+                        腾讯元宝
+                    </span>
+                </a>
+                <a href="https://ai.360.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/ai.360.ico" alt="ai.360.com favicon" />
+                    <span>
+                        360智脑
+                    </span>
+                </a>
+                <a href="https://bot.n.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/bot.n.ico" alt="bot.n.cn favicon" />
+                    <span>
+                        纳米助手
+                    </span>
+                </a>
+                <a href="https://ai.sohu.com/pc/home" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/ai.sohu.ico" alt="ai.sohu.com favicon" />
+                    <span>
+                        简单AI
+                    </span>
+                </a>
+                <a href="https://kling.kuaishou.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/kling.kuaishou.ico" alt="kling.kuaishou.com favicon" />
+                    <span>
+                        可灵
+                    </span>
+                </a>
+                <a href="https://jimeng.jianying.com/ai-tool/home" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/jimeng.jianying.ico" alt="jimeng.jianying.com favicon" />
+                    <span>
+                        即梦AI
+                    </span>
+                </a>
+                <a href="https://metaso.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/metaso.ico" alt="metaso.cn favicon" />
+                    <span>
+                        秘塔AI
+                    </span>
+                </a>
+                <a href="https://zhida.zhihu.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/zhida.zhihu.ico" alt="zhida.zhihu.com favicon" />
+                    <span>
+                        知乎直答
+                    </span>
+                </a>
+                <a href="https://qzoffice.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/qzoffice.svg" alt="qzoffice.com favicon" />
+                    <span>
+                        轻竹PPT
+                    </span>
+                </a>
+                <a href="https://chat-ppt.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/chat-ppt.ico" alt="chat-ppt.com favicon" />
+                    <span>
+                        ChatGPT
+                    </span>
+                </a>
+                <a href="https://chat.doltrans.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/chat.doltrans.ico" alt="chat.doltrans.com favicon" />
+                    <span>
+                        中文ChatGAI
+                    </span>
+                </a>
+                <a href="https://www.gaoding.com/create-design" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.gaoding.ico" alt="www.gaoding.com favicon" />
+                    <span>
+                        稿定AI
+                    </span>
+                </a>
+                <a href="https://www.peiyine.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.peiyine.ico" alt="www.peiyine.com favicon" />
+                    <span>
+                        配音鹅
+                    </span>
+                </a>
+                <a href="https://lingma.aliyun.com/lingma/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/lingma.aliyun.ico" alt="lingma.aliyun.com favicon" />
+                    <span>
+                        通义灵码
+                    </span>
+                </a>
+                <a href="https://comate.baidu.com/zh" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/comate.baidu.ico" alt="comate.baidu.com favicon" />
+                    <span>
+                        文心快码
+                    </span>
+                </a>
+                <a href="https://www.xiaoyuxiezuo.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.xiaoyuxiezuo.ico" alt="www.xiaoyuxiezuo.com favicon" />
+                    <span>
+                        小鱼AI写作
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- 影视分类 -->
+        <div class="category" id="影视">
+            <div class="category-header">
+                <i class="fas fa-film"></i>
+                <span>
+                    影视
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 视频平台 -->
+                <a href="https://www.bilibili.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.bilibili.ico" alt="www.bilibili.com favicon" />
+                    <span>
+                        哗哩哗哩
+                    </span>
+                </a>
+                <a href="https://v.qq.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/v.qq.ico" alt="v.qq.com favicon" />
+                    <span>
+                        腾讯视频
+                    </span>
+                </a>
+                <a href="https://www.iqiyi.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.iqiyi.ico" alt="www.iqiyi.com favicon" />
+                    <span>
+                        爱奇艺
+                    </span>
+                </a>
+                <a href="https://www.youku.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.youku.ico" alt="www.youku.com favicon" />
+                    <span>
+                        优酷
+                    </span>
+                </a>
+                <a href="http://www.mgtv.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.mgtv.ico" alt="www.mgtv.com favicon" />
+                    <span>
+                        芒果TV
+                    </span>
+                </a>
+                <a href="http://tv.sohu.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/tv.sohu.ico" alt="tv.sohu.com favicon" />
+                    <span>
+                        搜狐视频
+                    </span>
+                </a>
+                <a href="http://le.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/le.ico" alt="le.com favicon" />
+                    <span>
+                        乐视视频
+                    </span>
+                </a>
+                <a href="http://www.miguvideo.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.miguvideo.ico" alt="www.miguvideo.com favicon" />
+                    <span>
+                        咪咕视频
+                    </span>
+                </a>
+                <a href="http://www.pptv.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.pptv.ico" alt="www.pptv.com favicon" />
+                    <span>
+                        pp视频
+                    </span>
+                </a>
+                <a href="http://www.wasu.cn" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.wasu.ico" alt="www.wasu.cn favicon" />
+                    <span>
+                        华数TV
+                    </span>
+                </a>
+                <a href="http://www.acfun.cn" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.acfun.ico" alt="www.acfun.cn favicon" />
+                    <span>
+                        AcFun
+                    </span>
+                </a>
+                <a href="http://www.ixigua.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.ixigua.ico" alt="www.ixigua.com favicon" />
+                    <span>
+                        西瓜视频
+                    </span>
+                </a>
+                <a href="http://huanxi.com" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/huanxi.ico" alt="huanxi.com favicon" />
+                    <span>
+                        欢喜首映
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- 开发工具 -->
+        <div class="category" id="开发工具">
+            <div class="category-header">
+                <i class="fas fa-code"></i>
+                <span>
+                    开发工具
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 开发平台分类 -->
+                <a href="https://github.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/github.ico" alt="github.com favicon" />
+                    <span>
+                        Github
+                    </span>
+                </a>
+                <a href="https://gitcode.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/gitcode.ico" alt="gitcode.com favicon" />
+                    <span>
+                        GitCode
+                    </span>
+                </a>
+                <a href="https://www.gitlink.org.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.gitlink.org.ico" alt="www.gitlink.org.cn favicon" />
+                    <span>
+                        Gitlink
+                    </span>
+                </a>
+                <a href="https://www.aliyun.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.aliyun.ico" alt="www.aliyun.com favicon" />
+                    <span>
+                        阿里云
+                    </span>
+                </a>
+                <a href="https://cloud.tencent.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/cloud.tencent.ico" alt="cloud.tencent.com favicon" />
+                    <span>
+                        腾讯云
+                    </span>
+                </a>
+                <a href="https://www.huaweicloud.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.huaweicloud.ico" alt="www.huaweicloud.com favicon" />
+                    <span>
+                        华为云
+                    </span>
+                </a>
+                <a href="https://cloud.baidu.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/cloud.baidu.ico" alt="cloud.baidu.com favicon" />
+                    <span>
+                        百度智能云
+                    </span>
+                </a>
+                <a href="https://www.jdcloud.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.jdcloud.ico" alt="www.jdcloud.com favicon" />
+                    <span>
+                        京东云
+                    </span>
+                </a>
+                <a href="https://m.ucloud.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/m.ucloud.ico" alt="m.ucloud.cn favicon" />
+                    <span>
+                        UCloud
+                    </span>
+                </a>
+                <a href="https://www.ctyun.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.ctyun.ico" alt="www.ctyun.cn favicon" />
+                    <span>
+                        天翼云
+                    </span>
+                </a>
+                <a href="https://www.cucloud.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/cucloud.ico" alt="www.cucloud.cn favicon" />
+                    <span>
+                        联通云
+                    </span>
+                </a>
+                <a href="https://ecloud.10086.cn/portal" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/ecloud.10086.ico" alt="ecloud.10086.cn favicon" />
+                    <span>
+                        移动云
+                    </span>
+                </a>
+                <a href="https://www.cloudflare-cn.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.cloudflare-cn.ico" alt="www.cloudflare-cn.com favicon" />
+                    <span>
+                        Cloudflare
+                    </span>
+                </a>
+                <a href="https://vercel.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/vercel.ico" alt="vercel.com favicon" />
+                    <span>
+                        Vercel
+                    </span>
+                </a>
+                <a href="https://gh.2015888.xyz" class="bookmark-item">
+                    <i class="fas fa-rocket"></i>
+                    <span>
+                        github文件加速
+                    </span>
+                </a>
+                <a href="https://gitee.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/gitee.ico" alt="gitee.com favicon" />
+                    <span>
+                        码云Gitee
+                    </span>
+                </a>
+                <a href="https://codeberg.org/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/codeberg.svg" alt="codeberg.org favicon (large)" />
+                    <span>
+                        codeberg
+                    </span>
+                </a>
+                <a href="https://gitlab.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/gitlab.ico" alt="gitlab.cn favicon" />
+                    <span>
+                        极狐
+                    </span>
+                </a>
+                <a href="https://git.acwing.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/git.acwing.ico" alt="git.acwing.com favicon (large)" />
+                    <span>
+                        AC git
+                    </span>
+                </a>
+                <a href="https://bitbucket.org/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/bitbucket.ico" alt="bitbucket.org favicon" />
+                    <span>
+                        比特桶
+                    </span>
+                </a>
+                <a href="https://gittea.dev/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/gittea.svg" alt="gittea.dev favicon" />
+                    <span>
+                        Gittea
+                    </span>
+                </a>
+                <a href="https://www.cloudns.net/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.cloudns.ico" alt="www.cloudns.net favicon (large)" />
+                    <span>
+                        Cloudns
+                    </span>
+                </a>
+                <a href="https://apifox.com/apidoc/shared/284a6632-f5d4-45f8-b796-d85605de5af4/api-141640344" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/apifox.ico" alt="apifox.com favicon (large)" />
+                    <span>
+                        apifoxT4项目
+                    </span>
+                </a>
+                <a href="https://cnb.cool/" class="bookmark-item">
+                    <img src="https://favicon.im/cnb.cool" alt="vercel.com favicon" />
+                    <span>
+                        云原生构建
+                    </span>
+                </a>               
+            </div>
+        </div>
+        <!-- 格式化代码分类 -->
+        <div class="category" id="格式化代码">
+            <div class="category-header">
+                <i class="fas fa-hdd"></i>
+                <span>
+                    格式化代码
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 小鱼工具系列 -->
+                <a href="https://tool.lu/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/tool.lu.ico" alt="tool.lu" />
+                    <span>
+                        在线工具
+                    </span>
+                </a>
+                <a href="https://www.67tool.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.67tool.com.ico" alt="www.67tool.com favicon" />
+                    <span>
+                        即时工具
+                    </span>
+                </a>
+                <a href="/tools3/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        URL编解码
+                    </span>
+                </a>
+                <a href="https://www.jyshare.com/front-end/3602/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        Unicode编码转化
+                    </span>
+                </a>
+                <a href="/tools3/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        Base64编解码
+                    </span>
+                </a>
+                <a href="/tools3/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        json格式化
+                    </span>
+                </a>
+                <a href="/tools3/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        Gzip加解密
+                    </span>
+                </a>
+                <a href="/tools3/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        16进制转换
+                    </span>
+                </a>
+                <a href="https://tool.lu/timestamp/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        时间戳转化
+                    </span>
+                </a>
+                <a href="https://www.fontke.com/tool/rgbschemes/" class="bookmark-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>
+                        RGB配色器
+                    </span>
+                </a>
+                <a href="http://www.wepe.com.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.wepe.com.cn.ico" alt="www.wepe.com.cn favicon (large)" />
+                    <span>
+                        微PE工具
+                    </span>
+                </a>
+                <a href="https://ip.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/ip.cn.ico" alt="ip.cn favicon" />
+                    <span>
+                        IP查询
+                    </span>
+                </a>
+                <a href="https://xpdf.net/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/xpdf.net.ico" alt="xpdf.net favicon" />
+                    <span>
+                        文档在线转换
+                    </span>
+                </a>
+                <a href="https://fanyi.baidu.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/fanyi.baidu.com.ico" alt="fanyi.baidu.com favicon" />
+                    <span>
+                        百度翻译
+                    </span>
+                </a>
+                <a href="https://fanyi.youdao.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/fanyi.youdao.com.ico" alt="fanyi.youdao.com favicon" />
+                    <span>
+                        有道翻译
+                    </span>
+                </a>
+                <a href="https://c.runoob.com/front-end/61/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/c.runoob.com.ico" alt="c.runoob.com favicon" />
+                    <span>
+                        HTML在线运行
+                    </span>
+                </a>
+                <a href="https://www.lylme.com/html/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.lylme.com.ico" alt="www.lylme.com favicon" />
+                    <span>
+                        MD编辑器
+                    </span>
+                </a>
+                <a href="https://www.itdog.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.itdog.cn.ico" alt="www.itdog.cn favicon (large)" />
+                    <span>
+                        在线Ping
+                    </span>
+                </a>
+                <a href="https://www.photopea.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.photopea.com.ico" alt="www.photopea.com favicon" />
+                    <span>
+                        在线PS
+                    </span>
+                </a>
+                <a href="https://linux.lylme.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/linux.lylme.com.ico" alt="linux.lylme.com favicon" />
+                    <span>
+                        Linux命令查询
+                    </span>
+                </a>
+                <a href="https://www.gseen.com/online_tools/zip_format/html_js_zip" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.gseen.com.ico" alt="www.gseen.com favicon" />
+                    <span>
+                        在线代码格式化
+                    </span>
+                </a>
+                <a href="https://jsonlint.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/jsonlint.com.ico" alt="jsonlint.com favicon" />
+                    <span>
+                        JS校验
+                    </span>
+                </a>
+                <a href="https://www.sojson.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.sojson.com.ico" alt="www.sojson.com favicon (large)" />
+                    <span>
+                        json工具
+                    </span>
+                </a>
+                <a href="https://deck.phpth.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/deck.phpth.cn.ico" alt="deck.phpth.cn favicon" />
+                    <span>
+                        PHP加密
+                    </span>
+                </a>
+                <a href="https://www.lddgo.net/encrypt/hmac" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.lddgo.net.ico" alt="www.lddgo.net favicon" />
+                    <span>
+                        HMAC计算
+                    </span>
+                </a>
+                <a href="https://www.jsjiami.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.jsjiami.com.ico" alt="www.jsjiami.com favicon (large)" />
+                    <span>
+                        JS最牛加密
+                    </span>
+                </a>
+                <a href="https://www.jsdelivr.com/github" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.jsdelivr.com.ico" alt="www.jsdelivr.com favicon" />
+                    <span>
+                        GitHub转链
+                    </span>
+                </a>
+                <a href="https://chaziyu.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/chaziyu.com.ico" alt="chaziyu.com favicon" />
+                    <span>
+                        查子域
+                    </span>
+                </a>
+                <a href="https://blackace.app/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/blackace.app.ico" alt="blackace.app favicon" />
+                    <span>
+                        网站秒变App
+                    </span>
+                </a>
+                <a href="https://tvdat.neocities.org/" class="bookmark-item">
+                    <i class="fas fa-star"></i>
+                    <span>
+                        RedStar
+                    </span>
+                </a>
+                <a href="https://reqable.com/zh-CN/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/reqable.com.ico" alt="reqable.com favicon" />
+                    <span>
+                        小黄鸟抓包
+                    </span>
+                </a>
+                <a href="https://gitee.com/wanghongenpin/proxypin/releases" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/ProxyPin.ico" alt="ProxyPin favicon" />
+                    <span>
+                        ProxyPin抓包
+                    </span>
+                </a>
+                <a href="https://up.ly93.cc/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/up.ly93.cc.ico" alt="up.ly93.cc favicon" />
+                    <span>
+                        文件直链
+                    </span>
+                </a>
+                <a href="https://gf.qytechs.cn/zh-CN" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/greasyfork.org.ico" alt="greasyfork.org favicon" />
+                    <span>
+                        油猴脚本
+                    </span>
+                </a>
+                <a href="https://instagram.iiilab.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/instagram.iiilab.com.ico" alt="instagram.iiilab.com favicon" />
+                    <span>
+                        instagram解析下载
+                    </span>
+                </a>
+                <a href="https://www.datatool.vip/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.datatool.vip.ico" alt="www.datatool.vip favicon" />
+                    <span>
+                        datatool视频解析下载
+                    </span>
+                </a>
+                <a href="https://123videotool.com/zh-cn" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/123videotool.com.ico" alt="123videotool.com favicon" />
+                    <span>
+                        YouTube视频下载
+                    </span>
+                </a>
+                <a href="https://test-ipv6.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/test-ipv6.com.ico" alt="test-ipv6.com favicon" />
+                    <span>
+                        IPV6测试
+                    </span>
+                </a>
+                <a href="https://html-to-markdown.com/demo" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/html-to-markdown.com.ico" alt="html-to-markdown.com favicon" />
+                    <span>
+                        html转markdown
+                    </span>
+                </a>
+                <a href="https://suo.yt/" class="bookmark-item">
+                    <i class="iconfont icon-lianjie"></i>
+                    <span>
+                        suo短链
+                    </span>
+                </a>
+                <a href="https://www.hunanit.net/img2base64/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.hunanit.net.ico" alt="www.hunanit.net favicon" />
+                    <span>
+                        图片转Base64
+                    </span>
+                </a>
+                <a href="https://www.freeconvert.com/zh/video-compressor" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.freeconvert.com.ico" alt="www.freeconvert.com favicon" />
+                    <span>
+                        视频压缩器
+                    </span>
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- 图片工具 -->
+        <div class="category" id="图片工具">
+            <div class="category-header">
+                <i class="fas fa-image"></i>
+                <span>
+                    图片工具
+                </span>
+            </div>
+            <div class="category-content">
+                <!-- 图片网站 -->
+                <a href="https://miankoutupian.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/miankoutupian.com.ico" alt="miankoutupian.com favicon" />
+                    <span>
+                        免扣图片
+                    </span>
+                </a>
+                <a href="https://netbian.timeline.ink/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/netbian.timeline.ink.ico" alt="netbian.timeline.ink favicon" />
+                    <span>
+                        彼岸壁纸
+                    </span>
+                </a>
+                <a href="https://mbizhi.cheetahfun.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/mbizhi.cheetahfun.com.ico" alt="mbizhi.cheetahfun.com favicon" />
+                    <span>
+                        元气壁纸
+                    </span>
+                </a>
+                <a href="https://sc.chinaz.com/tupian/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/sc.chinaz.com.ico" alt="sc.chinaz.com favicon (large)" />
+                    <span>
+                        站长素材
+                    </span>
+                </a>
+                <a href="https://www.uugai.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.uugai.com.ico" alt="www.uugai.com favicon (large)" />
+                    <span>
+                        LOGO钙
+                    </span>
+                </a>
+                <a href="http://pic.yesky.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/pic.yesky.com.ico" class="custom-image" />
+                    <span>
+                        天极图片
+                    </span>
+                </a>
+                <a href="https://desk.zol.com.cn/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/desk.zol.com.cn.ico" class="custom-image" />
+                    <span>
+                        中关村壁纸
+                    </span>
+                </a>
+                <a href="http://www.kuaipng.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.kuaipng.com.ico" alt="www.kuaipng.com favicon (large)" />
+                    <span>
+                        快图网
+                    </span>
+                </a>
+                <a href="http://www.zuohaotu.com/" class="bookmark-item">
+                    <i class="fas fa-palette"></i>
+                    <span>
+                        做好图
+                    </span>
+                </a>
+                <a href="https://www.gaitubao.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.gaitubao.com.ico" alt="www.gaitubao.com favicon" />
+                    <span>
+                        改图宝
+                    </span>
+                </a>
+                <a href="https://www.ivsky.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.ivsky.com.ico" alt="www.ivsky.com favicon (large)" />
+                    <span>
+                        天堂图片网
+                    </span>
+                </a>
+                <a href="https://www.jj20.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.jj20.com.ico" alt="www.jj20.com favicon" />
+                    <span>
+                        娟娟壁纸
+                    </span>
+                </a>
+                <a href="https://www.4kbizhi.com/" class="bookmark-item">
+                    <img src="https://master.2015888.xyz/tool/www.4kbizhi.com.ico" alt="www.4kbizhi.com favicon (large)" />
+                    <span>
+                        4K壁纸
+                    </span>
+                </a>
+                <a href="http://www.yuwei.online/" class="bookmark-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>
+                        雨薇动漫图
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- LyToday-JS插件 https://lytoday.lylme.com/code.html
+        <div id="lytoday"></div>
+        <script src="https://lytoday.lylme.com/?day=none&hot=weibo,baidu,bilibili,douyin,qqnews_hot,zhihu"></script>-->
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <div class="footer-copyright">
+                <p>
+                    <img src="https://master.2015888.xyz/img/ICP.png" width="16px" height="16px" style="display: inline-block; vertical-align: middle;">
+                    <a href="http://beian.miit.gov.cn/" rel="nofollow" class="icp nav-link" target="_blank" _mstmutation="1" _istranslated="1" style="display: inline-block; vertical-align: middle;">
+                        鄂ICP备007号-1
+                    </a>
+                </p>
+                <p>
+                    Copyright ©2025
+                    <a href="mailto:yufeng1688778@163.com" style="color:red;font-weight:bold;">
+                        小鱼儿邮箱📧
+                    </a>
+                </p>
+                <p>最后更新：2025-06-06</p>
+                <span class="disclaimer">
+                    声明：本站非营利性网站，如果发布的内容若侵犯到您的权益，请联系我们，我们将及时处理。
+                </span>
+            </div>
+        </div>
+        <!-- footer -->
+    </div>
+
+
+    <!-- 快捷操作按钮 -->
+    <div class="quick-actions">
+        <div class="quick-btn" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+        <div class="quick-btn" id="goToBottom">
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </div>
+    <script src="/static/tanchuang/welcome-modal.js"></script>
+    <script>
+        // 获取侧边栏和按钮元素
+        var sidebar = document.getElementById('sidebar');
+        var menuToggle = document.getElementById('menuToggle');
+        var sidebarToggle = document.getElementById('sidebarToggle');
+        
+        // 监听移动端菜单切换按钮的点击事件
+        menuToggle.addEventListener('click', function(event) {
+            event.stopPropagation(); // 阻止事件冒泡
+            sidebar.classList.toggle('active');
+        });
+        
+        // 监听收回左侧栏按钮的点击事件
+        sidebarToggle.addEventListener('click', function(event) {
+            event.stopPropagation(); // 阻止事件冒泡
+            sidebar.classList.toggle('active');
+        });
+        
+        // 监听文档点击事件，确保点击侧边栏外部区域也能关闭侧边栏
+        document.addEventListener('click', function(event) {
+            if (!event.target.matches('.menu-toggle') && !event.target.matches('.sidebar-toggle') && !event.target.closest('.sidebar')) {
+               sidebar.classList.remove('active');
+            }
+        });
+        
+            // 返回顶部按钮
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 跳转底部按钮
+        document.getElementById('goToBottom').addEventListener('click', function() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });    
+        
+        // 搜索功能
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const bookmarkItems = document.querySelectorAll('.bookmark-item');
+            const categories = document.querySelectorAll('.category');
+        
+            // 先隐藏所有分类栏
+            categories.forEach(category => {
+                category.style.display = 'none';
+            });
+        
+            bookmarkItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                    const category = item.closest('.category'); // 获取当前书签项所属的分类栏
+                    if (category) {
+                        category.style.display = 'flex'; // 显示包含搜索结果的分类栏
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // 分类折叠功能
+        const categoryHeaders = document.querySelectorAll('.category-header');
+        categoryHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'none' ? 'grid' : 'none';
+            });
+        });
+        
+        // 主题切换功能
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // 切换图标
+            const icon = this.querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+            
+            // 保存用户偏好到本地存储
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        });
+        
+        // 初始化时检查用户偏好
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.theme-toggle i').classList.replace('fa-moon', 'fa-sun');
+        }
+        
+        // 平滑滚动到分类
+        document.querySelectorAll('.category-nav-item, .category-xy-item').forEach(item => {
+          item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          // 关闭移动端侧边栏
+          if (window.innerWidth <= 768) {
+            sidebar.classList.remove('active');
+          }
+          
+          // 动态获取顶部栏高度
+          const topBar = document.querySelector('.top-bar-container');
+          const offset = topBar ? topBar.offsetHeight + 10 : 70; // 10px额外间距
+          
+          // 计算目标位置
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          
+          // 平滑滚动到补偿位置
+          window.scrollTo({
+            top: targetPosition - offset,
+            behavior: 'smooth'
+          });
+        }
+          });
+        });
+    </script>
+</body>
+
+</html>

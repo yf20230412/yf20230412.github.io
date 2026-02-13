@@ -1,0 +1,166 @@
+name: VitePress to Branch torelease
+on:
+  push:
+    paths:
+      - 'docs/docs/**'  #上传到docs/docs/才能触发
+  workflow_dispatch:   #手动触发
+
+env:
+  TZ: Asia/Shanghai
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+          
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Fix permissions
+        run: sudo chown -R $USER:$USER .
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Clean
+        run: rm -rf docs/docs/.vitepress/dist
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Move Artifacts
+        run: |
+          echo "源目录结构："
+          ls -lR docs/docs/.vitepress/dist
+          mkdir -p docs/bk
+          echo "清理/bk文件夹中旧文件..."
+          rm -rf docs/bk/*
+          cp -R docs/docs/.vitepress/dist/* docs/bk/
+          echo "目标目录文件数："
+          find docs/bk/ -type f | wc -l
+          echo "关键文件检查："
+          ls -l docs/bk/index.html docs/bk/assets/*
+          echo "=== 移动完成 ==="
+          
+      # 先获取版本号
+      - name: Get version from package.json
+        id: package-version
+        run: |
+          version=$(jq -r '.version' package.json)
+          echo "version=$version" >> $GITHUB_OUTPUT
+      
+      # 然后创建压缩包
+      - name: Create release zip
+        run: |
+          cd docs/bk
+          zip -r ../xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip .
+          echo "压缩包信息:"
+          ls -lh ../xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
+         
+      - name: Get current date
+        id: get-date
+        run: |
+          echo "RELEASE_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV        
+          
+      # 上传构建产物到artifacts
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: xiaoyu_blog
+          path: docs/xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
+          if-no-files-found: ignore # 静默跳过,不报错也不警告，直接跳过上传
+      
+# -------❤️暂时删除上传到Release/Tag❤️------
+
+      # 检查并删除现有的 Release
+#      - name: Delete old Release and Tag
+#        uses: actions/github-script@v6
+#        env:
+#          TAG_NAME: xiaoyu_blog
+#        with:
+#          script: |
+#            try {
+#              // 1. 删除 Release
+#              const release = await github.rest.repos.getReleaseByTag({
+#                owner: context.repo.owner,
+#                repo: context.repo.repo,
+#                tag: process.env.TAG_NAME
+#              });
+#              await github.rest.repos.deleteRelease({
+#                owner: context.repo.owner,
+#                repo: context.repo.repo,
+#                release_id: release.data.id
+#              });
+#              console.log(`✅ 已删除旧 Release: ${process.env.TAG_NAME}`);
+              
+#              // 2. 删除 Git 标签
+#              await github.rest.git.deleteRef({
+#                owner: context.repo.owner,
+#                repo: context.repo.repo,
+#                ref: `tags/${process.env.TAG_NAME}`
+#              });
+#              console.log(`✅ 已删除旧 Tag: ${process.env.TAG_NAME}`);
+#            } catch (error) {
+#              if (error.status === 404) {
+#                console.log(`⚠️ 未找到现有 Release/Tag: ${process.env.TAG_NAME}`);
+#              } else {
+#                throw error;
+#              }
+#            }
+          
+      # 发布Release
+#      - name: Create Release
+#        id: create_release
+#        uses: softprops/action-gh-release@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          tag_name: xiaoyu_blog
+#          name: xiaoyu_blog-v${{ steps.package-version.outputs.version }}_${{ env.RELEASE_DATE }}
+#          body: |
+            ### 构建信息
+#            - 版本: ${{ steps.package-version.outputs.version }}
+#            - 来源分支: ${{ github.ref_name }}
+#            - 构建日期: ${{ env.RELEASE_DATE }}
+#            ### 更新内容
+#            1. 个人博客自动构建并部署
+#            2. 日常生活更新
+#          draft: false
+#          prerelease: false
+#          files: |
+#            docs/xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
+
+# ---------------❤️完❤️-------------
+
+      - name: Commit changes
+        run: |
+          #使用GitHub Actions机器人账号提交
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/bk/
+          if git diff --staged --quiet; then
+            echo "✅ 无需提交任何更改."
+          else
+            echo "📌 正在提交更改..."
+            git commit -m "自动部署"
+            echo "🚀 推送更改到分支 ${{ github.ref }}"
+            git push origin HEAD:${{ github.ref }}
+            echo "🎉 提交完成"
+          fi
+          echo "=== 提交流程结束 ==="
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>该网站暂时无法进行访问</title>
+    <style>
+        .container {
+            width: 70%;
+            margin: 10% auto 0;
+            background-color: #f0f0f0;
+            padding: 2% 5%;
+            border-radius: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        ul li {
+            line-height: 2.3;
+        }
+        
+        a {
+            color: #20a53a;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* 渐变色文字 */
+        .wechat-text {
+        			background: linear-gradient(135deg,
+        					#0eaf6d,
+        					#ff6ac6 25%,
+        					#147b96 50%,
+        					#e6d205 55%,
+        					#2cc4e0 60%,
+        					#8b2ce0 80%,
+        					#ff6384 95%,
+        					#08dfb4);
+        			/* 文字颜色填充设置为透明 */
+        			-webkit-text-fill-color: transparent;
+        			/* 背景裁剪，即让文字使用背景色 */
+        			-webkit-background-clip: text;
+        			background-clip: text;
+        			/* 背景图放大一下，看着柔和一些 */
+        			-webkit-background-size: 200% 200%;
+        			background-size: 200% 200%;
+        			/* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
+        			-webkit-animation: flowCss 12s infinite linear;
+        			animation: flowCss 12s infinite linear;
+        			font-size: 20px;
+        			/* 设置字体大小 */
+        			font-weight: bold;
+        			/* 设置字体粗细 */
+        			letter-spacing: 2px;
+        			/* 设置字符间距 */
+        			animation-name: flowCss;
+        			/* 定义动画名称 */
+        			animation-duration: 5s;
+        			/* 定义动画持续时间 */
+        			animation-iteration-count: infinite;
+        			/* 定义动画重复次数 */
+        			animation-timing-function: linear;
+        			/* 定义动画速度曲线 */
+        			animation-fill-mode: forwards;
+        			/* 定义动画结束后状态 */
+        		}
+        		/* 定义动画 */
+        		@keyframes flowCss {
+        			0% {
+        				/* 设置背景图像的位置 */
+        				background-position: 0% 50%;
+        			}
+        
+        			100% {
+        				/* 设置背景图片的位置 */
+        				background-position: 100% 50%;
+        			}
+        		}
+        		/* ---代码分割线--- */		
+        
+        @keyframes gradientAnimation {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+    </style>
+    <style>
+        .box a {
+          display: inline-block;
+          padding: 10px 18px;
+          font-size: 16px;
+          background-image: linear-gradient(to right, #00f, #f00);
+          background-size: 160% 80%;
+          background-position: left bottom;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-position 0.5s ease;
+        }
+        
+        .box a:hover {
+          background-position: right bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay" id="overlay">
+        <div class="container">
+            <h1>&#128293;用户须知&#128293;</h1>
+            <ul>
+                <li>1.本站为公益站点，致力于收集TVBox接口资源，方便用户免费使用。</li>
+                <li>2.本站不提供存储服务，所有接口资源均来自网友分享。</li>
+                <li>3.若网站关闭，用户可通过其他途径获取接口资源。</li>
+                <li>微信公众号：<span class="wechat-text">风言锋语88</span>，欢迎关注获取更多信息。</li>
+            </ul>
+        </div>
+        </p>
+        <div class="box">
+            <a href="https://a.2015888.xyz/" target="_blank">返回首页</a>
+        </div>
+    </div>
+</body>
+
+</html>

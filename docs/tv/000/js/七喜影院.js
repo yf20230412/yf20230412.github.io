@@ -1,0 +1,108 @@
+var rule = {
+  title: '7喜影院',
+  host: 'https://7xi.tv',
+  class_name: '电视剧&电影&短剧&伦理&综艺&动漫',
+  class_url: '2&1&56&23&3&4',
+  searchUrl: 'vodsearch/page/fypage/wd/**/',
+  searchable: 2,
+  quickSearch: 0,
+  filter:{
+    "2":[  
+    {"key":"cateId","name":"分类","value":[
+	{"n":"全部分类","v":""},	
+    {"n":"国产剧","v":"13"},
+    {"n":"港台剧","v":"14"},
+    {"n":"日韩剧","v":"15"},
+    {"n":"欧美剧","v":"16"},
+    {"n":"海外剧","v":"22"}
+    ]
+    },
+    {"key":"area","name":"地区","value":[
+    {"n":"全部地区","v":""},
+    {"n":"内地","v":"内地"},
+    {"n":"韩国","v":"韩国"},
+    {"n":"香港","v":"香港"},
+    {"n":"台湾","v":"台湾"},
+    {"n":"日本","v":"日本"},
+    {"n":"美国","v":"美国"},
+    {"n":"泰国","v":"泰国"},
+    {"n":"新加坡","v":"新加坡"},
+    {"n":"英国","v":"英国"},
+    {"n":"其它","v":"其它"}
+    ]
+    },    
+    {"key":"year","name":"时间","value":[
+    {"n":"全部时间","v":""},
+    {"n":"2024","v":"2024"},
+    {"n":"2023","v":"2023"},
+    {"n":"2022","v":"2022"},
+    {"n":"2021","v":"2021"},
+    {"n":"2020","v":"2020"},
+    {"n":"2019","v":"2019"},
+    {"n":"2018","v":"2018"},
+    {"n":"2017","v":"2017"},
+    {"n":"2016","v":"2016"},
+    {"n":"2015","v":"2015"},
+    {"n":"2014","v":"2014"},
+    {"n":"2013","v":"2013"},
+    {"n":"2012","v":"2012"},
+    {"n":"2011","v":"2011"},
+    {"n":"2010","v":"2010"}
+    ]
+    },
+    {"key":"letter","name":"字母","value":[
+    {"n":"全部字母","v":""},
+    {"n":"A","v":"A"},
+    {"n":"B","v":"B"},
+    {"n":"C","v":"C"},
+    {"n":"D","v":"D"},
+    {"n":"E","v":"E"},
+    {"n":"F","v":"F"},
+    {"n":"G","v":"G"},
+    {"n":"H","v":"H"},
+    {"n":"I","v":"I"},
+    {"n":"J","v":"J"},
+    {"n":"K","v":"K"},
+    {"n":"L","v":"L"},
+    {"n":"M","v":"M"},
+    {"n":"N","v":"N"},
+    {"n":"O","v":"O"},
+    {"n":"P","v":"P"},
+    {"n":"Q","v":"Q"},
+    {"n":"R","v":"R"},
+    {"n":"S","v":"S"},
+    {"n":"T","v":"T"},
+    {"n":"U","v":"U"},
+    {"n":"V","v":"V"},
+    {"n":"W","v":"W"},
+    {"n":"X","v":"X"},
+    {"n":"Y","v":"Y"},
+    {"n":"Z","v":"Z"},
+    {"n":"0-9","v":"0-9"}
+    ]
+    }
+    ]
+    },
+  headers: {
+    'User-Agent': 'MOBILE_UA',
+  },
+  url: '/vodshow/fyclass--------fypage---/',
+  filterable: 0,
+  play_parse: true,
+  lazy: '',
+  limit: 6,
+  推荐: '*',
+  一级: 'body&&.public-list-box;a&&title;img&&data-src;.public-list-prb&&Text;a&&href',
+  二级: {
+    title: '.this-desc-title&&Text;.focus-item-label-original&&Text',
+    img: '.this-pic-bj&&style',
+    desc: '.this-desc-info&&span:eq(3)&&Text;.this-desc-info&&span:eq(1)&&Text;.this-desc-info&&span:eq(2)&&Text;body&&.this-info:eq(1)--strong&&Text;body&&.this-info:eq(0)--strong&&Text',
+    content: '#height_limit&&Text',
+    tabs: '.anthology.wow.fadeInUp.animated&&.swiper-wrapper&&a',
+    tab_text: '.swiper-slide&&Text',
+    lists: '.anthology-list-box:eq(#id)&&li',
+    list_text:'body&&Text',
+    list_url:'a&&href',
+  },
+  搜索: '*',
+}

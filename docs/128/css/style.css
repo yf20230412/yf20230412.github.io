@@ -1,0 +1,175 @@
+/* 基础样式（原有样式保留并优化） */
+.wrapper {
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.wrapper h2 {
+  text-align: center;
+}
+
+.wrapper .inner {
+    display: flex;
+    margin-top: 24px;
+    gap: 20px;
+    /* 增加间距避免拥挤 */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wrapper .textarea-group {
+    flex: 3;
+}
+
+.wrapper .input-group {
+    flex: 1;
+}
+
+.wrapper .input-group .el-input,
+.wrapper .input-group .el-checkbox {
+    margin-bottom: 24px;
+}
+
+.wrapper .input-group .btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    /* 兼容小屏按钮换行 */
+}
+
+.wrapper .input-group .btn-group .el-button {
+    width: 80px;
+}
+
+.wrapper .input-group .btn-group .upload {
+    margin-right: 12px;
+}
+
+.el-textarea__inner {
+    min-height: 400px;
+    /* 确保文本域高度足够 */
+    box-sizing: border-box;
+}
+
+/* 自定义特征区域样式（与原有样式保持一致） */
+.custom-feature {
+    margin-top: 8px;
+}
+
+
+
+/* ---代码分割线--- */
+/* 页脚容器样式 */
+.footer-container {
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+/* 链接样式优化 */
+.footer-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #409eff; /* 匹配 Element Plus 主题色 */
+}
+
+/* 渐变文字样式（优化动画和兼容性） */
+.gradient-text {
+    background: linear-gradient(135deg,
+                #0eaf6d,
+                #ff6ac6 25%,
+                #147b96 50%,
+                #e6d205 55%,
+                #2cc4e0 60%,
+                #8b2ce0 80%,
+                #ff6384 95%,
+                #08dfb4);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-background-size: 200% 100%;
+    background-size: 200% 100%;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* 合并动画属性，避免重复 */
+    animation: flowCss 12s infinite linear;
+}
+
+/* 版权文字样式 */
+.copyright {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* 定义动画（修复位置变化逻辑） */
+@keyframes flowCss {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%; /* 回到初始位置，动画更流畅 */
+    }
+}
+
+/* ---代码分割线--- */
+
+/* 移动端适配（屏幕宽度≤768px时生效，对应手机端） */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 16px;
+        /* 减小移动端内边距 */
+    }
+
+    .wrapper .inner {
+        flex-direction: column;
+        /* 改为纵向布局 */
+        gap: 16px;
+        /* 减小纵向间距 */
+    }
+
+    .wrapper .textarea-group,
+    .wrapper .input-group {
+        flex: none;
+        /* 取消弹性占比，自适应宽度 */
+        width: 100%;
+        /* 占满屏幕宽度 */
+    }
+
+    .el-textarea__inner {
+        min-height: 80px;
+        /* 减小移动端文本域高度，适配屏幕 */
+        max-height: 200px;
+    }
+
+    .wrapper .input-group .btn-group {
+        justify-content: flex-start;
+        /* 按钮左对齐 */
+        gap: 8px;
+        /* 按钮之间增加间距 */
+    }
+
+    .wrapper .input-group .btn-group .el-button {
+        width: auto;
+        /* 取消按钮固定宽度，自适应内容 */
+        padding: 8px 12px;
+        /* 调整按钮内边距 */
+    }
+}

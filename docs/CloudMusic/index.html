@@ -1,0 +1,343 @@
+<!--
+ * @package music
+ * @author xiaoyu
+ * @version 1.0
+ * @Date 2025-02-26
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云无损解析</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 2.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .card-form {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .form-control {
+            border: 2px solid #e0e6ed;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .song-info img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .song-info img:hover {
+            transform: scale(1.03);
+        }
+
+        .aplayer {
+            border-radius: 1rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lyric-box {
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-control {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 网易云无损解析</h1>
+            <p class="text-muted">高品质音乐解析下载工具</p>
+        </div>
+
+        <div class="card-form">
+            <form id="query-form">
+                <div class="mb-4">
+                    <label for="song_ids" class="form-label fw-bold">歌曲ID或URL</label>
+                    <input type="text" id="song_ids" class="form-control" 
+                           placeholder="请输入歌曲ID或分享链接">
+                </div>
+                <div class="mb-4">
+                    <label for="level" class="form-label fw-bold">音质选择</label>
+                    <select id="level" class="form-select">
+                        <option value="standard">标准音质</option>
+                        <option value="exhigh">极高音质</option>
+                        <option value="lossless">无损音质</option>
+                        <option value="hires">Hires音质</option>
+                        <option value="sky">沉浸环绕声</option>
+                        <option value="jyeffect">高清环绕声</option>
+                        <option value="jymaster">超清母带</option>
+                    </select>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        🎶 立即解析
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="song-info" class="result-card d-none">
+            <div id="aplayer"></div>
+            <div class="song-info text-center">
+                <img id="song_pic" src="" alt="专辑封面" class="img-fluid">
+                <h3 class="mt-3" id="song_name"></h3>
+                <p class="text-muted" id="artist_names"></p>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <p><strong>📀 专辑：</strong><span id="song_alname"></span></p>
+                    <p><strong>🎚️ 音质：</strong><span id="song_level"></span></p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>📦 大小：</strong><span id="song_size"></span></p>
+                    <p><strong>⬇️ 下载：</strong><a id="song_url" href="" target="_blank" class="text-decoration-none">立即下载</a></p>
+                </div>
+            </div>
+
+            <div class="lyric-box">
+                <h5>📜 歌词</h5>
+                <div id="lyric" class="text-secondary"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+    <script>
+	// 定义网易云api链接变量 https://api.kxzjoker.cn/api/163_music 方便维护 BASE_API_URL🔥
+	
+	const BASE_API_URL = "https://api.kxzjoker.cn/api/163_music";
+	
+        $(document).ready(function() {
+            function lrctrim(lyrics) {
+                const lines = lyrics.split('\n');
+                const data = [];
+
+                lines.forEach((line, index) => {
+                    const matches = line.match(/\[(\d{2}):(\d{2}[\.:]?\d*)]/);
+                    if (matches) {
+                        const minutes = parseInt(matches[1], 10);
+                        const seconds = parseFloat(matches[2].replace('.', ':')) || 0;
+                        const timestamp = minutes * 60000 + seconds * 1000;
+
+                        let text = line.replace(/\[\d{2}:\d{2}[\.:]?\d*\]/g, '').trim();
+                        text = text.replace(/\s\s+/g, ' '); // Replace multiple spaces with a single space
+
+                        data.push([timestamp, index, text]);
+                    }
+                });
+
+                data.sort((a, b) => a[0] - b[0]);
+
+                return data;
+            }
+
+            function lrctran(lyric, tlyric) {
+                lyric = lrctrim(lyric);
+                tlyric = lrctrim(tlyric);
+
+                let len1 = lyric.length;
+                let len2 = tlyric.length;
+                let result = "";
+
+                for (let i = 0, j = 0; i < len1 && j < len2; i++) {
+                    while (lyric[i][0] > tlyric[j][0] && j + 1 < len2) {
+                        j++;
+                    }
+
+                    if (lyric[i][0] === tlyric[j][0]) {
+                        tlyric[j][2] = tlyric[j][2].replace('/', '');
+                        if (tlyric[j][2]) {
+                            lyric[i][2] += ` (翻译：${tlyric[j][2]})`;
+                        }
+                        j++;
+                    }
+                }
+
+                for (let i = 0; i < len1; i++) {
+                    let t = lyric[i][0];
+                    result += `[${String(Math.floor(t / 60000)).padStart(2, '0')}:${String(Math.floor((t % 60000) / 1000)).padStart(2, '0')}.${String(t % 1000).padStart(3, '0')}]${lyric[i][2]}\n`;
+                }
+
+                return result;
+            }
+
+            function extractLinks(text) {
+                var regex = /https?:\/\/\S+/g;
+                var matches = text.match(regex);
+                if (matches) {
+                    return matches[0];
+                } else {
+                    return '';
+                }
+            }
+    
+            function checkValidLink(link) {
+                if (link.indexOf("http") === -1 || 
+                    (link.indexOf("music.163.com") === -1 && link.indexOf("163cn.tv") === -1)) {
+                    return false;
+                }
+                return true;
+            }
+    
+            function extractAndCheckId(text) {
+                var link = extractLinks(text);
+                if (checkValidLink(link)) {
+                    return link;
+                } else {
+                    var idRegex = /\b\d+\b/g;
+                    var ids = text.match(idRegex);
+                    if (ids && ids.length > 0) {
+                        return ids[0];
+                    }
+                    return '';
+                }
+            }
+
+            $('#query-form').on('submit', function(event) {
+                event.preventDefault();
+
+                const songIds = $('#song_ids').val();
+                const level = $('#level').val();
+                const validId = extractAndCheckId(songIds);
+
+                if (!validId) {
+                    alert('请输入有效的歌曲ID或链接');
+                    return;
+                }
+                //解析api接口链接🔥🔥🔥
+                $.post(BASE_API_URL, { 
+                    url: validId, 
+                    level: level, 
+                    type:'json' 
+                }, function(data) {
+                    if (data.status === 200) {
+                        // 更新DOM元素
+                        $('#song_name').text(data.name);
+                        $('#song_pic').attr('src', data.pic);
+                        $('#artist_names').text(data.ar_name);
+                        $('#song_alname').text(data.al_name);
+                        $('#song_level').text(data.level);
+                        $('#song_size').text(data.size);
+                        $('#song_url').attr('href', data.url);
+                        
+                        // 处理歌词
+                        let processedLyrics = data.tlyric ? 
+                            lrctran(data.lyric, data.tlyric) : data.lyric;
+                        $('#lyric').html(processedLyrics.replace(/\n/g, '<br>'));
+
+                        // 初始化播放器
+                        new APlayer({
+                            container: document.getElementById('aplayer'),
+                            lrcType: 1,
+                            fixed: true,
+                            audio: [{
+                                name: data.name,
+                                artist: data.ar_name,
+                                url: data.url,
+                                cover: data.pic,
+                                lrc: processedLyrics
+                            }]
+                        });
+
+                        $('#song-info').removeClass('d-none');
+                    } else {
+                        alert('解析失败：' + data.msg);
+                    }
+                }, 'json');
+            });
+        });
+    </script>
+</body>
+</html>

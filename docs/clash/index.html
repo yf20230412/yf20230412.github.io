@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="./js/Sakura.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="美区, apple id, 使用教程" name="keywords">
+    <meta content="小鱼共享小火箭" name="description">
+    <title>小鱼共享小火箭</title>
+    <link href="https://mpimg.cn/view.php/3158fcd55edc353685e224f230f696c2.jpg" rel="shortcut icon">
+    <link href="https://cdn.staticfile.org/flag-icons/6.6.6/css/flag-icons.min.css" rel="stylesheet">
+    <style>
+        /* 新顶部跑马灯广告样式 - 修改为无限循环滚动 */
+        .top-marquee {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            padding: 10px 0;
+            z-index: 9999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        
+        .top-marquee a {
+            color: white;
+            text-decoration: none;
+            padding: 0 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            display: inline-block;
+        }
+        
+        .top-marquee a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* 基础样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            background-color: #f8f9fa;
+        }
+        
+        /* 音乐播放器样式 - 修改为更简洁的样式 */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9998;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .music-player:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .music-player audio {
+            width: 200px;
+            height: 40px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .music-player audio:hover {
+            opacity: 1;
+        }
+        
+        .music-player i {
+            margin-right: 10px;
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+        
+        /* 爆闪背景层 */
+        #flash-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        /* 主内容区域 */
+        main {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            max-width: 800px;
+            margin: 60px auto 30px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 深色模式调整 */
+        body.dark-mode main {
+            background: rgba(30, 30, 30, 0.85);
+            color: #ffffff;
+        }
+        
+        body.dark-mode ol {
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .music-player {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        body.dark-mode .music-player i {
+            color: #ffffff;
+        }
+        
+        /* 基础样式 */
+        a {
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .border-success {
+            border-color: #6fd088 !important;
+        }
+        
+        :root {
+            --bs-success-rgb: 111, 208, 136;
+        }
+        
+        /* 按钮样式调整 - 新增炫彩文字效果和渐变粉描边 */
+        .small-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            margin: 10px auto;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 0 0 2px rgba(255, 182, 193, 0.3);
+            display: block;
+            max-width: 300px;
+        }
+        
+        .small-btn::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, 
+                rgba(255, 192, 203, 0.5), 
+                rgba(255, 182, 193, 0.3), 
+                rgba(255, 160, 180, 0.2));
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .small-btn span {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(90deg, #ff0000, #ff9900, #33cc33, #0099ff, #6633cc, #cc0066);
+            background-size: 600% 600%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow 5s ease infinite;
+        }
+        
+        @keyframes rainbow {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+        
+        .small-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 0 3px rgba(255, 182, 193, 0.4);
+        }
+        
+        /* 迷你按钮样式 - 修改为统一大小 */
+        .mini-btn {
+            padding: 6px 10px;
+            font-size: 12px;
+            margin-left: 5px;
+            display: inline-block;
+            vertical-align: middle;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 0 0 1px rgba(255, 182, 193, 0.3);
+        }
+        
+        .mini-btn::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border-radius: 6px;
+            background: linear-gradient(45deg, 
+                rgba(255, 192, 203, 0.5), 
+                rgba(255, 182, 193, 0.3), 
+                rgba(255, 160, 180, 0.2));
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .mini-btn span {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(90deg, #ff0000, #ff9900, #33cc33, #0099ff, #6633cc, #cc0066);
+            background-size: 600% 600%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow 5s ease infinite;
+        }
+        
+        .mini-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(255, 182, 193, 0.4);
+        }
+        
+        /* 主题切换按钮样式 */
+        .theme-switch {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            z-index: 9999;
+        }
+        
+        .theme-switch .btn {
+            width: 45px;
+            height: 45px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .theme-switch .btn:hover {
+            transform: scale(1.1);
+        }
+        
+        body.dark-mode .theme-switch .btn {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* 列表样式 */
+        ol {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        body.dark-mode ol {
+            background: rgba(30, 30, 30, 0.7);
+        }
+        
+        /* 图片样式 */
+        img.rounded-circle {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        
+        img.rounded-circle:hover {
+            transform: scale(1.05);
+        }
+        
+        /* 标题样式 - 新增炫彩爆闪效果 */
+        .title-container {
+            position: relative;
+            display: block;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            background: linear-gradient(90deg, #ff0000, #ff9900, #33cc33, #0099ff, #6633cc, #cc0066);
+            background-size: 600% 600%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow 5s ease infinite, pulse 0.5s ease infinite alternate;
+        }
+        
+        .title-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(20px);
+            z-index: 1;
+            opacity: 0.7;
+            animation: rainbow 5s ease infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        
+        .title-flash {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+            opacity: 0;
+            animation: flash 3s ease infinite;
+        }
+        
+        @keyframes flash {
+            0%, 100% { opacity: 0; transform: scale(0.8); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        
+        /* 嵌入内容样式 - 修改为炫彩渐变透明效果 */
+        .embed-container {
+            margin-top: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, 
+                rgba(255, 0, 0, 0.2), 
+                rgba(0, 255, 0, 0.2), 
+                rgba(0, 0, 255, 0.2), 
+                rgba(255, 255, 0, 0.2));
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            width: 100%;
+            min-height: 100px;
+        }
+        
+        .embed-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+        
+        .embed-container object {
+            position: relative;
+            z-index: 2;
+            border-radius: 13px;
+            overflow: hidden;
+            background: transparent;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .embed-container iframe {
+            position: relative;
+            z-index: 2;
+            border-radius: 13px;
+            overflow: hidden;
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            border: none;
+            min-height: 500px;
+        }
+        
+        .embed-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            animation: gradientBG 5s ease infinite, pulseGlow 2s ease infinite alternate;
+        }
+        
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+        }
+        
+        body.dark-mode .embed-container {
+            background: linear-gradient(135deg, 
+                rgba(255, 0, 0, 0.3), 
+                rgba(0, 255, 0, 0.3), 
+                rgba(0, 0, 255, 0.3), 
+                rgba(255, 255, 0, 0.3));
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .embed-container::before {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 大按钮样式 - 新增 */
+        .big-red-btn {
+            padding: 20px 40px;
+            font-size: 24px;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.5);
+            display: block;
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        .big-red-btn::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 12px;
+            background: linear-gradient(45deg, 
+                rgba(255, 0, 0, 0.3), 
+                rgba(200, 0, 0, 0.5), 
+                rgba(150, 0, 0, 0.3));
+            z-index: -1;
+            opacity: 0.8;
+        }
+        
+        .big-red-btn span {
+            position: relative;
+            z-index: 1;
+            color: #8B0000 !important; /* 深红色 */
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .big-red-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 5px rgba(255, 182, 193, 0.6);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+                margin: 15px;
+                margin-top: 50px;
+            }
+            
+            ol {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .embed-container iframe {
+                min-height: 400px;
+            }
+            
+            .top-marquee {
+                font-size: 12px;
+                padding: 8px 0;
+            }
+            
+            .theme-switch {
+                top: 50px;
+            }
+            
+            .mini-btn {
+                padding: 5px 8px;
+                font-size: 11px;
+            }
+            
+            .small-btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+            
+            .big-red-btn {
+                padding: 15px 30px;
+                font-size: 18px;
+                max-width: 300px;
+            }
+            
+            .music-player {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px;
+            }
+            
+            .music-player audio {
+                width: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .small-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+            
+            .big-red-btn {
+                padding: 12px 24px;
+                font-size: 16px;
+                max-width: 250px;
+            }
+            
+            .music-player {
+                transform: scale(0.8);
+                transform-origin: bottom right;
+            }
+            
+            .music-player audio {
+                width: 120px;
+            }
+            
+            .embed-container iframe {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-center container-fluid py-5 m-auto">
+    <!-- 新顶部跑马灯广告 - 修改为无限循环滚动 -->
+    <div class="top-marquee">
+        <div class="marquee-content">
+            <a href="https://my.ksust.com/kstore.htm?aff=4645" target="_blank">✈️ 免费注册凯速直链</a>
+            <a href="https://my.ksust.com/kstore.htm?aff=4645" target="_blank">✈️ 免费注册凯速直链</a>
+            <a href="https://my.ksust.com/kstore.htm?aff=4645" target="_blank">✈️ 免费注册凯速直链</a>
+        </div>
+    </div>
+    
+    <!-- 音乐播放器 - 修改为隐藏控件，自动播放 -->
+    <div class="music-player">
+        <i class="bi bi-music-note-beamed"></i>
+        <audio id="bgMusic" loop>
+            <source src="https://mpimg.cn/view.php/f0a550a20a99c47662db2a7013c2d1e2.mp3" type="audio/mpeg">
+            您的浏览器不支持音频元素
+        </audio>
+    </div>
+    
+    <!-- 爆闪背景元素 -->
+    <div id="flash-bg"></div>
+    
+    <!-- 主题切换按钮 -->
+    <div class="theme-switch">
+        <button id="themeToggle" class="btn btn-outline-secondary">
+            <i id="themeIcon" class="bi bi-moon"></i>
+        </button>
+    </div>
+
+    <main>
+        <img alt="" class="shadow mb-4 bg-body-tertiary rounded-circle" height="120" width="120" src="https://is4-ssl.mzstatic.com/image/thumb/Purple126/v4/c5/50/ad/c550ad28-d7bb-209c-05a6-849296bfddc5/AppIcon-0-1x_U007emarketing-0-10-0-0-85-220.png/230x0w.webp">
+        
+        <!-- 修改后的炫彩爆闪标题 -->
+        <div class="title-container">
+            <div class="title-glow"></div>
+            <div class="title-flash"></div>
+            <h1 class="mb-3">小鱼共享小火箭</h1>
+        </div>
+        
+        <div class="mx-1 row justify-content-center">
+            <ol class="col-auto text-start">
+                <li>打开iPhone/iPad的蓝色<strong>&nbsp; AppStore &nbsp;</strong>软件（请不要打开设置）</li>
+                <li>右上角点击<strong>&nbsp; 个人头像&nbsp; </strong>进入账户，下拉到最底找到并点击<strong>&nbsp;
+                    退出登录&nbsp;</strong></li>
+                <li><strong> &nbsp;复制&nbsp;</strong>本网站 共享账号和密码</li>
+                <li>点击登录，提示<strong> &nbsp;Apple id安全&nbsp;</strong>，请点击<strong> &nbsp;其他选项-不升级&nbsp;</strong>
+                </li>
+                <li>搜索<a class="btn btn-primary mini-btn" href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank"><span>Shadowrocket下载</span></a></li>
+                <li>用完务必<strong>&nbsp;退出登录&nbsp;</strong>，避免你的手机被锁<a class="btn btn-primary mini-btn" href="https://s0.mall.tcl.com/group1/M00/00/89/CvoGBGd37jmAL0b-AE72lMZF4xc097.mp4" target="_blank"><span>不懂就点视频教程</span></a></li>
+            </ol>
+        </div>
+        
+        <!-- 修改后的大按钮 - 深红色文字 -->
+        <div class="container mb-4">
+            <a class="btn btn-outline-primary big-red-btn" href="shadowrocket://add/https://upld.zone.id/uploads/q9iq9e5iq/clash.txt"><span>🚀下载完小火箭以后<br>
+点我一键导入永久免费节点</span></a>
+        </div>
+        
+        <!-- 引用账号🍎修改后的炫彩渐变透明嵌入内容区域 -->
+        <div class="embed-container" id="embedContainer">
+            <iframe id="embedFrame" src="https://id88888888.com" frameborder="0"></iframe>
+        </div>
+    </main>
+
+    <script>
+        // 百度统计代码
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?590823a3f98b48ee4f4bfa38f7c85aea";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        // 爆闪背景动画 - 减慢版
+        function createFlashEffect() {
+            const bg = document.getElementById('flash-bg');
+            const colors = [
+                '#ff0000', '#00ff00', '#0000ff', '#ffff00', 
+                '#ff00ff', '#00ffff', '#ff9900', '#9900ff',
+                '#ff0099', '#00ff99', '#99ff00', '#0099ff'
+            ];
+            
+            function flash() {
+                // 随机颜色
+                const color1 = colors[Math.floor(Math.random() * colors.length)];
+                const color2 = colors[Math.floor(Math.random() * colors.length)];
+                
+                // 创建渐变
+                bg.style.background = `linear-gradient(135deg, ${color1}, ${color2})`;
+                
+                // 随机大小和位置变化
+                const scale = 1 + Math.random() * 0.2;
+                const x = (Math.random() - 0.5) * 10;
+                const y = (Math.random() - 0.5) * 10;
+                bg.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+                
+                // 减慢闪烁速度 (500-1500ms)
+                const speed = 500 + Math.random() * 1000;
+                setTimeout(flash, speed);
+            }
+            
+            // 开始动画
+            flash();
+            
+            // 添加鼠标移动效果
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                bg.style.backgroundPosition = `${x * 100}% ${y * 100}%`;
+            });
+        }
+        
+        // 音乐自动播放处理
+        function setupAudio() {
+            const audio = document.getElementById('bgMusic');
+            if (!audio) return;
+            
+            // 设置音量
+            audio.volume = 0.3;
+            
+            // 创建音频上下文，用于解决自动播放限制
+            let audioContext;
+            
+            // 尝试自动播放
+            const playAudio = () => {
+                audio.play().then(() => {
+                    console.log('音乐自动播放成功');
+                }).catch(error => {
+                    console.log('自动播放被阻止:', error);
+                    // 如果自动播放失败，显示一个提示
+                    showAudioPrompt();
+                });
+            };
+            
+            // 显示音频提示
+            function showAudioPrompt() {
+                const musicPlayer = document.querySelector('.music-player');
+                if (!musicPlayer) return;
+                
+                // 添加提示文本
+                const prompt = document.createElement('div');
+                prompt.innerHTML = '<span style="color: #ff6b6b; font-size: 12px;">点击任意位置播放音乐</span>';
+                prompt.style.marginLeft = '10px';
+                musicPlayer.appendChild(prompt);
+                
+                // 添加点击事件监听器
+                document.body.addEventListener('click', function initAudio() {
+                    playAudio();
+                    // 移除提示
+                    if (prompt.parentNode) {
+                        prompt.parentNode.removeChild(prompt);
+                    }
+                    // 移除事件监听器
+                    document.body.removeEventListener('click', initAudio);
+                }, { once: true });
+            }
+            
+            // 页面加载后尝试播放
+            window.addEventListener('load', () => {
+                // 延迟播放，确保页面完全加载
+                setTimeout(playAudio, 1000);
+            });
+            
+            // 监听音频错误
+            audio.addEventListener('error', (e) => {
+                console.error('音频加载错误:', e);
+                // 尝试备用音频源
+                audio.src = 'https://mpimg.cn/view.php/f0a550a20a99c47662db2a7013c2d1e2.mp3';
+                setTimeout(playAudio, 1000);
+            });
+        }
+        
+        // 主题切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const body = document.body;
+            
+            // 检查本地存储中的主题偏好
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('bi-moon');
+                themeIcon.classList.add('bi-sun');
+            }
+            
+            // 切换主题
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+                
+                if (body.classList.contains('dark-mode')) {
+                    themeIcon.classList.remove('bi-moon');
+                    themeIcon.classList.add('bi-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    themeIcon.classList.remove('bi-sun');
+                    themeIcon.classList.add('bi-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+            
+            // 检测系统主题偏好
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            if (prefersDarkScheme.matches && !savedTheme) {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('bi-moon');
+                themeIcon.classList.add('bi-sun');
+            }
+            
+            // 监听系统主题变化
+            prefersDarkScheme.addEventListener('change', e => {
+                if (!savedTheme) {
+                    if (e.matches) {
+                        body.classList.add('dark-mode');
+                        themeIcon.classList.remove('bi-moon');
+                        themeIcon.classList.add('bi-sun');
+                    } else {
+                        body.classList.remove('dark-mode');
+                        themeIcon.classList.remove('bi-sun');
+                        themeIcon.classList.add('bi-moon');
+                    }
+                }
+            });
+            
+            // 启动爆闪效果
+            createFlashEffect();
+            
+            // 设置音频自动播放
+            setupAudio();
+            
+            // 标题随机闪光效果
+            function titleRandomFlash() {
+                const flashes = document.querySelectorAll('.title-flash');
+                flashes.forEach(flash => {
+                    // 随机延迟启动动画
+                    const delay = Math.random() * 2000;
+                    setTimeout(() => {
+                        flash.style.animationDelay = `${delay}ms`;
+                        flash.style.opacity = '0';
+                    }, delay);
+                });
+                
+                // 随机改变光晕大小
+                setInterval(() => {
+                    const glows = document.querySelectorAll('.title-glow');
+                    glows.forEach(glow => {
+                        const size = 1 + Math.random() * 0.5;
+                        glow.style.transform = `scale(${size})`;
+                    });
+                }, 3000);
+            }
+            
+            titleRandomFlash();
+            
+            // 为嵌入容器添加随机颜色变化
+            const embedContainer = document.querySelector('.embed-container');
+            if (embedContainer) {
+                setInterval(() => {
+                    const hue = Math.floor(Math.random() * 360);
+                    embedContainer.style.borderColor = `hsla(${hue}, 80%, 60%, 0.7)`;
+                }, 3000);
+            }
+            
+            // 跑马灯广告复制多份以实现无缝循环
+            function setupMarquee() {
+                const marqueeContent = document.querySelector('.marquee-content');
+                const link = marqueeContent.querySelector('a');
+                const linkWidth = link.offsetWidth;
+                const containerWidth = document.querySelector('.top-marquee').offsetWidth;
+                
+                // 计算需要复制的链接数量以填满容器
+                const copiesNeeded = Math.ceil(containerWidth / linkWidth) * 2;
+                
+                // 清空并重新添加链接
+                marqueeContent.innerHTML = '';
+                for (let i = 0; i < copiesNeeded; i++) {
+                    const clone = link.cloneNode(true);
+                    marqueeContent.appendChild(clone);
+                }
+            }
+            
+            // 确保跑马灯在窗口大小改变时也能正常工作
+            window.addEventListener('resize', setupMarquee);
+            setupMarquee();
+            
+            // 嵌入内容高度自适应
+            function adjustEmbedHeight() {
+                const embedContainer = document.getElementById('embedContainer');
+                const embedFrame = document.getElementById('embedFrame');
+                
+                // 监听iframe加载完成
+                embedFrame.onload = function() {
+                    try {
+                        // 尝试获取iframe内容的高度
+                        const iframeDoc = embedFrame.contentDocument || embedFrame.contentWindow.document;
+                        const iframeHeight = iframeDoc.body.scrollHeight;
+                        
+                        // 设置容器高度
+                        embedContainer.style.height = iframeHeight + 'px';
+                        embedFrame.style.height = iframeHeight + 'px';
+                        
+                        console.log('调整嵌入高度:', iframeHeight);
+                    } catch (e) {
+                        console.log('跨域限制，无法获取iframe高度:', e);
+                        // 如果跨域限制，设置默认高度
+                        embedContainer.style.height = '500px';
+                        embedFrame.style.height = '500px';
+                    }
+                };
+                
+                // 初始设置
+                embedContainer.style.height = '500px';
+                embedFrame.style.height = '500px';
+            }
+            
+            // 调用高度自适应函数
+            adjustEmbedHeight();
+            
+            // 窗口大小改变时重新调整高度
+            window.addEventListener('resize', adjustEmbedHeight);
+        });
+    </script>
+</body>
+</html>

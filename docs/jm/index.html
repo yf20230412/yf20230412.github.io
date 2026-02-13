@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./js/bootstrap.min.css">
+    <link rel="stylesheet" href="./js/animate.min.css">
+    <link rel="stylesheet" href="./static/editor.css">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
+    <link rel="shortcut icon" href="/static/icon/favicon.ico" />
+    <link rel="Bookmark" href="/static/icon/favicon.ico" />
+    <meta name="keywords" content="在线,工具,小鱼,tvbox,TVBox,接口加密,接口">
+  <meta name="description" content="这是聚焦TVBox接口加密技术的专业平台，致力于探索TVBox接口加密原理与实用方案。提供全方位的接口加密知识，从基础加密算法解析，到复杂加密场景的实战应用，帮助用户构建安全可靠的TVBox接口体系。">
+    <title>公众号《风言锋语88》- TVBox编辑器</title>
+</head>
+
+<body>
+    <div id="loading" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: #000; opacity: 0.5; z-index:9999;">
+        <center style="position: absolute; top: 50%; left: 50%; color:#fff">请稍候...</center>
+    </div>
+    <div class="container">
+        <div class="page-header">
+            <h3>
+                配置编辑器&nbsp;<small>本地记录依赖浏览器缓存，清空缓存将丢失记录。</small>
+            </h3></br>
+            <h5>
+                <span style="color:#FF0000"><strong>获取更多资源请关注微信公众号:风言锋语88</strong></span>
+                <h5>
+
+        </div>
+        <div class="row">
+            <div class="btn-group btn-group-sm col-md-5" role="group">
+                <button type="button" class="btn btn-success" onclick="show_visual('999999')">可视</button>
+                <button type="button" class="btn btn-info" onclick="show_code('999999')">源码</button>
+                <button type="button" class="btn btn-warning" onclick="empty_diy('999999')">清空</button>
+                <button type="button" class="btn btn-primary" onclick="save_diy('999999')">保存</button>
+            </div>
+            <div class="col-md-5">
+                <label class="btn btn-primary btn-sm">
+                    配置转图片 <input type="file" onchange="toImg(event)" style="display: none;">
+                </label>
+
+                <label class="btn btn-primary btn-sm">
+                    图片转代码 <input type="file" onchange="imgToStr(event)" style="display: none;">
+                </label>
+
+                <label class="btn btn-primary btn-sm">
+                    上传加密文件进行解密 <input type="file" onchange="decrypt(event)" style="display: none;">
+                </label>
+
+            </div>
+        </div>
+        <h4></h4>
+        <form id="diy_cfg_jf_999999" style="display: none;"></form>
+        <textarea rows="30" class="form-control" id="diy_cfg_code_999999" style="margin-top: 10px; display: none;"></textarea>
+    </div>
+
+    <!--版权-->
+    <div class="footer">
+        <!--网站运行时间-->
+        <div align="center">
+            本站已安全运行：<SPAN id=span_dt_dt style="color: #2F889A;"></SPAN>
+            <SCRIPT language=javascript>
+                function show_date_time(){
+                window.setTimeout("show_date_time()", 1000);
+                BirthDay=new Date("11/11/2023 8:0:0");
+                today=new Date();
+                timeold=(today.getTime()-BirthDay.getTime());
+                sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                msPerDay=24*60*60*1000
+                e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+                e_hrsold=(e_daysold-daysold)*24;
+                hrsold=Math.floor(e_hrsold);
+                e_minsold=(e_hrsold-hrsold)*60;
+                minsold=Math.floor((e_hrsold-hrsold)*60);
+                seconds=Math.floor((e_minsold-minsold)*60);
+                span_dt_dt.innerHTML='<font style=color:#C40000>'+daysold+'</font> 天 <font style=color:#C40000>'+hrsold+'</font> 时 <font style=color:#C40000>'+minsold+'</font> 分 <font style=color:#C40000>'+seconds+'</font> 秒';
+                }
+                show_date_time();
+            </script>
+        </div>
+        <div class="center-footer">
+            <p align="center" class="banquan">Copyright © 2023 - 至今</p>
+        </div>
+        <div align="center"">
+	      <a target=" _blank" href="https://mp.weixin.qq.com/s/zFyqLSwj5FXkMiupb5XdDQ" title="微信公众号：" alt="微信公众号：">微信公众号：<mark>风言锋语88</mark></a>
+        </div>
+    </div>
+
+    <!--在线播放器API-->
+
+    <!--备用 
+肥猫的api
+<script src="https://myhkw.cn/api/player/167013822195" id="myhk" key="167013822195" m="1"></script>
+
+//自己的api,https://myhkw.cn/
+<script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script> -->
+
+    <!--雪花API,https://api.vvhan.com/
+
+<script src='https://api.vvhan.com/api/script/yinghua'></script>
+-->
+
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-notify.min.js"></script>
+<script src="./js/bootbox.min.js"></script>
+<script src="./static/index.js"></script>
+<script src="./js/underscore-min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/core-min.js"></script>
+<script src="./js/enc-base64-min.js"></script>
+<script src="./js/cipher-core-min.js"></script>
+<script src="./js/aes-min.js"></script>
+<script src="./js/mode-ecb-min.js"></script>
+<script src="./js/clipboard.min.js"></script>
+<script src="./static/jsonform.js"></script>
+<script src="./static/jsv.js"></script>
+<script src="./static/editor.js"></script>
+<script src="./static/jsonlint.js"></script>
+<script src="./static/editor-ex.js"></script>
+<script src="/static/F12.js"></script>
+
+</html>

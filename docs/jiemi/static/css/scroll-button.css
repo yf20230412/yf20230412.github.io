@@ -1,0 +1,61 @@
+#container {
+    margin-bottom: 26px;  /* 调整输入框到输出框中间的距离*/
+    position: relative; /* 确保容器是相对定位 */
+
+}
+
+.scroll-button {
+    position: absolute;
+    display: none;
+    /* 隐藏按钮 */
+    margin-top: -19px;/* 调整跳转按钮到输出框距离*/
+    right: 0;
+    z-index: 10;
+    padding: 1px 1px;
+    /* 调整按钮内边距以改变大小 */
+    font-size: 12px;
+    /* 调整字体大小以提高可读性 */
+    color: #FFFFFF;
+    /* 文字颜色 */
+    border: none;
+    /* 去掉边框 */
+    border-radius: 2px;
+    /* 圆角 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+    background-color: #009966;
+    /* 默认背景颜色 */
+}
+
+// 进度条
+.output-box {
+    overflow-y: auto;
+}
+
+.progress-bar {
+    height: 2px;
+    /* 进度条高度 */
+    background: linear-gradient(to bottom, #4caf50, #ff0000);
+    /* 进度条背景颜色 */
+    border-radius: 0.1px;
+    position: absolute;
+    margin-top: 2px;
+    left: 0px;
+    width: 0%;
+    /* 初始宽度为0 */
+    transition: width 0.2s ease;
+    /* 平滑过渡效果 */
+    max-width: 100%;
+}
+
+@media (min-width: 769px) {
+    .scroll-button {
+        right: calc(10% + 2px); /*电脑模式下右对齐*/
+        margin-right: 0;
+    }
+
+    .progress-bar {
+        margin-left: calc(10% + 5px);
+        max-width: calc(79% + 8px);
+    }
+}

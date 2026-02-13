@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+
+<head>
+    <title>公众号《风言锋语88》- 直播格式转换</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telphone=no, email=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="M3U列表格式转换" />
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel="icon" type="image/png" sizes="72x72" href="/static/icon/72.png">
+    <link rel="apple-touch-icon" href="/static/icon/favicon.ico">
+    <link rel="shortcut icon" href="/static/icon/favicon.ico">
+    <link rel="Bookmark" href="/static/icon/favicon.ico">
+    <link rel='dns-prefetch' href='https://cdn.jsdelivr.net' />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel='stylesheet' id='style-videojs-errcd-css' href='css/videojs-mobile-ui.css' type='text/css' media='all' />
+    <script type="text/javascript" src="./js/jquery.min.js" id="jquery-js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/xiaoyu.css">
+    <!-- 引用FileSaver.min.js库下载 -->
+    <script src="./js/FileSaver.min.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".scrollspy">
+    <div id="kratos-wrapper">
+        <div id="kratos-page">
+            <div id="kratos-header">
+                <header id="kratos-header-section">
+                    <div class="container">
+                        <div class="nav-header">
+                            <a href="#" class="js-kratos-nav-toggle kratos-nav-toggle"><i></i></a>
+                            <h1 id="kratos-logo"><a href="/1115">小鱼影视</a></h1>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="kratos-start kratos-hero-2 kratos-post-header">
+                <div class="kratos-overlay kratos-post" style="background:#222831"></div>
+            </div>
+            <div id="kratos-blog-post" style="background:#f5f5f5">
+                <div class="container">
+                    <div class="row">
+                        <section id="main" class='col-md-8'>
+                            <article>
+                                <div class="kratos-hentry kratos-post-inner clearfix">
+                                    <div class="kratos-post-content">
+                                        <div>
+                                            <div>
+                                                <div class="form-group">
+                                                    <label>文件编码：</label>
+                                                    <select id="encoding">
+                                                        <option value="gbk">GBK</option>
+                                                        <option value="utf-8" selected>UTF-8</option>
+                                                        <option value="gbk">GB2312</option>
+                                                        <option value="big5">BIG5</option>
+                                                        <option value="korean">EUC-KR（韩文）</option>
+                                                        <option value="euc-jp">EUC-JP（日文）</option>
+                                                        <option value="utf-16be">UTF-16BE</option>
+                                                        <option value="utf-16le">UTF-16LE</option>
+                                                    </select>
+                                                </div>
+                                                <span class="btn btn-success fileinput-button">
+                                                    <span>选择文件</span>
+                                                    <input type="file" id="inputBrow">
+                                                </span>
+                                            </div>
+
+                                            <textarea class="txtarea" id="tvsource-input" name="zbytxt" wrap="off"></textarea>
+                                            <br />模式：
+                                            <input type="radio" name="gender" value="defs" checked> 普通&nbsp;&nbsp;
+                                            <input type="radio" name="gender" id="qiana" value="gens"> 加强A&nbsp;&nbsp;
+                                            <br />扩展：
+                                            <input type="checkbox" name="radiokuozhan" value="group-title" checked /> group-title&nbsp;&nbsp;
+                                            <input type="checkbox" name="radiokuozhan" value="tvg-logo" /> tvg-logo&nbsp;&nbsp;
+                                            <input type="checkbox" name="radiokuozhan" value="tvg-id" /> tvg-id&nbsp;&nbsp;
+                                            <input type="checkbox" name="radiokuozhan" value="tvg-name" /> tvg-name&nbsp;&nbsp;
+                                            <br />过滤：
+                                            <input type="checkbox" value="flaggen" checked /> 分组行添加#genre#标识&nbsp;&nbsp;
+                                            <br />
+                                            <div id="qiandiv">其他：
+                                                <input type="checkbox" id="qianta" value="flagta" /> 扩展数据为空时不显示&nbsp;&nbsp;
+                                                <br />
+                                            </div>
+                                            <p>
+                                                <input type="button" class="tvinput" id="TXTAJAX" name="M3UPP" onClick="m3u2txtupdate()" value="M3U转TXT" />
+
+                                                <input type="button" class="tvinput" id="M3UPPAJAX" name="M3UPP" onClick="tran2m3ugroup();" value="TXT转M3U" />
+
+                                                <input type="button" class="tvinput" id="M3Utest" name="M3UPP" onClick="getlogos();" value="提取台标" />
+
+                                                <input type="button" class="tvinput" id="m3uclear" name="M3UPP" onClick="m3ucleararea();" value="清除全部" />
+                                            </p>
+                                            <h2 id="zbyjg">转换结果</h2>
+                                            <textarea class="txtarea" id="contents" name="contents" readonly="readonly" wrap="off"></textarea>
+                                            <p id="rtips"></p>
+                                            <input type="button" class="tvinput" onClick="copy();" value="复制文本" />
+                                            <input type="button" class="tvinput" onClick="downloadmitv();" value="下载" />
+                                        </div>
+                                        <h2>使用说明</h2>
+                                        <p>默认转换为带分组标签的M3U格式，如果不需要，自行取消勾选 group-title 后再执行；<br />
+                                            由于各个软件解析M3U列表的方式不同，暂时先考虑如央视卫视等知名电视台的台标；</p>
+                                        <p>
+                                            <strong>普通模式</strong>：生成的M3U扩展标签内默认无内容。<br />
+                                            <strong>加强模式</strong>：后续根据需求适当匹配内容，诸如匹配台标图片地址等。
+                                        </p>
+                                        <p>扩展参数需要播放器甚至EPG列表配合才能显示它的价值，闭门造车毫无用处，尽量提供多种选项适配市面上流行的客户端。</p>
+                                        <p>通用格式举例：</p>
+                                        <pre>
+天津
+滨海新闻,http://60.30.52.41/live/bhtv1/playlist.m3u8
+西青新闻,http://221.238.209.44:81/hls/live1.m3u8
+央卫
+北京卫视,http://live.zjmc.tv/1/sd/live.m3u8
+CCTV-13新闻,https://live.cctv.com/2/sd/live.m3u8
+</pre>
+                                        <p>或者以下这种形式也可以直接转为M3U格式</p>
+                                        <pre>
+天津,#genre#
+滨海生活,http://60.30.52.41/live/bhtv2/playlist.m3u8
+西青新闻,http://221.238.209.44:81/hls/live1.m3u8
+央卫,#genre#
+北京卫视,http://live.zjmc.tv/1/sd/live.m3u8
+CCTV-13新闻,https://live.cctv.com/2/sd/live.m3u8
+</pre>
+                                        <p><strong>Tip：</strong><em>本地转换不上传不保存任何数据；没有异常处理，对格式要求比较严格；</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div id="comments" class="comments-area">
+                                    <script type="text/javascript" language="javascript">
+                                        /* <![CDATA[ */
+                                            function grin(tag) {
+                                                var myField;
+                                                tag = ' ' + tag + ' ';
+                                                if (document.getElementById('comment') && document.getElementById('comment').type == 'textarea') {
+                                                    myField = document.getElementById('comment');
+                                                } else {
+                                                    return false;
+                                                }
+                                                if (document.selection) {
+                                                    myField.focus();
+                                                    sel = document.selection.createRange();
+                                                    sel.text = tag;
+                                                    myField.focus();
+                                                }
+                                                else if (myField.selectionStart || myField.selectionStart == '0') {
+                                                    var startPos = myField.selectionStart;
+                                                    var endPos = myField.selectionEnd;
+                                                    var cursorPos = endPos;
+                                                    myField.value = myField.value.substring(0, startPos)
+                                                                  + tag
+                                                                  + myField.value.substring(endPos, myField.value.length);
+                                                    cursorPos += tag.length;
+                                                    myField.focus();
+                                                    myField.selectionStart = cursorPos;
+                                                    myField.selectionEnd = cursorPos;
+                                                }
+                                                else {
+                                                    myField.value += tag;
+                                                    myField.focus();
+                                                }
+                                            }
+                                        /* ]]> */
+                                    </script>
+                                    <div class="commentshow"></div>
+                                </div>
+                                <script>
+                                    jQuery('.comment-body').parent().hover(     
+                                        function(){
+                                            jQuery(this).find('.useragent').show();
+                                        },
+                                        function(){
+                                            jQuery(this).find('.useragent').hide();
+                                        });
+                                    jQuery('.comment-body').parent().click(     
+                                        function(){
+                                            jQuery(this).find('.useragent').show();
+                                        });
+                                </script>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/58.js"></script>
+    <script src="./js/tvlistconvert.js"></script>
+</body>
+
+</html>

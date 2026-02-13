@@ -1,0 +1,77 @@
+央视,#genre#
+CCTV1,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=1
+CCTV-2 财经,video://https://tv.cctv.com/live/cctv2/
+CCTV-2 财经,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctv2/
+CCTV3,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=2
+CCTV-4 中文国际,video://https://tv.cctv.com/live/cctv4/
+CCTV-4 中文国际,video://https://m-live.cctvnews.cctv.com/live/landscape.html?liveRoomNumber=10620168294224708952
+CCTV-4 中文国际,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctv4/
+CCTV5,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=3
+CCTV-5+ 体育赛事,video://https://tv.cctv.com/live/cctv5plus/
+CCTV-5+ 体育赛事,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctv5plus/
+五星体育,video://https://live.kankanews.com/huikan?id=10
+CCTV6,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=4
+CCTV7,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=5
+CCTV9,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=6
+CCTV10,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=7
+CCTV11,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=8
+CCTV12,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=9
+CCTV13,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=10
+CCTV-13 新闻,video://https://m-live.cctvnews.cctv.com/live/landscape.html?liveRoomNumber=16265686808730585228
+CCTV-13 新闻,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=10
+CCTV-13 新闻,video://https://tv.cctv.com/live/cctv13/
+CCTV-13 新闻,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctv13/
+CCTV-14 少儿,video://https://tv.cctv.com/live/cctvchild/
+CCTV-14 少儿,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctvchild/
+CCTV-15 音乐,video://https://tv.cctv.com/live/cctv15/
+CCTV-15 音乐,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctv15/
+CCTV-16 奥林匹克,video://https://tv.cctv.com/live/cctv16/
+CCTV-16 奥林匹克,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctv16/
+CCTV-17 农业农村,video://https://tv.cctv.com/live/cctv17/
+CCTV-17 农业农村,video://https://big5.cctv.com/gate/big5/tv.cctv.com/live/cctv17/
+
+
+
+卫视,#genre#
+北京卫视,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=11
+东方卫视,video://https://live.kankanews.com/huikan?id=1
+浙江卫视,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=12
+浙江卫视,video://https://www.cztv.com/liveTV/101
+江苏卫视,video://https://live.jstv.com/?channelId=534
+
+湖南卫视,video://https://www.mgtv.com/live/
+
+湖北卫视,video://https://www.xuexi.cn/xxqg.html?id=894c6f103e094ab58f51cf0f96870a3d
+河南卫视,video://https://www.hndyjyfw.gov.cn/livePlay.html?u=14
+河北卫视,video://https://www.hebtv.com/19/19js/st/xdszb/index.shtml?index=0
+东南卫视,video://https://live.fjtv.net/setv/
+深圳卫视,video://https://www.sztv.com.cn/dianshi.shtml?id=7867
+深圳卫视,video://https://www.sztv.com.cn/pindao/index.html?id=7867
+安徽卫视,video://https://www.ahtv.cn/folder9000/folder20193?channelIndex=0
+广东卫视,video://https://www.gdtv.cn/tvChannelDetail/43
+
+广西卫视,video://https://tv.gxtv.cn/channel/channelivePlay_e7a7ab7df9fe11e88bcfe41f13b60c62.html
+
+黑龙江卫视,https://idclive.hljtv.com:4430/live/hljws_own.m3u8
+黑龙江卫视,video://https://idclive.hljtv.com:4430/live/hljws_own.m3u8
+
+贵州卫视,video://https://www.gzstv.com/tv/ch01
+山东卫视,video://https://v.iqilu.com/live/sdtv/
+天津卫视,video://https://www.xuexi.cn/xxqg.html?id=f34309e518fb41579c46cbef4d56c51d
+吉林卫视,video://https://www.jlntv.cn/tv?id=104
+吉林卫视,video://https://www.jlntv.cn/tv?id=104
+陕西卫视,video://http://live.snrtv.com/star
+陕西卫视,video://http://www.sxtvs.com/sxtvs_sxws/index.html
+甘肃卫视,video://https://www.gstv.com.cn/zxc.jhtml
+宁夏卫视,video://https://www.nxtv.com.cn/tv/ws/
+西藏卫视,video://http://php.jdshipin.com:8880/xztv.php?id=ws
+新疆卫视,video://https://www.xjtvs.com.cn/column/tv/434?channelId=1
+内蒙古卫视,video://https://www.nmtv.cn/liveTv
+内蒙古卫视,video://https://www.nmtv.cn/liveTv
+云南卫视,video://https://www.yntv.cn/live.html
+山西卫视,video://https://www.sxrtv.com/tv/index.shtml
+吉林卫视,video://https://www.jlntv.cn/tv?id=104
+海南卫视,video://http://tc.hnntv.cn/
+三沙卫视,video://https://www.hnntv.cn/live.html?playType=livePlay&channelId=5
+海峡卫视,video://https://www.fjtv.net/folder526/folder536/
+青海卫视,video://https://www.qhbtv.com/new_index/live/folder2646/

@@ -1,0 +1,57 @@
+{
+    "warningText": "关注微信公众号:《风言锋语88》，获取更多信息，以下排名不分先后",
+    "urls": [
+        {
+            "url": "http://www.饭太硬.com/tv",
+            "name": "🍚小鱼在线┃饭总专线🍚"
+        },
+        {
+            "url": "http://tvbox.王二小放牛娃.top",
+            "name": "🐮小鱼在线┃放牛专线🐮"
+        },
+        {
+            "url": "http://ok213.top/tv",
+            "name": "😎小鱼在线┃ok专线😎"
+        },
+        {
+            "url": "https://vip.nxog.top/m/",
+            "name": "🍓小鱼在线┃讴歌专线🍓"
+        },
+        {
+            "url": "http://肥猫.com",
+            "name": "🐼小鱼在线┃肥猫专线🐼"
+        },
+        {
+            "url": "https://9877.kstore.space/AnotherD/api.json",
+            "name": "🕺小鱼在线┃潇洒专线🕺"
+        },
+        {
+            "url": "http://cdn.qiaoji8.com/tvbox.json",
+            "name": "🥰小鱼在线┃巧计专线🥰"
+        },
+        {
+            "url": "http://miqk.cc/小米/DEMO.json",
+            "name": "🌾小鱼在线┃小米专线🌾"
+        },
+        {
+            "url": "http://我不是.摸鱼儿.com",
+            "name": "🐋小鱼在线┃摸鱼专线🐋"
+        },
+        {
+            "url": "http://2015888.xyz/tv/",
+            "name": "🐬小鱼影视┃三维专线🐬"
+        },
+        {
+            "url": "",
+            "name": "--👇以下是个人专用本地仓👇--"
+        },
+        {
+            "url": "clan://localhost/风言锋语88/风言锋语/99.json",
+            "name": "🐟小鱼本地┃99影视💜"
+        },
+        {
+            "url": "clan://localhost/风言锋语88/22.json",
+            "name": "🐟小鱼专享┃本地多仓💜"
+        }
+    ]
+}

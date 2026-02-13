@@ -1,0 +1,795 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酷9订阅源参数配置工具</title>
+    <style>
+        :root {
+            --primary-color: #4a6ee0;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --light-bg: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        .config-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+        }
+        
+        .result-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin: 15px 0px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        textarea {
+            min-height: 280px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-group input {
+            width: auto;
+            margin-right: 8px;
+        }
+        
+        .result-box {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 14px;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        
+        .btn:hover {
+            background: #3a5ec0;
+        }
+        
+        .btn-copy {
+            background: var(--success-color);
+        }
+        
+        .btn-copy:hover {
+            background: #218838;
+        }
+        
+        .btn-process {
+            background: var(--warning-color);
+            color: #212529;
+        }
+        
+        .btn-process:hover {
+            background: #e0a800;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--primary-color);
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .note {
+            font-size: 12px;
+            color: var(--secondary-color);
+            margin-top: 5px;
+        }
+        
+        .playback-preview {
+            display: none;
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        
+        .file-upload {
+            border: 2px dashed var(--border-color);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .file-upload input {
+            display: none;
+        }
+        
+        .file-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+        
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .preview-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            position: relative;
+        }
+        
+        .preview-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+        
+        .preview-close:hover {
+            color: var(--primary-color);
+        }
+        
+        .config-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .config-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>酷9订阅源参数配置工具</h1>
+            <p class="description">可视化配置订阅源参数，自动生成带参数的链接</p>
+        </header>
+        
+        <div class="content">
+            <div class="config-section">
+                <div class="tabs">
+                    <div class="tab active" data-tab="basic">基本配置</div>
+                    <div class="tab" data-tab="headers">高级Headers</div>
+                    <div class="tab" data-tab="group-playback">分组与回看配置</div>
+                    <div class="tab" data-tab="file">TXT文件处理</div>
+                </div>
+                
+                <div class="tab-content active" id="basic-tab">
+                    <div class="form-group">
+                        <label for="source-url">订阅源地址</label>
+                        <input type="text" id="source-url" placeholder="例如: http://ku9.com">
+                        <p class="note">请输入订阅源的基础URL地址（可选）</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="user-agent">User-Agent</label>
+                        <input type="text" id="user-agent" placeholder="例如: Player">
+                        <p class="note">设置请求头中的User-Agent</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="headers-tab">
+                    <div class="form-group">
+                        <label for="headers-json">Headers JSON配置</label>
+                        <textarea id="headers-json" placeholder='{"User-Agent":"Player", "Referer":"http://example.com"}'></textarea>
+                        <p class="note">请输入JSON格式的Headers配置</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="group-playback-tab">
+                    <div class="config-grid">
+                        <!-- 分组配置部分 -->
+                        <div>
+                            <h3 class="section-title">分组配置</h3>
+                            
+                            <div class="form-group">
+                                <label for="decoding">解码方式 (DE)</label>
+                                <select id="decoding">
+                                    <option value="">请选择</option>
+                                    <option value="0">0 - 系统解码</option>
+                                    <option value="1">1 - IJK硬解</option>
+                                    <option value="2">2 - IJK软解</option>
+                                    <option value="3">3 - EXO硬解</option>
+                                    <option value="4">4 - EXO软解</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="aspect-ratio">画面比例 (SC)</label>
+                                <select id="aspect-ratio">
+                                    <option value="">请选择</option>
+                                    <option value="0">0 - 默认</option>
+                                    <option value="1">1 - 16:9</option>
+                                    <option value="2">2 - 4:3</option>
+                                    <option value="3">3 - 填充</option>
+                                    <option value="4">4 - 原始</option>
+                                    <option value="5">5 - 裁剪</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="js-path">JS路径 (JS)</label>
+                                <input type="text" id="js-path" placeholder="例如: http://ku9.com/tv.js">
+                                <p class="note">支持标准网络路径和本地路径</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="host">Host (HOST)</label>
+                                <input type="text" id="host" placeholder="例如: 127.0.0.1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ijk-analyzeduration">Ijk_Analyzeduration (IJKAD)</label>
+                                <input type="number" id="ijk-analyzeduration" placeholder="例如: 2000000">
+                            </div>
+                        </div>
+                        
+                        <!-- 回看配置部分 -->
+                        <div>
+                            <h3 class="section-title">回看配置</h3>
+                            
+                            <!-- 隐藏的回看参数前缀和时间格式 -->
+                            <input type="hidden" id="playback-prefix" value="playseek=">
+                            <input type="hidden" id="time-format" value="yyyyMMddHHmmss">
+                            <input type="hidden" id="custom-format">
+                            
+                            <div class="form-group">
+                                <label for="timezone">时区</label>
+                                <input type="text" id="timezone" value="Asia/Shanghai" placeholder="例如: Asia/Shanghai">
+                                <p class="note">默认时区为 Asia/Shanghai</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="playback-offset">回放偏移值 (PBO)</label>
+                                <input type="number" id="playback-offset" placeholder="例如: 10 (单位: 秒)">
+                                <p class="note">正数表示增加时间，负数表示减少时间</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeshift-offset">时移结束时间增加值 (TSO)</label>
+                                <input type="number" id="timeshift-offset" placeholder="例如: 3600 (单位: 秒)">
+                                <p class="note">正数表示增加时间，负数表示减少时间</p>
+                            </div>
+                            
+                            <div class="playback-preview" id="playback-preview">
+                                回看参数预览: playseek={start|yyyyMMddHHmmss|Asia/Shanghai}-{end|yyyyMMddHHmmss|Asia/Shanghai}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="file-tab">
+                    <div class="form-group">
+                        <div class="file-upload" id="file-upload-area">
+                            <p>点击或拖拽文件到此处上传</p>
+                            <input type="file" id="txt-file" accept=".txt">
+                        </div>
+                        <div class="file-info" id="file-info">未选择文件</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>处理选项</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="overwrite-existing" checked>
+                            <label for="overwrite-existing">覆盖已存在的分组配置</label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-process" id="process-btn">处理TXT文件</button>
+                    <button class="btn" id="preview-btn" disabled>预览处理结果</button>
+                    <button class="btn btn-copy" id="download-btn" disabled>下载处理结果</button>
+                </div>
+            </div>
+            
+            <div class="result-section">
+                <h2 class="section-title">订阅地址</h2>
+                <div class="result-box" id="result-box">请填写配置参数...</div>
+                <button class="btn btn-copy" id="copy-btn">复制链接</button>
+                
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="txt-config">分组配置参数</label>
+                    <textarea id="txt-config" readonly placeholder="请填写配置参数..."></textarea>
+                    <p class="note">适用于在txt订阅源文件中配置分组参数</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-modal" id="preview-modal">
+        <div class="preview-content">
+            <span class="preview-close" id="preview-close">&times;</span>
+            <h2>处理结果预览</h2>
+            <div class="result-box" id="preview-result"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 标签切换功能
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // 移除所有活动标签
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // 隐藏所有标签内容
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // 激活当前标签
+                    this.classList.add('active');
+                    document.getElementById(`${tabId}-tab`).classList.add('active');
+                });
+            });
+            
+            // 文件上传功能
+            const fileUploadArea = document.getElementById('file-upload-area');
+            const txtFileInput = document.getElementById('txt-file');
+            const fileInfo = document.getElementById('file-info');
+            let uploadedFileContent = '';
+            
+            fileUploadArea.addEventListener('click', function() {
+                txtFileInput.click();
+            });
+            
+            fileUploadArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                fileUploadArea.style.borderColor = 'var(--primary-color)';
+            });
+            
+            fileUploadArea.addEventListener('dragleave', function() {
+                fileUploadArea.style.borderColor = 'var(--border-color)';
+            });
+            
+            fileUploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                fileUploadArea.style.borderColor = 'var(--border-color)';
+                
+                if (e.dataTransfer.files.length > 0) {
+                    const file = e.dataTransfer.files[0];
+                    if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
+                        handleFileUpload(file);
+                    } else {
+                        alert('请上传TXT文件！');
+                    }
+                }
+            });
+            
+            txtFileInput.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    handleFileUpload(e.target.files[0]);
+                }
+            });
+            
+            function handleFileUpload(file) {
+                fileInfo.textContent = `已选择文件: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    uploadedFileContent = e.target.result;
+                    document.getElementById('preview-btn').disabled = false;
+                    document.getElementById('download-btn').disabled = false;
+                };
+                reader.readAsText(file);
+            }
+            
+            // 处理TXT文件
+            document.getElementById('process-btn').addEventListener('click', function() {
+                if (!uploadedFileContent) {
+                    alert('请先上传TXT文件！');
+                    return;
+                }
+                
+                const groupConfig = document.getElementById('txt-config').value;
+                if (!groupConfig || groupConfig === '请填写配置参数...') {
+                    alert('请先填写配置参数！');
+                    return;
+                }
+                
+                // 处理文件内容
+                const lines = uploadedFileContent.split('\n');
+                const processedLines = [];
+                let processed = false;
+                
+                for (let line of lines) {
+                    const trimmedLine = line.trim();
+                    
+                    // 检查是否是分组行
+                    if (trimmedLine.includes(',#genre#')) {
+                        const parts = trimmedLine.split(',');
+                        const groupName = parts[0];
+                        
+                        // 检查是否已经有配置
+                        if (trimmedLine.includes(',#genre#,')) {
+                            // 已有配置，根据选项决定是否覆盖
+                            if (document.getElementById('overwrite-existing').checked) {
+                                processedLines.push(`${groupName},#genre#,${groupConfig}`);
+                                processed = true;
+                            } else {
+                                processedLines.push(trimmedLine);
+                            }
+                        } else {
+                            // 没有配置，添加配置
+                            processedLines.push(`${groupName},#genre#,${groupConfig}`);
+                            processed = true;
+                        }
+                    } else {
+                        processedLines.push(trimmedLine);
+                    }
+                }
+                
+                if (!processed) {
+                    alert('未找到匹配的分组行！');
+                    return;
+                }
+                
+                // 更新预览内容
+                const processedContent = processedLines.join('\n');
+                document.getElementById('preview-result').textContent = processedContent;
+                
+                // 启用下载按钮
+                document.getElementById('download-btn').disabled = false;
+                
+                alert('文件处理完成！点击"预览处理结果"查看或"下载处理结果"保存文件。');
+            });
+            
+            // 预览处理结果
+            document.getElementById('preview-btn').addEventListener('click', function() {
+                document.getElementById('preview-modal').style.display = 'flex';
+            });
+            
+            // 关闭预览
+            document.getElementById('preview-close').addEventListener('click', function() {
+                document.getElementById('preview-modal').style.display = 'none';
+            });
+            
+            // 下载处理结果
+            document.getElementById('download-btn').addEventListener('click', function() {
+                const processedContent = document.getElementById('preview-result').textContent;
+                if (!processedContent) {
+                    alert('没有处理结果可下载！');
+                    return;
+                }
+                
+                const blob = new Blob([processedContent], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'processed_subscription.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+            
+            // 回看参数预览更新
+            function updatePlaybackPreview() {
+                const prefix = document.getElementById('playback-prefix').value;
+                const timeFormat = document.getElementById('time-format').value;
+                const customFormat = document.getElementById('custom-format').value;
+                const timezone = document.getElementById('timezone').value;
+                
+                let format = '';
+                if (timeFormat === 'timestamp13') {
+                    format = '13';
+                } else if (timeFormat === 'timestamp10') {
+                    format = '10';
+                } else if (timeFormat === 'yyyyMMddHHmmss') {
+                    format = 'yyyyMMddHHmmss';
+                } else if (timeFormat === 'custom' && customFormat) {
+                    format = customFormat;
+                }
+                
+                let playbackParam = '';
+                if (format) {
+                    if (format === '13' || format === '10') {
+                        playbackParam = `${prefix}{start|${format}}-{end|${format}}`;
+                    } else {
+                        playbackParam = `${prefix}{start|${format}|${timezone}}-{end|${format}|${timezone}}`;
+                    }
+                } else {
+                    playbackParam = `${prefix}{start}-{end}`;
+                }
+                
+                document.getElementById('playback-preview').textContent = `回看参数预览: ${playbackParam}`;
+            }
+            
+            // 监听回看相关输入变化
+            document.getElementById('timezone').addEventListener('input', updatePlaybackPreview);
+            
+            // 复制按钮
+            document.getElementById('copy-btn').addEventListener('click', copyToClipboard);
+            
+            // 实时生成配置函数
+            function generateConfig() {
+                // 获取基本配置
+                const sourceUrl = document.getElementById('source-url').value.trim();
+                const userAgent = document.getElementById('user-agent').value.trim();
+                
+                // 获取Headers配置
+                let headersJson = document.getElementById('headers-json').value.trim();
+                if (!headersJson && userAgent) {
+                    headersJson = JSON.stringify({"User-Agent": userAgent});
+                }
+                
+                // 获取分组配置
+                const decoding = document.getElementById('decoding').value;
+                const aspectRatio = document.getElementById('aspect-ratio').value;
+                const jsPath = document.getElementById('js-path').value.trim();
+                const host = document.getElementById('host').value.trim();
+                const ijkAnalyzeduration = document.getElementById('ijk-analyzeduration').value.trim();
+                
+                // 获取回看配置
+                const playbackPrefix = document.getElementById('playback-prefix').value;
+                const timeFormat = document.getElementById('time-format').value;
+                const customFormat = document.getElementById('custom-format').value.trim();
+                const timezone = document.getElementById('timezone').value.trim();
+                const playbackOffset = document.getElementById('playback-offset').value.trim();
+                const timeshiftOffset = document.getElementById('timeshift-offset').value.trim();
+                
+                // 构建回看参数
+                let playbackParam = '';
+                if (timeFormat === 'timestamp13') {
+                    playbackParam = `${playbackPrefix}{start|13}-{end|13}`;
+                } else if (timeFormat === 'timestamp10') {
+                    playbackParam = `${playbackPrefix}{start|10}-{end|10}`;
+                } else if (timeFormat === 'yyyyMMddHHmmss') {
+                    playbackParam = `${playbackPrefix}{start|yyyyMMddHHmmss|${timezone}}-{end|yyyyMMddHHmmss|${timezone}}`;
+                } else if (timeFormat === 'custom' && customFormat) {
+                    playbackParam = `${playbackPrefix}{start|${customFormat}|${timezone}}-{end|${customFormat}|${timezone}}`;
+                } else {
+                    playbackParam = `${playbackPrefix}{start}-{end}`;
+                }
+                
+                // 构建Headers部分
+                let headersPart = '';
+                if (headersJson) {
+                    headersPart = `#headers#${headersJson}`;
+                }
+                
+                // 构建分组配置部分（不包含分组名称）
+                let groupConfigParts = [];
+                if (decoding) groupConfigParts.push(`DE=${decoding}`);
+                if (aspectRatio) groupConfigParts.push(`SC=${aspectRatio}`);
+                if (headersJson) groupConfigParts.push(`HEADERS=${headersJson}`);
+                if (jsPath) groupConfigParts.push(`JS=${jsPath}`);
+                if (playbackParam) groupConfigParts.push(`PB=${playbackParam}`);
+                if (host) groupConfigParts.push(`HOST=${host}`);
+                if (playbackOffset) groupConfigParts.push(`PBO=${playbackOffset}`);
+                if (ijkAnalyzeduration) groupConfigParts.push(`IJKAD=${ijkAnalyzeduration}`);
+                if (timeshiftOffset) groupConfigParts.push(`TSO=${timeshiftOffset}`);
+                
+                let groupConfig = '';
+                if (groupConfigParts.length > 0) {
+                    groupConfig = groupConfigParts.join('#');
+                }
+                
+                // 设置分组配置
+                document.getElementById('txt-config').value = groupConfig || '请填写配置参数...';
+                
+                // 构建最终结果（订阅源地址 + headers）
+                let result = '';
+                if (sourceUrl) {
+                    result = sourceUrl;
+                    if (headersPart) {
+                        result += headersPart;
+                    }
+                } else {
+                    result = '请填写订阅源地址以生成完整链接';
+                }
+                
+                // 显示结果
+                document.getElementById('result-box').textContent = result;
+            }
+            
+            // 复制到剪贴板函数
+            function copyToClipboard() {
+                const resultBox = document.getElementById('result-box');
+                const textToCopy = resultBox.textContent;
+                
+                if (!textToCopy || textToCopy === '请填写配置参数...' || textToCopy === '请填写订阅源地址以生成完整链接') {
+                    alert('没有内容可复制！');
+                    return;
+                }
+                
+                // 使用现代剪贴板API
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(textToCopy)
+                        .then(() => {
+                            alert('链接已复制到剪贴板！');
+                        })
+                        .catch(err => {
+                            console.error('复制失败: ', err);
+                            fallbackCopyToClipboard(textToCopy);
+                        });
+                } else {
+                    fallbackCopyToClipboard(textToCopy);
+                }
+            }
+            
+            // 兼容旧浏览器的复制方法
+            function fallbackCopyToClipboard(text) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        alert('链接已复制到剪贴板！');
+                    } else {
+                        alert('复制失败，请手动复制！');
+                    }
+                } catch (err) {
+                    console.error('复制失败: ', err);
+                    alert('复制失败，请手动复制！');
+                }
+                
+                document.body.removeChild(textArea);
+            }
+            
+            // 为所有输入元素添加实时监听
+            document.querySelectorAll('input, select, textarea').forEach(element => {
+                element.addEventListener('input', generateConfig);
+                element.addEventListener('change', generateConfig);
+            });
+            
+            // 初始化配置
+            generateConfig();
+            updatePlaybackPreview();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+{
+
+    "spider": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/xiaoyu.txt",
+
+    "wallpaper": "http://www.kf666888.cn/api/tvbox/img",
+
+    "warningText": "【温馨提示您】：🔴线路利用网络爬虫技术获取，各线路的版本、清晰度、播放速度等存在差异请自行切换。建议避开晚上高峰时段。🔵软件和接口都是免费分享使用。💢请勿相信视频中的任何广告，以免您上当受骗……💯",
+
+    "logo": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/img/588.txt",
+
+    "lives": [
+
+    {
+      "name": "冰茶",
+      "type": 0,
+      "url": "https://fy.188766.xyz/?ip=&huikan=1&json=true",
+      "ua": "bingcha/1.1 (mianfeifenxiang) "
+    },
+    {
+        "name": "develop202",
+        "type": 0,
+        "playerType": 2,
+        "url": "https://gh.llkk.cc/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}"
+    },
+    {
+        "name": "湖北联通",
+        "type": 0,
+        "url": "./txt/HB_zonghe.txt",
+        "playerType": 1,
+        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+        "logo": "https://gitee.com/yf2026/TVLogo/raw/master/img/{name}.png",
+        "timeout": 15
+    },
+    {
+        "name": "1234",
+        "type": 0,
+        "url": "./18/txt/1234.txt"
+    },
+    {
+        "name": "小鱼AI直播+",
+        "type": 0,
+        "playerType": 2,
+        "url": "https://gh.2015888.xyz/raw.githubusercontent.com/yf20230412/TV2/master/output/user_result.m3u ",
+        "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+        "logo": "https://epg.v1.mk/logo/{name}.png",
+        "timeout": 10
+    }
+],
+    
+
+ "sites": [
+ 
+{
+    "key": "豆豆热播",
+    "name": "🔥┃豆瓣┃热播",
+    "type": 3,
+    "api": "csp_Douban",
+    "quickSearch": 0,
+    "searchable": 0
+},
+/*
+{
+    "key": "py_AiDou",
+    "name": "🔞┃AiDou(T4)",
+    "type": 4,
+    "api": "https://py.doube.eu.org/spider?site=AiDou",
+    "searchable": 1,
+    "quickSearch": 0,
+    "filterable": 0,
+    "changeable": 0,
+    "style": {
+        "type": "rect",
+        "ratio": 1.5
+    }
+},
+{
+    "key": "py_Miss",
+    "name": "🔞┃MissAV(T4)",
+    "type": 4,
+    "api": "https://py.doube.eu.org/spider?site=Miss",
+    "searchable": 1,
+    "quickSearch": 0,
+    "filterable": 0,
+    "changeable": 0
+},
+{
+    "key": "py_BadNews",
+    "name": "🔞┃BadNews(T4)",
+    "type": 4,
+    "api": "https://py.doube.eu.org/spider?site=BadNews",
+    "searchable": 1,
+    "quickSearch": 0,
+    "filterable": 0,
+    "changeable": 0,
+    "style": {
+        "type": "rect",
+        "ratio": 1.5
+    }
+},
+{
+    "key": "py_madou",
+    "name": "🔞┃麻豆(T4)",
+    "type": 4,
+    "api": "https://py.doube.eu.org/spider?site=MaDou",
+    "searchable": 1,
+    "quickSearch": 0,
+    "filterable": 0,
+    "changeable": 0,
+    "style": {
+        "type": "rect",
+        "ratio": 1.5
+    }
+},
+*/
+{
+    "key": "溏心次元",
+    "name": "🔞┃溏心次元(py)",
+    "type": 3,
+    "api": "./18/溏心次元.py",
+    "changeable": 0
+},
+{
+    "key": "黄色仓库",
+    "name": "🔞┃黄色仓库(py)",
+    "type": 3,
+    "api": "./18/黄色仓库.py",
+    "changeable": 0
+},
+{
+    "key": "聚合色播",
+    "name": "🔞┃聚合色播(py)",
+    "type": 3,
+    "api": "./18/聚合色播.py",
+    "changeable": 0
+},
+{
+    "key": "色播聚合",
+    "name": "🔞┃色播聚合(py)",
+    "type": 3,
+    "api": "./18/色播聚合.py",
+    "changeable": 0
+},
+{
+    "key": "sbjhpy",
+    "name": "🔞┃中国┃大秀",
+    "type": 4,
+    "api": "https://learnpython.ggff.net/sbjhpy",
+    "changeable": 0
+},
+{
+    "key": "omdxzb",
+    "name": "🔞┃欧美┃大秀",
+    "type": 4,
+    "api": "https://learnpython.ggff.net/cam4",
+    "changeable": 0
+},
+{
+    "key": "瑟瑟",
+    "name": "🔞┃瑟瑟(py)",
+    "type": 3,
+    "api": "./18/瑟瑟.py",
+    "changeable": 0
+},
+{
+    "key": "果冻",
+    "name": "🔞┃果冻(py)",
+    "type": 3,
+    "api": "./18/果冻.py",
+    "changeable": 0
+},
+{
+    "key": "lavAPP.py",
+    "name": "🔞┃lavAPP(py)",
+    "type": 3,    
+    "api": "./18/lavAPP.py",
+    "changeable": 0,
+    "ext": ""
+},
+{
+    "key": "香蕉",
+    "name": "🔞┃香蕉(py)",
+    "type": 3,
+    "api": "./18/香蕉.py",
+    "changeable": 0
+},
+{
+    "key": "py_DSYS",
+    "name": "🔞┃DSYS(py)",
+    "type": 3,
+    "api": "./18/DSYS.py",
+    "changeable": 0
+},
+{
+    "key":"麻豆",
+    "name":"🔞┃麻豆(js)",
+    "type":3,
+    "api":"./18/js/麻豆.min.js",
+    "changeable": 0
+},
+{
+    "key": "E佬1",
+    "name": "🔞┃E佬视频(py)",
+    "type": 3,
+    "api": "./18/E佬通用视频.py",
+    "changeable": 0,
+    "ext": ""
+},
+{
+    "key": "E佬2",
+    "name": "🔞┃E佬视频2(py)",
+    "type": 3,
+    "api": "./18/E佬通用视频2.py",
+    "changeable": 0,
+    "ext": ""
+},
+{
+    "key": "风流视频",
+    "name": "🔞┃风流视频",
+    "type": 3,
+    "api": "csp_XBPQ",
+    "ext": {
+    "请求头": "User-Agent$MOBILE_UA",
+    "编码": "UTF-8", "直接播放": "1",
+    "分类": "日韩$1#偷拍$21#无码$22#自拍$23#巨乳$24#华人$25#嫩模$26#剧情$27#动漫$28#熟女$29#丝袜$30#欧美$32#有码$33#制服$34#口交$35#三级$31#",
+  "分类url": "https://hekody.flsp8.boats/vodtype/{cateId}-{catePg}.html"
+    }
+},
+{
+    "key": "韩国电影",
+    "name": "🔞┃韩国电影(py🪜)",
+    "type": 3,
+    "api": "./18/韩国电影.py",
+    "changeable": 0
+},
+{
+    "key": "Javxx",
+    "name": "🔞┃Javxx(drpy🪜)",
+    "type": 3,
+    "api": "./douban/drpy3.min.js",
+    "changeable": 0,
+    "ext": "./18/js/JAVXX.js"
+},
+{
+    "key": "stripchat",
+    "name": "🔞┃stripchat(py🪜)",
+    "type": 3,
+    "api": "./18/stripchat.py",
+    "changeable": 0
+},
+{
+    "key": "jable",
+    "name": "🔞┃jable(py🪜)",
+    "type": 3,
+    "api": "csp_XBPQ",
+    "changeable": 0,
+    "ext": "./18/json/jable.json"
+},
+{
+    "key": "Missav",
+    "name": "🔞┃Missav(py🪜)┃待修",
+    "type": 3,
+    "api": "./18/Miss.py",
+    "changeable": 0,
+    "ext": {
+        "site": "https://missav.ai",
+        "cfgo":"./18/Miss_cf-proxy-linux-arm64",
+        "plp": "",
+        "proxy": {}
+    }
+},
+
+{
+    "key": "AV空投军团",
+    "name": "✈️空投军团✈️",
+    "type": 3,
+    "api": "csp_XBPQ",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "style": {
+        "type": "rect",
+        "ratio": 1.333
+    },
+    "ext": {
+        "主页url": "https://iporn01.xyz/",
+        "分类url": "https://iporn01.xyz/ch/{cateId}?page={catePg}",
+        "分类": "日本新发行$jp/latest#日本所有$jp#日本今日🔥$jp/today#日本本周🔥$jp/weekly#日本今月🔥$jp/month#日本2025🔥$jp/year\t        #国产新发行$ocal/news#国产最新$local/latest#国产今日🔥$local/today#国产本周🔥$local/weekly#国产今月🔥$local/month#国产2025🔥$local/year",
+        "数组": "\"imgcover\"&&\"imgcover\"",
+        "图片": "src=\"&&\"",
+        "简介": "★本站公告★：合理安排时间看片，享受健康生活。撸一撸可以  注意身体！！",
+        "标题": "hreflang=\"zh-hant\">&&</a>",
+        "链接": "href=\"&&\"",
+        "副标题": "class=\"datetime\">&&</time>",
+        "直接播放": "1",
+        "嗅探词": "index.m3u8#.mp4#m3u8#.m3u8#/tos/#.flv#video/tos",
+        "搜索后缀": "/video/",
+        "搜索url": "https://iporn01.xyz/se/result?keyword={wd}.html"
+    }
+},
+{
+    "key": "影片库",
+    "name": "🔞影片库",
+    "type": 3,
+    "api": "csp_XBPQ",
+    "ext": {
+        "站名": "影片库lugiao.top",
+        "主页url": "https://you.lugiao12.top/",
+        "分类": "国产片商$42#麻豆传媒$43#兔子先生$44#蜜桃传媒$45#精东影业$46#天美传媒$47#星空无限$48#果冻传媒$49#葫芦影业$50#杏吧传媒$51#扣扣传媒$53#SA国际传媒$54#起点传媒$55#中文字幕$56#精品素人$57#高清无码$58#日本有码$59#怀旧AV$60#VR专区$61#AV解说$62#SWAG$63#国产精品$64#网曝门事件$77#国产探花$65#JVID$66#绿帽淫妻$67#国产乱伦$68#美女主播$69#明星淫梦$70#香港三级$71#性世界$73#欧美专区$83#TS人妖$84#日本乱伦$86#精品动漫$74",
+        "分类url": "https://you.lugiao12.top/27wt/index.php/vod/show/by/{by}/id/{cateId}/page/{catePg}.html"
+    }
+},
+
+{"key": "大奶子","name": "🔞┃奶子┃采集","type": 1,"api": "https://apidanaizi.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产主播","国产乱伦","自拍偷拍","制服丝袜","网曝事件","传媒探花","清纯学生","AV解说","淫妻作乐","港台辣妹","足浴撩妹","反差母狗","AI换脸","VR视角","重口性癖","制服诱惑","丝袜美腿","中文字幕","无码流出","多人群交","凌辱快感","角色剧情","强奸乱伦","韩国三级","欧美激情","人妻熟女","主奴调教","动漫卡通","变性伪娘","女同性恋","野外露出"]},
+
+{"key": "黄仓","name": "🔞┃黄仓┃采集","type": 1,"api": "https://hsckzy888.com/api.php/provide/vod","searchable": 1,"changeable": 1,"categories": ["日本动漫", "网红主播", "国产传媒", "探花系列", "人妻熟女", "日本无码", "美乳巨乳", "强制侵犯", "制服诱惑", "绝色佳人", "风俗泡泡浴", "家庭乱伦", "AV解说", "三级电影", "少女萝莉", "SM调教", "绝顶潮吹", "魔镜系列", "时间停止", "催眠洗脑", "漫改系列", "电车痴汉", "淫欲痴女", "AI换脸", "网曝门", "TS专区", "女性向系列", "女同性恋", "男同性恋", "欧美精品", "国产自拍", "3D动漫", "韩国主播", "泰国风情", "OnlyFans"]},
+
+{"key":"XJCJ","name":"🔞┃香蕉┃采集","type":1,"api":"https://www.xiangjiaozyw.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"filterable":1,"categories":["欧美精品","卡通动漫","乱伦中出","传媒原创","口爆颜射","岛国女优","萝莉少女","国产直播","岛国群交","中文字幕","岛国素人","吃瓜爆料","淫娃自慰","公开漏出","户外打野","高潮喷水","AI换脸","AV解说","伦理三级","韩国直播"]},
+
+{"key": "精东","name": "🔞┃精东┃采集","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories":["麻豆视频","中文字幕"]},
+
+{"key": "155专场","name": "🔞┃155┃采集","type": 1,"api": "https://155api.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["无码专区","麻豆传媒","制服诱惑","三级伦理","AI换脸","中文字幕","卡通动漫","欧美系列","美女主播","国产自拍","熟女人妻","萝莉少女","女同性爱","多人群交","美乳巨乳","强奸乱伦","抖音视频","韩国主播","网红头条","网爆黑料","欧美无码","女优明星","SM调教","AV解说"]},
+
+{"key": "森林专场","name": "🔞┃森林┃采集","type": 1,"api": "https://slapibf.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产色情","主播直播","亚洲无码","亚洲有码","中文字幕","巨乳美乳","人妻熟女","强奸乱伦","欧美精品","萝莉少女","伦理三级","成人动漫","自拍偷拍","制服丝袜","口交颜射","日本精品","Cosplay","素人自拍","台湾辣妹","韩国御姐","唯美港姐","东南亚AV","欺辱凌辱","剧情介绍","多人多P","91探花","网红流出","野外露出","古装扮演","女优系列","可爱学生","风情旗袍","兽耳系列","瑜伽裤","闷骚护士","过膝袜","网曝门","传媒出品","女同性恋","男同性恋","恋腿狂魔"]},
+
+{"key": "量子","name": "🔞┃量子┃采集","type": 0,"api": "https://cj.lziapi.com/api.php/provide/vod/at/xml/","searchable": 1,"changeable": 1,"categories": ["伦理片"]},
+
+{"key": "白嫖资源","name": "🔞┃白嫖┃采集","type": 0,"api": "https://www.kxgav.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
+
+{"key": "pgxdy.com","name": "🔞┃艾薇┃采集","type": 0,"api": "https://www.pgxdy.com/api/xml.php","searchable": 1,"recordable": 0,"style": {"type": "rect","ratio": 1.33}},
+
+{"key": "淫水机资源","name": "🔞┃粥水┃采集","type": 0,"api": "https://www.xrbsp.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
+
+{"key": "香奶儿资源","name": "🔞┃香奶┃采集","type": 0,"api": "https://www.gdlsp.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
+
+{"key":"naixx","name":"🔞┃奶香┃采集","type":1,"api":"https://naixxzy.com/api.php/provide/vod/?ac=list","playUrl":"https://nxxbfjx.com/?url=","searchable":1,"quickSearch":1,"filterable":1,"categories":["国产自拍","主播诱惑","探花约炮","偷拍偷窥","网曝吃瓜","抖阴短片","传媒剧情","日韩主播","日韩无码","中文字幕","AV解说","换脸明星","强奸乱伦","女优明星","欧美激情","重口激情","三级伦理","剧情动漫","SM调教","女同性恋","VR视角"]},
+
+{"key": "大地","name": "🔞┃大地┃采集","type": 0,"api": "https://dadiapi.com/api.php","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["日韩无码","强奸乱伦","欧美精品","国产精品","人妻系列","中文字幕","动漫精品","伦理影片","日韩精品","制服诱惑","自拍偷拍","AV明星","3P合辑","巨乳系列","颜射系列","口交视频","自慰系列","SM重味","教师学生","大秀视频","AV明星1"]},
+
+{"key": "美少女资源","name": "🔞┃少女┃采集","type": 0,"api": "https://www.msnii.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
+
+{"key": "乐播","name": "️🔞┃乐播┃采集","type": 1,"api": "https://lbapi9.com/api.php/provide/vod/at/json/?ac=list","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["亚洲情色","国产主播","国产自拍","无码专区","欧美性爱","熟女人妻","强奸乱伦","巨乳美乳","中文字幕","制服诱惑","女同性恋","卡通动画","视频伦理","少女萝莉","重口色情","人兽性交"]},
+
+{"key": "番外","name": "🔞┃番外┃采集","type": 1,"api": "http://fhapi9.com/api.php/provide/vod/","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["群交淫乱","偷拍自拍","制服丝袜","无码专区","卡通动漫","中文字幕","欧美性爱","巨乳美乳","国产裸聊","国产自拍","国产盗摄","伦理三级","女同性恋","少女萝莉","人妖系列","虚拟VR"]},
+
+{"key": "磁力_lf_p2p2","name": "🧲┃磁力┃搜索㊙️","type": 3,"api": "./js/lf_p2p2_min.js","quickSearch": 1,"searchable": 1,"changeable": 1,"filterable": 1,"ext": "18+"},
+
+{"key": "本地","name": "🚦请勿相信任何广告","type": 3,"api": "csp_LocalFile","quickSearch": 0,"searchable": 0,"changeable": 0,"filterable": 1}
+
+],
+
+
+"proxy": ["raw.githubusercontent.com","googleapis.com","googlevideo.com","cdn.v82u1l.com","cdn.iz8qkg.com","cdn.kin6c1.com","c.biggggg.com","c.olddddd.com","haiwaikan.com","www.histar.tv","youtube.com","uhibo.com",".*boku.*",".*nivod.*",".*ulivetv.*"],
+
+
+"doh": [
+
+{"name": "Google","url": "https://dns.google/dns-query","ips": ["8.8.4.4","8.8.8.8"]},
+{"name": "Cloudflare","url": "https://cloudflare-dns.com/dns-query","ips": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]},
+{"name": "AdGuard","url": "https://dns.adguard.com/dns-query","ips": ["94.140.14.140","94.140.14.141"]},
+{"name": "DNSWatch","url": "https://resolver2.dns.watch/dns-query","ips": ["84.200.69.80","84.200.70.40"]},
+{"name": "Quad9","url": "https://dns.quad9.net/dns-quer","ips": ["9.9.9.9","149.112.112.112"]}],
+
+
+"ijk": [
+    {"group": "软解码","options": [
+
+            {"category": 4,"name": "opensles","value": "0"},
+            {"category": 4,"name": "overlay-format","value": "842225234"},
+            {"category": 4,"name": "framedrop","value": "1"},
+            {"category": 4,"name": "soundtouch","value": "1"},
+            {"category": 4,"name": "start-on-prepared","value": "1"},
+            {"category": 1,"name": "http-detect-range-support","value": "0"},
+            {"category": 1,"name": "fflags","value": "fastseek"},
+            {"category": 2,"name": "skip_loop_filter","value": "48"},
+            {"category": 4,"name": "reconnect","value": "1"},
+            {"category": 4,"name": "enable-accurate-seek","value": "0"},
+            {"category": 4,"name": "mediacodec","value": "0"},
+            {"category": 4,"name": "mediacodec-auto-rotate","value": "0"},
+            {"category": 4,"name": "mediacodec-handle-resolution-change","value": "0"},
+            {"category": 4,"name": "mediacodec-hevc","value": "0"},
+            {"category": 1,"name": "dns_cache_timeout","value": "600000000"}
+        ]
+    },
+
+    {"group": "硬解码","options": [
+            {"category": 4,"name": "opensles","value": "0"},
+            {"category": 4,"name": "overlay-format","value": "842225234"},
+            {"category": 4,"name": "framedrop","value": "1"},
+            {"category": 4,"name": "soundtouch","value": "1"},
+            {"category": 4,"name": "start-on-prepared","value": "1"},
+            {"category": 1,"name": "http-detect-range-support","value": "0"},
+            {"category": 1,"name": "fflags","value": "fastseek"},
+            {"category": 2,"name": "skip_loop_filter","value": "48"},
+            {"category": 4,"name": "reconnect","value": "1"},
+            {"category": 4,"name": "enable-accurate-seek","value": "0"},
+            {"category": 4,"name": "mediacodec","value": "1"},
+            {"category": 4,"name": "mediacodec-auto-rotate","value": "1"},
+            {"category": 4,"name": "mediacodec-handle-resolution-change","value": "1"},
+            {"category": 4,"name": "mediacodec-hevc","value": "1"},
+            {"category": 1,"name": "dns_cache_timeout","value": "600000000"}
+        ]
+    }
+],
+
+
+"rules": [
+
+    {"name": "海外看","hosts": ["haiwaikan"],"regex": ["8.1748","10.0099","10.3333","16.0599"]},
+    
+    {"name": "暴风廣告","hosts": ["bfzy"],"regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
+    
+    {"name": "磁力廣告","hosts": ["magnet"],"regex": ["更多","社區","xuu","最新","最新","直播","更新","社区","有趣","有趣","英皇体育","全中文AV在线","澳门皇冠赌场","哥哥快来","美女荷官","裸聊","新片首发","UUE29"]},
+    
+    {"name": "星星","hosts": ["aws.ulivetv.net"],"regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:8,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:9,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
+    
+    {"name": "量子","hosts": ["vip.lz","hd.lz","v.cdnlz","yzzy1.play"],"regex": ["18.5333","19.52","18.6666"]},
+    
+    {"name": "非凡","hosts": ["vip.ffzy","hd.ffzy","ffzy"],"regex": ["25.0666","25.08","20.52","25.1","25.1999"]},
+    
+    {"name": "火山嗅探","hosts": ["huoshan.com"],"regex": ["item_id="]},
+    
+    {"name": "快看","hosts": ["kuaikan"],"regex": ["5","20.123","20.167","#EXT-X-DISCONTINUITY\\r*\\n*((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-KEY:METHOD((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-DISCONTINUITY"]},
+    
+    {"name": "一起看","hosts": ["yqk"],"regex": ["18.4","15.1666","#EXT-X-DISCONTINUITY\\r*\\n*((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-CUE-OUT((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-CUE-IN"]},
+    
+    {"name": "七新嗅探","hosts": ["api.52wyb.com"],"regex": ["m3u8?pt=m3u8"]},
+    
+    {"name": "夜市","hosts": ["yeslivetv.com"],"script": ["document.getElementsByClassName('vjs-big-play-button')[0].click()"]},
+    
+    {"name": "毛驴","hosts": ["www.maolvys.com"],"script": ["document.getElementsByClassName('swal-buttonswal-button--confirm')[0].click()"]},
+    
+    {"name": "czzy","hosts": ["10086.cn"],"regex": ["/storageWeb/servlet/downloadServlet"]},
+    
+    {"name": "bdys","hosts": ["bytetos.com","byteimg.com","bytednsdoc.com","pstatp.com"],"regex": ["/tos-cn"],"exclude": [".m3u8"]},
+    
+    {"name": "bdys10","hosts": ["bdys10.com"],"regex": ["/obj/"],"exclude": [".m3u8"]},
+    
+    {"name": "优质广告","hosts": ["yzzy","playback"],"regex": ["16.63","18.66","17.66","19.13"]},
+    
+    {"name": "农民","hosts": ["toutiaovod.com"],"regex": ["video/tos/cn"]},
+    
+    {"name": "索尼","hosts": ["suonizy"],"regex": ["#EXTINF.*?\\s+.*?original.*?\\.ts\\s+","15.1666","15.2666","16.3333","15.266667"]},
+    
+    {"name": "抖音","hosts": ["douyin.com"],"regex": ["is_play_url="]}
+],
+
+"headers":[{"host":"hlsztemgsplive.miguvideo.com","header":{"User-Agent": "bingcha/1.1 (mianfeifenxiang) "}}],
+
+"hosts": [
+        "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+        
+        "hlsztemgsplive.miguvideo.com=hlsztemgsplive.miguvideo.com.b.cdn.chinamobile.com",
+        "push-rtmp-hs-spe-f5.douyincdn.com=source-fcdn-spe-push.s.bytefcdn.com",
+        "cdn9.163189.xyz=gcore.jsdelivr.net",
+        "cache.ott.fifalive.itv.cmvideo.cn=cache.ott.fifalive.itv.cmvideo.cn.e.cdn.chinamobile.com",
+        "studentlive.migucloud.com=base-v4v6-miguvideo.e.cdn.chinamobile.com"
+    ],
+
+
+"flags": ["youku", "qq", "QQ", "iqiyi", "imgo", "xueren", "m1905", "qiyi", "letv", "sohu", "tudou", "pptv", "PPTV", "dbm3u8", "FY", "fy", "FeiYun", "feiyun", "飞云", "funshion", "mgtv", "wasu", "bilibili", "le", "duoduozy", "renrenmi", "xmm", "xigua", "ltnb", "rx", "SLYS4k", "CL4K", "xfyun", "wuduzy", "BYGA", "BYGB", "luanzi", "dxzy", "QEYSS", "aliyun", "优酷", "优酷视频", "西瓜", "AliS", "122", "chuangying", "乐视", "芒果", "腾讯", "腾讯视频", "芒果TV", "爱奇艺", "爱奇艺", "奇艺视频", "西瓜视频", "乐视视频", "搜狐", "搜狐视频", "哔哩哔哩", "哔哩"],
+
+"ads": ["static-mozai.4gtv.tv", "pv.vipwm.cc"]
+
+}

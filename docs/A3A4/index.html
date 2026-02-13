@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A3 试卷拆分为 A4 工具</title>
+  <style>
+    :root {
+      --primary-color: #3399ff;
+      --primary-hover: #237ddb;
+      --light-bg: #f9f9f9;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-color: #cccccc;
+      --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 15px;
+      background: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.5;
+    }
+    
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    #instructions {
+      background: #eef5ff;
+      padding: 12px 16px;
+      border-left: 4px solid var(--primary-color);
+      margin-bottom: 10px;
+      border-radius: 4px;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    
+    #instructions ol {
+      padding-left: 20px;
+    }
+    
+    #instructions li {
+      margin-bottom: 8px;
+    }
+    
+    #fileInput {
+      width: 100%;
+      margin: 10px 0 10px;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    
+    #canvasContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      padding: 10px;
+      margin-bottom: 80px; /* 为底部控件留出空间 */
+    }
+    
+    .canvas-page {
+      position: relative;
+      margin-bottom: 10px;
+      border: 1px solid #aaa;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1000px;
+      box-shadow: var(--shadow);
+    }
+    
+    canvas {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #666;
+      background: #fff;
+    }
+    
+    .cut-line {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: red;
+      cursor: ew-resize;
+      z-index: 10;
+      touch-action: none; /* 防止触摸时页面滚动 */
+    }
+    
+    .canvas-page.selected {
+      outline: 3px solid var(--primary-color);
+    }
+    
+    #controls {
+      position: fixed;
+      bottom: 2px;
+      right: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #controls button {
+      background-color: #3399ff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      transition: background-color 0.2s ease;
+    }
+    #controls button:hover:not(:disabled) {
+      background-color: #237ddb;
+    }
+    #controls button:disabled {
+      background-color: #a0cfff;
+      cursor: not-allowed;
+    }
+    
+    #loadingOverlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      color: var(--text-color);
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    #loadingOverlay.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    /* 移动端特定样式 */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      #instructions {
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+      
+      #instructions ol {
+        padding-left: 15px;
+      }
+      
+      #canvasContainer {
+        padding: 5px;
+      }
+      
+      .canvas-page {
+        margin-bottom: 8px;
+      }
+      
+      #controls {
+        padding: 8px;
+        gap: 6px;
+      }
+      
+      #controls button {
+        padding: 8px 10px;
+        min-width: 100px;
+        font-size: 0.85rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      #controls {
+        flex-direction: column;
+      }
+      
+      #controls button {
+        min-width: auto;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>&#128196; A3试卷拆分为A4工具</h1>
+  <div id="instructions">
+    <strong>操作步骤：</strong>
+    <ol>
+      <li>上传PDF或图片格式的A3试卷（支持 PNG、JPEG、GIF、BMP，建议为横向A3）</li>
+      <li>点击页面以选中目标页，或点击"全部选中并添加裁切线"为所有页面添加裁切线</li>
+      <li>点击"添加裁切线"按钮可在当前选中页面中间添加一条可拖动的垂直裁切线，可重复添加多条</li>
+      <li>拖动红线调整精确位置</li>
+      <li>如需修改，可点击"删除本页裁切线"重新设置（将删除当前选中页面所有裁切线）</li>
+      <li>点击"导出为PDF"按钮，生成裁切后按A4分布的新文件（竖向A4，按原页面顺序、从左到右顺序排列，片段将完整显示并居中）</li>
+    </ol>
+    &#9888;&#65039; 上传较大的文件或图片时，渲染画面可能需要几秒，请耐心等待加载完成。
+  </div>
+  <input type="file" id="fileInput" accept=".pdf,image/png,image/jpeg,image/jpg,image/gif,image/bmp" />
+  <div id="canvasContainer"></div>
+  <div id="loadingOverlay">正在处理，请稍候...</div>
+  <div id="controls">
+    <button id="selectAllAddCutLines">&#127760; 全部选中并添加裁切线</button>
+    <button id="addCutLine">&#10133; 添加裁切线</button>
+    <button id="removeCutLines">&#128465;&#65039; 删除本页裁切线</button>
+    <button id="exportPDF">&#128196; 导出为PDF (A4)</button>
+  </div>
+
+  <script src="https://unpkg.com/pdfjs-dist@2.10.377/build/pdf.min.js"></script>
+  <script src="https://unpkg.com/pdfjs-dist@2.10.377/build/pdf.worker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@2.10.377/build/pdf.worker.min.js';
+
+    const fileInput = document.getElementById('fileInput');
+    const container = document.getElementById('canvasContainer');
+    const selectAllAddCutLinesBtn = document.getElementById('selectAllAddCutLines');
+    const addCutLineBtn = document.getElementById('addCutLine');
+    const removeCutLinesBtn = document.getElementById('removeCutLines');
+    const exportBtn = document.getElementById('exportPDF');
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const supportedImageTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/bmp'];
+
+    let pages = [];
+    let currentPageIndex = null;
+    let isDragging = false;
+    let activeLine = null;
+    let isTouchDevice = 'ontouchstart' in window;
+
+    function showLoading(message = "正在处理，请稍候...") {
+      loadingOverlay.textContent = message;
+      loadingOverlay.classList.add('visible');
+      addCutLineBtn.disabled = true;
+      removeCutLinesBtn.disabled = true;
+      exportBtn.disabled = true;
+      selectAllAddCutLinesBtn.disabled = true;
+      fileInput.disabled = true;
+    }
+
+    function hideLoading() {
+      loadingOverlay.classList.remove('visible');
+      addCutLineBtn.disabled = false;
+      removeCutLinesBtn.disabled = false;
+      exportBtn.disabled = false;
+      selectAllAddCutLinesBtn.disabled = false;
+      fileInput.disabled = false;
+    }
+
+    function createCanvasPage(width, height) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'canvas-page';
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      wrapper.appendChild(canvas);
+      container.appendChild(wrapper);
+
+      const pageData = {
+        wrapper,
+        canvas,
+        ctx: canvas.getContext('2d'),
+        originalImage: null,
+        cutLines: []
+      };
+
+      wrapper.addEventListener('click', (e) => {
+        if (e.target.classList.contains('cut-line')) return;
+        pages.forEach((p, idx) => {
+          p.wrapper.classList.remove('selected');
+          if (p === pageData) currentPageIndex = idx;
+        });
+        wrapper.classList.add('selected');
+      });
+
+      return pageData;
+    }
+
+    function addCutLineToPage(page, initialRatio = 0.5) {
+      const line = document.createElement('div');
+      line.className = 'cut-line';
+      const cutData = { el: line, ratio: initialRatio };
+
+      const updateLinePosition = () => {
+        if (!line.parentNode) {
+          window.removeEventListener('resize', updateLinePosition);
+          return;
+        }
+        const wrapperRect = page.wrapper.getBoundingClientRect();
+        if (cutData && typeof cutData.ratio === 'number' && wrapperRect.width > 0) {
+          line.style.left = `${cutData.ratio * wrapperRect.width}px`;
+        }
+      };
+
+      // 鼠标事件
+      line.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        activeLine = { line, page, cutData };
+        e.stopPropagation();
+      });
+
+      // 触摸事件
+      line.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        activeLine = { line, page, cutData };
+        e.preventDefault();
+        e.stopPropagation();
+      });
+
+      page.wrapper.appendChild(line);
+      page.cutLines.push(cutData);
+      cutData.resizeListener = updateLinePosition;
+
+      requestAnimationFrame(updateLinePosition);
+      window.addEventListener('resize', updateLinePosition);
+    }
+
+    function removeCutLinesFromPage(page) {
+      page.cutLines.forEach(cut => {
+        cut.el.remove();
+        if (cut.resizeListener) {
+          window.removeEventListener('resize', cut.resizeListener);
+        }
+      });
+      page.cutLines = [];
+    }
+
+    // 鼠标拖动事件
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging || !activeLine) return;
+      const { line, page, cutData } = activeLine;
+      const wrapperRect = page.wrapper.getBoundingClientRect();
+      if (wrapperRect.width <= 0) return;
+
+      let newX_display = e.clientX - wrapperRect.left;
+      newX_display = Math.max(0, Math.min(wrapperRect.width, newX_display));
+      const newRatio = newX_display / wrapperRect.width;
+
+      cutData.ratio = newRatio;
+      line.style.left = `${newX_display}px`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isDragging) {
+        isDragging = false;
+        activeLine = null;
+      }
+    });
+
+    // 触摸拖动事件
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging || !activeLine || e.touches.length !== 1) return;
+      const { line, page, cutData } = activeLine;
+      const wrapperRect = page.wrapper.getBoundingClientRect();
+      if (wrapperRect.width <= 0) return;
+
+      let newX_display = e.touches[0].clientX - wrapperRect.left;
+      newX_display = Math.max(0, Math.min(wrapperRect.width, newX_display));
+      const newRatio = newX_display / wrapperRect.width;
+
+      cutData.ratio = newRatio;
+      line.style.left = `${newX_display}px`;
+      
+      e.preventDefault();
+    });
+
+    window.addEventListener('touchend', () => {
+      if (isDragging) {
+        isDragging = false;
+        activeLine = null;
+      }
+    });
+
+    fileInput.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      container.innerHTML = '';
+      pages = [];
+      currentPageIndex = null;
+
+      if (!file) return;
+
+      showLoading('正在加载文件，请稍候...');
+
+      try {
+        if (file.type === 'application/pdf') {
+          const fileReader = new FileReader();
+          await new Promise((resolve, reject) => {
+            fileReader.onload = async () => {
+              try {
+                const loadingTask = pdfjsLib.getDocument({ data: fileReader.result });
+                const pdf = await loadingTask.promise;
+                const scale = 1.5;
+
+                container.innerHTML = '';
+
+                for (let i = 0; i < pdf.numPages; i++) {
+                  showLoading(`正在加载 PDF 第 ${i + 1} / ${pdf.numPages} 页...`);
+                  const page = await pdf.getPage(i + 1);
+                  const viewport = page.getViewport({ scale });
+                  const pageData = createCanvasPage(viewport.width, viewport.height);
+
+                  const renderContext = { canvasContext: pageData.ctx, viewport: viewport };
+                  await page.render(renderContext).promise;
+
+                  const highResScale = 2.0;
+                  const highResViewport = page.getViewport({ scale: highResScale });
+                  const offscreenCanvas = document.createElement('canvas');
+                  offscreenCanvas.width = highResViewport.width;
+                  offscreenCanvas.height = highResViewport.height;
+                  const offscreenCtx = offscreenCanvas.getContext('2d');
+                  const highResRenderContext = { canvasContext: offscreenCtx, viewport: highResViewport };
+                  await page.render(highResRenderContext).promise;
+                  pageData.originalImage = offscreenCanvas.toDataURL('image/jpeg', 0.95);
+
+                  pages.push(pageData);
+                }
+                resolve();
+              } catch (pdfError) {
+                reject(pdfError);
+              }
+            };
+            fileReader.onerror = reject;
+            fileReader.readAsArrayBuffer(file);
+          });
+        } else if (supportedImageTypes.includes(file.type)) {
+          await new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => {
+              container.innerHTML = '';
+              const maxDimension = 5000;
+              let width = img.naturalWidth;
+              let height = img.naturalHeight;
+
+              if (width > maxDimension || height > maxDimension) {
+                alert('图片尺寸过大，将自动缩放以提高性能。');
+                const scale = Math.min(maxDimension / width, maxDimension / height);
+                width = width * scale;
+                height = height * scale;
+              }
+
+              const pageData = createCanvasPage(width, height);
+              pageData.ctx.drawImage(img, 0, 0, width, height);
+              pageData.originalImage = pageData.canvas.toDataURL('image/jpeg', 0.95);
+              pages.push(pageData);
+              URL.revokeObjectURL(img.src);
+              resolve();
+            };
+            img.onerror = () => {
+              URL.revokeObjectURL(img.src);
+              reject(new Error('无法加载图片文件，请确保图片格式为 PNG、JPEG、GIF 或 BMP。'));
+            };
+            img.src = URL.createObjectURL(file);
+          });
+        } else {
+          throw new Error('不支持的文件类型。请上传 PDF 或支持的图片格式（PNG、JPEG、GIF、BMP）。');
+        }
+      } catch (error) {
+        console.error('文件加载或处理出错:', error);
+        container.innerHTML = `<p style="color: red;">文件加载或处理出错: ${error.message}</p>`;
+        alert(`文件加载或处理出错: ${error.message}`);
+      } finally {
+        hideLoading();
+      }
+    });
+
+    selectAllAddCutLinesBtn.addEventListener('click', () => {
+      if (pages.length === 0) {
+        alert('请先上传文件。');
+        return;
+      }
+      pages.forEach((page, index) => {
+        pages.forEach(p => p.wrapper.classList.remove('selected'));
+        page.wrapper.classList.add('selected');
+        currentPageIndex = index;
+        removeCutLinesFromPage(page); // Clear existing cut lines to avoid duplicates
+        addCutLineToPage(page, 0.5);
+      });
+      alert('已为所有页面添加裁切线！');
+    });
+
+    addCutLineBtn.addEventListener('click', () => {
+      if (currentPageIndex === null || !pages[currentPageIndex]) {
+        alert('请点击选中一页后再添加裁切线');
+        return;
+      }
+      const page = pages[currentPageIndex];
+      addCutLineToPage(page, 0.5);
+    });
+
+    removeCutLinesBtn.addEventListener('click', () => {
+      if (currentPageIndex === null || !pages[currentPageIndex]) {
+        alert('请先选中页面');
+        return;
+      }
+      removeCutLinesFromPage(pages[currentPageIndex]);
+    });
+
+    exportBtn.addEventListener('click', async () => {
+      if (pages.length === 0) {
+        alert('请先上传文件。');
+        return;
+      }
+
+      const pagesWithoutCuts = pages.filter(p => p.cutLines.length === 0);
+      if (pagesWithoutCuts.length > 0) {
+        const confirmProceed = confirm(`警告：有 ${pagesWithoutCuts.length} 页没有添加裁切线，这些页面将尝试缩放到单张A4页面上。是否继续？`);
+        if (!confirmProceed) return;
+      }
+
+      showLoading('&#128640; 正在导出PDF，请稍候...');
+      exportBtn.disabled = true;
+
+      try {
+        const a4WidthPt = 8.27 * 72;
+        const a4HeightPt = 11.69 * 72;
+        const { jsPDF } = jspdf;
+        const pdf = new jsPDF({ orientation: 'p', unit: 'pt', format: 'a4' });
+        let pdfPageCount = 0;
+
+        for (const [index, page] of pages.entries()) {
+          showLoading(`正在处理第 ${index + 1} / ${pages.length} 页...`);
+
+          await new Promise((resolve, reject) => {
+            if (!page.originalImage) {
+              console.warn(`Page ${index + 1} missing original image data. Skipping.`);
+              alert(`页面 ${index + 1} 缺少图像数据，将跳过此页面。`);
+              resolve();
+              return;
+            }
+
+            const img = new Image();
+            img.onload = () => {
+              const sourceCanvas = document.createElement('canvas');
+              sourceCanvas.width = img.naturalWidth;
+              sourceCanvas.height = img.naturalHeight;
+              const sourceCtx = sourceCanvas.getContext('2d');
+              sourceCtx.drawImage(img, 0, 0);
+
+              const hasCutLines = page.cutLines.length > 0;
+
+              if (!hasCutLines) {
+                if (sourceCanvas.width > 0 && sourceCanvas.height > 0) {
+                  if (pdfPageCount > 0) pdf.addPage('a4', 'p');
+                  pdfPageCount++;
+                  pdf.setPage(pdfPageCount);
+
+                  const imgWidth = sourceCanvas.width;
+                  const imgHeight = sourceCanvas.height;
+                  const scale = Math.min(a4WidthPt / imgWidth, a4HeightPt / imgHeight);
+                  const finalWidth = imgWidth * scale;
+                  const finalHeight = imgHeight * scale;
+                  const offsetX = (a4WidthPt - finalWidth) / 2;
+                  const offsetY = (a4HeightPt - finalHeight) / 2;
+
+                  pdf.addImage(sourceCanvas.toDataURL('image/jpeg', 0.95), 'JPEG', offsetX, offsetY, finalWidth, finalHeight);
+                } else {
+                  console.warn(`Skipping page ${index + 1} (no cuts) due to zero dimensions.`);
+                }
+              } else {
+                const sortedRatios = page.cutLines.map(line => line.ratio).sort((a, b) => a - b);
+                const uniqueSortedRatios = [...new Set(sortedRatios)];
+                const positions = [0, ...uniqueSortedRatios, 1];
+
+                for (let i = 0; i < positions.length - 1; i++) {
+                  const startRatio = positions[i];
+                  const endRatio = positions[i + 1];
+
+                  if (typeof startRatio !== 'number' || typeof endRatio !== 'number' || startRatio < 0 || startRatio >= endRatio || endRatio > 1) {
+                    console.warn(`Skipping invalid segment on page ${index + 1}: start=${startRatio}, end=${endRatio}`);
+                    continue;
+                  }
+
+                  const startX = Math.round(startRatio * sourceCanvas.width);
+                  const segmentWidth = Math.max(0, Math.round((endRatio - startRatio) * sourceCanvas.width));
+                  const segmentHeight = sourceCanvas.height;
+
+                  if (segmentWidth <= 0 || segmentHeight <= 0) {
+                    console.warn(`Skipping zero-dimension segment on page ${index + 1} [${startRatio.toFixed(3)}-${endRatio.toFixed(3)}]`);
+                    continue;
+                  }
+
+                  const tempCanvas = document.createElement('canvas');
+                  tempCanvas.width = segmentWidth;
+                  tempCanvas.height = segmentHeight;
+                  const tempCtx = tempCanvas.getContext('2d');
+                  tempCtx.drawImage(sourceCanvas, startX, 0, segmentWidth, segmentHeight, 0, 0, segmentWidth, segmentHeight);
+
+                  if (pdfPageCount > 0) pdf.addPage('a4', 'p');
+                  pdfPageCount++;
+                  pdf.setPage(pdfPageCount);
+
+                  const imgWidth = segmentWidth;
+                  const imgHeight = segmentHeight;
+
+                  if (imgWidth > 0 && imgHeight > 0) {
+                    const scaleWidth = a4WidthPt / imgWidth;
+                    const scaleHeight = a4HeightPt / imgHeight;
+                    const scale = Math.min(scaleWidth, scaleHeight);
+                    const finalWidth = imgWidth * scale;
+                    const finalHeight = imgHeight * scale;
+                    const offsetX = (a4WidthPt - finalWidth) / 2;
+                    const offsetY = (a4HeightPt - finalHeight) / 2;
+
+                    pdf.addImage(tempCanvas.toDataURL('image/jpeg', 0.95), 'JPEG', offsetX, offsetY, finalWidth, finalHeight);
+                  } else {
+                    console.warn(`Skipping segment on page ${index + 1} due to zero dimensions after calculation.`);
+                  }
+                }
+              }
+              resolve();
+            };
+
+            img.onerror = () => {
+              console.error(`Error loading image data for page ${index + 1} for export.`);
+              alert(`页面 ${index + 1} 的图像数据加载失败，将跳过此页面。`);
+              resolve();
+            };
+
+            img.src = page.originalImage;
+          });
+        }
+
+        if (pdfPageCount > 0) {
+          pdf.save('拆分后试卷_A4.pdf');
+        } else {
+          alert('未能生成任何PDF页面。请检查源文件和裁切线设置。');
+        }
+      } catch (error) {
+        console.error("导出PDF时发生错误:", error);
+        alert(`导出PDF失败: ${error.message}`);
+      } finally {
+        hideLoading();
+        exportBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

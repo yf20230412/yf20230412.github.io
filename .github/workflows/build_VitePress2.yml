@@ -1,0 +1,98 @@
+# 相对于release.yml没有release功能
+# 自动上传到文件到docs/docs/才能触发,自动构建,复制按钮bk文件名
+name: VitePress2 to Branch torelease
+on:
+  #push:
+    #paths:
+      #- 'docs/docs/**'  #上传到docs/docs/才能触发
+  workflow_dispatch:   #手动触发
+
+env:
+  TZ: Asia/Shanghai
+
+permissions:
+  contents: write # 需要写权限提交代码
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 检出代码
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 配置 Node 环境
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9      
+          
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      # 修复可能的权限问题
+      - name: Fix permissions
+        run: sudo chown -R $USER:$USER .
+
+      # 安装依赖
+      - name: Install dependencies
+        run: pnpm install
+
+      # 清理旧构建
+      - name: Clean
+        run: rm -rf docs/docs/.vitepress/dist
+
+      # 构建 VitePress
+      - name: Build
+        run: pnpm run build
+
+      # 移动构建产物到目标目录
+      - name: Move Artifacts
+        run: |
+          echo "=== 开始移动构建产物 ==="
+          
+          echo "源目录结构："
+          ls -lR docs/docs/.vitepress/dist
+          
+          echo "目标目录原始状态："
+          ls -la docs/bk/ || echo "目录不存在（这是正常现象）"
+          
+          echo "创建目标目录..."
+          mkdir -p docs/bk
+          echo "创建后权限："
+          ls -ld docs/bk
+          
+          echo "清理旧文件..."
+          rm -rfv docs/bk/*
+          
+          echo "复制新文件（详细列表）..."
+          cp -Rv docs/docs/.vitepress/dist/* docs/bk/
+          
+          echo "复制后验证："
+          echo "目标目录大小："
+          du -sh docs/bk
+          echo "目标目录文件数："
+          find docs/bk/ -type f | wc -l
+          echo "关键文件检查："
+          ls -l docs/bk/index.html docs/bk/assets/*
+          
+          echo "=== 移动完成==="
+
+      # 自动提交变更
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/bk/
+          if git diff --staged --quiet; then
+            echo "无需提交任何更改."
+          else
+            git commit -m "自动部署"
+            git push origin HEAD:${{ github.ref }}
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密解密</title>
+    <!-- 引入Element Plus CSS（CDN） -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入Vue 3（CDN） -->
+    <script src="js/vue.global.prod.js"></script>
+    <!-- 引入Element Plus JS（CDN） -->
+    <script src="js/index.full.min.js"></script>
+    <!-- 引入CryptoJS（加密算法库，CDN） -->
+    <script src="./js/crypto-js.min.js"></script>
+    <!-- 引入jQuery（CDN） -->
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <h2> TVBox的AES-128-CBC
+                <template v-if="selectValue === '1'">加密</template>
+                <template v-else>解密</template>
+            </h2>
+            <div class="inner">
+                <!-- 左侧输入区 -->
+                <div class="textarea-group">
+                    <el-input v-model="jsonData" :rows="26" type="textarea" placeholder="请输入需要加密/解密的内容"></el-input>
+                </div>
+
+                <!-- 中间操作区 -->
+                <div class="input-group">
+                    <el-select v-model="selectValue" placeholder="选择操作类型">
+                        <el-option label="加密" value="1"></el-option>
+                        <el-option label="解密" value="0"></el-option>
+                    </el-select>
+
+                    <!-- 加密时显示密钥输入 -->
+                    <template v-if="selectValue === '1'">
+                        <el-input v-model="key" placeholder="KEY/密码（16位）" maxlength="16" clearable></el-input>
+                        <el-input v-model="iv" placeholder="IV/向量（自动生成）" disabled></el-input>
+                    </template>
+
+                    <!-- 解密时显示选项（新增自定义特征头/尾） -->
+                    <template v-else>
+                        <el-checkbox v-model="checked" label="是否Base64加密过"></el-checkbox>
+
+                        <!-- 自定义特征头/尾开关 -->
+                        <el-checkbox v-model="useCustomFeature" label="使用自定义特征头/尾"></el-checkbox>
+
+                        <!-- 自定义特征输入框（仅在启用时显示） -->
+                        <div class="custom-feature" v-if="useCustomFeature">
+                            <el-input v-model="customPrefix" placeholder="特征头（默认：$#）" clearable></el-input>
+                            <el-input v-model="customSuffix" placeholder="特征尾（默认：#$）" clearable></el-input>
+                        </div>
+                    </template>
+
+                    <!-- 按钮组 -->
+                    <div class="btn-group">
+                        <el-upload class="upload" :show-file-list="false" :on-change="handleUpload" :auto-upload="false">
+                            <el-button type="primary">上传文件</el-button>
+                        </el-upload>
+                        <el-button type="success" @click="encryptAes()" v-if="selectValue === '1'">加密下载</el-button>
+                        <el-button type="warning" @click="decryptAes()" v-else>解密</el-button>
+                    </div>
+
+                    <!-- 加密状态：配置转图片按钮 -->
+                    <div class="iframe-group" v-if="selectValue === '1'">
+                        <el-button type="primary">
+                            <label>
+                                配置转图片
+                                <input type="file" accept=".txt,.json" style="display: none;" @change="handleHideConfig">
+                            </label>
+                        </el-button>
+                    </div>
+
+                    <!-- 解密状态：图片转代码按钮 -->
+                    <div class="iframe-group" v-else>
+                        <el-button type="primary">
+                            <label>
+                                图片转代码
+                                <input type="file" accept=".jpg,.jpeg" style="display: none;" @change="handleExtractConfig">
+                            </label>
+                        </el-button>
+                    </div>
+                </div>
+
+                <!-- 右侧结果区 -->
+                <div class="textarea-group">
+                    <el-input v-model="result" :rows="26" type="textarea" placeholder="处理结果将显示在这里"></el-input>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-container">
+        <div class="footer-content">
+            <a target="_blank" href="https://www.2015888.xyz/gzh" title="微信公众号：风言锋语88">
+                微信公众号：<mark class="gradient-text">风言锋语88</mark>
+            </a>
+            <p class="copyright">© 2025 风言锋语88 版权所有</p>
+        </div>
+    </footer>
+    <script src="js/aes.js"></script>
+    <script src="/static/tanchuang/sweetalert/sweetalert.min.js"></script>
+    <script src="/static/tanchuang/sweetalert/sweetalert_verify.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh" class="js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>小鱼工具箱 - 免费手机工具 站长工具 源代码查看器 工具箱</title>
+  <meta name="keywords" content="工具网,在线,工具,小鱼,书签">
+  <meta name="description" content="这是一个非常Nice的在线书签导航网站">
+  <link rel="stylesheet" href="./static/css/dashlite.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <!-- 阿里巴巴图标引用xiaoyu -->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4933040_23y9dv9qet2.css">
+
+</head>
+
+<body class="nk-body npc-invest bg-lighter ">
+  <!-- wrap @s -->
+  <div class="nk-wrap ">
+    <!-- main header @s -->
+    <div class="nk-header nk-header-fluid nk-header-fixed is-light">
+      <div class="container-xl">
+        <div class="nk-header-wrap link-between">
+          <div class="nk-menu-trigger mr-sm-2 d-lg-none">
+            <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></a>
+          </div>
+          <div class="nk-header-brand">
+            <a href="/" class="logo-link text-base"><img src="https://master.2015888.xyz/img/logo.png" class="hide-mb-sm">小鱼工具箱</a>
+          </div>
+          <!-- .nk-header-brand -->
+          <div class="nk-header-tools nk-header-menu" data-content="headerNav">
+
+            <!-- .nk-header-mobile -->
+            <div class="nk-header-mobile">
+              <div class="nk-header-brand">
+                <a href="/" class="logo-link text-base">
+                  <span class="nio-version" style="font-size: 21px;position: inherit;">小鱼工具箱</span>
+                </a>
+              </div>
+              <div class="nk-menu-trigger mr-n2">
+                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></a>
+              </div>
+            </div>
+            <!-- .nk-header-mobile -->
+
+            <!-- Menu -->
+            <ul class="nk-menu nk-menu-main">
+              <li class="nk-menu-item active">
+                <a href="/533" class="nk-menu-link nk-ibx-action-item">
+                  <!--<em class="icon ni ni-home"></em>-->
+                  <i class="iconfont icon-zhuye"></i>
+                  <span class="nk-menu-text">主页</span>
+                </a>
+              </li>
+              <li class="nk-menu-item ">
+                <a href="/bk/" target="_blank" class="nk-menu-link nk-ibx-action-item">
+                  <!--<em class="icon ni ni-blogger"></em> -->
+                  <i class="iconfont icon-boke"></i>
+                  <span class="nk-menu-text">博客</span>
+                </a>
+              </li>
+
+              <li class="nk-menu-item ">
+                <a href="/588/" class="nk-menu-link nk-ibx-action-item">
+                  <!--<em class="icon ni ni-money-coins"></em>-->
+                  <i class="iconfont icon-a-zu12241"></i>
+                  <span class="nk-menu-text">打赏作者</span>
+                </a>
+              </li>
+
+              <li class="nk-menu-item ">
+                <a href="http://2015888.xyz/222/" class="nk-menu-link nk-ibx-action-item">
+                  <!--<em class="icon ni ni-contact"></em>-->
+                  <i class="iconfont icon-lianxiwomen"></i>
+                  <span class="nk-menu-text">联系我们</span>
+                </a>
+              </li>
+
+              <li class="nk-menu-item ">
+                <a href="http://2015888.xyz/222/" class="nk-menu-link nk-ibx-action-item">
+                  <!--<em class="icon ni ni-comments"></em>-->
+                  <i class="iconfont icon-liuyanban"></i>
+                  <span class="nk-menu-text">留言反馈</span>
+                </a>
+              </li>
+
+              <!-- 电脑端隐藏 -->
+              <div class="xiaoyu" id=xy>
+                <hr><!-- hr下划线 -->
+                <li class="nk-menu-item" data-id="3"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(3)">加密解密</a></li>
+                
+                <li class="nk-menu-item" data-id="8"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(8)">交流论坛</a></li>
+                
+                <li class="nk-menu-item" data-id="9"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(9)">AI智能</a></li>
+
+                <li class="nk-menu-item" data-id="10"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(10)">网盘</a></li>
+
+                <li class="nk-menu-item" data-id="1"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(1)">图片</a></li>
+
+                <li class="nk-menu-item" data-id="2"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(2)">影视</a></li>
+
+                <li class="nk-menu-item" data-id="4"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(4)">格式转化</a></li>
+
+                <li class="nk-menu-item" data-id="5"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(5)">开发工具</a></li>
+
+                <li class="nk-menu-item" data-id="6"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(6)">站长工具</a></li>
+
+                <li class="nk-menu-item" data-id="7"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(7)">实用工具</a></li>
+
+                <li class="nk-menu-item" data-id="11"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(11)">图床</a></li>
+
+                <li class="nk-menu-item" data-id="12"><a class="nk-menu-link nk-ibx-action-item" href="javascript:show_tool_list(12)">采集</a></li>
+              </div>
+              <!-- 电脑端隐藏 -->
+            </ul>
+          </div>
+          <!-- .nk-header-menu -->
+          <div class="no-gutters">
+            <ul class="nk-quick-nav">
+              <li class="dropdown">
+                <a href="javascript:;" class="progress-rating dark-switch ">
+                  <span class="nk-menu-icon">
+                    <em class="icon ni ni-moon"></em>
+                    <em class="icon ni ni-sun d-none"></em>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <!-- .nk-quick-nav -->
+          </div>
+          <!-- .nk-header-tools -->
+        </div>
+        <!-- .nk-header-wrap -->
+      </div>
+      <!-- .container-fliud -->
+    </div>
+    <!-- main header @e -->
+    <!-- content @s -->
+
+    <div class="nk-content nk-content-lg nk-content-fluid pt-5 pb-5 bannerbg">
+      <div class="container-xl">
+        <div class="form-control-wrap circle">
+          <div class="form-text-hint-lx">
+            <span class="overline-title"><em class="icon ni ni-search"></em></span>
+          </div>
+          <input type="text" class="form-control form-control-lx btn-round" id="searchkw" placeholder="搜索工具(Ctrl+F)" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <!-- content @s -->
+    <div class="nk-content nk-content-fluid p-0">
+      <div class="nk-block">
+        <div class="card">
+          <div class="card-inner p-2">
+            <div class="container-xl">
+              <nav>
+                <ul class="breadcrumb breadcrumb-pipe" id=xy2>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="3"><a href="javascript:show_tool_list(3)">加密解密</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="8"><a href="javascript:show_tool_list(8)">交流论坛</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="9"><a href="javascript:show_tool_list(9)">AI智能</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="10"><a href="javascript:show_tool_list(10)">网盘</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="1"><a href="javascript:show_tool_list(1)">图片工具</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="2"><a href="javascript:show_tool_list(2)">影视</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="4"><a href="javascript:show_tool_list(4)">格式转化</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="5"><a href="javascript:show_tool_list(5)">开发工具</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="6"><a href="javascript:show_tool_list(6)">站长工具</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="7"><a href="javascript:show_tool_list(7)">实用工具</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="11"><a href="javascript:show_tool_list(11)">图床</a></li>
+                  <li class="breadcrumb-item fs-16px category-item" data-id="12"><a href="javascript:show_tool_list(12)">采集</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content @s -->
+    <div class="nk-content nk-content-lg nk-content-fluid">
+      <div class="container-xl">
+        <div class="nk-content-body">
+
+          <div id="toollist">
+            <!-- 主要内容 -->
+            <div class="card card-preview category-card" data-category-id="3">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-code"></em>
+                  <span class="nk-menu-text font-weight-bold">加密解密</span>
+                </div>
+
+                <div class="row g-2">
+
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="/jm/" target="_blank" title="接口加密" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">接口加密</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="/jiemi/" target="_blank" title="接口解密①" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">接口解密①</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://2015888.xyz/jiemi/" target="_blank" title="接口解密②" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">接口解密②</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="/128/" target="_blank" title="AES加解密" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">AES加解密</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="/m3u/" target="_blank" title="TXT与M3U互转" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">TXT与M3U互转</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://qiushui.vip/gj/9d.php" target="_blank" title="酒店源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">酒店源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.qiushui.vip/gj/mgid.php" target="_blank" title="咪咕ID" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">咪咕ID</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="/iptv" target="_blank" title="直播接口" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">直播接口</a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="8">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-chat-circle-fill"></em>
+                  <span class="nk-menu-text font-weight-bold">交流论坛</span>
+                </div>
+                <div class="row g-2">
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.52pojie.cn/" target="_blank" title="吾爱破解" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">吾爱破解</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.znds.com/" target="_blank" title="智能电视网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">智能电视网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://bbs.binmt.cc/" target="_blank" title="MT论坛" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">MT论坛</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://bbs.zol.com.cn/" target="_blank" title="中关村论坛" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">中关村论坛</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.right.com.cn/forum/" target="_blank" title="恩山无线论坛" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">恩山无线论坛</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://bbs.sxtv.top/" target="_blank" title="神仙论坛" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">神仙论坛</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.iopq.net/" target="_blank" title="游戏藏宝湾论坛" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">游戏藏宝湾论坛</a></div>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="card card-preview category-card" data-category-id="9">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-text-a"></em>
+                  <span class="nk-menu-text font-weight-bold">AI智能</span>
+                </div>
+                <div class="row g-2">
+
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.wenxiaobai.com/" target="_blank" title="满血版deepseek" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">满血版deepseek</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chat.deepseek.com/" target="_blank" title="DeepSeek" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">DeepSeek</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.doubao.com/chat/" target="_blank" title="豆包" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">豆包</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://kimi.moonshot.cn/" target="_blank" title="KIMI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">KIMI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tongyi.aliyun.com/qianwen/" target="_blank" title="通义千问" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">通义千问</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://yiyan.baidu.com/" target="_blank" title="文心一言" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">文心一言</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://xinghuo.xfyun.cn/desk" target="_blank" title="讯飞星火" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">讯飞星火</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chatglm.cn/" target="_blank" title="智普清言" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">智普清言</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.tiangong.cn/" target="_blank" title="天工AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">天工AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://yuewen.cn/chats/new" target="_blank" title="跃问" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">跃问</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://hailuoai.com/" target="_blank" title="海螺AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">海螺AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://yuanbao.tencent.com/chat/" target="_blank" title="腾讯元宝" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">腾讯元宝</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ying.baichuan-ai.com/chat" target="_blank" title="百小应" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">百小应</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://wukong.com/" target="_blank" title="小悟空" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">小悟空</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://taichu-web.ia.ac.cn/" target="_blank" title="紫东太初" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">紫东太初</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chat.xverse.cn/xchat/index.html" target="_blank" title="元象大模型" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">元象大模型</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.modelscope.cn/studios/iic/ModelScopeGPT" target="_blank" title="魔搭GPT" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">魔搭GPT</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chat.sensetime.com/" target="_blank" title="商量" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">商量</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://cueme.cn/" target="_blank" title="Cueme" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Cueme</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ai.360.com/" target="_blank" title="360智脑" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">360智脑</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chatcvp.cn/" target="_blank" title="智捷AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">智捷AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ai.rcouyi.com/chat" target="_blank" title="欧亿AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">欧亿AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://wuya-ai.com/" target="_blank" title="无涯" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">无涯</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://aibrm.com/" target="_blank" title="白日梦" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">白日梦</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://bot.n.cn/" target="_blank" title="纳米助手" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">纳米助手</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ai.sohu.com/pc/home" target="_blank" title="简单AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">简单AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://kling.kuaishou.com/" target="_blank" title="可灵" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">可灵</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://jimeng.jianying.com/ai-tool/home" target="_blank" title="即梦AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">即梦AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://metaso.cn/" target="_blank" title="秘塔AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">秘塔AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://zhida.zhihu.com/" target="_blank" title="知乎直答" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">知乎直答</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://qzoffice.com/" target="_blank" title="轻竹PPT" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">轻竹PPT</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chat-ppt.com/" target="_blank" title="ChatPPT" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">ChatPPT</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tianyin.music.163.com/" target="_blank" title="天音" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">天音</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chatexcel.com/" target="_blank" title="ChatExcel" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">ChatExcel</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chat.doltrans.com/" target="_blank" title="中文ChatGAi" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">中文ChatGAi</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.gaoding.com/create-design" target="_blank" title="稿定AI" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">稿定AI</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://mousi.org:8081/" target="_blank" title="复旦·眸思" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">复旦·眸思</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://img.logosc.cn/" target="_blank" title="AI改图" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">AI改图</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://aigc.baidu.com/" target="_blank" title="度加创作工具" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">度加创作工具</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.peiyine.com/" target="_blank" title="配音鹅" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">配音鹅</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://lingma.aliyun.com/lingma/" target="_blank" title="通义灵码" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">通义灵码</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.coze.cn/" target="_blank" title="扣子" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">扣子</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://comate.baidu.com/zh" target="_blank" title="文心快码" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">文心快码</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.aipaperpass.com/" target="_blank" title="千笔" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">千笔</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.marscode.cn/" target="_blank" title="豆包 MarsCode" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">豆包 MarsCode</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.xiaoyuxiezuo.com/" target="_blank" title="小鱼AI写作" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">小鱼AI写作</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://xuanheai.com/" target="_blank" title="悬河" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">悬河</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tusiart.com/" target="_blank" title="吐司" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">吐司</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.liblib.art/" target="_blank" title="哩布哩布" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">哩布哩布</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://miaohua.sensetime.com/" target="_blank" title="秒画" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">秒画</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://cloud.baidu.com/product-s/miaoda_home" target="_blank" title="百度秒哒" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">百度秒哒</a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="10">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-cloud"></em>
+                  <span class="nk-menu-text font-weight-bold">网盘</span>
+                </div>
+                <div class="row g-2">
+
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.aliyundrive.com/" target="_blank" title="阿里云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">阿里云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://pan.baidu.com/" target="_blank" title="百度网盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">百度网盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.lanzou.com/" target="_blank" title="蓝奏云" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">蓝奏云</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://pan.xunlei.com/" target="_blank" title="迅雷云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">迅雷云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://onedrive.live.com/" target="_blank" title="OneDrive" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">OneDrive</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://cloud.189.cn/" target="_blank" title="天翼云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">天翼云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://drive.uc.cn/" target="_blank" title="UC网盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">UC网盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://pan.quark.cn/" target="_blank" title="夸克网盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">夸克网盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://pan.mczyx.online/l" target="_blank" title="元素云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">元素云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.weiyun.com/index.html" target="_blank" title="腾讯微云" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">腾讯微云</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://yun.139.com/w/#/" target="_blank" title="移动云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">移动云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.123pan.com/" target="_blank" title="123盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">123盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.feijipan.com/" target="_blank" title="小飞机盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">小飞机盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.ctfile.com/" target="_blank" title="城通盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">城通盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://115.com" target="_blank" title="115网盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">115网盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://drive.almondcloud.cn/" target="_blank" title="杏仁云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">杏仁云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.now61.com/" target="_blank" title="六一云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">六一云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.quqi.com/" target="_blank" title="曲奇云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">曲奇云盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.vyuyun.com/" target="_blank" title="微雨云存储" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">微雨云存储</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://cowtransfer.com/" target="_blank" title="奶牛快传" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">奶牛快传</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.wenshushu.cn/" target="_blank" title="文叔叔" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">文叔叔</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://file.pizza/" target="_blank" title="FilePizza" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">FilePizza</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://my.ksust.com/kstore.htm?aff=4645" target="_blank" title="凯速" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">凯速</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.ttttt.link/" target="_blank" title="钛盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">钛盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://pan.huang1111.cn" target="_blank" title="huang1111网盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">huang1111网盘</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.yunpan.com/" target="_blank" title="360AI云盘" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">360AI云盘</a></div>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="card card-preview category-card" data-category-id="1">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-img"></em>
+                  <span class="nk-menu-text font-weight-bold">图片工具</span>
+                </div>
+
+                <div class="row g-2">
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://miankoutupian.com/" target="_blank" title="免扣图片" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">免扣图片</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.netbian.com/" target="_blank" title="彼岸壁纸" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">彼岸壁纸</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://mbizhi.cheetahfun.com/" target="_blank" title="元气壁纸" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">元气壁纸</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://sc.chinaz.com/tupian/" target="_blank" title="站长素材" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">站长素材</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.lanrentuku.com/tupian/" target="_blank" title="懒人图库" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">懒人图库</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://gaoimg.com/" target="_blank" title="高图网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">高图网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.uugai.com/" target="_blank" title="LOGO钙" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">LOGO钙</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://pic.yesky.com/" target="_blank" title="天极图片" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">天极图片</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://desk.zol.com.cn/" target="_blank" title="中关村壁纸" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">中关村壁纸</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.kuaipng.com/" target="_blank" title="快图网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">快图网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.zuohaotu.com/" target="_blank" title="做好图" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">做好图</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.gaitubao.com/" target="_blank" title="改图宝" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">改图宝</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.ivsky.com/" target="_blank" title="天堂图片网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">天堂图片网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.enterdesk.com/" target="_blank" title="回车桌面" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">回车桌面</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.jj20.com/" target="_blank" title="娟娟壁纸" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">娟娟壁纸</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.4kbizhi.com/" target="_blank" title="4K壁纸" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">4K壁纸</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.yuwei.online/" target="_blank" title="雨薇动漫图" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">雨薇动漫图</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.cosplayx.cn/" target="_blank" title="次元壁纸之家" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">次元壁纸之家</a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="2">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-video"></em>
+                  <span class="nk-menu-text font-weight-bold">影视</span>
+                </div>
+
+                <div class="row g-2">
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.bilibili.com/" target="_blank" title="哔哩哔哩" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">哔哩哔哩</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://v.qq.com/" target="_blank" title="腾讯视频" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">腾讯视频</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.iqiyi.com/" target="_blank" title="爱奇艺" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">爱奇艺</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.youku.com/" target="_blank" title="优酷" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">优酷</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://bbs.sxtv.top/jx/" target="_blank" title="视频解析" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">视频解析</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.mgtv.com" target="_blank" title="芒果TV" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">芒果TV</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://tv.sohu.com" target="_blank" title="搜狐视频" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">搜狐视频</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://le.com" target="_blank" title="乐视视频" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">乐视视频</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.miguvideo.com" target="_blank" title="咪咕视频" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">咪咕视频</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.pptv.com" target="_blank" title="pp视频" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">pp视频</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.fun.tv" target="_blank" title="风行" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">风行</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.wasu.cn" target="_blank" title="华数TV" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">华数TV</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.acfun.cn" target="_blank" title="AcFun" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">AcFun</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.ixigua.com" target="_blank" title="西瓜视频" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">西瓜视频</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://huanxi.com" target="_blank" title="欢喜首映" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">欢喜首映</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card card-preview category-card" data-category-id="4">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-tranx"></em>
+                  <span class="nk-menu-text font-weight-bold">格式转化</span>
+                </div>
+
+                <div class="row g-2">
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="/tools/" target="_blank" title="小鱼工具" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">小鱼工具</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tool.lu/" target="_blank" title="在线工具" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">在线工具</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.67tool.com/" target="_blank" title="即时工具" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">即时工具</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.wepe.com.cn/" target="_blank" title="微PE工具" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">微PE工具</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ip.cn/" target="_blank" title="IP查询" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">IP查询</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://xpdf.net/" target="_blank" title="文档在线转换" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">文档在线转换</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://fanyi.baidu.com" target="_blank" title="百度翻译" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">百度翻译</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://fanyi.youdao.com/" target="_blank" title="有道翻译" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">有道翻译</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://c.runoob.com/front-end/61/" target="_blank" title="HTML在线运行" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">HTML在线运行</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.lylme.com/html/" target="_blank" title="MD编辑器" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">MD编辑器</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.itdog.cn/" target="_blank" title="在线Ping" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">在线Ping</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://icp.chinaz.com/" target="_blank" title="ICP备案查询" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">ICP备案查询</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.photopea.com/" target="_blank" title="在线PS" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">在线PS</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://linux.lylme.com/" target="_blank" title="Linux命令查询" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Linux命令查询</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.gseen.com/online_tools/zip_format/html_js_zip" target="_blank" title="在线代码格式化" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">在线代码格式化</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://jsonlint.com/" target="_blank" title="JS校验" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">JS校验</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.sojson.com/" target="_blank" title="json工具" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">json工具</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://deck.phpth.cn/" target="_blank" title="PHP加密" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">PHP加密</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.lddgo.net/encrypt/hmac" target="_blank" title="HMAC计算" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">HMAC计算</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.jsjiami.com/" target="_blank" title="JS最牛加密" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">JS最牛加密</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tool.chinaz.com/tools/urlencode.aspx " target="_blank" title="URL编解码" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">URL编解码</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.jsdelivr.com/github" target="_blank" title="GitHub转链" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">GitHub转链</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://chaziyu.com/" target="_blank" title="查子域" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">查子域</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://blackace.app/" target="_blank" title="网站秒变App" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">网站秒变App</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tvdat.neocities.org/" target="_blank" title="RedStar" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">RedStar</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://reqable.com/zh-CN/" target="_blank" title="Reqable" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Reqable抓包</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://up.ly93.cc/" target="_blank" title="文件直链" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">文件直链</a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="5">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-code"></em>
+                  <span class="nk-menu-text font-weight-bold">开发工具</span>
+                </div>
+
+                <div class="row g-2">
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://github.com/" target="_blank" title="Github" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Github</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://gitee.com/" target="_blank" title="码云Gitee" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">码云Gitee</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://git.acwing.com/" target="_blank" title="AC git" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">AC git</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://bitbucket.org/" target="_blank" title="比特桶" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">比特桶</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://gittea.dev/" target="_blank" title="Gittea" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Gittea</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://codeberg.org/" target="_blank" title="codeberg" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">codeberg</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.gitlink.org.cn/" target="_blank" title="Gitlink" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Gitlink</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://gitlab.cn/" target="_blank" title="极狐" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">极狐</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ohttps.com/" target="_blank" title="免费SSL证书" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">免费SSL证书</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.cloudflare-cn.com/" target="_blank" title="Cloudflare" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Cloudflare</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.cloudns.net/" target="_blank" title="Cloudns" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Cloudns</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://vercel.com/" target="_blank" title="Vercel" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Vercel</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://cnb.cool/" target="_blank" title="云原生构建" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">云原生构建</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://gh.2015888.xyz" target="_blank" title="github文件加速" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">github文件加速</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://gitcode.com/" target="_blank" title="GitCode" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">GitCode</a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="6">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-setting"></em>
+                  <span class="nk-menu-text font-weight-bold">站长工具</span>
+                </div>
+                <div class="row g-2">
+
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/viewhtml" data-id="65" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">网页源代码查看</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://ip.900cha.com/" data-id="35" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">IP地址查询</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://mwhois.chinaz.com/" data-id="36" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">域名Whois查询</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://chaziyu.com/" data-id="74" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">子域查询</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/checkurl" data-id="55" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">腾讯域名拦截查询</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.cnkuai.cn/zhuanma.asp" data-id="53" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">中文域名转码</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/tool/mysql/" data-id="58" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" target="_blank">MySQL管理器</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="http://ftp.cccyun.cc/" data-id="57" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" target="_blank">手机在线FTP</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6"><a href="https://www.skillup.com.cn/http" data-id="68" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">查看HTTP请求</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a href="https://www.gseen.com/online_tools/change/htmltojs" data-id="68" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">HTML转JS</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a href="https://ping.chinaz.com/" data-id="71" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" target="_blank">PING网站测速</a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="7">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-map"></em>
+                  <span class="nk-menu-text font-weight-bold">实用工具</span>
+                </div>
+                <div class="row g-2">
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="http://music.hi.cn/" data-id="61" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" target="_blank">全网音乐搜索</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="http://unlock.music.hi.cn/" data-id="72" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" target="_blank">音乐文件解锁</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/markdown" data-id="41" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Markdown在线编辑</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://link.hhtjim.com/" data-id="69" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link" target="_blank">音乐外链转换</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/mobile" data-id="63" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">手机归属地查询</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/idcard" data-id="64" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">身份证归属地查询</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/bankcard" data-id="92" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">银行卡归属地查询</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/qrcode" data-id="44" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">二维码生成</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/rand_password" data-id="2" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">随机密码生成</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/zh_convert" data-id="52" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">中文简繁体转化</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/emoji" data-id="13" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">emoji表情</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/special_symbols" data-id="47" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">特殊符号大全</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/text_count" data-id="49" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">字数统计与排版</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/pdf" data-id="119" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">pdf转化</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="11">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-network"></em>
+                  <span class="nk-menu-text font-weight-bold">图床</span>
+                </div>
+                <div class="row g-2">
+
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.boltp.com/" target="_blank" title="闪电图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">闪电图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.superbed.cn/" target="_blank" title="聚合图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">聚合图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.z4a.net/" target="_blank" title="Z4A" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Z4A</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://imgse.com/" target="_blank" title="路过图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">路过图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://sm.ms/" target="_blank" title="SM.MS" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">SM.MS</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.imagehub.cc/" target="_blank" title="图仓" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">图仓</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://imgkr.com/" target="_blank" title="图壳" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">图壳</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://imglink.org/" target="_blank" title="图林" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">图林</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://img.ax/" target="_blank" title="安享图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">安享图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.helloimg.com/" target="_blank" title="Hello图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">Hello图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.boluo.link/" target="_blank" title="菠萝图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">菠萝图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://img.st/" target="_blank" title="晒图" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">晒图</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tucang.cc/" target="_blank" title="图仓" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">图仓</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://imgfit.com/" target="_blank" title="IMGFIT" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">IMGFIT</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://img.ooee.top/" target="_blank" title="大厂图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">大厂图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://cyoou.cyou/" target="_blank" title="畅游图床" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">畅游图床</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://zh-cn.imgbb.com/" target="_blank" title="ImgBB" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">ImgBB</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://postimages.org/" target="_blank" title="postimages" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">postimages</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://img.tg/" target="_blank" title="IMG.TG" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">IMG.TG</a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card card-preview category-card" data-category-id="12">
+              <div class="card-inner mt-3">
+                <div class="nya-title nk-ibx-action-item progress-rating">
+                  <em class="icon ni ni-aperture"></em>
+                  <span class="nk-menu-text font-weight-bold">采集</span>
+                </div>
+                <div class="row g-2">
+
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/ascii_art" data-id="25" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">ASCII艺术字生成</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="https://www.skillup.com.cn/alipay_arrival" data-id="3" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">支付宝到账语音</a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://tyyszy.com/" target="_blank" title="天涯影视资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">天涯影视资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://47.86.1.67/" target="_blank" title="短剧资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">短剧资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.ffzy.tv/" target="_blank" title="非凡资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">非凡资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.lzzy.tv/" target="_blank" title="量子资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">量子资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://niuniuzy6.com/" target="_blank" title="牛牛资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">牛牛资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://fczy901.com/" target="_blank" title="蜂巢片库" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">蜂巢片库</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://suonizy.cc/" target="_blank" title="索尼资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">索尼资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://shandianzy.com/" target="_blank" title="闪电资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">闪电资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://wujinzy.com/" target="_blank" title="无尽资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">无尽资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://okzyw.cc/" target="_blank" title="OK资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">OK资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://kuaichezy.com/" target="_blank" title="快车资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">快车资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.zuidazy.co/" target="_blank" title="最大资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">最大资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.ryzy.tv/" target="_blank" title="如意资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">如意资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.heimuer.tv/" target="_blank" title="黑木耳资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">黑木耳资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://wolongzyw.com/" target="_blank" title="卧龙资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">卧龙资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://1080zyk1.com/" target="_blank" title="优质资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">优质资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://dbzy.com/" target="_blank" title="豆瓣资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">豆瓣资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.moduzy6.com/" target="_blank" title="魔都资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">魔都资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://iqiyizy.cc/" target="_blank" title="爱奇艺资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">爱奇艺资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://cj2.yayazy.net/" target="_blank" title="鸭鸭资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">鸭鸭资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.haohuazy.com/" target="_blank" title="豪华资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">豪华资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.rrys.cc/movielist" target="_blank" title="人人影视资源站" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">人人影视资源站</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://dyttzyw.tv/" target="_blank" title="电影天堂采集" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">电影天堂采集</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://mtzy.tv/" target="_blank" title="茅台采集" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">茅台采集</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://hongniuziyuan.com/" target="_blank" title="红牛资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">红牛资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.jisuzy.com/" target="_blank" title="极速资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">极速资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.xinlangzy.net/" target="_blank" title="新浪资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">新浪资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.subozy.com/" target="_blank" title="速播资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">速播资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://wwzy.tv/" target="_blank" title="旺旺短剧" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">旺旺短剧</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://bfzy.tv/" target="_blank" title="暴风资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">暴风资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ikunzy.cc/" target="_blank" title="爱坤资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">爱坤资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://bdzy.tv/" target="_blank" title="百度资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">百度资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.360zyuan.cc/" target="_blank" title="360资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">360资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://mzzy.me/" target="_blank" title="魔爪资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">魔爪资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://www.haohuazy.com/" target="_blank" title="华为资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">华为资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://ukuzy.com/" target="_blank" title="U酷资源网" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">U酷资源网</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.taopianzy.com/" target="_blank" title="淘片资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">淘片资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://wuxianzy.com//" target="_blank" title="无线资源" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">无线资源</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://www.caiji.cyou/" target="_blank" title="789采集" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">789采集</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://vs.okcdn100.top/" target="_blank" title="小绵羊采集" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">小绵羊采集</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="http://zy.jinchancaiji.com/" target="_blank" title="金蝉采集" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">金蝉采集</a></div>
+                  <div class="col-lg-3 col-md-4 col-6"><a rel="nofollow" href="https://zy.hls.one/label/help.html?from=mycjv10" target="_blank" title="虾米采集" class="btn btn-wider btn-block btn-xl btn-outline-light tool-link">虾米采集</a></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="card card-preview" id="link_content">
+            <div class="card-inner mt-3">
+              <div class="nya-title nk-ibx-action-item progress-rating">
+                <em class="icon ni ni-link"></em>
+                <span class="nk-menu-text font-weight-bold">友情链接</span>
+              </div>
+              <div class="row g-2">
+                <div class="col-12">
+                  <ul class="preview-list">
+                    <li class="preview-item">
+                      <a href="https://www.bgrdh.com/" class="btn btn-wider btn-outline-info btn-sm" target="_blank">办公人导航</a>
+                    </li>
+                    <li class="preview-item">
+                      <a href="https://ishuqian.com/" class="btn btn-wider btn-outline-info btn-sm" target="_blank">书签网</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LyToday-JS插件 https://lytoday.lylme.com/code.html-->
+    <div class="nk-content-fluid">
+      <div id="lytoday"></div>
+      <script src="https://lytoday.lylme.com/"></script>
+    </div>
+
+
+    <!-- content @d -->
+    <div class="nk-footer nk-footer-fluid bg-lighter">
+      <div class="container-xl">
+        <div class="nk-footer-wrap">
+          <div class="nk-footer-copyright">
+            <p><img src="https://master.2015888.xyz/img/ICP.png" width="16px" height="16px" style="display: inline-block; vertical-align: middle;"><a href="http://beian.miit.gov.cn/" rel="nofollow" class="icp nav-link" target="_blank" _mstmutation="1" _istranslated="1" style="display: inline-block; vertical-align: middle;">鄂ICP备007号-1</a></p> Copyright ©2025 <a href="/">2015888</a>小鱼儿
+            <br>声明：本站非营利性网站，如果发布的内容若侵犯到您的权益，请联系我们，我们将及时处理。
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer @e -->
+  </div>
+  <!-- wrap @e -->
+  <script src="./static/js/jquery.min.js"></script>
+  <script src="./static/js/bootstrap.bundle.min.js"></script>
+  <script src="./static/js/layer.js"></script>
+  <script src="./static/js/nioapp.min.js"></script>
+  <script src="./static/js/script.js"></script>
+  <script src="./static/js/sousuo.js"></script>
+
+</body>
+
+</html>
