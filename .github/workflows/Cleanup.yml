@@ -1,0 +1,10 @@
+name: Cleanup Old Workflows
+on:
+  workflow_dispatch: # 必须有这一行，GitHub 才会显示按钮
+  schedule:
+    - cron: '0 1 */15 * *'
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is a placeholder"
