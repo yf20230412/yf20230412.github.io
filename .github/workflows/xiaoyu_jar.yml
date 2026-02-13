@@ -2,16 +2,15 @@ name: Update xiaoyu jar
 
 on:
   #push:
-    #paths:
-      #- 'docs/tv/jar/**'  #上传到/docs/tv/jar/才能触发
-  workflow_dispatch:   #手动触发
+  #  paths:
+  #    - 'docs/tv/jar/**'  # 上传到/docs/tv/jar/才能触发
+  workflow_dispatch:    # 手动触发
 
 jobs:
   update-spider:
     runs-on: ubuntu-latest
 
     steps:
-        
       # 第 1 步：检查仓库
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -41,4 +40,3 @@ jobs:
           # 上传到 KStore
           id=396663
           curl -X POST "https://upload.kstore.space/upload/$id?access_token=${{ secrets.KSTORE_TOKEN }}" -F "file=@$file"
-

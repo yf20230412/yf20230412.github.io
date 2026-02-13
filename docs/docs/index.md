@@ -37,14 +37,14 @@ features:
     icon: 
       src: /dog.svg    
     details: 主要分享tvbox软件相关内容
-    link: https://2015888.xyz/533
+    link: https://a.2015888.xyz/533
     linkText: 跳转主页
 
   - title: 微信公众号：风言锋语88
     icon: 
       src: /weixin.svg    
     details: 分享影视盒子、接口，想白嫖你就来
-    link: https://2015888.xyz/gzh
+    link: https://a.2015888.xyz/gzh
     linkText: 查看详情
     
   - title: 云原生技术

@@ -1,10 +1,11 @@
 # 高效清理旧工作流记录，公开仓库使用
-# 无需配置Token
+# 无需配置 Token
 name: Cleanup Old Workflows (Public Repo Optimized)
+
 on:
   schedule:
-    - cron: '0 1 */15 * *'  # 每3天凌晨1点运行
-  workflow_dispatch:
+    - cron: '0 1 */15 * *'  # 每15天凌晨1点运行
+  workflow_dispatch:        # 手动触发
 
 permissions:
   actions: write  # 仅需删除工作流的权限
@@ -36,14 +37,14 @@ jobs:
             let protectedCount = 0;
             let errorCount = 0;
             let page = 1;
-            
+
             console.log('🛠️ 开始清理工作流运行记录...');
             console.log(`⏳ 配置参数: 保留天数=${RETENTION_DAYS}, 每批=${BATCH_SIZE}条, 最大页数=${MAX_PAGES}`);
 
             // 分批清理
             while (page <= parseInt(MAX_PAGES)) {
               console.log(`📖 正在处理第 ${page} 页...`);
-              
+
               try {
                 const { data: runs } = await github.rest.actions.listWorkflowRunsForRepo({
                   owner: context.repo.owner,
@@ -111,7 +112,7 @@ jobs:
                 .addBreak()
                 .addRaw(`⏱️ 保留天数: ${RETENTION_DAYS}天 | 执行时间: ${new Date().toLocaleString()}`)
                 .write();
-              
+
               console.log('📌 摘要已生成到工作流 Summary 选项卡');
             } catch (summaryError) {
               console.error('⚠️ 生成摘要失败:', summaryError.message);
