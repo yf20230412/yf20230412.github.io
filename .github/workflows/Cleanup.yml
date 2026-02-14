@@ -1,10 +1,23 @@
-name: Cleanup Old Workflows
+name: Cleanup Old Workflows (Proxy)
+
 on:
-  workflow_dispatch: # 必须有这一行，GitHub 才会显示按钮
   schedule:
-    - cron: '0 1 */15 * *'
+    - cron: '0 1 */15 * *'  # 在这里设置定时任务
+  workflow_dispatch:        # 在这里开启手动按钮
+
 jobs:
-  placeholder:
+  run-main-logic:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is a placeholder"
+      - name: Remote Trigger Cleanup
+        uses: actions/github-script@v6
+        with:
+          # 使用这个特殊的 Token 权限去触发 main 分支
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'Cleanup.yml', // 这里对应 main 分支里的文件名
+              ref: 'main'                 // 强制指定运行 main 分支
+            });
