@@ -23,10 +23,6 @@ export const nav: DefaultTheme.NavItem[] = [
                 link: 'https://a.2015888.xyz/wo/'
             },
             {
-                text: '掘金💻',
-                link: 'https://juejin.cn'
-            },
-            {
                 text: '博客园🖥',
                 link: 'https://www.cnblogs.com/'
             }

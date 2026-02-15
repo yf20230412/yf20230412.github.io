@@ -159,7 +159,7 @@ export default defineConfig({
     
     footer: {
       message: '《风言锋语88》',
-      copyright: 'Copyright  © 2024- Xiao yu'
+      copyright: 'Copyright  © 2024 - 至今'
     }  
     
     

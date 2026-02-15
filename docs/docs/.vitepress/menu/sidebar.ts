@@ -25,6 +25,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         text: '生活随笔',
         collapsed: false,
         items: [
+          { text: '国际网络连接', link: '/blog/国际网络连接' },
           { text: 'Allinone部署', link: '/blog/Allinone部署' },
           { text: 'serv00免费10年虚拟主机', link: '/blog/sev00' },
           { text: 'markdown语法扩展', link: '/blog/markdown' },
