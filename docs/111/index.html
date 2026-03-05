@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店铺信息管理系统</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="no-referrer">
+    <style>
+        /* --- CSS变量定义 --- */
+        :root {
+            --primary-color: #FF0000;
+            --border-color: #e8e8e8;
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-primary: #333333;
+            --text-muted: #999999;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --info-color: #1890ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+        body { background-color: var(--bg-color); padding: 20px 10px; color: var(--text-primary); }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* --- 搜索框 --- */
+        .toolbar { margin-bottom: 20px; display: flex; justify-content: flex-end; }
+        .search-wrapper { position: relative; width: 100%; max-width: 300px; }
+        .search-input {
+            width: 100%; padding: 12px 15px; border: 2px solid var(--border-color);
+            border-radius: 10px; outline: none; font-size: 14px; background: var(--card-bg);
+        }
+        .search-input:focus { border-color: var(--primary-color); }
+        .clear-btn { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-muted); font-size: 20px; display: none; }
+
+        /* --- 表格容器 --- */
+        .table-card { background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        
+        table { width: 100%; border-collapse: collapse; min-width: 650px; } /* 保持 650px 确保手机端横向滚动不拥挤 */
+       
+        th {
+            color: var(--primary-color); font-weight: bold; padding: 18px 15px;
+            background: #fafafa; border-bottom: 2px solid var(--border-color);
+            border-right: 1px solid var(--border-color); font-size: 15px; text-align: center;
+        }
+
+        td {
+            padding: 16px 15px; text-align: center; vertical-align: middle;
+            border-bottom: 1px solid #f5f5f5; border-right: 1px solid var(--border-color); font-size: 14px;
+        }
+
+        th:last-child, td:last-child { border-right: none; }
+
+        /* --- 骨架屏（核心修复：删除了 display: contents） --- */
+        .skeleton-container { display: none; }
+        .skeleton {
+            animation: skeleton-loading 1.5s ease-in-out infinite;
+            background: linear-gradient(90deg, #f5f5f5 25%, #eeeeee 37%, #f5f5f5 63%);
+            background-size: 400% 100%; border-radius: 4px;
+        }
+        .skeleton-row { display: table-row; } /* 恢复正常行显示 */
+        .skeleton-cell { height: 20px; margin: 8px 5px; }
+        .skeleton-img { width: 90px; height: 60px; margin: 0 auto; border-radius: 6px; }
+
+        @keyframes skeleton-loading { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+        /* --- 业务组件 --- */
+        .address-box { text-align: left; max-width: 180px; margin: 0 auto; }
+        .nav-link { text-decoration: none; color: var(--text-primary); display: inline-flex; align-items: center; margin-bottom: 8px; }
+        .nav-hint { font-size: 11px; color: #fff; background: var(--info-color); padding: 2px 8px; border-radius: 10px; margin-left: 8px; white-space: nowrap; }        
+        .phone-link { text-decoration: none; color: #e67e22; font-weight: 600; font-size: 15px; display: block; margin-top: 5px;}
+
+        /* 图片放大触发区 */
+        .img-box {
+            width: 90px; height: 60px; margin: 0 auto; border-radius: 8px;
+            overflow: hidden; border: 1px solid var(--border-color);
+            cursor: pointer; background: #f8f9fa;
+        }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .remark-tag { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; white-space: nowrap; }
+        .remark-tag.highlight { background: #f6ffed; color: #52c41a; border-color: #b7eb8f; border: 1px solid; }
+        .remark-tag.warning { background: #fff7e6; color: #fa8c16; border-color: #ffd591; border: 1px solid; }
+
+        /* --- 弹窗与遮罩 --- */
+        #mask {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92); z-index: 10000; justify-content: center; align-items: center;
+        }
+        #mask img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; animation: zoomIn 0.3s ease; }
+
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        .no-result { display: none; padding: 60px 20px; text-align: center; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" class="search-input" placeholder="输入店名、地址搜索...">
+                <span id="clearBtn" class="clear-btn" onclick="clearSearch()">&times;</span>
+            </div>
+        </div>
+
+        <div class="table-card">
+            <div class="table-scroll">
+                <table id="skeletonTable" class="skeleton-container">
+                    <tbody>
+                        <tr class="skeleton-row">
+                            <td><div class="skeleton skeleton-cell" style="width:60%"></div></td>
+                            <td><div class="skeleton skeleton-cell" style="width:80%"></div></td>
+                            <td><div class="skeleton skeleton-img"></div></td>
+                            <td><div class="skeleton skeleton-cell" style="width:60%"></div></td>
+                        </tr>
+                        <tr class="skeleton-row">
+                            <td><div class="skeleton skeleton-cell" style="width:60%"></div></td>
+                            <td><div class="skeleton skeleton-cell" style="width:80%"></div></td>
+                            <td><div class="skeleton skeleton-img"></div></td>
+                            <td><div class="skeleton skeleton-cell" style="width:60%"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table id="shopTable">
+                    <thead>
+                        <tr>
+                            <th>客户店名</th>
+                            <th>地址信息</th>
+                            <th>实拍图片</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shopTbody"></tbody>
+                </table>
+            </div>
+            <div id="noResult" class="no-result"><h3>未找到店铺</h3></div>
+        </div>
+    </div>
+
+    <div id="mask" onclick="this.style.display='none'">
+        <img id="big-img" src="">
+    </div>
+
+        <script>
+        const shopList = [
+            {
+                id: 1,
+                name: '1a',  // 直接显示
+                addressName: '光明市场',
+                phone: '13500001726',  // 真实号码
+                imgUrl: 'https://icdn.binmt.cc/2603/69a974a7c896f.png',
+                remark: '无',
+                remarkType: 'normal'
+            },
+            {
+                id: 2,
+                name: '2a',
+                addressName: '新河大酒店',
+                phone: '13900001111',  // 真实号码
+                imgUrl: 'https://icdn.binmt.cc/2603/69a974a7c896f.png',
+                remark: 'VIP客户',
+                remarkType: 'highlight'
+            },
+            {
+                id: 3,
+                name: '3a',
+                addressName: '荣鑫购物广场',
+                phone: '13800008888',
+                imgUrl: 'https://icdn.binmt.cc/2603/69a974a7c896f.png',
+                remark: '需跟进',
+                remarkType: 'warning'
+            },
+            {
+                id: 4,
+                name: '4a',
+                addressName: '万达广场店',
+                phone: '13600006666',
+                imgUrl: '',
+                remark: '新店开业',
+                remarkType: 'highlight'
+            },
+            {
+                id: 5,
+                name: '5a',
+                addressName: '世纪联华超市',
+                phone: '13700007777',
+                imgUrl: 'https://example.com/non-existent-image.jpg',
+                remark: '无',
+                remarkType: 'normal'
+            }
+        ];
+
+
+        // 导航逻辑
+        function openAmapRide(keyword) {
+            const encoded = encodeURIComponent(keyword);
+            const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            let nativeUrl = isIOS ? `amapuri://route/plan/?dname=${encoded}&dev=0&t=3` : `androidamap://route/plan/?dname=${encoded}&dev=0&m=3&t=3`;
+            let timer = setTimeout(() => {
+                window.location.href = `https://uri.amap.com/navigation?dname=${encoded}&mode=ride&callnative=1`;
+            }, 2000);
+            const clearTimer = () => {
+                clearTimeout(timer);
+                window.removeEventListener('pagehide', clearTimer);
+                window.removeEventListener('visibilitychange', clearTimer);
+            };
+            window.addEventListener('pagehide', clearTimer);
+            window.addEventListener('visibilitychange', clearTimer);
+            window.location.href = nativeUrl;
+        }
+
+        // 图片放大
+        function showImg(el) {
+            if (el.src.includes('data:image')) return;
+            const mask = document.getElementById('mask');
+            document.getElementById('big-img').src = el.src;
+            mask.style.display = 'flex';
+        }
+
+        // 占位图修复
+        function handleImageError(img) {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="90" height="60" viewBox="0 0 90 60"><rect width="90" height="60" fill="#f0f0f0"/><text x="45" y="30" text-anchor="middle" dy=".3em" font-size="12" fill="#999">暂无图片</text></svg>`;
+            img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+            img.onclick = null;
+        }
+
+        // 渲染表格
+        function renderTable(data) {
+            const tbody = document.getElementById('shopTbody');
+            const skeleton = document.getElementById('skeletonTable');
+            const shopTable = document.getElementById('shopTable');
+            const noResult = document.getElementById('noResult');
+            
+            skeleton.style.display = 'table';
+            shopTable.style.display = 'none';
+            noResult.style.display = 'none';
+            
+            setTimeout(() => {
+                if (data.length === 0) {
+                    skeleton.style.display = 'none';
+                    shopTable.style.display = 'table';
+                    noResult.style.display = 'block';
+                    return;
+                }
+                let html = '';
+                data.forEach(shop => {
+                    const rClass = shop.remarkType === 'highlight' ? 'highlight' : (shop.remarkType === 'warning' ? 'warning' : '');
+                    html += `
+                        <tr>
+                            <td><strong>${shop.name}</strong></td>
+                            <td>
+                                <div class="address-box">
+                                    <a href="javascript:void(0)" onclick="openAmapRide('${shop.addressName}')" class="nav-link">
+                                        📍 ${shop.addressName}<span class="nav-hint">骑行导航</span>
+                                    </a>
+                                    <a href="tel:${shop.phone}" class="phone-link">📞 ${shop.phone}</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="img-box">
+                                    <img src="${shop.imgUrl}" onerror="handleImageError(this)" onclick="showImg(this)">
+                                </div>
+                            </td>
+                            <td><span class="remark-tag ${rClass}">${shop.remark}</span></td>
+                        </tr>`;
+                });
+                tbody.innerHTML = html;
+                skeleton.style.display = 'none';
+                shopTable.style.display = 'table';
+            }, 300);
+        }
+
+        // 搜索监听
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const kw = e.target.value.trim().toLowerCase();
+            document.getElementById('clearBtn').style.display = kw ? 'block' : 'none';
+            const filtered = shopList.filter(s => 
+                s.name.toLowerCase().includes(kw) || s.addressName.toLowerCase().includes(kw) || s.phone.includes(kw) || s.remark.toLowerCase().includes(kw)
+            );
+            renderTable(filtered);
+        });
+
+        function clearSearch() {
+            const input = document.getElementById('searchInput');
+            input.value = '';
+            document.getElementById('clearBtn').style.display = 'none';
+            renderTable(shopList);
+        }
+
+        // 初始渲染
+        renderTable(shopList);
+    </script>
+
+</body>
+</html>
