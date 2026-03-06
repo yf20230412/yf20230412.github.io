@@ -7,7 +7,6 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="referrer" content="no-referrer">
     <style>
-        /* --- CSS变量定义 --- */
         :root {
             --primary-color: #FF0000;
             --border-color: #e8e8e8;
@@ -17,88 +16,312 @@
             --text-muted: #999999;
             --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             --info-color: #1890ff;
+            --success-color: #52c41a;
+            --warning-color: #ffffff;
+            --highlight-color: #FFE6F2;
+            --done-color: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
-        body { background-color: var(--bg-color); padding: 20px 10px; color: var(--text-primary); }
-        .container { max-width: 1200px; margin: 0 auto; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
 
-        /* --- 搜索框 --- */
-        .toolbar { margin-bottom: 20px; display: flex; justify-content: flex-end; }
-        .search-wrapper { position: relative; width: 100%; max-width: 300px; }
+        body {
+            background-color: var(--bg-color);
+            padding: 20px 10px;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 顶部工具栏 */
+        .toolbar {
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+        }
+
         .search-input {
-            width: 100%; padding: 12px 15px; border: 2px solid var(--border-color);
-            border-radius: 10px; outline: none; font-size: 14px; background: var(--card-bg);
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            background: var(--card-bg);
+            transition: border-color 0.2s;
         }
-        .search-input:focus { border-color: var(--primary-color); }
-        .clear-btn { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-muted); font-size: 20px; display: none; }
 
-        /* --- 表格容器 --- */
-        .table-card { background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
-        .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        
-        table { width: 100%; border-collapse: collapse; min-width: 650px; } /* 保持 650px 确保手机端横向滚动不拥挤 */
-       
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .clear-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 20px;
+            display: none;
+            line-height: 1;
+        }
+
+        /* 筛选 & 导出按钮 */
+        .filter-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: #fff;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .btn-export {
+            background: var(--success-color);
+            color: #fff;
+            border-color: var(--success-color);
+        }
+
+        /* 表格卡片 */
+        .table-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
         th {
-            color: var(--primary-color); font-weight: bold; padding: 18px 15px;
-            background: #fafafa; border-bottom: 2px solid var(--border-color);
-            border-right: 1px solid var(--border-color); font-size: 15px; text-align: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 18px 15px;
+            background: #fafafa;
+            border-bottom: 2px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            font-size: 15px;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
         }
 
         td {
-            padding: 16px 15px; text-align: center; vertical-align: middle;
-            border-bottom: 1px solid #f5f5f5; border-right: 1px solid var(--border-color); font-size: 14px;
+            padding: 16px 15px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #f5f5f5;
+            border-right: 1px solid var(--border-color);
+            font-size: 14px;
         }
 
-        th:last-child, td:last-child { border-right: none; }
+        th:last-child,
+        td:last-child {
+            border-right: none;
+        }
 
-        /* --- 骨架屏（核心修复：删除了 display: contents） --- */
-        .skeleton-container { display: none; }
+        /* 骨架屏 */
+        .skeleton-container {
+            display: none;
+        }
+
         .skeleton {
             animation: skeleton-loading 1.5s ease-in-out infinite;
             background: linear-gradient(90deg, #f5f5f5 25%, #eeeeee 37%, #f5f5f5 63%);
-            background-size: 400% 100%; border-radius: 4px;
+            background-size: 400% 100%;
+            border-radius: 4px;
         }
-        .skeleton-row { display: table-row; } /* 恢复正常行显示 */
-        .skeleton-cell { height: 20px; margin: 8px 5px; }
-        .skeleton-img { width: 90px; height: 60px; margin: 0 auto; border-radius: 6px; }
 
-        @keyframes skeleton-loading { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+        .skeleton-row {
+            display: table-row;
+        }
 
-        /* --- 业务组件 --- */
-        .address-box { text-align: left; max-width: 180px; margin: 0 auto; }
-        .nav-link { text-decoration: none; color: var(--text-primary); display: inline-flex; align-items: center; margin-bottom: 8px; }
-        .nav-hint { font-size: 11px; color: #fff; background: var(--info-color); padding: 2px 8px; border-radius: 10px; margin-left: 8px; white-space: nowrap; }        
-        .phone-link { text-decoration: none; color: #e67e22; font-weight: 600; font-size: 15px; display: block; margin-top: 5px;}
+        .skeleton-cell {
+            height: 20px;
+            margin: 8px 5px;
+        }
 
-        /* 图片放大触发区 */
+        .skeleton-img {
+            width: 90px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+
+        @keyframes skeleton-loading {
+            0% { background-position: 100% 50%; }
+            100% { background-position: 0 50%; }
+        }
+
+        /* 业务样式 */
+        .address-box {
+            text-align: left;
+            max-width: 180px;
+            margin: 0 auto;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .nav-hint {
+            font-size: 11px;
+            color: #fff;
+            background: var(--info-color);
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+
+        .phone-link {
+            text-decoration: none;
+            color: #e67e22;
+            font-weight: 600;
+            font-size: 15px;
+            display: block;
+            margin-top: 5px;
+        }
+
         .img-box {
-            width: 90px; height: 60px; margin: 0 auto; border-radius: 8px;
-            overflow: hidden; border: 1px solid var(--border-color);
-            cursor: pointer; background: #f8f9fa;
+            width: 90px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            background: #f8f9fa;
         }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        .remark-tag { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; white-space: nowrap; }
-        .remark-tag.highlight { background: #f6ffed; color: #52c41a; border-color: #b7eb8f; border: 1px solid; }
-        .remark-tag.warning { background: #fff7e6; color: #fa8c16; border-color: #ffd591; border: 1px solid; }
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-        /* --- 弹窗与遮罩 --- */
+        .remark-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        
+        .remark-tag.highlight { background: #4b0082; color: var(--highlight-color); border: 1px solid #b7eb8f; }
+        
+        .remark-tag.warning { background: #ff0000; color: var(--warning-color); border: 1px solid #ffd591; }
+        
+        .remark-tag.done { background: #00c48c; color: var(--done-color); border: 1px solid #ffd591; }
+
+        /* 弹窗 */
         #mask {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.92); z-index: 10000; justify-content: center; align-items: center;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
         }
-        #mask img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; animation: zoomIn 0.3s ease; }
 
-        @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-        .no-result { display: none; padding: 60px 20px; text-align: center; color: var(--text-muted); }
+        #mask img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .no-result {
+            display: none;
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        /* 排序小箭头 */
+        .sort-arrow {
+            font-size: 12px;
+            margin-left: 4px;
+            opacity: 0.5;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="toolbar">
+            <div class="filter-group">
+                <button class="btn active" onclick="filterByRemark('all')">全部</button>
+                <button class="btn" onclick="filterByRemark('highlight')">VIP客户</button>
+                <button class="btn" onclick="filterByRemark('done')">已完成</button>
+                <button class="btn" onclick="filterByRemark('warning')">需跟进</button>
+                <button class="btn" onclick="filterByRemark('normal')">无备注</button>
+                <button class="btn btn-export" onclick="exportExcel()">导出 Excel</button>
+            </div>
+            
+
             <div class="search-wrapper">
-                <input type="text" id="searchInput" class="search-input" placeholder="输入店名、地址搜索...">
+                <input type="text" id="searchInput" class="search-input" placeholder="搜索店名、地址、电话、备注...">
                 <span id="clearBtn" class="clear-btn" onclick="clearSearch()">&times;</span>
             </div>
         </div>
@@ -125,8 +348,8 @@
                 <table id="shopTable">
                     <thead>
                         <tr>
-                            <th>客户店名</th>
-                            <th>地址信息</th>
+                            <th onclick="sortBy('name')">客户店名 <span class="sort-arrow">↕</span></th>
+                            <th onclick="sortBy('addressName')">地址信息 <span class="sort-arrow">↕</span></th>
                             <th>实拍图片</th>
                             <th>备注</th>
                         </tr>
@@ -134,7 +357,7 @@
                     <tbody id="shopTbody"></tbody>
                 </table>
             </div>
-            <div id="noResult" class="no-result"><h3>未找到店铺</h3></div>
+            <div id="noResult" class="no-result"><h3>未找到匹配店铺</h3></div>
         </div>
     </div>
 
@@ -142,13 +365,13 @@
         <img id="big-img" src="">
     </div>
 
-        <script>
+    <script>
         const shopList = [
             {
                 id: 1,
-                name: '1a',  // 直接显示
+                name: '1a',
                 addressName: '光明市场',
-                phone: '13500001726',  // 真实号码
+                phone: '13500001726',
                 imgUrl: 'https://icdn.binmt.cc/2603/69a974a7c896f.png',
                 remark: '无',
                 remarkType: 'normal'
@@ -157,7 +380,7 @@
                 id: 2,
                 name: '2a',
                 addressName: '新河大酒店',
-                phone: '13900001111',  // 真实号码
+                phone: '13900001111',
                 imgUrl: 'https://icdn.binmt.cc/2603/69a974a7c896f.png',
                 remark: 'VIP客户',
                 remarkType: 'highlight'
@@ -177,8 +400,8 @@
                 addressName: '万达广场店',
                 phone: '13600006666',
                 imgUrl: '',
-                remark: '新店开业',
-                remarkType: 'highlight'
+                remark: '已完成',
+                remarkType: 'done'
             },
             {
                 id: 5,
@@ -191,51 +414,29 @@
             }
         ];
 
+        // 全局状态
+        let currentList = [...shopList];
+        let currentFilter = 'all';
+        let sortKey = 'name';
+        let sortAsc = true;
 
-        // 导航逻辑
-        function openAmapRide(keyword) {
-            const encoded = encodeURIComponent(keyword);
-            const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-            let nativeUrl = isIOS ? `amapuri://route/plan/?dname=${encoded}&dev=0&t=3` : `androidamap://route/plan/?dname=${encoded}&dev=0&m=3&t=3`;
-            let timer = setTimeout(() => {
-                window.location.href = `https://uri.amap.com/navigation?dname=${encoded}&mode=ride&callnative=1`;
-            }, 2000);
-            const clearTimer = () => {
-                clearTimeout(timer);
-                window.removeEventListener('pagehide', clearTimer);
-                window.removeEventListener('visibilitychange', clearTimer);
-            };
-            window.addEventListener('pagehide', clearTimer);
-            window.addEventListener('visibilitychange', clearTimer);
-            window.location.href = nativeUrl;
+        // 脱敏手机号
+        function maskPhone(phone) {
+            if (!phone || phone.length !== 11) return phone;
+            return phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
         }
 
-        // 图片放大
-        function showImg(el) {
-            if (el.src.includes('data:image')) return;
-            const mask = document.getElementById('mask');
-            document.getElementById('big-img').src = el.src;
-            mask.style.display = 'flex';
-        }
-
-        // 占位图修复
-        function handleImageError(img) {
-            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="90" height="60" viewBox="0 0 90 60"><rect width="90" height="60" fill="#f0f0f0"/><text x="45" y="30" text-anchor="middle" dy=".3em" font-size="12" fill="#999">暂无图片</text></svg>`;
-            img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-            img.onclick = null;
-        }
-
-        // 渲染表格
+        // 渲染
         function renderTable(data) {
             const tbody = document.getElementById('shopTbody');
             const skeleton = document.getElementById('skeletonTable');
             const shopTable = document.getElementById('shopTable');
             const noResult = document.getElementById('noResult');
-            
+
             skeleton.style.display = 'table';
             shopTable.style.display = 'none';
             noResult.style.display = 'none';
-            
+
             setTimeout(() => {
                 if (data.length === 0) {
                     skeleton.style.display = 'none';
@@ -243,10 +444,16 @@
                     noResult.style.display = 'block';
                     return;
                 }
+
                 let html = '';
                 data.forEach(shop => {
-                    const rClass = shop.remarkType === 'highlight' ? 'highlight' : (shop.remarkType === 'warning' ? 'warning' : '');
+                    const rClass = shop.remarkType === 'highlight' ? 'highlight'
+                        : shop.remarkType === 'warning' ? 'warning'
+                        : shop.remarkType === 'done' ? 'done' 
+                        : '';
+
                     html += `
+
                         <tr>
                             <td><strong>${shop.name}</strong></td>
                             <td>
@@ -254,7 +461,7 @@
                                     <a href="javascript:void(0)" onclick="openAmapRide('${shop.addressName}')" class="nav-link">
                                         📍 ${shop.addressName}<span class="nav-hint">骑行导航</span>
                                     </a>
-                                    <a href="tel:${shop.phone}" class="phone-link">📞 ${shop.phone}</a>
+                                    <a href="tel:${shop.phone}" class="phone-link">📞 ${maskPhone(shop.phone)}</a>
                                 </div>
                             </td>
                             <td>
@@ -271,26 +478,129 @@
             }, 300);
         }
 
-        // 搜索监听
-        document.getElementById('searchInput').addEventListener('input', function(e) {
+        // 搜索
+        document.getElementById('searchInput').addEventListener('input', function (e) {
             const kw = e.target.value.trim().toLowerCase();
             document.getElementById('clearBtn').style.display = kw ? 'block' : 'none';
-            const filtered = shopList.filter(s => 
-                s.name.toLowerCase().includes(kw) || s.addressName.toLowerCase().includes(kw) || s.phone.includes(kw) || s.remark.toLowerCase().includes(kw)
-            );
-            renderTable(filtered);
+            doSearch(kw);
         });
 
+        function doSearch(kw) {
+            let filtered = shopList.filter(s =>
+                s.name.toLowerCase().includes(kw) ||
+                s.addressName.toLowerCase().includes(kw) ||
+                s.phone.includes(kw) ||
+                s.remark.toLowerCase().includes(kw)
+            );
+            if (currentFilter !== 'all') {
+                filtered = filtered.filter(s => s.remarkType === currentFilter);
+            }
+            currentList = filtered;
+            renderTable(currentList);
+        }
+
+        // 清空搜索
         function clearSearch() {
             const input = document.getElementById('searchInput');
             input.value = '';
             document.getElementById('clearBtn').style.display = 'none';
-            renderTable(shopList);
+            refreshList();
+        }
+
+        // 备注筛选
+        function filterByRemark(type) {
+            currentFilter = type;
+            document.querySelectorAll('.filter-group .btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            refreshList();
+        }
+
+        // 刷新列表（搜索+筛选）
+        function refreshList() {
+            const kw = document.getElementById('searchInput').value.trim().toLowerCase();
+            doSearch(kw);
+        }
+
+        // 排序
+        function sortBy(key) {
+            if (sortKey === key) {
+                sortAsc = !sortAsc;
+            } else {
+                sortKey = key;
+                sortAsc = true;
+            }
+            currentList.sort((a, b) => {
+                if (a[sortKey] < b[sortKey]) return sortAsc ? -1 : 1;
+                if (a[sortKey] > b[sortKey]) return sortAsc ? 1 : -1;
+                return 0;
+            });
+            renderTable(currentList);
+        }
+
+        // 高德骑行导航
+        function openAmapRide(keyword) {
+            const encoded = encodeURIComponent(keyword);
+            const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            let nativeUrl = isIOS
+                ? `amapuri://route/plan/?dname=${encoded}&dev=0&t=3`
+                : `androidamap://route/plan/?dname=${encoded}&dev=0&m=3&t=3`;
+            let timer = setTimeout(() => {
+                window.location.href = `https://uri.amap.com/navigation?dname=${encoded}&mode=ride&callnative=1`;
+            }, 2000);
+            const clearTimer = () => {
+                clearTimeout(timer);
+                window.removeEventListener('pagehide', clearTimer);
+                window.removeEventListener('visibilitychange', clearTimer);
+            };
+            window.addEventListener('pagehide', clearTimer);
+            window.addEventListener('visibilitychange', clearTimer);
+            window.location.href = nativeUrl;
+        }
+
+        // 图片预览
+        function showImg(el) {
+            if (el.src.includes('data:image')) return;
+            const mask = document.getElementById('mask');
+            document.getElementById('big-img').src = el.src;
+            mask.style.display = 'flex';
+        }
+
+        // 图片错误占位
+        function handleImageError(img) {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="90" height="60" viewBox="0 0 90 60">
+                <rect width="90" height="60" fill="#f0f0f0"/>
+                <text x="45" y="30" text-anchor="middle" dy=".3em" font-size="12" fill="#999">暂无图片</text>
+            </svg>`;
+            img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+            img.onclick = null;
+        }
+
+        // 导出 Excel（极简版，可直接打开）
+        function exportExcel() {
+            const headers = ["客户店名", "地址", "电话", "备注"];
+            const rows = currentList.map(item => [
+                item.name,
+                item.addressName,
+                item.phone,
+                item.remark
+            ]);
+
+            const csv = [
+                headers.join(","),
+                ...rows.map(row => row.map(v => `"${(v || "").replace(/"/g, '""')}"`).join(","))
+            ].join("\n");
+
+            const blob = new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "店铺列表_" + new Date().toLocaleDateString() + ".csv";
+            a.click();
+            URL.revokeObjectURL(url);
         }
 
         // 初始渲染
-        renderTable(shopList);
+        renderTable(currentList);
     </script>
-
 </body>
 </html>
