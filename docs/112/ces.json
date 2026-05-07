@@ -1,0 +1,22 @@
+{
+    "auth_config": {
+        "enable_secret_key": false,
+        "enable_vpn_check": false
+    },
+    "dialog_config": {  
+        "show_dialog": false,
+        "reset_cache": false,
+        "version_name": "5.1.0",
+        "force_update": false,
+        "title": "#FF4500 ✨小鱼影视✨",
+        "subtitle": "#ffff43 v5.1.0更新内容",
+        "update_msg": "#FF0080 \n* [Leanback]\n* 历史记录显示播放进度\n* 弹幕时间设置，弹幕按钮，上下键调整\n* [App]\n* 弹幕设置新增弹幕时间\n* playerContent新增adblock字段\n* BUG修复\n* 修复弹幕时间设置BUG",
+        "img_url": "assets://dialog.ttf",
+        "update_link": "https://share.feijipan.com/s/lJQYLwUx",
+        "author_link": "https://link3.cc/2015888",
+        "btn_update_text": "立即更新",
+        "notice_msg": "#FF0080 严正声明：本软件取自网络公开资源，非自主开发。根据《计算机软件保护条例》要求，仅限用于软件设计思想与原理的学习研究，不得用于商业及非法目的。",
+        "group_btn_text": "QQ交流群",
+        "group_link": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=75929916&card_type=group&source=qrcode"
+    }
+}

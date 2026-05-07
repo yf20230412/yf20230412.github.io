@@ -11,12 +11,6 @@
     "lives": [
 
     {
-      "name": "冰茶",
-      "type": 0,
-      "url": "https://fy.188766.xyz/?ip=&huikan=1&json=true",
-      "ua": "bingcha/1.1 (mianfeifenxiang) "
-    },
-    {
         "name": "develop202",
         "type": 0,
         "playerType": 2,
@@ -114,20 +108,6 @@
 },
 */
 {
-    "key": "溏心次元",
-    "name": "🔞┃溏心次元(py)",
-    "type": 3,
-    "api": "./18/溏心次元.py",
-    "changeable": 0
-},
-{
-    "key": "黄色仓库",
-    "name": "🔞┃黄色仓库(py)",
-    "type": 3,
-    "api": "./18/黄色仓库.py",
-    "changeable": 0
-},
-{
     "key": "聚合色播",
     "name": "🔞┃聚合色播(py)",
     "type": 3,
@@ -170,25 +150,10 @@
     "changeable": 0
 },
 {
-    "key": "lavAPP.py",
-    "name": "🔞┃lavAPP(py)",
-    "type": 3,    
-    "api": "./18/lavAPP.py",
-    "changeable": 0,
-    "ext": ""
-},
-{
     "key": "香蕉",
     "name": "🔞┃香蕉(py)",
     "type": 3,
     "api": "./18/香蕉.py",
-    "changeable": 0
-},
-{
-    "key": "py_DSYS",
-    "name": "🔞┃DSYS(py)",
-    "type": 3,
-    "api": "./18/DSYS.py",
     "changeable": 0
 },
 {
@@ -207,14 +172,6 @@
     "ext": ""
 },
 {
-    "key": "E佬2",
-    "name": "🔞┃E佬视频2(py)",
-    "type": 3,
-    "api": "./18/E佬通用视频2.py",
-    "changeable": 0,
-    "ext": ""
-},
-{
     "key": "风流视频",
     "name": "🔞┃风流视频",
     "type": 3,
@@ -225,6 +182,20 @@
     "分类": "日韩$1#偷拍$21#无码$22#自拍$23#巨乳$24#华人$25#嫩模$26#剧情$27#动漫$28#熟女$29#丝袜$30#欧美$32#有码$33#制服$34#口交$35#三级$31#",
   "分类url": "https://hekody.flsp8.boats/vodtype/{cateId}-{catePg}.html"
     }
+},
+{
+    "key": "jabie",
+    "name": "🔞┃jabie(py🪜)",
+    "type": 3,
+    "api": "./18/jabie.py",
+    "changeable": 0
+},
+{
+    "key": "truvaze",
+    "name": "🔞┃truvaze(py🪜)",
+    "type": 3,
+    "api": "./18/truvaze.py",
+    "changeable": 0
 },
 {
     "key": "韩国电影",
@@ -255,48 +226,6 @@
     "api": "csp_XBPQ",
     "changeable": 0,
     "ext": "./18/json/jable.json"
-},
-{
-    "key": "Missav",
-    "name": "🔞┃Missav(py🪜)┃待修",
-    "type": 3,
-    "api": "./18/Miss.py",
-    "changeable": 0,
-    "ext": {
-        "site": "https://missav.ai",
-        "cfgo":"./18/Miss_cf-proxy-linux-arm64",
-        "plp": "",
-        "proxy": {}
-    }
-},
-
-{
-    "key": "AV空投军团",
-    "name": "✈️空投军团✈️",
-    "type": 3,
-    "api": "csp_XBPQ",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 1,
-    "style": {
-        "type": "rect",
-        "ratio": 1.333
-    },
-    "ext": {
-        "主页url": "https://iporn01.xyz/",
-        "分类url": "https://iporn01.xyz/ch/{cateId}?page={catePg}",
-        "分类": "日本新发行$jp/latest#日本所有$jp#日本今日🔥$jp/today#日本本周🔥$jp/weekly#日本今月🔥$jp/month#日本2025🔥$jp/year\t        #国产新发行$ocal/news#国产最新$local/latest#国产今日🔥$local/today#国产本周🔥$local/weekly#国产今月🔥$local/month#国产2025🔥$local/year",
-        "数组": "\"imgcover\"&&\"imgcover\"",
-        "图片": "src=\"&&\"",
-        "简介": "★本站公告★：合理安排时间看片，享受健康生活。撸一撸可以  注意身体！！",
-        "标题": "hreflang=\"zh-hant\">&&</a>",
-        "链接": "href=\"&&\"",
-        "副标题": "class=\"datetime\">&&</time>",
-        "直接播放": "1",
-        "嗅探词": "index.m3u8#.mp4#m3u8#.m3u8#/tos/#.flv#video/tos",
-        "搜索后缀": "/video/",
-        "搜索url": "https://iporn01.xyz/se/result?keyword={wd}.html"
-    }
 },
 {
     "key": "影片库",
