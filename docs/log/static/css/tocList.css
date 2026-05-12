@@ -1,59 +1,127 @@
-/* 目录按钮样式 */
+/* 目录按钮 - 增加悬浮感和呼吸效果 */
 #tocButton {
     position: fixed;
-    top: 100px;
+    top: 30px;
     right: 25px;
-    z-index: 1000;
-    padding: 7px, 15px;
-    background-color: #007bff;
+    z-index: 1001;
+    width: 45px;
+    height: 45px;
+    background: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%; /* 圆形更现代 */
     cursor: pointer;
-    font-size: 22px;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 目录容器样式 */
+/* 修改 hover 触发方式 */
+#tocButton:hover {
+    /* 调用下面定义的名为 rotateCircle 的动画 */
+    animation: rotateCircle 0.6s ease-in-out forwards;
+    /* 悬停时的蓝色发光效果 */
+    /* 参数解释：x偏移 y偏移 模糊距离 扩散距离 颜色 */
+    box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.6);
+}
+
+/* 定义旋转动画 */
+@keyframes rotateCircle {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(1.1) rotate(360deg);
+    }
+}
+
+
+/* 目录容器 - 毛玻璃效果 (Glassmorphism) */
 #toc {
     position: fixed;
-    top: 150px;
+    top: 85px;
     right: 25px;
-    background: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px); /* 核心：背景模糊 */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0; /* 内部 padding 交给列表处理 */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
     display: none;
     z-index: 1000;
-    max-height: 80%;
-    overflow-y: auto;
-    width: 200px;
+    max-height: 70vh;
+    width: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-out;
 }
 
-/* 目录标题样式 */
-#toc-title {
-    font-size: 18px;
-    margin-bottom: 10px;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* 目录列表样式 */
+h4 {
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
 #tocList {
     list-style-type: none;
-    padding: 0;   
+    padding: 10px 0;
+    overflow-y: auto;
+    max-height: calc(70vh - 50px);
 }
-h4{
-    margin-bottom: 20px;
-    font-size: 16px;
-}
+
+/* 自定义滚动条样式 */
+#tocList::-webkit-scrollbar { width: 4px; }
+#tocList::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; }
+
 #tocList li {
-    margin-bottom: 15px;
+    margin: 0;
 }
 
 #tocList a {
+    display: block;
+    padding: 8px 20px;
     text-decoration: none;
-    color: #007bff;
+    color: #666;
     font-size: 14px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
 }
 
+/* 悬停与激活特效 */
 #tocList a:hover {
-    text-decoration: underline;
+    background: rgba(0, 123, 255, 0.05);
+    color: #007bff;
+    padding-left: 25px; /* 轻微向右偏移感 */
+}
+
+/* 点击/激活时的样式 */
+#tocList a.active {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    border-left-color: #007bff;
+    font-weight: bold;
+}
+
+.log-box h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #f00;
+  margin: 25px 0 10px 0; /* 增加版本之间的间距，更清晰 */
+  height: auto;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  float: none; /* 删掉 float: left */
+  scroll-margin-top: 20px; /* 预留 20px 的顶部间距 */
 }
