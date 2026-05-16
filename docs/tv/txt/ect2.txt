@@ -1,0 +1,99 @@
+youxuan.cf.090227.xyz#节点更新时间：2026/5/16/10:20 | 更新间隔：每10分钟1次
+ct.877774.xyz#⚡ 电信极速
+cmcc.877774.xyz#⚡ 移动极速
+cu.877774.xyz#⚡ 联通极速
+asia.877774.xyz#⚡ 亚洲极速
+na.877774.xyz#⚡ 美洲极速
+eur.877774.xyz#⚡ 欧洲极速
+time.is#官方优选
+icook.hk#官方优选
+icook.tw#官方优选
+mfa.gov.ua#乌克兰外交部
+www.visa.cn#Visa中国
+store.ubi.com#Ubisoft
+www.shopify.com#Shopify官方
+staticdelivery.nexusmods.com#NexusMods
+8.35.211.6#电信
+8.35.211.251#电信
+173.245.58.59#电信
+173.245.58.69#电信
+104.18.33.198#电信
+104.18.39.150#电信
+162.159.47.196#电信
+162.159.38.176#电信
+172.64.147.127#电信
+172.64.154.204#电信
+172.64.159.151#电信
+104.19.58.23#移动
+104.19.54.25#移动
+104.17.49.51#移动
+104.19.54.165#移动
+104.19.37.164#移动
+104.19.51.234#移动
+104.19.52.243#移动
+104.17.176.47#移动
+104.17.102.126#移动
+104.17.148.175#移动
+162.159.152.150#移动
+162.159.153.176#移动
+104.26.3.111#联通
+104.26.0.205#联通
+172.67.73.42#联通
+104.19.51.62#联通
+172.67.73.159#联通
+104.17.152.203#联通
+104.17.157.122#联通
+104.17.217.202#联通
+108.162.198.127#联通
+104.18.33.71#71.04ms | 速度:63.30MB/s
+172.64.52.15#66.31ms | 速度:32.46MB/s
+162.159.39.13#49.78ms | 速度:71.00MB/s
+104.18.36.127#69.42ms | 速度:56.81MB/s
+172.64.53.173#50.73ms | 速度:49.00MB/s
+162.159.17.114#70.35ms | 速度:68.69MB/s
+162.159.45.214#51.07ms | 速度:66.80MB/s
+162.159.38.172#62.85ms | 速度:52.56MB/s
+162.159.46.226#70.50ms | 速度:41.31MB/s
+108.162.198.154#49.40ms | 速度:40.72MB/s
+kniu.cc
+doro.lol
+cnllm.com
+ys2046.cv
+cf.0sm.com
+baota.us.kg
+saas.sin.fan
+101yaoye.com
+ping.ctrl.li
+cf.877774.xyz
+cf.877771.xyz
+cf.900501.xyz
+fn.130519.xyz
+tencentapp.cn
+b.lma.de5.net
+cfip.cfcdn.vip
+www.cdzxdz.com
+cdn.2020111.xyz
+op.chinwa.eu.cc
+cf.tencentapp.cn
+cdns.doon.eu.org
+cfip.1323123.xyz
+cfip.xxxxxxxx.tk
+nrtcfdns.zone.id
+xn--b6gac.eu.org
+animal.nuaa.tech
+bestcf.030101.xyz
+777.ai7777777.xyz
+prompt.gzcrtw.com
+ipc.zmxf.dpdns.org
+nrt.xxxxxxxx.nyc.mn
+yg2.ygkkk.dpdns.org
+yg9.ygkkk.dpdns.org
+auto.dolby.dpdns.org
+jellyfin.roddy.eu.cc
+cloudflare.182682.xyz
+cloudflare-dl.byoip.top
+cf.cloudflare.182682.xyz
+snipaste1.speedip.eu.org
+cloudflare-ip.mofashi.ltd
+freeyx.cloudflare88.eu.org
+0.5.0.0.7.0.f.1.0.7.4.0.1.0.0.2.xzhi.eu.org
