@@ -157,6 +157,17 @@
     "changeable": 0
 },
 {
+    "key": "小土豆",
+    "name": "🔞┃小土豆(XBPQ)",
+    "type": 3,
+    "api": "csp_XBPQ",
+    "quickSearch": 1,
+    "searchable": 1,
+    "changeable": 1,
+    "filterable": 1,
+    "ext": "./18/json/小土豆.json"
+},
+{
     "key":"麻豆",
     "name":"🔞┃麻豆(js)",
     "type":3,
