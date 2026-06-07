@@ -11,111 +11,335 @@
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    25% {
-        background-position: 50% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    75% {
-        background-position: 50% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-   :root {
-       /* 主页名字渐变动画效果 */
-       --vp-home-hero-name-color: transparent; 
-       --vp-home-hero-name-background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
-        
+:root {
+  /* 主页名字渐变动画效果 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #0eaf6d, #ff6ac6 25%, #147b96 50%, #e6d205 55%, #2cc4e0 60%, #8b2ce0 80%, #ff6384 95%, #08dfb4);
 
-     
+
+
 }
 
 /* 主页名字渐变动画效果 */
-   .name .clip {
-    background: var(--vp-home-hero-name-background);
-    background-size: 200% 200%; 
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: gradient 3s ease infinite; 
-    font-size: 2.5rem; 
-    background-repeat: no-repeat; /* 添加这一行 */
-    height: 100px; /* 确保元素有高度 */
-    width: 100%; /* 确保元素有宽度 */
-    }
+.name .clip {
+  background: var(--vp-home-hero-name-background);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient 3s ease infinite;
+  font-size: 2.5rem;
+  background-repeat: no-repeat;
+  /* 添加这一行 */
+  height: 100px;
+  /* 确保元素有高度 */
+  width: 100%;
+  /* 确保元素有宽度 */
+}
 
 /* 为图像添加样式 */
 .VPImage.image-src {
-    border-radius: 50%; /* 使图片变为圆形 */
-    width: 150px; /* 确保与背景相符 */
-    height: 150px; /* 确保与背景相符 */
-    object-fit: cover; /* 保持比例并填充 */
-    position: relative; /* 确保图像在背景层前面 */
-    z-index: 1; /* 确保图像在背景层的上面 */
-    padding: 1px;	/* 设置内边距 */
-	background-color: #fff;	/* 设置背景颜色为白色 */
-	/*margin-top: -50px;*/	 /*设置上外边距 */
-	box-shadow: 0px 5px 30px 0px #6c44fc, 0px 0px 0px 6px rgba(107, 74, 255, 0.5);	/* 设置阴影效果调整6px可以改大小 */
+  border-radius: 50%;
+  /* 使图片变为圆形 */
+  width: 150px;
+  /* 确保与背景相符 */
+  height: 150px;
+  /* 确保与背景相符 */
+  object-fit: cover;
+  /* 保持比例并填充 */
+  position: relative;
+  /* 确保图像在背景层前面 */
+  z-index: 1;
+  /* 确保图像在背景层的上面 */
+  padding: 1px;
+  /* 设置内边距 */
+  background-color: #fff;
+  /* 设置背景颜色为白色 */
+  /*margin-top: -50px;*/
+  /*设置上外边距 */
+  box-shadow: 0px 5px 30px 0px #6c44fc, 0px 0px 0px 6px rgba(107, 74, 255, 0.5);
+  /* 设置阴影效果调整6px可以改大小 */
 }
 
 
 /* 调整首页名字移动到最左边距,并缩小"终于等到你"字体大小 */
 .container {
-    padding: 0; /* 如果有全局内边距，可以去掉 */
+  padding: 0;
+  /* 如果有全局内边距，可以去掉 */
 }
 
 .main {
-    text-align: left; /* 将文本对齐到左边 */
+  text-align: left;
+  /* 将文本对齐到左边 */
 }
 
 .name {
-    margin-left: 0; /* 确保h1没有左边距 */
+  margin-left: 0;
+  /* 确保h1没有左边距 */
 }
 
-.main .text { /* 增加选择器的特异性 */
-    font-size: 1.5rem; /* 设置"终于等到你"字体大小 */
-    margin-left: 0; /* 确保没有左边距 */
+.main .text {
+  /* 增加选择器的特异性 */
+  font-size: 1.5rem;
+  /* 设置"终于等到你"字体大小 */
+  margin-left: 0;
+  /* 确保没有左边距 */
 }
 
 .tagline {
-    margin-left: 0; /* 确保p元素没有左边距 */
+  margin-left: 0;
+  /* 确保p元素没有左边距 */
 }
 
-   
-    /* Color Theme */
-    :root {
-      --vp-c-brand: var(--vp-c-purple);
-      --vp-c-brand-light: var(--vp-c-purple-light);
-      --vp-c-brand-lighter: var(--vp-c-purple-lighter);
-      --vp-c-brand-dark: var(--vp-c-purple-dark);
-      --vp-c-brand-darker: var(--vp-c-purple-darker);
-    }
 
-    :root {
-      /* brand按钮 */
-      /* 正常 */
-      --vp-button-brand-border: #43aefc; /* 边框色 */
-      --vp-button-brand-bg: #43aefc; /* 背景色 */
-    
-      /* hover状态 */
-      --vp-button-brand-hover-border: #75c4fe;
-      --vp-button-brand-hover-bg: #75c4fe;
-    
-      /* active状态-点击 */
-      --vp-button-brand-hover-border: #43aefc;
-      --vp-button-brand-active-bg: #43aefc;
-    }
+/* Color Theme */
+:root {
+  --vp-c-brand: var(--vp-c-purple);
+  --vp-c-brand-light: var(--vp-c-purple-light);
+  --vp-c-brand-lighter: var(--vp-c-purple-lighter);
+  --vp-c-brand-dark: var(--vp-c-purple-dark);
+  --vp-c-brand-darker: var(--vp-c-purple-darker);
+}
 
-    :root {
-      /* 主题色 */
-      --vp-c-indigo-1: #43aefc; /* 主题色 */
-      --vp-c-indigo-2: #43aefc; /* 主题色-hover */
-      --vp-c-indigo-3: #43aefc;
-    }
+:root {
+  /* brand按钮 */
+  /* 正常 */
+  --vp-button-brand-border: #43aefc;
+  /* 边框色 */
+  --vp-button-brand-bg: #43aefc;
+  /* 背景色 */
+
+  /* hover状态 */
+  --vp-button-brand-hover-border: #75c4fe;
+  --vp-button-brand-hover-bg: #75c4fe;
+
+  /* active状态-点击 */
+  --vp-button-brand-hover-border: #43aefc;
+  --vp-button-brand-active-bg: #43aefc;
+}
+
+:root {
+  /* 主题色 */
+  --vp-c-indigo-1: #43aefc;
+  /* 主题色 */
+  --vp-c-indigo-2: #43aefc;
+  /* 主题色-hover */
+  --vp-c-indigo-3: #43aefc;
+}
+
+
+
+
+
+/* ==========================================================================
+   1. 统一的终端代码块外壳样式（适配 bash, js, json）
+   ========================================================================== */
+div[class*="language-bash"],
+div[class*="language-js"],
+div[class*="language-java"],
+div[class*="language-sh"],
+div[class*="language-yaml"],
+div[class*="language-javascript"],
+div[class*="language-json"] {
+  position: relative;
+  padding-top: 32px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  /* 强制深色背景 - 使用纯黑灰提高对比度 */
+  background: #1e1e1e !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 14px;
+  display: block;
+  width: 100%;                    /* 宽度100% */
+  max-width: 800px;              /* 最大宽度限制 */
+  margin: 16px auto !important;  /* 上下16px，左右auto居中 */
+  box-sizing: border-box;
+}
+
+/* tabs 容器简化版 */
+div[class*="tabs"] {
+  padding: 0 !important;
+  border-radius: 8px 8px 0 0 !important;
+  line-height: 41px !important;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 !important;
+  background: #1e1e1e !important;
+  box-sizing: border-box;
+}
+
+/* 通用：选中的 tab label 背景变黄 */
+div[class*="tabs"] label[aria-selected="true"],
+div[class*="tabs"] label.active,
+div[class*="tabs"] input:checked + label {
+  background: #ffd700 !important;
+  color: #000 !important; /* 可选：文字变黑，避免和黄色背景冲突 */
+}
+div[class*="tabs"] label {
+  color: #ffffff !important;
+  padding: 2px 12px 2px 12px !important;
+}
+
+
+
+
+
+/* 顶部标题栏 - 稍亮一点区分区域 */
+div[class*="language-bash"]::before,
+div[class*="language-js"]::before,
+div[class*="language-yaml"]::before,
+div[class*="language-sh"]::before,
+div[class*="language-java"]::before,
+div[class*="language-javascript"]::before,
+div[class*="language-json"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 32px;/*
+  background: #1e1e1e !important;
+  border-bottom: 1px solid #3c3c3c;
+  border-radius: 8px 8px 0 0;*/
+}
+
+/* 红绿灯按钮 */
+div[class*="language-bash"]::after,
+div[class*="language-js"]::after,
+div[class*="language-yaml"]::after,
+div[class*="language-sh"]::after,
+div[class*="language-java"]::after,
+div[class*="language-javascript"]::after,
+div[class*="language-json"]::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 20px 0 #ffbd2e, 40px 0 #28ca42;
+  z-index: 1;
+}
+
+/* 隐藏行号区域 */
+div[class*="language-bash"] .line-numbers-wrapper,
+div[class*="language-js"] .line-numbers-wrapper,
+div[class*="language-yaml"] .line-numbers-wrapper,
+div[class*="language-sh"] .line-numbers-wrapper,
+div[class*="language-java"] .line-numbers-wrapper,
+div[class*="language-javascript"] .line-numbers-wrapper,
+div[class*="language-json"] .line-numbers-wrapper {
+  display: none !important;
+}
+
+/* 滚动条美化 */
+div[class*="language-bash"] pre::-webkit-scrollbar,
+div[class*="language-js"] pre::-webkit-scrollbar,
+div[class*="language-yaml"] pre::-webkit-scrollbar,
+div[class*="language-sh"] pre::-webkit-scrollbar,
+div[class*="language-java"] pre::-webkit-scrollbar,
+div[class*="language-javascript"] pre::-webkit-scrollbar,
+div[class*="language-json"] pre::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+
+/* 复制按钮 Hover 态 */
+div[class*="language-bash"] .copy-button:hover,
+div[class*="language-js"] .copy-button:hover,
+div[class*="language-yaml"] .copy-button:hover,
+div[class*="language-sh"] .copy-button:hover,
+div[class*="language-java"] .copy-button:hover,
+div[class*="language-javascript"] .copy-button:hover,
+div[class*="language-json"] .copy-button:hover {
+  background: rgba(255,255,255,0.2) !important;
+  color: #ffffff !important;
+}
+
+
+/* ==========================================================================
+   2. 基础文本与字体定义
+   ========================================================================== */
+div[class*="language-bash"] code, div[class*="language-bash"] span,
+div[class*="language-js"] code, div[class*="language-js"] span,
+div[class*="language-yaml"] code, div[class*="language-yaml"] span,
+div[class*="language-sh"] code, div[class*="language-sh"] span,
+div[class*="language-java"] code, div[class*="language-java"] span,
+div[class*="language-javascript"] code, div[class*="language-javascript"] span,
+div[class*="language-json"] code, div[class*="language-json"] span {
+  color: #e0e0e0 !important;  /* 默认明亮的浅灰色，确保无样式文本清晰可见 */
+  font-family: 'SF Mono', 'Menlo', 'Monaco', 'Cascadia Code', monospace;
+}
+
+
+/* ==========================================================================
+   3. 多语言语法高亮（兼容 PrismJS / Shiki / Pure CSS 高亮引擎）
+   ========================================================================== */
+
+/* --- 通用：注释 (Bash/JS) --- */
+div[class*="language-"] .token.comment {
+  color: #6a9955 !important;   /* 温和的草绿色 */
+  font-style: italic;
+}
+
+/* --- 通用：字符串与文本 (Bash路径 / JS字符串 / JSON的键和值) --- */
+div[class*="language-"] .token.string,
+div[class*="language-"] .token.attr-value,
+div[class*="language-"] .token.unquoted {
+  color: #ffe566 !important;   /* 温暖的明黄色 */
+}
+
+/* --- JS/JSON 特有：数字、布尔值与 Null --- */
+div[class*="language-"] .token.number,
+div[class*="language-"] .token.boolean,
+div[class*="language-"] .token.builtin {
+  color: #b5cea8 !important;   /* 浅浅的亮绿色 */
+}
+
+/* --- Bash/JS：核心关键字与函数名 (如 dd, function, const, let) --- */
+div[class*="language-"] .token.keyword,
+div[class*="language-"] .token.function,
+div[class*="language-"] .token.class-name {
+  color: #c586c0 !important;   /* 显眼的亮紫色 */
+  font-weight: bold;
+}
+
+/* --- Bash：参数名 (if/of) | JS：变量名、对象属性与操作符 --- */
+div[class*="language-"] .token.parameter,
+div[class*="language-"] .token.arg,
+div[class*="language-"] .token.property,
+div[class*="language-"] .token.operator {
+  color: #9cdcfe !important;   /* 清爽的冰蓝色 */
+}
+
+/* --- JSON 特有优化：让 JSON 的 Key 和 Value 有明显区分 --- */
+/* 如果高亮引擎支持将 JSON 的 Key 识别为 property，则将其染成冰蓝色，打破全屏黄色的沉闷 */
+div[class*="language-json"] .token.property {
+  color: #9cdcfe !important;   /* JSON Key 显示为冰蓝色 */
+}

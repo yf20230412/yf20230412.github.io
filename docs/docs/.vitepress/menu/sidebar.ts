@@ -14,6 +14,14 @@ export const sidebar: DefaultTheme.Sidebar = {
         ]        
       },
       {
+        text: '磊科N60 Pro',
+        collapsed: false,  //控制展开和隐藏
+        items: [
+          { text: 'ImmortalWrt固件安装教程', link: '/blog/磊科N60Pro安装ImmortalWrt教程' },
+          { text: '安装istore商店以及U盘扩容软件包方法', link: '/blog/安装istore商店以及U盘扩容软件包方法' },
+        ]        
+      },
+      {
         text: '手机去广系列',
         collapsed: false,  //控制展开和隐藏
         items: [

@@ -11,11 +11,17 @@ export default defineConfig({
   // 这里在head里面可以设置meta标签,利于seo搜索
   head: [
     ['link', { rel: 'icon', href: '/bk/logo.png' }],
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }]
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    ['link', { rel: 'stylesheet', href: '/.vitepress/theme/custom.css' }]
   ],
   
   base: '/bk/',  // 设置基础路径,部署在bk😍目录,名字和仓库目录一致
    
+  // 开启行号（可选）
+  markdown: {
+    lineNumbers: true
+  },
+     
   vite: {
     // ↓↓↓↓↓
     plugins: [
@@ -75,11 +81,11 @@ export default defineConfig({
     sidebar: sidebar, // 把定义的sidebar给替换进来
      
     outline: {
-      level: [2, 6],
+      level: [2, 6], // 显示2-6级标题
       label: '目录'
     },
     search: {
-      provider: '本地'
+      provider: 'local'
     },
     
     editLink: {
