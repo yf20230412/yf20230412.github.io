@@ -5,8 +5,10 @@ on:
       - 'docs/docs/**'  #上传到docs/docs/才能触发
   workflow_dispatch:   #手动触发
 
+# 全局开启 Node24
 env:
   TZ: Asia/Shanghai
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # 新增的20260608
 
 permissions:
   contents: write
@@ -22,7 +24,7 @@ jobs:
 
       - uses: pnpm/action-setup@v3
         with:
-          version: 9
+          version: 9.0.0  # 从 9 改为具体版本，更稳定
           
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -70,11 +72,20 @@ jobs:
           zip -r ../xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip .
           echo "压缩包信息:"
           ls -lh ../xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip
-         
+      
+      # 检查压缩包是否创建成功
       - name: Get current date
         id: get-date
         run: |
-          echo "RELEASE_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV        
+          echo "RELEASE_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
+          
+      - name: Verify zip exists
+        run: |
+          if [ ! -f "docs/xiaoyu_blog-${{ steps.package-version.outputs.version }}.zip" ]; then
+            echo "❌ 压缩包不存在！"
+            exit 1
+          fi
+          echo "✅ 压缩包已就绪"
           
       # 上传构建产物到artifacts
       - name: Upload release artifact

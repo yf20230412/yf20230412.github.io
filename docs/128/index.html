@@ -15,13 +15,16 @@
     <script src="./js/crypto-js.min.js"></script>
     <!-- 引入jQuery（CDN） -->
     <script src="js/jquery.min.js"></script>
+    <!-- 引入json5格式化 备用-->
+    <!--<script src="https://unpkg.com/json5@2.2.3/dist/index.min.js"></script>-->
+    <script src="./js/json5.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div id="app">
         <div class="wrapper">
-            <h2> TVBox的AES-128-CBC
+            <h2> AES-128-CBC
                 <template v-if="selectValue === '1'">加密</template>
                 <template v-else>解密</template>
             </h2>
@@ -104,8 +107,10 @@
         </div>
     </footer>
     <script src="js/aes.js"></script>
+    <!-- 弹窗引用 -->
     <script src="/static/tanchuang/sweetalert/sweetalert.min.js"></script>
     <script src="/static/tanchuang/sweetalert/sweetalert_verify.js"></script>
+    <script src="./js/splash.js"></script>
 </body>
 
 </html>

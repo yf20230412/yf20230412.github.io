@@ -7,8 +7,10 @@ on:
       #- 'docs/docs/**'  #上传到docs/docs/才能触发
   workflow_dispatch:   #手动触发
 
+# 全局开启 Node24
 env:
   TZ: Asia/Shanghai
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # 新增的20260608
 
 permissions:
   contents: write # 需要写权限提交代码
