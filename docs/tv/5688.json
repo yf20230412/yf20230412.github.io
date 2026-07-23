@@ -68,6 +68,13 @@
     "changeable": 0
 },
 {
+    "key": "mjv011",
+    "name": "🔞┃mjv011(py)",
+    "type": 3,
+    "api": "./18/py/mjv011.py",
+    "changeable": 0
+},
+{
     "key": "瑟瑟",
     "name": "🔞┃瑟瑟(py)",
     "type": 3,
