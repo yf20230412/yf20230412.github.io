@@ -8,6 +8,8 @@
 	
     "首页":"电视剧$40",
     
+    "简介": "><p>&&</p>",
+    
     "数组":"col-lg-8 col-md-6 col-sm-4 col-xs-3\">&&</li>",
     
     "标题":"title=\"&&\"",
@@ -15,6 +17,8 @@
     "图片":"data-original=\"&&\"",
     
     "副标题":"pic-text text-right\">&&</span>",
+    
+    "搜索url":"/index.php/vod/search.html?wd={wd}",
 	
     "分类url":"https://xiaoheimi.cc/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/lang/{lang}/page/{catePg}/year/{year}.html",
 
