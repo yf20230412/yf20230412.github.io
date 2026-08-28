@@ -75,24 +75,10 @@
     "changeable": 0
 },
 {
-    "key": "瑟瑟",
-    "name": "🔞┃瑟瑟(py)",
-    "type": 3,
-    "api": "./18/py/瑟瑟.py",
-    "changeable": 0
-},
-{
     "key": "香蕉",
     "name": "🔞┃香蕉(py)",
     "type": 3,
     "api": "./18/py/香蕉.py",
-    "changeable": 0
-},
-{
-    "key": "性愛大師",
-    "name": "🔞┃性愛大師(py)",
-    "type": 3,
-    "api": "./18/py/性愛大師.py",
     "changeable": 0
 },
 {
@@ -101,21 +87,6 @@
     "type": 3,
     "api": "./18/py/xiang512.py",
     "changeable": 0
-},
-{
-    "key": "蘿莉AV",
-    "name": "🔞┃蘿莉AV(py)",
-    "type": 3,
-    "api": "./18/py/蘿莉AV.py",
-    "changeable": 0
-},
-{
-    "key": "小土豆",
-    "name": "🔞┃小土豆(XBPQ)",
-    "type": 3,
-    "api": "csp_XBPQ",
-    "changeable": 0,
-    "ext": "./18/json/小土豆.json"
 },
 {
     "key":"麻豆",
@@ -148,21 +119,6 @@
     "name": "🔞┃韩国电影(py🪜)",
     "type": 3,
     "api": "./18/py/韩国电影.py",
-    "changeable": 0
-},
-{
-    "key": "Javxx",
-    "name": "🔞┃Javxx(drpy🪜)",
-    "type": 3,
-    "api": "./douban/drpy3.min.js",
-    "changeable": 0,
-    "ext": "./18/js/JAVXX.js"
-},
-{
-    "key": "stripchat",
-    "name": "🔞┃stripchat(py🪜)",
-    "type": 3,
-    "api": "./18/py/stripchat.py",
     "changeable": 0
 },
 
