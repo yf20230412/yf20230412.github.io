@@ -1,6 +1,6 @@
 {
 
-    "spider": "https://cdn04132025.gitlink.org.cn/api/v1/repos/yf1688/box/raw/jar/xiaoyu.txt",
+    "spider": "./jar/XBPQ_250816.jar",
 
     "wallpaper": "http://2015888.xyz/666/",
 
@@ -50,8 +50,72 @@
     "name": "🔥┃豆瓣┃热播",
     "type": 3,
     "api": "csp_Douban",
+    "jar": "./jar/xiaoyu.jar",
     "quickSearch": 0,
     "searchable": 0
+},
+{
+    "key": "聚合",
+    "name": "🔞┃聚合",
+    "type": 3,
+    "api": "./18/PY读取手机版.py",
+    "changeable": 0
+},
+{
+    "key": "星空中文影院",
+    "name": "🔞┃星空中文影院(py)",
+    "type": 3,
+    "api": "./18/py/星空中文影院.py",
+    "changeable": 0
+},
+{
+    "key": "专草校花",
+    "name": "🔞┃专草校花(py)",
+    "type": 3,
+    "api": "./18/py/专草校花.py",
+    "changeable": 0
+},
+{
+    "key": "吉利猫",
+    "name": "🔞┃吉利猫(py)",
+    "type": 3,
+    "api": "./18/py/吉利猫.py",
+    "changeable": 0
+},
+{
+    "key": "88影视",
+    "name": "🔞┃88影视(py)",
+    "type": 3,
+    "api": "./18/py/88影视.py",
+    "changeable": 0
+},
+{
+    "key": "爽水妹",
+    "name": "🔞┃爽水妹(py)",
+    "type": 3,
+    "api": "./18/py/爽水妹.py",
+    "changeable": 0
+},
+{
+    "key": "雪月",
+    "name": "🔞┃雪月(py)",
+    "type": 3,
+    "api": "./18/py/雪月.py",
+    "changeable": 0
+},
+{
+    "key": "太极影视",
+    "name": "🔞┃太极影视(py)",
+    "type": 3,
+    "api": "./18/py/太极影视.py",
+    "changeable": 0
+},
+{
+    "key": "Lvmao",
+    "name": "🔞┃Lvmao(py)",
+    "type": 3,
+    "api": "./18/py/Lvmao.py",
+    "changeable": 0
 },
 {
     "key": "聚合色播",
@@ -96,23 +160,78 @@
     "changeable": 0
 },
 {
-    "key": "风流视频",
-    "name": "🔞┃风流视频",
+    "key": "getav",
+    "name": "🔞┃getav(py🪜)",
+    "type": 3,
+    "api": "./18/py/getav.py"
+},
+{
+    "key": "missav",
+    "name": "🔞┃missav(py🪜)",
+    "type": 3,
+    "api": "./18/py/missav.py",
+    "changeable": 0
+},
+{
+    "key": "FCJAV",
+    "name": "🔞┃FCJAV(py🪜)",
+    "type": 3,
+    "api": "./18/py/FCJAV.py",
+    "changeable": 0
+},
+{
+    "key": "pornhub",
+    "name": "🔞┃pornhub(XBPQ🪜)",
     "type": 3,
     "api": "csp_XBPQ",
     "ext": {
-    "请求头": "User-Agent$MOBILE_UA",
-    "编码": "UTF-8", "直接播放": "1",
-    "分类": "日韩$1#偷拍$21#无码$22#自拍$23#巨乳$24#华人$25#嫩模$26#剧情$27#动漫$28#熟女$29#丝袜$30#欧美$32#有码$33#制服$34#口交$35#三级$31#",
-  "分类url": "https://hekody.flsp8.boats/vodtype/{cateId}-{catePg}.html"
+    "请求头": "User-Agent$MOBILE_UA#Referer@https://cn.pornhub.com/",
+    "编码": "UTF-8",
+    "站名": "pornhub-",
+    "发布页": "",
+    "防丢url": "",
+    "主页url": "https://cn.pornhub.com/",
+    "二次截取": "",
+    "数组": "singleVideo\">&&<div class=\"watchedVideoText",
+    "图片": "src=\"&&\"",
+    "标题": "alt=\"&&\"",
+    "副标题": "无线路时请刷新",
+    "链接": "href=\"&&\"",
+    "简介":"",
+    "线路数组": "#playlist\"&&</a>",
+   // "线路标题": "Tab\">&&<span>",
+    "线路标题": "自行选择分辨率",
+    "播放请求头": "User-Agent$MOBILE_UA#Referer@https://cn.pornhub.com/",
+    "播放代理": "1",
+    "播放数组": "mediaDefinitions\"&&remote",
+    "播放列表": "group&&segmentFormats",
+    "播放标题": "height\":&&,",
+    "播放链接": "videoUrl\":\"&&\"",
+    "搜索模式": "1",
+    "搜索url": "https://cn.pornhub.com/video/search?search={wd}&page={pg}",
+    "分类url": "https://cn.pornhub.com/video?c={cateId}&page={catePg}[https://cn.pornhub.com/video?c={cateId}]",
+    "分类": "女同(41,393)$27#3P(39,996)$65#卡通(51,371)$86#熟女(42,948)$28#辣妈(193,409)$29#爆菊(138,846)$35#老少欢(44,991)$181#日本人(36,149)$111#60帧(132,235)$105#Cosplay(26,381)$241#Podcast(1,052)$891#乱交群欢(11,006)$2#亚洲人(69,652)$1#佩戴式阳具(4,606)$542#俄国人(34,439)$99#公众野战(46,435)$24#内射中出(115,295)$15#内嵌字幕(1,096)$732#劲爆重口味(202,603)$21#印度人(14,920)$101#双性恋男(2,829)$76#双龙入洞(18,414)$72#口交(219,014)$13#古典派(3,383)$43#合集(28,324)$57#名人(9,813)$12#大号美女(58,163)$6#女性自慰(261,085)$492#女性高潮(166,165)$502#娇妻偷吃(11,438)$242#射精(169,783)$16#巨乳(295,711)$8#巨屌(221,950)$7#巴西人(23,291)$102#德国人(17,237)$95#性玩具(111,228)$23#恋物癖(147,254)$18#恋足(34,123)$93#意大利人(15,171)$97#手交(67,508)$20#手淫(177,747)$22#抽烟(11,004)$91#拉丁裔美女(116,243)$26#拳交(12,761)$19#指交(10,009)$592#按摩(22,360)$78#捆绑(21,964)$10#捷克人(10,323)$100#搞笑(588)$32#撒尿(21,234)$211#校园(25,910)$88#欧洲人(3,918)$55#法国人(16,638)$94#浪漫(39,997)$522#深发女(188,656)$11#滑稽模仿(10,676)$201#潮吹(54,114)$69#火辣保姆(20,605)$89#片场直击(14,433)$141#独家(392,378)$115#男性自慰(7,289)$92#真人实拍(82,713)$31#第一视角(163,454)$41#粗暴性爱(81,678)$67#素人(512,948)$3#红毛(41,212)$42#纹身女(59,146)$562#继家庭幻想(91,181)$444#聚会(6,858)$53#肌肉男(16,688)$512#肥臀(323,222)$4#脱衣舞(3,845)$33#舔屄(59,972)$131#英国人(22,219)$96#视频激情(20,959)$61#角色扮演(53,147)$81#试镜(13,139)$90#贫乳(123,243)$59#赌博(9,780)$881#跨种族(38,028)$25#轮交(9,518)$80#金发女(145,037)$9#阿拉伯人(25,320)$98#集体颜射(6,855)$14#韩国人(4,482)$103#音乐(9,948)$121#黑人女(45,191)$17"
     }
 },
 {
-    "key": "truvaze",
-    "name": "🔞┃truvaze(py🪜)",
+    "key": "😍javday",
+    "name": "🔞┃javday(XBPQ🪜)",
     "type": 3,
-    "api": "./18/py/truvaze.py",
-    "changeable": 0
+    "api": "csp_XBPQ",
+    "ext": {
+        "数组": "loaded\">&&</a>",
+        "标题": "title\">&&<||國產AV廠商--title=\"&&\"",
+        "图片": "url(&&)||國產AV廠商,人氣系列,最近更新--url(\"&&\")",
+        "副标题": "number\">&&<",
+        "链接": "href=\"&&\"||國產AV廠商--href=\"&&\"+page/{catePg}/",
+        "二级目录": "國產AV廠商|folder-0-0-H",
+        "二级ID": "",
+        "特殊分类链接": "國產AV廠商$https://javday.app/{cateId}/",
+        "分类": "新作上市$category/new-release#最近更新$label/new#國產AV廠商$label/groups#人氣系列$label/hot#有碼$category/censored#無碼$category/uncensored#國產AV$category/chinese-av#無碼流出$category/uncensored-leaked#杏吧$category/sex8#HongKongDoll$category/hongkongdoll#",
+        "播放请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 13；； 22127RK46C Build/TKQ1.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/152.0.7965.2 Mobile Safari/537.36#Referer$https://javday.app/#Cookie$_ga=GA1.1.242574533.1783415117；； _ga_HDH45M3BS0=GS2.1.s1783415117$o1$g1$t1783417128$j60$l0$h0#Origin$https://javday.app",
+        "跳转播放链接": "<source src='&&' type",
+        "分类url": "https://javday.app/{cateId}/page/{catePg}/[https://javday.app/{cateId}];;z"
+    }
 },
 {
     "key": "韩国电影",
@@ -125,8 +244,6 @@
 {"key": "大奶子","name": "🔞┃奶子┃采集","type": 1,"api": "https://apidanaizi.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["精品推荐","国产主播","国产乱伦","自拍偷拍","制服丝袜","网曝事件","传媒探花","清纯学生","AV解说","淫妻作乐","港台辣妹","足浴撩妹","反差母狗","AI换脸","VR视角","重口性癖","制服诱惑","丝袜美腿","中文字幕","无码流出","多人群交","凌辱快感","角色剧情","强奸乱伦","韩国三级","欧美激情","人妻熟女","主奴调教","动漫卡通","变性伪娘","女同性恋","野外露出"]},
 
 {"key": "黄仓","name": "🔞┃黄仓┃采集","type": 1,"api": "https://hsckzy888.com/api.php/provide/vod","searchable": 1,"changeable": 1,"categories": ["日本动漫", "网红主播", "国产传媒", "探花系列", "人妻熟女", "日本无码", "美乳巨乳", "强制侵犯", "制服诱惑", "绝色佳人", "风俗泡泡浴", "家庭乱伦", "AV解说", "三级电影", "少女萝莉", "SM调教", "绝顶潮吹", "魔镜系列", "时间停止", "催眠洗脑", "漫改系列", "电车痴汉", "淫欲痴女", "AI换脸", "网曝门", "TS专区", "女性向系列", "女同性恋", "男同性恋", "欧美精品", "国产自拍", "3D动漫", "韩国主播", "泰国风情", "OnlyFans"]},
-
-{"key":"XJCJ","name":"🔞┃香蕉┃采集","type":1,"api":"https://www.xiangjiaozyw.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"filterable":1,"categories":["欧美精品","卡通动漫","乱伦中出","传媒原创","口爆颜射","岛国女优","萝莉少女","国产直播","岛国群交","中文字幕","岛国素人","吃瓜爆料","淫娃自慰","公开漏出","户外打野","高潮喷水","AI换脸","AV解说","伦理三级","韩国直播"]},
 
 {"key": "精东","name": "🔞┃精东┃采集","type": 1,"api": "http://chujia.cc/api.php/provide/vod/from/m3u8/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories":["麻豆视频","中文字幕"]},
 
@@ -144,11 +261,7 @@
 
 {"key": "香奶儿资源","name": "🔞┃香奶┃采集","type": 0,"api": "https://www.gdlsp.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
 
-{"key":"naixx","name":"🔞┃奶香┃采集","type":1,"api":"https://naixxzy.com/api.php/provide/vod/?ac=list","playUrl":"https://nxxbfjx.com/?url=","searchable":1,"quickSearch":1,"filterable":1,"categories":["国产自拍","主播诱惑","探花约炮","偷拍偷窥","网曝吃瓜","抖阴短片","传媒剧情","日韩主播","日韩无码","中文字幕","AV解说","换脸明星","强奸乱伦","女优明星","欧美激情","重口激情","三级伦理","剧情动漫","SM调教","女同性恋","VR视角"]},
-
 {"key": "大地","name": "🔞┃大地┃采集","type": 0,"api": "https://dadiapi.com/api.php","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["日韩无码","强奸乱伦","欧美精品","国产精品","人妻系列","中文字幕","动漫精品","伦理影片","日韩精品","制服诱惑","自拍偷拍","AV明星","3P合辑","巨乳系列","颜射系列","口交视频","自慰系列","SM重味","教师学生","大秀视频","AV明星1"]},
-
-{"key": "美少女资源","name": "🔞┃少女┃采集","type": 0,"api": "https://www.msnii.com/api/xml.php","searchable": 1,"quickSearch": 1,"filterable": 0},
 
 {"key": "乐播","name": "️🔞┃乐播┃采集","type": 1,"api": "https://lbapi9.com/api.php/provide/vod/at/json/?ac=list","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["亚洲情色","国产主播","国产自拍","无码专区","欧美性爱","熟女人妻","强奸乱伦","巨乳美乳","中文字幕","制服诱惑","女同性恋","卡通动画","视频伦理","少女萝莉","重口色情","人兽性交"]},
 
