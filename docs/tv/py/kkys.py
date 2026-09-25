@@ -20,6 +20,8 @@ class Spider(Spider):
     def __init__(self):
         super().__init__()
         self.site = 'https://103.51.147.112:51120'
+        # 修复：图片 CDN 改为与 1.py 一致的正确域名
+        self.imgCdn = 'https://vres.esadj.com'
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -46,6 +48,21 @@ class Spider(Spider):
 
     def manualVideoCheck(self):
         pass
+
+    # 新增：统一图片清洗方法，逻辑与 1.py 完全一致
+    def _get_clean_pic(self, item):
+        pic = ''
+        imgs = item.find('img')
+        for j in range(len(imgs)):
+            img = imgs.eq(j)
+            # 修复：增加 src 回退，避免只有 src 没有 data-original 时取不到图
+            src = img.attr('data-original') or img.attr('src') or ''
+            if src and 'placeholder' not in src and 'logo_placeholder' not in src:
+                pic = src
+                break
+        if pic and pic.startswith('/'):
+            pic = self.imgCdn + pic
+        return pic
 
     def homeContent(self, filter):
         result = {'class': [], 'filters': {}, 'list': [], 'parse': 0, 'jx': 0}
@@ -82,17 +99,8 @@ class Spider(Spider):
                         title = t
                         break
 
-                # 图片
-                pic = ''
-                imgs = item.find('img')
-                for j in range(len(imgs)):
-                    img = imgs.eq(j)
-                    src = img.attr('data-original') or ''
-                    if src and 'placeholder' not in src and 'logo_placeholder' not in src:
-                        pic = src
-                        break
-                if pic and pic.startswith('/'):
-                    pic = 'https://vres.zyxpedu.com' + pic
+                # 修复：使用统一的图片获取方法
+                pic = self._get_clean_pic(item)
 
                 # 备注
                 note = ''
@@ -136,17 +144,8 @@ class Spider(Spider):
                         title = t
                         break
 
-                # 图片
-                pic = ''
-                imgs = item.find('img')
-                for j in range(len(imgs)):
-                    img = imgs.eq(j)
-                    src = img.attr('data-original') or ''
-                    if src and 'placeholder' not in src and 'logo_placeholder' not in src:
-                        pic = src
-                        break
-                if pic and pic.startswith('/'):
-                    pic = 'https://vres.zyxpedu.com' + pic
+                # 修复：使用统一的图片获取方法
+                pic = self._get_clean_pic(item)
 
                 # 备注
                 note = ''
@@ -196,7 +195,8 @@ class Spider(Spider):
             if og_img:
                 pic = og_img.group(1)
                 if pic.startswith('/'):
-                    pic = 'https://vres.zyxpedu.com' + pic
+                    # 修复：使用正确的 CDN
+                    pic = self.imgCdn + pic
 
             # 简介：从meta description提取
             desc = ''
@@ -365,17 +365,8 @@ class Spider(Spider):
                         title = img.attr('alt') or img.attr('title') or ''
                         title = title.strip()
 
-                # 图片
-                pic = ''
-                imgs = item.find('img')
-                for j in range(len(imgs)):
-                    img = imgs.eq(j)
-                    src = img.attr('data-original') or img.attr('src') or ''
-                    if src and 'placeholder' not in src and 'logo_placeholder' not in src:
-                        pic = src
-                        break
-                if pic and pic.startswith('/'):
-                    pic = 'https://vres.zyxpedu.com' + pic
+                # 修复：使用统一的图片获取方法
+                pic = self._get_clean_pic(item)
 
                 if title:
                     result['list'].append({

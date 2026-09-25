@@ -2,6 +2,7 @@
 # 云朵影视 TVBox spider — RN/Hermes 协议(签名重放模式)
 # 依赖用户提供的 x-time/x-nonc/x-sign 三元组(有效期>1.5小时)
 import json
+import re
 import random
 import time
 import urllib.request
@@ -41,6 +42,9 @@ class Spider(_Base):
                 HOST = ext.strip()
         except Exception:
             pass
+        # 集ID -> 影片id; 影片id -> [(原始from, 首集ID)] — playerContent 跨线回落
+        self._ep2vid = {}
+        self._lines = {}
 
     def getName(self):
         return '云朵影视'
@@ -182,6 +186,7 @@ class Spider(_Base):
         # 按规范顺序排；playback 里没有的线补在最后，绝不少给线路
         lines, urls, fmap = [], [], {}
         done = set()
+        self._lines[vid] = []    # 跨线回落: [(原始from, 该线首集ID)]
         for f in list(order) + [f for f in pf if f and f not in order]:
             if f in done or not epmap.get(f):
                 continue
@@ -190,6 +195,14 @@ class Spider(_Base):
             fmap[label] = f
             lines.append(self._clean_label(label))
             urls.append(epmap[f])
+            first_ep = (epmap[f].split('#')[0].split('$', 1)[1]
+                        if '$' in epmap[f].split('#')[0] else '')
+            if first_ep:
+                self._lines[vid].append((f, first_ep))
+                self._ep2vid[first_ep] = vid
+            for seg in epmap[f].split('#'):
+                if '$' in seg:
+                    self._ep2vid[seg.split('$', 1)[1]] = vid
         self._fmap = fmap
         # 清理详情HTML标签(TVBox部分内核渲染<p>失败→空白):
         import re as _re
@@ -224,23 +237,100 @@ class Spider(_Base):
                         'vod_remarks': v.get('vod_remarks', '')})
         return {'list': out, 'page': int(pg or 1)}
 
+    def _playable(self, u, timeout=12):
+        """校验 decode 出的 URL 是否真实可播(防防盗链换 PNG/风控页)。
+        通用探测, 不依赖 URL 模式(.mp4/域名):
+          1. Range bytes=0-3 首探: 若返回 video/*、ftyp(MP4 魔数)——直链可播。
+          2. 否则 GET 头部:  #EXTM3U m3u8 → 拉第一个分片, 非 PNG/HTML 即可播;
+                             否则若非 HTML/PNG 的有实体 → 可播。
+        """
+        if not u or not u.startswith('http'):
+            return False
+        ua = {'User-Agent': UA, 'Referer': HOST + '/'}
+        try:
+            try:
+                resp = urllib.request.urlopen(
+                    urllib.request.Request(u, headers=dict(ua, Range='bytes=0-3')),
+                    timeout=timeout, context=self._ctx)
+                bt = resp.read(16)
+                st = getattr(resp, 'status', 200)
+                ct = resp.headers.get('Content-Type', '')
+                resp.close()
+            except Exception:
+                bt, st, ct = b'', 0, ''
+            if st in (200, 206):
+                if ct and ('video' in ct or 'mp4' in ct):
+                    return True
+                if bt[:4] == b'ftyp':
+                    return True
+            resp = urllib.request.urlopen(
+                urllib.request.Request(u, headers=ua),
+                timeout=timeout, context=self._ctx)
+            head = resp.read(1000)
+            resp.close()
+            if head[:4] == b'\x89PNG' or head[:8] == b'\x89PNG\r\n\x1a\n':
+                return False
+            if head[:1] in (b'<',) :
+                if b'<html' in head[:200].lower() or b'<!doc' in head[:200].lower():
+                    return False
+            if head.startswith(b'#EXTM3U'):
+                m = re.search(rb'EXTINF:[^\r\n]*\r?\n([^\r\n]+)', head)
+                if not m:
+                    return False
+                seg = m.group(1).strip()
+                if seg[:1] == b'/':
+                    p = urllib.parse.urlparse(u)
+                    seg_u = ('%s://%s' % (p.scheme, p.netloc)) + seg.decode()
+                elif seg.startswith(b'http'):
+                    seg_u = seg.decode()
+                else:
+                    p = urllib.parse.urlparse(u)
+                    seg_u = '%s://%s/' % (p.scheme, p.netloc) + seg.decode()
+                r2 = urllib.request.urlopen(
+                    urllib.request.Request(seg_u, headers=ua),
+                    timeout=timeout, context=self._ctx)
+                h2 = r2.read(16)
+                r2.close()
+                return h2[:4] != b'\x89PNG' and h2[:1] not in (b'<', b'<!') and len(h2) >= 4
+            return len(head) > 0
+        except Exception:
+            return False
+
+    def _decode(self, ep, flag):
+        try:
+            _t = int(time.time() * 1000)
+            p = '/api.php/app/decode/url/?url=%s&vodFrom=%s&_t=%d' % (
+                urllib.parse.quote(ep), urllib.parse.quote(flag), _t)
+            j = self._get(p)
+            u = (j.get('data') or '').strip()
+            if u.startswith('http'):
+                return True, u
+            return False, ''
+        except Exception:
+            return False, ''
+
     def playerContent(self, flag, id, vipFlags):
         # 线路 tab 用友好名(display_name), decode 需要原始 from
         if getattr(self, '_fmap', None):
             flag = self._fmap.get(flag, flag)
-        for _try in range(3):                      # decode 偶发返回空, 重试
-            try:
-                _t = int(time.time() * 1000)
-                p = '/api.php/app/decode/url/?url=%s&vodFrom=%s&_t=%d' % (
-                    urllib.parse.quote(id), urllib.parse.quote(flag), _t)
-                j = self._get(p)
-                url = (j.get('data') or '').strip()
-                if url.startswith('http'):
-                    return {'parse': 0, 'playUrl': '', 'url': url,
-                            'header': {'User-Agent': UA}}
-            except Exception:
-                pass
-            time.sleep(0.4 * (_try + 1))
+        ep = str(id or '').strip()
+        # 候选线路: 原线路优先, 再同片其它线路
+        candidates = [(ep, flag)]
+        vid = self._ep2vid.get(ep, '')
+        if vid:
+            for o_flag, o_first in self._lines.get(vid, []):
+                if o_flag != flag and (o_first, o_flag) not in candidates:
+                    candidates.append((o_first, o_flag))
+        for idx, (c_ep, c_flag) in enumerate(candidates):
+            tries = 3 if idx == 0 else 1
+            for _ in range(tries):
+                ok, u = self._decode(c_ep, c_flag)
+                if ok:
+                    if self._playable(u):
+                        return {'parse': 0, 'playUrl': '', 'url': u,
+                                'header': {'User-Agent': UA}}
+                    break    # decode 到但不可播 → 下一条线路
+                time.sleep(0.3)
         return {'parse': 0, 'playUrl': '', 'url': '',
                 'header': {'User-Agent': UA}}
 
