@@ -68,7 +68,7 @@
 
 ---
 #### 🎥 **实机演示**  
-[![小鱼影视](https://4645.kstore.space/MP4/xyys.png)](https://4645.kstore.space/MP4/xyys.mp4)  
+[![小鱼影视](http://2015888.xyz/ks/MP4/xyys2.png)](http://2015888.xyz/ks/MP4/xyys.mp4)  
 *点击图片观看演示视频👆👆👆*
 
 ---
