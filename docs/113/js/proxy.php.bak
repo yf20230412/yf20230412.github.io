@@ -1,0 +1,188 @@
+<?php
+/**
+ * 弃用  改成 js跳转流量器打开链接，重定向。
+ * 抖音视频高效流式代理（解决防盗链与卡顿）
+ * 用法：proxy.php?url=https://aweme.snssdk.com/aweme/v1/play/?video_id=xxx 
+ 
+ const PROXY = 'http://2015888.xyz/113/js/proxy.php?url=';
+ chapter200: {
+        id: 200,
+        title: "第200课📙：三年级语文",
+        type: "chapter",
+        sections: [
+            { title: "200 大青树下的小学", url: PROXY + encodeURIComponent("https://aweme.snssdk.com/aweme/v1/play/?video_id=v2800fgi0000daafiffog65mkdhm3qc0&ratio=720p&line=0") }
+        ]
+    },
+ 或者
+ chapter500: {
+        id: 500,
+        title: "♨️临时分享区♨️",
+        type: "chapter",
+        sections: [
+            { title: "大青树下的小学", url: "proxy.php?url=https://aweme.snssdk.com/aweme/v1/play/?video_id=v2800fgi0000daafiffog65mkdhm3qc0&ratio=720p&line=0" }
+        ]
+    }   
+ */
+
+// 允许跨域
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, HEAD, OPTIONS');
+
+// 处理预检请求
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
+
+// 获取目标 URL
+$targetUrl = isset($_GET['url']) ? $_GET['url'] : '';
+if (empty($targetUrl)) {
+    http_response_code(400);
+    echo '缺少 url 参数';
+    exit;
+}
+
+// 安全校验：只允许代理抖音相关域名
+$allowedHosts = [
+    'aweme.snssdk.com',
+    'ctydoh.cn',
+    'v3-web.douyinvod.com',
+    'v26-web.douyinvod.com',
+    'v9-web.douyinvod.com',
+    'douyinvod.com',
+    'douyin.com',
+    'snssdk.com',
+    'ixigua.com',
+    'bytecdn.cn',
+    'pstatp.com',
+    'bytedance.com',
+];
+
+$host = parse_url($targetUrl, PHP_URL_HOST);
+$hostAllowed = false;
+foreach ($allowedHosts as $h) {
+    if ($host === $h || (strlen($host) > strlen($h) && substr($host, -strlen($h) - 1) === '.' . $h)) {
+        $hostAllowed = true;
+        break;
+    }
+}
+if (!$hostAllowed) {
+    http_response_code(403);
+    echo '禁止代理该域名: ' . htmlspecialchars($host);
+    exit;
+}
+
+// ====== 第一步：解析重定向拿到最终 CDN 地址 ======
+function resolveFinalUrl($url, $maxRedirects = 5) {
+    $currentUrl = $url;
+    $headers = [
+        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Referer: https://www.douyin.com/',
+        'Accept: */*',
+    ];
+
+    for ($i = 0; $i < $maxRedirects; $i++) {
+        $ch = curl_init($currentUrl);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HEADER         => true,
+            CURLOPT_NOBODY         => true,
+            CURLOPT_FOLLOWLOCATION => false,
+            CURLOPT_HTTPHEADER     => $headers,
+            CURLOPT_TIMEOUT        => 10,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => false,
+        ]);
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+        curl_close($ch);
+
+        if ($response === false) return null;
+
+        $headerStr = substr($response, 0, $headerSize);
+
+        if (in_array($httpCode, [301, 302, 303, 307, 308])) {
+            if (preg_match('/^Location:\s*(.+)$/mi', $headerStr, $m)) {
+                $location = trim($m[1]);
+                if (strpos($location, 'http') !== 0) {
+                    $parsed = parse_url($currentUrl);
+                    $base = $parsed['scheme'] . '://' . $parsed['host'];
+                    $location = (strpos($location, '/') === 0) ? $base . $location : $base . '/' . $location;
+                }
+                $currentUrl = $location;
+                continue;
+            }
+        }
+        return $currentUrl;
+    }
+    return $currentUrl;
+}
+
+$finalUrl = (strpos($targetUrl, 'aweme.snssdk.com/aweme/') !== false) ? resolveFinalUrl($targetUrl) : $targetUrl;
+if (!$finalUrl) {
+    http_response_code(502);
+    echo '无法解析重定向地址';
+    exit;
+}
+
+// ====== 第二步：高效流式代理（支持断点续传与实时输出） ======
+$ch = curl_init($finalUrl);
+curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => false,
+    CURLOPT_HEADER         => false,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_MAXREDIRS      => 5,
+    CURLOPT_HTTPHEADER     => [
+        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Referer: https://www.douyin.com/',
+        'Accept: */*',
+        'Accept-Language: zh-CN,zh;q=0.9',
+        'Range: ' . (isset($_SERVER['HTTP_RANGE']) ? $_SERVER['HTTP_RANGE'] : 'bytes=0-'),
+    ],
+    CURLOPT_TIMEOUT        => 60,
+    CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_SSL_VERIFYHOST => false,
+    // 关键优化：分块实时写入输出流，避免内存溢出和卡顿
+    CURLOPT_WRITEFUNCTION  => function ($ch, $data) {
+        echo $data;
+        if (ob_get_level() > 0) {
+            ob_flush();
+        }
+        flush();
+        return strlen($data);
+    },
+    CURLOPT_HEADERFUNCTION => function ($ch, $header) {
+        $len = strlen($header);
+        $header = trim($header);
+        if (empty($header)) return $len;
+
+        $lower = strtolower($header);
+        $passHeaders = [
+            'content-type:', 'content-length:', 'content-range:',
+            'accept-ranges:', 'cache-control:', 'expires:',
+            'last-modified:', 'etag:',
+        ];
+        foreach ($passHeaders as $ph) {
+            if (strpos($lower, $ph) === 0) {
+                header($header);
+                break;
+            }
+        }
+        if (strpos($lower, 'http/') === 0) {
+            if (preg_match('/HTTP\/[\d.]+\s+(\d+)/', $header, $m)) {
+                http_response_code((int)$m[1]);
+            }
+        }
+        return $len;
+    },
+]);
+
+// 关闭缓存以实现真正的流式传输
+if (ob_get_level() > 0) {
+    @ob_end_clean();
+}
+
+curl_exec($ch);
+curl_close($ch);

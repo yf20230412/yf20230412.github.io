@@ -1,0 +1,1172 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点智能转换工具</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg-color: #f8fafc;
+            --card-border: #e2e8f0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #334155;
+            padding-bottom: 50px;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+
+        .mode-switch {
+            display: inline-flex;
+            background: #f1f5f9;
+            border-radius: 10px;
+            padding: 4px;
+            gap: 2px;
+        }
+
+        .mode-switch button {
+            border: none;
+            background: transparent;
+            padding: 6px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+
+        .mode-switch button.active {
+            background: #fff;
+            color: var(--primary-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .mode-switch button:hover:not(.active) {
+            color: var(--primary-color);
+        }
+
+        .card {
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            margin-bottom: 24px;
+            background: #ffffff;
+        }
+
+        .card-header-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-badge {
+            background: #e0e7ff;
+            color: var(--primary-color);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            padding: 0.6rem 0.75rem;
+            font-size: 0.92rem;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+        }
+
+        .form-label-custom {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        .advanced-toggle-btn {
+            background: #f1f5f9;
+            color: var(--primary-color);
+            border: 1px dashed #cbd5e1;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .advanced-toggle-btn:hover {
+            background: #e2e8f0;
+        }
+
+        .status-badge {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .status-valid {
+            background-color: #d1fae5;
+            color: #059669;
+        }
+
+        .status-invalid {
+            background-color: #fee2e2;
+            color: #dc2626;
+        }
+
+        .result-box {
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 0.85rem;
+            background: #0f172a;
+            color: #38bdf8;
+            border-radius: 8px;
+            resize: vertical;
+        }
+
+        .node-item {
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.85rem;
+            word-break: break-all;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .node-text {
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .btn-action-sm {
+            padding: 3px 8px;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+
+        .type-badge {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .type-vless {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .type-vmess {
+            background: #fce7f3;
+            color: #be185d;
+        }
+
+        .type-unknown {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+        .format-option {
+            cursor: pointer;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px 12px;
+            transition: all 0.15s;
+        }
+
+        .format-option:hover {
+            border-color: var(--primary-color);
+            background: #f8fafc;
+        }
+
+        .format-option.active {
+            border-color: var(--primary-color);
+            background: #eef2ff;
+        }
+
+        .format-option input {
+            display: none;
+        }
+
+        #qrcode canvas, #qrcode img {
+            margin: 0 auto;
+            border: 8px solid white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .mode-panel {
+            display: none;
+        }
+
+        .mode-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom mb-4 py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-toolbox me-2"></i>节点智能转换工具
+            </a>
+            <div class="mode-switch ms-auto">
+                <button type="button" id="btnModeExtract" class="active" onclick="switchMode('extract')">
+                    <i class="fa-solid fa-filter me-1"></i>提取信息
+                </button>
+                <button type="button" id="btnModeGenerate" onclick="switchMode('generate')">
+                    <i class="fa-solid fa-bolt me-1"></i>智能生成
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- ==================== 模式一：提取 ==================== -->
+        <div id="modeExtract" class="mode-panel active">
+            <div class="row">
+                <!-- 左侧：输入区 -->
+                <div class="col-lg-6">
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="card-header-title">
+                                <span class="step-badge">1</span>
+                                <span>粘贴节点链接</span>
+                            </div>
+                            <div>
+                                <input type="file" id="extractFileInput" accept=".txt" class="d-none" onchange="handleExtractFileUpload(event)">
+                                <button class="btn btn-sm btn-outline-secondary" onclick="document.getElementById('extractFileInput').click()">
+                                    <i class="fa-solid fa-file-lines me-1"></i>上传 .txt
+                                </button>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-2">
+                            支持 <code>vless://</code> 与 <code>vmess://</code> 链接，每行一条。也可混合粘贴。
+                        </p>
+
+                        <div class="mb-3">
+                            <textarea id="linkInput" class="form-control" rows="16" style="font-family: monospace; font-size: 0.88rem;"
+                                placeholder="【示例】&#10;vless://uuid@1.2.3.4:443?encryption=none&security=tls&sni=example.com&type=ws&host=example.com&path=/?ed=2048#香港节点01&#10;&#10;vmess://eyJ2IjoiMiIsInBzIjoi5pel5pys6IqC54K5Iiw...&#10;&#10;vless://uuid@cf.example.com:8443?...#新加坡优化"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span id="lineCountText" class="text-muted small">发现 0 行输入</span>
+                            <button class="btn btn-primary-custom" onclick="extractNodes()">
+                                <i class="fa-solid fa-wand-magic-sparkles me-1"></i>立即提取
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：输出格式 + 结果 -->
+                <div class="col-lg-6">
+                    <div class="card p-3 mb-3">
+                        <div class="card-header-title mb-3">
+                            <span class="step-badge">2</span>
+                            <span>输出格式</span>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <label class="format-option active d-block" id="fmt1">
+                                    <input type="radio" name="outputFormat" value="csv" checked onchange="updateFormatUI()">
+                                    <div class="fw-semibold small">IP, 端口, 别名</div>
+                                    <div class="text-muted" style="font-size:0.75rem">CSV 友好格式</div>
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <label class="format-option d-block" id="fmt2">
+                                    <input type="radio" name="outputFormat" value="colon" onchange="updateFormatUI()">
+                                    <div class="fw-semibold small">IP:端口#别名</div>
+                                    <div class="text-muted" style="font-size:0.75rem">经典节点格式</div>
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <label class="format-option d-block" id="fmt3">
+                                    <input type="radio" name="outputFormat" value="ipport" onchange="updateFormatUI()">
+                                    <div class="fw-semibold small">IP:端口</div>
+                                    <div class="text-muted" style="font-size:0.75rem">仅地址与端口</div>
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <label class="format-option d-block" id="fmt4">
+                                    <input type="radio" name="outputFormat" value="table" onchange="updateFormatUI()">
+                                    <div class="fw-semibold small">表格预览</div>
+                                    <div class="text-muted" style="font-size:0.75rem">带类型标记</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="card-header-title">
+                                <span class="step-badge">3</span>
+                                <span>提取结果</span>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-primary" onclick="copyExtractResult()">
+                                    <i class="fa-solid fa-copy me-1"></i>复制
+                                </button>
+                                <button class="btn btn-sm btn-outline-success" onclick="downloadExtractTxt()">
+                                    <i class="fa-solid fa-download me-1"></i>导出
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="extractResultList" class="mb-3" style="max-height: 320px; overflow-y: auto;">
+                            <div class="text-center text-muted py-4">
+                                <i class="fa-solid fa-list-check fa-2x mb-2"></i>
+                                <p class="mb-0">粘贴链接后点击“立即提取”</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
+                            <label class="form-label-custom">纯文本结果（可直接复制）</label>
+                            <textarea id="extractRawResult" class="form-control result-box" rows="6" readonly placeholder="提取结果将显示在此..."></textarea>
+                        </div>
+
+                        <div class="mt-2 d-flex justify-content-between align-items-center">
+                            <span id="extractCountText" class="text-muted small">共提取 0 条</span>
+                            <span id="extractFailText" class="text-muted small"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== 模式二：生成 ==================== -->
+        <div id="modeGenerate" class="mode-panel">
+            <div class="row">
+                <!-- 左侧：模板 VLESS 配置 -->
+                <div class="col-lg-6">
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="card-header-title">
+                                <span class="step-badge">1</span>
+                                <span>模板 VLESS 链接配置</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span id="templateStatusBadge" class="status-badge status-invalid">未解析</span>
+                                <button class="btn btn-sm btn-outline-primary" onclick="parseTemplateLink()">
+                                    <i class="fa-solid fa-wand-magic-sparkles me-1"></i>解析模板
+                                </button>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-2">请输入包含完整参数的模板链接，生成器将以此为基准替换 IP / 端口 / 别名。</p>
+
+                        <div class="mb-3">
+                            <label class="form-label-custom">完整的 VLESS 链接</label>
+                            <textarea id="templateInput" class="form-control" rows="4" placeholder="vless://88888888-8888-8888-88888-888888888888@1.2.3.4:443?encryption=none&security=tls&sni=xxx.xxx.xxx&fp=chrome&type=ws&host=xxx.xxx.xxx&path=/?ed=2048#VLESS 链接模板" oninput="parseTemplateLink()"></textarea>
+                        </div>
+
+                        <!-- 配置 VLESS 全局参数面板 -->
+                        <div class="border rounded p-3 bg-light">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-wrench text-secondary me-2"></i>
+                                    <span class="fw-bold small text-secondary">配置 VLESS 全局参数</span>
+                                </div>
+                                <span class="small text-muted">显示完整解析字段</span>
+                            </div>
+
+                            <div class="row g-2 mb-2">
+                                <div class="col-12">
+                                    <label class="form-label-custom">UUID</label>
+                                    <input type="text" id="cfg_uuid" class="form-control" placeholder="如: 2b77e8eb-b03b-4f12-aa6d-23b421e5bed7">
+                                </div>
+                            </div>
+
+                            <div class="row g-2 mb-2">
+                                <div class="col-md-6">
+                                    <label class="form-label-custom">加密方式 (encryption)</label>
+                                    <input type="text" id="cfg_encryption" class="form-control" value="none">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label-custom">传输协议 (type)</label>
+                                    <select id="cfg_type" class="form-select">
+                                        <option value="ws">ws</option>
+                                        <option value="grpc">grpc</option>
+                                        <option value="tcp">tcp</option>
+                                        <option value="http">http</option>
+                                        <option value="h2">h2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row g-2 mb-2">
+                                <div class="col-md-3">
+                                    <label class="form-label-custom">安全层 (security)</label>
+                                    <select id="cfg_security" class="form-select">
+                                        <option value="tls">tls</option>
+                                        <option value="reality">reality</option>
+                                        <option value="none">none</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label-custom">指纹 (fp)</label>
+                                    <select id="cfg_fp" class="form-select">
+                                        <option value="chrome">chrome</option>
+                                        <option value="firefox">firefox</option>
+                                        <option value="safari">safari</option>
+                                        <option value="edge">edge</option>
+                                        <option value="randomized">randomized</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label-custom">ALPN</label>
+                                    <input type="text" id="cfg_alpn" class="form-control" placeholder="如: h2,http/1.1">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label-custom">跳过证书验证</label>
+                                    <select id="cfg_insecure" class="form-select">
+                                        <option value="0">否 (0)</option>
+                                        <option value="1">是 (1)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row g-2 mb-3">
+                                <div class="col-md-4">
+                                    <label class="form-label-custom">SNI</label>
+                                    <input type="text" id="cfg_sni" class="form-control" placeholder="域名 / SNI">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label-custom">Host</label>
+                                    <input type="text" id="cfg_host" class="form-control" placeholder="伪装 Host">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label-custom">Path</label>
+                                    <input type="text" id="cfg_path" class="form-control" placeholder="路径 Path">
+                                </div>
+                            </div>
+
+                            <div class="text-center my-2">
+                                <button class="advanced-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#echCollapse">
+                                    收起/展开高级选项 (ECH) <i class="fa-solid fa-chevron-down ms-1"></i>
+                                </button>
+                            </div>
+
+                            <div class="collapse mt-3 pt-2 border-top" id="echCollapse">
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <label class="form-label-custom">EchConfig DNS服务</label>
+                                        <input type="text" id="cfg_ech_dns" class="form-control" placeholder="未启用 / DNS URL">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label-custom">EchConfig 解析域名</label>
+                                        <input type="text" id="cfg_ech_domain" class="form-control" placeholder="未启用 / ECH Domain">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：导入节点数据 -->
+                <div class="col-lg-6">
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="card-header-title">
+                                <span class="step-badge">2</span>
+                                <span>导入/输入节点数据</span>
+                            </div>
+                            <div>
+                                <input type="file" id="generateFileInput" accept=".txt, .csv" class="d-none" onchange="handleGenerateFileUpload(event)">
+                                <button class="btn btn-sm btn-outline-secondary" onclick="document.getElementById('generateFileInput').click()">
+                                    <i class="fa-solid fa-file-csv me-1"></i>上传 .txt / .csv
+                                </button>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-2">支持粘贴 TXT 数据或上传 CSV 表格（包含 <code>IP, 端口, 别名</code> 或 <code>IP:端口#别名</code> 格式）。</p>
+
+                        <div class="mb-3">
+                            <textarea id="nodeDataInput" class="form-control" rows="24" style="font-family: monospace; font-size: 0.88rem;" placeholder="【TXT 格式示例】&#10;104.16.123.96, 443, 香港优化01&#10;104.17.123.97:8443#新加坡节点02&#10;&#10;【CSV 格式示例】&#10;IP,Port,Alias&#10;104.18.123.98,2083,日本节点03&#10;104.19.123.99,443,美国默认节点" oninput="updateParseCount()"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span id="parseCountText" class="text-muted small">发现 0 条待解析记录</span>
+                            <button class="btn btn-primary-custom" onclick="generateNodes()">
+                                <i class="fa-solid fa-bolt-lightning me-1"></i>立即智能生成
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下方：生成结果区域 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="card-header-title">
+                                <span class="step-badge">3</span>
+                                <span>生成结果预览与导出</span>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-primary" onclick="copyAllGeneratedNodes()">
+                                    <i class="fa-solid fa-copy me-1"></i>复制全部节点
+                                </button>
+                                <button class="btn btn-sm btn-outline-success" onclick="downloadGeneratedTxt()">
+                                    <i class="fa-solid fa-download me-1"></i>导出 .txt 文件
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="generateResultList" class="mb-3" style="max-height: 400px; overflow-y: auto;">
+                            <div class="text-center text-muted py-4">
+                                <i class="fa-solid fa-list-check fa-2x mb-2"></i>
+                                <p class="mb-0">完成配置后点击“立即智能生成”按钮即可在此展示结果。</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
+                            <label class="form-label-custom">节点纯文本导出区 (适用于订阅或直接复制)</label>
+                            <textarea id="generateRawResult" class="form-control result-box" rows="5" readonly placeholder="生成的节点链接将汇总在此..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 二维码 Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header py-2">
+                    <h6 class="modal-title fw-bold">节点二维码</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div id="qrcode" class="mb-3"></div>
+                    <p id="qrNodeAlias" class="small fw-bold text-truncate mb-0 px-2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ========== 模式切换 ==========
+        function switchMode(mode) {
+            document.getElementById('modeExtract').classList.toggle('active', mode === 'extract');
+            document.getElementById('modeGenerate').classList.toggle('active', mode === 'generate');
+            document.getElementById('btnModeExtract').classList.toggle('active', mode === 'extract');
+            document.getElementById('btnModeGenerate').classList.toggle('active', mode === 'generate');
+        }
+
+        // ========== 初始化 ==========
+        window.onload = function () {
+            document.getElementById('linkInput').addEventListener('input', updateLineCount);
+            updateLineCount();
+            updateFormatUI();
+            parseTemplateLink();
+            updateParseCount();
+        };
+
+        // ========== 提取模式 ==========
+
+        function updateLineCount() {
+            const content = document.getElementById('linkInput').value.trim();
+            if (!content) {
+                document.getElementById('lineCountText').innerText = '发现 0 行输入';
+                return;
+            }
+            const lines = content.split('\n').filter(l => l.trim().length > 0);
+            document.getElementById('lineCountText').innerText = `发现 ${lines.length} 行输入`;
+        }
+
+        function updateFormatUI() {
+            document.querySelectorAll('.format-option').forEach(el => el.classList.remove('active'));
+            const checked = document.querySelector('input[name="outputFormat"]:checked');
+            if (checked) {
+                checked.closest('.format-option').classList.add('active');
+            }
+            if (window._lastExtractResults && window._lastExtractResults.length) {
+                renderExtractResults(window._lastExtractResults);
+            }
+        }
+
+        function handleExtractFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('linkInput').value = e.target.result;
+                updateLineCount();
+            };
+            reader.readAsText(file);
+        }
+
+        function tryBase64Decode(str) {
+            try {
+                let s = str.replace(/-/g, '+').replace(/_/g, '/');
+                while (s.length % 4) s += '=';
+                const decoded = atob(s);
+                try {
+                    return decodeURIComponent(escape(decoded));
+                } catch {
+                    return decoded;
+                }
+            } catch {
+                return null;
+            }
+        }
+
+        function parseVless(link) {
+            let urlStr = link.trim();
+            if (!urlStr.toLowerCase().startsWith('vless://')) return null;
+
+            try {
+                let hash = '';
+                const hashIndex = urlStr.indexOf('#');
+                if (hashIndex !== -1) {
+                    hash = decodeURIComponent(urlStr.substring(hashIndex + 1).trim());
+                    urlStr = urlStr.substring(0, hashIndex);
+                }
+
+                const main = urlStr.replace(/^vless:\/\//i, '');
+                const atIdx = main.indexOf('@');
+                if (atIdx === -1) return null;
+
+                const rest = main.substring(atIdx + 1);
+                const qIdx = rest.indexOf('?');
+                const hostPort = qIdx === -1 ? rest : rest.substring(0, qIdx);
+
+                let host = '', port = '443';
+                if (hostPort.startsWith('[')) {
+                    const close = hostPort.indexOf(']');
+                    if (close !== -1) {
+                        host = hostPort.substring(1, close);
+                        const after = hostPort.substring(close + 1);
+                        if (after.startsWith(':')) port = after.substring(1) || '443';
+                    }
+                } else {
+                    const lastColon = hostPort.lastIndexOf(':');
+                    if (lastColon !== -1) {
+                        host = hostPort.substring(0, lastColon);
+                        port = hostPort.substring(lastColon + 1) || '443';
+                    } else {
+                        host = hostPort;
+                    }
+                }
+
+                if (!host) return null;
+                if (!hash) hash = '未命名';
+                return { type: 'vless', host, port, alias: hash };
+            } catch {
+                return null;
+            }
+        }
+
+        function parseVmess(link) {
+            let urlStr = link.trim();
+            if (!urlStr.toLowerCase().startsWith('vmess://')) return null;
+
+            try {
+                const b64 = urlStr.replace(/^vmess:\/\//i, '').trim();
+                const jsonStr = tryBase64Decode(b64);
+                if (!jsonStr) return null;
+
+                const obj = JSON.parse(jsonStr);
+                const host = obj.add || obj.host || obj.address || '';
+                const port = String(obj.port || '443');
+                const alias = obj.ps || obj.name || obj.remark || '未命名';
+
+                if (!host) return null;
+                return { type: 'vmess', host, port, alias };
+            } catch {
+                return null;
+            }
+        }
+
+        function parseOneLine(line) {
+            line = line.trim();
+            if (!line) return null;
+
+            const vlessMatch = line.match(/vless:\/\/[^\s]+/i);
+            const vmessMatch = line.match(/vmess:\/\/[^\s]+/i);
+
+            if (vlessMatch) return parseVless(vlessMatch[0]);
+            if (vmessMatch) return parseVmess(vmessMatch[0]);
+            return null;
+        }
+
+        function extractNodes() {
+            const raw = document.getElementById('linkInput').value;
+            if (!raw.trim()) {
+                alert('请先粘贴 VLESS 或 VMess 链接！');
+                return;
+            }
+
+            const lines = raw.split('\n');
+            const results = [];
+            let failCount = 0;
+
+            lines.forEach((line) => {
+                const parsed = parseOneLine(line);
+                if (parsed) {
+                    results.push(parsed);
+                } else if (line.trim()) {
+                    failCount++;
+                }
+            });
+
+            window._lastExtractResults = results;
+            renderExtractResults(results);
+            document.getElementById('extractCountText').innerText = `共提取 ${results.length} 条`;
+            document.getElementById('extractFailText').innerText = failCount > 0 ? `（跳过 ${failCount} 行无效内容）` : '';
+        }
+
+        function formatOne(item, format) {
+            const { host, port, alias } = item;
+            switch (format) {
+                case 'csv': return `${host},${port},${alias}`;
+                case 'colon': return `${host}:${port}#${alias}`;
+                case 'ipport': return `${host}:${port}`;
+                default: return `${host},${port},${alias}`;
+            }
+        }
+
+        function renderExtractResults(results) {
+            const container = document.getElementById('extractResultList');
+            const format = document.querySelector('input[name="outputFormat"]:checked')?.value || 'csv';
+
+            if (!results.length) {
+                container.innerHTML = `<div class="alert alert-warning mb-0">未能识别到有效的 VLESS / VMess 链接，请检查格式。</div>`;
+                document.getElementById('extractRawResult').value = '';
+                return;
+            }
+
+            const textLines = results.map(r => formatOne(r, format === 'table' ? 'csv' : format));
+            document.getElementById('extractRawResult').value = textLines.join('\n');
+
+            if (format === 'table') {
+                let html = '';
+                results.forEach((item, i) => {
+                    const typeCls = item.type === 'vless' ? 'type-vless' : (item.type === 'vmess' ? 'type-vmess' : 'type-unknown');
+                    const typeLabel = item.type === 'vless' ? 'VLESS' : (item.type === 'vmess' ? 'VMess' : '?');
+                    html += `
+                        <div class="node-item">
+                            <div class="node-text">
+                                <span class="badge bg-secondary me-2">${i + 1}</span>
+                                <span class="type-badge ${typeCls} me-2">${typeLabel}</span>
+                                <strong class="me-2">${escapeHtml(item.alias)}</strong>
+                                <span class="text-muted">${escapeHtml(item.host)}:${escapeHtml(item.port)}</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary btn-action-sm" onclick="copyText('${escapeJsString(formatOne(item, 'csv'))}')">
+                                <i class="fa-solid fa-copy"></i>
+                            </button>
+                        </div>`;
+                });
+                container.innerHTML = html;
+            } else {
+                let html = '';
+                results.forEach((item, i) => {
+                    const line = formatOne(item, format);
+                    html += `
+                        <div class="node-item">
+                            <div class="node-text text-truncate">
+                                <span class="badge bg-secondary me-2">${i + 1}</span>
+                                ${escapeHtml(line)}
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary btn-action-sm" onclick="copyText('${escapeJsString(line)}')">
+                                <i class="fa-solid fa-copy"></i>
+                            </button>
+                        </div>`;
+                });
+                container.innerHTML = html;
+            }
+        }
+
+        function copyExtractResult() {
+            const content = document.getElementById('extractRawResult').value;
+            if (!content) {
+                alert('没有可复制的内容，请先提取！');
+                return;
+            }
+            navigator.clipboard.writeText(content).then(() => {
+                alert('已复制全部结果到剪贴板！');
+            });
+        }
+
+        function downloadExtractTxt() {
+            const content = document.getElementById('extractRawResult').value;
+            if (!content) {
+                alert('没有可导出的内容！');
+                return;
+            }
+            const format = document.querySelector('input[name="outputFormat"]:checked')?.value || 'csv';
+            const ext = format === 'csv' || format === 'table' ? 'csv' : 'txt';
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `extracted_nodes_${new Date().toISOString().slice(0, 10)}.${ext}`;
+            link.click();
+        }
+
+        // ========== 生成模式 ==========
+
+        function updateStatusBadge(isValid, text) {
+            const badge = document.getElementById('templateStatusBadge');
+            if (isValid) {
+                badge.className = "status-badge status-valid";
+                badge.innerText = text || "有效模板";
+            } else {
+                badge.className = "status-badge status-invalid";
+                badge.innerText = text || "无效模板";
+            }
+        }
+
+        function parseTemplateLink() {
+            const raw = document.getElementById('templateInput').value.trim();
+            if (!raw) {
+                updateStatusBadge(false, "未解析");
+                return;
+            }
+
+            try {
+                let urlStr = raw;
+                if (!urlStr.startsWith("vless://")) {
+                    urlStr = "vless://" + urlStr;
+                }
+
+                let hash = "";
+                const hashIndex = urlStr.indexOf("#");
+                if (hashIndex !== -1) {
+                    hash = decodeURIComponent(urlStr.substring(hashIndex + 1));
+                    urlStr = urlStr.substring(0, hashIndex);
+                }
+
+                const mainPart = urlStr.replace("vless://", "");
+                const atIndex = mainPart.indexOf("@");
+                if (atIndex === -1) {
+                    updateStatusBadge(false, "无效模板");
+                    return;
+                }
+
+                const uuid = mainPart.substring(0, atIndex);
+                document.getElementById('cfg_uuid').value = uuid;
+
+                const rest = mainPart.substring(atIndex + 1);
+                const qIndex = rest.indexOf("?");
+                let hostPort = rest;
+                let queryString = "";
+
+                if (qIndex !== -1) {
+                    hostPort = rest.substring(0, qIndex);
+                    queryString = rest.substring(qIndex + 1);
+                }
+
+                const params = new URLSearchParams(queryString);
+
+                document.getElementById('cfg_encryption').value = params.get('encryption') || 'none';
+                document.getElementById('cfg_type').value = params.get('type') || 'ws';
+                document.getElementById('cfg_security').value = params.get('security') || 'tls';
+                document.getElementById('cfg_fp').value = params.get('fp') || 'chrome';
+                document.getElementById('cfg_alpn').value = params.get('alpn') || '';
+                document.getElementById('cfg_insecure').value = params.get('allowInsecure') || params.get('insecure') || '0';
+                document.getElementById('cfg_sni').value = params.get('sni') || '';
+                document.getElementById('cfg_host').value = params.get('host') || '';
+                document.getElementById('cfg_path').value = params.get('path') || '';
+
+                const echVal = params.get('ech') || '';
+                if (echVal) {
+                    const echParts = decodeURIComponent(echVal).split('+');
+                    document.getElementById('cfg_ech_domain').value = echParts[0] || '';
+                    document.getElementById('cfg_ech_dns').value = echParts[1] || '';
+                } else {
+                    document.getElementById('cfg_ech_domain').value = '';
+                    document.getElementById('cfg_ech_dns').value = '';
+                }
+
+                updateStatusBadge(true, "有效模板");
+            } catch (e) {
+                console.error("解析出错", e);
+                updateStatusBadge(false, "解析出错");
+            }
+        }
+
+        function handleGenerateFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('nodeDataInput').value = e.target.result;
+                updateParseCount();
+            };
+            reader.readAsText(file);
+        }
+
+        function updateParseCount() {
+            const content = document.getElementById('nodeDataInput').value.trim();
+            if (!content) {
+                document.getElementById('parseCountText').innerText = "发现 0 条待解析记录";
+                return;
+            }
+            const lines = content.split('\n').filter(line => line.trim().length > 0);
+            let count = lines.length;
+            if (lines.length > 0 && isHeaderLine(lines[0])) {
+                count--;
+            }
+            document.getElementById('parseCountText').innerText = `发现 ${Math.max(0, count)} 条待解析记录`;
+        }
+
+        function isHeaderLine(line) {
+            const lower = line.toLowerCase();
+            return lower.includes("ip") && (lower.includes("port") || lower.includes("alias") || lower.includes("端口") || lower.includes("别名"));
+        }
+
+        function parseLineData(line, index) {
+            line = line.trim();
+            if (!line || isHeaderLine(line)) return null;
+
+            let ip = "", port = "443", alias = "";
+
+            if (line.includes("#")) {
+                const parts = line.split("#");
+                alias = parts[1].trim();
+                const hostPort = parts[0].trim();
+                if (hostPort.includes(":")) {
+                    const hpArr = hostPort.split(":");
+                    ip = hpArr[0].trim();
+                    port = hpArr[1].trim() || "443";
+                } else {
+                    ip = hostPort;
+                }
+            } else {
+                const cleanedLine = line.replace(/"/g, '');
+                const tokens = cleanedLine.split(/[,;\s\t]+/).filter(t => t.length > 0);
+
+                if (tokens.length > 0) {
+                    if (tokens[0].includes(":")) {
+                        const hpArr = tokens[0].split(":");
+                        ip = hpArr[0].trim();
+                        port = hpArr[1].trim() || "443";
+                        alias = tokens.slice(1).join(" ").trim();
+                    } else {
+                        ip = tokens[0].trim();
+                        if (tokens[1] && /^\d+$/.test(tokens[1].trim())) {
+                            port = tokens[1].trim();
+                            alias = tokens.slice(2).join(" ").trim();
+                        } else {
+                            alias = tokens.slice(1).join(" ").trim();
+                        }
+                    }
+                }
+            }
+
+            if (!ip) return null;
+            if (!alias) alias = `节点-${index + 1}`;
+            return { ip, port, alias };
+        }
+
+        function generateNodes() {
+            const uuid = document.getElementById('cfg_uuid').value.trim();
+            if (!uuid) {
+                alert("请先设置 UUID！");
+                return;
+            }
+
+            const rawData = document.getElementById('nodeDataInput').value.trim();
+            if (!rawData) {
+                alert("请输入或上传节点 IP 数据！");
+                return;
+            }
+
+            const lines = rawData.split('\n');
+            const generatedList = [];
+            const container = document.getElementById('generateResultList');
+            container.innerHTML = "";
+
+            const params = new URLSearchParams();
+            const enc = document.getElementById('cfg_encryption').value;
+            if (enc) params.set('encryption', enc);
+
+            const sec = document.getElementById('cfg_security').value;
+            if (sec) params.set('security', sec);
+
+            const sni = document.getElementById('cfg_sni').value;
+            if (sni) params.set('sni', sni);
+
+            const fp = document.getElementById('cfg_fp').value;
+            if (fp) params.set('fp', fp);
+
+            const alpn = document.getElementById('cfg_alpn').value;
+            if (alpn) params.set('alpn', alpn);
+
+            const insecure = document.getElementById('cfg_insecure').value;
+            if (insecure === '1') params.set('allowInsecure', '1');
+
+            const echDomain = document.getElementById('cfg_ech_domain').value.trim();
+            const echDns = document.getElementById('cfg_ech_dns').value.trim();
+            if (echDomain || echDns) {
+                params.set('ech', `${echDomain}+${echDns}`);
+            }
+
+            const type = document.getElementById('cfg_type').value;
+            if (type) params.set('type', type);
+
+            const host = document.getElementById('cfg_host').value;
+            if (host) params.set('host', host);
+
+            const path = document.getElementById('cfg_path').value;
+            if (path) params.set('path', path);
+
+            const queryStr = params.toString();
+
+            let count = 0;
+            lines.forEach((line, idx) => {
+                const item = parseLineData(line, idx);
+                if (!item) return;
+
+                count++;
+                const finalLink = `vless://${uuid}@${item.ip}:${item.port}?${queryStr}#${encodeURIComponent(item.alias)}`;
+                generatedList.push(finalLink);
+
+                const div = document.createElement('div');
+                div.className = 'node-item';
+                div.innerHTML = `
+                    <div class="node-text">
+                        <span class="badge bg-secondary me-2">${count}</span>
+                        <strong class="me-2">${escapeHtml(item.alias)}</strong>
+                        <span class="text-muted">(${item.ip}:${item.port})</span>
+                        <div class="text-truncate text-muted small mt-1">${escapeHtml(finalLink)}</div>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <button class="btn btn-sm btn-outline-primary btn-action-sm" onclick="copyText('${escapeJsString(finalLink)}')">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-info btn-action-sm" onclick="showQrCode('${escapeJsString(finalLink)}', '${escapeJsString(item.alias)}')">
+                            <i class="fa-solid fa-qrcode"></i>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+
+            if (generatedList.length === 0) {
+                container.innerHTML = `<div class="alert alert-warning">未能识别到有效的数据行，请检查格式。</div>`;
+                document.getElementById('generateRawResult').value = "";
+                return;
+            }
+
+            document.getElementById('generateRawResult').value = generatedList.join('\n');
+        }
+
+        function copyAllGeneratedNodes() {
+            const content = document.getElementById('generateRawResult').value;
+            if (!content) {
+                alert("没有可复制的内容，请先生成节点！");
+                return;
+            }
+            navigator.clipboard.writeText(content).then(() => {
+                alert("已成功复制全部节点链接！");
+            });
+        }
+
+        function downloadGeneratedTxt() {
+            const content = document.getElementById('generateRawResult').value;
+            if (!content) {
+                alert("没有可导出的节点！");
+                return;
+            }
+            const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = `VLESS_Nodes_${new Date().toISOString().slice(0, 10)}.txt`;
+            link.click();
+        }
+
+        function showQrCode(link, name) {
+            const modal = new bootstrap.Modal(document.getElementById('qrModal'));
+            document.getElementById('qrNodeAlias').innerText = name;
+            const qrContainer = document.getElementById('qrcode');
+            qrContainer.innerHTML = "";
+            new QRCode(qrContainer, {
+                text: link,
+                width: 200,
+                height: 200,
+                correctLevel: QRCode.CorrectLevel.M
+            });
+            modal.show();
+        }
+
+        // ========== 公共工具 ==========
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {}).catch(() => alert('复制失败，请手动选择文本'));
+        }
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function escapeJsString(str) {
+            return String(str)
+                .replace(/\\/g, '\\\\')
+                .replace(/'/g, "\\'")
+                .replace(/"/g, '\\"')
+                .replace(/\n/g, '\\n');
+        }
+    </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"6901dd9d2ee243a19f0c67ddeaff5829","r":1,"spa":2}' crossorigin="anonymous"></script>
+<script>window.__CF$cv$params={r:'a45a0267ac6b5c80',t:'MTc5MTE3Nzk2NA==',u:'01a10a83b7cf768882071739a88f8f7d',ut:'DJL9VnkmBZu6HL9OnTtAH7pFo8N5Tpft.Ig3VBUAmY8-1791177964-1.2.1.1-F7ucaX.aWKuERpd1afxesOR7MX_oG2iAGTFwc4hRlDAdn7KjmsSSwE2SjggiXXiDW1PzBD98DMi_RNEBgDjTvvMQ_UlgVD08xHo2XwBGW2Y',i:60};(function(){if(!document.body)return;var s=document.createElement('script');s.src='/cdn-cgi/challenge-platform/scripts/precursor/main.js';document.head.appendChild(s);})();</script></body>
+</html>

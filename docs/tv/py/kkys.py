@@ -21,7 +21,7 @@ class Spider(Spider):
         super().__init__()
         self.site = 'https://103.51.147.112:51120'
         # 修复：图片 CDN 改为与 1.py 一致的正确域名
-        self.imgCdn = 'https://vres.esadj.com'
+        self.imgCdn = 'https://vres.wkcyvs.cn'
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>小学英语音标课堂</title>
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+<body>
+    <div class="page-header">
+        <h1 class="page-title">📖 英语音标课堂</h1>
+        <!-- 新增跳转链接 -->
+        <a href="/kuais/" class="header-link">快手直链获取</a>
+    </div>
+    
+    <!-- 紧凑型统计卡片 -->
+    <div class="stats-card" id="statsCard">
+        <div class="stat-item">
+            <div class="stat-number" id="totalLessons">0</div>
+            <div class="stat-label">总课时</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="completedLessons">0</div>
+            <div class="stat-label">已完成</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="studyProgress">0%</div>
+            <div class="stat-label">学习进度</div>
+        </div>
+    </div>
+    
+    <!-- 搜索框 -->
+    <div class="search-box">
+        <input type="text" id="lessonSearch" class="search-input" placeholder="🔍 搜索课时...">
+    </div>
+    
+    <!-- 课时容器 -->
+    <div id="lessonsContainer"></div>
+    
+    <p class="tip-text">💡 点击课时播放 | 播放完成后点 "确定" → 关闭视频  双击 快退/快进5秒 </p>
+    
+    <!-- 悬浮按钮 -->
+    <div class="float-btn-group" id="floatBtnBox">
+        <button class="float-btn" id="toTopBtn" title="回到顶部">↑</button>
+        <button class="float-btn" id="toBottomBtn" title="到底部">↓</button>
+    </div>
+    
+    <!-- 侧边栏按钮 -->
+    <button class="playlist-toggle" id="playlistToggleBtn">📋</button>
+    
+    <!-- 侧边栏播放列表 -->
+    <div class="playlist-sidebar" id="playlistSidebar">
+        <div class="playlist-header">
+            <h3>📝 播放列表</h3>
+            <button class="close-playlist" id="closePlaylistBtn">×</button>
+        </div>
+        <div id="playlistContent"></div>
+    </div>
+
+<script src="js/config.js"></script>
+<script src="js/configuration.js"></script>
+</body>
+</html>

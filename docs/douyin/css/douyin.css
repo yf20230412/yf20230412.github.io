@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f4ff 0%, #e9e0f5 100%);
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    min-height: 100vh;
+    padding: 1rem;
+    color: #2e2c3c;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #6b539c;
+    margin-bottom: 1.2rem;
+}
+
+.intro {
+    font-size: 0.9rem;
+    color: #5a4a78;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.input-box {
+    margin-bottom: 1.2rem;
+}
+
+textarea {
+    width: 100%;
+    background: #fdfbff;
+    border: 1.5px solid #dad0ea;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    outline: none;
+    resize: none;
+    min-height: 120px;
+}
+
+.action-btn {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 0.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+}
+
+#parseBtn {
+    background: linear-gradient(110deg, #6b539c, #8367b8);
+}
+
+#clearBtn {
+    background: #CD2626;
+}
+
+.result-panel {
+    background: #f9f6ff;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid #e2d8f2;
+    display: none;
+}
+
+.result-panel.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-title {
+    font-weight: 600;
+    color: #463f63;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.result-item {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.result-label {
+    color: #6b5f82;
+    display: inline-block;
+    width: 80px;
+}
+
+.result-value {
+    color: #ff0000;
+    font-weight: 500;
+    flex: 1;
+}
+
+.copy-btn {
+    background: #eef0ff;
+    border: 1px solid #b7a2d4;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    color: #4e3b70;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+
+/* 统一跳转协议以及链接预览的通用大卡片 */
+.protocol-item {
+    background: #f2ecfe;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* 卡片标题 */
+.protocol-item>span:first-child {
+    display: block;
+    font-weight: 600;
+    color: #463f63;
+    margin-bottom: 0.4rem;
+}
+
+/* 内部滚动白框 */
+.protocol-item .scroll-wrap {
+    overflow: auto;
+    color: #ff0000;
+    background: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #e2d8f2;
+    margin-bottom: 0.6rem;
+    margin-top: 0.4rem;
+}
+
+/* 一整行的宽按钮配置 */
+.protocol-item .copy-btn {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+}
+
+/* 专门适配短链接和完整长链的特定样式 */
+.debug-link-wrap .scroll-wrap {
+    color: #555555;
+    /* 错开颜色，调试信息使用深灰 */
+    word-break: break-all;
+    /* 强制换行 */
+}
+
+.debug-short .scroll-wrap {
+    max-height: 50px;
+    /* 限制短链接框高 */
+}
+
+.debug-long .scroll-wrap {
+    max-height: 100px;
+    /* 限制长链接框高 */
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #a899c2;
+    margin-top: 1.5rem;
+}

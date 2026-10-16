@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>抖音UID/作品ID提取工具</title>
+    <link rel="stylesheet" href="css/douyin.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>抖音UID/作品ID提取工具</h1>
+        <div class="intro">
+            粘贴抖音分享链接，自动解析出他人UID、作品ID，并生成跳转协议。<br>
+            步骤：复制抖音作品链接 → 粘贴到下方 → 点击解析。
+        </div>
+        <div class="input-box">
+            <textarea id="linkInput" placeholder="请粘贴抖音分享链接"></textarea>
+        </div>
+        <button class="action-btn" id="parseBtn">解析链接</button>
+        <button class="action-btn" id="clearBtn">一键清空</button>
+        <div id="resultPanel" class="result-panel">
+            <div class="result-title">解析结果</div>
+
+            <div class="protocol-item debug-link-wrap debug-short">
+                <span>提取到的短链接：</span>
+                <div class="scroll-wrap">
+                    <span id="debugShortLink"></span>
+                </div>
+                <button class="copy-btn" data-target="debugShortLink">复制短链接</button>
+            </div>
+
+            <div class="protocol-item debug-link-wrap debug-long">
+                <span>解码后的完整长链：</span>
+                <div class="scroll-wrap">
+                    <span id="debugLongLink"></span>
+                </div>
+                <button class="copy-btn" data-target="debugLongLink">复制完整长链</button>
+            </div>
+
+            <hr style="border: 0; border-top: 1px dashed #e2d8f2; margin: 0.8rem 0;">
+
+            <div class="result-item">
+                <span class="result-label">他人UID：</span>
+                <span class="result-value" id="otherUid"></span>
+                <button class="copy-btn" data-target="otherUid">复制</button>
+            </div>
+            <div class="result-item">
+                <span class="result-label">作品ID：</span>
+                <span class="result-value" id="awemeId"></span>
+                <button class="copy-btn" data-target="awemeId">复制</button>
+            </div>
+            <div class="result-item">
+                <span class="result-label">自己UID：</span>
+                <span class="result-value" id="selfUid"></span>
+                <button class="copy-btn" data-target="selfUid">复制</button>
+            </div>
+
+            <div class="result-title" style="margin-top: 1.2rem;">跳转协议</div>
+
+            <div class="protocol-item">
+                <span>跳转他人主页：</span>
+                <div class="scroll-wrap">
+                    <span id="otherProfileProtocol"></span>
+                </div>
+                <button class="copy-btn" data-target="otherProfileProtocol">复制</button>
+            </div>
+            <div class="protocol-item">
+                <span>跳转作品：</span>
+                <div class="scroll-wrap">
+                    <span id="awemeProtocol"></span>
+                </div>
+                <button class="copy-btn" data-target="awemeProtocol">复制</button>
+            </div>
+            <div class="protocol-item">
+                <span>跳转自己主页：</span>
+                <div class="scroll-wrap">
+                    <span id="selfProfileProtocol"></span>
+                </div>
+                <button class="copy-btn" data-target="selfProfileProtocol">复制</button>
+            </div>
+        </div>
+        <div class="footer">
+            仅供学习交流使用
+            <span style="display: block; margin-top: 0.3rem; font-weight: 500; color: #8e7fa8;">@小鱼2026</span>
+        </div>
+    </div>
+
+    <script src="./js/douyin.js"></script>
+
+</body>
+
+</html>
