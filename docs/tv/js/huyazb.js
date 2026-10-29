@@ -76,7 +76,7 @@ var rule = {
                     url: it.profileRoom,
                     title: it.introduction,
                     img: it.screenshot,
-                    desc: '👁' + it.totalCount + '  🆙' + it.nick,
+                    desc: it.nick + '┃🔥' + it.totalCount,
                 })
         });
         setResult(d);
@@ -89,7 +89,7 @@ var rule = {
                     url: it.profileRoom,
                     title: it.introduction,
                     img: it.screenshot,
-                    desc: '👁' + it.totalCount + '  🆙' + it.nick,
+                    desc: it.nick + '人气值🔥' + it.totalCount,
                 })
         });
         setResult(d);

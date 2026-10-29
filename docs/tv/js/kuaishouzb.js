@@ -112,7 +112,7 @@ if (tkx && MY_CATE === '娱乐' ) {
 }    
        list.forEach(it => {
                         var title1 = it.caption;
-                        var desc1 = '🆙' + it.author.name + (it.watchingCount == '' ? '' : '｜👥' + it.watchingCount);
+                        var desc1 = '🆙' + it.author.name + (it.watchingCount == '' ? '' : '┃🔥' + it.watchingCount);
                         var picUrl1 = it.poster;
                         var urls = it.playUrls[0].adaptationSet.representation.map(function(it1) {
                             return '快手' + it1.name + "，" + it1.url
@@ -140,7 +140,7 @@ setResult(d);
                 type_name: "快手•" + info[7],
                 vod_remarks: '🚪 房间号：' + info[0],
                 vod_director: '🚪 房间号：' + info[0],
-                vod_actor: '🆙 ' + info[1] + '｜ 👥 人气：' + info[3],
+                vod_actor: '🆙 ' + info[1] + '┃人气值🔥：' + info[3],
                 vod_content: info[4],
             };
             // 清晰度从高到低排序
@@ -179,7 +179,7 @@ setResult(d);
             })
             let playFrom = [];
             let playList = [];
-            playFrom.append('🌺风言锋语88🌺（若播放失败需切换EXO播放器）');
+            playFrom.append('风言锋语88🐬（若播放失败需切换EXO播放器）');
             playList.append(yuanhua + languang + chaoqing + gaoqing + biaoqing + liuchang + qita);
 
             // 最后封装所有线路
