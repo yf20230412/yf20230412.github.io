@@ -1,4 +1,8 @@
 [
   {
     "name": "家用nas",
-    "server": "smb://192.168.6.1/家庭共享/�
+    "server": "smb://192.168.6.1/路径",
+    "username": "账号",
+    "password": "密码"
+  }
+]
