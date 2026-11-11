@@ -25,8 +25,8 @@
             "name": "🚀嗷呜专线"
         },
         {
-            "url": "http://www.影视仓.com",
-            "name": "🚀欧歌单线"
+            "url": "https://gitee.com/cycod/tvbox/raw/master/api.json",
+            "name": "🚀初忆"
         },
         {
             "url": "https://android.lushunming.qzz.io/json/index.json",
@@ -38,7 +38,11 @@
         },
         {
             "url": "https://9877.kstore.space/sun.json",
-            "name": "🚀潇洒凯速"
+            "name": "🚀潇洒线路"
+        },
+        {
+            "url": "https://www.四次元.com/api.json",
+            "name": "🚀潇洒线路2"
         },
         {
             "url": "https://clun.top/box.json",
